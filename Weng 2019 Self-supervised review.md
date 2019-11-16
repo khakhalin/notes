@@ -2,9 +2,9 @@
 
  Nov 10, 2019 by Lilian Weng 
 
- https://lilianweng.github.io/lil-log/2019/11/10/self-supervised-learning.html 
+ [https://lilianweng.github.io/lil-log/2019/11/10/self-supervised-learning.html]
 
-Awesome informal review of the entire concept, and highlights from the field.
+Awesome informal #review of the entire concept, and highlights from the field.
 
 #### General idea:
 
@@ -24,7 +24,7 @@ Come up with a useless supervised task derived from data (use any part of data a
 * Tracking objects: [Wang & Gupta, 2015](https://arxiv.org/abs/1505.00687)  - I didn't understand this one. One interesting thing that I got (but that's for supervised learning) is the **triplet loss** (see below)
 * Guess frame order:  [Misra, et al 2016](https://arxiv.org/abs/1603.08561) , one sequence of out many that has frames shuffled:   [Fernando et al. 2017](https://arxiv.org/abs/1611.06646) , or correct time direction:  [Wei et al., 2018](https://www.robots.ox.ac.uk/~vgg/publications/2018/Wei18/wei18.pdf) 
 * Colorize a video from a control frame:  [Vondrick et al. (2018)](https://arxiv.org/abs/1806.09594)  - sounds like something in-between image colorization and motion tracking, huh?
-* Let the robot move an object, and learn that all camera views during the grasp still encode the same object, even if in different positions?  [Jang et al., 2018](https://arxiv.org/abs/1811.06964) 
+* Let the robot move an object, and while doing so, learn that all camera views during the grasp encode the same object. Even though positions and views are all different. Did I get it right?  [Jang et al., 2018](https://arxiv.org/abs/1811.06964) 
 * Teach that views from multiple cameras are still views of the same thing:   [Sermanet, et al. 2018](https://arxiv.org/abs/1704.06888) 
 * Imagined goals: [Nair et al., 2018](https://arxiv.org/abs/1807.04742)  - didn't understand this one; something very robotics
 

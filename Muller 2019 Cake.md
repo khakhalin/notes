@@ -1,6 +1,8 @@
 # Neocortical plasticity: an unsupervised cake but no free lunch
 Eilif B. Muller 
 
+#review
+
 https://openreview.net/pdf?id=S1g_N7FIUS 
 
 mini-Review / opinion

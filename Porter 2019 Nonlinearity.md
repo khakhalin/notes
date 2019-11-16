@@ -4,7 +4,7 @@
 
 Mason A Porter
 
-Subjective review. By "networks" they really mean stochastic graphs, and not ANNs; one para intro to basics (degrees etc.) Temporal network: changes over time. Intro to multilayer representation, but not very clear (what are "aspects"? What does this figure show?) For time representation, each time point = one layer; nodes are typically connected between time-layers with undirected edges, but they claim that it may be more productive to use forward-facing directed edges, not necessarily between adjacent layers. This creates a "supra-adjacency matrix" $A_m$.
+Subjective #review. By "networks" they really mean stochastic graphs, and not ANNs; one para intro to basics (degrees etc.) Temporal network: changes over time. Intro to multilayer representation, but not very clear (what are "aspects"? What does this figure show?) For time representation, each time point = one layer; nodes are typically connected between time-layers with undirected edges, but they claim that it may be more productive to use forward-facing directed edges, not necessarily between adjacent layers. This creates a "supra-adjacency matrix" $A_m$.
 
 Introduce centralities that were generalized to temporal networks: @Bonacich, Katz, @communicability, pagerank, and eigenvector. Eigenvector-based centralities are easy to calculate, and diff matrices produce diff centralities (hubs, authorities etc.) References @Perron–Frobenius theorem. A bunch of nice links about stochastic block models, detection of communities (including their split / merge).
 
