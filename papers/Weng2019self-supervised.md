@@ -2,7 +2,7 @@
 
  Nov 10, 2019 by Lilian Weng 
  
- #review #self-supervised #links
+ #blog #self-supervised
 
  [https://lilianweng.github.io/lil-log/2019/11/10/self-supervised-learning.html]
 

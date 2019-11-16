@@ -1,11 +1,11 @@
 # To-read: Neuro
-## General
 
-Harnessing behavioral diversity to understand neural computations for cognition Simon Musall, Anne E Urai, David Sussillo, Anne K Churchland
-[https://www.sciencedirect.com/science/article/pii/S0959438819300285]
-Potentially the most important section: "Relating rich behavior to neural activity by studying ANNs"
+Richards, B. A., Lillicrap, T. P., Beaudoin, P., Bengio, Y., Bogacz, R., Christensen, A., ... & Gillon, C. J. (2019). A deep learning framework for neuroscience. Nature neuroscience, 22(11), 1761-1770.
+[link shared by Blake](https://www.nature.com/articles/s41593-019-0520-2.epdf?shared_access_token=n1zyUZ6-ypeHWkeaEs1FPNRgN0jAjWel9jnR3ZoTv0N5dsTXXcjpcGP7i54eL_L9GTMgy1V6NUDPE4-SxE_8Ip1gIa5G35VU4LeqRZ56IGy5uMJKd6aUZ4JeYonqPfWkstTCNFgazGPl8xJGrQAvuw%3D%3D)
 
 ## Network structure
+
+**Todo**: mine Porter2019 for links (they are mentioned there, but need to be transfered here)
 
 Relating network connectivity to dynamics: opportunities and challenges for theoretical neuroscience Carina Curto, Katherine Morrison
 https://www.sciencedirect.com/science/article/pii/S0959438819300443 
@@ -30,13 +30,25 @@ Pogodin, R., Corneil, D., Seeholzer, A., Heng, J., & Gerstner, W. (2019). Workin
  https://arxiv.org/pdf/1910.10559.pdf 
 Reservoir computer + a "working memory network"
 
+## Credit assignment in bio networks
+
+Lehmann, M. P., Xu, H. A., Liakoni, V., Herzog, M. H., Gerstner, W., & Preuschoff, K. (2019). One-shot learning and behavioral eligibility traces in sequential decision making. eLife, 8, e47463.
+https://elifesciences.org/articles/47463
+
+Aljadeff, J., D'amour, J., Field, R. E., Froemke, R. C., & Clopath, C. (2019). Cortical credit assignment by Hebbian, neuromodulatory and inhibitory plasticity. arXiv preprint arXiv:1911.00307.
+[https://arxiv.org/pdf/1911.00307.pdf](<https://arxiv.org/pdf/1911.00307.pdf>)
+
 ## Other
+
+Harnessing behavioral diversity to understand neural computations for cognition Simon Musall, Anne E Urai, David Sussillo, Anne K Churchland
+[https://www.sciencedirect.com/science/article/pii/S0959438819300285]
+Potentially the most important section: "Relating rich behavior to neural activity by studying ANNs"
 
 Universality and individuality in neural dynamics across large populations of recurrent networks Niru Maheswaranathan, Alex H. Williams, Matthew D. Golub, Surya Ganguli, David Sussillo
  https://arxiv.org/abs/1907.08549 
 
 Learning predictive structure without a teacher: decision strategies and brain routes Zoe Kourtzi, Andrew E Welchman
- https://www.sciencedirect.com/science/article/pii/S0959438818302393 
+https://www.sciencedirect.com/science/article/pii/S0959438818302393 
 
 The language of the brain: real-world neural population codes J Andrew Pruszynski, Joel Zylberberg
 https://www.sciencedirect.com/science/article/pii/S0959438818302137 
