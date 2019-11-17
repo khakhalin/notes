@@ -11,6 +11,10 @@ Press, O., Smith, N. A., & Levy, O. (2019). Improving Transformer Models by Reor
 https://ofir.io/sandwich_transformer.pdf
 An interesting tiny paper where all they did, I think, is play with the sequence of 2 common blocks, to show that the optimal sequence is not what everyone expected. May be neat. But I prob need to understand how transformers work to get it.
 
+"Compressive Transformers for Long-Range Sequence Modelling"
+by Jack W. Rae, Anna Potapenko, Siddhant M. Jayakumar, Timothy P. Lillicrap (at DeepMind)
+https://arxiv.org/abs/1911.05507
+
 Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., ... & Polosukhin, I. (2017). Attention is all you need. In Advances in neural information processing systems (pp. 5998-6008).
 Transformers network
 https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf

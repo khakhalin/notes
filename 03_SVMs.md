@@ -1,6 +1,11 @@
 # Support vector machines
 
-Decision boundaries. Older (simpler) approaches: Nearest Neighbor, Decision Trees.
+## Classification problem
+Simplest approach: Nearest Neighbor. Just pick closest training case.
+
+How to measure model performance?
+
+## SVM
 
 Widest street approach: find a line, so that if you have a band around the line, it separates the positive from the negative examples as best as possible.
 

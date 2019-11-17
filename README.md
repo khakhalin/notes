@@ -1,2 +1,3 @@
-# notes
-Personal knowledge base
+# Notes
+
+[Zettrl](https://www.zettlr.com/) personal knowledge base.

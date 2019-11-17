@@ -11,7 +11,7 @@ Relating network connectivity to dynamics: opportunities and challenges for theo
 https://www.sciencedirect.com/science/article/pii/S0959438819300443 
 Review. Exactly what it should be (networks, motifs, dynamics)
 
-## Criticality
+## Criticality and dynamics
 
 25 years of criticality in neuroscience — established results, open controversies, novel concepts J Wilting, V Priesemann
 [https://www.sciencedirect.com/science/article/pii/S0959438819300248]
@@ -23,6 +23,9 @@ Interesting; includes a section of spiking models of those. It's like criticalit
 
 Vogels, T. P., Sprekeler, H., Zenke, F., Clopath, C., & Gerstner, W. (2011). Inhibitory plasticity balances excitation and inhibition in sensory pathways and memory networks. *Science*, *334*(6062), 1569-1573. 
 About what tunes inhibitory neurons, that in turn make excitatory activity properly sparse.
+
+Universality and individuality in neural dynamics across large populations of recurrent networks Niru Maheswaranathan, Alex H. Williams, Matthew D. Golub, Surya Ganguli, David Sussillo
+ https://arxiv.org/abs/1907.08549 
  
 ## Reservoir computing
 
@@ -44,8 +47,7 @@ Harnessing behavioral diversity to understand neural computations for cognition 
 [https://www.sciencedirect.com/science/article/pii/S0959438819300285]
 Potentially the most important section: "Relating rich behavior to neural activity by studying ANNs"
 
-Universality and individuality in neural dynamics across large populations of recurrent networks Niru Maheswaranathan, Alex H. Williams, Matthew D. Golub, Surya Ganguli, David Sussillo
- https://arxiv.org/abs/1907.08549 
+Raman, D. V., Rotondo, A. P., & O’Leary, T. (2019). Fundamental bounds on learning performance in neural circuits. Proceedings of the National Academy of Sciences, 116(21), 10537-10546.
 
 Learning predictive structure without a teacher: decision strategies and brain routes Zoe Kourtzi, Andrew E Welchman
 https://www.sciencedirect.com/science/article/pii/S0959438818302393 

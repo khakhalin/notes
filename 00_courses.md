@@ -27,3 +27,7 @@ Second priority books:
 Third priority books:
 
 * Algorithms by Erickson - 12 long chapters
+
+Basement of books:
+
+* Problem solving with data structures in Python ([full text, web](https://runestone.academy/runestone/books/published/pythonds/index.html))
