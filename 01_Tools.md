@@ -1,9 +1,13 @@
-# Programming, coding, project management
-Yep, I know, this list is not logical. I'll split it up later.
+# Tools, coding, project management
+All sorts of infrastructure stuff.
 
 ## Python tips and tricks
 
-Matlab cheasheet: [https://github.com/rougier/matplotlib-cheatsheet](<https://github.com/rougier/matplotlib-cheatsheet>)
+* Matlab cheasheet: [https://github.com/rougier/matplotlib-cheatsheet](<https://github.com/rougier/matplotlib-cheatsheet>)
+
+## GIT cheat sheet
+
+?
 
 ## Project organization
 

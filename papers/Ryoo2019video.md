@@ -3,7 +3,7 @@
 Michael S. Ryoo, Google, 2019
 https://ai.googleblog.com/2019/10/video-architecture-search.html
 
-#architecture #evolution #video #blog
+#archsearch #evolution #video #blog
 
 A mini-review of 3 papers from the same group.
 

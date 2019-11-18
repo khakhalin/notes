@@ -1,5 +1,9 @@
 # Things to read: ML and AI
 
+Rahaman, N., Baratin, A., Arpit, D., Draxler, F., Lin, M., Hamprecht, F. A., ... & Courville, A. (2018). On the spectral bias of neural networks. arXiv preprint arXiv:1806.08734.
+https://arxiv.org/abs/1806.08734
+On what neural network can encode easily - seems to be a very useful read, potentially.
+
 Hu, J., Shen, L., & Sun, G. (2018). Squeeze-and-excitation networks. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 7132-7141).
 https://arxiv.org/abs/1709.01507
 Another paper with 1600 citations.
@@ -30,6 +34,11 @@ Interesting project on automatic data augmentation, and generation of strong lab
 [https://www.snorkel.org/](<https://www.snorkel.org/>)
 Find some papers they published? Cool terms mentioned on the website: automatic data augmentation, identifying critical data subsets, slicing functions
 
+## RL
+
+Vinyals, O., Babuschkin, I., Czarnecki, W. M., Mathieu, M., Dudzik, A., Chung, J., ... & Oh, J. (2019). Grandmaster level in StarCraft II using multi-agent reinforcement learning. Nature, 1-5.
+No open link?
+
 ## Swarming
 
 O’Keeffe, K. P., Hong, H., & Strogatz, S. H. (2017). Oscillators that sync and swarm. Nature communications, 8(1), 1504.
@@ -53,3 +62,7 @@ Marcus, G. (2018). Innateness, alphazero, and artificial intelligence. arXiv pre
 Cardon, D., Cointet, J. P., & Mazieres, A. (2018). Neurons spike back: The Invention of Inductive Machines and the Artificial Intelligence Controversy.
 [https://neurovenge.antonomase.fr/NeuronsSpikeBack.pdf](<https://neurovenge.antonomase.fr/NeuronsSpikeBack.pdf>)
 
+## Graph
+
+Dehmamy, N., Barabási, A. L., & Yu, R. (2019). Understanding the Representation Power of Graph Neural Networks in Learning Graph Topology. arXiv preprint arXiv:1907.05008.
+https://arxiv.org/abs/1907.05008

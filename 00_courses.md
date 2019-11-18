@@ -28,6 +28,10 @@ Third priority books:
 
 * Algorithms by Erickson - 12 long chapters
 
-Basement of books:
+Books that are currently not on the reading list, but still who knows:
 
 * Problem solving with data structures in Python ([full text, web](https://runestone.academy/runestone/books/published/pythonds/index.html))
+
+## Aggregators of links
+
+* [Machine learning for humans, 80/20 reading list](https://medium.com/machine-learning-for-humans/ai-reading-list-c4753afd97a) - claims to be curated. Sections on ML, Deep, RL, and then various general readings about the meaning of it all.
