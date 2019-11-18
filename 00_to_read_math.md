@@ -26,6 +26,10 @@ Something weird semi-supervised learning with noisy teachers and distillation. E
 FaceNet: A Unified Embedding for Face Recognition and Clustering Florian Schroff, Dmitry Kalenichenko, James Philbin
 About triplet loss and representation optimization.
 
+Interesting project on automatic data augmentation, and generation of strong labels from a bunch of weak labels:
+[https://www.snorkel.org/](<https://www.snorkel.org/>)
+Find some papers they published? Cool terms mentioned on the website: automatic data augmentation, identifying critical data subsets, slicing functions
+
 ## Swarming
 
 O’Keeffe, K. P., Hong, H., & Strogatz, S. H. (2017). Oscillators that sync and swarm. Nature communications, 8(1), 1504.
@@ -36,6 +40,10 @@ About collective self-organized behaviors. Can be useful for the modeling class 
 
 https://arxiv.org/abs/1905.01164 
 SinGAN: Learning a Generative Model from a Single Natural Image Tamar Rott Shaham, Tali Dekel, Tomer Michaeli
+
+Reinke, C., Etcheverry, M., & Oudeyer, P. Y. (2019). Intrinsically Motivated Exploration for Automated Discovery of Patterns in Morphogenetic Systems. arXiv preprint arXiv:1908.06663.
+arxiv.org/abs/1908.06663
+Apparently used an intrinsically motivated AI to explore Game Of Life to find cool patterns. The most interesting part (judging from the abstract) is that it developed a non-obvious representation, just looking for novelty (or whatever it used: looking for something _interesting_). Would be super-cool to try it for my networks, huh?
 
 ## Meanings
 

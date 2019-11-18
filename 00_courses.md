@@ -2,7 +2,7 @@
 
 ## Courses
 
-* [Stanford, linear dynamical systems](http://stanford.edu/class/ee363/lectures.html)
+* [Stanford, linear dynamical systems](http://stanford.edu/class/ee363/lectures.html) (Stephen Boyd) - includes stochastic control, Kalman filter, Lyapunov theory
 * That course on reinforcement learning - find the link
 * [Matrix methods in data science](https://www.youtube.com/watch?v=Cx5Z-OslNWE&list=PLUl4u3cNGP63oMNUHXqIUcrkS2PivhN3k) - YouTube from MIT. Not my first choice, but may be good for refreshing things.
 
