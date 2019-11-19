@@ -1,5 +1,9 @@
 # Things to read: ML and AI
 
+Finn, C., Abbeel, P., & Levine, S. (2017, August). Model-agnostic meta-learning for fast adaptation of deep networks. In Proceedings of the 34th International Conference on Machine Learning-Volume 70 (pp. 1126-1135). JMLR. org.
+https://arxiv.org/pdf/1703.03400.pdf
+About few-shots learning, and generalizing from a very limited number of labels? More than 1000 citations!
+
 Rahaman, N., Baratin, A., Arpit, D., Draxler, F., Lin, M., Hamprecht, F. A., ... & Courville, A. (2018). On the spectral bias of neural networks. arXiv preprint arXiv:1806.08734.
 https://arxiv.org/abs/1806.08734
 On what neural network can encode easily - seems to be a very useful read, potentially.
@@ -62,7 +66,11 @@ Marcus, G. (2018). Innateness, alphazero, and artificial intelligence. arXiv pre
 Cardon, D., Cointet, J. P., & Mazieres, A. (2018). Neurons spike back: The Invention of Inductive Machines and the Artificial Intelligence Controversy.
 [https://neurovenge.antonomase.fr/NeuronsSpikeBack.pdf](<https://neurovenge.antonomase.fr/NeuronsSpikeBack.pdf>)
 
-## Graph
+## Graphs
 
 Dehmamy, N., Barabási, A. L., & Yu, R. (2019). Understanding the Representation Power of Graph Neural Networks in Learning Graph Topology. arXiv preprint arXiv:1907.05008.
 https://arxiv.org/abs/1907.05008
+
+NetGAN: Generating Graphs via Random Walks
+A. Bojchevski, O. Shchur, D. Zugner, S. Gunnemann.
+ArXiv e-prints. 2018.
