@@ -4,7 +4,7 @@
  
  #blog #self-supervised
 
- [https://lilianweng.github.io/lil-log/2019/11/10/self-supervised-learning.html]
+https://lilianweng.github.io/lil-log/2019/11/10/self-supervised-learning.html
 
 Awesome informal review of the entire concept, and highlights from the field.
 
@@ -32,4 +32,4 @@ Come up with a useless supervised task derived from data (use any part of data a
 
 #### Other notes:
 
-**Triplet loss**:  https://arxiv.org/abs/1503.03832 - say, you want the model to learn that all objects in group A belong to class A, etc. If you just reward low delta for objects in A, model will map to const and achieve 0. So instead take 2 from A and 1 from B, and make it minimize D+ = D(a1,a2) relative to D- = D(a1,b). Say, drive $D_+^2-D_-^2$ down. In the paper they apparently use some other tricks as well. Paper: FaceNet: A Unified Embedding for Face Recognition and Clustering Florian Schroff, Dmitry Kalenichenko, James Philbin
+**Triplet loss**:  https://arxiv.org/abs/1503.03832 - say, you want the model to learn that all objects in group A belong to class A, etc. If you just reward low delta for objects in A, model will map to const and achieve 0. So instead take 2 from A and 1 from B, and make it minimize D+ = D(a1,a2) relative to D- = D(a1,b). Say, drive `max(0,dplus+M-dminus)` down. In the paper they apparently use some other tricks as well. Paper: FaceNet: A Unified Embedding for Face Recognition and Clustering Florian Schroff, Dmitry Kalenichenko, James Philbin
