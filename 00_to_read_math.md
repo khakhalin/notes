@@ -1,5 +1,10 @@
 # Things to read: ML and AI
 
+TODO: Move other recommendations from Sven down here
+
+Lipton, Z. C., Berkowitz, J., & Elkan, C. (2015). A critical review of recurrent neural networks for sequence learning. arXiv preprint arXiv:1506.00019.
+Great review for learning about RNNs (could be a textbook)
+
 Finn, C., Abbeel, P., & Levine, S. (2017, August). Model-agnostic meta-learning for fast adaptation of deep networks. In Proceedings of the 34th International Conference on Machine Learning-Volume 70 (pp. 1126-1135). JMLR. org.
 https://arxiv.org/pdf/1703.03400.pdf
 About few-shots learning, and generalizing from a very limited number of labels? More than 1000 citations!
