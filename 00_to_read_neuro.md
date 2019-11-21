@@ -93,3 +93,6 @@ Classes of dendritic information processing Alexandre Payeur, Jean-Claude Béïq
 The quest for interpretable models of neural population activity Matthew R Whiteway, Daniel A Butts
 
 Constraining computational models using electron microscopy wiring diagrams Ashok Litwin-Kumar, Srinivas C Turaga
+
+Li, Z., Brendel, W., Walker, E., Cobos, E., Muhammad, T., Reimer, J., ... & Tolias, A. (2019). Learning from brains how to regularize machines. In Advances in Neural Information Processing Systems (pp. 9525-9535).
+https://arxiv.org/abs/1911.05072
