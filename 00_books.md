@@ -4,7 +4,8 @@
 
 * [Stanford, linear dynamical systems](http://stanford.edu/class/ee363/lectures.html) (Stephen Boyd) - includes stochastic control, Kalman filter, Lyapunov theory
 * That course on reinforcement learning - find the link
-* [Matrix methods in data science](https://www.youtube.com/watch?v=Cx5Z-OslNWE&list=PLUl4u3cNGP63oMNUHXqIUcrkS2PivhN3k) - YouTube from MIT. Not my first choice, but may be good for refreshing things.
+* [Linear algebra by Gilbert Strang](https://www.youtube.com/playlist?list=PLE7DDD91010BC51F8) - Youtube from MIT. Everybody loves it, as it achieves a beautiful balance between staying extremely practical, concise, but at the same time giving many proofs (or "almost proofs", extreme-physics style, like for good cases, with simplifying assumptions etc). 
+* [Matrix methods in data science](https://www.youtube.com/watch?v=Cx5Z-OslNWE&list=PLUl4u3cNGP63oMNUHXqIUcrkS2PivhN3k) (also Gilbert Strang)- YouTube from MIT. May be good for refreshing things.
 
 ## Books
 
@@ -35,3 +36,4 @@ Books that are currently not on the reading list, but still who knows:
 ## Aggregators of links
 
 * [Machine learning for humans, 80/20 reading list](https://medium.com/machine-learning-for-humans/ai-reading-list-c4753afd97a) - claims to be curated. Sections on ML, Deep, RL, and then various general readings about the meaning of it all.
+* [Scientific visualization with matplotlib](https://github.com/rougier/scientific-visualization-book) - an open-source book project in the works that hadn't been released yet, but the previews look lovely

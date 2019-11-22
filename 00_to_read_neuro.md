@@ -94,5 +94,12 @@ The quest for interpretable models of neural population activity Matthew R White
 
 Constraining computational models using electron microscopy wiring diagrams Ashok Litwin-Kumar, Srinivas C Turaga
 
+## Reverse modeling
+
+Deep neuroethology of a virtual rodent
+Josh Merel, Diego Aldarondo, Jesse Marshall, Yuval Tassa, Greg Wayne, Bence Ölveczky
+https://arxiv.org/abs/1911.09451
+Apparently create a vidrual 3D rodent (like, with muscles, joints and what not), make it move in virtual environment, learn to move, then study its network using neuro methods.
+
 Li, Z., Brendel, W., Walker, E., Cobos, E., Muhammad, T., Reimer, J., ... & Tolias, A. (2019). Learning from brains how to regularize machines. In Advances in Neural Information Processing Systems (pp. 9525-9535).
 https://arxiv.org/abs/1911.05072
