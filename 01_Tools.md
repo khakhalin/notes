@@ -3,7 +3,21 @@ All sorts of infrastructure stuff.
 
 ## Python tips and tricks
 
-* Matlab cheasheet: [https://github.com/rougier/matplotlib-cheatsheet](<https://github.com/rougier/matplotlib-cheatsheet>)
+Cheatsheets:
+* Matplotlib: [https://github.com/rougier/matplotlib-cheatsheet](<https://github.com/rougier/matplotlib-cheatsheet>)
+
+Coding habits for data scientists: https://www.thoughtworks.com/insights/blog/coding-habits-data-scientists
+* Keep code clean (not smelly). Types of smells:
+    * Dead code (commented, inconsequential)
+    * Print statements everywhere
+    * Bad variable names
+    * Functions that do too many things instead of one thing
+    * Code repetition
+    * Magic values
+* Smuggle code from Jupyter to classes as soon as possible (Jupyter for protopying, and maybe reporting?)
+* Write unit tests
+    * A good intro: https://www.freecodecamp.org/news/an-introduction-to-testing-in-python/
+* Make small and frequent commits
 
 ## GIT cheat sheet
 
@@ -41,9 +55,9 @@ General advice for deep learning:
 * Use ADAM. Don't decay learning rate: ADAM takes care of that.
 * ReLU are the best
 * Make sure there's no activation function in the last layer
-* Bias should of course be in every layer
+* Bias should be in every layer (but of course?)
 * Use variance-scaled initialization
-* Compress data if necessary (apply  `tanh(x/C)` or something)
+* Compress data if necessary (apply  tanh(x/C) or something similar)
 * Normalize (-m, /s) input data
 * 128 filters in a convlution layer is a lot
 * Pooling (maxpooling) helps with transform invariance (? why ?)
