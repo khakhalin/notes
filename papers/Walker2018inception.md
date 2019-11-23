@@ -1,6 +1,6 @@
 # Inception in visual cortex: in vivo-silico loops reveal most exciting images
 
-#neuro
+#deepneuro
 
 Walker, E. Y., Sinz, F. H., Froudarakis, E., Fahey, P. G., Muhammad, T., Ecker, A. S., ... & Tolias, A. S. (2018). . *bioRxiv*, 506956. 
 

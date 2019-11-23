@@ -1,9 +1,5 @@
 # To-read: Neuro
 
-Richards, B. A., Lillicrap, T. P., Beaudoin, P., Bengio, Y., Bogacz, R., Christensen, A., ... & Gillon, C. J. (2019). A deep learning framework for neuroscience. Nature neuroscience, 22(11), 1761-1770.
-[link shared by Blake](https://www.nature.com/articles/s41593-019-0520-2.epdf?shared_access_token=n1zyUZ6-ypeHWkeaEs1FPNRgN0jAjWel9jnR3ZoTv0N5dsTXXcjpcGP7i54eL_L9GTMgy1V6NUDPE4-SxE_8Ip1gIa5G35VU4LeqRZ56IGy5uMJKd6aUZ4JeYonqPfWkstTCNFgazGPl8xJGrQAvuw%3D%3D)
-Read asap, even if just for the purpose of being able to keep intelligent conversation!
-
 ## Network structure
 
 **Todo**: mine Porter2019 for links (they are mentioned in the paper card, but now need to be transfered here)
@@ -41,6 +37,10 @@ https://elifesciences.org/articles/47463
 
 Aljadeff, J., D'amour, J., Field, R. E., Froemke, R. C., & Clopath, C. (2019). Cortical credit assignment by Hebbian, neuromodulatory and inhibitory plasticity. arXiv preprint arXiv:1911.00307.
 [https://arxiv.org/pdf/1911.00307.pdf](<https://arxiv.org/pdf/1911.00307.pdf>)
+
+## Bottom-up validation
+
+Lim, S. et al. Inferring learning rules from distributions of fring rates in cortical neurons. Nat. Neurosci. 18, 1804–1810 (2015).
 
 ## Other
 
