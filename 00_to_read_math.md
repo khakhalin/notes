@@ -1,6 +1,9 @@
 # Things to read: ML and AI
 
-TODO: Move other recommendations from Sven down here
+TODO: Move recommendations from Sven down here
+
+http://www.maths.qmul.ac.uk/~gbianconi/LTCCModule
+A series of lectures on networks, and while it's on networks, and not ML, it's prob a priority read, just because it looks so cool and accessible (at least in the beginning).
 
 Lipton, Z. C., Berkowitz, J., & Elkan, C. (2015). A critical review of recurrent neural networks for sequence learning. arXiv preprint arXiv:1506.00019.
 Great review for learning about RNNs (could be a textbook)

@@ -1,15 +1,16 @@
 # Words and topics to look up
 
 * How to tell the receptive field of a neuron in a deep network? Do they gradient descend on it?
+* Heuristic search - seems to be a topic in oldschool AI, but isn't it too general? Or do they mean something very specific by it?
 * YAML - some standard for keeping stuff that's like XML, but human-readable. Who uses it? Is it popular? ([wiki](https://en.wikipedia.org/wiki/YAML))
 * JSON - how does it work, why everybody love it, and is it the present or the future? ([wiki](https://en.wikipedia.org/wiki/JSON))
 * ADAM optimizer - what's the difference from othes?
 * Xavier initialization of weights - what's cool about it? Also, is it true that variance-scaled init is better? ([claim](https://pcc.cs.byu.edu/2017/10/02/practical-advice-for-building-deep-neural-networks/))
+* Network distillation - why does it even work? Not how, but why?
 * transformers
 * inception blocks
 * residual blocks / networks
 * Lottery ticket hypothesis
-* Network distillation - why does it even work?
 * Style transfer - how does it work?
 * How to actually organize curriculum learning? Is there an automated strategy here?
 

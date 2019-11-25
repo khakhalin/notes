@@ -1,5 +1,8 @@
 # Courses, books and links
 
+Interesting practical intro to ML project; look through and decide how to file:
+https://github.com/chiphuyen/machine-learning-systems-design
+
 ## Courses
 
 * [Stanford, linear dynamical systems](http://stanford.edu/class/ee363/lectures.html) (Stephen Boyd) - includes stochastic control, Kalman filter, Lyapunov theory
