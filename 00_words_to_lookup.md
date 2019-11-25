@@ -14,6 +14,7 @@
 * How to actually organize curriculum learning? Is there an automated strategy here?
 
 Classic ML and friends
+* Helmholtz machine - some sort of associative network by Hilton?
 * Resampling techniques: SMOTE, isotonic regression, Platt scaling
 * Kalman filter (and its friends)
 * KL divergence and its friends from information theory
