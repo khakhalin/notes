@@ -1,12 +1,11 @@
 # Self-Supervised Representation Learning
 
- Nov 10, 2019 by Lilian Weng 
- 
- #blog #self-supervised
-
+Nov 10, 2019 by Lilian Weng 
 https://lilianweng.github.io/lil-log/2019/11/10/self-supervised-learning.html
+ 
+#blog #self-supervised
 
-Awesome informal review of the entire concept, and highlights from the field.
+Awesome informal review of the entire concept of self-supervized learning, with highlights from the field.
 
 #### General idea:
 

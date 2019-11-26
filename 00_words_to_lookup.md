@@ -10,7 +10,6 @@
 * transformers
 * inception blocks
 * residual blocks / networks
-* Lottery ticket hypothesis
 * Style transfer - how does it work?
 * How to actually organize curriculum learning? Is there an automated strategy here?
 

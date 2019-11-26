@@ -1,10 +1,10 @@
 # A rubric for ml production readiness
 
-#management
-
 Breck, E., Cai, S., Nielsen, E., Salib, M., & Sculley, D. (2017, December). The ml test score: A rubric for ml production readiness and technical debt reduction. In 2017 IEEE International Conference on Big Data (Big Data) (pp. 1123-1132). IEEE.
 
 Direct link: https://storage.googleapis.com/pub-tools-public-publication-data/pdf/aad9f93b86b7addfea4c419b9100c6cdd26cacea.pdf
+
+#management
 
 Tests for features and data:
 1. Schema: encode tests for some obvious facts or asymptotics, end test them explicitly (and automatically). Visuals are helpful to identify and produce the schema.

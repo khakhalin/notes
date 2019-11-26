@@ -1,11 +1,9 @@
 # Neocortical plasticity: an unsupervised cake but no free lunch
 Eilif B. Muller 
 
-#review #deepneuro
-
 https://openreview.net/pdf?id=S1g_N7FIUS 
 
-mini-Review / opinion
+#review #deepneuro
 
 When training a network to do something good, how can we train it to *also* not do something bad? (They call it a "Monkey's Paw effect" after some horrid story from the 1910). One option could be to explicitly tell the model what is bad, and try to exhaust bad cases (they call it: "inject adversarial examples into learning data stream", and "specifying the negative space of the objective"). But that's bad.
 

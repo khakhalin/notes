@@ -5,6 +5,10 @@ TODO: Move recommendations from Sven down here
 http://www.maths.qmul.ac.uk/~gbianconi/LTCCModule
 A series of lectures on networks, and while it's on networks, and not ML, it's prob a priority read, just because it looks so cool and accessible (at least in the beginning).
 
+Rahaman, N., Baratin, A., Arpit, D., Draxler, F., Lin, M., Hamprecht, F. A., ... & Courville, A. (2018). On the spectral bias of neural networks. arXiv preprint arXiv:1806.08734.
+https://arxiv.org/abs/1806.08734
+On what neural network can encode easily - seems to be a very useful read, potentially.
+
 Lipton, Z. C., Berkowitz, J., & Elkan, C. (2015). A critical review of recurrent neural networks for sequence learning. arXiv preprint arXiv:1506.00019.
 Great review for learning about RNNs (could be a textbook)
 
@@ -12,9 +16,8 @@ Finn, C., Abbeel, P., & Levine, S. (2017, August). Model-agnostic meta-learning 
 https://arxiv.org/pdf/1703.03400.pdf
 About few-shots learning, and generalizing from a very limited number of labels? More than 1000 citations!
 
-Rahaman, N., Baratin, A., Arpit, D., Draxler, F., Lin, M., Hamprecht, F. A., ... & Courville, A. (2018). On the spectral bias of neural networks. arXiv preprint arXiv:1806.08734.
-https://arxiv.org/abs/1806.08734
-On what neural network can encode easily - seems to be a very useful read, potentially.
+FaceNet: A Unified Embedding for Face Recognition and Clustering Florian Schroff, Dmitry Kalenichenko, James Philbin
+About triplet loss and representation optimization.
 
 Hu, J., Shen, L., & Sun, G. (2018). Squeeze-and-excitation networks. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 7132-7141).
 https://arxiv.org/abs/1709.01507
@@ -35,21 +38,36 @@ Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., ..
 Transformers network
 https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf
 
-https://arxiv.org/abs/1911.04252
-Self-training with Noisy Student improves ImageNet classification Qizhe Xie, Eduard Hovy, Minh-Thang Luong, Quoc V. Le
-Something weird semi-supervised learning with noisy teachers and distillation. Essentially, it seems that a badly labeled large dataset is better than a well-labeled small dataset, so it's better to train one model on a small dataset, then have it label a huge dataset (even tho many labels will be wrong), and then use this large dataset to train the next model. Or something like that. Weird.
-
-FaceNet: A Unified Embedding for Face Recognition and Clustering Florian Schroff, Dmitry Kalenichenko, James Philbin
-About triplet loss and representation optimization.
-
 Interesting project on automatic data augmentation, and generation of strong labels from a bunch of weak labels:
 [https://www.snorkel.org/](<https://www.snorkel.org/>)
 Find some papers they published? Cool terms mentioned on the website: automatic data augmentation, identifying critical data subsets, slicing functions
+
+## Transfer, distillation, tickets
+
+Frankle, J., & Carbin, M. (2018). The lottery ticket hypothesis: Finding sparse, trainable neural networks. arXiv preprint arXiv:1803.03635.
+https://arxiv.org/abs/1803.03635
+Original paper presenting the lottery #ticket hypothesis.
+
+Self-training with Noisy Student improves ImageNet classification Qizhe Xie, Eduard Hovy, Minh-Thang Luong, Quoc V. Le
+https://arxiv.org/abs/1911.04252
+Something weird semi-supervised learning with noisy teachers and distillation. Essentially, it seems that a badly labeled large dataset is better than a well-labeled small dataset, so it's better to train one model on a small dataset, then have it label a huge dataset (even tho many labels will be wrong), and then use this large dataset to train the next model. Or something like that. Weird.
+
+Tian, Y., Jiang, T., Gong, Q., & Morcos, A. (2019). Luck Matters: Understanding Training Dynamics of Deep ReLU Networks. arXiv preprint arXiv:1905.13405.
+https://arxiv.org/pdf/1905.13405.pdf
+To understand how "lucky tickets" work, they train a larger network from a smaller network, then study activation.
+
+Morcos, A. S., Yu, H., Paganini, M., & Tian, Y. (2019). One ticket to win them all: generalizing lottery ticket initializations across datasets and optimizers. arXiv preprint arXiv:1906.02773.
+https://arxiv.org/abs/1906.02773
+New paper about whether "lucky tickets" generalize across datasets.
 
 ## RL
 
 Vinyals, O., Babuschkin, I., Czarnecki, W. M., Mathieu, M., Dudzik, A., Chung, J., ... & Oh, J. (2019). Grandmaster level in StarCraft II using multi-agent reinforcement learning. Nature, 1-5.
 No open link?
+
+Yu, H., Edunov, S., Tian, Y., & Morcos, A. S. (2019). Playing the lottery with rewards and multiple languages: lottery tickets in RL and NLP. arXiv preprint arXiv:1906.02768.
+https://arxiv.org/abs/1906.02768
+Lottery tickets in RL domain.
 
 ## Swarming
 
