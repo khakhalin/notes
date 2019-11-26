@@ -1,4 +1,7 @@
-# Algorithms and such
+# Algorithms
+
+#algo
+
 ## Big O notation
 Different meaning in textbooks and in practical questions. In textbooks: upper bound, so if something is O(N), it is also O(N^2) by definition. In practice, just say the truth. 
 
