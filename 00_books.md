@@ -1,6 +1,12 @@
 # Courses, books and links
 
-Interesting practical intro to ML project; look through and decide how to file:
+## To file:
+
+Awesome collection of short tutorials (both ML and snippets of Python code) by Chris Albon:
+https://chrisalbon.com/
+Look through, decide the priority, and how to file.
+
+Interesting practical intro to ML projects; look through and decide how to file:
 https://github.com/chiphuyen/machine-learning-systems-design
 
 ## Courses
@@ -12,11 +18,12 @@ https://github.com/chiphuyen/machine-learning-systems-design
 
 ## Books
 
-* VLMS - 19 chapters
-* MML - 12 chapters
-* Kuhn Johnson - 20 chapters
-* ESLII - 18 chapters
-* Algorithms bhy Sedgewick - about 30 small chapters
+* VLMS - 19 chapters: [full pdf](http://vmls-book.stanford.edu/)
+* MML - 12 chapters: [full pdf](https://mml-book.github.io/)
+* Kuhn Johnson - 20 chapters (no full pdf online)
+* ...or, as an alternative, "The 100 pages ML book" by Andriy Burkov - 11 chapters: [full pdf](http://themlbook.com/wiki/doku.php)
+* ESLII - 18 chapters: [full pdf](https://web.stanford.edu/~hastie/ElemStatLearn/)
+* Algorithms by Sedgewick - about 30 small chapters
 * Cracking the code interview - 17 chapters + general info
 
 Above books are about 100 chapters in total total. Or about 3 months worth of time if one faithfully studies a chapter a day.
@@ -32,7 +39,7 @@ Third priority books:
 
 * Algorithms by Erickson - 12 long chapters
 
-Books that are currently not on the reading list, but still who knows:
+Books that are currently not on the reading list, but keeping the links here just in case:
 
 * Problem solving with data structures in Python ([full text, web](https://runestone.academy/runestone/books/published/pythonds/index.html))
 

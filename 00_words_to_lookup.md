@@ -1,5 +1,11 @@
+# General To-Dos:
+
+* Move old recommendatinos from Sven down here
+* Move all old Jaeger and network papers here
+
 # Words and topics to look up
 
+* Find a review on transformers, before reading primary papers
 * How to tell the receptive field of a neuron in a deep network? Do they gradient descend on it?
 * Heuristic search - seems to be a topic in oldschool AI, but isn't it too general? Or do they mean something very specific by it?
 * YAML - some standard for keeping stuff that's like XML, but human-readable. Who uses it? Is it popular? ([wiki](https://en.wikipedia.org/wiki/YAML))
@@ -7,7 +13,6 @@
 * ADAM optimizer - what's the difference from othes?
 * Xavier initialization of weights - what's cool about it? Also, is it true that variance-scaled init is better? ([claim](https://pcc.cs.byu.edu/2017/10/02/practical-advice-for-building-deep-neural-networks/))
 * Network distillation - why does it even work? Not how, but why?
-* transformers
 * inception blocks
 * residual blocks / networks
 * Style transfer - how does it work?
@@ -21,8 +26,7 @@ Classic ML and friends
 * Hungarian algorithm
 
 Network science
-* Bonacich centrality
-* communicability centrality
 * Perron–Frobenius theorem (something related to centralities? or network graph eigenvectors?)
-* Free energy minimization in the brain
+
+Neuro stuff
 

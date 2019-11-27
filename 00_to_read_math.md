@@ -1,6 +1,4 @@
-# Things to read: ML and AI
-
-TODO: Move recommendations from Sven down here
+# To-read: ML and AI
 
 http://www.maths.qmul.ac.uk/~gbianconi/LTCCModule
 A series of lectures on networks, and while it's on networks, and not ML, it's prob a priority read, just because it looks so cool and accessible (at least in the beginning).
@@ -26,18 +24,6 @@ Another paper with 1600 citations.
 On evolving network architectures:
 https://ai.googleblog.com/2018/03/using-evolutionary-automl-to-discover.html
 
-Press, O., Smith, N. A., & Levy, O. (2019). Improving Transformer Models by Reordering their Sublayers. arXiv preprint arXiv:1911.03864.
-https://ofir.io/sandwich_transformer.pdf
-An interesting tiny paper where all they did, I think, is play with the sequence of 2 common blocks, to show that the optimal sequence is not what everyone expected. May be neat. But I prob need to understand how transformers work to get it.
-
-"Compressive Transformers for Long-Range Sequence Modelling"
-by Jack W. Rae, Anna Potapenko, Siddhant M. Jayakumar, Timothy P. Lillicrap (at DeepMind)
-https://arxiv.org/abs/1911.05507
-
-Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., ... & Polosukhin, I. (2017). Attention is all you need. In Advances in neural information processing systems (pp. 5998-6008).
-Transformers network
-https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf
-
 Interesting project on automatic data augmentation, and generation of strong labels from a bunch of weak labels:
 [https://www.snorkel.org/](<https://www.snorkel.org/>)
 Find some papers they published? Cool terms mentioned on the website: automatic data augmentation, identifying critical data subsets, slicing functions
@@ -60,7 +46,30 @@ Morcos, A. S., Yu, H., Paganini, M., & Tian, Y. (2019). One ticket to win them a
 https://arxiv.org/abs/1906.02773
 New paper about whether "lucky tickets" generalize across datasets.
 
+## Attention
+
+Press, O., Smith, N. A., & Levy, O. (2019). Improving Transformer Models by Reordering their Sublayers. arXiv preprint arXiv:1911.03864.
+https://ofir.io/sandwich_transformer.pdf
+An interesting tiny paper where all they did, I think, is play with the sequence of 2 common blocks, to show that the optimal sequence is not what everyone expected. May be neat. But I prob need to understand how transformers work to get it.
+
+"Compressive Transformers for Long-Range Sequence Modelling"
+by Jack W. Rae, Anna Potapenko, Siddhant M. Jayakumar, Timothy P. Lillicrap (at DeepMind)
+https://arxiv.org/abs/1911.05507
+
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., ... & Polosukhin, I. (2017). Attention is all you need. In Advances in neural information processing systems (pp. 5998-6008).
+Transformers network
+https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf
+
+Single Headed Attention RNN: Stop Thinking With Your Head
+https://arxiv.org/abs/1911.11423
+Looks somewhat advanced (from the technical, not math pov), but if I get it right, they tried to diversify the field by deliberately sticking to a non-mainstream approach (something that is NOT transformers), and got good performance.
+
 ## RL
+
+Behavior Regularized Offline Reinforcement Learning
+Yifan Wu, George Tucker, Ofir Nachum
+https://arxiv.org/abs/1911.11361
+Most horrible type of learning: offline (model of the world instead of the real world) and reinforcement. Some sort of a review?
 
 Vinyals, O., Babuschkin, I., Czarnecki, W. M., Mathieu, M., Dudzik, A., Chung, J., ... & Oh, J. (2019). Grandmaster level in StarCraft II using multi-agent reinforcement learning. Nature, 1-5.
 No open link?
@@ -69,13 +78,11 @@ Yu, H., Edunov, S., Tian, Y., & Morcos, A. S. (2019). Playing the lottery with r
 https://arxiv.org/abs/1906.02768
 Lottery tickets in RL domain.
 
-## Swarming
-
-O’Keeffe, K. P., Hong, H., & Strogatz, S. H. (2017). Oscillators that sync and swarm. Nature communications, 8(1), 1504.
-https://www.nature.com/articles/s41467-017-01190-3
-About collective self-organized behaviors. Can be useful for the modeling class maybe?
-
 ## Generative
+
+Original StyleGan?
+https://arxiv.org/abs/1812.04948
+Karras, T., Laine, S., & Aila, T. (2019). A style-based generator architecture for generative adversarial networks. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (pp. 4401-4410).
 
 https://arxiv.org/abs/1905.01164 
 SinGAN: Learning a Generative Model from a Single Natural Image Tamar Rott Shaham, Tali Dekel, Tomer Michaeli
@@ -92,7 +99,7 @@ Marcus, G. (2018). Innateness, alphazero, and artificial intelligence. arXiv pre
 Cardon, D., Cointet, J. P., & Mazieres, A. (2018). Neurons spike back: The Invention of Inductive Machines and the Artificial Intelligence Controversy.
 [https://neurovenge.antonomase.fr/NeuronsSpikeBack.pdf](<https://neurovenge.antonomase.fr/NeuronsSpikeBack.pdf>)
 
-## Graphs
+## Graph networks
 
 Dehmamy, N., Barabási, A. L., & Yu, R. (2019). Understanding the Representation Power of Graph Neural Networks in Learning Graph Topology. arXiv preprint arXiv:1907.05008.
 https://arxiv.org/abs/1907.05008
@@ -100,3 +107,8 @@ https://arxiv.org/abs/1907.05008
 NetGAN: Generating Graphs via Random Walks
 A. Bojchevski, O. Shchur, D. Zugner, S. Gunnemann.
 ArXiv e-prints. 2018.
+
+## Code to read
+
+Reimplementation of StyleGAN from scratch in TF 2.0. Seem to be well-written, and worth studying:
+https://github.com/manicman1999/StyleGAN-Tensorflow-2.0
