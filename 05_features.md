@@ -2,7 +2,7 @@
 
 #features
 
-[Guyon2003variable](/papers/Guyon2003variable.md) - review on feature selection (as well as some info on construction). 
+[[Guyon2003variable]] - review on feature selection (as well as some info on construction). 
 Their checklist:
 1. Use domain knowledge
 2. Normalize variables where appropriate

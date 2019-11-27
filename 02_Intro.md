@@ -27,7 +27,7 @@ How to fight various problems:
 * Underfitting: more training data; regularization; data augmentation; reduce model size
 
 Longer reviews:
-* [A rubric for production readiness](papers/Breck2017testing.md) - How to tell whether an ML solution is ready for production?
+* How to tell whether an ML solution is ready for production? [[Breck2017testing]]
 
 ## Pieces of ML lore wisdom
 

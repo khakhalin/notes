@@ -1,4 +1,0 @@
-# Paper C
-
-#temp #neuro
-
