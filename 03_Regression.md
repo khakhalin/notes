@@ -10,13 +10,13 @@ Generalization error consists of two parts: bias and variance.
 
 Say, regression x->y on a dataset (x,y) from distribution P(x,y).
 For a given x, you always have P(y|x), so that P(x,y) = P(y|x)P(x).
-Regression predicts expected E y(x) which is y weighted (integrated) by P(y|x).
+Regression predicts expected E y(x) which is weighted by y (integrated by P(y|x) ).
 ML is about guessing Ey(x) using some algo. 
 Say, h(x) is the guess (aka classifier), produced by algo A, based on a training set D.
-The expected error for this estimation h is E (h-y)^2 = double-integral of P(x,y)(h(x)-y)^2 by x and y.
+The expected error for this estimation h is E (h-y)^2 = $\iint$ of P(x,y)(h(x)-y)^2 by x and y.
 h itself is a random variable, as it's a function of D, which is a random subset of (x,y).
 So we can consider expected Eh, by integrading over all possible training sets D.
-(We can estimate it by training lots of times and averaging. For regression, it's regression. Of other loss functions estimations may be more complicated, but still possible. In practice, if you are only interested in E(h), you could also just apply A to the full dataset, obtaioning the best possible h possible.)
+(We can estimate it by training lots of times and averaging. For regression, it's regression. For other loss functions estimations may be more complicated, but still possible. In practice, if you are only interested in E(h), you could also just apply A to the full dataset, obtaioning the best possible h possible.)
 Now, what's the expected error for the algorithm (across all possible classifiers it could possibly produce) is E integrated overe all h (so over all Ds), so we have a triple-integral (by D, x, y).
 $\int_D \int_x \int_y (h(x)-y)^2 P(D) P(x,y)\,dD\,dx\,dy$
 Add and subtract mean h (Eh) inside the square, get h-Eh and Eh-y, open squares.
