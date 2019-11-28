@@ -8,4 +8,5 @@
 
 ## tSNE
 
-Is it now obsolete?
+"The art of using tSNE" from Nature:
+[https://www.nature.com/articles/s41467-019-13056-x](<https://www.nature.com/articles/s41467-019-13056-x>)

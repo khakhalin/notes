@@ -13,7 +13,7 @@ https://github.com/chiphuyen/machine-learning-systems-design
 
 * [Stanford, linear dynamical systems](http://stanford.edu/class/ee363/lectures.html) (Stephen Boyd) - includes stochastic control, Kalman filter, Lyapunov theory
 * That course on reinforcement learning - find the link
-* [Linear algebra by Gilbert Strang](https://www.youtube.com/playlist?list=PLE7DDD91010BC51F8) - Youtube from MIT. Everybody loves it, as it achieves a beautiful balance between staying extremely practical, concise, but at the same time giving many proofs (or "almost proofs", extreme-physics style, like for good cases, with simplifying assumptions etc). 
+* [Linear algebra by Gilbert Strang](https://www.youtube.com/playlist?list=PLE7DDD91010BC51F8) - Youtube from MIT. Everybody loves it, as it achieves a beautiful balance between staying extremely practical, concise, but at the same time giving many proofs (or "almost proofs", extreme-physics style, like for good cases, with simplifying assumptions etc). MIT also has [notes for each lecture](https://ocw.mit.edu/courses/mathematics/18-06sc-linear-algebra-fall-2011/syllabus/) (not in one pdf, but easy to find).
 * [Matrix methods in data science](https://www.youtube.com/watch?v=Cx5Z-OslNWE&list=PLUl4u3cNGP63oMNUHXqIUcrkS2PivhN3k) (also Gilbert Strang)- YouTube from MIT. May be good for refreshing things.
 
 ## Books
