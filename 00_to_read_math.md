@@ -78,11 +78,20 @@ Yu, H., Edunov, S., Tian, Y., & Morcos, A. S. (2019). Playing the lottery with r
 https://arxiv.org/abs/1906.02768
 Lottery tickets in RL domain.
 
-## Generative
+## GANs and generation
 
 Original StyleGan?
 https://arxiv.org/abs/1812.04948
 Karras, T., Laine, S., & Aila, T. (2019). A style-based generator architecture for generative adversarial networks. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (pp. 4401-4410).
+
+Contrastive Learning of Structured World Models
+Thomas Kipf, Elise van der Pol, Max Welling
+[https://arxiv.org/abs/1911.12247](<https://arxiv.org/abs/1911.12247>)
+Not sure if filed correctly, but they claim to identify objects in an unsupervised manner using some tricks from graph networks. What??
+
+Lin, Z., Thekumparampil, K. K., Fanti, G., & Oh, S. (2019). InfoGAN-CR: Disentangling Generative Adversarial Networks with Contrastive Regularizers. arXiv preprint arXiv:1906.06034.
+https://arxiv.org/abs/1906.06034
+Separating latent vectors (aka "disentanglement"). Apparently something that we know how to do in VAE, here applied to GANs?
 
 https://arxiv.org/abs/1905.01164 
 SinGAN: Learning a Generative Model from a Single Natural Image Tamar Rott Shaham, Tali Dekel, Tomer Michaeli
