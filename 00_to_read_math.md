@@ -89,7 +89,12 @@ Lottery tickets in RL domain.
 
 ## GANs and generation
 
-Original StyleGan?
+#todo: Find original Neurips GAN paper from 2016?
+
+Video tutorial on GANs from Ian Goodfellow (2016):
+https://www.youtube.com/watch?v=HGYYEUSm-0Q
+
+Original StyleGan (is it?)
 https://arxiv.org/abs/1812.04948
 Karras, T., Laine, S., & Aila, T. (2019). A style-based generator architecture for generative adversarial networks. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (pp. 4401-4410).
 

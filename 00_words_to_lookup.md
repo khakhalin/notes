@@ -17,6 +17,8 @@
 * residual blocks / networks
 * Style transfer - how does it work?
 * How to actually organize curriculum learning? Is there an automated strategy here?
+* noise-contrastive estimation
+* self-supervised boosting
 
 Classic ML and friends
 * Helmholtz machine - some sort of associative network by Hilton?
