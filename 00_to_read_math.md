@@ -7,8 +7,17 @@ Rahaman, N., Baratin, A., Arpit, D., Draxler, F., Lin, M., Hamprecht, F. A., ...
 https://arxiv.org/abs/1806.08734
 On what neural network can encode easily - seems to be a very useful read, potentially.
 
+Leibo, J. Z., Hughes, E., Lanctot, M., & Graepel, T. (2019). Autocurricula and the emergence of innovation from social interaction: A manifesto for multi-agent intelligence research. arXiv preprint arXiv:1903.00742.
+https://arxiv.org/pdf/1903.00742.pdf
+Something related to their multi-agent simulation (hide-and-seek). Seems very promising.
+
 Lipton, Z. C., Berkowitz, J., & Elkan, C. (2015). A critical review of recurrent neural networks for sequence learning. arXiv preprint arXiv:1506.00019.
-Great review for learning about RNNs (could be a textbook)
+[https://arxiv.org/pdf/1506.00019.pdf](<https://arxiv.org/pdf/1506.00019.pdf>)
+Great review for learning about RNNs (could be a textbook) 700 refs.
+
+Proximal Policy Optimization by OpenAI:
+https://openai.com/blog/openai-baselines-ppo/
+Something for agent training?
 
 Finn, C., Abbeel, P., & Levine, S. (2017, August). Model-agnostic meta-learning for fast adaptation of deep networks. In Proceedings of the 34th International Conference on Machine Learning-Volume 70 (pp. 1126-1135). JMLR. org.
 https://arxiv.org/pdf/1703.03400.pdf
