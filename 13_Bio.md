@@ -1,6 +1,8 @@
 # AI and biology
 
-## More references
+## Papers that successfully used ML as a model for brains
+
+[[Goncalves2017whatnot]] - ANN helps to understand how stereo vision works in mammals.
 
 https://www.biorxiv.org/content/10.1101/838383v1
 Training deep neural density estimators to identify mechanistic models of neural dynamics
@@ -19,3 +21,6 @@ https://www.sciencedirect.com/science/article/pii/S0896627312009920
 Khaligh-Razavi, S. M., & Kriegeskorte, N. (2014). Deep supervised, but not unsupervised, models may explain IT cortical representation. PLoS computational biology, 10(11), e1003915.
 https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003915
 Very well cited, this one.
+
+Kording, K. P., Kayser, C., Einhauser, W., & Konig, P. (2004). How are complex cell properties adapted to the statistics of natural stimuli?. Journal of neurophysiology, 91(1), 206-212.
+https://www.ncbi.nlm.nih.gov/m/pubmed/12904330/

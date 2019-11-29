@@ -176,3 +176,7 @@ Whiteway, M. R., & Butts, D. A. (2019). The quest for interpretable models of ne
 Feather, J., Durango, A., Gonzalez, R., & McDermott, J. (2019). Metamers of neural networks reveal divergence from human perceptual systems. In Advances in Neural Information Processing Systems (pp. 10078-10089).
 https://papers.nips.cc/paper/9198-metamers-of-neural-networks-reveal-divergence-from-human-perceptual-systems.pdf
 Metameres: in this case, different stimuli that cause identical activation in a part of a network. They seem to be claiming that there's a difference between humans and ANNs here.
+
+Calhoun, A. J., Pillow, J. W., & Murthy, M. (2019). Unsupervised identification of the internal states that shape natural behavior. Nature Neuroscience, 1-10.
+https://www.nature.com/articles/s41593-019-0533-x
+Use unsupervise learning to identify internal (latent) states in a fly; then correlate these states with activity of individual neurons.

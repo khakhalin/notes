@@ -2,6 +2,9 @@
 
 ## To file:
 
+Matrix calculus for deep learning
+https://explained.ai/matrix-calculus/index.html
+
 Awesome collection of short tutorials (both ML and snippets of Python code) by Chris Albon:
 https://chrisalbon.com/
 Look through, decide the priority, and how to file.
