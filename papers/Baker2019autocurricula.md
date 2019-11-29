@@ -5,13 +5,13 @@ https://arxiv.org/abs/1909.07528
 Also this #blog summary with illustrations and videos.
 [https://openai.com/blog/emergent-tool-use/](<https://openai.com/blog/emergent-tool-use/>)
 
-#agents
+#agents #curriculum #competition
 
 That OpenAI hide-and-seek study. Agents progressively built 6 distinct strategies and counter-strategies (some of them glitch-based).
 
 Hiders are rewarded for not being seen, seeekers - for seeing them (and opposite punishments). "Seeing" objects is directional, but there's also "sensing objects" and distance to them that is lidar-like (all directions, but with occlusion). Also a prep phase, and a penalty for going far from the "main arena". No direct reward for interaction with objects etc.
 
-Emereging **strategies** create an #autocurriculum: a game-like dynamics. Each next behavior negates the previous one (random > chasing > door blocking > ramp use > ramp defense). Coordination and coopearation emerges, including who will grab which object, and passing objects. Even more strategies in a more randomized environment, including "shelter construction", and finally glitch-based "box surfing" and a counter-locking it. This also counts as **tool use** (and they have some more refs for it).
+Emereging **strategies** create an **autocurriculum**: a game-like dynamics. Each next behavior negates the previous one (random > chasing > door blocking > ramp use > ramp defense). Coordination and coopearation emerges, including who will grab which object, and passing objects. Even more strategies in a more randomized environment, including "shelter construction", and finally glitch-based "box surfing" and a counter-locking it. This also counts as **tool use** (and they have some more refs for it).
 
 Training infrastructure an algorithms were described earlier:
 * [OpenAI Five](https://openai.com/blog/openai-five/)

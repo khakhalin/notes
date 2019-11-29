@@ -69,6 +69,9 @@ Lim, S. et al. Inferring learning rules from distributions of fring rates in cor
 
 ## Free energy
 
+Friston, K. (2010). The free-energy principle: a unified brain theory?. Nature reviews neuroscience, 11(2), 127.
+3k references! So people do find it useful after all?
+
 Gershman, S. J. (2019). What does the free energy principle tell Us about the brain?. arXiv preprint arXiv:1901.07945.
 https://arxiv.org/abs/1901.07945
 
@@ -154,10 +157,9 @@ Constraining computational models using electron microscopy wiring diagrams Asho
 
 ## ML of brain
 
-https://www.biorxiv.org/content/10.1101/838383v1
-Training deep neural density estimators to identify mechanistic models of neural dynamics
-Gonçalves .. Macke 2019
-About how to use deep learning to guess neuronal parameters to fit the actual activity of the network (?) They seem to be looking at actual V(t) though.
+Kietzmann, T. C., McClure, P., & Kriegeskorte, N. (2018). Deep neural networks in computational neuroscience. bioRxiv, 133504.
+https://www.biorxiv.org/content/10.1101/133504v2.abstract
+A review.
 
 ## Reverse engineering through ML
 
