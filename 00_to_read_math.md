@@ -123,6 +123,10 @@ Cardon, D., Cointet, J. P., & Mazieres, A. (2018). Neurons spike back: The Inven
 
 ## Graph networks
 
+David Belli (2019). Generative graph transformer
+https://davide-belli.github.io/generative-graph-transformer.html
+Blog post with math and pretty pics: investigate!
+
 Dehmamy, N., Barabási, A. L., & Yu, R. (2019). Understanding the Representation Power of Graph Neural Networks in Learning Graph Topology. arXiv preprint arXiv:1907.05008.
 https://arxiv.org/abs/1907.05008
 

@@ -34,6 +34,9 @@ Pogodin, R., Corneil, D., Seeholzer, A., Heng, J., & Gerstner, W. (2019). Workin
 https://arxiv.org/pdf/1910.10559.pdf 
 Reservoir computer + a "working memory network"
 
+Rotermund, D., & Pawelzik, K. R. (2019). Biologically plausible learning in a deep recurrent spiking network. bioRxiv, 613471.
+https://www.biorxiv.org/content/10.1101/613471v1.full
+
 ## Synfire chains
 
 Zheng, P. and Triesch, J. (2014). Robust development of synfire chains
@@ -41,15 +44,6 @@ Zheng, P. and Triesch, J. (2014). Robust development of synfire chains
 ## Developing topology
 
 Morrison, A., Aertsen, A., and Diesmann, M. (2007). Spike-timing dependent plasticity in balanced random networks. Neural Computation, 19:1437–1467.
-
-## Free energy
-
-Gershman, S. J. (2019). What does the free energy principle tell Us about the brain?. arXiv preprint arXiv:1901.07945.
-https://arxiv.org/abs/1901.07945
-
-https://www.frontiersin.org/articles/10.3389/fnsys.2019.00042/full 
-The Dialectics of Free Energy Minimization Evert A. Boonstra and Heleen A. Slagter
-Seems to be a review explaining the free energy minimization principle for an organism. It's not math though; looks almost like philosophy?
 
 ## Credit assignment
 
@@ -61,9 +55,26 @@ Aljadeff, J., D'amour, J., Field, R. E., Froemke, R. C., & Clopath, C. (2019). C
 
 Gütig, R., & Sompolinsky, H. (2006). The tempotron: a neuron that learns spike timing–based decisions. Nature neuroscience, 9(3), 420.
 
+Zenke, F., Poole, B., & Ganguli, S. (2017, August). Continual learning through synaptic intelligence. In Proceedings of the 34th International Conference on Machine Learning-Volume 70 (pp. 3987-3995). JMLR. org.
+https://arxiv.org/pdf/1703.04200.pdf
+Abstract synapses (not biological) that somehow prioritize what to learn based on some information? Claim to be biologically inspired. Well cited.
+
+Krieg, D., & Triesch, J. (2014). A unifying theory of synaptic long-term plasticity based on a sparse distribution of synaptic strength. Frontiers in synaptic neuroscience, 6, 3.
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3941589/
+Try to marry Hebbian with gradient descent and something else? Lots of math, not that well cited.
+
 ## Bottom-up validation
 
 Lim, S. et al. Inferring learning rules from distributions of fring rates in cortical neurons. Nat. Neurosci. 18, 1804–1810 (2015).
+
+## Free energy
+
+Gershman, S. J. (2019). What does the free energy principle tell Us about the brain?. arXiv preprint arXiv:1901.07945.
+https://arxiv.org/abs/1901.07945
+
+https://www.frontiersin.org/articles/10.3389/fnsys.2019.00042/full 
+The Dialectics of Free Energy Minimization Evert A. Boonstra and Heleen A. Slagter
+Seems to be a review explaining the free energy minimization principle for an organism. It's not math though; looks almost like philosophy?
 
 ## Sequence learning in spiking networks
 
