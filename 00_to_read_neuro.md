@@ -171,5 +171,8 @@ Apparently create a vidrual 3D rodent (like, with muscles, joints and what not),
 Li, Z., Brendel, W., Walker, E., Cobos, E., Muhammad, T., Reimer, J., ... & Tolias, A. (2019). Learning from brains how to regularize machines. In Advances in Neural Information Processing Systems (pp. 9525-9535).
 https://arxiv.org/abs/1911.05072
 
-The quest for interpretable models of neural population activity
-Matthew R Whiteway, Daniel A Butts
+Whiteway, M. R., & Butts, D. A. (2019). The quest for interpretable models of neural population activity. Current opinion in neurobiology, 58, 86-93.
+
+Feather, J., Durango, A., Gonzalez, R., & McDermott, J. (2019). Metamers of neural networks reveal divergence from human perceptual systems. In Advances in Neural Information Processing Systems (pp. 10078-10089).
+https://papers.nips.cc/paper/9198-metamers-of-neural-networks-reveal-divergence-from-human-perceptual-systems.pdf
+Metameres: in this case, different stimuli that cause identical activation in a part of a network. They seem to be claiming that there's a difference between humans and ANNs here.
