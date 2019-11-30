@@ -75,13 +75,17 @@ Looks somewhat advanced (from the technical, not math pov), but if I get it righ
 
 ## RL
 
+Vinyals, O., Babuschkin, I., Czarnecki, W. M., Mathieu, M., Dudzik, A., Chung, J., ... & Oh, J. (2019). Grandmaster level in StarCraft II using multi-agent reinforcement learning. Nature, 1-5.
+No open link?
+
+Freeman, D., Ha, D., & Metz, L. (2019). Learning to Predict Without Looking Ahead: World Models Without Forward Prediction. In Advances in Neural Information Processing Systems (pp. 5380-5391).
+https://arxiv.org/abs/1910.13038
+If you limit agents ability too observe real world to "key frames", making it more sporadic, it develops some predicting capabilities, even tho you never told it do?
+
 Behavior Regularized Offline Reinforcement Learning
 Yifan Wu, George Tucker, Ofir Nachum
 https://arxiv.org/abs/1911.11361
-Most horrible type of learning: offline (model of the world instead of the real world) and reinforcement. Some sort of a review?
-
-Vinyals, O., Babuschkin, I., Czarnecki, W. M., Mathieu, M., Dudzik, A., Chung, J., ... & Oh, J. (2019). Grandmaster level in StarCraft II using multi-agent reinforcement learning. Nature, 1-5.
-No open link?
+A paper about the most horrible type of learning: offline (model of the world instead of the real world) and reinforcement. Some sort of a review?
 
 Yu, H., Edunov, S., Tian, Y., & Morcos, A. S. (2019). Playing the lottery with rewards and multiple languages: lottery tickets in RL and NLP. arXiv preprint arXiv:1906.02768.
 https://arxiv.org/abs/1906.02768
