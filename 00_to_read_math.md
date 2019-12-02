@@ -7,13 +7,15 @@ Rahaman, N., Baratin, A., Arpit, D., Draxler, F., Lin, M., Hamprecht, F. A., ...
 https://arxiv.org/abs/1806.08734
 On what neural network can encode easily - seems to be a very useful read, potentially.
 
+Belkin, M., Hsu, D., Ma, S., & Mandal, S. (2019). Reconciling modern machine-learning practice and the classical bias–variance trade-off. Proceedings of the National Academy of Sciences, 116(32), 15849-15854.
+https://arxiv.org/abs/1812.11118
+
+Metz, L., Maheswaranathan, N., Cheung, B., & Sohl-Dickstein, J. (2018). Meta-Learning Update Rules for Unsupervised Representation Learning. arXiv preprint arXiv:1804.00222.
+https://arxiv.org/abs/1804.00222
+
 Leibo, J. Z., Hughes, E., Lanctot, M., & Graepel, T. (2019). Autocurricula and the emergence of innovation from social interaction: A manifesto for multi-agent intelligence research. arXiv preprint arXiv:1903.00742.
 https://arxiv.org/pdf/1903.00742.pdf
 Something related to their multi-agent simulation (hide-and-seek). Seems very promising.
-
-Lipton, Z. C., Berkowitz, J., & Elkan, C. (2015). A critical review of recurrent neural networks for sequence learning. arXiv preprint arXiv:1506.00019.
-[https://arxiv.org/pdf/1506.00019.pdf](<https://arxiv.org/pdf/1506.00019.pdf>)
-Great review for learning about RNNs (could be a textbook) 700 refs.
 
 Proximal Policy Optimization by OpenAI:
 https://openai.com/blog/openai-baselines-ppo/
@@ -25,6 +27,10 @@ About few-shots learning, and generalizing from a very limited number of labels?
 
 FaceNet: A Unified Embedding for Face Recognition and Clustering Florian Schroff, Dmitry Kalenichenko, James Philbin
 About triplet loss and representation optimization.
+
+Van Steenkiste, S., Chang, M., Greff, K., & Schmidhuber, J. (2018). Relational neural expectation maximization: Unsupervised discovery of objects and their interactions. arXiv preprint arXiv:1802.10353.
+https://arxiv.org/abs/1802.10353
+Unsupervized discovery of objects: seems interesting
 
 Hu, J., Shen, L., & Sun, G. (2018). Squeeze-and-excitation networks. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 7132-7141).
 https://arxiv.org/abs/1709.01507
@@ -38,6 +44,10 @@ Interesting project on automatic data augmentation, and generation of strong lab
 Find some papers they published? Cool terms mentioned on the website: automatic data augmentation, identifying critical data subsets, slicing functions
 
 ## Transfer, distillation, tickets
+
+Furlanello, T., Lipton, Z. C., Tschannen, M., Itti, L., & Anandkumar, A. (2018). Born again neural networks. arXiv preprint arXiv:1805.04770.
+https://arxiv.org/pdf/1805.04770.pdf
+Top read!
 
 Frankle, J., & Carbin, M. (2018). The lottery ticket hypothesis: Finding sparse, trainable neural networks. arXiv preprint arXiv:1803.03635.
 https://arxiv.org/abs/1803.03635
@@ -57,6 +67,15 @@ New paper about whether "lucky tickets" generalize across datasets.
 
 ## Attention
 
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., ... & Polosukhin, I. (2017). Attention is all you need. In Advances in neural information processing systems (pp. 5998-6008).
+Transformers network
+https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf
+Top choice
+
+Jaderberg, M., Simonyan, K., & Zisserman, A. (2015). Spatial transformer networks. In Advances in neural information processing systems (pp. 2017-2025).
+https://arxiv.org/pdf/1506.02025.pdf
+2000 citations. Seems important.
+
 Press, O., Smith, N. A., & Levy, O. (2019). Improving Transformer Models by Reordering their Sublayers. arXiv preprint arXiv:1911.03864.
 https://ofir.io/sandwich_transformer.pdf
 An interesting tiny paper where all they did, I think, is play with the sequence of 2 common blocks, to show that the optimal sequence is not what everyone expected. May be neat. But I prob need to understand how transformers work to get it.
@@ -64,10 +83,6 @@ An interesting tiny paper where all they did, I think, is play with the sequence
 "Compressive Transformers for Long-Range Sequence Modelling"
 by Jack W. Rae, Anna Potapenko, Siddhant M. Jayakumar, Timothy P. Lillicrap (at DeepMind)
 https://arxiv.org/abs/1911.05507
-
-Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., ... & Polosukhin, I. (2017). Attention is all you need. In Advances in neural information processing systems (pp. 5998-6008).
-Transformers network
-https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf
 
 Single Headed Attention RNN: Stop Thinking With Your Head
 https://arxiv.org/abs/1911.11423
@@ -81,6 +96,9 @@ No open link?
 Freeman, D., Ha, D., & Metz, L. (2019). Learning to Predict Without Looking Ahead: World Models Without Forward Prediction. In Advances in Neural Information Processing Systems (pp. 5380-5391).
 https://arxiv.org/abs/1910.13038
 If you limit agents ability too observe real world to "key frames", making it more sporadic, it develops some predicting capabilities, even tho you never told it do?
+
+Raghu, A., Raghu, M., Bengio, S., & Vinyals, O. (2019). Rapid learning or feature reuse? towards understanding the effectiveness of maml. arXiv preprint arXiv:1909.09157.
+https://arxiv.org/abs/1909.09157
 
 Behavior Regularized Offline Reinforcement Learning
 Yifan Wu, George Tucker, Ofir Nachum
@@ -97,6 +115,10 @@ Lottery tickets in RL domain.
 
 Video tutorial on GANs from Ian Goodfellow (2016):
 https://www.youtube.com/watch?v=HGYYEUSm-0Q
+
+Goodfellow, I., Pouget-Abadie, J., Mirza, M., Xu, B., Warde-Farley, D., Ozair, S., ... & Bengio, Y. (2014). Generative adversarial nets. In Advances in neural information processing systems (pp. 2672-2680).
+https://arxiv.org/pdf/1406.2661v1.pdf
+Original paper with 14000 citations.
 
 Original StyleGan (is it?)
 https://arxiv.org/abs/1812.04948
@@ -117,6 +139,10 @@ SinGAN: Learning a Generative Model from a Single Natural Image Tamar Rott Shaha
 Reinke, C., Etcheverry, M., & Oudeyer, P. Y. (2019). Intrinsically Motivated Exploration for Automated Discovery of Patterns in Morphogenetic Systems. arXiv preprint arXiv:1908.06663.
 arxiv.org/abs/1908.06663
 Apparently used an intrinsically motivated AI to explore Game Of Life to find cool patterns. The most interesting part (judging from the abstract) is that it developed a non-obvious representation, just looking for novelty (or whatever it used: looking for something _interesting_). Would be super-cool to try it for my networks, huh?
+
+Hoyer, S., Sohl-Dickstein, J., & Greydanus, S. (2019). Neural reparameterization improves structural optimization. arXiv preprint arXiv:1909.04240.
+https://arxiv.org/pdf/1909.04240.pdf
+They are trying to create some fancy mechanical structures, and instead of directly optimizing the parameters of these structures, they optimize the parameters of an ANN that output these structures. Claim that it works better. Looks fun.
 
 ## Classic RNNs
 
