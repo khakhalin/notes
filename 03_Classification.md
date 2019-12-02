@@ -1,4 +1,4 @@
-# Support vector machines
+# Classification
 
 ## Basic classification problem
 Simplest approach: **Nearest Neighbor**. Just pick closest training case. This is an example of a **lazy learning** approach: instead of generating estimations upfront (that would be called **eager**), we only generate them at retrieval. A slightly better approach: **K nearest neighbors** (aka KNN).
