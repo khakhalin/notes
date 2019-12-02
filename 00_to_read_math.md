@@ -118,6 +118,15 @@ Reinke, C., Etcheverry, M., & Oudeyer, P. Y. (2019). Intrinsically Motivated Exp
 arxiv.org/abs/1908.06663
 Apparently used an intrinsically motivated AI to explore Game Of Life to find cool patterns. The most interesting part (judging from the abstract) is that it developed a non-obvious representation, just looking for novelty (or whatever it used: looking for something _interesting_). Would be super-cool to try it for my networks, huh?
 
+## Classic RNNs
+
+https://distill.pub/2019/memorization-in-rnns/
+How LSTM networks remember text: a visual intro.
+
+Hafner, D., Irpan, A., Davidson, J., & Heess, N. (2017). Learning hierarchical information flow with recurrent neural modules. In Advances in Neural Information Processing Systems (pp. 6724-6733).
+https://papers.nips.cc/paper/7249-learning-hierarchical-information-flow-with-recurrent-neural-modules.pdf
+ThalNet, which like a virtual thalamus. Only cited by 4 since 2017, so doesn't look like it caught on.
+
 ## Meanings
 
 Marcus, G. (2018). Innateness, alphazero, and artificial intelligence. arXiv preprint arXiv:1801.05667.
