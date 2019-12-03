@@ -1,5 +1,7 @@
 # Regression
 
+## Linear Regression
+
 ## Bias-Variance Tradeoff
 
 An estimate for the number of training examples needed ot learn problems of certain dimensionality.
@@ -31,14 +33,25 @@ So we ended up having 3 terms:
 * Variance of the data, aka noise, or irreducable error
 So sort of precision / accuracy situation.
 
-https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff
-**My current understanding** The point is that if you try to minimize bias (make your classifier stick closer to the data), you fall at mercy of your training set, and so increase variance (each classifier will cling to the testing data, so all classifiers will be slightly different, if you train on different data). If however you believe that the underlying solution has some structure, you may want to restrain your classifier (regularization). It means that for each given training set you'll get a bias, but you'll reduce variance (of your classifier, across all possible training set), and so hopefully would, stay closer to the "ground truth". Essentially, a parsimony principle: simpler models are better.
+> **My current understanding** The point is that if you try to minimize bias (make your classifier stick closer to the data), you fall at mercy of your training set, and so increase variance. Each particular classifier, understood as an instance produced by some particular set of training data, will cling to this testing data. So all classifiers will be slightly different, if you train on different data. If you believe that the underlying solution has some structure, you may want to restrain your classifier, so that it would not change that widely for different subsets of your testing data (regularization). It means that for each given training set you'll get higher bias, but you'll reduce variance (of your classifier, across all possible training set), and so hopefully would stay closer to the "ground truth". Essentially, a parsimony principle: simpler models are better.
 
-So related to overfitting.
+> So it's directly related to overfitting. Low bias = high variance = very good fit on the training set, but horrible fit on the testing set (or rather, validation set).
 
-But look, it would only work if the ground trugh is actually simple. Why does it work? Why is the ground truth actually simple? Is it some expected statistical property that the world actually follows?..
+> But look, it would only work if the ground trugh is actually simple. Why does it work? Why is the ground truth actually simple? Is it some expected statistical property that the world actually follows?.. Or is it because a typical practical problem has certain properties? Seems like that; see below.
 
-## Linear Regression
+## Ridge regression
+
+Seems to be an old name for **L2 regularization** (see DL chapter). Another name: **Tikhonov regularization**. 
+
+Motivation: Consider Ax = b, and x doesn't exist. In a most typical practical case, it gives a superposition of an overdetermined problem Ax' = b for the component of x that is in the row-space, and so is affected by the matrix (x' = projection of x into row-space), and an underdetermined problem A(x-x') = 0 for the components x-x' that are in the null-space of A, and so can be chosen arbitrary without any effect on Ax. Everything that in the null-space cannot bring Ax closer to b, so we are free to pick them in some "nice" fashion, for example, to satisfy some priors, or minimize complexity.
+
+With Tikhonov regularization, we minimize not squared Euqledian norm |Ax-b|^2 but |Ax-b|^2 + |Γx|^2 where Γ is some matrix; often identity matrix I multiplied by a coefficient, in which case we just have a sum of squared x_i (L2 regularization) multiplied by a coeff (usually denoted k). 
+
+This is especially important in case of **Multicollinearity**, when you're trying to predict y from many variables a_i, in a way Ax = y (observations of variables a_i for different training points become columns of A, while regression coefficients form x), but some of a_i are strongly correlated. In this case trying to painfully minimize y-Ax would be counter-productive, as we'd fit noise in y with noise in a_i. Imagine an extreme case: all columns of A are the same (rank=1), but are observed with noise, and noise is independent (so formally rank = N). What we actually need is only one (doesn't matter which one) x_i>0, and all others 0. But what will happen, is that we'll fit noise in y with noise in A.
+
+The name "ridge" comes from a visual example of what is describe above. Imagine that only part of the solution is well defined, and the rest is close ot null-space of A. Then the "true solution" is a "generalized cylinder" made by the true solution (in those coordinates that make sense), arbitrarily extended across the "irrelevant coordinates". Small changes in training data (right side of the Ax=y equation) would sway the solution along this "ridge". By adding regularization we change a "ridge" into a "peak" (lines turn into parabolas), which stabilizes the solution to perturbations in both A and y. ([Source: stackexchange](https://stats.stackexchange.com/questions/118712/why-does-ridge-estimate-become-better-than-ols-by-adding-a-constant-to-the-diago/119708#119708))
+
+How to pick the coefficient k? One method: **Ridge trace**: plot found coefficients as a function of k, and eyeball value at which they stop oscillating, and start converging (not in the sense of becoming const, but in the sense of of monotone almost-linear change).
 
 ## Logistic Regression
 
