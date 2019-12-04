@@ -1,6 +1,14 @@
 # Tools, coding, project management
 All sorts of infrastructure stuff.
 
+## Tensorflow 2.0 and Keras
+
+* Links to several tutorials: https://github.com/sayakpaul/TF-2.0-Hacks/blob/master/README.md
+
+## Scikit-learn
+
+* A bunch of notebooks that implement all key ML methods, by Aurélien Geron, to accompany his book ("Hands-On Machine Learning with Scikit-Learn and TensorFlow"): https://github.com/ageron/handson-ml2
+
 ## Python tips and tricks
 
 **Cheatsheets:**

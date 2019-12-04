@@ -45,13 +45,21 @@ Find some papers they published? Cool terms mentioned on the website: automatic 
 
 ## Transfer, distillation, tickets
 
-Furlanello, T., Lipton, Z. C., Tschannen, M., Itti, L., & Anandkumar, A. (2018). Born again neural networks. arXiv preprint arXiv:1805.04770.
-https://arxiv.org/pdf/1805.04770.pdf
-Top read!
+Ba, J., & Caruana, R. (2014). Do deep nets really need to be deep?. In Advances in neural information processing systems (pp. 2654-2662).
+https://papers.nips.cc/paper/5484-do-deep-nets-really-need-to-be-deep.pdf
+Seems to be one of the original network distillation papers (800 refs)
+
+Hinton, G., Vinyals, O., & Dean, J. (2015). Distilling the knowledge in a neural network. arXiv preprint arXiv:1503.02531.
+https://arxiv.org/pdf/1503.02531.pdf
+The splashy "original distillation paper" (2500 refs)
 
 Frankle, J., & Carbin, M. (2018). The lottery ticket hypothesis: Finding sparse, trainable neural networks. arXiv preprint arXiv:1803.03635.
 https://arxiv.org/abs/1803.03635
 Original paper presenting the lottery #ticket hypothesis.
+
+Furlanello, T., Lipton, Z. C., Tschannen, M., Itti, L., & Anandkumar, A. (2018). Born again neural networks. arXiv preprint arXiv:1805.04770.
+https://arxiv.org/pdf/1805.04770.pdf
+Top read!
 
 Self-training with Noisy Student improves ImageNet classification Qizhe Xie, Eduard Hovy, Minh-Thang Luong, Quoc V. Le
 https://arxiv.org/abs/1911.04252
@@ -124,6 +132,9 @@ Original StyleGan (is it?)
 https://arxiv.org/abs/1812.04948
 Karras, T., Laine, S., & Aila, T. (2019). A style-based generator architecture for generative adversarial networks. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (pp. 4401-4410).
 
+Reimplementation of StyleGAN from scratch in TF 2.0. Seem to be well-written, and worth studying:
+https://github.com/manicman1999/StyleGAN-Tensorflow-2.0
+
 Contrastive Learning of Structured World Models
 Thomas Kipf, Elise van der Pol, Max Welling
 [https://arxiv.org/abs/1911.12247](<https://arxiv.org/abs/1911.12247>)
@@ -178,7 +189,8 @@ NetGAN: Generating Graphs via Random Walks
 A. Bojchevski, O. Shchur, D. Zugner, S. Gunnemann.
 ArXiv e-prints. 2018.
 
-## Code to read
+## Misc
 
-Reimplementation of StyleGAN from scratch in TF 2.0. Seem to be well-written, and worth studying:
-https://github.com/manicman1999/StyleGAN-Tensorflow-2.0
+Klein, B., & Hoel, E. (2019). Uncertainty and causal emergence in complex networks. arXiv preprint arXiv:1907.03902.
+https://arxiv.org/pdf/1907.03902.pdf
+Analyze how some basic network properties (?) can be derived by very basic information principles (?).

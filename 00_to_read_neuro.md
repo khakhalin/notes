@@ -180,3 +180,7 @@ Metameres: in this case, different stimuli that cause identical activation in a 
 Calhoun, A. J., Pillow, J. W., & Murthy, M. (2019). Unsupervised identification of the internal states that shape natural behavior. Nature Neuroscience, 1-10.
 https://www.nature.com/articles/s41593-019-0533-x
 Use unsupervise learning to identify internal (latent) states in a fly; then correlate these states with activity of individual neurons.
+
+Spoerer, C. J., Kietzmann, T. C., & Kriegeskorte, N. (2019). Recurrent networks can recycle neural resources to flexibly trade speed for accuracy in visual recognition. bioRxiv, 677237.
+https://www.biorxiv.org/content/10.1101/677237v3.full
+Recurrent convolutional network  works better than a feed-forward convolutional network. It's slower, but better. Claim that it's similar to primate vision somehow.
