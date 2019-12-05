@@ -45,6 +45,7 @@ Third priority books:
 Books that are currently not on the reading list, but keeping the links here just in case:
 
 * Problem solving with data structures in Python ([full text, web](https://runestone.academy/runestone/books/published/pythonds/index.html))
+* [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/index.html) by Michael Nielsen
 
 ## Aggregators of links
 

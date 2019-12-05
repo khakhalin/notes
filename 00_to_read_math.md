@@ -10,6 +10,9 @@ On what neural network can encode easily - seems to be a very useful read, poten
 Belkin, M., Hsu, D., Ma, S., & Mandal, S. (2019). Reconciling modern machine-learning practice and the classical bias–variance trade-off. Proceedings of the National Academy of Sciences, 116(32), 15849-15854.
 https://arxiv.org/abs/1812.11118
 
+Stone, J. V. (2018). Information Theory: A Tutorial Introduction. arXiv preprint arXiv:1802.05968.
+https://arxiv.org/abs/1802.05968
+
 Metz, L., Maheswaranathan, N., Cheung, B., & Sohl-Dickstein, J. (2018). Meta-Learning Update Rules for Unsupervised Representation Learning. arXiv preprint arXiv:1804.00222.
 https://arxiv.org/abs/1804.00222
 
@@ -39,9 +42,9 @@ Another paper with 1600 citations.
 On evolving network architectures:
 https://ai.googleblog.com/2018/03/using-evolutionary-automl-to-discover.html
 
-Interesting project on automatic data augmentation, and generation of strong labels from a bunch of weak labels:
-[https://www.snorkel.org/](<https://www.snorkel.org/>)
-Find some papers they published? Cool terms mentioned on the website: automatic data augmentation, identifying critical data subsets, slicing functions
+Klein, B., & Hoel, E. (2019). Uncertainty and causal emergence in complex networks. arXiv preprint arXiv:1907.03902.
+https://arxiv.org/pdf/1907.03902.pdf
+Analyze how some basic network properties (?) can be derived by very basic information principles (?).
 
 ## Transfer, distillation, tickets
 
@@ -56,6 +59,9 @@ The splashy "original distillation paper" (2500 refs)
 Frankle, J., & Carbin, M. (2018). The lottery ticket hypothesis: Finding sparse, trainable neural networks. arXiv preprint arXiv:1803.03635.
 https://arxiv.org/abs/1803.03635
 Original paper presenting the lottery #ticket hypothesis.
+
+Zhou, H., Lan, J., Liu, R., & Yosinski, J. (2019). Deconstructing lottery tickets: Zeros, signs, and the supermask. arXiv preprint arXiv:1905.01067.
+https://arxiv.org/abs/1905.01067
 
 Furlanello, T., Lipton, Z. C., Tschannen, M., Itti, L., & Anandkumar, A. (2018). Born again neural networks. arXiv preprint arXiv:1805.04770.
 https://arxiv.org/pdf/1805.04770.pdf
@@ -96,6 +102,18 @@ Single Headed Attention RNN: Stop Thinking With Your Head
 https://arxiv.org/abs/1911.11423
 Looks somewhat advanced (from the technical, not math pov), but if I get it right, they tried to diversify the field by deliberately sticking to a non-mainstream approach (something that is NOT transformers), and got good performance.
 
+## Quasi-Symbolic
+
+Yoshua Bengio’s short reading list
+* BabyAI: First Steps Towards Grounded Language Learning With a Human In the Loop, Chevalier-Boisvert et al.,
+2018: https://arxiv.org/abs/1810.08272v2.
+* A Meta-Transfer Objective for Learning to Disentangle Causal Mechanisms, Bengio et al., 2019:
+https://arxiv.org/abs/1901.10912.
+* Learning Neural Causal Models from Unknown Interventions, Ke et al., 2019: https://arxiv.org/abs/1910.
+01075.
+* Recurrent Independent Mechanisms, Goyal et al., 2019: https://arxiv.org/abs/1909.10893.
+* The Consciousness Prior, Bengio et al., 2017: https://arxiv.org/abs/1709.08568.
+
 ## RL
 
 Vinyals, O., Babuschkin, I., Czarnecki, W. M., Mathieu, M., Dudzik, A., Chung, J., ... & Oh, J. (2019). Grandmaster level in StarCraft II using multi-agent reinforcement learning. Nature, 1-5.
@@ -116,6 +134,12 @@ A paper about the most horrible type of learning: offline (model of the world in
 Yu, H., Edunov, S., Tian, Y., & Morcos, A. S. (2019). Playing the lottery with rewards and multiple languages: lottery tickets in RL and NLP. arXiv preprint arXiv:1906.02768.
 https://arxiv.org/abs/1906.02768
 Lottery tickets in RL domain.
+
+## Autoencoders
+
+Oord, A. V. D., Dieleman, S., Zen, H., Simonyan, K., Vinyals, O., Graves, A., ... & Kavukcuoglu, K. (2016). Wavenet: A generative model for raw audio. arXiv preprint arXiv:1609.03499.
+https://arxiv.org/abs/1609.03499
+1.4k citations: famous really successful realtime audio generation network from Google DeepMind.
 
 ## GANs and generation
 
@@ -155,6 +179,10 @@ Hoyer, S., Sohl-Dickstein, J., & Greydanus, S. (2019). Neural reparameterization
 https://arxiv.org/pdf/1909.04240.pdf
 They are trying to create some fancy mechanical structures, and instead of directly optimizing the parameters of these structures, they optimize the parameters of an ANN that output these structures. Claim that it works better. Looks fun.
 
+Makhzani, A. (2018). Implicit autoencoders. arXiv preprint arXiv:1805.09804.
+https://arxiv.org/abs/1805.09804
+Sort of GAN-like architecture that tries to optimize the latent space directly? Interesting, but hard to get from the abstract.
+
 ## Classic RNNs
 
 https://distill.pub/2019/memorization-in-rnns/
@@ -163,18 +191,6 @@ How LSTM networks remember text: a visual intro.
 Hafner, D., Irpan, A., Davidson, J., & Heess, N. (2017). Learning hierarchical information flow with recurrent neural modules. In Advances in Neural Information Processing Systems (pp. 6724-6733).
 https://papers.nips.cc/paper/7249-learning-hierarchical-information-flow-with-recurrent-neural-modules.pdf
 ThalNet, which like a virtual thalamus. Only cited by 4 since 2017, so doesn't look like it caught on.
-
-## Meanings
-
-Marcus, G. (2018). Innateness, alphazero, and artificial intelligence. arXiv preprint arXiv:1801.05667.
-[https://arxiv.org/ftp/arxiv/papers/1801/1801.05667.pdf](<https://arxiv.org/ftp/arxiv/papers/1801/1801.05667.pdf>)
-
-Fodor, J. A., & Pylyshyn, Z. W. (1988). Connectionism and cognitive architecture: A critical analysis. Cognition, 28(1-2), 3-71.
-[pdf on rutgers edu](http://ruccs.rutgers.edu/images/personal-zenon-pylyshyn/proseminars/Proseminar13/ConnectionistArchitecture.pdf)
-Seminal old paper (5k refs) against neural networks :) that everybody reference.
-
-Cardon, D., Cointet, J. P., & Mazieres, A. (2018). Neurons spike back: The Invention of Inductive Machines and the Artificial Intelligence Controversy.
-[https://neurovenge.antonomase.fr/NeuronsSpikeBack.pdf](<https://neurovenge.antonomase.fr/NeuronsSpikeBack.pdf>)
 
 ## Graph networks
 
@@ -189,8 +205,25 @@ NetGAN: Generating Graphs via Random Walks
 A. Bojchevski, O. Shchur, D. Zugner, S. Gunnemann.
 ArXiv e-prints. 2018.
 
-## Misc
+## Alternative network designes
 
-Klein, B., & Hoel, E. (2019). Uncertainty and causal emergence in complex networks. arXiv preprint arXiv:1907.03902.
-https://arxiv.org/pdf/1907.03902.pdf
-Analyze how some basic network properties (?) can be derived by very basic information principles (?).
+### Helmholtz Machines
+
+Kevin G. Kirby (2006). A Tutorial on Helmholtz Machines 
+https://www.nku.edu/~kirby/docs/HelmholtzTutorialKoeln.pdf
+
+Dayan, P., Hinton, G. E., Neal, R. M., & Zemel, R. S. (1995). The helmholtz machine. Neural computation, 7(5), 889-904.
+http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.34.1800&rep=rep1&type=pdf
+Original paper by Hinton, 1k citations.
+
+## Meta
+
+Marcus, G. (2018). Innateness, alphazero, and artificial intelligence. arXiv preprint arXiv:1801.05667.
+[https://arxiv.org/ftp/arxiv/papers/1801/1801.05667.pdf](<https://arxiv.org/ftp/arxiv/papers/1801/1801.05667.pdf>)
+
+Fodor, J. A., & Pylyshyn, Z. W. (1988). Connectionism and cognitive architecture: A critical analysis. Cognition, 28(1-2), 3-71.
+[pdf on rutgers edu](http://ruccs.rutgers.edu/images/personal-zenon-pylyshyn/proseminars/Proseminar13/ConnectionistArchitecture.pdf)
+Seminal old paper (5k refs) against neural networks :) that everybody reference when then want to question the supposed universality of deep learning.
+
+Cardon, D., Cointet, J. P., & Mazieres, A. (2018). Neurons spike back: The Invention of Inductive Machines and the Artificial Intelligence Controversy.
+[https://neurovenge.antonomase.fr/NeuronsSpikeBack.pdf](<https://neurovenge.antonomase.fr/NeuronsSpikeBack.pdf>)
