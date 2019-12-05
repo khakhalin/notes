@@ -1,7 +1,4 @@
-# Orphan topics
-Notes that for now don't fit existing categories, but are too short to have a separate section.
-
-## Gaussian process
+## Gaussian processes
 
 Relevant cards:
 * [[Gortler2019gaussian]]
