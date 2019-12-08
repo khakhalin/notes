@@ -1,5 +1,8 @@
 # To-read: Neuro
 
+Raman, D. V., Rotondo, A. P., & O’Leary, T. (2019). Fundamental bounds on learning performance in neural circuits. Proceedings of the National Academy of Sciences, 116(21), 10537-10546.
+https://www.pnas.org/content/116/21/10537.short
+
 ## Network structure
 
 Relating network connectivity to dynamics: opportunities and challenges for theoretical neuroscience Carina Curto, Katherine Morrison
@@ -69,11 +72,18 @@ Lim, S. et al. Inferring learning rules from distributions of fring rates in cor
 
 ## Free energy
 
-Friston, K. (2010). The free-energy principle: a unified brain theory?. Nature reviews neuroscience, 11(2), 127.
-3k references! So people do find it useful after all?
+#freeenergy
 
 Gershman, S. J. (2019). What does the free energy principle tell Us about the brain?. arXiv preprint arXiv:1901.07945.
 https://arxiv.org/abs/1901.07945
+
+The Markov blankets of life: autonomy, active inference and the free energy principle
+Michael Kirchhoff, Thomas Parr, Ensor Palacios, Karl Friston and Julian Kiverstein
+Published:17 January 2018
+https://royalsocietypublishing.org/doi/full/10.1098/rsif.2017.0792
+
+Friston, K. (2010). The free-energy principle: a unified brain theory?. Nature reviews neuroscience, 11(2), 127.
+3k references! So people do find it useful after all?
 
 https://www.frontiersin.org/articles/10.3389/fnsys.2019.00042/full 
 The Dialectics of Free Energy Minimization Evert A. Boonstra and Heleen A. Slagter
@@ -93,8 +103,6 @@ Lee, H., Choi, W., Park, Y., & Paik, S. B. (2020). Distinct role of flexible and
 Nicola, W. and Clopath, C. (2017). Supervised learning in spiking neural networks with FORCE training. Nature Communications, 8(1):1–15.
 
 Nicola, W. and Clopath, C. (2019). A diversity of interneurons and Hebbian plasticity facilitate rapid compressible learning in the hippocampus. Nature Neuroscience, 22(7):1168–1181.
-
-Raman, D. V., Rotondo, A. P., and O’Leary, T. (2019). Fundamental bounds on learning performance in neural circuits. In Proceedings of the National Academy of Sciences, page 201813416.
 
 Brea, J., Senn, W., and Pfister, J.-P. (2013). Matching Recall and Storage in Sequence Learning with Spiking Neural Networks. Journal of Neuroscience, 33(23):9565–9575.
 

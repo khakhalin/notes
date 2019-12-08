@@ -6,11 +6,12 @@
 # Words and topics to look up
 
 Random pieces of math
-* Refresh the general flavor of Lagrangians and Hamiltonians.
+* Refresh the general flavor of Lagrangians and Hamiltonians
 
 Classic ML and friends
 * Bayesian PCA
 * Kalman filter (and its friends)
+* Mean field particle methods ([starting with wiki](https://en.wikipedia.org/wiki/Mean_field_particle_methods))
 * Resampling techniques: SMOTE, isotonic regression, Platt scaling
 * Hungarian algorithm
 
@@ -38,5 +39,5 @@ Technical stuff
 Network science
 * Perron–Frobenius theorem (something related to centralities? or network graph eigenvectors?)
 
-Neuro stuff
+Neuro
 * ...

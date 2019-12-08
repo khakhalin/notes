@@ -46,15 +46,25 @@ Klein, B., & Hoel, E. (2019). Uncertainty and causal emergence in complex networ
 https://arxiv.org/pdf/1907.03902.pdf
 Analyze how some basic network properties (?) can be derived by very basic information principles (?).
 
-## Transfer, distillation, tickets
+Chen, T. Q., Rubanova, Y., Bettencourt, J., & Duvenaud, D. K. (2018). Neural ordinary differential equations. In Advances in neural information processing systems (pp. 6571-6583).
+https://arxiv.org/abs/1806.07366
+
+# Why networks work?
+
+Milne, T. (2019). Piecewise strong convexity of neural networks. In Advances in Neural Information Processing Systems (pp. 12953-12963).
+https://arxiv.org/abs/1810.12805
+
+Yang, G. (2019). Wide Feedforward or Recurrent Neural Networks of Any Architecture are Gaussian Processes. In Advances in Neural Information Processing Systems (pp. 9947-9960).
+https://arxiv.org/abs/1910.12478
+
+## Bias-variance and tickets
+
+Arora, S., Du, S. S., Li, Z., Salakhutdinov, R., Wang, R., & Yu, D. (2019). Harnessing the Power of Infinitely Wide Deep Nets on Small-data Tasks. arXiv preprint arXiv:1910.01663.
+https://arxiv.org/pdf/1910.01663.pdf
 
 Ba, J., & Caruana, R. (2014). Do deep nets really need to be deep?. In Advances in neural information processing systems (pp. 2654-2662).
 https://papers.nips.cc/paper/5484-do-deep-nets-really-need-to-be-deep.pdf
 Seems to be one of the original network distillation papers (800 refs)
-
-Hinton, G., Vinyals, O., & Dean, J. (2015). Distilling the knowledge in a neural network. arXiv preprint arXiv:1503.02531.
-https://arxiv.org/pdf/1503.02531.pdf
-The splashy "original distillation paper" (2500 refs)
 
 Frankle, J., & Carbin, M. (2018). The lottery ticket hypothesis: Finding sparse, trainable neural networks. arXiv preprint arXiv:1803.03635.
 https://arxiv.org/abs/1803.03635
@@ -63,14 +73,6 @@ Original paper presenting the lottery #ticket hypothesis.
 Zhou, H., Lan, J., Liu, R., & Yosinski, J. (2019). Deconstructing lottery tickets: Zeros, signs, and the supermask. arXiv preprint arXiv:1905.01067.
 https://arxiv.org/abs/1905.01067
 
-Furlanello, T., Lipton, Z. C., Tschannen, M., Itti, L., & Anandkumar, A. (2018). Born again neural networks. arXiv preprint arXiv:1805.04770.
-https://arxiv.org/pdf/1805.04770.pdf
-Top read!
-
-Self-training with Noisy Student improves ImageNet classification Qizhe Xie, Eduard Hovy, Minh-Thang Luong, Quoc V. Le
-https://arxiv.org/abs/1911.04252
-Something weird semi-supervised learning with noisy teachers and distillation. Essentially, it seems that a badly labeled large dataset is better than a well-labeled small dataset, so it's better to train one model on a small dataset, then have it label a huge dataset (even tho many labels will be wrong), and then use this large dataset to train the next model. Or something like that. Weird.
-
 Tian, Y., Jiang, T., Gong, Q., & Morcos, A. (2019). Luck Matters: Understanding Training Dynamics of Deep ReLU Networks. arXiv preprint arXiv:1905.13405.
 https://arxiv.org/pdf/1905.13405.pdf
 To understand how "lucky tickets" work, they train a larger network from a smaller network, then study activation.
@@ -78,6 +80,22 @@ To understand how "lucky tickets" work, they train a larger network from a small
 Morcos, A. S., Yu, H., Paganini, M., & Tian, Y. (2019). One ticket to win them all: generalizing lottery ticket initializations across datasets and optimizers. arXiv preprint arXiv:1906.02773.
 https://arxiv.org/abs/1906.02773
 New paper about whether "lucky tickets" generalize across datasets.
+
+## Transfer, distillation
+
+#distillation
+
+Hinton, G., Vinyals, O., & Dean, J. (2015). Distilling the knowledge in a neural network. arXiv preprint arXiv:1503.02531.
+https://arxiv.org/pdf/1503.02531.pdf
+The splashy "original distillation paper" (2500 refs)
+
+Furlanello, T., Lipton, Z. C., Tschannen, M., Itti, L., & Anandkumar, A. (2018). Born again neural networks. arXiv preprint arXiv:1805.04770.
+https://arxiv.org/pdf/1805.04770.pdf
+Top read!
+
+Self-training with Noisy Student improves ImageNet classification Qizhe Xie, Eduard Hovy, Minh-Thang Luong, Quoc V. Le
+https://arxiv.org/abs/1911.04252
+Something weird semi-supervised learning with noisy teachers and distillation. Essentially, it seems that a badly labeled large dataset is better than a well-labeled small dataset, so it's better to train one model on a small dataset, then have it label a huge dataset (even tho many labels will be wrong), and then use this large dataset to train the next model. Or something like that. Weird.
 
 ## Attention
 
