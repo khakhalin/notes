@@ -11,7 +11,6 @@ Random pieces of math
 Classic ML and friends
 * Bayesian PCA
 * Kalman filter (and its friends)
-* Mean field particle methods ([starting with wiki](https://en.wikipedia.org/wiki/Mean_field_particle_methods))
 * Resampling techniques: SMOTE, isotonic regression, Platt scaling
 * Hungarian algorithm
 

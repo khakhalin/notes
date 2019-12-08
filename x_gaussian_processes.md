@@ -1,5 +1,7 @@
 ## Gaussian processes
 
+Orphan topic; will eventually be moved somewhere.
+
 Relevant cards:
 * [[Gortler2019gaussian]]
 
