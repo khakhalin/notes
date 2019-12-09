@@ -13,6 +13,10 @@ https://arxiv.org/abs/1812.11118
 Stone, J. V. (2018). Information Theory: A Tutorial Introduction. arXiv preprint arXiv:1802.05968.
 https://arxiv.org/abs/1802.05968
 
+Your Classifier is Secretly an Energy Based Model and You Should Treat it Like One
+Will Grathwohl, Kuan-Chieh Wang, Jörn-Henrik Jacobsen, David Duvenaud, Mohammad Norouzi, Kevin Swersky
+https://arxiv.org/abs/1912.03263
+
 Metz, L., Maheswaranathan, N., Cheung, B., & Sohl-Dickstein, J. (2018). Meta-Learning Update Rules for Unsupervised Representation Learning. arXiv preprint arXiv:1804.00222.
 https://arxiv.org/abs/1804.00222
 
@@ -48,6 +52,9 @@ Analyze how some basic network properties (?) can be derived by very basic infor
 
 Chen, T. Q., Rubanova, Y., Bettencourt, J., & Duvenaud, D. K. (2018). Neural ordinary differential equations. In Advances in neural information processing systems (pp. 6571-6583).
 https://arxiv.org/abs/1806.07366
+
+Advani, M. S., & Saxe, A. M. (2017). High-dimensional dynamics of generalization error in neural networks. arXiv preprint arXiv:1710.03667.
+https://arxiv.org/abs/1710.03667
 
 # Why networks work?
 
