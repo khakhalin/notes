@@ -66,6 +66,10 @@ Krieg, D., & Triesch, J. (2014). A unifying theory of synaptic long-term plastic
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3941589/
 Try to marry Hebbian with gradient descent and something else? Lots of math, not that well cited.
 
+Rolfe, Jason Tyler (2012) Intrinsic Gradient Networks. Dissertation (Ph.D.), California Institute of Technology.
+https://thesis.library.caltech.edu/6953/
+PhD thesis that was never published on biologically plausible gradient descend in the brain? Check it out.
+
 ## Bottom-up validation
 
 Lim, S. et al. Inferring learning rules from distributions of fring rates in cortical neurons. Nat. Neurosci. 18, 1804–1810 (2015).
