@@ -37,6 +37,7 @@ Second priority books:
 * Pattern recognition and ML by Christopher Bishop ([full pdf](https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/))
 * Foundations of ML by M. Mohri et al ([full pdf](https://cs.nyu.edu/~mohri/mlbook/)) - more mathy?
 * ML book by K.P. Murphy - [page](https://www.cs.ubc.ca/~murphyk/MLbook/) (but no full pdf)
+* Morgan, S. L., & Winship, C. (2015). Counterfactuals and causal inference (pdfs are googlable)
 
 Third priority books:
 
