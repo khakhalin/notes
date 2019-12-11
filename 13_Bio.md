@@ -24,3 +24,7 @@ Very well cited, this one.
 
 Kording, K. P., Kayser, C., Einhauser, W., & Konig, P. (2004). How are complex cell properties adapted to the statistics of natural stimuli?. Journal of neurophysiology, 91(1), 206-212.
 https://www.ncbi.nlm.nih.gov/m/pubmed/12904330/
+
+Sorscher, B., Mel, G., Ganguli, S., & Ocko, S. (2019). A unified theory for the origin of grid cells through the lens of pattern formation. In Advances in Neural Information Processing Systems (pp. 10003-10013).
+https://papers.nips.cc/paper/9191-a-unified-theory-for-the-origin-of-grid-cells-through-the-lens-of-pattern-formation
+Supposedly, explains the development of grid cells, synthesizing two existing theories (recurrent with lateral inhibition and spontaneous development during navigation?)
