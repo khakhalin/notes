@@ -22,14 +22,14 @@ https://github.com/chiphuyen/machine-learning-systems-design
 ## Books
 
 * VLMS - 19 chapters: [full pdf](http://vmls-book.stanford.edu/)
+* ESLII - 18 chapters: [full pdf](https://web.stanford.edu/~hastie/ElemStatLearn/)
 * MML - 12 chapters: [full pdf](https://mml-book.github.io/)
+* Cracking the code interview - 17 chapters + general info
 * Kuhn Johnson - 20 chapters (no full pdf online)
 * ...or, as an alternative, "The 100 pages ML book" by Andriy Burkov - 11 chapters: [full pdf](http://themlbook.com/wiki/doku.php)
-* ESLII - 18 chapters: [full pdf](https://web.stanford.edu/~hastie/ElemStatLearn/)
 * Algorithms by Sedgewick - about 30 small chapters
-* Cracking the code interview - 17 chapters + general info
 
-Above books are about 100 chapters in total total. Or about 3 months worth of time if one faithfully studies a chapter a day.
+Above books are about 100 chapters in total total. Make your own schedule :)
 
 Second priority books:
 
@@ -38,6 +38,7 @@ Second priority books:
 * Foundations of ML by M. Mohri et al ([full pdf](https://cs.nyu.edu/~mohri/mlbook/)) - more mathy?
 * ML book by K.P. Murphy - [page](https://www.cs.ubc.ca/~murphyk/MLbook/) (but no full pdf)
 * Morgan, S. L., & Winship, C. (2015). Counterfactuals and causal inference (pdfs are googlable)
+* [Notes on dynamical systems](https://people.maths.bris.ac.uk/~macpd/ads/) ([pdf](https://people.maths.bris.ac.uk/~macpd/ads/bnotes.pdf)) from Carl Dettmann. Not a textbook, but close; worth scanning
 
 Third priority books:
 

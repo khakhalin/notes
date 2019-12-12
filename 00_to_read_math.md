@@ -118,6 +118,12 @@ Self-training with Noisy Student improves ImageNet classification Qizhe Xie, Edu
 https://arxiv.org/abs/1911.04252
 Something weird semi-supervised learning with noisy teachers and distillation. Essentially, it seems that a badly labeled large dataset is better than a well-labeled small dataset, so it's better to train one model on a small dataset, then have it label a huge dataset (even tho many labels will be wrong), and then use this large dataset to train the next model. Or something like that. Weird.
 
+## Curriculum
+
+Panagiotatos, G., Passalis, N., Iosifidis, A., Gabbouj, M., & Tefas, A. (2019, September). Curriculum-based Teacher Ensemble for Robust Neural Network Distillation. In 2019 27th European Signal Processing Conference (EUSIPCO) (pp. 1-5). IEEE.
+https://ieeexplore.ieee.org/abstract/document/8903112
+Something similar to my idea: auto-generated curriculum.
+
 ## Attention
 
 Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., ... & Polosukhin, I. (2017). Attention is all you need. In Advances in neural information processing systems (pp. 5998-6008).
@@ -152,6 +158,11 @@ https://arxiv.org/abs/1901.10912.
 01075.
 * Recurrent Independent Mechanisms, Goyal et al., 2019: https://arxiv.org/abs/1909.10893.
 * The Consciousness Prior, Bengio et al., 2017: https://arxiv.org/abs/1709.08568.
+
+## Exploration, curiosity
+
+Meire Fortunato, Mohammad Gheshlaghi Azar, Bilal Piot, Jacob Menick, Ian Osband, Alex Graves, Vlad Mnih, Remi Munos, Demis Hassabis, Olivier Pietquin, et al. Noisy networks for exploration. arXiv preprint arXiv:1706.10295, 2017
+A weak (not good enough) way to add exploration to AI playing videogames
 
 ## RL
 

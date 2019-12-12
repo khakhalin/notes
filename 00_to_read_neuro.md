@@ -167,6 +167,10 @@ Classes of dendritic information processing Alexandre Payeur, Jean-Claude Béïq
 
 Constraining computational models using electron microscopy wiring diagrams Ashok Litwin-Kumar, Srinivas C Turaga
 
+Kriegeskorte, N., Mur, M., & Bandettini, P. A. (2008). Representational similarity analysis-connecting the branches of systems neuroscience. Frontiers in systems neuroscience, 2, 4.
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2605405/
+1.5k citations; seminal conceptual work apparently. Important for ML?
+
 ## ML of brain
 
 Kietzmann, T. C., McClure, P., & Kriegeskorte, N. (2018). Deep neural networks in computational neuroscience. bioRxiv, 133504.
