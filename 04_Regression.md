@@ -11,17 +11,17 @@ Generalization error consists of two parts: bias and variance.
 **Derivation for a linear system:** (ref: [Some lecture](https://www.youtube.com/watch?v=zUJbRO0Wavo) by Kilian Weinberger)
 
 Say, regression x->y on a dataset (x,y) from distribution P(x,y).
-For a given x, you always have P(y|x), so that P(x,y) = P(y|x)P(x).
-Regression predicts expected E y(x) which is weighted by y (integrated by P(y|x) ).
-ML is about guessing Ey(x) using some algo. 
-Say, h(x) is the guess (aka classifier), produced by algo A, based on a training set D.
-The expected error for this estimation h is E (h-y)^2 = $\iint$ of P(x,y)(h(x)-y)^2 by x and y.
-h itself is a random variable, as it's a function of D, which is a random subset of (x,y).
-So we can consider expected Eh, by integrading over all possible training sets D.
-(We can estimate it by training lots of times and averaging. For regression, it's regression. For other loss functions estimations may be more complicated, but still possible. In practice, if you are only interested in E(h), you could also just apply A to the full dataset, obtaioning the best possible h possible.)
-Now, what's the expected error for the algorithm (across all possible classifiers it could possibly produce) is E integrated overe all h (so over all Ds), so we have a triple-integral (by D, x, y).
+For a given x, you have P(y|x), so that P(x,y) = P(y|x)P(x).
+Regression predicts expected E y(x), which is weighted (integrated) by P(y|x).
+ML is about guessing (predicting) E y(x) using some algorithm (aka classifier?)
+Say, h(x) is our guess for E y(x) produced by some algo A, based on a training set D.
+The expected error for this estimation h is: E (h-y)^2 = ∬ P(x,y)(h(x)-y)^2 by x and y.
+Now, h itself is a random variable, as it's a function of D, which is a random sample from (x,y).
+So we can consider expected value: E h, by integrating over all possible training sets D.
+(We can estimate it by training lots of times and averaging. If you are only interested in E(h), in practice, you could also just apply A to the full dataset, obtaioning the best h possible.)
+Now, the expected error for the algorithm (across all possible classifiers it could possibly produce) is error integrated overe all h (so over all Ds), so we have a triple-integral (by D, x, y).
 $\int_D \int_x \int_y (h(x)-y)^2 P(D) P(x,y)\,dD\,dx\,dy$
-Add and subtract mean h (Eh) inside the square, get h-Eh and Eh-y, open squares.
+Add and subtract Eh (mean h) inside the square; get h-Eh and Eh-y; open squares.
 (h-Eh)^2 becomes variance, (Eh-y)^2 eventually becomes bias.
 2(h-Eh)(Eh-y) dies out because for each fixed x you get a fixed (Eh-y), and int_D (h-Eh) = 0 by def of Eh.
 Except we need to massage (Eh-y)^2 some more. Let's subtract and add Ey, then open squares.

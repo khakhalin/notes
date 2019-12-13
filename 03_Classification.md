@@ -3,6 +3,8 @@
 ## Basic classification problem
 Simplest approach: **Nearest Neighbor**. Just pick closest training case. This is an example of a **lazy learning** approach: instead of generating estimations upfront (that would be called **eager**), we only generate them at retrieval. A slightly better approach: **K nearest neighbors** (aka KNN).
 
+Classic example: [MNIST](http://yann.lecun.com/exdb/mnist/index.html) (link to a library of all thinkable and unthinkable approaches to classification, as applied to this dataset, each given with a test error rate)
+
 ## SVM
 
 Widest street approach: find a line, so that if you have a band around the line, it separates the positive from the negative examples as best as possible.

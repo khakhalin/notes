@@ -21,9 +21,9 @@ https://github.com/chiphuyen/machine-learning-systems-design
 
 ## Books
 
-* VLMS - 19 chapters: [full pdf](http://vmls-book.stanford.edu/)
-* ESLII - 18 chapters: [full pdf](https://web.stanford.edu/~hastie/ElemStatLearn/)
-* MML - 12 chapters: [full pdf](https://mml-book.github.io/)
+* VLMS (Introduction to Applied Linear Algebra) by Stephen Boyd - 19 chapters: [full pdf](http://vmls-book.stanford.edu/)
+* ESLII (The Elements of Statistical Learning) by Hastie, Tibshirani, Friedman- 18 chapters: [full pdf](https://web.stanford.edu/~hastie/ElemStatLearn/)
+* MML (Mathematics for Machine Learning) by M.P. Deisenroth - 12 chapters: [full pdf](https://mml-book.github.io/)
 * Cracking the code interview - 17 chapters + general info
 * Kuhn Johnson - 20 chapters (no full pdf online)
 * ...or, as an alternative, "The 100 pages ML book" by Andriy Burkov - 11 chapters: [full pdf](http://themlbook.com/wiki/doku.php)
