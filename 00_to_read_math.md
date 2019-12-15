@@ -60,9 +60,14 @@ Analyze how some basic network properties (?) can be derived by very basic infor
 
 Chen, T. Q., Rubanova, Y., Bettencourt, J., & Duvenaud, D. K. (2018). Neural ordinary differential equations. In Advances in neural information processing systems (pp. 6571-6583).
 https://arxiv.org/abs/1806.07366
+Insteresting postscript a year later (20 min video from Neurips 2019; [youtube](https://www.youtube.com/watch?v=YZ-_E7A3V2w)). Lists items that were ovehyped, and cites follow-up studies that show limitations of this approach. Also a nice story of how they gradually updated the paper, to reflect the critique (including citing older and related work). Recommends as a replacement for resnets and time-series (in the future? once they make them stochastic?).
 
 Advani, M. S., & Saxe, A. M. (2017). High-dimensional dynamics of generalization error in neural networks. arXiv preprint arXiv:1710.03667.
 https://arxiv.org/abs/1710.03667
+
+Allamanis, M., Barr, E. T., Devanbu, P., & Sutton, C. (2018). A survey of machine learning for big code and naturalness. ACM Computing Surveys (CSUR), 51(4), 81.
+https://arxiv.org/pdf/1709.06182.pdf
+A longish review (30 pages) on using ML to analyze programming code.
 
 # Why networks work?
 

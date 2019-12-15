@@ -21,15 +21,17 @@ https://github.com/chiphuyen/machine-learning-systems-design
 
 ## Books
 
+(Given about in order of appropriate reading)
+
+* How to think like a computer scientist by Allen B. Downey: [site](http://openbookproject.net/thinkcs/python/english3e/) (python)
 * VLMS (Introduction to Applied Linear Algebra) by Stephen Boyd - 19 chapters: [full pdf](http://vmls-book.stanford.edu/)
 * ESLII (The Elements of Statistical Learning) by Hastie, Tibshirani, Friedman- 18 chapters: [full pdf](https://web.stanford.edu/~hastie/ElemStatLearn/)
 * MML (Mathematics for Machine Learning) by M.P. Deisenroth - 12 chapters: [full pdf](https://mml-book.github.io/)
+* Algorithms by Sedgewick - about 30 small chapters (Java)
 * Cracking the code interview - 17 chapters + general info
 * Kuhn Johnson - 20 chapters (no full pdf online)
 * ...or, as an alternative, "The 100 pages ML book" by Andriy Burkov - 11 chapters: [full pdf](http://themlbook.com/wiki/doku.php)
-* Algorithms by Sedgewick - about 30 small chapters
-
-Above books are about 100 chapters in total total. Make your own schedule :)
+* Competitive Programmer's Handbook by Antti Laaksonen: [pdf](https://cses.fi/book/book.pdf) (C++)
 
 Second priority books:
 
