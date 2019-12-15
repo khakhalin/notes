@@ -64,6 +64,10 @@ https://arxiv.org/abs/1806.07366
 Advani, M. S., & Saxe, A. M. (2017). High-dimensional dynamics of generalization error in neural networks. arXiv preprint arXiv:1710.03667.
 https://arxiv.org/abs/1710.03667
 
+Allamanis, M., Barr, E. T., Devanbu, P., & Sutton, C. (2018). A survey of machine learning for big code and naturalness. ACM Computing Surveys (CSUR), 51(4), 81.
+https://arxiv.org/pdf/1709.06182.pdf
+A longish review (30 pages) on using ML to analyze programming code.
+
 # Why networks work?
 
 Milne, T. (2019). Piecewise strong convexity of neural networks. In Advances in Neural Information Processing Systems (pp. 12953-12963).
