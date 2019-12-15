@@ -11,8 +11,9 @@ All sorts of infrastructure stuff.
 
 ## Python tips and tricks
 
-**Cheatsheets:**
-* Matplotlib: [https://github.com/rougier/matplotlib-cheatsheet](<https://github.com/rougier/matplotlib-cheatsheet>)
+**Matplotlib:**
+* Brief intro from Brad Solomon: https://realpython.com/python-matplotlib-guide/
+* Cheatsheet: [https://github.com/rougier/matplotlib-cheatsheet](<https://github.com/rougier/matplotlib-cheatsheet>)
 
 **Coding habits for data scientists:** ([ref](https://www.thoughtworks.com/insights/blog/coding-habits-data-scientists))
 * Keep code clean (not smelly). Types of **smells**:
