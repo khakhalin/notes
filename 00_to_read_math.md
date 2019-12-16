@@ -101,6 +101,9 @@ Morcos, A. S., Yu, H., Paganini, M., & Tian, Y. (2019). One ticket to win them a
 https://arxiv.org/abs/1906.02773
 New paper about whether "lucky tickets" generalize across datasets.
 
+Hooker, S., Courville, A., Dauphin, Y., & Frome, A. (2019). Selective Brain Damage: Measuring the Disparate Impact of Model Pruning. arXiv preprint arXiv:1911.05248.
+https://weightpruningdamage.github.io/
+
 Maheswaranathan, N., Williams, A., Golub, M., Ganguli, S., & Sussillo, D. (2019). Universality and individuality in neural dynamics across large populations of recurrent networks. In Advances in Neural Information Processing Systems (pp. 15603-15615).
 https://arxiv.org/abs/1907.08549
 They trained the same network (or similar networks) thousands of times, and checked how similar the profiles are. Kind of related to both O'Leary neuro idea, and the ticket hypothesis. An interesting follow-up would be something like performance outside of the preferred distributions, and how this performance (individuality?) is distributed itself, and whether some architectures tend to produce clusters rather then smooth distributions (personality?)
@@ -164,10 +167,16 @@ https://arxiv.org/abs/1901.10912.
 * Recurrent Independent Mechanisms, Goyal et al., 2019: https://arxiv.org/abs/1909.10893.
 * The Consciousness Prior, Bengio et al., 2017: https://arxiv.org/abs/1709.08568.
 
-## Exploration, curiosity
+## Exploration, curiosity, meta-learning
 
 Meire Fortunato, Mohammad Gheshlaghi Azar, Bilal Piot, Jacob Menick, Ian Osband, Alex Graves, Vlad Mnih, Remi Munos, Demis Hassabis, Olivier Pietquin, et al. Noisy networks for exploration. arXiv preprint arXiv:1706.10295, 2017
 A weak (not good enough) way to add exploration to AI playing videogames
+
+Ortega, P. A., Wang, J. X., Rowland, M., Genewein, T., Kurth-Nelson, Z., Pascanu, R., ... & Jayakumar, S. M. (2019). Meta-learning of Sequential Strategies. arXiv preprint arXiv:1905.03030.
+https://arxiv.org/pdf/1905.03030.pdf
+
+Dauphin, Y. N., & Schoenholz, S. (2019). MetaInit: Initializing learning by learning to initialize. In Advances in Neural Information Processing Systems (pp. 12624-12636).
+https://papers.nips.cc/paper/9427-metainit-initializing-learning-by-learning-to-initialize
 
 ## RL
 

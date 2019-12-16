@@ -31,7 +31,6 @@ https://github.com/chiphuyen/machine-learning-systems-design
 * Cracking the code interview - 17 chapters + general info
 * Kuhn Johnson - 20 chapters (no full pdf online)
 * ...or, as an alternative, "The 100 pages ML book" by Andriy Burkov - 11 chapters: [full pdf](http://themlbook.com/wiki/doku.php)
-* Competitive Programmer's Handbook by Antti Laaksonen: [pdf](https://cses.fi/book/book.pdf) (C++)
 
 Second priority books:
 
@@ -50,6 +49,7 @@ Books that are currently not on the reading list, but keeping the links here jus
 
 * Problem solving with data structures in Python ([full text, web](https://runestone.academy/runestone/books/published/pythonds/index.html))
 * [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/index.html) by Michael Nielsen
+* Competitive Programmer's Handbook by Antti Laaksonen: [pdf](https://cses.fi/book/book.pdf) (C++) - great idea, but the descriptions of algorithms are not clear, while implementations seem ideosyncratic (or maybe not; maybe I )
 
 ## Aggregators of links
 
