@@ -4,6 +4,10 @@ Clune, J., Mouret, J. B., & Lipson, H. (2013). The evolutionary origins of modul
 https://royalsocietypublishing.org/doi/pdf/10.1098/rspb.2012.2863
 500 citations: pretty cool for a bio paper
 
+Go through publications of D. Krioukov (Northeastern):
+https://web.northeastern.edu/dima/pub/
+Has some publications (older, down the page) on percolation on networks.
+
 # Spectral techniques
 
 Tao, T. (2013). Outliers in the spectrum of iid matrices with bounded rank perturbations. Probability Theory and Related Fields, 155(1-2):231–263.
