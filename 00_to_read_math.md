@@ -28,14 +28,6 @@ Your Classifier is Secretly an Energy Based Model and You Should Treat it Like O
 Metz, L., Maheswaranathan, N., Cheung, B., & Sohl-Dickstein, J. (2018). Meta-Learning Update Rules for Unsupervised Representation Learning. arXiv preprint arXiv:1804.00222.
 https://arxiv.org/abs/1804.00222
 
-Leibo, J. Z., Hughes, E., Lanctot, M., & Graepel, T. (2019). Autocurricula and the emergence of innovation from social interaction: A manifesto for multi-agent intelligence research. arXiv preprint arXiv:1903.00742.
-https://arxiv.org/pdf/1903.00742.pdf
-Something related to their multi-agent simulation (hide-and-seek). Seems very promising.
-
-Proximal Policy Optimization by OpenAI:
-https://openai.com/blog/openai-baselines-ppo/
-Something for agent training?
-
 Finn, C., Abbeel, P., & Levine, S. (2017, August). Model-agnostic meta-learning for fast adaptation of deep networks. In Proceedings of the 34th International Conference on Machine Learning-Volume 70 (pp. 1126-1135). JMLR. org.
 https://arxiv.org/pdf/1703.03400.pdf
 About few-shots learning, and generalizing from a very limited number of labels? More than 1000 citations!
@@ -128,16 +120,20 @@ Something weird semi-supervised learning with noisy teachers and distillation. E
 
 ## Curriculum
 
+Wang, T., Zhu, J. Y., Torralba, A., & Efros, A. A. (2018). Dataset Distillation. arXiv preprint arXiv:1811.10959.
+https://arxiv.org/pdf/1811.10959.pdf
+10 images give 94% accuracy on MNIST.
+
 Panagiotatos, G., Passalis, N., Iosifidis, A., Gabbouj, M., & Tefas, A. (2019, September). Curriculum-based Teacher Ensemble for Robust Neural Network Distillation. In 2019 27th European Signal Processing Conference (EUSIPCO) (pp. 1-5). IEEE.
 https://ieeexplore.ieee.org/abstract/document/8903112
-Something similar to my idea: auto-generated curriculum.
+Something similar: auto-generated curriculum. Not available online for some reason.
 
 ## Attention
 
 Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., ... & Polosukhin, I. (2017). Attention is all you need. In Advances in neural information processing systems (pp. 5998-6008).
 Transformers network
 https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf
-Top choice
+First read about attention?
 
 Jaderberg, M., Simonyan, K., & Zisserman, A. (2015). Spatial transformer networks. In Advances in neural information processing systems (pp. 2017-2025).
 https://arxiv.org/pdf/1506.02025.pdf
@@ -179,6 +175,14 @@ Dauphin, Y. N., & Schoenholz, S. (2019). MetaInit: Initializing learning by lear
 https://papers.nips.cc/paper/9427-metainit-initializing-learning-by-learning-to-initialize
 
 ## RL
+
+Leibo, J. Z., Hughes, E., Lanctot, M., & Graepel, T. (2019). Autocurricula and the emergence of innovation from social interaction: A manifesto for multi-agent intelligence research. arXiv preprint arXiv:1903.00742.
+https://arxiv.org/pdf/1903.00742.pdf
+Something related to their multi-agent simulation (hide-and-seek). Seems promising.
+
+Proximal Policy Optimization by OpenAI:
+https://openai.com/blog/openai-baselines-ppo/
+Something for agent training?
 
 Vinyals, O., Babuschkin, I., Czarnecki, W. M., Mathieu, M., Dudzik, A., Chung, J., ... & Oh, J. (2019). Grandmaster level in StarCraft II using multi-agent reinforcement learning. Nature, 1-5.
 No open link?
@@ -279,6 +283,16 @@ https://www.nku.edu/~kirby/docs/HelmholtzTutorialKoeln.pdf
 Dayan, P., Hinton, G. E., Neal, R. M., & Zemel, R. S. (1995). The helmholtz machine. Neural computation, 7(5), 889-904.
 http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.34.1800&rep=rep1&type=pdf
 Original paper by Hinton, 1k citations.
+
+## MNIST for small experiments
+
+Kim, T. H., & Choi, J. (2018). ScreenerNet: Learning Self-Paced Curriculum for Deep Neural Networks. arXiv preprint arXiv:1801.00904.
+https://arxiv.org/pdf/1801.00904.pdf
+Not a popular one (9 citations since 2018), but may have some points relevant for me specifically.
+
+Reduced MNIST: how well can machines learn from small data? By Michael Nielsen. Nov 15, 2017
+http://cognitivemedium.com/rmnist
+Blog post on learning on super-small subsets of MNIST (not an official pub, so never cited). One example of each digit apparently brings accuracy to 42% for a naive NN (vs 97% for full), and ~56% (vs 99% for full) for a pretrained conv net (2 layers, not trained on mnist specifically), followed by 2 fully connected. Regularization becomes extremely important, as a way to fight overfitting, and even switching to convnet for this may be considered a type of regularization, I think.
 
 ## Meta
 

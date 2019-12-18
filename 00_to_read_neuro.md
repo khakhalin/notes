@@ -11,6 +11,9 @@ Review. Exactly what it should be (networks, motifs, dynamics)
 
 ## Criticality and small-scale dynamics
 
+Popular account, harvest all links:
+https://www.quantamagazine.org/brains-may-teeter-near-their-tipping-point-20180614/
+
 25 years of criticality in neuroscience — established results, open controversies, novel concepts J Wilting, V Priesemann
 [https://www.sciencedirect.com/science/article/pii/S0959438819300248]
 Very short, so a must read.
