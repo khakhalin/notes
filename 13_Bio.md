@@ -1,4 +1,9 @@
 # AI and biology
+#neuro #behav
+
+## Topics
+
+* [[topic_tracking]] - papers about auto-tracking many animals at once, then doing ML on this set
 
 ## Papers that successfully used ML as a model for brains
 

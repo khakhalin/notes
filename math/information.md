@@ -45,3 +45,13 @@ Most commonly used symmetric alternative to LK ([wiki](https://en.wikipedia.org/
 JSD(P||Q) = ( LK(P||M) + LK(Q||M) )/2
 where M = (P+Q)/2
 Always between 0 and 1.
+
+## TFIDF
+https://en.wikipedia.org/wiki/Tf%E2%80%93idf
+TF-IDF = Text frequency - Inverse document frequency. A measure of how often a word is used in a document, compared to all other documents. tfidf() = tf()∙idf(). 
+
+Here tf() = text frequency, which is usually this word frequency (% of all words), or log() of it, or normalized frequency, or just raw count, or maybe even binary (yes or now)
+
+idf() = inverse document frequency = the share of documents having this word, but taken logirithmically: idf() = log(N/(1+n)) + 1, where N is the total number of documents, and n is the number of documents containing this word.
+
+Can be linked (and justified through) conditional entropy.

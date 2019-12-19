@@ -53,8 +53,9 @@ Morrison, A., Aertsen, A., and Diesmann, M. (2007). Spike-timing dependent plast
 
 ## Credit assignment
 
-Lehmann, M. P., Xu, H. A., Liakoni, V., Herzog, M. H., Gerstner, W., & Preuschoff, K. (2019). One-shot learning and behavioral eligibility traces in sequential decision making. eLife, 8, e47463.
-https://elifesciences.org/articles/47463
+Bellec, G., Scherr, F., Subramoney, A., Hajek, E., Salaj, D., Legenstein, R., & Maass, W. (2019). A solution to the learning dilemma for recurrent networks of spiking neurons. bioRxiv, 738385.
+https://www.biorxiv.org/content/10.1101/738385v3
+Something like backpropagation in spiking networks.
 
 Aljadeff, J., D'amour, J., Field, R. E., Froemke, R. C., & Clopath, C. (2019). Cortical credit assignment by Hebbian, neuromodulatory and inhibitory plasticity. arXiv preprint arXiv:1911.00307.
 [https://arxiv.org/pdf/1911.00307.pdf](<https://arxiv.org/pdf/1911.00307.pdf>)

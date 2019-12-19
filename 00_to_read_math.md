@@ -124,6 +124,13 @@ Wang, T., Zhu, J. Y., Torralba, A., & Efros, A. A. (2018). Dataset Distillation.
 https://arxiv.org/pdf/1811.10959.pdf
 10 images give 94% accuracy on MNIST.
 
+
+Generative teaching networks
+https://eng.uber.com/generative-teaching-networks/	
+Generative Teaching Networks: Accelerating Neural Architecture Search by Learning to Generate Synthetic Training Data.
+Felipe Petroski Such, Aditya Rawal, Joel Lehman, Kenneth O. Stanley, Jeff Clune
+https://arxiv.org/abs/1912.07768
+
 Panagiotatos, G., Passalis, N., Iosifidis, A., Gabbouj, M., & Tefas, A. (2019, September). Curriculum-based Teacher Ensemble for Robust Neural Network Distillation. In 2019 27th European Signal Processing Conference (EUSIPCO) (pp. 1-5). IEEE.
 https://ieeexplore.ieee.org/abstract/document/8903112
 Something similar: auto-generated curriculum. Not available online for some reason.
@@ -163,6 +170,9 @@ https://arxiv.org/abs/1901.10912.
 * Recurrent Independent Mechanisms, Goyal et al., 2019: https://arxiv.org/abs/1909.10893.
 * The Consciousness Prior, Bengio et al., 2017: https://arxiv.org/abs/1709.08568.
 
+Paul Smolensky. Next-generation architectures bridge gap between neural and symbolic representations with neural symbols. Microsoft Research blog. December 12, 2019.
+https://www.microsoft.com/en-us/research/blog/next-generation-architectures-bridge-gap-between-neural-and-symbolic-representations-with-neural-symbols/
+
 ## Exploration, curiosity, meta-learning
 
 Meire Fortunato, Mohammad Gheshlaghi Azar, Bilal Piot, Jacob Menick, Ian Osband, Alex Graves, Vlad Mnih, Remi Munos, Demis Hassabis, Olivier Pietquin, et al. Noisy networks for exploration. arXiv preprint arXiv:1706.10295, 2017
@@ -170,6 +180,10 @@ A weak (not good enough) way to add exploration to AI playing videogames
 
 Ortega, P. A., Wang, J. X., Rowland, M., Genewein, T., Kurth-Nelson, Z., Pascanu, R., ... & Jayakumar, S. M. (2019). Meta-learning of Sequential Strategies. arXiv preprint arXiv:1905.03030.
 https://arxiv.org/pdf/1905.03030.pdf
+
+Lázaro-Gredilla, M., Lin, D., Guntupalli, J. S., & George, D. (2018). Beyond imitation: Zero-shot task transfer on robots by learning concepts as cognitive programs. arXiv preprint arXiv:1812.02788.
+https://robotics.sciencemag.org/content/4/26/eaav3150.full?ijkey=9p/p9D23WW2Ek&keytype=ref&siteid=robotics
+Research article on imagination, recursion, and abstraction. Guessing context via transfer from prior experience.
 
 Dauphin, Y. N., & Schoenholz, S. (2019). MetaInit: Initializing learning by learning to initialize. In Advances in Neural Information Processing Systems (pp. 12624-12636).
 https://papers.nips.cc/paper/9427-metainit-initializing-learning-by-learning-to-initialize
@@ -295,6 +309,16 @@ http://cognitivemedium.com/rmnist
 Blog post on learning on super-small subsets of MNIST (not an official pub, so never cited). One example of each digit apparently brings accuracy to 42% for a naive NN (vs 97% for full), and ~56% (vs 99% for full) for a pretrained conv net (2 layers, not trained on mnist specifically), followed by 2 fully connected. Regularization becomes extremely important, as a way to fight overfitting, and even switching to convnet for this may be considered a type of regularization, I think.
 
 ## Meta
+
+Ullman, S. (1987). Visual routines. In Readings in computer vision (pp. 298-328). Morgan Kaufmann.
+https://www.cs.cmu.edu/afs/cs/academic/class/15494-s12/readings/ullman-visual-routines.pdf
+Some influential piece with 1.2k citations. Some take on the psychology of visual perception?
+And a commentary / computer implementation of it (a presentation from 2008)
+https://www.cs.cmu.edu/afs/cs/academic/class/15494-s08/lectures/visual_routines.pdf
+
+Barsalou, L. W. (1999). Perceptual symbol systems. Behavioral and brain sciences, 22(4), 577-660.
+http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.4.5511&rep=rep1&type=pdf
+A hugely influential conceptual piece: 7k citations! Something about how knowledge is all about predicting your perception, and perceiving your actions? Lots of philosophy, followed by sensorimotor examples, neural representations. Then back-and-forth exchange with other cognitive scientists.
 
 Marcus, G. (2018). Innateness, alphazero, and artificial intelligence. arXiv preprint arXiv:1801.05667.
 [https://arxiv.org/ftp/arxiv/papers/1801/1801.05667.pdf](<https://arxiv.org/ftp/arxiv/papers/1801/1801.05667.pdf>)

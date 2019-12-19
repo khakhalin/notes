@@ -27,6 +27,6 @@ All sorts of infrastructure stuff.
 * Write unit tests ([link to a decent intro](https://www.freecodecamp.org/news/an-introduction-to-testing-in-python/))
 * Make small and frequent commits
 
-## GIT cheat sheet
+## GIT
 
-?
+* Funny short cheatsheet "Dangit": http://dangitgit.com/
