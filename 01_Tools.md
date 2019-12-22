@@ -11,11 +11,14 @@ All sorts of infrastructure stuff.
 
 ## Python tips and tricks
 
-**Matplotlib:**
+**Python itself**
+* Tips from Chip Huyen: https://github.com/chiphuyen/python-is-cool
+
+**Matplotlib**
 * Brief intro from Brad Solomon: https://realpython.com/python-matplotlib-guide/
 * Cheatsheet: [https://github.com/rougier/matplotlib-cheatsheet](<https://github.com/rougier/matplotlib-cheatsheet>)
 
-**Coding habits for data scientists:** ([ref](https://www.thoughtworks.com/insights/blog/coding-habits-data-scientists))
+**Coding habits for data scientists** ([ref](https://www.thoughtworks.com/insights/blog/coding-habits-data-scientists))
 * Keep code clean (not smelly). Types of **smells**:
     * Dead code (commented, inconsequential)
     * Print statements everywhere
@@ -26,6 +29,9 @@ All sorts of infrastructure stuff.
 * Smuggle code from Jupyter to classes as soon as possible (Jupyter for protopying, and maybe reporting?)
 * Write unit tests ([link to a decent intro](https://www.freecodecamp.org/news/an-introduction-to-testing-in-python/))
 * Make small and frequent commits
+
+**Other random notes**
+* If in a module you start a method name with one underscore, like `_helper`, this method isn't imported on `from module import *`. Unfortunately is still acessible if you do `import module`and address it as `module._helper()`.
 
 ## GIT
 

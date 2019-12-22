@@ -1,6 +1,6 @@
 https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode
 http://xahlee.info/comp/unicode_math_operators.html
-∙
+∙ 
 ≠ ≤	≥ ≪	≫
 ∑
 ∏
