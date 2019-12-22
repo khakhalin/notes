@@ -1,5 +1,7 @@
 # General To-Dos:
 
+#todo
+
 * Move old recommendatinos from Sven down here
 * Move all old Jaeger and network papers here
 
@@ -15,7 +17,6 @@ Classic ML and friends
 * Hungarian algorithm
 
 Deep Learning:
-* Find a review on transformers, before reading primary papers
 * How to tell the receptive field of a neuron in a deep network? Do they gradient descend on it?
 * Heuristic search - seems to be a topic in oldschool AI, but isn't it too general? Or do they mean something very specific by it?
 * ADAM optimizer - what's the difference from othes?

@@ -104,7 +104,7 @@ https://twitter.com/SussilloDavid/status/1153427790672171009
 
 ## Transfer, distillation
 
-#distillation
+#distillation #transfer
 
 Hinton, G., Vinyals, O., & Dean, J. (2015). Distilling the knowledge in a neural network. arXiv preprint arXiv:1503.02531.
 https://arxiv.org/pdf/1503.02531.pdf
@@ -118,12 +118,15 @@ Self-training with Noisy Student improves ImageNet classification Qizhe Xie, Edu
 https://arxiv.org/abs/1911.04252
 Something weird semi-supervised learning with noisy teachers and distillation. Essentially, it seems that a badly labeled large dataset is better than a well-labeled small dataset, so it's better to train one model on a small dataset, then have it label a huge dataset (even tho many labels will be wrong), and then use this large dataset to train the next model. Or something like that. Weird.
 
+von Oswald, J., Henning, C., Sacramento, J., & Grewe, B. F. (2019). Continual learning with hypernetworks. arXiv preprint arXiv:1906.00695.
+https://arxiv.org/abs/1906.00695
+If it get it right from the abstract, this can be called meta-networks as well: a network that learns to predict weights for a network that would follow a task; so one step above learning the weights for each individual task. Essentially, instead of remembering all possible network configurations for all possible tasks, to reset the network each time, they use this hypernetwork to interpolate in the space of parameters.
+
 ## Curriculum
 
 Wang, T., Zhu, J. Y., Torralba, A., & Efros, A. A. (2018). Dataset Distillation. arXiv preprint arXiv:1811.10959.
 https://arxiv.org/pdf/1811.10959.pdf
 10 images give 94% accuracy on MNIST.
-
 
 Generative teaching networks
 https://eng.uber.com/generative-teaching-networks/	
@@ -134,44 +137,6 @@ https://arxiv.org/abs/1912.07768
 Panagiotatos, G., Passalis, N., Iosifidis, A., Gabbouj, M., & Tefas, A. (2019, September). Curriculum-based Teacher Ensemble for Robust Neural Network Distillation. In 2019 27th European Signal Processing Conference (EUSIPCO) (pp. 1-5). IEEE.
 https://ieeexplore.ieee.org/abstract/document/8903112
 Something similar: auto-generated curriculum. Not available online for some reason.
-
-## Attention
-
-Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., ... & Polosukhin, I. (2017). Attention is all you need. In Advances in neural information processing systems (pp. 5998-6008).
-Transformers network
-https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf
-First read about attention?
-
-Jaderberg, M., Simonyan, K., & Zisserman, A. (2015). Spatial transformer networks. In Advances in neural information processing systems (pp. 2017-2025).
-https://arxiv.org/pdf/1506.02025.pdf
-2000 citations. Seems important.
-
-Press, O., Smith, N. A., & Levy, O. (2019). Improving Transformer Models by Reordering their Sublayers. arXiv preprint arXiv:1911.03864.
-https://ofir.io/sandwich_transformer.pdf
-An interesting tiny paper where all they did, I think, is play with the sequence of 2 common blocks, to show that the optimal sequence is not what everyone expected. May be neat. But I prob need to understand how transformers work to get it.
-
-"Compressive Transformers for Long-Range Sequence Modelling"
-by Jack W. Rae, Anna Potapenko, Siddhant M. Jayakumar, Timothy P. Lillicrap (at DeepMind)
-https://arxiv.org/abs/1911.05507
-
-Single Headed Attention RNN: Stop Thinking With Your Head
-https://arxiv.org/abs/1911.11423
-Looks somewhat advanced (from the technical, not math pov), but if I get it right, they tried to diversify the field by deliberately sticking to a non-mainstream approach (something that is NOT transformers), and got good performance.
-
-## Quasi-Symbolic
-
-Yoshua Bengio’s short reading list
-* BabyAI: First Steps Towards Grounded Language Learning With a Human In the Loop, Chevalier-Boisvert et al.,
-2018: https://arxiv.org/abs/1810.08272v2.
-* A Meta-Transfer Objective for Learning to Disentangle Causal Mechanisms, Bengio et al., 2019:
-https://arxiv.org/abs/1901.10912.
-* Learning Neural Causal Models from Unknown Interventions, Ke et al., 2019: https://arxiv.org/abs/1910.
-01075.
-* Recurrent Independent Mechanisms, Goyal et al., 2019: https://arxiv.org/abs/1909.10893.
-* The Consciousness Prior, Bengio et al., 2017: https://arxiv.org/abs/1709.08568.
-
-Paul Smolensky. Next-generation architectures bridge gap between neural and symbolic representations with neural symbols. Microsoft Research blog. December 12, 2019.
-https://www.microsoft.com/en-us/research/blog/next-generation-architectures-bridge-gap-between-neural-and-symbolic-representations-with-neural-symbols/
 
 ## Exploration, curiosity, meta-learning
 
@@ -216,6 +181,54 @@ A paper about the most horrible type of learning: offline (model of the world in
 Yu, H., Edunov, S., Tian, Y., & Morcos, A. S. (2019). Playing the lottery with rewards and multiple languages: lottery tickets in RL and NLP. arXiv preprint arXiv:1906.02768.
 https://arxiv.org/abs/1906.02768
 Lottery tickets in RL domain.
+
+## Classic RNNs
+
+https://distill.pub/2019/memorization-in-rnns/
+How LSTM networks remember text: a visual intro.
+
+Hafner, D., Irpan, A., Davidson, J., & Heess, N. (2017). Learning hierarchical information flow with recurrent neural modules. In Advances in Neural Information Processing Systems (pp. 6724-6733).
+https://papers.nips.cc/paper/7249-learning-hierarchical-information-flow-with-recurrent-neural-modules.pdf
+ThalNet, which like a virtual thalamus. Only cited by 4 since 2017, so doesn't look like it caught on.
+
+## Attention
+
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., ... & Polosukhin, I. (2017). Attention is all you need. In Advances in neural information processing systems (pp. 5998-6008).
+Transformers network
+https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf
+First read about attention?
+
+Jaderberg, M., Simonyan, K., & Zisserman, A. (2015). Spatial transformer networks. In Advances in neural information processing systems (pp. 2017-2025).
+https://arxiv.org/pdf/1506.02025.pdf
+2000 citations. Seems important.
+
+Press, O., Smith, N. A., & Levy, O. (2019). Improving Transformer Models by Reordering their Sublayers. arXiv preprint arXiv:1911.03864.
+https://ofir.io/sandwich_transformer.pdf
+An interesting tiny paper where all they did, I think, is play with the sequence of 2 common blocks, to show that the optimal sequence is not what everyone expected. May be neat. But I prob need to understand how transformers work to get it.
+
+"Compressive Transformers for Long-Range Sequence Modelling"
+by Jack W. Rae, Anna Potapenko, Siddhant M. Jayakumar, Timothy P. Lillicrap (at DeepMind)
+https://arxiv.org/abs/1911.05507
+
+Single Headed Attention RNN: Stop Thinking With Your Head
+https://arxiv.org/abs/1911.11423
+Looks somewhat advanced (from the technical, not math pov), but if I get it right, they tried to diversify the field by deliberately sticking to a non-mainstream approach (something that is NOT transformers), and got good performance.
+
+## Quasi-Symbolic
+
+Yoshua Bengio’s short reading list
+* BabyAI: First Steps Towards Grounded Language Learning With a Human In the Loop, Chevalier-Boisvert et al.,
+2018: https://arxiv.org/abs/1810.08272v2.
+* A Meta-Transfer Objective for Learning to Disentangle Causal Mechanisms, Bengio et al., 2019:
+https://arxiv.org/abs/1901.10912.
+* Learning Neural Causal Models from Unknown Interventions, Ke et al., 2019: https://arxiv.org/abs/1910.
+01075.
+* Recurrent Independent Mechanisms, Goyal et al., 2019: https://arxiv.org/abs/1909.10893.
+* The Consciousness Prior, Bengio et al., 2017: https://arxiv.org/abs/1709.08568.
+
+Paul Smolensky. Next-generation architectures bridge gap between neural and symbolic representations with neural symbols. Microsoft Research blog. December 12, 2019.
+https://www.microsoft.com/en-us/research/blog/next-generation-architectures-bridge-gap-between-neural-and-symbolic-representations-with-neural-symbols/
+
 
 ## Autoencoders
 
@@ -264,15 +277,6 @@ They are trying to create some fancy mechanical structures, and instead of direc
 Makhzani, A. (2018). Implicit autoencoders. arXiv preprint arXiv:1805.09804.
 https://arxiv.org/abs/1805.09804
 Sort of GAN-like architecture that tries to optimize the latent space directly? Interesting, but hard to get from the abstract.
-
-## Classic RNNs
-
-https://distill.pub/2019/memorization-in-rnns/
-How LSTM networks remember text: a visual intro.
-
-Hafner, D., Irpan, A., Davidson, J., & Heess, N. (2017). Learning hierarchical information flow with recurrent neural modules. In Advances in Neural Information Processing Systems (pp. 6724-6733).
-https://papers.nips.cc/paper/7249-learning-hierarchical-information-flow-with-recurrent-neural-modules.pdf
-ThalNet, which like a virtual thalamus. Only cited by 4 since 2017, so doesn't look like it caught on.
 
 ## Graph networks
 
