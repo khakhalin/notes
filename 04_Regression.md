@@ -1,6 +1,13 @@
 # Regression
 
 ## Linear Regression
+**L2 loss**: mean squared distance. Nice illustration from [Google crash course](https://developers.google.com/machine-learning/crash-course/): 2 outliers of 2 are worse than 4 outliers of 1, as 4<8. Real sensitive to outliers.
+
+**Hyperparameters**: those somewhat arbitrary values that define the type of solution the model is looking for, and the process of descent. Examples: learning rate, batch size.
+
+**Learning rate**: Goldilocks principle - the best learning rate should "magically" put you in the minimum in a very few steps. Large learning rate leads to noisy oscillations after what looked like a convergence. It may even break everything (unstable).
+
+**Mini-batch**: process >1 (usually 10-1000) points at a time. Somewhere in between fully stochastic descent (1 point at a time) and math-optimal (all points every time).
 
 ## Bias-Variance Tradeoff
 
@@ -55,9 +62,19 @@ How to pick the coefficient k? One method: **Ridge trace**: plot found coefficie
 
 ## Logistic Regression
 
-Logistic function: $\sigma(x) = \frac{1}{1+e^{-x}} = \frac{e^x}{1+e^x}$.
+**Logistic function**: $\sigma(x) = \frac{1}{1+e^{-x}} = \frac{e^x}{1+e^x}$.
 
-The inverse function is called logit(p) $=\ln \frac{p}{1-p}$
+The inverse function is called **logit**: logit(p) $=\ln \frac{p}{1-p}$
 
-Assumes that log-odds $\log \frac{p}{1-p}=a+bx$ , so is a linear function of x (that is generally a vector). It means that p/(1-p)=exp(ax+bx), which leads to p = σ(ax+b).
+Assumes that **log-odds** $\log \frac{p}{1-p}=a+bx$ , so is a linear function of x (that is generally a vector). It means that p/(1-p)=exp(ax+bx), which leads to p = σ(ax+b). It can be said that a logistic regression is just a linear regression of log-odds.
 
+To find a solution, minimize **logloss**: Loss = $-\sum (y\cdot\log(\tilde y)+(1-y)\cdot\log(1-\tilde y))$, or, using p for y estimations, -∑( y∙log(p) + (1-y)∙log(1-p) ). As p→0, -log(p)→inf, so huge punishment for near-zero p. Because of that, if the data is too clean and some areas contain only points of one type, weights may explode (it's hard to fit infinity), making proper regularization extremely important.
+
+For high-D non-linear data, works great if features cross-products are included into the set as synthetic features (see [[06_Features]]).
+
+## Stepwise Regression
+https://en.wikipedia.org/wiki/Stepwise_regression
+More of a statistical procedure (not sure if even applicable to big data): automated selection of features based on the quality of fit, and a complexity penalty (regularization). Two main approaches: Forward selection and Backward selection (or a combination of both).
+See also: [[Guyon2003variable]].
+
+At least some statisticians think that reporting p-values after this procedure is completely meaningless, because their probabilistic intepretation is impossible, and adjustment is too complicated, and so also impossible in practice.
