@@ -1,14 +1,6 @@
 # Tools, coding, project management
 All sorts of infrastructure stuff.
 
-## Tensorflow 2.0 and Keras
-
-* Links to several tutorials: https://github.com/sayakpaul/TF-2.0-Hacks/blob/master/README.md
-
-## Scikit-learn
-
-* A bunch of notebooks that implement all key ML methods, by Aurélien Geron, to accompany his book ("Hands-On Machine Learning with Scikit-Learn and TensorFlow"): https://github.com/ageron/handson-ml2
-
 ## Python tips and tricks
 
 **Python itself**
@@ -36,3 +28,15 @@ All sorts of infrastructure stuff.
 ## GIT
 
 * Funny short cheatsheet "Dangit": http://dangitgit.com/
+
+## Tensorflow 2.0 and Keras
+
+* Links to several tutorials: https://github.com/sayakpaul/TF-2.0-Hacks/blob/master/README.md
+
+#### Basics:
+* **Tensor object**:  type, shape, and a bunch of numbers. For example, when working with images, we have a 4D structure: image# × W × H × ColorChannels.
+* TF relies on a function that iterates through (features, labels) as tuples. And instead of directly linking to data, it wants to receive a data-generating function (for lazy / parallel execution?).
+
+## Scikit-learn
+
+* A bunch of notebooks that implement all key ML methods, by Aurélien Geron, to accompany his book ("Hands-On Machine Learning with Scikit-Learn and TensorFlow"): https://github.com/ageron/handson-ml2

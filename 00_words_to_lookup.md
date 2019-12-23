@@ -13,6 +13,12 @@ Random pieces of math
 Classic ML and friends
 * Bayesian PCA
 * Kalman filter (and its friends)
+* Subspace methods
+* more on Gaussian processes
+* Graphical models
+* Hidden markov models
+* Expectation-Maximization
+* Variational inference
 * Resampling techniques: SMOTE, isotonic regression, Platt scaling
 * Hungarian algorithm
 

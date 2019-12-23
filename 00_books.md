@@ -21,20 +21,20 @@ https://github.com/chiphuyen/machine-learning-systems-design
 
 ## Books
 
-(Given about in order of appropriate reading)
+(Given about in order of supposed reading)
 
 * How to think like a computer scientist by Allen B. Downey: [site](http://openbookproject.net/thinkcs/python/english3e/) (python)
 * VLMS (Introduction to Applied Linear Algebra) by Stephen Boyd - 19 chapters: [full pdf](http://vmls-book.stanford.edu/)
 * ESLII (The Elements of Statistical Learning) by Hastie, Tibshirani, Friedman- 18 chapters: [full pdf](https://web.stanford.edu/~hastie/ElemStatLearn/)
 * MML (Mathematics for Machine Learning) by M.P. Deisenroth - 12 chapters: [full pdf](https://mml-book.github.io/)
-* Algorithms by Sedgewick - about 30 small chapters (Java)
+* Algorithms by Sedgewick - about 30 small chapters, in Java
 * Cracking the code interview - 17 chapters + general info
 * Kuhn Johnson - 20 chapters (no full pdf online)
 * ...or, as an alternative, "The 100 pages ML book" by Andriy Burkov - 11 chapters: [full pdf](http://themlbook.com/wiki/doku.php)
+* Deep larning by Ian Goodfellow et al: [full pdf](http://www.deeplearningbook.org/)
 
 Second priority books:
 
-* Deep larning by Ian Goodfellow et al ([full pdf](http://www.deeplearningbook.org/))
 * Pattern recognition and ML by Christopher Bishop ([full pdf](https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/))
 * Foundations of ML by M. Mohri et al ([full pdf](https://cs.nyu.edu/~mohri/mlbook/)) - more mathy?
 * ML book by K.P. Murphy - [page](https://www.cs.ubc.ca/~murphyk/MLbook/) (but no full pdf)
