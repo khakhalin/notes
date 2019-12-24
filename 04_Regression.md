@@ -70,11 +70,20 @@ Assumes that **log-odds** $\log \frac{p}{1-p}=a+bx$ , so is a linear function of
 
 To find a solution, minimize **logloss**: Loss = $-\sum (y\cdot\log(\tilde y)+(1-y)\cdot\log(1-\tilde y))$, or, using p for y estimations, -∑( y∙log(p) + (1-y)∙log(1-p) ). As p→0, -log(p)→inf, so huge punishment for near-zero p. Because of that, if the data is too clean and some areas contain only points of one type, weights may explode (it's hard to fit infinity), making proper regularization extremely important.
 
-For high-D non-linear data, works great if features cross-products are included into the set as synthetic features (see [[06_Features]]).
+For high-D non-linear data, works great if features cross-products are included into the set as synthetic features (see [[07_Features]]).
 
 ## Stepwise Regression
 https://en.wikipedia.org/wiki/Stepwise_regression
 More of a statistical procedure (not sure if even applicable to big data): automated selection of features based on the quality of fit, and a complexity penalty (regularization). Two main approaches: Forward selection and Backward selection (or a combination of both).
 See also: [[Guyon2003variable]].
 
-At least some statisticians think that reporting p-values after this procedure is completely meaningless, because their probabilistic intepretation is impossible, and adjustment is too complicated, and so also impossible in practice.
+The maxim about stepwise regression is that it is useless for hypothesis testing, OK but questionable for prediction, and good for variable selection (see [[07_Features]]). 
+* It can't be used for hypotheses, as p-values after this procedure are meaningless, and arguably shouldn't even be reported, as their direct probabilistic intepretation is impossible, and adjustment is too complicated (p-values aren't independent, so you cannot do FDR), making adjustment impossible in practice.
+* It can be used for prediction, but usually full models (or, assumably, probably regularized models) are more powerful anyways.
+* It's an OK method to select variables tho.
+
+Some people (like Thompson cited below) are really vehemently against them tho. That's because they are usually too optimistic (the very concept of degrees of freedom becomes problematic after multiple testing), yet are strictly less powerful than proper regularization, and also typically don't replicate, as the sequence of descent depends on the data, so performing stepwise regression on different subsets of data is much more likely to yield different results, compared to a more sophisticated model.
+
+Refs:
+* Steyerberg, E. W., Eijkemans, M. J., Harrell Jr, F. E., & Habbema, J. D. F. (2001). Prognostic modeling with logistic regression analysis: in search of a sensible strategy in small data sets. Medical Decision Making, 21(1), 45-56.
+* Thompson, B. (2001). Significance, effect sizes, stepwise methods, and other issues: Strong arguments move the field. The Journal of Experimental Education, 70(1), 80-93. 

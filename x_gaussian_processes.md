@@ -1,6 +1,11 @@
-## Gaussian processes
+## Variational Inference
+Links for now:
+* https://en.wikipedia.org/wiki/Variational_Bayesian_methods
+* https://arxiv.org/abs/1601.00670
+Variational Inference: A Review for Statisticians
+David M. Blei, Alp Kucukelbir, Jon D. McAuliffe
 
-Orphan topic; will eventually be moved somewhere.
+## Gaussian processes
 
 Relevant cards:
 * [[Gortler2019gaussian]]

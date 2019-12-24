@@ -11,13 +11,12 @@ Random pieces of math
 * Refresh the general flavor of Lagrangians and Hamiltonians
 
 Classic ML and friends
-* Bayesian PCA
+* Expectation-Maximization
 * Kalman filter (and its friends)
-* Subspace methods
+* Bayesian PCA
 * more on Gaussian processes
 * Graphical models
 * Hidden markov models
-* Expectation-Maximization
 * Variational inference
 * Resampling techniques: SMOTE, isotonic regression, Platt scaling
 * Hungarian algorithm
