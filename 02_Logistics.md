@@ -1,24 +1,4 @@
-# Introduction to ML models
-
-## Model assessement
-
-**Model accuracy**: The most primitive measure = number of true statements / total number of statements. Obvious dependency on class balance (famous example, a statement of "today is not Christmas" has an accuracy of 99.7%). But may work for toy examples with very carefully balanced classes (like MNIST).
-
-**Precision and recall**: Let's concentrate on detection only (positive predictions only). We want something that is proportinal to true positives (TP), but what to put in the denominator? Two options: 
-
-* TP/(all positive predictions) = TP/(TP+FP) - how well can we believe positive predictions. Is called **Prediction**, and is related to false discovery rate (P=1-FDR). From the stats POV, it's about false-positives, or Type I.
-* TP/(all actual positives) = TP/(TP+FN) - how well does the model actually detect cases, and how sure can we be that most positive cases were detected, that not much was left behind. **Recall**. From the stats POV, it's about false-negatives, or Type II.
-
-Can we balance them somehow, to make sure the model is reasonably good on both accounts? Most popular approach: **F1 score**: F = 2∙(precision∙recall)/(precision+recall) = harmonic_mean(precision,recall) = inv(mean(inv(precision),inv(recall))).
-
-An even better approach: **AUC** = **Area under the ROC (Receiver Operating Characteristic) curve**. With this approach, you take a threshold-like parameter of the model, and slide it through all possible values from ideally permissive to fully prohibitive. For max permissive we get maximal recall, or TPR=1, but also no true negatives at all: TNR=0 ⇒ FP=1 (that's how false-positives are defined, as 1-TNR). For max prohibitive, we get TPR=0, but also FPR=0, as TNR=1. For random probability, AUC=1/2, for perfect knowledge AUC=1.
-
-Interestingly, AUC = P(score of a true example > score of a wrong example). _I wonder if proving this is hard?_
-
-**Prediction bias**: a very simple measure of model validity: average value of all predictions - average value of all learning points. In a reasonable model, prediction bias should be close to 0. A way to assess it: build a **calibration plot** - bucket values, calculate predictions, then plot mean(predictions) against mean(values). May help to find areas where the model misbehaves.
-
-## Project organization
-
+# ML Project Organization
 #management
 
 Basic ideas:
@@ -89,3 +69,6 @@ Refs:
 * If labels are hard to get, use manual **active learning**: label small part of the dataset, use it to provide (bad) labels to the full dataset; make the model report uncertainty, use it to identify observations that need to be labeled first to most improve model performance ([ref](https://www.jeremyjordan.me/ml-projects-guide/))
 * Separate data pre-processing from the learning pipeline: at rearch phase you want to pre-process data once, then play with it repeatedly ([ref](https://medium.com/infinity-aka-aseem/things-we-wish-we-had-known-before-we-started-our-first-machine-learning-project-336d1d6f2184))
 * You can always gain a few more % by using ensembles ([ref](http://karpathy.github.io/2019/04/25/recipe/))
+
+## Pipeline design
+**Feature store:** A practical concept for data project implementation: a collection of curated features that is updated from new data, and can be tapped into 
