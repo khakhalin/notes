@@ -70,5 +70,7 @@ Refs:
 * Separate data pre-processing from the learning pipeline: at rearch phase you want to pre-process data once, then play with it repeatedly ([ref](https://medium.com/infinity-aka-aseem/things-we-wish-we-had-known-before-we-started-our-first-machine-learning-project-336d1d6f2184))
 * You can always gain a few more % by using ensembles ([ref](http://karpathy.github.io/2019/04/25/recipe/))
 
-## Pipeline design
-**Feature store:** A practical concept for data project implementation: a collection of curated features that is updated from new data, and can be tapped into 
+## Glossary of useful and useless slang
+* **Drop-in replacement:** replacing part of the code without rewriting anything else. AKA 	"bug for bug compatibility" (drop-in will only work if all idiosynctratic bugs match exactly)
+* **Feature store:** A practical concept for data project implementation: a collection of curated features that is updated from new data, and can be tapped into.
+* **Pickling:** dumping binary data into a database, to be loaded later, instead of processing it in some meaningful way. In Python, used for serializing Python object structure. A better alternative: JSON, as it's human-readable, while pickles aren't.
