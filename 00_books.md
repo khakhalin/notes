@@ -18,19 +18,20 @@ https://github.com/chiphuyen/machine-learning-systems-design
 * That course on reinforcement learning - find the link
 * [Linear algebra by Gilbert Strang](https://www.youtube.com/playlist?list=PLE7DDD91010BC51F8) - Youtube from MIT. Everybody loves it, as it achieves a beautiful balance between staying extremely practical, concise, but at the same time giving many proofs (or "almost proofs", extreme-physics style, like for good cases, with simplifying assumptions etc). MIT also has [notes for each lecture](https://ocw.mit.edu/courses/mathematics/18-06sc-linear-algebra-fall-2011/syllabus/) (not in one pdf, but easy to find).
 * [Matrix methods in data science](https://www.youtube.com/watch?v=Cx5Z-OslNWE&list=PLUl4u3cNGP63oMNUHXqIUcrkS2PivhN3k) (also Gilbert Strang)- YouTube from MIT. May be good for refreshing things.
+* [Maximum Entropy Network Ensembles](http://www.maths.qmul.ac.uk/~gbianconi/LTCCModule) - a series of lectures
 
 ## Books
 
-(Given about in order of supposed reading)
+(Given in subjective order of my gradual reading)
 
 * How to think like a computer scientist by Allen B. Downey: [site](http://openbookproject.net/thinkcs/python/english3e/) (python)
 * VLMS (Introduction to Applied Linear Algebra) by Stephen Boyd - 19 chapters: [full pdf](http://vmls-book.stanford.edu/)
-* ESLII (The Elements of Statistical Learning) by Hastie, Tibshirani, Friedman- 18 chapters: [full pdf](https://web.stanford.edu/~hastie/ElemStatLearn/)
+* ESLII (The Elements of Statistical Learning) by Hastie, Tibshirani, Friedman- 18 chapters. No code. [full pdf](https://web.stanford.edu/~hastie/ElemStatLearn/)
 * MML (Mathematics for Machine Learning) by M.P. Deisenroth - 12 chapters: [full pdf](https://mml-book.github.io/)
 * Algorithms by Sedgewick - about 30 small chapters, in Java
-* Cracking the code interview - 17 chapters + general info
-* Kuhn Johnson - 20 chapters (no full pdf online)
-* ...or, as an alternative, "The 100 pages ML book" by Andriy Burkov - 11 chapters: [full pdf](http://themlbook.com/wiki/doku.php)
+* Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow, by Aurélien Géron. Python / Scikit obviously. [All labs on github](https://github.com/ageron/handson-ml2)
+* Applied Predictive Modeling by Kuhn Johnson - 20 chapters (no free pdf online). Code in R.
+* ...or, as potential alternative, "The 100 pages ML book" by Andriy Burkov - 11 chapters: [full pdf](http://themlbook.com/wiki/doku.php)
 * Deep larning by Ian Goodfellow et al: [full pdf](http://www.deeplearningbook.org/)
 
 Second priority books:
@@ -41,11 +42,15 @@ Second priority books:
 * Morgan, S. L., & Winship, C. (2015). Counterfactuals and causal inference (pdfs are googlable)
 * [Notes on dynamical systems](https://people.maths.bris.ac.uk/~macpd/ads/) ([pdf](https://people.maths.bris.ac.uk/~macpd/ads/bnotes.pdf)) from Carl Dettmann. Not a textbook, but close; worth scanning
 
+Job-search specific:
+* Cracking the code interview - 17 chapters + general info
+* [[Huyen2019book]] - a short book on data science / ML job interviewing
+
 Third priority books:
 
 * Algorithms by Erickson - 12 long chapters
 
-Books that are currently not on the reading list, but keeping the links here just in case:
+Books that are not on my reading list, but keeping here just in case:
 
 * Problem solving with data structures in Python ([full text, web](https://runestone.academy/runestone/books/published/pythonds/index.html))
 * [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/index.html) by Michael Nielsen

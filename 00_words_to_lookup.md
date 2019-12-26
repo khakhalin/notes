@@ -11,6 +11,9 @@ Random pieces of math
 * Refresh the general flavor of Lagrangians and Hamiltonians
 
 Classic ML and friends
+* RBF - Radial basis function kernel: https://en.wikipedia.org/wiki/Radial_basis_function_kernel
+* AdaBoost
+* QDA - Quadratic Discriminant Analysis
 * Expectation-Maximization
 * Kalman filter (and its friends)
 * Bayesian PCA

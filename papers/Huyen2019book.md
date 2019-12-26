@@ -22,4 +22,4 @@ Baselines:
 
 Some comments on working with very big datasets (when even one case doesn't fit into  memory: Gradient Checkpoint), parallel computing (Asynchronous SGD). Some refs.
 
-Nice list of references to well documented ML cases on the web, followed by a list of sample interview questions.
+Nice list of references to well documented ML cases on the web, followed by a [list of sample interview questions](https://github.com/chiphuyen/machine-learning-systems-design/blob/master/content/exercises.md).
