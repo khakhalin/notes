@@ -5,6 +5,7 @@ All sorts of infrastructure stuff.
 
 **Python itself**
 * Tips from Chip Huyen: https://github.com/chiphuyen/python-is-cool
+* Nice [list of Python gotchas](https://www.toptal.com/python/top-10-mistakes-that-python-programmers-make) from Martin Chilikian
 
 **Matplotlib**
 * Brief intro from Brad Solomon: https://realpython.com/python-matplotlib-guide/
@@ -28,6 +29,7 @@ All sorts of infrastructure stuff.
 * Nested comprehensions: same syntax as in writing nested loops (even tho it looks unformulaic), e.g. `[j for i in range(5) for j in range(i)]
 * To add += 1 to a dict when a key may not exist, use `get()` as it has a default value: `a[i] = a.get(i,0)+1`
 * To get some (or rather, first) dict from a dict, do `next(iter(a.keys()))`
+* Objects (including empty lists `[]`) should never be used as default arguments for functions, as they are evaluated only once per program (during object definition), not when methods are called! Insetad use `x=None`, then `if x is None: x=[]`. It sounds super-cumbersome, but that's just how it is. ([source](https://docs.python-guide.org/writing/gotchas/))
 
 ## GIT
 
