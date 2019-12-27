@@ -32,6 +32,11 @@ Your Classifier is Secretly an Energy Based Model and You Should Treat it Like O
 2. Misra, I., & van der Maaten, L. (2019). Self-Supervised Learning of Pretext-Invariant Representations. arXiv preprint arXiv:1912.01991. https://arxiv.org/abs/1912.01991 
 3. Hénaff, O. J., Razavi, A., Doersch, C., Eslami, S. M., & Oord, A. V. D. (2019). Data-efficient image recognition with contrastive predictive coding. arXiv preprint arXiv:1905.09272. https://arxiv.org/abs/1905.09272v2
 
+What's the current view of greedy training of autoencoders? Is it an abandoned technique, or are people still working on it? Sample seminal papers:
+* Bengio, Y., Lamblin, P., Popovici, D., & Larochelle, H. (2007). Greedy layer-wise training of deep networks. In Advances in neural information processing systems (pp. 153-160).
+* Hinton, G. E, Osindero, S., and Teh, Y. W. (2006). A fast learning algorithm for deep belief nets. Neural Computation, 18:1527-1554.
+* http://scholarpedia.org/article/Deep_belief_networks
+
 Metz, L., Maheswaranathan, N., Cheung, B., & Sohl-Dickstein, J. (2018). Meta-Learning Update Rules for Unsupervised Representation Learning. arXiv preprint arXiv:1804.00222.
 https://arxiv.org/abs/1804.00222
 
@@ -319,7 +324,11 @@ Reduced MNIST: how well can machines learn from small data? By Michael Nielsen. 
 http://cognitivemedium.com/rmnist
 Blog post on learning on super-small subsets of MNIST (not an official pub, so never cited). One example of each digit apparently brings accuracy to 42% for a naive NN (vs 97% for full), and ~56% (vs 99% for full) for a pretrained conv net (2 layers, not trained on mnist specifically), followed by 2 fully connected. Regularization becomes extremely important, as a way to fight overfitting, and even switching to convnet for this may be considered a type of regularization, I think.
 
-## Meta
+## Meta and CogSci
+
+Mesulam, M. M. (1998). From sensation to cognition. Brain: a journal of neurology, 121(6), 1013-1052.
+http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.120.8687&rep=rep1&type=pdf
+Review with 3k citations, which is a ton for this area. Something about modular organization of brain, and apparently so well written that highly influential?
 
 Ullman, S. (1987). Visual routines. In Readings in computer vision (pp. 298-328). Morgan Kaufmann.
 https://www.cs.cmu.edu/afs/cs/academic/class/15494-s12/readings/ullman-visual-routines.pdf

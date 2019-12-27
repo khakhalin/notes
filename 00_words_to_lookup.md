@@ -2,13 +2,19 @@
 
 #todo
 
+* Current point: https://developers.google.com/machine-learning/crash-course/training-neural-networks/best-practices
+* Why drop-out works?
+* Do people use leakyReLus often? Do they prefer them for pruning, or is it ignored?
+* Do people use pseudo-ranking (ranking followed by approximation) for variable pre-processing? Does it have a name?
+* Double-check what is eager about eager mode
+* Write a short Pandas cheat sheat about everything selection!!!
 * Move old recommendatinos from Sven down here
 * Move all old Jaeger and network papers here
 
 # Words and topics to look up
 
-Random pieces of math
-* Refresh the general flavor of Lagrangians and Hamiltonians
+Random pieces of coding
+* from sklearn import metrics
 
 Classic ML and friends
 * RBF - Radial basis function kernel: https://en.wikipedia.org/wiki/Radial_basis_function_kernel
@@ -45,8 +51,9 @@ Technical stuff
 * Hadoop
 * Spark
 
-Network science
-* Perron–Frobenius theorem (something related to centralities? or network graph eigenvectors?)
+Random pieces of math
+* Refresh the general flavor of Lagrangians and Hamiltonians
+* Perron–Frobenius theorem - something related to centralities and or network graph eigenvectors
 
 Neuro
 * ...
