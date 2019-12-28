@@ -1,5 +1,9 @@
 # Information and entropy
 
+#todo
+Stone, J. V. (2018). Information Theory: A Tutorial Introduction. arXiv preprint arXiv:1802.05968.
+https://arxiv.org/abs/1802.05968
+
 ## Entropy
 
 For an event x with probability p(x), the amount of information obtained if we learned that the event happened is -lg(p(x)). Nice property, because if two independent events happen together, probabilities multiply, and so informations add. lg() is a base-2 logarithm.

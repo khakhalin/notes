@@ -3,11 +3,11 @@
 #todo
 
 * Current point: https://developers.google.com/machine-learning/crash-course/training-neural-networks/best-practices
+* Write a short Pandas cheat sheat about everything selection!!!
 * Why drop-out works?
 * Do people use leakyReLus often? Do they prefer them for pruning, or is it ignored?
 * Do people use pseudo-ranking (ranking followed by approximation) for variable pre-processing? Does it have a name?
-* Double-check what is eager about eager mode
-* Write a short Pandas cheat sheat about everything selection!!!
+* Double-check what is eager about eager mode\
 * Move old recommendatinos from Sven down here
 * Move all old Jaeger and network papers here
 

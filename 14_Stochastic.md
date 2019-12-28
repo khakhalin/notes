@@ -1,6 +1,10 @@
 # Stochastic approaches
 
 #todo :
+Visual guide to Evolution strategies:
+http://blog.otoro.net/2017/10/29/visual-evolution-strategies/
+(Must, because visual and nice!!)
+
 https://en.wikipedia.org/wiki/Mean_field_particle_methods
 
 ## Variational Inference
