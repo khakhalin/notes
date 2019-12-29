@@ -1,12 +1,11 @@
 # An introduction to variable and feature selection
-
 Guyon, I., & Elisseeff, A. (2003). An introduction to variable and feature selection. Journal of machine learning research, 3(Mar), 1157-1182.
 
 #review #features #inprogress
 
 14000 citations!
 
-Typical for modern (as of 2003) solutions to work with >10^6 variables (genes, words), as opposed to old-school papers that were in the dozens. The problem: build useful features, and also avoid redundancy.
+Typical for modern (as of 2003) solutions to work with >10^6 variables (genes, words), as opposed to old-school papers that were in the dozens. The problem: build useful features, and also avoid redundancy. 
 
 Nice checklist (summarized in my main chapter)
 
@@ -26,28 +25,41 @@ But the problem (visible even for simple examples of 2 variable) is that sometim
 
 ## Subset selection
 
-Three approaches: **wrappers** (just try all possible combos, and pick the one that works the best), **filters** (pre-process variables before training), and **embedders** (learn a subset during training).
+Three approaches: 
+* **Wrappers**: define goal, try all possible combos, pick the best
+* **Filters**: pre-process variables before training, standard and domain-specific tools
+* **Embedders**: learn a subset during training
 
-**Wrappers**:
-1. Define model performance (usually, validation set, or cross-validation)
-2. Define a strategy for samplinging variable subsets (unless you really do all possible subsets)
+For **Wrappers**, need to 1. Define model performance (usually, validation set, or cross-validation), and 2. Define a strategy for samplinging variable subsets (unless you really do all possible subsets). Alternatively: **greedy algorithms**. Either **forward selection** (add features to the list), or **backward elimination** (exclude noisy features). Downside: not all data is used for training (as validation set is necessary). _Note: apparently, the use of greedy algorithms is hugely controversial, as they are always inferior to other approaches (see [[04_Regression]])._
 
-Alternatively: greedy algorithms. Either **forward selection** (add features to the list), or **backward elimination** (exclude noisy features). Downside: not all data is used for training (as validation set is necessary).
-
-**Embedders**: Nested subset methods: define the objective function as J(s) where s is the number of chosen variables. Then go some topics I totally don't understand without a context (and they are given without a context):
+**Embedders**: Nested subset methods: define the objective function as J(s) where s is the number of chosen variables. _Then they list some topics I don't understand without a context (and in the paper, they are given without a context):_
 * Quadratic approximation of the cost function
 * Kernel methods
 * Optimum Brain Damage - an old paper by LeCun from 1990 (ref below) where they did something like pruning, but using an approximation for the objective function (is it because they couldn't calculate it directly)
 
 **Direct objective optimization**: Take the goodness of fit, and add punishment for model complexity, then optimize it directly. Similar to shrinking (regularization).
 
-Another weird method: use all variables for an SVM, then rescale all variables by multiplying them by the absolute values of the weight vector. Repeat until convergence. It will shrink weak variables to 0 (Weston 2003). 
+Another weird method: use all variables for an SVM, then rescale all variables by multiplying them by the absolute values of the weight vector. Repeat until convergence. It will shrink weak variables to nothing (Weston 2003). 
 
 But in most cases direct optimization introduces a hyperparameter (the cost of complexity).
 
 **Filters**: faster, as happen entirely before training. May be linear or non-linear (?). Markov blankets (?) and other information-based criteria. _Overall, they seem to cite lots of contemporary papers from the same issue, but probably by now we have better methods, don't we?_
 
 ## Feature construction and dim reduction
+
+**Clustering**: may be both unsupervised and supervised (based on examples). Claims that it's linked to **information theory**, as it's about finding a proxy ξ for existing x→y, such that mutual information I(ξ , x) is minimized, while I(ξ , y) is preserved. Can be optimized with a Lagrangian multiplier J = I(ξ,x) - β∙I(ξ,y). _Not sure I can intuit this at this point._
+
+But this definition above apparently opens a window to use methods like **KL divergence** for information-based clustering.
+
+Another method (_Isn't it way more popular now?_) is **matrix factorization**.
+
+**Supervized clustering**. Reference some methods I never heard about (e.g. "Parzen windows"). _Skip for now; it feels both scary and oldschool, which makes it gangerous._
+
+## Validation
+
+Basic info on cross-validation.
+
+Finishes with "Advanced Topics and Open Problems" that I mostly skipped.
 
 ## References
 
