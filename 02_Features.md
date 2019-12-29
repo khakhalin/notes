@@ -1,4 +1,4 @@
-# Feature engineering
+# Feature engineering and dimensionality reduction
 #features
 
 #### Basic feature transformations:
