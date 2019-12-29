@@ -3,7 +3,7 @@ All sorts of infrastructure stuff.
 
 ## Python
 
-**Python itself**
+**Core Python**
 * Tips from Chip Huyen: https://github.com/chiphuyen/python-is-cool
 * Nice [list of Python gotchas](https://www.toptal.com/python/top-10-mistakes-that-python-programmers-make) from Martin Chilikian
 * f-strings: http://zetcode.com/python/fstring/
@@ -11,6 +11,15 @@ All sorts of infrastructure stuff.
 **Matplotlib**
 * Brief intro from Brad Solomon: https://realpython.com/python-matplotlib-guide/
 * Cheatsheet: [https://github.com/rougier/matplotlib-cheatsheet](<https://github.com/rougier/matplotlib-cheatsheet>)
+
+**Pandas**
+* `[[]]` simply means "a list inside a `[]` call"
+* Select columns by label: `d['x']`. Alternative: `d.x`. Returns a series. 
+* A series can then be sliced by row: `d.x[1]`. Warning: this is good for reading, but not for writing, due to **chained assignment** problem (view vs copy), as it's equivalent to `d['x'][1]`.
+* Row by label: `d.loc[]`. Works for df (returns a row), and for series (returns a value)
+* One proper way to read and write: `d.loc[1,'x']` - doesn't cause chained assignment (reference, not a copy)
+* Another way to read and write: `d.iloc[1,0]` - same as above, just by position, not name (index).
+* Note that `d.x.iloc[1]` is ok (reference), but `d.iloc[1].x`, while legal, is a copy (slice), and so should not be assigned to!
 
 **Coding habits for data scientists** ([ref](https://www.thoughtworks.com/insights/blog/coding-habits-data-scientists))
 * Keep code clean (not smelly). Types of **smells**:
@@ -20,7 +29,7 @@ All sorts of infrastructure stuff.
     * Functions that do too many things instead of one thing
     * Code repetition
     * Magic values
-* Smuggle code from Jupyter to classes as soon as possible (Jupyter for protopying, and maybe reporting?)
+* Smuggle code from Jupyter to classes as soon as possible (Jupyter only for protopying, reporting, and use case)
 * Write unit tests ([link to a decent intro](https://www.freecodecamp.org/news/an-introduction-to-testing-in-python/))
 * Make small and frequent commits
 

@@ -3,7 +3,6 @@
 #todo
 Current point in the Google Course: https://developers.google.com/machine-learning/crash-course/training-neural-networks/best-practices
 
-* Write a short Pandas cheat sheat about everything selection!!!
 * Why drop-out works?
 * Do people use leakyReLus often? Do they prefer them for pruning, or is it ignored?
 * Do people use pseudo-ranking (ranking followed by approximation) for variable pre-processing? Does it have a name?
