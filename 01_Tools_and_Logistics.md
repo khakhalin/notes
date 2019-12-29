@@ -6,6 +6,7 @@ All sorts of infrastructure stuff.
 **Python itself**
 * Tips from Chip Huyen: https://github.com/chiphuyen/python-is-cool
 * Nice [list of Python gotchas](https://www.toptal.com/python/top-10-mistakes-that-python-programmers-make) from Martin Chilikian
+* f-strings: http://zetcode.com/python/fstring/
 
 **Matplotlib**
 * Brief intro from Brad Solomon: https://realpython.com/python-matplotlib-guide/
