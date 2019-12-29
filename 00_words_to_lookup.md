@@ -1,8 +1,8 @@
 # General To-Dos:
 
 #todo
+Current point in the Google Course: https://developers.google.com/machine-learning/crash-course/training-neural-networks/best-practices
 
-* Current point: https://developers.google.com/machine-learning/crash-course/training-neural-networks/best-practices
 * Write a short Pandas cheat sheat about everything selection!!!
 * Why drop-out works?
 * Do people use leakyReLus often? Do they prefer them for pruning, or is it ignored?
@@ -12,9 +12,6 @@
 * Move all old Jaeger and network papers here
 
 # Words and topics to look up
-
-Random pieces of coding
-* from sklearn import metrics
 
 Classic ML and friends
 * RBF - Radial basis function kernel: https://en.wikipedia.org/wiki/Radial_basis_function_kernel

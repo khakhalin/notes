@@ -4,18 +4,18 @@ Rahaman, N., Baratin, A., Arpit, D., Draxler, F., Lin, M., Hamprecht, F. A., ...
 https://arxiv.org/abs/1806.08734
 On what neural network can encode easily - seems to be a very useful read, potentially.
 
-Identity Crisis: Memorization and Generalization Under Extreme Overparameterization 
-Chiyuan Zhang, Samy Bengio, Moritz Hardt, Michael C. Mozer, Yoram Singer
-https://openreview.net/forum?id=B1l6y0VFPr
-https://openreview.net/pdf?id=B1l6y0VFPr
-Identity mapping (just training the output be exactly like the input).
-
 He, K., Zhang, X., Ren, S., & Sun, J. (2016). Deep residual learning for image recognition. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 770-778).
 http://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf
 36k citations, haha. The famous residual networks paper.
 
 Belkin, M., Hsu, D., Ma, S., & Mandal, S. (2019). Reconciling modern machine-learning practice and the classical bias–variance trade-off. Proceedings of the National Academy of Sciences, 116(32), 15849-15854.
 https://arxiv.org/abs/1812.11118
+
+Identity Crisis: Memorization and Generalization Under Extreme Overparameterization 
+Chiyuan Zhang, Samy Bengio, Moritz Hardt, Michael C. Mozer, Yoram Singer
+https://openreview.net/forum?id=B1l6y0VFPr
+https://openreview.net/pdf?id=B1l6y0VFPr
+Identity mapping (just training the output be exactly like the input).
 
 Ribeiro, M. T., Singh, S., & Guestrin, C. (2016, August). Why should i trust you?: Explaining the predictions of any classifier. In Proceedings of the 22nd ACM SIGKDD international conference on knowledge discovery and data mining (pp. 1135-1144). ACM.
 https://arxiv.org/abs/1602.04938

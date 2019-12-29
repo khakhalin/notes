@@ -1,7 +1,7 @@
 # Feature engineering
 #features
 
-Simple feature transformations:
+#### Basic feature transformations:
 * **Binning** in high D: the simplest thing ever; emulates cluster analysis without actually running cluster analysis, as clusters are more likely to be covered by the same bin. May be used to transform a continuous variable into a pseudo-nominal one.
 * **One-hot encoding**: the other way around, encoding nominal stuff as numbers.
 * **Cross-products**: if you have a high-D situation, adding cross-products of basic features is a cheap and fust way of performing non-linear modeling with linear methods.
@@ -10,16 +10,19 @@ Simple feature transformations:
 
 ## Variable selection
 
-[[Guyon2003variable]] - review on feature selection (as well as some info on construction). Their checklist:
+Key references:
+* [[Guyon2003variable]] - review on feature selection (as well as some info on construction). 
+ 
+Basic checklist:
 1. Use domain knowledge
 2. Normalize variables where appropriate
-3. If variables aren't independent, construct conjunctive features
-4. If need to prune for external reasons (compute?) create disjunctive, or weighted
-5. Get baseline by assessing and ranking features independently
+3. If variables aren't independent, construct **conjunctive features**
+4. If need to prune for external reasons (compute?) create **disjunctive**, or weighted
+5. Get baseline by assessing features independently
 6. Detect and handle outliers and dirty data
 7. Start with the simplest predictor (usually linear)
-8. If you have better ideas, implement them, and compare (benchmark) them
-9. Check stability by bootstrapping (do they mean cross-validation?)
+8. If you have better ideas, implement, then compare (benchmark)
+9. Check stability by bootstrapping (cross-validation)
 
 # Dimensionality reduction
 
