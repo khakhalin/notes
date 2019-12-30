@@ -350,3 +350,12 @@ Seminal old paper (5k refs) against neural networks :) that everybody reference 
 
 Cardon, D., Cointet, J. P., & Mazieres, A. (2018). Neurons spike back: The Invention of Inductive Machines and the Artificial Intelligence Controversy.
 [https://neurovenge.antonomase.fr/NeuronsSpikeBack.pdf](<https://neurovenge.antonomase.fr/NeuronsSpikeBack.pdf>)
+
+Cisek, P. (2019). Resynthesizing behavior through phylogenetic refinement. Attention, Perception, & Psychophysics, 1-23.
+https://link.springer.com/article/10.3758/s13414-019-01760-1
+On evolution of mamallian brain, and how you can draw a link between behavioral (computational?) complexity, and hierarchical organization of a vertebrate brain. Tries to ambitiously draw parallels between evolution, development, and behavior.
+
+## Complexity
+Corominas-Murtra, B., Seoane, L. F., & Solé, R. (2018). Zipf’s law, unbounded complexity and open-ended evolution. Journal of the Royal Society Interface, 15(149), 20180395.
+https://royalsocietypublishing.org/doi/pdf/10.1098/rsif.2018.0395
+General patterns of increase in complexity during evolution, using several natural and artificial examples (texts, proteins, logic circuits, and even combinations of Legos). Information and string complexity.
