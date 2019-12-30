@@ -3,23 +3,10 @@ All sorts of infrastructure stuff.
 
 ## Python
 
-#### Core Python
+### Core Python
 * Tips from Chip Huyen: https://github.com/chiphuyen/python-is-cool
 * Nice [list of Python gotchas](https://www.toptal.com/python/top-10-mistakes-that-python-programmers-make) from Martin Chilikian
-* f-strings: http://zetcode.com/python/fstring/
-
-#### Matplotlib
-* Brief intro from Brad Solomon: https://realpython.com/python-matplotlib-guide/
-* Cheatsheet: [https://github.com/rougier/matplotlib-cheatsheet](<https://github.com/rougier/matplotlib-cheatsheet>)
-
-#### Pandas
-* `[[]]` simply means "a list inside a `[]` call"
-* Select columns by label: `d['x']`. Alternative spelling: `d.x`. Returns a series. 
-* A series can then be further sliced by row: `d.x[1]`. Warning: this is a good way to read, but not to write, due to the **chained assignment** problem (view vs copy). Is equivalent to `d['x'][1]`. *It seems to work for some reason, somehow, even though it shouldn't really.*
-* Row by label: `d.loc[]`. Works for both df (returns a row-series), and for series (returns a single value).
-* One proper way to read and write: reference by name (index): `d.loc[1,'x']` - doesn't cause chained assignment.
-* Another good way: `d.iloc[1,0]` - same as above, just by position.
-* Both `d.x.iloc[1]` and `d.iloc[1].x`are OK for reading, but not good for writing. Row-Col never works for assignment; Col-Row seems to work, but produces a warning in older Pandas (no warning in newer version).
+* f-strings: http://zetcode.com/python/fstring/ , and [this specification](https://docs.python.org/3/library/string.html#format-specification-mini-language) (mini-language!)
 
 ### Random Python tips:
 * If in a module you start a method name with one underscore, like `_helper`, this method isn't imported on `from module import *`. Unfortunately is still acessible if you do `import module`and address it as `module._helper()`.
@@ -29,7 +16,24 @@ All sorts of infrastructure stuff.
 * To get some (or rather, first) dict from a dict, do `next(iter(a.keys()))`
 * Objects (including empty lists `[]`) should never be used as default arguments for functions, as they are evaluated only once per program (during object definition), not when methods are called! Insetad use `x=None`, then `if x is None: x=[]`. It sounds super-cumbersome, but that's just how it is. ([source](https://docs.python-guide.org/writing/gotchas/))
 
-### Coding habits for data scientists
+### Matplotlib
+* Brief intro from Brad Solomon: https://realpython.com/python-matplotlib-guide/
+* Cheatsheet: [https://github.com/rougier/matplotlib-cheatsheet](<https://github.com/rougier/matplotlib-cheatsheet>)
+
+### Pandas
+* `[[]]` simply means "a list inside a `[]` call"
+* Select columns by label: `d['x']`. Alternative spelling: `d.x`. Returns a series. 
+* Select rows by label: `d.loc[1]`. Works for both df (returns a row-series), and for column-series (returns a single value).
+* **Chained Assignment**: a problem while writing to a frame, selecting by both column and row.
+    * Good: reference both by label (index): `d.loc[1,'x']`
+    * Also Good: reference both by position:`d.iloc[1,0]`. Row goes first. 
+    * Read, but not write: `d.x[1]`, which is equivalent to `d['x'][1]`.
+    * Read but not write: Both `d.x.iloc[1]` and `d.iloc[1].x`. Documentation states that whether any given slice would work orn ot is "officially unpredictable", so chaining shoud never be used.
+* Out-of-range integers are forgiven (ignored) on reading, but cause an error if you try to write
+* For **conditional data retrieval**, either logical indexing `d.loc[d.x>0]` (can be combined with list comprehensions, can be written to) or queries: `d.query('x>0')` (easier to read, slightly faster, but cannot be written to).
+* Conditional indexing supports functions, as long as they take, and return, Pandas series (or something similar, like Numpy array)
+
+## Coding habits for data scientists
 * Keep code clean (not smelly). Types of **smells** ([ref](https://www.thoughtworks.com/insights/blog/coding-habits-data-scientists)):
     * Dead code (commented, inconsequential)
     * Print statements everywhere
