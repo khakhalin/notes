@@ -3,26 +3,34 @@ All sorts of infrastructure stuff.
 
 ## Python
 
-**Core Python**
+#### Core Python
 * Tips from Chip Huyen: https://github.com/chiphuyen/python-is-cool
 * Nice [list of Python gotchas](https://www.toptal.com/python/top-10-mistakes-that-python-programmers-make) from Martin Chilikian
 * f-strings: http://zetcode.com/python/fstring/
 
-**Matplotlib**
+#### Matplotlib
 * Brief intro from Brad Solomon: https://realpython.com/python-matplotlib-guide/
 * Cheatsheet: [https://github.com/rougier/matplotlib-cheatsheet](<https://github.com/rougier/matplotlib-cheatsheet>)
 
-**Pandas**
+#### Pandas
 * `[[]]` simply means "a list inside a `[]` call"
-* Select columns by label: `d['x']`. Alternative: `d.x`. Returns a series. 
-* A series can then be sliced by row: `d.x[1]`. Warning: this is good for reading, but not for writing, due to **chained assignment** problem (view vs copy), as it's equivalent to `d['x'][1]`.
-* Row by label: `d.loc[]`. Works for df (returns a row), and for series (returns a value)
-* One proper way to read and write: `d.loc[1,'x']` - doesn't cause chained assignment (reference, not a copy)
-* Another way to read and write: `d.iloc[1,0]` - same as above, just by position, not name (index).
-* Note that `d.x.iloc[1]` is ok (reference), but `d.iloc[1].x`, while legal, is a copy (slice), and so should not be assigned to!
+* Select columns by label: `d['x']`. Alternative spelling: `d.x`. Returns a series. 
+* A series can then be further sliced by row: `d.x[1]`. Warning: this is a good way to read, but not to write, due to the **chained assignment** problem (view vs copy). Is equivalent to `d['x'][1]`. *It seems to work for some reason, somehow, even though it shouldn't really.*
+* Row by label: `d.loc[]`. Works for both df (returns a row-series), and for series (returns a single value).
+* One proper way to read and write: reference by name (index): `d.loc[1,'x']` - doesn't cause chained assignment.
+* Another good way: `d.iloc[1,0]` - same as above, just by position.
+* Both `d.x.iloc[1]` and `d.iloc[1].x`are OK for reading, but not good for writing. Row-Col never works for assignment; Col-Row seems to work, but produces a warning in older Pandas (no warning in newer version).
 
-**Coding habits for data scientists** ([ref](https://www.thoughtworks.com/insights/blog/coding-habits-data-scientists))
-* Keep code clean (not smelly). Types of **smells**:
+### Random Python tips:
+* If in a module you start a method name with one underscore, like `_helper`, this method isn't imported on `from module import *`. Unfortunately is still acessible if you do `import module`and address it as `module._helper()`.
+* Conventions: underscore for variables and functions; all-caps for constants, capitalized camelcase for objects, leading-underscore for local methods.
+* Nested comprehensions: same syntax as in writing nested loops (even tho it looks unformulaic), e.g. `[j for i in range(5) for j in range(i)]
+* To add += 1 to a dict when a key may not exist, use `get()` as it has a default value: `a[i] = a.get(i,0)+1`
+* To get some (or rather, first) dict from a dict, do `next(iter(a.keys()))`
+* Objects (including empty lists `[]`) should never be used as default arguments for functions, as they are evaluated only once per program (during object definition), not when methods are called! Insetad use `x=None`, then `if x is None: x=[]`. It sounds super-cumbersome, but that's just how it is. ([source](https://docs.python-guide.org/writing/gotchas/))
+
+### Coding habits for data scientists
+* Keep code clean (not smelly). Types of **smells** ([ref](https://www.thoughtworks.com/insights/blog/coding-habits-data-scientists)):
     * Dead code (commented, inconsequential)
     * Print statements everywhere
     * Bad variable names
@@ -33,20 +41,10 @@ All sorts of infrastructure stuff.
 * Write unit tests ([link to a decent intro](https://www.freecodecamp.org/news/an-introduction-to-testing-in-python/))
 * Make small and frequent commits
 
-#### Random Python tips:
-* If in a module you start a method name with one underscore, like `_helper`, this method isn't imported on `from module import *`. Unfortunately is still acessible if you do `import module`and address it as `module._helper()`.
-* Conventions: underscore for variables and functions; all-caps for constants, capitalized camelcase for objects, leading-underscore for local methods.
-* Nested comprehensions: same syntax as in writing nested loops (even tho it looks unformulaic), e.g. `[j for i in range(5) for j in range(i)]
-* To add += 1 to a dict when a key may not exist, use `get()` as it has a default value: `a[i] = a.get(i,0)+1`
-* To get some (or rather, first) dict from a dict, do `next(iter(a.keys()))`
-* Objects (including empty lists `[]`) should never be used as default arguments for functions, as they are evaluated only once per program (during object definition), not when methods are called! Insetad use `x=None`, then `if x is None: x=[]`. It sounds super-cumbersome, but that's just how it is. ([source](https://docs.python-guide.org/writing/gotchas/))
-
 ## Scikit-learn
-
 * A bunch of notebooks that implement all key ML methods, by Aurélien Geron, to accompany his book ("Hands-On Machine Learning with Scikit-Learn and TensorFlow"): https://github.com/ageron/handson-ml2
 
 ## Tensorflow and Keras
-
 * Links to several tutorials: https://github.com/sayakpaul/TF-2.0-Hacks/blob/master/README.md
 
 #### Random notes:
@@ -54,7 +52,6 @@ All sorts of infrastructure stuff.
 * TF relies on a function that iterates through (features, labels) as tuples. And instead of directly linking to data, it wants to receive a data-generating function (for lazy / parallel execution?).
 
 ## GIT
-
 * Funny short cheatsheet "Dangit": http://dangitgit.com/
 
 # ML Project Organization
