@@ -9,7 +9,7 @@ http://xahlee.info/comp/unicode_math_operators.html
 ∬
 ⇒ ⇄ ↻ → 
 ∆ ∇ ∂
-
+ᵀ
 ∀∃∄
 𝒩
 ∅∈∉
