@@ -355,7 +355,11 @@ Cisek, P. (2019). Resynthesizing behavior through phylogenetic refinement. Atten
 https://link.springer.com/article/10.3758/s13414-019-01760-1
 On evolution of mamallian brain, and how you can draw a link between behavioral (computational?) complexity, and hierarchical organization of a vertebrate brain. Tries to ambitiously draw parallels between evolution, development, and behavior.
 
-## Complexity
+## Complexity and Automata
 Corominas-Murtra, B., Seoane, L. F., & Solé, R. (2018). Zipf’s law, unbounded complexity and open-ended evolution. Journal of the Royal Society Interface, 15(149), 20180395.
 https://royalsocietypublishing.org/doi/pdf/10.1098/rsif.2018.0395
 General patterns of increase in complexity during evolution, using several natural and artificial examples (texts, proteins, logic circuits, and even combinations of Legos). Information and string complexity.
+
+Zenil, H., & Villarreal-Zapata, E. (2013). Asymptotic behavior and ratios of complexity in cellular automata. International Journal of Bifurcation and Chaos, 23(09), 1350159.
+https://arxiv.org/pdf/1304.2816.pdf
+Some measures of complexity (Shannon's block entropy and Kolmogorov) applied to 1D cellular automata. They try to make some general statements. Give a look.
