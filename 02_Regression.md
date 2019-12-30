@@ -1,16 +1,28 @@
 # Regression
+**Linear model**: h(x) = estimation for y = ∑θ_i x_i = xᵀθ . Here we assume that x is a column-vector length n+1: x_0 = 1 (intercept), followed by n variables. Hyperplane.
 
-## Linear Regression
-**L2 loss**: mean squared distance. Nice illustration from [Google crash course](https://developers.google.com/machine-learning/crash-course/): 2 outliers of 2 are worse than 4 outliers of 1, as 4<8. Real sensitive to outliers.
+> Some notes use reverse notation where θ get transposed, and are multiplied from the left. ESLII uses this notation though, so I'll try to stick to it.
 
-**Hyperparameters**: those somewhat arbitrary values that define the type of solution the model is looking for, and the process of descent. Examples: learning rate, batch size.
+Introduce loss: J(θ) = ∑(h-y)^2 across all data points i.
 
-**Learning rate**: Goldilocks principle - the best learning rate should "magically" put you in the minimum in a very few steps. Large learning rate leads to noisy oscillations after what looked like a convergence. It may even break everything (unstable).
+We can minimize this loss by differentiating by θ (partial derivative for each of the coordinates). For one point: ∂J(θ)/∂θ_j = by definition of J: ∂/∂θ_j (h(θ,x)-y)^2 = simple chain rule: 2(h-y) ∙ ∂h/∂θ_j = by formula for h: 2(h-y)∙x_j . Now we can update θ by gradient descent by doing θ := θ + α(h-y)x . As this loss is a convex quadratic function, it has only one minimum, and so always converges.
 
-**Mini-batch**: process >1 (usually 10-1000) points at a time. Somewhere in between fully stochastic descent (1 point at a time) and math-optimal (all points every time).
+Minimum: dJ/dθ = 0, ⇒ (derivative above written in matrix notation): Xᵀ(y-Xθ) = 0. Here X is a matrix in which each _row_ is an input vector, and y is a column-vector of target outputs. If XᵀX is nonsignular, we can open the brackets, send Xᵀy to the right, muliply from the left on inverse, get:
+θ = inv(XᵀX)Xᵀy.
 
-h(x) = estimation for y = ∑θ_i x_i = θ'∙x . Here we assume that x is a vector length n+1: x_0 = 1 (intercept), followed by n variables. Introduce loss: J(θ) = 1/2∙∑(h-y)^2 across all points i. Now minimize it by differentiating by θ (partial derivative for each of the coordinates). For one point:
-∂J(θ)/∂θ_j = definition ∂/∂θ_j 1/2 (h(θ,x)-y)^2 = simple chain rule (h(θ,x)-y) ∙ ∂/∂ h = by formula for h = (h-y)∙x_j . Now we can update θ by gradient descent by doing θ := θ + α(h-y)x . As this loss is a convex quadratic function, it has only one minimum, and so always converges.
+Can regression be used for classification? Yep, just set a threshold (0.5?) for the output value. Aka fitting a **dummy variable**. If h(x) is a hyperplane, h=const becomes a 1-d-lower hyperplane (in 2D case: line) separating the space of x into 2 halves. **Linear separation**. Apparently, the best we can do for 2 overlapping Gaussians.
+
+## L2 loss
+ **Squared error**, or **squared distance**. Sensitive to outliers, permissive to small deviations around zero (because of its convex shape). Nice practical illustration from [Google crash course](https://developers.google.com/machine-learning/crash-course/): 2 outliers of 2 are worse than 4 outliers of 1, as 8>4. 
+ 
+ To build the math for it, we need to consider x and y as random variables, with a joint distribution P(x,y). We're trying to build a predictor f(x) that approximates y. The squared error loss: L = (y-f)^2 = ∬ (y-f)^2 P(x,y) dx dy. We can split P(x,y) into P(x)∙P(y|x), and integrate by y first (inside), then by x outside. Then to minimize total L, we can bind f(x) to matching y point-wise: f(x) = E(y|X=x). Which essentially gives us the **nearest neighbor** method (see the very beginning of "Classification" chapter).
+ 
+Does L2 has alternatives? Sure, **L1 norm** = abs(distance), which effectively pushes f(x) towards median(y) rather than the mean(y): sum of distances to 2 points is min when you're exactly between them. Hard to work with, as derivatives are discontinuous.
+ 
+## Practical terms
+* **Hyperparameters**: those somewhat arbitrary values that define the type of solution the model is looking for, and the process of descent. Examples: learning rate, batch size.
+* **Learning rate**: Goldilocks principle - the best learning rate should "magically" put you in the minimum in a very few steps. Large learning rate leads to noisy oscillations after what looked like a convergence. It may even break everything (unstable).
+* **Mini-batch**: process >1 (usually 10-1000) points at a time. Somewhere in between fully stochastic descent (1 point at a time) and math-optimal (all points every time).
 
 ## Bias-Variance Tradeoff
 

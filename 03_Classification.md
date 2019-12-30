@@ -1,9 +1,18 @@
 # Classification
+Classic classification example: [MNIST](http://yann.lecun.com/exdb/mnist/index.html) (link to a library of all thinkable approaches to classification, as applied to this dataset, each given with a test error rate)
 
-## Basic classification problem
-Simplest approach: **Nearest Neighbor**. Just pick closest training case. This is an example of a **lazy learning** approach: instead of generating estimations upfront (that would be called **eager**), we only generate them at retrieval. A slightly better approach: **K nearest neighbors** (aka KNN).
+## Basic classification and KNN
+Simplest archetypical approach: **Nearest Neighbor**. Just pick closest training case. This is an example of a **lazy** approach: instead of generating estimations upfront (that would be called **eager**), we only generate them at retrieval. A better. and more practical, approach: **K nearest neighbors** (aka KNN).
 
-Classic example: [MNIST](http://yann.lecun.com/exdb/mnist/index.html) (link to a library of all thinkable and unthinkable approaches to classification, as applied to this dataset, each given with a test error rate)
+While KNN is lazy, for analysis purposes we can calculate predictions on a grid, and thus identify borders between areas "assigned" to different categories. For k=1 (simple Nearest Neighbor) we get a Voronoi tesselation between all training points (disconnected and jaggedy, as each point gets its own area). Which presents a case of extreme overfitting: all training data is correctly classified, but it looks scary. Higher k: smoother areas, making k a **hyperparameter**. But the **effective number of parameters** for KNN is higher (about N/k), as data points themselves serve as parameters.
+
+**Can we use quadratic loss function for KNN?** No, coz it would go to 0 for k=1, so hyperparameter search would always recommend overfitting.
+
+KNN can be used for numerical predictions as well (beyond simple classification); just use the average of y-values for nearest k x-points (in fact, that's how ESLII introduces it).
+
+How to find optimal k? Using **model assessment** (below), but in short: we'll need a training and a testing set, then try different values of k, and find the point when the test error (or some other measure) is lowest for test data (ESLII Fig 2.4).
+
+KNN is an archetype for many fancy methods. For example, if instead of "nearest" δi that are all or none we'll use fuzzy weights that are larger when you are close to each data w(distance), it's the same as just regressing on distance, which is a type of a **kernel method**. If we want some dimensions of X matter differently than others, we can use non-round kernels. **Local regression** is also similar in spirit (sorta a combinatino of linear regression and the idea of contextual locality). DL networks also imitate something like that by mixing and mashing linear transformations.
 
 ## Model assessement
 
