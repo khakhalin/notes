@@ -3,11 +3,11 @@
 #todo
 Current point in the Google Course: https://developers.google.com/machine-learning/crash-course/training-neural-networks/best-practices
 
-* Why drop-out works?
 * Do people use leakyReLus often? Do they prefer them for pruning, or is it ignored?
 * Do people use pseudo-ranking (ranking followed by approximation) for variable pre-processing? Does it have a name?
 * Double-check what is eager about eager mode\
 * Move old recommendatinos from Sven down here
+* Make sure all Eric's recommendations are here
 * Move all old Jaeger and network papers here
 
 # Words and topics to look up
@@ -22,6 +22,7 @@ Classic ML and friends
 * more on Gaussian processes
 * Graphical models
 * Hidden markov models
+* Markov random fields (precursor of modern graph models?)
 * Variational inference
 * Resampling techniques: SMOTE, isotonic regression, Platt scaling
 * Hungarian algorithm
