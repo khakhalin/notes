@@ -1,5 +1,7 @@
 # Courses, books and links
 
+Currently at: ESLII p30
+
 ## To file:
 
 Matrix calculus for deep learning

@@ -14,6 +14,14 @@ How to find optimal k? Using **model assessment** (below), but in short: we'll n
 
 KNN is an archetype for many fancy methods. For example, if instead of "nearest" δi that are all or none we'll use fuzzy weights that are larger when you are close to each data w(distance), it's the same as just regressing on distance, which is a type of a **kernel method**. If we want some dimensions of X matter differently than others, we can use non-round kernels. **Local regression** is also similar in spirit (sorta a combinatino of linear regression and the idea of contextual locality). DL networks also imitate something like that by mixing and mashing linear transformations.
 
+## Linear separation
+
+**Can regression be used for classification?** Aye, just set a threshold (0.5?) for the output value. Aka fitting a **dummy variable**. If h(x) is a hyperplane, h=const becomes a 1-d-lower hyperplane (in 2D case: line) separating the space of x into 2 halves. **Linear separation**. Apparently, the best we can do for 2 overlapping Gaussians.
+
+**Can regression be used for categorical variables?** (Multi-class classification?) Also aye, but a different loss, summing costs of all misclassifications (when a point from class Gk was erroneously classified as a point in Gl). We'll need a matrix of costs, and from it calculate a matrix of losses L(k,l). Most often though, one cost for all errors, and **expected prediction error** EPE = E(L). We can try to optimize EPE point-wise: G = armin_g ∑ L(Gk counted as g) ∙ P(observing point from Gk | for X=x).
+
+If all errors cost the same, G = argmin_g (1 - P(g | x)) - likelihood optimization? Aka **Bayes classifier** - just go for the best guess of conditional probability P(class | observation). The error rate for it is called **Bayes rate**: the lowest possible rate, coming from the variability of data itself (analogous to irreducible error for continuous data: [wiki](https://en.wikipedia.org/wiki/Bayes_error_rate))
+
 ## Model assessement
 
 **Model accuracy**: The most primitive measure = number of true statements / total number of statements. Obvious dependency on class balance (famous example, a statement of "today is not Christmas" has an accuracy of 99.7%). But may work for toy examples with very carefully balanced classes (like MNIST).

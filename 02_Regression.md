@@ -3,34 +3,35 @@
 
 > Some notes use reverse notation where θ get transposed, and are multiplied from the left. ESLII uses this notation though, so I'll try to stick to it.
 
+## L2 loss
+
 Introduce loss: J(θ) = ∑(h-y)^2 across all data points i.
+
+**Squared error**, or **squared distance**. Sensitive to outliers, permissive to small deviations around zero (because of its convex shape). Nice practical illustration from [Google crash course](https://developers.google.com/machine-learning/crash-course/): 2 outliers of 2 are worse than 4 outliers of 1, as 8>4. 
 
 We can minimize this loss by differentiating by θ (partial derivative for each of the coordinates). For one point: ∂J(θ)/∂θ_j = by definition of J: ∂/∂θ_j (h(θ,x)-y)^2 = simple chain rule: 2(h-y) ∙ ∂h/∂θ_j = by formula for h: 2(h-y)∙x_j . Now we can update θ by gradient descent by doing θ := θ + α(h-y)x . As this loss is a convex quadratic function, it has only one minimum, and so always converges.
 
-Minimum: dJ/dθ = 0, ⇒ (derivative above written in matrix notation): Xᵀ(y-Xθ) = 0. Here X is a matrix in which each _row_ is an input vector, and y is a column-vector of target outputs. If XᵀX is nonsignular, we can open the brackets, send Xᵀy to the right, muliply from the left on inverse, get:
-θ = inv(XᵀX)Xᵀy.
+Minimum: dJ/dθ = 0, ⇒ (derivative above written in matrix notation): Xᵀ(Xθ-y) = 0. Here X is a matrix in which each _row_ is an input vector, and y is a column-vector of target outputs. If XᵀX is nonsignular, we can open the brackets, send y to the right, muliply from the left on inverse, get:
+θ = (XᵀX)⁻¹Xᵀy.
 
-Can regression be used for classification? Yep, just set a threshold (0.5?) for the output value. Aka fitting a **dummy variable**. If h(x) is a hyperplane, h=const becomes a 1-d-lower hyperplane (in 2D case: line) separating the space of x into 2 halves. **Linear separation**. Apparently, the best we can do for 2 overlapping Gaussians.
+> So in ESLII notation one point is a row-vector, but all points make a column (in this case a column of vectors). y values are also a column. Because data-point is a row, parameters θ are a column, so that dim(y) = N×1 = dim(Xθ). A confusing part is that their X (matrix) of N×k is multiplied by :theta: from the right (Xθ), but individual points x have to be written as xᵀθ to mark them as row-vectors. Yet, let's roll with it, as it seems to be everyone's fav book.
 
-## L2 loss
- **Squared error**, or **squared distance**. Sensitive to outliers, permissive to small deviations around zero (because of its convex shape). Nice practical illustration from [Google crash course](https://developers.google.com/machine-learning/crash-course/): 2 outliers of 2 are worse than 4 outliers of 1, as 8>4. 
+To build the math for it, we need to consider x and y as random variables, with a joint distribution P(x,y). We're trying to build a predictor f(x) that approximates y. The squared error loss: L = (y-f)^2 = ∬ (y-f)^2 P(x,y) dx dy. We can split P(x,y) into P(x)∙P(y|x), and integrate by y first (inside), then by x outside. Then to minimize total L, we can bind f(x) to matching y point-wise: f(x) = E(y|X=x). Which would essentially give us the **nearest neighbor** method (see the very beginning of "Classification" chapter). An alternative to point-wise matching would be a model (similar to linear model above), making linear regression and nearest-neighbor in a way two opposite extremes of what can be done with the data. Other stuff (like **additive models** where f = ∑ f_j(x)) are kinda in-between.
  
- To build the math for it, we need to consider x and y as random variables, with a joint distribution P(x,y). We're trying to build a predictor f(x) that approximates y. The squared error loss: L = (y-f)^2 = ∬ (y-f)^2 P(x,y) dx dy. We can split P(x,y) into P(x)∙P(y|x), and integrate by y first (inside), then by x outside. Then to minimize total L, we can bind f(x) to matching y point-wise: f(x) = E(y|X=x). Which essentially gives us the **nearest neighbor** method (see the very beginning of "Classification" chapter).
+**Are there alternatives to L2?** Sure, **L1 norm** = abs(distance), which effectively pushes f(x) towards median(y) rather than the mean(y): sum of distances to 2 points is min when you're exactly between them. Hard to work with, as derivatives are discontinuous.
+
+**Can regression be used for classification?** Yes, but see [[03_Classification]].
  
-Does L2 has alternatives? Sure, **L1 norm** = abs(distance), which effectively pushes f(x) towards median(y) rather than the mean(y): sum of distances to 2 points is min when you're exactly between them. Hard to work with, as derivatives are discontinuous.
- 
-## Practical terms
+### Some terminology
 * **Hyperparameters**: those somewhat arbitrary values that define the type of solution the model is looking for, and the process of descent. Examples: learning rate, batch size.
 * **Learning rate**: Goldilocks principle - the best learning rate should "magically" put you in the minimum in a very few steps. Large learning rate leads to noisy oscillations after what looked like a convergence. It may even break everything (unstable).
 * **Mini-batch**: process >1 (usually 10-1000) points at a time. Somewhere in between fully stochastic descent (1 point at a time) and math-optimal (all points every time).
+* **Linear basis expansion**: when y~ h(x) = ∑ f_i(x) θ_i (ESLII p30)
+* **Non-linear expansion**: a non-linear transformation of a linear model (ESLII p30)
 
 ## Bias-Variance Tradeoff
 
-An estimate for the number of training examples needed ot learn problems of certain dimensionality.
-
-Generalization error consists of two parts: bias and variance.
-
-**Derivation for a linear system:** (ref: [Some lecture](https://www.youtube.com/watch?v=zUJbRO0Wavo) by Kilian Weinberger)
+Total prediction error (L2 loss) consists of two parts: bias and variance. Derivation:
 
 Say, regression x→y on a dataset (x,y) generated by a distribution P(x,y).
 For a given x, we can have P(y|x), and P(x,y) = ∫ P(y|x)P(x) by x.
@@ -38,7 +39,7 @@ Regression predicts expected y(x), or Ey (x).
 By definition Ey (x) = ∫y P(y|x) , integrated across all possible x.
 ML is about guessing (predicting) E y(x) well using some algorithm.
 Say, h(x) is our guess for Ey (x), produced by some method A, based on a training set D.
-The expected error for this estimation h is: E (h-y)^2 = ∬ P(x,y)(h(x)-y)^2 by both x and y.
+The expected error for this estimation h is: J = E (h-y)^2 = ∬ P(x,y)(h(x)-y)^2 by both x and y.
 Now, h itself is a random variable, as it's a function of D, which is a random sample from (x,y).
 So we can consider expected value: Eh, by integrating over all possible training sets D.
 We can estimate it by training lots of times and averaging. Or, if you are only interested in E(h), you could also just apply A to the full dataset, obtaining the best h possible.
@@ -55,11 +56,27 @@ So we ended up having 3 terms:
 * Bias: (Eh-Ey)^2
 * Variance of the data, aka noise, or irreducable error: (Ey-y)^2
 
-> **My current understanding** is that it is actually close to the precision / recall situation. The point is that if you try to minimize bias (make your classifier cling to the data), you fall at mercy of your training set, and so increase variance. Each particular classifier, understood as an instance produced by some particular set of training data, will cling to this testing data, so all classifiers will be slightly different, if you train on different data. If you believe that the underlying solution has some constraints to it, you may want to restrain your classifier, even at cost of accepting higher bias (Eh-Ey), so that it would not change that widely for different subsets of your testing data. Regularization does that. Then for each given training set you'll get higher bias, but you'll reduce variance (of your classifier, across all possible training set), as all models will be more similar to each other, and hopefully also closer to the "ground truth". Essentially, a parsimony principle: an assumption that simpler models are better.
+Refs: ESLII p24; [lecture by K Weinberger](https://www.youtube.com/watch?v=zUJbRO0Wavo).
+
+> **My understanding** is that it is actually close to the precision / recall situation. The point is that if you try to minimize bias (make your classifier cling to the data), you fall at mercy of your training set, and so increase variance. Each particular classifier, understood as an instance produced by some particular set of training data, will cling to this testing data, so all classifiers will be slightly different, if you train on different data. If you believe that the underlying solution has some constraints to it, you may want to restrain your classifier, even at cost of accepting higher bias (Eh-Ey), so that it would not change that widely for different subsets of your testing data. Regularization does that. Then for each given training set you'll get higher bias, but you'll reduce variance (of your classifier, across all possible training set), as all models will be more similar to each other, and hopefully also closer to the "ground truth". Essentially, a parsimony principle: an assumption that simpler models are better.
 
 > So it's directly related to overfitting. Low bias = high variance = great fit on the training set, but horrible fit on te testing set.
 
 > But look, it would only work if the ground trugh is actually simple. Why does it work? Why is the ground truth actually simple? Is it some expected statistical property that the world actually follows?.. Or is it because a typical practical problem has certain properties? Seems like that; see below.
+
+### Biase-Variance for a high-dim case
+(See "Features" / "Dimensionality reduction", **dimensionality curse**)
+
+Consider linear model with error, so Y = Xᵀθ + ε (aka **additive error model**), where ε is normal noise with variance σ². Try to infer θ from a training set of Y. As θ = (XᵀX)⁻¹XᵀY, we get it with errors of (XᵀX)⁻¹Xᵀε. Which means that whe we are estimating y as h = Xθ, during training we get errors for these estimations: X(XᵀX)⁻¹Xᵀε . 
+
+J for one point xᵀ (x0 = one row in X) is given by a bias-variance formula: J = E( (h-Eh)² + (Eh-y)² ) = xᵀ(XᵀX)⁻¹xσ² + Bias + σ² . Here Bias==0 because linear fit is unbiased, and σ² is irreducable error.
+
+If training is random, (XᵀX)→N∙Cov(X), so we have:
+J ~ E( xᵀCov(X)⁻¹xσ²/N ) + σ²= trace(Cov(X)⁻¹Cov(x))σ²/N + σ² = pσ²/N + σ², where p is the number of dimentions. So J grows as a linear function of the number of dimentions p.
+
+> This trace thing here is pretty annoying, but it works. If we E() the left part, we get a E() of sum_ij (x_i x_j C⁻¹ij), which is p^2 terms. But if you open this trace(C∙C⁻¹), you get the same expression (j coming from trace-sum, and j from internal multiplication). So E() indeed gives the trace(), and then as trace() only runs through p terms, and all of these terms happen to be =1 by def of CC⁻¹, we get what we get.
+
+Which means that the higher the number of dimensions, the worse the error (variance). Now, some methods are worse than others: linear regression is actually faring OK, while some (like KNN regressor) get cursed pretty fast (ESLII p26), but the gist is the same for all. IRL, we try to be in-between these two extremes (linear regression and 1NN) using some info (or assumptions) about the structure of the data.
 
 ## Ridge regression
 
