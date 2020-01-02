@@ -134,6 +134,9 @@ C elegans, activation dynamics. How fixed action patterns emerge from (are encod
 
 ## Other
 
+**Bibliography collections:**
+* [[bib_reconstruction]] - On reconstructing biological connectivity from spike-trains and alike
+
 Harnessing behavioral diversity to understand neural computations for cognition Simon Musall, Anne E Urai, David Sussillo, Anne K Churchland
 [https://www.sciencedirect.com/science/article/pii/S0959438819300285]
 Potentially the most important section: "Relating rich behavior to neural activity by studying ANNs"

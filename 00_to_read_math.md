@@ -8,14 +8,20 @@ He, K., Zhang, X., Ren, S., & Sun, J. (2016). Deep residual learning for image r
 http://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf
 36k citations, haha. The famous residual networks paper.
 
-Belkin, M., Hsu, D., Ma, S., & Mandal, S. (2019). Reconciling modern machine-learning practice and the classical bias–variance trade-off. Proceedings of the National Academy of Sciences, 116(32), 15849-15854.
-https://arxiv.org/abs/1812.11118
-
 Identity Crisis: Memorization and Generalization Under Extreme Overparameterization 
 Chiyuan Zhang, Samy Bengio, Moritz Hardt, Michael C. Mozer, Yoram Singer
 https://openreview.net/forum?id=B1l6y0VFPr
 https://openreview.net/pdf?id=B1l6y0VFPr
 Identity mapping (just training the output be exactly like the input).
+
+Berseth, G., Geng, D., Devin, C., Finn, C., Jayaraman, D., & Levine, S. (2019). SMiRL: Surprise Minimizing RL in Dynamic Environments. arXiv preprint arXiv:1912.05510.
+https://arxiv.org/abs/1912.05510
+Blog:
+https://bair.berkeley.edu/blog/2019/12/18/smirl/
+Sounds extremely interesting!!
+
+Belkin, M., Hsu, D., Ma, S., & Mandal, S. (2019). Reconciling modern machine-learning practice and the classical bias–variance trade-off. Proceedings of the National Academy of Sciences, 116(32), 15849-15854.
+https://arxiv.org/abs/1812.11118
 
 Ribeiro, M. T., Singh, S., & Guestrin, C. (2016, August). Why should i trust you?: Explaining the predictions of any classifier. In Proceedings of the 22nd ACM SIGKDD international conference on knowledge discovery and data mining (pp. 1135-1144). ACM.
 https://arxiv.org/abs/1602.04938
@@ -292,6 +298,10 @@ https://arxiv.org/abs/1805.09804
 Sort of GAN-like architecture that tries to optimize the latent space directly? Interesting, but hard to get from the abstract.
 
 ## Graph networks
+
+A Gentle Introduction to Deep Learning for Graphs
+https://arxiv.org/abs/1912.12693
+Must read (seems short and gentle indeed)
 
 David Belli (2019). Generative graph transformer
 https://davide-belli.github.io/generative-graph-transformer.html
