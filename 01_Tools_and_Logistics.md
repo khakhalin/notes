@@ -33,6 +33,9 @@ All sorts of infrastructure stuff.
 * For **conditional data retrieval**, either logical indexing `d.loc[d.x>0]` (can be combined with list comprehensions, can be written to) or queries: `d.query('x>0')` (easier to read, slightly faster, but cannot be written to).
 * Conditional indexing supports functions, as long as they take, and return, Pandas series (or something similar, like Numpy array)
 
+## Scikit-learn
+* A bunch of notebooks that implement all key ML methods, by Aurélien Geron, to accompany his book ("Hands-On Machine Learning with Scikit-Learn and TensorFlow"): https://github.com/ageron/handson-ml2
+
 ## Coding habits for data scientists
 * Keep code clean (not smelly). Types of **smells** ([ref](https://www.thoughtworks.com/insights/blog/coding-habits-data-scientists)):
     * Dead code (commented, inconsequential)
@@ -45,20 +48,14 @@ All sorts of infrastructure stuff.
 * Write unit tests ([link to a decent intro](https://www.freecodecamp.org/news/an-introduction-to-testing-in-python/))
 * Make small and frequent commits
 
-## Scikit-learn
-* A bunch of notebooks that implement all key ML methods, by Aurélien Geron, to accompany his book ("Hands-On Machine Learning with Scikit-Learn and TensorFlow"): https://github.com/ageron/handson-ml2
-
 ## Tensorflow and Keras
 * Links to several tutorials: https://github.com/sayakpaul/TF-2.0-Hacks/blob/master/README.md
 
-#### Random notes:
+**Random Notes:**
 * **Tensor object**:  type, shape, and a bunch of numbers. For example, when working with images, we have a 4D structure: image# × W × H × ColorChannels.
-* TF relies on a function that iterates through (features, labels) as tuples. And instead of directly linking to data, it wants to receive a data-generating function (for lazy / parallel execution?).
+* TF relies on a function that iterates through (features, labels) as tuples. And instead of directly linking to data, it wants to receive a data-generating function (for lazy / parallel execution?)
 
-## GIT
-* Funny short cheatsheet "Dangit": http://dangitgit.com/
-
-# ML Project Organization
+## ML Project Organization
 #management
 
 Basic ideas:
@@ -130,7 +127,10 @@ Refs:
 * Separate data pre-processing from the learning pipeline: at rearch phase you want to pre-process data once, then play with it repeatedly ([ref](https://medium.com/infinity-aka-aseem/things-we-wish-we-had-known-before-we-started-our-first-machine-learning-project-336d1d6f2184))
 * You can always gain a few more % by using ensembles ([ref](http://karpathy.github.io/2019/04/25/recipe/))
 
-## Glossary of useful and useless slang
+## GIT
+* Funny short cheatsheet "Dangit": http://dangitgit.com/
+
+## Glossary
 * **Drop-in replacement:** replacing part of the code without rewriting anything else. AKA 	"bug for bug compatibility" (drop-in will only work if all idiosynctratic bugs match exactly)
 * **Feature store:** A practical concept for data project implementation: a collection of curated features that is updated from new data, and can be tapped into.
 * **Pickling:** dumping binary data into a database, to be loaded later, instead of processing it in some meaningful way. In Python, used for serializing Python object structure. A better alternative: JSON, as it's human-readable, while pickles aren't.

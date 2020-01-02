@@ -1,12 +1,11 @@
 # Feature engineering and dimensionality reduction
 #features
 
-#### Basic feature transformations:
+## Feature transformations
 * **Binning** in high D: the simplest thing ever; emulates cluster analysis without actually running cluster analysis, as clusters are more likely to be covered by the same bin. May be used to transform a continuous variable into a pseudo-nominal one.
 * **One-hot encoding**: the other way around, encoding nominal stuff as numbers.
 * **Cross-products**: if you have a high-D situation, adding cross-products of basic features is a cheap and fust way of performing non-linear modeling with linear methods.
 * **Kernel tricks**: use various functions (kernels) to calculate new synthetic features from old features. For example, distance from an well chosen point in the many-D space may be a great kernel.
-
 
 ## Variable selection
 
@@ -25,6 +24,7 @@ Basic checklist:
 9. Check stability by bootstrapping (cross-validation)
 
 # Dimensionality reduction
+Local methods (like KNN) break down in high-dimensions to to the **curse of dimensionality**: it becomes impossible to find a good neighborhood to do local averaging. In high-dim, volume grows so fast with linear dimension (r^K for K dim) that most of volume lies in the shell, not around the center. Say, to find a subcube with 1% of total volume inside a unit-cube in 10-dim, we'd have to take a subcube with a side of 0.6 (because 0.6^10 ≈ 0.01). Meaning that this neighborhood won't be local in any meaningful set (it will span 0.6 of total range for each of the dimensions!). And if we keep the side length (r) small, we won't capture any meaningful examples. Similarly, if points are distributed uniformly within a unit volume, the closest point to any given point is expected to be half-way to the boundary. Especially for highly non-linear functions (say, exponents) it presents a huge problem, as mean(neighbors) no longer resembles the "true value". (ref: ESLII p23-25)
 
 ## Subspace Methods
 General idea: define subspaces and assign vectors to classes to minimize the distance between these vectors and these subspaces. Usually distance = acos cosine similarity = acos (v∙proj(v))/v^2 = acos vPv/v^2, where P is a projection matrix. PCA is one way to achieve it, but not the only one. But in all cases, the idea is that (Signals) = (Basis)∙(Scores), where Scores can be interpreted as representations.
