@@ -1,7 +1,5 @@
 # Regression
-**Linear model**: h(x) = estimation for y = ∑θ_i x_i = xᵀθ . Here we assume that x is a column-vector length n+1: x_0 = 1 (intercept), followed by n variables. Hyperplane.
-
-> Some notes use reverse notation where θ get transposed, and are multiplied from the left. ESLII uses this notation though, so I'll try to stick to it.
+**Linear model**: h(x) = estimation for y = ∑θ_i x_i = xᵀθ, or y ~ h = Xθ in matrix form. Here we assume that xᵀ is a row-vector length n+1, with x_0 = 1 (intercept), followed by n variables. Together, it defines a hyperplane.
 
 ## L2 loss
 
@@ -9,31 +7,38 @@ Introduce loss: J(θ) = ∑(h-y)^2 across all data points i.
 
 **Squared error**, or **squared distance**, or **Mean Squared Error** (MSE), or **Least Squares**. Sensitive to outliers, permissive to small deviations around zero (because of its convex shape). Nice practical illustration from [Google crash course](https://developers.google.com/machine-learning/crash-course/): 2 outliers of 2 are worse than 4 outliers of 1, as 8>4. 
 
-We can minimize this loss by differentiating by θ (partial derivative for each of the coordinates). For one point: ∂J(θ)/∂θ_j = by definition of J: ∂/∂θ_j (h(θ,x)-y)^2 = simple chain rule: 2(h-y) ∙ ∂h/∂θ_j = by formula for h: 2(h-y)∙x_j . Now we can update θ by gradient descent by doing θ := θ + α(h-y)x . As this loss is a convex quadratic function, it has only one minimum, and so always converges.
+We can minimize this loss by differentiating by θ (partial derivative for each of the coordinates). For one point: ∂J(θ)/∂θ_j = by definition of J: ∂/∂θ_j (h(θ,x)-y)^2 = simple chain rule: 2(h-y) ∙ ∂h/∂θ_j = by formula for h: 2(h-y)∙x_j . Minimum: dJ/dθ = 0, ⇒ (derivative above written in matrix notation): Xᵀ(Xθ-y) = 0. Here X is a matrix in which each _row_ is an input vector, and y is a column-vector of target outputs. If XᵀX is nonsignular, we can open the brackets, send y to the right, muliply from the left on inverse, get: θ = (XᵀX)⁻¹Xᵀy.
 
-Minimum: dJ/dθ = 0, ⇒ (derivative above written in matrix notation): Xᵀ(Xθ-y) = 0. Here X is a matrix in which each _row_ is an input vector, and y is a column-vector of target outputs. If XᵀX is nonsignular, we can open the brackets, send y to the right, muliply from the left on inverse, get:
-θ = (XᵀX)⁻¹Xᵀy.
+> To sum up **notation choices** of ESLII: one point is a row-vector, so all points make a column (a column of row- vectors). Y values are also a column. As data-point is a row, parameters θ are a column, so that dim(y) = N×1 = dim(Xθ). A bit confusing part when writing it all is that X (matrix) of N×k is multiplied by θ from the right (Xθ), but individual points x have to be written as xᵀθ to show that they are row-vectors (by default x would have been a column-vector). Some notes use a reverse notation for Y = Xθ where θ get transposed, and gets multiplied by x from the left, but let's roll with ESLII notation, as it seems to be everyone's fav book.
 
-> So in ESLII notation one point is a row-vector, but all points make a column (in this case a column of vectors). y values are also a column. Because data-point is a row, parameters θ are a column, so that dim(y) = N×1 = dim(Xθ). A confusing part is that their X (matrix) of N×k is multiplied by :theta: from the right (Xθ), but individual points x have to be written as xᵀθ to mark them as row-vectors. Yet, let's roll with it, as it seems to be everyone's fav book.
+Interpretation: if y ~ h = Xθ, then h is in the column-space of X, which forms a subspace of R^N (N data points, p+1 dimensions, assuming x0≡1). To find θ, we project y to col-space using a projection matrix, which obviously minimizes residual (unexplained) variance, by making it orthogonal to col-space.
 
-To build the math for it, we need to consider x and y as random variables, with a joint distribution P(x,y). We're trying to build a predictor f(x) that approximates y. The squared error loss: L = (y-f)^2 = ∬ (y-f)^2 P(x,y) dx dy. We can split P(x,y) into P(x)∙P(y|x), and integrate by y first (inside), then by x outside. Then to minimize total L, we can bind f(x) to matching y point-wise: f(x) = E(y|X=x). Which would essentially give us the **nearest neighbor** method (see the very beginning of "Classification" chapter). An alternative to point-wise matching would be a model (similar to linear model above), making linear regression and nearest-neighbor in a way two opposite extremes of what can be done with the data. Other stuff (like **additive models** where f = ∑ f_j(x)) are kinda in-between.
- 
+Another interpretation: 
+* for a univariate x, we have a classic projection of vector y (all observations) on x (all input values): y ~ h = xθ = x ∙ xᵀy / xᵀx (by definition of projection). 
+* If x is a vector, with several coordinates, but these coordinates are independent (say, in case of orthogonal experiment design design), so columns of X are orthogonal, we can just project to each dimension separately, and the result will be the sum of these projections. That's because once you dot-product y=∑θ_i x_i with x_j, all terms but one would die. Which means that essentially we can pretend that multiple linear regression is just a bunch of univariate regressions. It also matches the general formula, as in this case XᵀX is diagonal. 
+* If however columns of X are correlated (not orthogonal), we have to do repetitive elimination ( aka **Gram-Schmidt**) that leads to a full form projection matrix (ESLII p54). With this method, we break y into x1 and everything else (in practice, x0≡1 goes first, but it doesn't change the idea), find the best projection in the space of x1 (θ1), and then repeat this process in "everything else" (the co-space). The trick is that to move to the co-space of x, we subtract x∙proj(y→x) from y, and also from every other column: xi := xi - x∙proj(xi→x). And we also keep new basis normalized, to make things easier.
+
+Or we can perform a gradient descent: θ := θ + α(h-y)x, with some learning rate α. As this loss is a convex quadratic function, it has only one minimum, and so it always converges. 
+
+In a general case, coordinates of X may turn to be dependent, or close to it. Then, XᵀX from a general formula will be singular, and won't have an inverse, meaning that θ is not uniquely defined. If we use orthogonalization, and two columns of X are highly correlated (say, x1~x2), then x1 will get a normal score, but on the next step we'll have to face a vector that is almost pure noise: ξ = x2-proj(x1→x2) ~ x2-x2 = 0. Then θ2 = ξᵀy/ξᵀξ will be very unstable. Estimate for variance: var(θ2) = σ²/ξᵀξ. Practical consequences for variable selection (dangers of collinearity), conjuctive dim reduction, ridge regression (why not just zero this θ if it's so bad?) etc.
+
 **Are there alternatives to L2?** Sure, **L1 norm** = abs(distance), which effectively pushes f(x) towards median(y) rather than the mean(y): sum of distances to 2 points is min when you're exactly between them. Hard to work with, as derivatives are discontinuous.
 
 **Can regression be used for classification?** Yes, but see [[03_Classification]].
+
+### Gram-Smidt in matrix form
+
+
+Xθ = y, but X = QR where Q(N × p+1) is column-orthonormal, and R (p+1 × p+1) is upper triangular.
+
+page 55
+
 
 ## Maximum Likelihood Estimation
 In some way, an alternative to L2 (MSE) loss. For a data sample y_i, the log-prob of observing it is equal to: L(θ) = ∑ log P(y_i | θ), summed by i (all points). We try to find θ that maximizes ∏P, and thus ∑logP. 
 
 Least squares maximizes likelihood for conditional probability P(y|x,θ)=𝒩(h,σ²). _ESLII has a formula 2.35 for it, but without derivation, so I skip it for now. I think they may have found a derivative by θ, and then integrated on R, but I'm not sure._
  
-### Some terminology
-* **Hyperparameters**: those somewhat arbitrary values that define the type of solution the model is looking for, and the process of descent. Examples: learning rate, batch size.
-* **Learning rate**: Goldilocks principle - the best learning rate should "magically" put you in the minimum in a very few steps. Large learning rate leads to noisy oscillations after what looked like a convergence. It may even break everything (unstable).
-* **Mini-batch**: process >1 (usually 10-1000) points at a time. Somewhere in between fully stochastic descent (1 point at a time) and math-optimal (all points every time).
-* **Linear basis expansion**: when y~ h(x) = ∑ f_i(x) θ_i (ESLII p30)
-* **Non-linear expansion**: a non-linear transformation of a linear model (ESLII p30)
-
 ## Bias-Variance Tradeoff
 
 Total prediction error (L2 loss) consists of two parts: bias and variance. Derivation:
@@ -71,10 +76,17 @@ A typical illustration of this: the classic with training an testing losses (ESL
 
 > But look, it would only work if the ground trugh is actually simple. Why does it work? Why is the ground truth actually simple? Is it some expected statistical property that the world actually follows?.. Or is it because a typical practical problem has certain properties? Seems like that; see below.
 
-### Biase-Variance for a high-dim case
-(See "Features" / "Dimensionality reduction", **dimensionality curse**)
+### Statistical estimations
+How well can we guess θ? Assuming that y_i have normal uncorrelated noise with variance σ², we get var(θ) = (XᵀX)⁻¹σ², where σ² can be estimated from σ² ~ ∑ (y-h)² / (N-p-1). (ESLII p47) In this case, θ are destributed multivariate-Gaussian, and estimations for σ² are chi-squared with N-p-1 degrees of freedom. Which also means that we can use t-test for particular θ_i.
 
-Consider linear model with error, so Y = Xᵀθ + ε (aka **additive error model**), where ε is normal noise with variance σ². Try to infer θ from a training set of Y. As θ = (XᵀX)⁻¹XᵀY, we get it with errors of (XᵀX)⁻¹Xᵀε. Which means that whe we are estimating y as h = Xθ, during training we get errors for these estimations: X(XᵀX)⁻¹Xᵀε . 
+For **categorical variables** (in X), the situation is a bit different, as each of them is represented by several **dummy variables**  (one for each of the levels), and these dummy variables need to be included or excluded all together. F-statistics (with p1-p0, N-p1-1 degrees of freedom).
+
+**Gauss-Markov theorem**: the least squares estimate θ has the smallest variance of all unbiased linear estimators for true parameters β. In other words, consider that we have a linear system with independent errors for each data point: y = Xβ + ε. We're saying that least squared is unbiased, in the sense that E(θ) = E(β), and Var(θ) for least sum of squares is minimal among all possible unbiased linear estimators th = cᵀβ. Ref: ESLII p51, [wiki](https://en.wikipedia.org/wiki/Gauss%E2%80%93Markov_theorem) . It can be proven through straightforward matrix substitution, but essentially bois down to the idea that least squares projection simulateneously unbiases estimators by optimizing this particular quadratic norm (that gives a linear difference after differentiation), and minimizes the variance of estimation (_not sure why this one. They claim it's a triangle rule, but I cannot find a simple way to relate_).
+
+In practice, it means that there are estimators with lower variance, but they are necessarily biased. Which leads to a practical program of introducing some bias in order to reduce variance. For example, if we decide to set (aka "shrink") any particular θ_i to 0, we inevitably get a biased estimate.
+
+### Dimensionality curse
+Now let's consider a special case of bias-variance trade-off in a case of very high dimensions. Say, we have a linear model with error: y = Xᵀθ + ε (aka **additive error model**), where ε is normal noise with variance σ². Try to infer θ from a training set of Y. As θ = (XᵀX)⁻¹Xᵀy, we get it with errors of (XᵀX)⁻¹Xᵀε. Which means that whe we are estimating y as h = Xθ, during training we get errors for these estimations: X(XᵀX)⁻¹Xᵀε . 
 
 J for one point xᵀ (x0 = one row in X) is given by a bias-variance formula: J = E( (h-Eh)² + (Eh-y)² ) = xᵀ(XᵀX)⁻¹xσ² + Bias + σ² . Here Bias==0 because linear fit is unbiased, and σ² is irreducable error.
 
@@ -86,6 +98,8 @@ J ~ E( xᵀCov(X)⁻¹xσ²/N ) + σ²= trace(Cov(X)⁻¹Cov(x))σ²/N + σ² = 
 Which means that the higher the number of dimensions, the worse the error (variance). Now, some methods are worse than others: linear regression is actually faring OK, while some (like KNN regressor) get cursed pretty fast (ESLII p26), but the gist is the same for all. If you simulate this, you have diff deterioration curves for different data assumptions. IRL, we try to be in-between these two extremes (linear regression and 1NN) using some info (or assumptions) about the structure of the data. 
 
 ## Philosophy of modeling
+Returning to bias-variance tradeoff, weconsider x and y as random variables, with a joint distribution P(x,y). We're trying to build a predictor f(x) that approximates y. The squared error loss: L = (y-f)^2 = ∬ (y-f)^2 P(x,y) dx dy. We can split P(x,y) into P(x)∙P(y|x), and integrate by y first (inside), then by x outside. Then to minimize total L, we can bind f(x) to matching y point-wise: f(x) = E(y|X=x). Which would essentially give us the **nearest neighbor** method (see the very beginning of "Classification" chapter). An alternative to point-wise matching would be a global smooth model, like linear regression. It makes regression and 1NN two opposite extremes of what can be done with the data. Other stuff (like **additive models** where f = ∑ f_j(x)) are kinda in-between.
+
 In spirit, all models are about setting local and global constraints on the behavior of predictor (such as **behavior in the neighborhood**, that is const for KNN, linear for local linear etc.), and the **granularity** of these  neighborhoods. Some methods (kernels, trees) make this granularity parameter explicit, some don't. And high dimensionality is a problem for all methods, regardless of how they work. 
 
 ESLII defines 3 broad classes of model smoothing / constraining:
@@ -114,6 +128,13 @@ This is especially important in case of **Multicollinearity**, when you're tryin
 The name "ridge" comes from a visual example of what is describe above. Imagine that only part of the solution is well defined, and the rest is close ot null-space of A. Then the "true solution" is a "generalized cylinder" made by the true solution (in those coordinates that make sense), arbitrarily extended across the "irrelevant coordinates". Small changes in training data (right side of the Ax=y equation) would sway the solution along this "ridge". By adding regularization we change a "ridge" into a "peak" (lines turn into parabolas), which stabilizes the solution to perturbations in both A and y. ([Ref: stackexchange](https://stats.stackexchange.com/questions/118712/why-does-ridge-estimate-become-better-than-ols-by-adding-a-constant-to-the-diago/119708#119708))
 
 How to pick the coefficient k? One method: **Ridge trace**: plot found coefficients as a function of k, and eyeball value at which they stop oscillating, and switches to converging (not in the sense of becoming const, but in the sense of of monotone almost-linear change).
+
+### Some terminology
+* **Hyperparameters**: those somewhat arbitrary values that define the type of solution the model is looking for, and the process of descent. Examples: learning rate, batch size.
+* **Learning rate**: Goldilocks principle - the best learning rate should "magically" put you in the minimum in a very few steps. Large learning rate leads to noisy oscillations after what looked like a convergence. It may even break everything (unstable).
+* **Mini-batch**: process >1 (usually 10-1000) points at a time. Somewhere in between fully stochastic descent (1 point at a time) and math-optimal (all points every time).
+* **Linear basis expansion**: when y~ h(x) = ∑ f_i(x) θ_i (ESLII p30)
+* **Non-linear expansion**: a non-linear transformation of a linear model (ESLII p30)
 
 ## Logistic Regression
 

@@ -2,7 +2,7 @@ Best search site:
 [https://www.compart.com/en/unicode/](<https://www.compart.com/en/unicode/>)
 
 ∙ 
-≠ ≤	≥ ≪	≫ ≈
+≠ ≤	≥ ≪	≫ ≈ ≡ ≔
 ∑ ∏ ∫ ∬
 ⇒ ⇄ ↻ → 
 ∆ ∇ ∂
