@@ -17,7 +17,6 @@ https://github.com/chiphuyen/machine-learning-systems-design
 ## Courses
 
 * [Stanford, linear dynamical systems](http://stanford.edu/class/ee363/lectures.html) (Stephen Boyd) - includes stochastic control, Kalman filter, Lyapunov theory
-* That course on reinforcement learning - find the link
 * [Linear algebra by Gilbert Strang](https://www.youtube.com/playlist?list=PLE7DDD91010BC51F8) - Youtube from MIT. Everybody loves it, as it achieves a beautiful balance between staying extremely practical, concise, but at the same time giving many proofs (or "almost proofs", extreme-physics style, like for good cases, with simplifying assumptions etc). MIT also has [notes for each lecture](https://ocw.mit.edu/courses/mathematics/18-06sc-linear-algebra-fall-2011/syllabus/) (not in one pdf, but easy to find).
 * [Matrix methods in data science](https://www.youtube.com/watch?v=Cx5Z-OslNWE&list=PLUl4u3cNGP63oMNUHXqIUcrkS2PivhN3k) (also Gilbert Strang)- YouTube from MIT. May be good for refreshing things.
 * [Maximum Entropy Network Ensembles](http://www.maths.qmul.ac.uk/~gbianconi/LTCCModule) - a series of lectures
@@ -38,13 +37,14 @@ https://github.com/chiphuyen/machine-learning-systems-design
 
 Second priority books:
 
+* [Dive into Deep Learning](http://d2l.ai/) - an interactive introduction to deep learning, based on NumPy, apparently (no TF, no PyTorch, ha!) 
 * Pattern recognition and ML by Christopher Bishop ([full pdf](https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/))
 * Foundations of ML by M. Mohri et al ([full pdf](https://cs.nyu.edu/~mohri/mlbook/)) - more mathy?
 * ML book by K.P. Murphy - [page](https://www.cs.ubc.ca/~murphyk/MLbook/) (but no full pdf)
 * Morgan, S. L., & Winship, C. (2015). Counterfactuals and causal inference (pdfs are googlable)
 * [Notes on dynamical systems](https://people.maths.bris.ac.uk/~macpd/ads/) ([pdf](https://people.maths.bris.ac.uk/~macpd/ads/bnotes.pdf)) from Carl Dettmann. Not a textbook, but close; worth scanning
 
-Job-search specific:
+Job-search specific books:
 * Cracking the code interview - 17 chapters + general info
 * [[Huyen2019book]] - a short book on data science / ML job interviewing
 
@@ -53,7 +53,6 @@ Third priority books:
 * Algorithms by Erickson - 12 long chapters
 
 Books that are not on my reading list, but keeping here just in case:
-
 * Problem solving with data structures in Python ([full text, web](https://runestone.academy/runestone/books/published/pythonds/index.html))
 * [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/index.html) by Michael Nielsen
 * Competitive Programmer's Handbook by Antti Laaksonen: [pdf](https://cses.fi/book/book.pdf) (C++) - great idea, but the descriptions of algorithms are not clear, while implementations seem ideosyncratic (or maybe not; maybe I )
