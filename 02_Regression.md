@@ -7,7 +7,7 @@
 
 Introduce loss: J(θ) = ∑(h-y)^2 across all data points i.
 
-**Squared error**, or **squared distance**. Sensitive to outliers, permissive to small deviations around zero (because of its convex shape). Nice practical illustration from [Google crash course](https://developers.google.com/machine-learning/crash-course/): 2 outliers of 2 are worse than 4 outliers of 1, as 8>4. 
+**Squared error**, or **squared distance**, or **Mean Squared Error** (MSE), or **Least Squares**. Sensitive to outliers, permissive to small deviations around zero (because of its convex shape). Nice practical illustration from [Google crash course](https://developers.google.com/machine-learning/crash-course/): 2 outliers of 2 are worse than 4 outliers of 1, as 8>4. 
 
 We can minimize this loss by differentiating by θ (partial derivative for each of the coordinates). For one point: ∂J(θ)/∂θ_j = by definition of J: ∂/∂θ_j (h(θ,x)-y)^2 = simple chain rule: 2(h-y) ∙ ∂h/∂θ_j = by formula for h: 2(h-y)∙x_j . Now we can update θ by gradient descent by doing θ := θ + α(h-y)x . As this loss is a convex quadratic function, it has only one minimum, and so always converges.
 
@@ -21,6 +21,11 @@ To build the math for it, we need to consider x and y as random variables, with 
 **Are there alternatives to L2?** Sure, **L1 norm** = abs(distance), which effectively pushes f(x) towards median(y) rather than the mean(y): sum of distances to 2 points is min when you're exactly between them. Hard to work with, as derivatives are discontinuous.
 
 **Can regression be used for classification?** Yes, but see [[03_Classification]].
+
+## Maximum Likelihood Estimation
+In some way, an alternative to L2 (MSE) loss. For a data sample y_i, the log-prob of observing it is equal to: L(θ) = ∑ log P(y_i | θ), summed by i (all points). We try to find θ that maximizes ∏P, and thus ∑logP. 
+
+Least squares maximizes likelihood for conditional probability P(y|x,θ)=𝒩(h,σ²). _ESLII has a formula 2.35 for it, but without derivation, so I skip it for now. I think they may have found a derivative by θ, and then integrated on R, but I'm not sure._
  
 ### Some terminology
 * **Hyperparameters**: those somewhat arbitrary values that define the type of solution the model is looking for, and the process of descent. Examples: learning rate, batch size.
@@ -56,11 +61,13 @@ So we ended up having 3 terms:
 * Bias: (Eh-Ey)^2
 * Variance of the data, aka noise, or irreducable error: (Ey-y)^2
 
-Refs: ESLII p24; [lecture by K Weinberger](https://www.youtube.com/watch?v=zUJbRO0Wavo).
+Refs: ESLII p24, p37; [lecture by K Weinberger](https://www.youtube.com/watch?v=zUJbRO0Wavo).
 
 > **My understanding** is that it is actually close to the precision / recall situation. The point is that if you try to minimize bias (make your classifier cling to the data), you fall at mercy of your training set, and so increase variance. Each particular classifier, understood as an instance produced by some particular set of training data, will cling to this testing data, so all classifiers will be slightly different, if you train on different data. If you believe that the underlying solution has some constraints to it, you may want to restrain your classifier, even at cost of accepting higher bias (Eh-Ey), so that it would not change that widely for different subsets of your testing data. Regularization does that. Then for each given training set you'll get higher bias, but you'll reduce variance (of your classifier, across all possible training set), as all models will be more similar to each other, and hopefully also closer to the "ground truth". Essentially, a parsimony principle: an assumption that simpler models are better.
 
 > So it's directly related to overfitting. Low bias = high variance = great fit on the training set, but horrible fit on te testing set.
+
+A typical illustration of this: the classic with training an testing losses (ESLII p38), where both go down at first, but then overfitting turns the test curve up.
 
 > But look, it would only work if the ground trugh is actually simple. Why does it work? Why is the ground truth actually simple? Is it some expected statistical property that the world actually follows?.. Or is it because a typical practical problem has certain properties? Seems like that; see below.
 
@@ -76,7 +83,23 @@ J ~ E( xᵀCov(X)⁻¹xσ²/N ) + σ²= trace(Cov(X)⁻¹Cov(x))σ²/N + σ² = 
 
 > This trace thing here is pretty annoying, but it works. If we E() the left part, we get a E() of sum_ij (x_i x_j C⁻¹ij), which is p^2 terms. But if you open this trace(C∙C⁻¹), you get the same expression (j coming from trace-sum, and j from internal multiplication). So E() indeed gives the trace(), and then as trace() only runs through p terms, and all of these terms happen to be =1 by def of CC⁻¹, we get what we get.
 
-Which means that the higher the number of dimensions, the worse the error (variance). Now, some methods are worse than others: linear regression is actually faring OK, while some (like KNN regressor) get cursed pretty fast (ESLII p26), but the gist is the same for all. IRL, we try to be in-between these two extremes (linear regression and 1NN) using some info (or assumptions) about the structure of the data.
+Which means that the higher the number of dimensions, the worse the error (variance). Now, some methods are worse than others: linear regression is actually faring OK, while some (like KNN regressor) get cursed pretty fast (ESLII p26), but the gist is the same for all. If you simulate this, you have diff deterioration curves for different data assumptions. IRL, we try to be in-between these two extremes (linear regression and 1NN) using some info (or assumptions) about the structure of the data. 
+
+## Philosophy of modeling
+In spirit, all models are about setting local and global constraints on the behavior of predictor (such as **behavior in the neighborhood**, that is const for KNN, linear for local linear etc.), and the **granularity** of these  neighborhoods. Some methods (kernels, trees) make this granularity parameter explicit, some don't. And high dimensionality is a problem for all methods, regardless of how they work. 
+
+ESLII defines 3 broad classes of model smoothing / constraining:
+* Roughness penalty
+* Kernel methods (aka local regression)
+* Basis functions and dictionaries
+
+**Roughness penalty**: Use basic RSS (Residual Sum of Squares) with an explicit penalty: L = RSS(f) + λJ(f), where J grows as f() becomes too rough. For example, defining J as λ∫(f'')²dx leads to **cubic smoothing splines** as an optimal solution. Roughness penalty can be interpreted in a Bayesian way, as a log-prior.
+
+**Kernel methods**: explicitly specify local neighborhoods, and a type of function to fit it locally. The neighborhood is defined by the kernel function K(x0,x) that acts as weights for x around x0. Gaussian Kernel: K = 1/λ exp( - |x-x0|² / 2λ). The simplest way to use kernels, is to calculate a weighted average (aka Nadaraya–Watson kernel regression): f(x0) = ∑ K(x0,x_i)∙y_i / ∑ K(x0,x_i).
+
+Or we can set some sort of smooth f(x), and use kernels for RSS calculations: RSS(x0) = ∑ K(x,x0)∙(y-f(x))² , where ∑ runs through all (x_i, y_i). If we assume f(x) = θ0 + θx, we get **local linear regression**. KNNs (see [[03_Classification]]) can also be considered a subtype of a kernal method, just with a weird step-wise kernel.
+
+**Basis functions**: includes linear and polynomial regressions, but the idea is that you have a basis of functions on R^n, and project into it: f = ∑_i θ_i h_i(x). Examples: **polynomial splines**; **radial basis functions** K(μ, x) defined around few centroids μ (not around every data point, as in kernel methods!). Gausssian kernels are still popular. Feed-forward **Deep Learning** also belongs here, with basis functions defined by network design.
 
 ## Ridge regression
 
@@ -88,9 +111,9 @@ With Tikhonov regularization, we minimize not squared Euqledian norm |Ax-b|^2 bu
 
 This is especially important in case of **Multicollinearity**, when you're trying to predict y from many variables a_i, in a way Ax = y (observations of variables a_i for different training points become columns of A, while regression coefficients form x), but some of a_i are strongly correlated. In this case trying to painfully minimize y-Ax would be counter-productive, as we'd fit noise in y with noise in a_i. Imagine an extreme case: all columns of A are the same (rank=1), but are observed with noise, and noise is independent (so formally rank = N). What we actually need is only one (doesn't matter which one) x_i>0, and all others 0. But what will happen, is that we'll fit noise in y with noise in A.
 
-The name "ridge" comes from a visual example of what is describe above. Imagine that only part of the solution is well defined, and the rest is close ot null-space of A. Then the "true solution" is a "generalized cylinder" made by the true solution (in those coordinates that make sense), arbitrarily extended across the "irrelevant coordinates". Small changes in training data (right side of the Ax=y equation) would sway the solution along this "ridge". By adding regularization we change a "ridge" into a "peak" (lines turn into parabolas), which stabilizes the solution to perturbations in both A and y. ([Source: stackexchange](https://stats.stackexchange.com/questions/118712/why-does-ridge-estimate-become-better-than-ols-by-adding-a-constant-to-the-diago/119708#119708))
+The name "ridge" comes from a visual example of what is describe above. Imagine that only part of the solution is well defined, and the rest is close ot null-space of A. Then the "true solution" is a "generalized cylinder" made by the true solution (in those coordinates that make sense), arbitrarily extended across the "irrelevant coordinates". Small changes in training data (right side of the Ax=y equation) would sway the solution along this "ridge". By adding regularization we change a "ridge" into a "peak" (lines turn into parabolas), which stabilizes the solution to perturbations in both A and y. ([Ref: stackexchange](https://stats.stackexchange.com/questions/118712/why-does-ridge-estimate-become-better-than-ols-by-adding-a-constant-to-the-diago/119708#119708))
 
-How to pick the coefficient k? One method: **Ridge trace**: plot found coefficients as a function of k, and eyeball value at which they stop oscillating, and start converging (not in the sense of becoming const, but in the sense of of monotone almost-linear change).
+How to pick the coefficient k? One method: **Ridge trace**: plot found coefficients as a function of k, and eyeball value at which they stop oscillating, and switches to converging (not in the sense of becoming const, but in the sense of of monotone almost-linear change).
 
 ## Logistic Regression
 
