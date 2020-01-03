@@ -1,6 +1,6 @@
-# Graph Networks
+# Graphal Methods
 
-## Markov Graphs
+## Markov Random Fields
 
 .
 

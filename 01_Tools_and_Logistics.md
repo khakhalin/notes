@@ -198,9 +198,3 @@ Apparently it's possible not to grant users permissions to delete rows and drop 
 **Operations on strings, numbers, and dates**: there are lots of built-in functions; too many to mention, including math, trigonometry, string manipulation (like `LEFT`, `LEN`, `LOWER`, and alike), and what not. Some interesting ones that are not obvious are `LEAST` and `GRATEST` that work across differenct columns within the same row, as opposed to MAX and MIN that work along all rows (entries) for a returned column. There are also lots of system-specific operaions on dates and times. Read the manual.
 
 **Control structures:** apparently SQL (especially larger systems, like SQLServer, or Transact-SQL from Microsoft) also has its own system of control structures, with IF, ELSE, BEGIN TRY, BEGIN CATCH, WHILE, and what not.
-
-## Glossary
-* **Drop-in replacement:** replacing part of the code without rewriting anything else. AKA 	"bug for bug compatibility" (drop-in will only work if all idiosynctratic bugs match exactly)
-* **Feature store:** A practical concept for data project implementation: a collection of curated features that is updated from new data, and can be tapped into.
-* **Pickling:** dumping binary data into a database, to be loaded later, instead of processing it in some meaningful way. In Python, used for serializing Python object structure. A better alternative: JSON, as it's human-readable, while pickles aren't.
-* **Tehnical debt**: going for an easy (and quick) but limited solution, even though statistically every limiting decision may have to be reingeneered (scaled up) later.
