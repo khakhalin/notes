@@ -1,6 +1,0 @@
-# Stats - Thesaurus
-
-* **Bagging**: simples way to create an ensemble of classifiers using same algorithm; split data into bags (with replacement), and train on them. Final prediction = mean of all predictions. [ref1](https://analyticsindiamag.com/primer-ensemble-learning-bagging-boosting/)
-* **Boosting**: an alternative to _bagging_ for ensemble generation: Iteratively select samples that previous learners failed to learn or disagree upon, and use them to train new learners; majority vote at the end. [ref1](https://analyticsindiamag.com/primer-ensemble-learning-bagging-boosting/)
-* **Propensity score matching**: comparing output variable in a case of unavoidable confounding factors; go for something like range constriction for confounders by carefully matching them (many methods here), then analyzing this filtered set. The trick of this method in particular is that instead of matching in high-D, it uses an all-data linear model to conflate all confounding values into one "risk factor" (aka propensity score), and match based on it (both a strong, and a weak point obviously). [ref](https://en.wikipedia.org/wiki/Propensity_score_matching)
-* **Zero-inflated models**: biased towards observations of zeros; for example a binary between active and inactive, with inactive ==0, and active being a Poisson. [ref](https://en.wikipedia.org/wiki/Zero-inflated_model)

@@ -13,11 +13,12 @@ Current point in the Google Course: https://developers.google.com/machine-learni
 # Words and topics to look up
 
 Classic ML and friends
+* Hungarian algorithm
+* Kalman filter (and its friends)
 * RBF - Radial basis function kernel: https://en.wikipedia.org/wiki/Radial_basis_function_kernel
 * AdaBoost
 * QDA - Quadratic Discriminant Analysis
 * Expectation-Maximization
-* Kalman filter (and its friends)
 * Bayesian PCA
 * more on Gaussian processes
 * Graphical models
@@ -25,7 +26,6 @@ Classic ML and friends
 * Markov random fields (precursor of modern graph models?)
 * Variational inference
 * Resampling techniques: SMOTE, isotonic regression, Platt scaling
-* Hungarian algorithm
 
 Deep Learning:
 * How to tell the receptive field of a neuron in a deep network? Do they gradient descend on it?
@@ -43,8 +43,8 @@ Deep Learning:
 Technical stuff
 * Relational databases: Snowflake, Redshift
 * regex in Python
-* YAML - some standard for keeping stuff that's like XML, but human-readable. Who uses it? Is it popular? ([wiki](https://en.wikipedia.org/wiki/YAML))
 * JSON - how does it work, why everybody love it, and is it the present or the future? ([wiki](https://en.wikipedia.org/wiki/JSON))
+* YAML - some standard for keeping stuff that's like XML, but human-readable. Who uses it? Is it popular? ([wiki](https://en.wikipedia.org/wiki/YAML))
 * bash
 * Hadoop
 * Spark

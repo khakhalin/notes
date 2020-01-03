@@ -20,6 +20,7 @@ https://github.com/chiphuyen/machine-learning-systems-design
 * [Linear algebra by Gilbert Strang](https://www.youtube.com/playlist?list=PLE7DDD91010BC51F8) - Youtube from MIT. Everybody loves it, as it achieves a beautiful balance between staying extremely practical, concise, but at the same time giving many proofs (or "almost proofs", extreme-physics style, like for good cases, with simplifying assumptions etc). MIT also has [notes for each lecture](https://ocw.mit.edu/courses/mathematics/18-06sc-linear-algebra-fall-2011/syllabus/) (not in one pdf, but easy to find).
 * [Matrix methods in data science](https://www.youtube.com/watch?v=Cx5Z-OslNWE&list=PLUl4u3cNGP63oMNUHXqIUcrkS2PivhN3k) (also Gilbert Strang)- YouTube from MIT. May be good for refreshing things.
 * [Maximum Entropy Network Ensembles](http://www.maths.qmul.ac.uk/~gbianconi/LTCCModule) - a series of lectures
+* [End-to-end machine learning](https://end-to-end-machine-learning.teachable.com) - sorta like a course from Brandon Rohrer
 
 ## Books
 
