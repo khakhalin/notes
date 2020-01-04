@@ -1,4 +1,4 @@
-# Feature engineering and dimensionality reduction
+# Features, Dim reduction, Clustering
 #features
 
 ## Feature transformations
@@ -45,7 +45,7 @@ Links: [wiki](https://en.wikipedia.org/wiki/Canonical_correlation)
 **Kernel methods** - non-linear extension (Kernel tricks?)
 
 Refs:
-* [Some lecture with a list of approaches](https://www.cc.gatech.edu/~hic/8803-Fall-09/slides/SubSpace-Learning.pdf)	 - by Horst Bischof and Ales Leonardis?
+* [A lecture with a list of approaches](https://www.cc.gatech.edu/~hic/8803-Fall-09/slides/SubSpace-Learning.pdf)	, by Horst Bischof and Ales Leonardis
 
 ## tSNE
 "The art of using tSNE" from Nature:

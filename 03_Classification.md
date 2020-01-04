@@ -1,7 +1,7 @@
 # Classification
 Classic classification example: [MNIST](http://yann.lecun.com/exdb/mnist/index.html) (link to a library of all thinkable approaches to classification, as applied to this dataset, each given with a test error rate)
 
-## Basic classification and KNN
+# 1NN and KNN
 Simplest archetypical approach: **Nearest Neighbor**. Just pick closest training case. This is an example of a **lazy** approach: instead of generating estimations upfront (that would be called **eager**), we only generate them at retrieval. A better. and more practical, approach: **K nearest neighbors** (aka KNN).
 
 While KNN is lazy, for analysis purposes we can calculate predictions on a grid, and thus identify borders between areas "assigned" to different categories. For k=1 (simple Nearest Neighbor) we get a Voronoi tesselation between all training points (disconnected and jaggedy, as each point gets its own area). Which presents a case of extreme overfitting: all training data is correctly classified, but it looks scary. Higher k: smoother areas, making k a **hyperparameter**. But the **effective number of parameters** for KNN is higher (about N/k), as data points themselves serve as parameters.
@@ -10,12 +10,11 @@ While KNN is lazy, for analysis purposes we can calculate predictions on a grid,
 
 KNN can be used for numerical predictions as well (beyond simple classification); just use the average of y-values for nearest k x-points (in fact, that's how ESLII introduces it).
 
-How to find optimal k? Using **model assessment** (below), but in short: we'll need a training and a testing set, then try different values of k, and find the point when the test error (or some other measure) is lowest for test data (ESLII Fig 2.4).
+How to find optimal k? We'll need a training and a testing set, then try different values of k, and find the point when the test error (or some other measure) is lowest for test data (ESLII Fig 2.4).
 
 KNN is an archetype for many fancy methods. For example, if instead of "nearest" δi that are all or none we'll use fuzzy weights that are larger when you are close to each data w(distance), it's the same as just regressing on distance, which is a type of a **kernel method**. If we want some dimensions of X matter differently than others, we can use non-round kernels. **Local regression** is also similar in spirit (sorta a combinatino of linear regression and the idea of contextual locality). DL networks also imitate something like that by mixing and mashing linear transformations.
 
-## Model assessement
-
+# Model assessement
 **Model accuracy**: The most primitive measure = number of true statements / total number of statements. Obvious dependency on class balance (famous example, a statement of "today is not Christmas" has an accuracy of 99.7%). But may work for toy examples with very carefully balanced classes (like MNIST).
 
 **Precision and recall**: Let's concentrate on detection only (positive predictions only). We want something that is proportinal to true positives (TP), but what to put in the denominator? Two options: 
@@ -45,7 +44,7 @@ What's the current best practice?
 
 For unbalanced datasets and multi-class classification, it is honest to used **stratified cross-validation**, when each of the strata is split separately, and then mixed back, to avoid class imbalance.
 
-## Linear separation
+# Linear separation
 
 **Can regression be used for classification?** Aye, just set a threshold (0.5?) for the output value. Aka fitting a **dummy variable**. If h(x) is a hyperplane, h=const becomes a 1-d-lower hyperplane (in 2D case: line) separating the space of x into 2 halves. **Linear separation**. Apparently, the best we can do for 2 overlapping Gaussians.
 
@@ -53,10 +52,21 @@ For unbalanced datasets and multi-class classification, it is honest to used **s
 
 If all errors cost the same, G = argmin_g (1 - P(g | x)) - likelihood optimization? Aka **Bayes classifier** - just go for the best guess of conditional probability P(class | observation). The error rate for it is called **Bayes rate**: the lowest possible rate, coming from the variability of data itself (analogous to irreducible error for continuous data: [wiki](https://en.wikipedia.org/wiki/Bayes_error_rate))
 
-## SVM
+# Logistic Regression
 
+**Logistic function**: $\sigma(x) = \frac{1}{1+e^{-x}} = \frac{e^x}{1+e^x}$.
+
+The inverse function is called **logit**: logit(p) $=\ln \frac{p}{1-p}$
+
+Assumes that **log-odds** $\log \frac{p}{1-p}=a+bx$ , so is a linear function of x (that is generally a vector). It means that p/(1-p)=exp(ax+bx), which leads to p = σ(ax+b). It can be said that a logistic regression is just a linear regression of log-odds.
+
+To find a solution, minimize **logloss**: Loss = $-\sum (y\cdot\log(\tilde y)+(1-y)\cdot\log(1-\tilde y))$, or, using p for y estimations, -∑( y∙log(p) + (1-y)∙log(1-p) ). As p→0, -log(p)→inf, so huge punishment for near-zero p. Because of that, if the data is too clean and some areas contain only points of one type, weights may explode (it's hard to fit infinity), making proper regularization extremely important.
+
+For high-D non-linear data, works great if features cross-products are included into the set as synthetic features (see [[07_Features]]).
+
+# SVM
 Widest street approach: find a line, so that if you have a band around the line, it separates the positive from the negative examples as best as possible.
 
-How to use the line? Describe it with a vector ω ⊥ line. Now how far a point u is in the line can be described as uω. Let's say that b is a good projection value (u lies right smack on the central line), so we have u∙ω + b ≥ 0.
+How to use the line? Describe it with a vector ω ⊥ line. Now whether a point u is far from the line can be described as uω. Let's say that b is a good projection value (u lies right smack on the central line), so we have u∙ω + b ≥ 0.
 
 To find the best line, let's insist that for samples we don't just get above 0, but get xω+b above 1 for positive samples, and -1 of negative samples. 
