@@ -1,6 +1,6 @@
 # Courses, books and links
 
-Currently at: ESLII p55
+Currently at: ESLII p101
 
 ## To file:
 
@@ -27,17 +27,16 @@ https://github.com/chiphuyen/machine-learning-systems-design
 (Given in subjective order of my gradual reading)
 
 * How to think like a computer scientist by Allen B. Downey: [site](http://openbookproject.net/thinkcs/python/english3e/) (python)
-* VLMS (Introduction to Applied Linear Algebra) by Stephen Boyd - 19 chapters: [full pdf](http://vmls-book.stanford.edu/)
-* ESLII (The Elements of Statistical Learning) by Hastie, Tibshirani, Friedman- 18 chapters. No code. [full pdf](https://web.stanford.edu/~hastie/ElemStatLearn/)
-* MML (Mathematics for Machine Learning) by M.P. Deisenroth - 12 chapters: [full pdf](https://mml-book.github.io/)
-* Algorithms by Sedgewick - about 30 small chapters, in Java
+* VLMS (Introduction to Applied Linear Algebra) by Stephen Boyd. [full pdf](http://vmls-book.stanford.edu/)
+* ESLII (The Elements of Statistical Learning) by Hastie, Tibshirani, Friedman. No code. [full pdf](https://web.stanford.edu/~hastie/ElemStatLearn/)
+* MML (Mathematics for Machine Learning) by M.P. Deisenroth: [full pdf](https://mml-book.github.io/)
+* Algorithms by Sedgewick. Java.
 * Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow, by Aurélien Géron. Python / Scikit obviously. [All labs on github](https://github.com/ageron/handson-ml2)
-* Applied Predictive Modeling by Kuhn Johnson - 20 chapters (no free pdf online). Code in R.
-* ...or, as potential alternative, "The 100 pages ML book" by Andriy Burkov - 11 chapters: [full pdf](http://themlbook.com/wiki/doku.php)
-* Deep larning by Ian Goodfellow et al: [full pdf](http://www.deeplearningbook.org/)
+* Deep larning by Ian Goodfellow et al. [full pdf](http://www.deeplearningbook.org/)
+* Applied Predictive Modeling by Kuhn Johnson (no free pdf online). Code in R. Seems simpler than ESLII.
+* "The 100 pages ML book" by Andriy Burkov. [full pdf](http://themlbook.com/wiki/doku.php) 
 
 Second priority books:
-
 * [Dive into Deep Learning](http://d2l.ai/) - an interactive introduction to deep learning, based on NumPy, apparently (no TF, no PyTorch, ha!) 
 * Pattern recognition and ML by Christopher Bishop ([full pdf](https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/))
 * Foundations of ML by M. Mohri et al ([full pdf](https://cs.nyu.edu/~mohri/mlbook/)) - more mathy?
@@ -46,12 +45,11 @@ Second priority books:
 * [Notes on dynamical systems](https://people.maths.bris.ac.uk/~macpd/ads/) ([pdf](https://people.maths.bris.ac.uk/~macpd/ads/bnotes.pdf)) from Carl Dettmann. Not a textbook, but close; worth scanning
 
 Job-search specific books:
-* Cracking the code interview - 17 chapters + general info
+* Cracking the code interview.
 * [[Huyen2019book]] - a short book on data science / ML job interviewing
 
 Third priority books:
-
-* Algorithms by Erickson - 12 long chapters
+* Algorithms by Erickson
 
 Books that are not on my reading list, but keeping here just in case:
 * Problem solving with data structures in Python ([full text, web](https://runestone.academy/runestone/books/published/pythonds/index.html))
@@ -62,3 +60,8 @@ Books that are not on my reading list, but keeping here just in case:
 
 * [Machine learning for humans, 80/20 reading list](https://medium.com/machine-learning-for-humans/ai-reading-list-c4753afd97a) - claims to be curated. Sections on ML, Deep, RL, and then various general readings about the meaning of it all.
 * [Scientific visualization with matplotlib](https://github.com/rougier/scientific-visualization-book) - an open-source book project in the works that hadn't been released yet, but the previews look lovely
+
+## Parts of books put on hold for now
+
+ESLII
+* Fancy math about shrinkage and selectors: p84-100

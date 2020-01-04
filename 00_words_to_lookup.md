@@ -50,6 +50,7 @@ Technical stuff
 * Spark
 
 Random pieces of math
+* How to calculate single-value-decomposion and eigenvector decomposition in practice?
 * Refresh the general flavor of Lagrangians and Hamiltonians
 * Perron–Frobenius theorem - something related to centralities and or network graph eigenvectors
 

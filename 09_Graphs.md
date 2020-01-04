@@ -1,4 +1,4 @@
-# Graphal Methods
+# Graphical Methods
 
 ## Markov Random Fields
 
