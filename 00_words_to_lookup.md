@@ -3,13 +3,13 @@
 #todo
 Current point in the Google Course: https://developers.google.com/machine-learning/crash-course/production-ml-systems
 
-* Do people use leakyReLus often? Do they prefer them for pruning, or is it ignored?
-* Do people use pseudo-ranking (ranking followed by approximation) for variable pre-processing? Does it have a name?
+# Words and topics to look up
+
+Basic questions
+* How is PCA derived from XᵀX?
 * Double-check what is eager about eager mode\
 * Move old recommendatinos from Sven down here
 * Make sure all Eric's recommendations are here
-
-# Words and topics to look up
 
 Classic ML and friends
 * Hungarian algorithm
@@ -28,14 +28,11 @@ Classic ML and friends
 
 Deep Learning:
 * How to tell the receptive field of a neuron in a deep network? Do they gradient descend on it?
-* Heuristic search - seems to be a topic in oldschool AI, but isn't it too general? Or do they mean something very specific by it?
+* Do people use leakyReLus often? Do they prefer them for pruning, or is it ignored?
 * ADAM optimizer - what's the difference from othes?
 * Xavier initialization of weights - what's cool about it? Also, is it true that variance-scaled init is better? ([claim](https://pcc.cs.byu.edu/2017/10/02/practical-advice-for-building-deep-neural-networks/))
-* Network distillation - why does it even work? Not how, but why?
 * inception blocks
 * residual blocks / networks
-* Style transfer - how does it work?
-* How to actually organize curriculum learning? Is there an automated strategy here?
 * noise-contrastive estimation
 * self-supervised boosting
 

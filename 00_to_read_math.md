@@ -202,7 +202,7 @@ Yu, H., Edunov, S., Tian, Y., & Morcos, A. S. (2019). Playing the lottery with r
 https://arxiv.org/abs/1906.02768
 Lottery tickets in RL domain.
 
-## Classic RNNs
+## RNNs
 
 https://distill.pub/2019/memorization-in-rnns/
 How LSTM networks remember text: a visual intro.
@@ -232,9 +232,9 @@ https://arxiv.org/abs/1911.05507
 
 Single Headed Attention RNN: Stop Thinking With Your Head
 https://arxiv.org/abs/1911.11423
-Looks somewhat advanced (from the technical, not math pov), but if I get it right, they tried to diversify the field by deliberately sticking to a non-mainstream approach (something that is NOT transformers), and got good performance.
+Looks somewhat advanced (from the technical, not math pov), but if I get it right, they tried to diversify the field by deliberately sticking to a non-mainstream approach (something that is NOT transformers), and got good performance. Also is apparently considered well-written.
 
-## Quasi-Symbolic
+## Symbolic
 
 Yoshua Bengio’s short reading list
 * BabyAI: First Steps Towards Grounded Language Learning With a Human In the Loop, Chevalier-Boisvert et al.,
@@ -298,8 +298,7 @@ Makhzani, A. (2018). Implicit autoencoders. arXiv preprint arXiv:1805.09804.
 https://arxiv.org/abs/1805.09804
 Sort of GAN-like architecture that tries to optimize the latent space directly? Interesting, but hard to get from the abstract.
 
-## Graph networks
-
+## Graphical
 A Gentle Introduction to Deep Learning for Graphs
 https://arxiv.org/abs/1912.12693
 Must read (seems short and gentle indeed)
@@ -315,9 +314,9 @@ NetGAN: Generating Graphs via Random Walks
 A. Bojchevski, O. Shchur, D. Zugner, S. Gunnemann.
 ArXiv e-prints. 2018.
 
-## Alternative network designes
+# Alternative network designes
 
-### Helmholtz Machines
+## Helmholtz Machines
 
 Kevin G. Kirby (2006). A Tutorial on Helmholtz Machines 
 https://www.nku.edu/~kirby/docs/HelmholtzTutorialKoeln.pdf
@@ -336,7 +335,11 @@ Reduced MNIST: how well can machines learn from small data? By Michael Nielsen. 
 http://cognitivemedium.com/rmnist
 Blog post on learning on super-small subsets of MNIST (not an official pub, so never cited). One example of each digit apparently brings accuracy to 42% for a naive NN (vs 97% for full), and ~56% (vs 99% for full) for a pretrained conv net (2 layers, not trained on mnist specifically), followed by 2 fully connected. Regularization becomes extremely important, as a way to fight overfitting, and even switching to convnet for this may be considered a type of regularization, I think.
 
-## Meta and CogSci
+# Meta and CogSci
+
+Turing, A. M. (1950). Computing machinery and intelligence. In Parsing the Turing Test (pp. 23-65). Springer, Dordrecht. 2005.
+http://www.geielettronica.it/images/pdf/turing.pdf
+Said to be a really nicely written paper, seminal, good examples, and with 13k citations.
 
 Mesulam, M. M. (1998). From sensation to cognition. Brain: a journal of neurology, 121(6), 1013-1052.
 http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.120.8687&rep=rep1&type=pdf
@@ -366,7 +369,7 @@ Cisek, P. (2019). Resynthesizing behavior through phylogenetic refinement. Atten
 https://link.springer.com/article/10.3758/s13414-019-01760-1
 On evolution of mamallian brain, and how you can draw a link between behavioral (computational?) complexity, and hierarchical organization of a vertebrate brain. Tries to ambitiously draw parallels between evolution, development, and behavior.
 
-## Complexity and Automata
+# Complexity and Automata
 Corominas-Murtra, B., Seoane, L. F., & Solé, R. (2018). Zipf’s law, unbounded complexity and open-ended evolution. Journal of the Royal Society Interface, 15(149), 20180395.
 https://royalsocietypublishing.org/doi/pdf/10.1098/rsif.2018.0395
 General patterns of increase in complexity during evolution, using several natural and artificial examples (texts, proteins, logic circuits, and even combinations of Legos). Information and string complexity.

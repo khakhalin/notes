@@ -1,14 +1,14 @@
 # Tools, coding, project management
 All sorts of infrastructure stuff.
 
-## Python
+# Python
 
-### Core Python
+## Core Python
 * Tips from Chip Huyen: https://github.com/chiphuyen/python-is-cool
 * Nice [list of Python gotchas](https://www.toptal.com/python/top-10-mistakes-that-python-programmers-make) from Martin Chilikian
 * f-strings: http://zetcode.com/python/fstring/ , and [this specification](https://docs.python.org/3/library/string.html#format-specification-mini-language) (mini-language!)
 
-### Random Python tips:
+## Random Python tips:
 * If in a module you start a method name with one underscore, like `_helper`, this method isn't imported on `from module import *`. Unfortunately is still acessible if you do `import module`and address it as `module._helper()`.
 * Conventions: underscore for variables and functions; all-caps for constants, capitalized camelcase for objects, leading-underscore for local methods.
 * Nested comprehensions: same syntax as in writing nested loops (even tho it looks unformulaic), e.g. `[j for i in range(5) for j in range(i)]
@@ -16,11 +16,11 @@ All sorts of infrastructure stuff.
 * To get some (or rather, first) dict from a dict, do `next(iter(a.keys()))`
 * Objects (including empty lists `[]`) should never be used as default arguments for functions, as they are evaluated only once per program (during object definition), not when methods are called! Insetad use `x=None`, then `if x is None: x=[]`. It sounds super-cumbersome, but that's just how it is. ([source](https://docs.python-guide.org/writing/gotchas/))
 
-### Matplotlib
+## Matplotlib
 * Brief intro from Brad Solomon: https://realpython.com/python-matplotlib-guide/
 * Cheatsheet: [https://github.com/rougier/matplotlib-cheatsheet](<https://github.com/rougier/matplotlib-cheatsheet>)
 
-### Pandas
+## Pandas
 * `[[]]` simply means "a list inside a `[]` call"
 * Select columns by label: `d['x']`. Alternative spelling: `d.x`. Returns a series. 
 * Select rows by label: `d.loc[1]`. Works for both df (returns a row-series), and for column-series (returns a single value).
@@ -36,7 +36,7 @@ All sorts of infrastructure stuff.
 ## Scikit-learn
 * A bunch of notebooks that implement all key ML methods, by Aurélien Geron, to accompany his book ("Hands-On Machine Learning with Scikit-Learn and TensorFlow"): https://github.com/ageron/handson-ml2
 
-## Coding habits for data scientists
+# Coding habits for data scientists
 * Keep code clean (not smelly). Types of **smells** ([ref](https://www.thoughtworks.com/insights/blog/coding-habits-data-scientists)):
     * Dead code (commented, inconsequential)
     * Print statements everywhere
@@ -48,14 +48,14 @@ All sorts of infrastructure stuff.
 * Write unit tests ([link to a decent intro](https://www.freecodecamp.org/news/an-introduction-to-testing-in-python/))
 * Make small and frequent commits
 
-## Tensorflow and Keras
+# Tensorflow and Keras
 * Links to several tutorials: https://github.com/sayakpaul/TF-2.0-Hacks/blob/master/README.md
 
 **Random Notes:**
 * **Tensor object**:  type, shape, and a bunch of numbers. For example, when working with images, we have a 4D structure: image# × W × H × ColorChannels.
 * TF relies on a function that iterates through (features, labels) as tuples. And instead of directly linking to data, it wants to receive a data-generating function (for lazy / parallel execution?)
 
-## ML Project Organization
+# ML Project Organization
 #management
 
 Basic ideas:
@@ -67,10 +67,10 @@ Basic ideas:
 7. Is there a SoTA model?
 8. Start very simple (aka "Don't be a hero")
 9. Develop model by iterating through a cycle ([ref](http://josh-tobin.com/assets/pdf/troubleshooting-deep-neural-networks-01-19.pdf)): 
-                        * add complexity; 
-                        * debug; 
-                        * tune hyperparameters, 
-                        * benchmark
+        * add complexity; 
+        * debug; 
+        * tune hyperparameters, 
+        * benchmark
 10. Test on test data
 11. Write tests for model performance (to be alerted if it unexpectedly drops on new data)
 
@@ -127,10 +127,10 @@ Refs:
 * Separate data pre-processing from the learning pipeline: at rearch phase you want to pre-process data once, then play with it repeatedly ([ref](https://medium.com/infinity-aka-aseem/things-we-wish-we-had-known-before-we-started-our-first-machine-learning-project-336d1d6f2184))
 * You can always gain a few more % by using ensembles ([ref](http://karpathy.github.io/2019/04/25/recipe/))
 
-## GIT
+# GIT
 * Funny short cheatsheet "Dangit": http://dangitgit.com/
 
-## SQL
+# SQL
 [This is a good reference](https://www.w3schools.com/sql/default.asp), and here's a **generic query**: 
 ```sql
 SELECT col1, MAX(col2) AS colname2
