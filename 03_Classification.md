@@ -1,8 +1,8 @@
 # Classification
-Classic classification example: [MNIST](http://yann.lecun.com/exdb/mnist/index.html) (link to a library of all thinkable approaches to classification, as applied to this dataset, each given with a test error rate)
+A zoo of classification approaches: [MNIST](http://yann.lecun.com/exdb/mnist/index.html) - link to a library of all thinkable approaches to classification, as applied to this dataset, each given with a test error rate.
 
 # 1NN and KNN
-Simplest archetypical approach: **Nearest Neighbor**. Just pick closest training case. This is an example of a **lazy** approach: instead of generating estimations upfront (that would be called **eager**), we only generate them at retrieval. A better. and more practical, approach: **K nearest neighbors** (aka KNN).
+Simplest archetypical approach: **Nearest Neighbor**. Just pick the closest training case. This is an example of a **lazy** approach: instead of generating estimations upfront (that would be called **eager**), we only generate them at retrieval. A better. and more practical, approach: **K nearest neighbors** (aka KNN).
 
 While KNN is lazy, for analysis purposes we can calculate predictions on a grid, and thus identify borders between areas "assigned" to different categories. For k=1 (simple Nearest Neighbor) we get a Voronoi tesselation between all training points (disconnected and jaggedy, as each point gets its own area). Which presents a case of extreme overfitting: all training data is correctly classified, but it looks scary. Higher k: smoother areas, making k a **hyperparameter**. But the **effective number of parameters** for KNN is higher (about N/k), as data points themselves serve as parameters.
 
@@ -26,7 +26,7 @@ Can we balance them somehow, to make sure the model is reasonably good on both a
 
 An even better approach: **AUC** = **Area under the ROC (Receiver Operating Characteristic) curve**. With this approach, you take a threshold-like parameter of the model, and slide it through all possible values from ideally permissive to fully prohibitive. For max permissive we get maximal recall, or TPR=1, but also no true negatives at all: TNR=0 ⇒ FP=1 (that's how false-positives are defined, as 1-TNR). For max prohibitive, we get TPR=0, but also FPR=0, as TNR=1. For random probability, AUC=1/2, for perfect knowledge AUC=1.
 
-Interestingly, AUC = P(score of a true example > score of a wrong example). _I wonder if proving this is hard?_
+Interestingly, AUC = P(score of a true example > score of a wrong example). _I wonder if proving this is hard?_ #todo
 
 **Prediction bias**: a very simple measure of model validity: average value of all predictions - average value of all learning points. In a reasonable model, prediction bias should be close to 0. A way to assess it: build a **calibration plot** - bucket values, calculate predictions, then plot mean(predictions) against mean(values). May help to find areas where the model misbehaves.
 

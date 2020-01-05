@@ -51,8 +51,9 @@ Finn, C., Abbeel, P., & Levine, S. (2017, August). Model-agnostic meta-learning 
 https://arxiv.org/pdf/1703.03400.pdf
 About few-shots learning, and generalizing from a very limited number of labels? More than 1000 citations!
 
-FaceNet: A Unified Embedding for Face Recognition and Clustering Florian Schroff, Dmitry Kalenichenko, James Philbin
-About triplet loss and representation optimization.
+Schroff, F., Kalenichenko, D., & Philbin, J. (2015). Facenet: A unified embedding for face recognition and clustering. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 815-823).
+https://arxiv.org/abs/1503.03832 
+**Triplet loss**. Say, you want the model to learn that all objects in group A belong to class A, etc. If you just reward low delta for objects in A, model will map to const and achieve 0. So instead take 2 from A and 1 from B, and make it minimize D+ = D(a1,a2) relative to D- = D(a1,b). Say, drive `max(0,dplus+M-dminus)` down. In the paper they apparently use some other tricks as well. Paper: FaceNet: A Unified Embedding for Face Recognition and Clustering Florian Schroff, Dmitry Kalenichenko, James Philbin
 
 Van Steenkiste, S., Chang, M., Greff, K., & Schmidhuber, J. (2018). Relational neural expectation maximization: Unsupervised discovery of objects and their interactions. arXiv preprint arXiv:1802.10353.
 https://arxiv.org/abs/1802.10353

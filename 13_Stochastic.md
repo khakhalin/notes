@@ -44,7 +44,6 @@ Alternatively, instead of a random multivariate step, we can iteratively constru
 # Evolutionary algorithms
 
 ## Quality-Diversity
-
 An approach to evo algorithms in which you don't just pick individuals based on top fitness, but to to optimize the diversity of solutions. Apparently also known as **illumination**.
 https://quality-diversity.github.io/
 

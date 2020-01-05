@@ -1,9 +1,13 @@
 Dictionary of Terms
 ===
 
-**Bagging** (ML): the simplest way to create an ensemble of classifiers using an algorithm: split data into bags (with replacement), train on each of them. Final prediction = mean of all predictions. [ref](https://analyticsindiamag.com/primer-ensemble-learning-bagging-boosting/)
+**Bagging** (ML): the simplest way to create an ensemble of classifiers using an algorithm: split data into bags (with replacement), train a different model on each of them. Final prediction = mean of all predictions. [ref](https://analyticsindiamag.com/primer-ensemble-learning-bagging-boosting/)
 
-**Boosting** (ML): an alternative to _bagging_ for ensemble generation: Iteratively select samples that previous learners failed to learn or disagree upon, and use them to train new learners; majority vote at the end. [ref](https://analyticsindiamag.com/primer-ensemble-learning-bagging-boosting/)
+**Boosting** (ML): an alternative to _bagging_ for ensemble generation: Iteratively select samples that previous learners failed to learn or disagreed upon, and use them to train new learners; majority vote at the end. [ref](https://analyticsindiamag.com/primer-ensemble-learning-bagging-boosting/)
+
+# C
+
+**Collaborative filtering** (business): a name for what Netflix users do when they watch movies and generate data of "co-occurrence".
 
 **Drop-in replacement** (development): Replacing part of the code without rewriting anything else. Aka "bug for bug compatibility" (drop-in will only work if all idiosynctratic bugs match exactly).
 
