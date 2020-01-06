@@ -19,6 +19,8 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 
 **Heap** (programming): a tree-like structure where children < parents. An optimal realizatin of a priority queue (similar to a stack, but with a build-in sorting according to priority).
 
+**Indicator matrix** (data): A matrix Y, in which each row one-hot encodes the class g of a data point x. See [[03_Classification]].
+
 # P
 **Petri net** (math): a way to model discrete dynamic systems via a directed bipartite graph with 2 types of nodes: places and transitions. Tokens (agents?) can accumulate at places (states, circles), until a transition (bar) fires (consumes input tokens, and creates output tokens). Because of that, tokens inherently interact with each other. May be deterministic or not. [wiki](https://en.wikipedia.org/wiki/Petri_net)
 

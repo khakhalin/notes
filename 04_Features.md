@@ -33,7 +33,7 @@ A zoo of possible approaches:
 **PCA** (principal component anlaysis) - optimal reconstruction (minimal reconstruction error, given a limit on basis size), maximal variance of projections. Eigenspace of XX' ( #todo : why again?)
 
 **LDA** (Linear Discriminant Analysis) - optimal separation of classes. At each step, maximize separation (distance) between classes, aka **Fisher Linear Discriminance**. Obviously, label-driven, and these labels are nominal.
-Links: [wiki](https://en.wikipedia.org/wiki/Linear_discriminant_analysis)
+Links: [wiki](https://en.wikipedia.org/wiki/Linear_discriminant_analysis). See detailed descriptoin in [[03_Classification]] chapter.
 
 **CCA** (Canonical Correlation Analysis) - optimal correlation with a given numerical value (similar to labels, but in a continuous case). More generally, for two high-D datasets X and Y, finds directions (projections to 1D) in both X and Y such that the correlation between these projections is maximal. In even more general case, we can develop a sequence of these correspondences, or an "optimal rotation" from one space to another.
 Links: [wiki](https://en.wikipedia.org/wiki/Canonical_correlation)

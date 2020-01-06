@@ -45,24 +45,45 @@ What's the current best practice?
 For unbalanced datasets and multi-class classification, it is honest to used **stratified cross-validation**, when each of the strata is split separately, and then mixed back, to avoid class imbalance.
 
 # Linear separation
+**Can regression be used for classification?** Aye, just set a threshold (0.5) for the output value. Aka fitting a **dummy variable**. If h(x) is a hyperplane in (x,y), h=const becomes a 1-d-lower hyperplane (aka **decision boundary**; in 2D case: a line) separating the space of X into 2 parts. **Linear separation**. Apparently, the best we can do for 2 overlapping Gaussians.
 
-**Can regression be used for classification?** Aye, just set a threshold (0.5?) for the output value. Aka fitting a **dummy variable**. If h(x) is a hyperplane, h=const becomes a 1-d-lower hyperplane (in 2D case: line) separating the space of x into 2 halves. **Linear separation**. Apparently, the best we can do for 2 overlapping Gaussians.
+What about **multi-class classificaton**; can regression be used then? Also aye, but with a different loss (not L2), summing costs of all misclassifications (when a point from class Gk was erroneously classified as a point in Gl). We'll need a matrix of costs, and from it calculate a matrix of losses L(k,l). Most often though, one cost for all errors, and **Expected Prediction Error** EPE = E(L). We can try to optimize EPE point-wise: G = armin_g ∑ L(Gk counted as g) ∙ P(observing point from Gk | for X=x).
 
-**Can regression be used for categorical variables?** (Multi-class classification?) Also aye, but a different loss, summing costs of all misclassifications (when a point from class Gk was erroneously classified as a point in Gl). We'll need a matrix of costs, and from it calculate a matrix of losses L(k,l). Most often though, one cost for all errors, and **expected prediction error** EPE = E(L). We can try to optimize EPE point-wise: G = armin_g ∑ L(Gk counted as g) ∙ P(observing point from Gk | for X=x).
+If all errors cost the same, G = argmin_g (1 - P(g | x)), known as likelihood optimization, or **Bayes classifier**: just go for the best guess of conditional probability P(class | observation). The error rate for it is called **Bayes rate**, and it is the lowest possible rate, coming from the variability of data itself, analogous to irreducible error for continuous data: [wiki](https://en.wikipedia.org/wiki/Bayes_error_rate). If data is deterministic (every x↔g), Bayes rate=0, but if same x can produce diff g, it's ≠0, because the model will never be able to perfectly overfit the data.
 
-If all errors cost the same, G = argmin_g (1 - P(g | x)) - likelihood optimization? Aka **Bayes classifier** - just go for the best guess of conditional probability P(class | observation). The error rate for it is called **Bayes rate**: the lowest possible rate, coming from the variability of data itself (analogous to irreducible error for continuous data: [wiki](https://en.wikipedia.org/wiki/Bayes_error_rate))
+**Kernel tricks**: to perform separation in of non-linear data, or data in high D, add feature squares and cross-products into the set, as synthetic features (see [[04_Features]]). Then perform separation. Linear boundaries will transform to quadratic boundaries.
 
 # Logistic Regression
+If each class dummy variable is fit with f_i = Xθ_i, then the decision boundary between 2 classes is a line f_i = f_j, and so X(θ_i - θ_j)=0 is also a line.  So we can take **indicator matrix** Y (each row is a class, one-hot encoded), and try fit each column of it using linear regression: H = XΘ = X(XᵀX)⁻¹XᵀY, where Θ is a matrix composed of many columns θ: one for every column in Y. This H would have a reasonable property of ∑f_k(x) = 1, when summing across all classes g_k, but individual f_k are linear, and so totally go outside of (0,1). This is a problem.
 
-**Logistic function**: $\sigma(x) = \frac{1}{1+e^{-x}} = \frac{e^x}{1+e^x}$.
+Another problem is **class masking**: imagine 3 separable classes ABC lying roughly on a line. Decision boundaries between AB and BC will be roughly parallel, but when taking together, 3 linear functions will form only one boundary somewhere in the middle, leaving class B completely unresolved. With a quadratic regression one can resolve 3 classes, but cannot resolve 4, etc. Non-linearly transforming the function after regression was performed, obviously, doesn't help anything, as boundareis remain linear for any  f_k = F(Xθ_k), where F() is some monotonous function. 
 
-The inverse function is called **logit**: logit(p) $=\ln \frac{p}{1-p}$
+By Bayes theorem, our best guess about P(g|x) = f(x)p/∑f(x)p , where p is prior probability, and sum goes through all classes.
 
-Assumes that **log-odds** $\log \frac{p}{1-p}=a+bx$ , so is a linear function of x (that is generally a vector). It means that p/(1-p)=exp(ax+bx), which leads to p = σ(ax+b). It can be said that a logistic regression is just a linear regression of log-odds.
+**Logistic function**: $\sigma(x) = \frac{1}{1+e^{-x}} = \frac{e^x}{1+e^x}$. The inverse function is called **logit**: logit(p) $=\ln \frac{p}{1-p}$. Logistic regerssion assumes that **log-odds** are linear: log p/(1-p) = Xθ, which means that p/(1-p)=exp(Xθ), leading to p = sigmoid(Xθ).
 
-To find a solution, minimize **logloss**: Loss = $-\sum (y\cdot\log(\tilde y)+(1-y)\cdot\log(1-\tilde y))$, or, using p for y estimations, -∑( y∙log(p) + (1-y)∙log(1-p) ). As p→0, -log(p)→inf, so huge punishment for near-zero p. Because of that, if the data is too clean and some areas contain only points of one type, weights may explode (it's hard to fit infinity), making proper regularization extremely important.
+To find a solution, minimize **logloss**: Loss = -∑(y log(p) + (1-y)log(1-p)), where p denote probability estimations. As p→0, -log(p)→inf, so we have a huge punishment for near-zero p. Because of that, if the data is too clean and some areas contain only points of one type, weights would explode (it's hard to fit infinity), making proper **regularization** extremely important.
 
-For high-D non-linear data, works great if features cross-products are included into the set as synthetic features (see [[07_Features]]).
+## Discriminant Analysis
+An alternative to logistic regression? We assume that each class density is a multivariate Gaussian:
+
+$f_k(x) = \frac{1}{უ}\exp\big( -½ (x-μ_k)^TC^{-1}_k(x-μ_k) \big)$,
+
+where უ = 2π^(p/2)∙sqrt(det(C)), and C is a covariance matrix. Without any extra assumptions, it is called **Quadratic Discriminant Analysis (QDA)**, but if we assume that all gaussians have the same shape, and C is shared across all classes, we have **Linear Discriminant Analysis (LDA)**. Apparently if you do log(P_k/P_l) for two classes k and l, you end up with an equation linear in x (ESLII p108), making the decision boundary linear as well, because lots of terms cancel each out. _I don't understand the math, so park it._ Because C is not necessarily spherical (σ²I), bisectors are not necessarily ⊥ to lines connecting the centroids. _Here goes a formula for linear discriminant functions that I also don't quite understand:_
+
+The decision becomes a simple thersholding of a **lienar discriminant function**: δ(x) = ⟨x,ω⟩ against a certain threshold c, where vector ω = C⁻¹μ, and thresholds c = ½ μᵀC⁻¹μ - log n. Here μ is the mean for this class, estimated as μ = ∑x/n for all xi in this class; n is the number of elements in this class. Whichever δ (for whichever class) has the highest value for a given x, defines the predicted class: g = argmax_k δ_k (x). As C is assumed to be the same for all gaussians, the formula for it is similar to pooled variance: C = ∑_i (xi - μi)(xi-μi)ᵀ/(N-K), where μi is a matching mean for point xi; N is the number of points, and K is the number of classes. The thresholds can also be optimized explicitly, as hyperparameters, to achieve optimal class separation.
+
+The results of LDA for 2 classes only match that of logistic regression if the number of points in all classes is the same.  For more than 2 classes, it never matches logistic regression, and doesn't suffer from a masking problem.
+
+One can also smoothly move betwen QDA and LDA, using **Regularized Discriminant Analysis**, in which case you calculate covariance matrices Ck for individual gaussians, and a pooled C, and then work with something in-between: αCk + (1-α)C, treating α as a hyperparameter. Alternatively, one can shrink Ck towards a scalar σ²I.
+
+> Computational math in ESLII p113, skipped for now.
+
+LDA can be used for direct **dimensionality reduction**, as **Reduced-Rank LDA**. The idea is that K centroids always lie in a hyperplane of dim = K-1, which is typically ≪ p. It means that once centroids are found, we can project X into the subspace Hk of centroids, and thus get a good lower-dim representation of the data. For K=3, we can also make a 2D plot. If K is ≫ 3, but we need a plot, we can also run PCA on the Hk space (instead of running it in the X space), obtaining so-callled **canonical coordinates**, aka **discriminant coordinates**. Running a 2D PCA is equivalent to finding a pair of coordinates that maximize the variance of μ, which in practice means spreading centroids as much as possible, which resonates with the idea of LDA. Unlike for PCA, the projection doesn't just try to spread all points in X, but separate them. 
+
+> ESLI p114-116 describes the math, but parked for now.
+
+Refs: ESLII p109-113; [wiki](https://en.wikipedia.org/wiki/Linear_discriminant_analysis)
 
 # SVM
 Widest street approach: find a line, so that if you have a band around the line, it separates the positive from the negative examples as best as possible.
