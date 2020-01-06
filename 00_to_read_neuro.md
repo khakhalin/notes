@@ -1,5 +1,8 @@
 # To-read: Neuro
 
+https://www.quantamagazine.org/how-the-brain-creates-a-timeline-of-the-past-20190212/
+Blog summary about episodic memories.
+
 Raman, D. V., Rotondo, A. P., & O’Leary, T. (2019). Fundamental bounds on learning performance in neural circuits. Proceedings of the National Academy of Sciences, 116(21), 10537-10546.
 https://www.pnas.org/content/116/21/10537.short
 
