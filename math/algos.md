@@ -2,7 +2,7 @@
 
 #algo
 
-## Big O notation
+# Big O notation
 Different meaning in textbooks and in practical questions. In textbooks: upper bound, so if something is O(N), it is also O(N^2) by definition. In practice, just say the truth. 
 
 * O(log N) appears when you have a tree, and always process one branch of this tree. Then the total number of steps = the number of branches = $\log_2 n$ . 
@@ -12,3 +12,9 @@ Different meaning in textbooks and in practical questions. In textbooks: upper b
     * Mergesort is O(n log n) even for worst case, but takes more space.
     * Heapsort is mathematically the best, but 1) is real hart to explain, because of the heap data structure (sort of a tree), in practice is slower than quicksort.
 * Selection sort (repeatedly find min element) is O(N^2) as it does the triangle thing (loop in a loop) through the array.
+
+# Classic algorithms
+
+**Median of medians**: Recursive way to find a median in linear time (median through sorting is O(n lg n) ). Imagine we have a linear agorithm for finding i-th element (i=N/2 for a median). Split the array into groups of 5. Find median of each; then find the median of medians. It is guaranteed to be between 30th and 70th percentiles (just draw it for a proof). Set this value as a pivot. Binary split all elements into those lower than the pivot, and those higher than it. If upper=lower, pivot is the median. If not, look either for the k-th elements of the upper part (if upper is larger), or i-k-1 -th elements of the lower part (if lower is larger.)  Because the size of the array is guaranteed to shrink fast (not slower than 0.7 for main recursion step, and 0.2 for the median of median), by induction, the entire thing is O(n), just multiplied by some weird factor. Refs: [wiki](https://en.wikipedia.org/wiki/Median_of_medians), [better explanation](https://www.austinrochford.com/posts/2013-10-28-median-of-medians.html)
+
+**Stable matching algorithm**: A elements rank B elements by preference; B elements rank A elements by preference; find a matching such that no cross-wiring (swapping) of matches can improve the match (for all those 4 that would be cross-wired). The logic: each A proposes to their B. Each B picks the best A of those that proposed. All A that aren't matched propose to their second choice. If B can upgrade, they upgrade. Repeat until everyone are matched. Proof that all matched at the end: the least lucky A will propose to all B, so there cannot be a free B. Prove that the match is stable: if KL MN can be improved to KN ML, then K prefers N, but then K proposed ot N earlier; as N is with M, N must have traded K for a better match after that, so MN→KN isn't an improvement for N, contradiction. Reference: [wiki for the problem](https://en.wikipedia.org/wiki/Stable_marriage_problem), [wiki for the algorithm](https://en.wikipedia.org/wiki/Gale%E2%80%93Shapley_algorithm)

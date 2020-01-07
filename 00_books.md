@@ -27,11 +27,11 @@ Currently at: ESLII p101
 * VLMS (Introduction to Applied Linear Algebra) by Stephen Boyd. [full pdf](http://vmls-book.stanford.edu/)
 * Algorithms by Sedgewick - uses Java, but is exceptionally clearly written
 * ESLII (The Elements of Statistical Learning) by Hastie, Tibshirani, Friedman. ([full pdf](https://web.stanford.edu/~hastie/ElemStatLearn/)) Very extensive, no code, most math is stated but not derived, poor exposition. If I could go back in time, I'd bumped ISLR and "Hands-On ML in Python" to this position, and left ESLII for self-study ([ref](https://www.quora.com/How-do-I-learn-the-book-Elements-of-Statistical-Learning-What-books-materials-would-help-beef-up-my-foundations-so-that-I-will-be-able-to-comprehend-the-book-easily)). This book should be great for refereshing material though.
+* "The 100 pages ML book" by Andriy Burkov. [full pdf](http://themlbook.com/wiki/doku.php) 
 * Deep Learning by Ian Goodfellow et al. [full pdf](http://www.deeplearningbook.org/)
 * Programming in Python: Fluent Python, by Luciano Ramalho (no online version)
 * MML (Mathematics for Machine Learning) by M.P. Deisenroth: [full pdf](https://mml-book.github.io/)
 * Hands-On M with Scikit-Learn, Keras, and TensorFlow, by Aurélien Géron. Python obviously. [All labs on github](https://github.com/ageron/handson-ml2), but no full version online.
-* "The 100 pages ML book" by Andriy Burkov. [full pdf](http://themlbook.com/wiki/doku.php) 
 
 Second priority books:
 * On Programming Well, by Robert C. Martin (no online version)
