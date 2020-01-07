@@ -1,8 +1,5 @@
 # To-read: Neuro
 
-https://www.quantamagazine.org/how-the-brain-creates-a-timeline-of-the-past-20190212/
-Blog summary about episodic memories.
-
 Raman, D. V., Rotondo, A. P., & O’Leary, T. (2019). Fundamental bounds on learning performance in neural circuits. Proceedings of the National Academy of Sciences, 116(21), 10537-10546.
 https://www.pnas.org/content/116/21/10537.short
 
@@ -118,6 +115,15 @@ Nicola, W. and Clopath, C. (2019). A diversity of interneurons and Hebbian plast
 Brea, J., Senn, W., and Pfister, J.-P. (2013). Matching Recall and Storage in Sequence Learning with Spiking Neural Networks. Journal of Neuroscience, 33(23):9565–9575.
 
 Manohar, S. G., Zokaei, N., Fallon, S. J., Vogels, T. P., and Husain, M. (2019). Neural mechanisms of attending to items in working memory. Neuroscience and Biobehavioral Reviews, 101(March):1–12.
+
+Time perception in brain networks: may be related?
+Integrating time from experience in the lateral entorhinal cortex
+https://www.nature.com/articles/s41586-018-0459-6
+Activity in perceptual classification networks as a basis for human subjective time perception
+https://www.nature.com/articles/s41467-018-08194-7
+Changing temporal context in human temporal lobe promotes memory of distinct episodes
+https://www.nature.com/articles/s41467-018-08189-4
+Also a blog post summary: https://www.quantamagazine.org/how-the-brain-creates-a-timeline-of-the-past-20190212/
 
 ## Large-scale dynamics
 
