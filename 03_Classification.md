@@ -8,9 +8,9 @@ While KNN is lazy, for analysis purposes we can calculate predictions on a grid,
 
 **Can we use quadratic loss function for KNN?** No, coz it would go to 0 for k=1, so hyperparameter search would always recommend overfitting. We should use **Max Likelihood** instead: Say, you have data X and a qualitative output G with values g_k denoting several different classes. We can have P(G=g_k|X=x) = P_k(θ,X), and try to maximize ∏P for a given data. It's the same as maximising L = ∑log P(θ , g_i , x_i) in the space of θ.
 
-KNN can be used for numerical predictions as well (beyond simple classification); just use the average of y-values for nearest k x-points (in fact, that's how ESLII introduces it).
+KNN can be used for numerical predictions as well (beyond simple classification); just use the average of y-values for nearest k x-points (in fact, that's how ESL introduces it).
 
-How to find optimal k? We'll need a training and a testing set, then try different values of k, and find the point when the test error (or some other measure) is lowest for test data (ESLII Fig 2.4).
+How to find optimal k? We'll need a training and a testing set, then try different values of k, and find the point when the test error (or some other measure) is lowest for test data (ESL Fig 2.4).
 
 KNN is an archetype for many fancy methods. For example, if instead of "nearest" δi that are all or none we'll use fuzzy weights that are larger when you are close to each data w(distance), it's the same as just regressing on distance, which is a type of a **kernel method**. If we want some dimensions of X matter differently than others, we can use non-round kernels. **Local regression** is also similar in spirit (sorta a combinatino of linear regression and the idea of contextual locality). DL networks also imitate something like that by mixing and mashing linear transformations.
 
@@ -53,41 +53,67 @@ If all errors cost the same, G = argmin_g (1 - P(g | x)), known as likelihood op
 
 **Kernel tricks**: to perform separation in of non-linear data, or data in high D, add feature squares and cross-products into the set, as synthetic features (see [[04_Features]]). Then perform separation. Linear boundaries will transform to quadratic boundaries.
 
-# Logistic Regression
 If each class dummy variable is fit with f_i = Xθ_i, then the decision boundary between 2 classes is a line f_i = f_j, and so X(θ_i - θ_j)=0 is also a line.  So we can take **indicator matrix** Y (each row is a class, one-hot encoded), and try fit each column of it using linear regression: H = XΘ = X(XᵀX)⁻¹XᵀY, where Θ is a matrix composed of many columns θ: one for every column in Y. This H would have a reasonable property of ∑f_k(x) = 1, when summing across all classes g_k, but individual f_k are linear, and so totally go outside of (0,1). This is a problem.
 
-Another problem is **class masking**: imagine 3 separable classes ABC lying roughly on a line. Decision boundaries between AB and BC will be roughly parallel, but when taking together, 3 linear functions will form only one boundary somewhere in the middle, leaving class B completely unresolved. With a quadratic regression one can resolve 3 classes, but cannot resolve 4, etc. Non-linearly transforming the function after regression was performed, obviously, doesn't help anything, as boundareis remain linear for any  f_k = F(Xθ_k), where F() is some monotonous function. 
+Another problem is **class masking**: imagine 3 separable classes ABC lying roughly on a line. Decision boundaries between AB and BC will be roughly parallel, but when taking together, 3 linear functions will form only one boundary somewhere in the middle, leaving class B completely unresolved. With a quadratic regression one can resolve 3 classes, but cannot resolve 4, etc. To resolve more classes, one has to transform regression values with "increasingly non-linear" functions F(Xθ_k): they should be monotonous and fall down fast enough to offer fine class resolution. refs: [1](https://stats.stackexchange.com/questions/43867/why-does-the-least-square-solution-give-poor-results-in-this-case)
 
-By Bayes theorem, our best guess about P(g|x) = f(x)p/∑f(x)p , where p is prior probability, and sum goes through all classes.
+## Logistic Regression
+But by Bayes theorem, our best guess about P(g|x) woudl be P(g|x) = f(x)p/∑f(x)p , where p is prior probability, and sum goes through all classes. Not only it looks a more like a probability, but actually leads to the math bemind logistic regression (_does it really?.._).
 
-**Logistic function**: $\sigma(x) = \frac{1}{1+e^{-x}} = \frac{e^x}{1+e^x}$. The inverse function is called **logit**: logit(p) $=\ln \frac{p}{1-p}$. Logistic regerssion assumes that **log-odds** are linear: log p/(1-p) = Xθ, which means that p/(1-p)=exp(Xθ), leading to p = sigmoid(Xθ).
+**Logistic function**: $\sigma(x) = \frac{1}{1+e^{-x}} = \frac{e^x}{1+e^x}$. The inverse function is called **logit**: logit(p) $=\ln \frac{p}{1-p}$. Logistic regerssion assumes that **log-odds** are linear: log p/(1-p) = Xθ, which means that p/(1-p)=exp(Xθ), leading to p = sigmoid(Xθ). This shape is nice and doesn't suffer from class masking.
 
-To find a solution, minimize **logloss**: Loss = -∑(y log(p) + (1-y)log(1-p)), where p denote probability estimations. As p→0, -log(p)→inf, so we have a huge punishment for near-zero p. Because of that, if the data is too clean and some areas contain only points of one type, weights would explode (it's hard to fit infinity), making proper **regularization** extremely important.
+For many classes, each of log-odds for class g_i is fit linearly: log P(x∈gi)/P(x∈gk) = xᵀθi. Here gk is some class (last one?); it doesn't matter which one exactly; what matters is that with these formulas all ∑P(gi)=1.
+
+To find a solution, use max-likelihood (maximize conditional P(g|x) ), which is equivalent to minimizing **logloss**. For two classes, Loss = -∑(y log(P(g|x)) + (1-y)log(1-P(g|x))), where y∈{0,1}. As p→0, -log(p)→inf, so we have a huge punishment for near-zero p. Because of that, if the data is too clean and some areas contain only points of one type, weights would explode (it's hard to fit infinity), making  **regularization** extremely important.
+
+The expression for loss can be simplified: 
+L(θ) = -∑( y log(p) + (1-y)log(1-p) ) 
+= -∑( y (log(p) - log(1-p)) + log(1-p)) = -∑( y log(p/(1-p)) + log(1-p) ) = …
+...Now log(p/(1-p)) is just plain Xθ by definition above. For log(1-p), substitute p=sigmoid(xᵀθ) = 1/(1+exp(-xᵀθ)), then calculated 1-p, take a log, and use log(1/a) = -log(a), resulting in log(1-p) = log(1+exp(xᵀθ))...
+= -∑( yxᵀθ - log(1+exp(1+xᵀθ)) ). 
+Differentiate by θ, set to 0. Get ∂l/∂θ = -∑ (yx - exp(xᵀθ)/(1+exp(xᵀθ))x) = -∑x(y-p) := 0. Here x and 0 are vector length p+1, where p = dim number (and one more dim for the intecept θ0).
+
+> ESL p120-121 gives a solution for the updating (descent) procedure that I skip for now. Also a weighted self-consistency formula that ties θ, x, y, and p together, and can apparently be used to achieve some numerical shortcuts.
+
+## Regularized Log Regression
+**L1 penalty** (lasso) is good for this: take the previous L=-∑ y log(p) + (1-y) log(1-p), and add to it λ∑|θj| , where the sum runs by dimention (variable). Flip signs if you like maximizing stuff, as ESL does. Apparently, if you do the math, you get the following link between everything: xjᵀ(y-p) = λ∙sign(θj) for each dimension j.
 
 ## Discriminant Analysis
 An alternative to logistic regression? We assume that each class density is a multivariate Gaussian:
 
-$f_k(x) = \frac{1}{უ}\exp\big( -½ (x-μ_k)^TC^{-1}_k(x-μ_k) \big)$,
+$Φ_k(x) = \frac{1}{უ}\exp\big( -½ (x-μ_k)^Tტ^{-1}_k(x-μ_k) \big)$,
 
-where უ = 2π^(p/2)∙sqrt(det(C)), and C is a covariance matrix. Without any extra assumptions, it is called **Quadratic Discriminant Analysis (QDA)**, but if we assume that all gaussians have the same shape, and C is shared across all classes, we have **Linear Discriminant Analysis (LDA)**. Apparently if you do log(P_k/P_l) for two classes k and l, you end up with an equation linear in x (ESLII p108), making the decision boundary linear as well, because lots of terms cancel each out. _I don't understand the math, so park it._ Because C is not necessarily spherical (σ²I), bisectors are not necessarily ⊥ to lines connecting the centroids. _Here goes a formula for linear discriminant functions that I also don't quite understand:_
+where უ = 2π^(p/2)∙sqrt(det(C)), and ტ is a covariance matrix. Without any extra assumptions, it is called **Quadratic Discriminant Analysis (QDA)**, but if we assume that all gaussians have the same shape, and ტ is shared across all classes, we have **Linear Discriminant Analysis (LDA)**. Apparently if you do log(P_k/P_l) for two classes k and l, you end up with an equation linear in x (ESL p108), making the decision boundary linear as well, because lots of terms cancel each out. _I don't understand the math, so park it._ Because ტ is not necessarily spherical (σ²I), bisectors are not necessarily ⊥ to lines connecting the centroids. _Here goes a formula for linear discriminant functions that I also don't quite understand:_
 
-The decision becomes a simple thersholding of a **lienar discriminant function**: δ(x) = ⟨x,ω⟩ against a certain threshold c, where vector ω = C⁻¹μ, and thresholds c = ½ μᵀC⁻¹μ - log n. Here μ is the mean for this class, estimated as μ = ∑x/n for all xi in this class; n is the number of elements in this class. Whichever δ (for whichever class) has the highest value for a given x, defines the predicted class: g = argmax_k δ_k (x). As C is assumed to be the same for all gaussians, the formula for it is similar to pooled variance: C = ∑_i (xi - μi)(xi-μi)ᵀ/(N-K), where μi is a matching mean for point xi; N is the number of points, and K is the number of classes. The thresholds can also be optimized explicitly, as hyperparameters, to achieve optimal class separation.
+The decision becomes a simple thersholding of a **lienar discriminant function**: δ(x) = ⟨x,ω⟩ against a certain threshold c, where vector ω = ტ⁻¹μ, and thresholds c = ½ μᵀტ⁻¹μ - log n. Here μ is the mean for this class, estimated as μ = ∑x/n for all xi in this class; n is the number of elements in this class. Whichever δ (for whichever class) has the highest value for a given x, defines the predicted class: g = argmax_k δ_k (x). As ტ is assumed to be the same for all gaussians, the formula for it is similar to pooled variance: ტ = ∑_i (xi - μi)(xi-μi)ᵀ/(N-K), where μi is a matching mean for point xi; N is the number of points, and K is the number of classes. The thresholds can also be optimized explicitly, as hyperparameters, to achieve optimal class separation.
 
-The results of LDA for 2 classes only match that of logistic regression if the number of points in all classes is the same.  For more than 2 classes, it never matches logistic regression, and doesn't suffer from a masking problem.
+The results of LDA for 2 classes only match that of logistic regression if the number of points in all classes is the same.  For more than 2 classes, it doesn't match logistic regression.
 
-One can also smoothly move betwen QDA and LDA, using **Regularized Discriminant Analysis**, in which case you calculate covariance matrices Ck for individual gaussians, and a pooled C, and then work with something in-between: αCk + (1-α)C, treating α as a hyperparameter. Alternatively, one can shrink Ck towards a scalar σ²I.
-
-> Computational math in ESLII p113, skipped for now.
+One can also smoothly move betwen QDA and LDA, using **Regularized Discriminant Analysis**, in which case you calculate covariance matrices ტk for individual gaussians, and a pooled ტ, and then work with something in-between: αტk + (1-α)ტ, treating α as a hyperparameter. Alternatively, one can shrink ტk towards a scalar σ²I.
 
 LDA can be used for direct **dimensionality reduction**, as **Reduced-Rank LDA**. The idea is that K centroids always lie in a hyperplane of dim = K-1, which is typically ≪ p. It means that once centroids are found, we can project X into the subspace Hk of centroids, and thus get a good lower-dim representation of the data. For K=3, we can also make a 2D plot. If K is ≫ 3, but we need a plot, we can also run PCA on the Hk space (instead of running it in the X space), obtaining so-callled **canonical coordinates**, aka **discriminant coordinates**. Running a 2D PCA is equivalent to finding a pair of coordinates that maximize the variance of μ, which in practice means spreading centroids as much as possible, which resonates with the idea of LDA. Unlike for PCA, the projection doesn't just try to spread all points in X, but separate them. 
 
-> ESLI p114-116 describes the math, but parked for now.
+> Computational math in ESL p113, and then p114-116. Parked for now.
 
-Refs: ESLII p109-113; [wiki](https://en.wikipedia.org/wiki/Linear_discriminant_analysis)
+Refs: ESL p109-113; [wiki](https://en.wikipedia.org/wiki/Linear_discriminant_analysis)
+
+What's the practical **difference between LDA and Log Regression?** In both cases, the math boils down to log P(x ∈ gi)/P(x ∈ gk) = xᵀθ, but θ are different. In both cases joint P(x,g) = P(x)P(g|x), where P(x) is called marginal density of inputs x. P(g|x) has the same form for both LDA and LR, but P(X) is different. With LR, P(x) is free (assumed to be arbitrary), and we maximize P(g|x). With LDA, we explicitly maximize P(x,g), and insist that P(x,g=k) = Φ(μk,ტ) is a p-dimensional Gaussian. Apparently, if the assumption of LDA is true, it gives you a boost of ~30% efficiency on error rate (you get same performance with ~30% less data). But if you aren't sure, then LR is safer.
 
 # SVM
-Widest street approach: find a line, so that if you have a band around the line, it separates the positive from the negative examples as best as possible.
+General idea: widest street approach: find a line, so that if you have a band around the line, it separates the positive from the negative examples as best as possible. If the line is described with a normal vector ω ⊥ line, whether a point x is far from the line can be described as ⟨x , ω⟩. If b is a good threshold value for this product (if we get b when x lies right smack on the separating line), we have xᵀω + b ≥ 0. To find the best line, let's try to find ω and b, so that for positive samples we would get xᵀω+b>1 (not just >0), and for negative samples, xᵀω+b<-1. 
 
-How to use the line? Describe it with a vector ω ⊥ line. Now whether a point u is far from the line can be described as uω. Let's say that b is a good projection value (u lies right smack on the central line), so we have u∙ω + b ≥ 0.
+We have already seen linear separators f(x) = xᵀθ = 0 before. The hyperplane (line in 2D) it defines is ⊥ to θ, and f(x) is proportinal to distance from x to the plane.
 
-To find the best line, let's insist that for samples we don't just get above 0, but get xω+b above 1 for positive samples, and -1 of negative samples. 
+**Rosenblatt's Perceptron** from 1958:  tries to minimize distances from misclassified points to the boundary: D = -∑y(xᵀθ) ≥ 0. This assumes that most y=1 lie beyond the boundary, so if y=1 is left closer to 0 its positive y gets multiplied by a negative xθ, resulting in a negative value; thus - before the sum. The original perceptron used stochastic gradient descent, visiting points one by one, and setting θ := θ + αyx (as usual assuming that x0=1 and θ is intercept). Obvious problems: non-deterministic, slow, doesn't converge for non-separable data (instead, cycles with very slow cycles).
+
+To make it more robust, let's maximize M = max(min(yxθ)): maximize the smallest distance from a (correctly classified) point to the boundary. Aka "maximal separation", or **Optimally Seprating Hyperplanes**. Here θ is constrained to $\sum_{i=1}^p θ^2_i = 1$. Note summing from 1, not from 0: the actual "vector part" of θ is normal, but the intercept $θ_0$ isn't (as we need to be able to move the hyperplane arbitrarily in space). 
+
+> ESL always writes y_i(x_i ᵀ β + β0), but that's annoying, isn't it? Other textbooks  just introduce special notation with a wave $\tilde θ$ for (θ1 … θp) sub-vector, always remember that it's a subvector ([ref](https://www.dbs.ifi.lmu.de/Lehre/MaschLernen/SS2014/Skript/SupportVectorMachine2014.pdf)).
+
+Instead of writing the constraint on θ explicitly, we can just write the equation for an arbitrary θ that got normalized by its upper part: y(xᵀθ)/norm(θ) ≥ M for ∀(x,y); then move norm(θ) to the right: yxᵀθ ≥ M∙norm(θ); then set M = 1/norm(θ), and instead of maximizing M, minimize the norm of upper part of θ: 
+
+* Optimize θ, to achieve min norm(θ), provided that y_i ⟨x_i , θ⟩ ≥ 1, ∀i. 
+
+Here, as in the prev paragraph norm(θ) is actually understood in terms of θ_1 to θ_p, but not θ_0. 1/norm(θ) can be called **thickness** of the decision boundary. Yields a convex problem with linear contraints, solvable via Lagrange optimization: L = |θ|² - ∑ λi ( yi ⟨x_i , θ⟩  - 1)…
+
+> At this point (ESL p133) I give up for now. It seems that math around p134 is not how SVMs are actually implemented anyways, so it can probably wait.
