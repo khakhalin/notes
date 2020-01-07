@@ -6,7 +6,7 @@ Loss: J(θ) = ∑(h-y)² across all data points i. Is called **Squared error**, 
 
 We can minimize this loss by differentiating by θ (partial derivative for each of the coordinates). For one point: ∂J(θ)/∂θ_j = by definition of J: ∂/∂θ_j (h(θ,x)-y)² = simple chain rule: 2(h-y) ∙ ∂h/∂θ_j = by formula for h: 2(h-y)∙x_j . Minimum: dJ/dθ = 0, ⇒ (derivative above written in matrix notation): Xᵀ(Xθ-y) = 0. Here X is a matrix in which each _row_ is an input vector, and y is a column-vector of target outputs. If XᵀX is nonsignular, we can open the brackets, send y to the right, muliply from the left on inverse, get: θ = (XᵀX)⁻¹Xᵀy.
 
-> To sum up **notation choices** (roughly matching ESLII): one point is a row-vector, so all points make a column (a column of row- vectors). The values of y are also a column. As data-point is a row, parameters θ are a column, so that dim(y) = N×1 = dim(Xθ). A bit confusing part when writing it all is that X (matrix) of N×k is multiplied by θ from the right (Xθ), but individual points x have to be written as xᵀθ to show that they are row-vectors (by default x would have been a column-vector). As Unicode makes diacritics a hassle, I try to use θ for parameter estimates, and β for true values. x_i is typically a column of X. Subscripts are shortened (xi instead of x_i) if it looks ok. Cdot (∙) may mean both normal and inner product; ⟨x,y⟩ always means inner product. 
+> To sum up **notation choices** (roughly matching ESL): one point is a row-vector, so all points make a column (a column of row- vectors). The values of y are also a column. As data-point is a row, parameters θ are a column, so that dim(y) = N×1 = dim(Xθ). A bit confusing part when writing it all is that X (matrix) of N×k is multiplied by θ from the right (Xθ), but individual points x have to be written as xᵀθ to show that they are row-vectors (by default x would have been a column-vector). As Unicode makes diacritics a hassle, I try to use θ for parameter estimates, and β for true values. x_i is typically a column of X. Subscripts are shortened (xi instead of x_i) if it looks ok. Cdot (∙) may mean both normal and inner product; ⟨x,y⟩ always means inner product. 
 
 Interpretation: if y ~ h = Xθ, then h is in the column-space of X, which forms a subspace of R^N (N data points, p+1 dimensions, assuming x0≡1). To find θ, we project y to col-space using a projection matrix, which obviously minimizes residual (unexplained) variance, by making it orthogonal to col-space.
 
@@ -32,18 +32,18 @@ Now as X = QR, our Xθ = y becomes QRθ = y, but we also just found Qγ = y, so 
 
 > What I still not quite understand here is why R remains, meaning that we still have to calculate an inverse for it. Could not we somehow manage to tuck it into the calculation as well, to get θ directly? And if not, how do we calculate the inverse in practice? (How to make it computationally effective)? Park for now.
 
-Refs: ESLII p54, [some lecture](http://homepages.ulb.ac.be/~majansen/teaching/STAT-F-408/slides01multipleregression_4.pdf)
+Refs: ESL p54, [some lecture](http://homepages.ulb.ac.be/~majansen/teaching/STAT-F-408/slides01multipleregression_4.pdf)
 
 In a general case, coordinates of X may be dependent, or close to it. Then, XᵀX from a general formula will be singular, and won't have an inverse, meaning that θ is not uniquely defined. If we use orthogonalization, and two columns of X are highly correlated (say, x1~x2), then x1 will get a normal score, but on the next step we'll have to face a vector that is almost pure noise: q = x2-proj(x1→x2) ~ x2-x2 = 0. Then both qᵀy and qᵀq will be very small, and θ_2 = qᵀy/qᵀq will be very unstable. Estimate for variance: var(θ_2) = σ²/qᵀq. Practical consequences for variable selection (dangers of collinearity), conjuctive dim reduction, ridge regression (why not just zero this θ if it's so bad?) etc.
 
-If Y is multivariate as well, but all errors in Y are independent, we just have several independent linear regressions. If errors in Y are correlated, the very definition of RSS is changed (to encorporate the covariance matrix), but we don't go deep into it here. Refs: ESLII p56
+If Y is multivariate as well, but all errors in Y are independent, we just have several independent linear regressions. If errors in Y are correlated, the very definition of RSS is changed (to encorporate the covariance matrix), but we don't go deep into it here. Refs: ESL p56
 
 ## Other losses
 **Are there alternatives to L2?** Sure, **L1 norm** = abs(distance), which effectively pushes f(x) towards median(y) rather than the mean(y): sum of distances to 2 points is min when you're exactly between them. Hard to work with, as derivatives are discontinuous.
 
 **Can regression be used for classification?** Yes, but see [[03_Classification]].
 
-**Max Likelihood**: In some way,can be considered  an alternative to L2 (MSE) loss. For a data sample y_i, the log-prob of observing it is equal to: L(θ) = ∑ log P(y_i | θ), summed by i (all points). We try to find θ that maximizes ∏P, and thus ∑logP. It is connected to L2 though, as least squares maximizes likelihood for conditional probability P(y|x,θ)=𝒩(h,σ²) where h = Xβ. _ESLII has a formula 2.35 for it, but without derivation. I think they may have found a derivative by θ, set it to zero, then integrate the right side by x, but I'm not sure._
+**Max Likelihood**: In some way,can be considered  an alternative to L2 (MSE) loss. For a data sample y_i, the log-prob of observing it is equal to: L(θ) = ∑ log P(y_i | θ), summed by i (all points). We try to find θ that maximizes ∏P, and thus ∑logP. It is connected to L2 though, as least squares maximizes likelihood for conditional probability P(y|x,θ)=𝒩(h,σ²) where h = Xβ. _ESL has a formula 2.35 for it, but without derivation. I think they may have found a derivative by θ, set it to zero, then integrate the right side by x, but I'm not sure._
  
 ## Bias-Variance Tradeoff
 Total prediction error (L2 loss) consists of two parts: **bias** and **variance**. Derivation:
@@ -71,18 +71,18 @@ So we ended up having 3 terms:
 * Bias: (Eh-Ey)²
 * Variance of the data, aka noise, or irreducable error: (Ey-y)²
 
-Refs: ESLII p24, p37; [lecture by K Weinberger](https://www.youtube.com/watch?v=zUJbRO0Wavo).
+Refs: ESL p24, p37; [lecture by K Weinberger](https://www.youtube.com/watch?v=zUJbRO0Wavo).
 
 > So it's directly related to overfitting. Low bias = high variance = great fit on the training set, but horrible fit on the testing set.
 
 > **My understanding** is that it is also somewhat similar to precision / recall situation. If you try to minimize bias (make your classifier cling to the data), you fall at mercy of your training set, and so increase variance. Each particular classifier, understood as an instance produced by some particular set of training data, will cling to this testing data, so all classifiers will be slightly different, if you train on different data. If you believe that the underlying solution has some constraints to it, you may want to restrain your classifier, even at cost of accepting higher bias (Eh-Ey), so that it would not change that widely for different subsets of your testing data. Regularization does that. Then for each given training set you'll get higher bias, but you'll reduce variance (of your classifier, across all possible training set), as all models will be more similar to each other, and hopefully also closer to the "ground truth". Essentially, a parsimony principle: an assumption that simpler models are better.
 
-A typical graphical illustration of it looks like this (ESLII p38), as you change a parameter, first where both training and testing losses go down, but at some point overfitting kicks in and turns the test curve up.
+A typical graphical illustration of it looks like this (ESL p38), as you change a parameter, first where both training and testing losses go down, but at some point overfitting kicks in and turns the test curve up.
 
 > But look, it would only work if the ground trugh is actually simple. Why does it work? Why is the ground truth actually simple? Is it some expected statistical property that the world actually follows? Or is it because a typical practical problem has certain properties? Seems like that; see below.
 
 ### Variance of parameter estimations
-How well can we guess θ? Assuming that y_i have normal uncorrelated noise with variance σ², we get var(θ) = (XᵀX)⁻¹σ², where σ² can be estimated from σ² ~ ∑ (y-h)² / (N-p-1). (ESLII p47) In this case, θ are destributed multivariate-Gaussian, and estimations for σ² are chi-squared with N-p-1 degrees of freedom. Which also means that we can use t-test for particular θ_i.
+How well can we guess θ? Assuming that y_i have normal uncorrelated noise with variance σ², we get var(θ) = (XᵀX)⁻¹σ², where σ² can be estimated from σ² ~ ∑ (y-h)² / (N-p-1). (ESL p47) In this case, θ are destributed multivariate-Gaussian, and estimations for σ² are chi-squared with N-p-1 degrees of freedom. Which also means that we can use t-test for particular θ_i.
 
 For **categorical variables** (in X), the situation is a bit different, as each of them is represented by several **dummy variables**  (one for each of the levels), and these dummy variables need to be included or excluded all together. F-statistics (with p1-p0, N-p1-1 degrees of freedom).
 
@@ -97,7 +97,7 @@ It can be proven through direct matrix substitution into the general formula for
 
 In practice, it means that there are estimators with lower variance, but they are necessarily biased. Which leads to a practical program of introducing some bias in order to reduce variance. For example, if we decide to set (aka "shrink") any particular θ_i to 0, we inevitably get a biased estimate.
 
-Refs: ESLII p51, [wiki](https://en.wikipedia.org/wiki/Gauss%E2%80%93Markov_theorem)
+Refs: ESL p51, [wiki](https://en.wikipedia.org/wiki/Gauss%E2%80%93Markov_theorem)
 
 ### Dimensionality curse
 Now let's consider a special case of bias-variance trade-off in a case of very high dimensions. Say, we have a linear model with error: y = Xᵀθ + ε (aka **additive error model**), where ε is normal noise with variance σ². Try to infer θ from a training set of Y. As θ = (XᵀX)⁻¹Xᵀy, we get it with errors of (XᵀX)⁻¹Xᵀε. Which means that whe we are estimating y as h = Xθ, during training we get errors for these estimations: X(XᵀX)⁻¹Xᵀε . 
@@ -109,14 +109,14 @@ J ~ E( xᵀCov(X)⁻¹xσ²/N ) + σ²= trace(Cov(X)⁻¹Cov(x))σ²/N + σ² = 
 
 > This trace thing here is pretty annoying, but it works. If we E() the left part, we get a E() of sum_ij (x_i x_j C⁻¹ij), which is p^2 terms. But if you open this trace(C∙C⁻¹), you get the same expression (j coming from trace-sum, and j from internal multiplication). So E() indeed gives the trace(), and then as trace() only runs through p terms, and all of these terms happen to be =1 by def of CC⁻¹, we get what we get.
 
-Which means that the higher the number of dimensions, the worse the error (variance). Now, some methods are worse than others: linear regression is actually faring OK, while some (like KNN regressor) get cursed pretty fast (ESLII p26), but the gist is the same for all. If you simulate this, you have diff deterioration curves for different data assumptions. IRL, we try to be in-between these two extremes (linear regression and 1NN) using some info (or assumptions) about the structure of the data. 
+Which means that the higher the number of dimensions, the worse the error (variance). Now, some methods are worse than others: linear regression is actually faring OK, while some (like KNN regressor) get cursed pretty fast (ESL p26), but the gist is the same for all. If you simulate this, you have diff deterioration curves for different data assumptions. IRL, we try to be in-between these two extremes (linear regression and 1NN) using some info (or assumptions) about the structure of the data. 
 
 # Philosophy of modeling
 Returning to bias-variance tradeoff, weconsider x and y as random variables, with a joint distribution P(x,y). We're trying to build a predictor f(x) that approximates y. The squared error loss: L = (y-f)² = ∬ (y-f)² P(x,y) dx dy. We can split P(x,y) into P(x)∙P(y|x), and integrate by y first (inside), then by x outside. Then to minimize total L, we can bind f(x) to matching y point-wise: f(x) = E(y|X=x). Which would essentially give us the **nearest neighbor** method (see the very beginning of "Classification" chapter). An alternative to point-wise matching would be a global smooth model, like linear regression. It makes regression and 1NN two opposite extremes of what can be done with the data. Other stuff (like **additive models** where f = ∑ f_j(x)) are kinda in-between.
 
 In spirit, all models are about setting local and global constraints on the behavior of predictor (such as **behavior in the neighborhood**, that is const for KNN, linear for local linear etc.), and the **granularity** of these  neighborhoods. Some methods (kernels, trees) make this granularity parameter explicit, some don't. And high dimensionality is a problem for all methods, regardless of how they work. 
 
-ESLII defines 3 broad classes of model smoothing / constraining:
+ESL defines 3 broad classes of model smoothing / constraining:
 * Roughness penalty
 * Kernel methods (aka local regression)
 * Basis functions and dictionaries
@@ -144,7 +144,7 @@ The maxim about stepwise regression is that it is useless for hypothesis testing
 Some people (like Thompson cited below) are really vehemently against them tho. That's because they are usually too optimistic (the very concept of degrees of freedom becomes problematic after multiple testing), yet are strictly less powerful than proper regularization, and also typically don't replicate, as the sequence of descent depends on the data, so performing stepwise regression on different subsets of data is much more likely to yield different results, compared to a more sophisticated model.
 
 Refs:
-* [[Guyon2003variable]], [wiki](https://en.wikipedia.org/wiki/Stepwise_regression), ESLII p59
+* [[Guyon2003variable]], [wiki](https://en.wikipedia.org/wiki/Stepwise_regression), ESL p59
 * Steyerberg, E. W., Eijkemans, M. J., Harrell Jr, F. E., & Habbema, J. D. F. (2001). Prognostic modeling with logistic regression analysis: in search of a sensible strategy in small data sets. Medical Decision Making, 21(1), 45-56.
 * Thompson, B. (2001). Significance, effect sizes, stepwise methods, and other issues: Strong arguments move the field. The Journal of Experimental Education, 70(1), 80-93. 
 
@@ -163,7 +163,7 @@ This is especially important in case of **Multicollinearity**, when you're tryin
 
 The name "**ridge**" comes from a visual example of what is describe above. Imagine that only part of the solution is well defined, and the rest is close ot null-space of X. Then the "true solution" is a "generalized cylinder" made by the true solution (in those coordinates that make sense), arbitrarily extended across the "irrelevant coordinates". Small changes in training data (right side of the Xθ=y equation) would sway the solution along this "ridge". By adding regularization we change a "ridge" into a "peak" (lines turn into parabolas), which stabilizes the solution against perturbations in both X and y.
 
-**How to pick  λ?** One method: **Ridge trace**: plot found coefficients as a function of λ, and eyeball value at which they stop oscillating, and switches to converging (not in the sense of becoming const, but in the sense of switching from curving up and down to monotone almost-linear change). A better approach, of course, is **cross-validation**. Also, for any given λ, one can estimate the effective degrees of freedom (as a trace of certain matrix, see ESLII p68), so for these plots it's common to use df(λ) for x axis, not λ itself.
+**How to pick  λ?** One method: **Ridge trace**: plot found coefficients as a function of λ, and eyeball value at which they stop oscillating, and switches to converging (not in the sense of becoming const, but in the sense of switching from curving up and down to monotone almost-linear change). A better approach, of course, is **cross-validation**. Also, for any given λ, one can estimate the effective degrees of freedom (as a trace of certain matrix, see ESL p68), so for these plots it's common to use df(λ) for x axis, not λ itself.
 
 Interestingly, if all x_i (columns, variables) are orthonormal, ridge regression has no reasons to penalize any one θ in particular, and just all of them get scaled by 1/(1+λ).
 
@@ -171,18 +171,18 @@ Interestingly, if all x_i (columns, variables) are orthonormal, ridge regression
 
 **Tikhonov regularization**: a generalization of Ridge. In this case we minimize |Ax-b|² + |Γx|² where Γ is some matrix. If Г=identity matrix I multiplied by a coefficient λ, we have a sum of squared x_i, and so Ridge regression. 
 
-> ESLII p67 also seems to suggest that ridge regression is somehow related to PCA, or can be understood in terms of first moving to the PCA space, then doing something, then projecting back, but the math is sketchy, and no good comments, so I'll park it for now.
+> ESL p67 also seems to suggest that ridge regression is somehow related to PCA, or can be understood in terms of first moving to the PCA space, then doing something, then projecting back, but the math is sketchy, and no good comments, so I'll park it for now.
 
-#todo : Deconstruct this post that seems to have a more concise and systematic summary of all math involved in parallels between shrinkage and PCA, and in the same system as ESLII: https://stats.stackexchange.com/questions/220243/the-proof-of-shrinking-coefficients-using-ridge-regression-through-spectral-dec
+#todo : Deconstruct this post that seems to have a more concise and systematic summary of all math involved in parallels between shrinkage and PCA, and in the same system as ESL: https://stats.stackexchange.com/questions/220243/the-proof-of-shrinking-coefficients-using-ridge-regression-through-spectral-dec
 
 Refs:
 * [Stackexchange](https://stats.stackexchange.com/questions/118712/why-does-ridge-estimate-become-better-than-ols-by-adding-a-constant-to-the-diago/119708#119708), on visual interpretations
-* ESLII p61
+* ESL p61
 
 ## Lasso and Elastic Net
 **L1 regularization**, aka **basis pursuit**: require ∑|θ_i| < t, or add λ∑|θ_i| penalty to the loss (again summing from 1 to p, meaning no punishment for the intercept θ0). Unlike for L2, it has no closed form solution (because abs() is harder to optimize).
 
-While Ridge tends to scale θ_i values down with a coefficient, lasso tends to slide (shift) them towards zero by a certain value, until they bury in 0 and become 0. For an orthonormal X, this can be proven theoretically (ESLII p71).
+While Ridge tends to scale θ_i values down with a coefficient, lasso tends to slide (shift) them towards zero by a certain value, until they bury in 0 and become 0. For an orthonormal X, this can be proven theoretically (ESL p71).
 
 Visual representation: romboid and a quadratic (elliptic) optimum nearby. A circle (ridge) projected on an elliptic field always has a global minimum. A corner made of two lines (lasso) would either reach a mininum on a line (non-zero optimal θ), or at the corner (zero θ). Graphically, it's easy to see that θ sets to 0 the moment the unpenalized minimum leaves the band made of 2 other sides of the diamond (draw it to see it).
 
@@ -211,7 +211,7 @@ As a result of this procedure, we get a piecewise-linear change of θ with "iter
 
 Similar to Shrinkage, in the sence that Shrinkage also ends up shrinking components with small eigenvalues more. With the principal components regression, we just zero them altogether. Unlike ridge, it can amplify "unworthy" coefficients in the original X space though, what would have been shrunk by both Ridge and Lasso.
 
-Refs: ESLII p79
+Refs: ESL p79
 
 ## Partial Least Squares
 1. Standardize columns of X
@@ -223,6 +223,6 @@ Refs: ESLII p79
 7. Repeat 3-6 m times (m<p)
 8. Project ξ back to θ
 
-The idea behind is to let y pull signal from X, regardless of how this signal is encoded (mixed?) in columns of X. ESLII claims though that "variance aspect tends to dominate", so in practice this method doesn't behave too differently than Ridge regression. Seems to also be similar in spirit to "Canonical Correlation Analysis" (see [[04_Features]] section). Same as PCR above, may inflate weaker dimensions, making it unstable. Which all together is probably why it is not that widely used? 
+The idea behind is to let y pull signal from X, regardless of how this signal is encoded (mixed?) in columns of X. ESL claims though that "variance aspect tends to dominate", so in practice this method doesn't behave too differently than Ridge regression. Seems to also be similar in spirit to "Canonical Correlation Analysis" (see [[04_Features]] section). Same as PCR above, may inflate weaker dimensions, making it unstable. Which all together is probably why it is not that widely used? 
 
-Refs: ESLII p81, [wiki](https://en.wikipedia.org/wiki/Partial_least_squares_regression)
+Refs: ESL p81, [wiki](https://en.wikipedia.org/wiki/Partial_least_squares_regression)

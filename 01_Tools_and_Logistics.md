@@ -36,14 +36,14 @@ All sorts of infrastructure stuff.
 ## Scikit-learn
 * A bunch of notebooks that implement all key ML methods, by Aurélien Geron, to accompany his book ("Hands-On Machine Learning with Scikit-Learn and TensorFlow"): https://github.com/ageron/handson-ml2
 
-# Coding habits for data scientists
+## Coding habits for data scientists
 * Keep code clean (not smelly). Types of **smells** ([ref](https://www.thoughtworks.com/insights/blog/coding-habits-data-scientists)):
-    * Dead code (commented, inconsequential)
-    * Print statements everywhere
-    * Bad variable names
-    * Functions that do too many things instead of one thing
-    * Code repetition
-    * Magic values
+    1. Dead code (commented out, inconsequential)
+    2. Print statements everywhere
+    3. Bad variable names
+    4. Functions that do too many things instead of one thing
+    5. Code repetition
+    6. Magic values
 * Smuggle code from Jupyter to classes as soon as possible (Jupyter only for protopying, reporting, and use case)
 * Write unit tests ([link to a decent intro](https://www.freecodecamp.org/news/an-introduction-to-testing-in-python/))
 * Make small and frequent commits
@@ -79,6 +79,7 @@ How to fight bad fit:
 * Overfitting: more training data; regularization; data augmentation; reduce model size
 
 Refs:
+* [Data Science Checklist](https://www.fast.ai/2020/01/07/data-questionnaire/) by Jeremy Howard
 * How to tell whether an ML solution is ready for production? [[Breck2017testing]]
 * Blog of [Jeremy Jordan](https://www.jeremyjordan.me/ml-projects-guide/)
 * Blog of [Aseem Bansal](https://medium.com/infinity-aka-aseem/things-we-wish-we-had-known-before-we-started-our-first-machine-learning-project-336d1d6f2184)

@@ -78,6 +78,10 @@ PhD thesis that was never published on biologically plausible gradient descend i
 
 Lim, S. et al. Inferring learning rules from distributions of fring rates in cortical neurons. Nat. Neurosci. 18, 1804–1810 (2015).
 
+Doerig, A., Bornet, A., Choung, O. H., & Herzog, M. H. (2019). Crowding Reveals Fundamental Differences in Local vs. Global Processing in Humans and Machines. bioRxiv, 744268.
+https://www.sciencedirect.com/science/article/pii/S0042698919302299
+Seem to be claiming that humans process images fundamentally differently than convolutional networks, because responding to perturbations follows a different logic. Sounds interesting!
+
 ## Free energy
 
 #freeenergy

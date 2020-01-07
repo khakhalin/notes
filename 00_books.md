@@ -1,6 +1,6 @@
 # Courses, books, and links
 
-## To file:
+## To check and file:
 Matrix calculus for deep learning
 https://explained.ai/matrix-calculus/index.html
 
@@ -8,7 +8,7 @@ Awesome collection of short tutorials (both ML and snippets of Python code) by C
 https://chrisalbon.com/
 Look through, decide the priority, and how to file.
 
-Interesting practical intro to ML projects; look through, decide how to file:
+Interesting practical intro to ML projects; look through:
 https://github.com/chiphuyen/machine-learning-systems-design
 
 ## Courses
@@ -20,13 +20,13 @@ https://github.com/chiphuyen/machine-learning-systems-design
 * [End-to-end machine learning](https://end-to-end-machine-learning.teachable.com) - sorta like a course from Brandon Rohrer
 
 ## Books
-Currently at: ESLII p101
+Currently at: ESL p139 (Basis expansion)
 
 (Given in subjective order of my gradual reading)
 * How to think like a computer scientist by Allen B. Downey: ([site](http://openbookproject.net/thinkcs/python/english3e/)) - best intro to Python
 * VLMS (Introduction to Applied Linear Algebra) by Stephen Boyd. [full pdf](http://vmls-book.stanford.edu/)
 * Algorithms by Sedgewick - uses Java, but is exceptionally clearly written
-* ESLII (The Elements of Statistical Learning) by Hastie, Tibshirani, Friedman. ([full pdf](https://web.stanford.edu/~hastie/ElemStatLearn/)) Very extensive, no code, most math is stated but not derived, poor exposition. If I could go back in time, I'd bumped ISLR and "Hands-On ML in Python" to this position, and left ESLII for self-study ([ref](https://www.quora.com/How-do-I-learn-the-book-Elements-of-Statistical-Learning-What-books-materials-would-help-beef-up-my-foundations-so-that-I-will-be-able-to-comprehend-the-book-easily)). This book should be great for refereshing material though.
+* ESL (The Elements of Statistical Learning) by Hastie, Tibshirani, Friedman. ([full pdf](https://web.stanford.edu/~hastie/ElemStatLearn/)) Very extensive, no code, most math is stated but not derived, poor exposition. If I could go back in time, I'd bumped ISLR and "Hands-On ML in Python" to this position, and moved ESL to the "Deeper Refresher" section ([ref](https://www.quora.com/How-do-I-learn-the-book-Elements-of-Statistical-Learning-What-books-materials-would-help-beef-up-my-foundations-so-that-I-will-be-able-to-comprehend-the-book-easily)). It's probably a great book to revisit and integrate the material you already know.
 * "The 100 pages ML book" by Andriy Burkov. [full pdf](http://themlbook.com/wiki/doku.php) 
 * Deep Learning by Ian Goodfellow et al. [full pdf](http://www.deeplearningbook.org/)
 * Programming in Python: Fluent Python, by Luciano Ramalho (no online version)
@@ -50,6 +50,7 @@ Refresher books
 
 Third priority books:
 * Algorithms by Erickson
+* Design Patterns for Python by Norvig: https://norvig.com/design-patterns/
 
 Job-search specific books:
 * Cracking the code interview.
