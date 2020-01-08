@@ -76,6 +76,12 @@ PhD thesis that was never published on biologically plausible gradient descend i
 
 ## Bottom-up validation
 
+Misra, D. (2019). Mish: A Self Regularized Non-Monotonic Neural Activation Function. arXiv preprint arXiv:1908.08681.
+https://arxiv.org/abs/1908.08681
+Claim that if you make activation function non-monotonic (almost like a sigmoid, but with slight overshoots), it actually helps in some ways.
+Github: https://github.com/digantamisra98/Mish
+May be a curious parallel to this recent finding in Neuro, about XOR computation by dendrites of an individual cell Gidon, A., Zolnik, T. A., Fidzinski, P., Bolduan, F., Papoutsi, A., Poirazi, P., ... & Larkum, M. E. (2020). Dendritic action potentials and computation in human layer 2/3 cortical neurons. Science, 367(6473), 83-87. (no free pdf)
+
 Lim, S. et al. Inferring learning rules from distributions of fring rates in cortical neurons. Nat. Neurosci. 18, 1804–1810 (2015).
 
 Doerig, A., Bornet, A., Choung, O. H., & Herzog, M. H. (2019). Crowding Reveals Fundamental Differences in Local vs. Global Processing in Humans and Machines. bioRxiv, 744268.

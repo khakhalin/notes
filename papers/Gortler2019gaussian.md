@@ -3,7 +3,7 @@ Jochen Görtler, Rebecca Kehlbeck, Oliver Deussen
 https://distill.pub/2019/visual-exploration-gaussian-processes/
 Interactive introduction.
 
-#ml #timeseries
+#timeseries #stats
 
 A random process x(t) (note: not one trace, but the whole "process", understood as all possible traces), such that if you pick a vector of random times t_i, and then consider a random vector {x(t_i)}, you find that it is has a multivariate normal distribution. 
 

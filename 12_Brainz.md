@@ -1,14 +1,13 @@
 # AI and biology
 #neuro #behav
 
-## Topics
-
+## Topical Bibliographies
 * [[bib_tracking]] - papers about auto-tracking many animals at once, then doing ML on this set
 * [[bib_reconstruction]] - papers about reconstructing connectivity from spiking
 
 # Bibliography
 
-## ML as a model for brains
+## DL as a model for brains
 
 [[Goncalves2017whatnot]] - ANN helps to understand how stereo vision works in mammals.
 

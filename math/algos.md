@@ -1,9 +1,8 @@
 # Algorithms
-
 #algo
 
 # Big O notation
-Different meaning in textbooks and in practical questions. In textbooks: upper bound, so if something is O(N), it is also O(N^2) by definition. In practice, just say the truth. 
+Limiting behavior at ∞. Different meaning in textbooks and in practical questions. In textbooks: upper bound, so if something is O(N), it is also O(N²) by definition. In practice, just say the truth. 
 
 * O(log N) appears when you have a tree, and always process one branch of this tree. Then the total number of steps = the number of branches = $\log_2 n$ . 
 * If you have to visit every branch of a tree, the total number of operations is n (for leaves) + n/2 + n/4 + ... = 2n, so we have O(N).

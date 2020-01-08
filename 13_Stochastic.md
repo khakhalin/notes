@@ -15,7 +15,6 @@ Variational Inference: A Review for Statisticians
 David M. Blei, Alp Kucukelbir, Jon D. McAuliffe
 
 ## Gaussian processes
-
 Relevant cards:
 * [[Gortler2019gaussian]]
 

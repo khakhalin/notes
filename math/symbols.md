@@ -8,7 +8,7 @@ Best search site:
 ⇒ ⇄ ↻ → 
 ∆ ∇ ∂
 ᵀ 
-⁻¹
+⁻¹ √
 ∀ ∃ ∄ ∅ ∈ ∉
 𝒩 ∞ ℝ
 □∎
@@ -23,5 +23,18 @@ https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode
 ա	բ	գ	դ	ե	զ	է	ը	թ	ժ	ի	լ	խ	ծ	կ	հ	ձ	ղ	ճ	մ
 յ	ն	շ	ո	չ	պ	ջ	ռ	ս	վ	տ	ր	ց	ւ	փ	ք	օ	ֆ	ու	և
 
+ⰀⰁⰂⰃⰄⰅⰆⰇⰈⰉⰊⰋⰌⰍⰎⰏⰐⰑⰒⰓⰔⰕⰖⰗⰘⰙⰚⰛⰜⰝⰞⰟⰠⰡⰢⰣⰤⰥⰦⰧⰨⰩⰪⰫⰬⰭⰮ
+
+
+Testing fancy formulas:
 
 $ლ = \frac{1}{ზ}\sum^{ზ}_{უ=1}{ტ_ბ\big(ბ_უ-წ(ქ_უ\cdot ჱ)\big)^2}$
+
+
+
+Testing weird interactions between italics and mathjax in markdown:
+
+This is fine before $(a^{ij}_k)$ but becomes italics after
+This is italics before $(a^{ij}_ k)$ but is fine after
+This is fine both before $(a_{k}^{ij})$ and after
+This is also fine both before $(a _ k^{ij})$ and after

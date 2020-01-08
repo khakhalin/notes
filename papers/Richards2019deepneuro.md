@@ -3,7 +3,7 @@
 Richards, B. A., Lillicrap, T. P., Beaudoin, P., Bengio, Y., Bogacz, R., Christensen, A., ... & Gillon, C. J. (2019). A deep learning framework for neuroscience. Nature neuroscience, 22(11), 1761-1770.
 [Direct link shared by Blake](https://www.nature.com/articles/s41593-019-0520-2.epdf?shared_access_token=n1zyUZ6-ypeHWkeaEs1FPNRgN0jAjWel9jnR3ZoTv0N5dsTXXcjpcGP7i54eL_L9GTMgy1V6NUDPE4-SxE_8Ip1gIa5G35VU4LeqRZ56IGy5uMJKd6aUZ4JeYonqPfWkstTCNFgazGPl8xJGrQAvuw%3D%3D)
 
-#review #deepneuro #links #credit
+#review #deepneuro #bib #credit
 
 That impactful opinion piece with 20 or something coolest comp neuroscientists. Overall, a great review to cite every time you claim that "bottom-up then compare" is a more productive approach for reverse engineering complex systems than going "top-down".
 

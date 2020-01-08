@@ -20,29 +20,11 @@ Blog:
 https://bair.berkeley.edu/blog/2019/12/18/smirl/
 Sounds extremely interesting!!
 
-Belkin, M., Hsu, D., Ma, S., & Mandal, S. (2019). Reconciling modern machine-learning practice and the classical bias–variance trade-off. Proceedings of the National Academy of Sciences, 116(32), 15849-15854.
-https://arxiv.org/abs/1812.11118
-
 Ribeiro, M. T., Singh, S., & Guestrin, C. (2016, August). Why should i trust you?: Explaining the predictions of any classifier. In Proceedings of the 22nd ACM SIGKDD international conference on knowledge discovery and data mining (pp. 1135-1144). ACM.
 https://arxiv.org/abs/1602.04938
 Seems to be a classic text, on model interpretatibility (that is often critical for production)
 
-Nakkiran, P., Kaplun, G., Bansal, Y., Yang, T., Barak, B., & Sutskever, I. (2019). Deep Double Descent: Where Bigger Models and More Data Hurt. arXiv preprint arXiv:1912.02292.
-https://mltheory.org/deep.pdf
-Blog description:
-https://openai.com/blog/deep-double-descent/
-
 Your Classifier is Secretly an Energy Based Model and You Should Treat it Like One Will Grathwohl, Kuan-Chieh Wang, Jörn-Henrik Jacobsen, David Duvenaud, Mohammad Norouzi, Kevin Swersky. https://arxiv.org/abs/1912.03263
-
-**Self-supervised collection:**
-1. He, K., Fan, H., Wu, Y., Xie, S., & Girshick, R. (2019). Momentum Contrast for Unsupervised Visual Representation Learning. arXiv preprint arXiv:1911.05722. https://arxiv.org/pdf/1911.05722.pdf
-2. Misra, I., & van der Maaten, L. (2019). Self-Supervised Learning of Pretext-Invariant Representations. arXiv preprint arXiv:1912.01991. https://arxiv.org/abs/1912.01991 
-3. Hénaff, O. J., Razavi, A., Doersch, C., Eslami, S. M., & Oord, A. V. D. (2019). Data-efficient image recognition with contrastive predictive coding. arXiv preprint arXiv:1905.09272. https://arxiv.org/abs/1905.09272v2
-
-What's the current view of greedy training of autoencoders? Is it an abandoned technique, or are people still working on it? Sample seminal papers:
-* Bengio, Y., Lamblin, P., Popovici, D., & Larochelle, H. (2007). Greedy layer-wise training of deep networks. In Advances in neural information processing systems (pp. 153-160).
-* Hinton, G. E, Osindero, S., and Teh, Y. W. (2006). A fast learning algorithm for deep belief nets. Neural Computation, 18:1527-1554.
-* http://scholarpedia.org/article/Deep_belief_networks
 
 Metz, L., Maheswaranathan, N., Cheung, B., & Sohl-Dickstein, J. (2018). Meta-Learning Update Rules for Unsupervised Representation Learning. arXiv preprint arXiv:1804.00222.
 https://arxiv.org/abs/1804.00222
@@ -89,7 +71,28 @@ https://arxiv.org/abs/1810.12805
 Yang, G. (2019). Wide Feedforward or Recurrent Neural Networks of Any Architecture are Gaussian Processes. In Advances in Neural Information Processing Systems (pp. 9947-9960).
 https://arxiv.org/abs/1910.12478
 
-## Bias-variance and tickets
+# Bias-variance
+#variance
+
+Belkin, M., Hsu, D., Ma, S., & Mandal, S. (2019). Reconciling modern machine-learning practice and the classical bias–variance trade-off. Proceedings of the National Academy of Sciences, 116(32), 15849-15854.
+https://arxiv.org/abs/1812.11118
+
+Geman, S., Bienenstock, E., & Doursat, R. (1992). Neural Networks and the Bias/Variance Dilemma. Neural Computation.
+Classical work everybody reference, even though now people are saying it may not be completely correct?
+
+Neal, B. (2019). On the Bias-Variance Tradeoff: Textbooks Need an Update. arXiv preprint arXiv:1912.08286.
+https://arxiv.org/abs/1912.08286
+Blog post to accompany it: [[Neal2019blog]]
+
+Neal, B., Mittal, S., Baratin, A., Tantia, V., Scicluna, M., Lacoste-Julien, S., & Mitliagkas, I. (2018). A modern take on the bias-variance tradeoff in neural networks. arXiv preprint arXiv:1810.08591.
+https://arxiv.org/abs/1810.08591
+
+Nakkiran, P., Kaplun, G., Bansal, Y., Yang, T., Barak, B., & Sutskever, I. (2019). Deep Double Descent: Where Bigger Models and More Data Hurt. arXiv preprint arXiv:1912.02292.
+https://mltheory.org/deep.pdf
+Blog description:
+https://openai.com/blog/deep-double-descent/
+
+# Tickets
 
 Arora, S., Du, S. S., Li, Z., Salakhutdinov, R., Wang, R., & Yu, D. (2019). Harnessing the Power of Infinitely Wide Deep Nets on Small-data Tasks. arXiv preprint arXiv:1910.01663.
 https://arxiv.org/pdf/1910.01663.pdf
@@ -158,7 +161,20 @@ Panagiotatos, G., Passalis, N., Iosifidis, A., Gabbouj, M., & Tefas, A. (2019, S
 https://ieeexplore.ieee.org/abstract/document/8903112
 Something similar: auto-generated curriculum. Not available online for some reason.
 
-## Exploration, curiosity, meta-learning
+# Self-supervised learning
+
+He, K., Fan, H., Wu, Y., Xie, S., & Girshick, R. (2019). Momentum Contrast for Unsupervised Visual Representation Learning. arXiv preprint arXiv:1911.05722. https://arxiv.org/pdf/1911.05722.pdf
+
+Misra, I., & van der Maaten, L. (2019). Self-Supervised Learning of Pretext-Invariant Representations. arXiv preprint arXiv:1912.01991. https://arxiv.org/abs/1912.01991 
+
+Hénaff, O. J., Razavi, A., Doersch, C., Eslami, S. M., & Oord, A. V. D. (2019). Data-efficient image recognition with contrastive predictive coding. arXiv preprint arXiv:1905.09272. https://arxiv.org/abs/1905.09272v2
+
+What's the current view of greedy training of autoencoders? Is it an abandoned technique, or are people still working on it? Sample seminal papers:
+* Bengio, Y., Lamblin, P., Popovici, D., & Larochelle, H. (2007). Greedy layer-wise training of deep networks. In Advances in neural information processing systems (pp. 153-160).
+* Hinton, G. E, Osindero, S., and Teh, Y. W. (2006). A fast learning algorithm for deep belief nets. Neural Computation, 18:1527-1554.
+* http://scholarpedia.org/article/Deep_belief_networks
+
+# Exploration, curiosity, meta-learning
 
 Meire Fortunato, Mohammad Gheshlaghi Azar, Bilal Piot, Jacob Menick, Ian Osband, Alex Graves, Vlad Mnih, Remi Munos, Demis Hassabis, Olivier Pietquin, et al. Noisy networks for exploration. arXiv preprint arXiv:1706.10295, 2017
 A weak (not good enough) way to add exploration to AI playing videogames
