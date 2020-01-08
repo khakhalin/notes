@@ -4,6 +4,7 @@ All sorts of infrastructure stuff.
 # Python
 
 ## Core Python
+References:
 * Tips from Chip Huyen: https://github.com/chiphuyen/python-is-cool
 * Nice [list of Python gotchas](https://www.toptal.com/python/top-10-mistakes-that-python-programmers-make) from Martin Chilikian
 * f-strings: http://zetcode.com/python/fstring/ , and [this specification](https://docs.python.org/3/library/string.html#format-specification-mini-language) (mini-language!)
@@ -15,6 +16,7 @@ All sorts of infrastructure stuff.
 * To add += 1 to a dict when a key may not exist, use `get()` as it has a default value: `a[i] = a.get(i,0)+1`
 * To get some (or rather, first) dict from a dict, do `next(iter(a.keys()))`
 * Objects (including empty lists `[]`) should never be used as default arguments for functions, as they are evaluated only once per program (during object definition), not when methods are called! Insetad use `x=None`, then `if x is None: x=[]`. It sounds super-cumbersome, but that's just how it is. ([source](https://docs.python-guide.org/writing/gotchas/))
+* **Docstring**: First constant in a declaration, starts and ends with triple double quotes `"""`, accessible via `object.__doc__` property. At the very least, one sentence, capitalized, with a full stop at the end, explaining what this function does (not how). Don't include the name or usage. Any other comments - lower, after an empty line. For modules, similar, at the very beginning, before any declarations. Refs: [1](https://www.python.org/dev/peps/pep-0257/), [2](https://www.pythonforbeginners.com/basics/python-docstrings)
 
 ## Matplotlib
 * Brief intro from Brad Solomon: https://realpython.com/python-matplotlib-guide/
@@ -28,13 +30,12 @@ All sorts of infrastructure stuff.
     * Good: reference both by label (index): `d.loc[1,'x']`
     * Also Good: reference both by position:`d.iloc[1,0]`. Row goes first. 
     * Read, but not write: `d.x[1]`, which is equivalent to `d['x'][1]`.
-    * Read but not write: Both `d.x.iloc[1]` and `d.iloc[1].x`. Documentation states that whether any given slice would work orn ot is "officially unpredictable", so chaining shoud never be used.
+    * Read but not write: Both `d.x.iloc[1]` and `d.iloc[1].x`. Documentation states that whether any given slice would work or not is "officially unpredictable", so chaining shoud never be used.
 * Out-of-range integers are forgiven (ignored) on reading, but cause an error if you try to write
-* For **conditional data retrieval**, either logical indexing `d.loc[d.x>0]` (can be combined with list comprehensions, can be written to) or queries: `d.query('x>0')` (easier to read, slightly faster, but cannot be written to).
-* Conditional indexing supports functions, as long as they take, and return, Pandas series (or something similar, like Numpy array)
-
-## Scikit-learn
-* A bunch of notebooks that implement all key ML methods, by Aurélien Geron, to accompany his book ("Hands-On Machine Learning with Scikit-Learn and TensorFlow"): https://github.com/ageron/handson-ml2
+* For **conditional data retrieval**: 
+    * either **logical indexing** `d.loc[d.x>0]` (can be combined with list comprehensions, and can be written to) 
+    * or **queries**: `d.query('x>0')` (easier for a human to read; reads slightly faster, but cannot be written to).
+* Conditional indexing supports functions, as long as they take and return Pandas series, or something compatible, like a Numpy array).
 
 ## Coding habits for data scientists
 * Keep code clean (not smelly). Types of **smells** ([ref](https://www.thoughtworks.com/insights/blog/coding-habits-data-scientists)):
@@ -51,7 +52,7 @@ All sorts of infrastructure stuff.
 # Tensorflow and Keras
 * Links to several tutorials: https://github.com/sayakpaul/TF-2.0-Hacks/blob/master/README.md
 
-**Random Notes:**
+Random Notes:
 * **Tensor object**:  type, shape, and a bunch of numbers. For example, when working with images, we have a 4D structure: image# × W × H × ColorChannels.
 * TF relies on a function that iterates through (features, labels) as tuples. And instead of directly linking to data, it wants to receive a data-generating function (for lazy / parallel execution?)
 
@@ -128,9 +129,6 @@ Refs:
 * Separate data pre-processing from the learning pipeline: at rearch phase you want to pre-process data once, then play with it repeatedly ([ref](https://medium.com/infinity-aka-aseem/things-we-wish-we-had-known-before-we-started-our-first-machine-learning-project-336d1d6f2184))
 * You can always gain a few more % by using ensembles ([ref](http://karpathy.github.io/2019/04/25/recipe/))
 
-# GIT
-* Funny short cheatsheet "Dangit": http://dangitgit.com/
-
 # SQL
 [This is a good reference](https://www.w3schools.com/sql/default.asp), and here's a **generic query**: 
 ```sql
@@ -199,3 +197,50 @@ Apparently it's possible not to grant users permissions to delete rows and drop 
 **Operations on strings, numbers, and dates**: there are lots of built-in functions; too many to mention, including math, trigonometry, string manipulation (like `LEFT`, `LEN`, `LOWER`, and alike), and what not. Some interesting ones that are not obvious are `LEAST` and `GRATEST` that work across differenct columns within the same row, as opposed to MAX and MIN that work along all rows (entries) for a returned column. There are also lots of system-specific operaions on dates and times. Read the manual.
 
 **Control structures:** apparently SQL (especially larger systems, like SQLServer, or Transact-SQL from Microsoft) also has its own system of control structures, with IF, ELSE, BEGIN TRY, BEGIN CATCH, WHILE, and what not.
+
+# GIT
+Most typical everyday use:
+* `git pull` - 	fetch latest changes, merge, and rebase head
+* `git diff` - show differences to unstaged files
+* `git add .` - stage everytyhing
+* `git commit -m "Comment"` - commit
+* `git push` - push to origin ('Origin' is a silly name they use for a remote repo)
+
+Working with individual files and commits:
+* `git show [branch]:[file]` - show file changes. Tons of output formatting. On itself, describes head. [1](https://git-scm.com/docs/git-show)
+* `git blame [file]` - describes changes for a file. Note that filenames go without quotation marks.
+* `git diff commit1 commit2` - compare.
+* `git log -p [file/dir]` - full history for this file, with diffs.
+* `git add [file]` - add one file only.
+
+Backing up, carefully:
+* `git reset [file]` - when a file was staged, but not yet committed, unstage it.
+* `git stash` - put all uncommited files to a buffer
+* `git stash pop` - pop files from a buffer
+* `git rebase -i HEAD~3` - squash last 3 commits into one, interactively. Do it only if you haven't pushed yet (or you'll get a conflict with a remote repo), unless you're morally prepared to fix everything locally and force-push to origin, rewriting everything. "Interactively" here means that a list of commits is generated, and you leave `pick` for those you want to leave; replace it with `drop` for those you want to delete, and `squash` for those that needs to be squashed (just make sure there's a 'pick' before it, for somewhere to squash to). [r1](https://git-scm.com/docs/git-rebase#_interactive_mode)
+
+Backing up, in panicky mode:
+* `git reflog` → find last commit that is good → `git reset HEAD@{index}`- resets head to this commit, deletes everything after.
+
+Branching:
+* `git checkout branch_name` - moving between branches.
+* `git branch branch_name` - creates a new branch.
+
+Dangerous practices:
+* `git pull --rebase` - rebasing appends one branch to another (streamlining the forks), turning any conflicts into back-and-forth changes (bad), and essentially recommitting commits from source branch in a goal branch (unlike with merge, there will be no trace of inheritence). b1→rebase b2→ merge b1 will duplicate commits in b1. The only benefit of rebase is that the history looks linear, simple, and without merge commits. OK on rewriting local branches, or for code cleanup. B	ad for public branches. [r1](http://thelazylog.com/git-rebase-or-git-pull/), [r2](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
+* `git push --force` - hard push to origin, overwriting it: probably very rarely a good idea?
+* `git fetch origin master; git reset --hard origin/master` - hard-pull from origin overwriting local files. Equally dangerous. [r1](https://stackoverflow.com/questions/1125968/how-do-i-force-git-pull-to-overwrite-local-files)
+
+Destroying stuff
+* `git clean` - deletes all uncommited files
+
+Open questions:
+* `git checkout -b branchName` - [this](https://blog.carbonfive.com/2017/08/28/always-squash-and-rebase-your-git-commits/) recommends it as a first command after a pull, for the "bug/feature" branch. Does it create a new branch?
+* `git pull -f` - what does this f mean?
+* `pick`
+* `fixup` - condenses several commits into one?
+* why `commit -am` (for committing all) is even an option? What's the point of committing all?
+* pull requests?
+
+References:
+* Funny short cheatsheet "Dangit": http://dangitgit.com/
