@@ -44,6 +44,7 @@ Technical stuff
 * bash
 * Hadoop
 * Spark
+* Python closures, why they are a thing, what's dangerous about them, and how to use them
 
 Random pieces of math
 * How to calculate single-value-decomposion and eigenvector decomposition in practice?

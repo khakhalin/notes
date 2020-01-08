@@ -40,6 +40,12 @@ Introduces "communicatibility #centrality"
 P. Bonacich. Factoring and weighting approaches to clique identification. J. Math. Sociol.,
 2:113–120, 1972.
 
+## Network complexity
+
+da Fontoura Costa, L. (2018). What is a Complex Network?(CDT-2).
+[ResearchGate link](https://www.researchgate.net/profile/Luciano_Da_F_Costa/publication/324312765_What_is_a_Complex_Network_CDT-2/links/5aca49ba4585151e80a91abd/What-is-a-Complex-Network-CDT-2.pdf)
+Hmm. A very short illustrated mini-review, and the topic is good, but is it a good paper? Check.
+
 ## Automata on networks
 
 R. Pastor-Satorras, C. Castellano, P. Van Mieghem, and A. Vespignani. Epidemic processes

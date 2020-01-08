@@ -31,7 +31,7 @@ Currently at: ESL p139 (Basis expansion)
 * Deep Learning by Ian Goodfellow et al. [full pdf](http://www.deeplearningbook.org/)
 * Programming in Python: Fluent Python, by Luciano Ramalho (no online version)
 * MML (Mathematics for Machine Learning) by M.P. Deisenroth: [full pdf](https://mml-book.github.io/)
-* Hands-On M with Scikit-Learn, Keras, and TensorFlow, by Aurélien Géron. Python obviously. [All labs on github](https://github.com/ageron/handson-ml2), but no full version online.
+* Hands-On M with Scikit-Learn, Keras, and TensorFlow, by Aurélien Géron. Python obviously. [All labs on github](https://github.com/ageron/handson-ml2), but no full version of the book online.
 
 Second priority books:
 * On Programming Well, by Robert C. Martin (no online version)
@@ -66,8 +66,3 @@ Books that are not on my reading list, but keeping here just in case:
 * [A very nice annotated list of book recommendations](https://towardsdatascience.com/beyond-the-mooc-a-bookworms-guide-to-data-science-e87271cb0572)
 * [Machine learning for humans, 80/20 reading list](https://medium.com/machine-learning-for-humans/ai-reading-list-c4753afd97a) - claims to be curated. Sections on ML, Deep, RL, and then various general readings about the meaning of it all.
 * [Scientific visualization with matplotlib](https://github.com/rougier/scientific-visualization-book) - an open-source book project in the works that hadn't been released yet, but the previews look lovely
-
-## Parts of books put on hold for now
-
-ESLII
-* Fancy math about shrinkage and selectors: p84-100
