@@ -1,7 +1,7 @@
 # Features, Dim reduction, Clustering
 #features
 
-# Linear Basis Expansion
+# Filtering, Linear Basis Expansion
 The idea is to go beyond "linear" in linear regression, but retain the spirit of replacing complex and noisy X with some simple, probably smooth functions of fewer parameters.
 
 f(X) = ∑βj hj(X), 
@@ -22,13 +22,31 @@ Consider **Piecewise polynomials**. The simplest example ever: downsampling, whi
 
 **Natural cubic spline**: is forced to become linear on all knots (with f''=0), with no curvature. Three benefits: 1) same polynomial can be safely extrapolated outside the range, as it fits edge data with a reasonable straight line (instead of a crazy overshoot that cubic splines always want to do), 2) two fewer degrees of freedom per spline to deal with, 3) arguably, look quite nice. Formulas may be solved explicitly, it is just annoying. [ref](https://towardsdatascience.com/numerical-interpolation-natural-cubic-spline-52c1157b98ac)
 
+## Smoothing splines
+Instead of picking knot points (for splines), let's use regularization. Loss = ∑(y-f(x))² + λ∫(f''(x))²dt, where λ is a **smoothing parameter**. Then apply it to a natural spline sequence with knots in unique values of x_i (that apparently happens to be an optimal function for this type of task). Apparently, there also exists an optimal basis of natural splines F, so f = ∑Fi(x)θi, and after combining it with the equation fo loss, we get a generalized ridge regression:
+
+L(θ, λ) = (y-Fθ)ᵀ(y-Fθ) + λθᵀΩθ, where Ω is a matrix with $Ω_{jk} = \int F'' _ j(t)F''_ k(t)dt$. It gives the solution: θ = (FᵀF + λΩ)⁻¹Fᵀy. There exist computationally effective way to calculate that all. 
+
+An approximation for y can now be produced from here, by doing h = Fθ = F(FᵀF + λΩ)⁻¹Fᵀy = Sy, where S is a **smoother matrix**, or smoother operator. Linear in respect to y. This matrix S = F(FᵀF + λΩ)⁻¹Fᵀ is similar to a standard projection operator B(BᵀB)⁻¹Bᵀ; it's also symmetric positive semidefinite, but while H² = H, S² ≤ S (because of the shrinkage). As for a (reasonable?) projection operator tr(H) = the number of coordinates remaining in place = dimention of the projection space, we can use df$_ λ$= tr(S) an estimate for the **effective degrees of freedom**.
+
+Another way to write S is to split it in a so-called **Reinsch form**: S = (I+λK)⁻¹, where K is not depended on λ, and is called a **penalty matrix**. (_I'm not immediately sure why it is possible._) The igenvectors can be found (ESL p155), and they don't depend on λ. The **Bias-Variance Tradeoff** is quite prominent in this case (ESL p159)
+
+> #todo : ESL p161 to p181 skipped for now: Nonparametric Logistic Regression, Multididimensional splines, Reproducing Kernel Hilbert Spaces (RKHS), 
+
+## Wavelets
+
+> Also parked for now: Wavelet smoothing (around ESL p170)
+
+# Kernel Smoothing Method
+> ESL 192
+
 # Variable selection
 Key references:
 * [[Guyon2003variable]] - review on feature selection (as well as some info on construction). 
  
 Basic checklist:
 1. Use domain knowledge
-2. Normalize variables where appropriate
+2. Normalize variables (where appropriate)
 3. If variables aren't independent, construct **conjunctive features**
 4. If need to prune for external reasons (compute?) create **disjunctive**, or weighted
 5. Get baseline by assessing features independently

@@ -9,7 +9,7 @@ Relating network connectivity to dynamics: opportunities and challenges for theo
 https://www.sciencedirect.com/science/article/pii/S0959438819300443 
 Review. Exactly what it should be (networks, motifs, dynamics)
 
-## Criticality and small-scale dynamics
+## Criticality, inhibition, dynamics
 
 Popular account, harvest all links:
 https://www.quantamagazine.org/brains-may-teeter-near-their-tipping-point-20180614/
@@ -17,6 +17,11 @@ https://www.quantamagazine.org/brains-may-teeter-near-their-tipping-point-201806
 25 years of criticality in neuroscience — established results, open controversies, novel concepts J Wilting, V Priesemann
 [https://www.sciencedirect.com/science/article/pii/S0959438819300248]
 Very short, so a must read.
+
+Mechanisms underlying gain modulation in the cortex (2020)
+Katie A. Ferguson & Jessica A. Cardin 
+https://www.nature.com/articles/s41583-019-0253-y?WT.mc_id=TWT_NatRevNeurosci
+New review in Nature; ppl seem to like
 
 Sussillo, D. and Abbott, L. F. (2009). Generating Coherent Patterns of Activity from Chaotic Neural Networks. Neuron, 63(4):544–557.
 

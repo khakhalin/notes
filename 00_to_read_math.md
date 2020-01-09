@@ -71,9 +71,7 @@ https://arxiv.org/abs/1810.12805
 Yang, G. (2019). Wide Feedforward or Recurrent Neural Networks of Any Architecture are Gaussian Processes. In Advances in Neural Information Processing Systems (pp. 9947-9960).
 https://arxiv.org/abs/1910.12478
 
-# Bias-variance
 #variance
-
 Belkin, M., Hsu, D., Ma, S., & Mandal, S. (2019). Reconciling modern machine-learning practice and the classical bias–variance trade-off. Proceedings of the National Academy of Sciences, 116(32), 15849-15854.
 https://arxiv.org/abs/1812.11118
 
@@ -92,8 +90,6 @@ https://mltheory.org/deep.pdf
 Blog description:
 https://openai.com/blog/deep-double-descent/
 
-# Tickets
-
 Arora, S., Du, S. S., Li, Z., Salakhutdinov, R., Wang, R., & Yu, D. (2019). Harnessing the Power of Infinitely Wide Deep Nets on Small-data Tasks. arXiv preprint arXiv:1910.01663.
 https://arxiv.org/pdf/1910.01663.pdf
 
@@ -101,9 +97,12 @@ Ba, J., & Caruana, R. (2014). Do deep nets really need to be deep?. In Advances 
 https://papers.nips.cc/paper/5484-do-deep-nets-really-need-to-be-deep.pdf
 Seems to be one of the original network distillation papers (800 refs)
 
+# Tickets, distillation, transfer, curriculum
+#ticket
+
 Frankle, J., & Carbin, M. (2018). The lottery ticket hypothesis: Finding sparse, trainable neural networks. arXiv preprint arXiv:1803.03635.
 https://arxiv.org/abs/1803.03635
-Original paper presenting the lottery #ticket hypothesis.
+Original paper presenting the lottery ticket hypothesis.
 
 Zhou, H., Lan, J., Liu, R., & Yosinski, J. (2019). Deconstructing lottery tickets: Zeros, signs, and the supermask. arXiv preprint arXiv:1905.01067.
 https://arxiv.org/abs/1905.01067
@@ -125,8 +124,6 @@ They trained the same network (or similar networks) thousands of times, and chec
 Tweetprint:
 https://twitter.com/SussilloDavid/status/1153427790672171009
 
-## Transfer, distillation
-
 #distillation #transfer
 
 Hinton, G., Vinyals, O., & Dean, J. (2015). Distilling the knowledge in a neural network. arXiv preprint arXiv:1503.02531.
@@ -145,7 +142,7 @@ von Oswald, J., Henning, C., Sacramento, J., & Grewe, B. F. (2019). Continual le
 https://arxiv.org/abs/1906.00695
 If it get it right from the abstract, this can be called meta-networks as well: a network that learns to predict weights for a network that would follow a task; so one step above learning the weights for each individual task. Essentially, instead of remembering all possible network configurations for all possible tasks, to reset the network each time, they use this hypernetwork to interpolate in the space of parameters.
 
-## Curriculum
+#curriculum
 
 Wang, T., Zhu, J. Y., Torralba, A., & Efros, A. A. (2018). Dataset Distillation. arXiv preprint arXiv:1811.10959.
 https://arxiv.org/pdf/1811.10959.pdf
@@ -161,6 +158,16 @@ Panagiotatos, G., Passalis, N., Iosifidis, A., Gabbouj, M., & Tefas, A. (2019, S
 https://ieeexplore.ieee.org/abstract/document/8903112
 Something similar: auto-generated curriculum. Not available online for some reason.
 
+**MNIST for small experiments**
+
+Kim, T. H., & Choi, J. (2018). ScreenerNet: Learning Self-Paced Curriculum for Deep Neural Networks. arXiv preprint arXiv:1801.00904.
+https://arxiv.org/pdf/1801.00904.pdf
+Not a popular one (9 citations since 2018), but may have some points relevant for me specifically.
+
+Reduced MNIST: how well can machines learn from small data? By Michael Nielsen. Nov 15, 2017
+http://cognitivemedium.com/rmnist
+Blog post on learning on super-small subsets of MNIST (not an official pub, so never cited). One example of each digit apparently brings accuracy to 42% for a naive NN (vs 97% for full), and ~56% (vs 99% for full) for a pretrained conv net (2 layers, not trained on mnist specifically), followed by 2 fully connected. Regularization becomes extremely important, as a way to fight overfitting, and even switching to convnet for this may be considered a type of regularization, I think.
+
 # Self-supervised learning
 
 He, K., Fan, H., Wu, Y., Xie, S., & Girshick, R. (2019). Momentum Contrast for Unsupervised Visual Representation Learning. arXiv preprint arXiv:1911.05722. https://arxiv.org/pdf/1911.05722.pdf
@@ -174,7 +181,7 @@ What's the current view of greedy training of autoencoders? Is it an abandoned t
 * Hinton, G. E, Osindero, S., and Teh, Y. W. (2006). A fast learning algorithm for deep belief nets. Neural Computation, 18:1527-1554.
 * http://scholarpedia.org/article/Deep_belief_networks
 
-# Exploration, curiosity, meta-learning
+# Exploration, curiosity, RL
 
 Meire Fortunato, Mohammad Gheshlaghi Azar, Bilal Piot, Jacob Menick, Ian Osband, Alex Graves, Vlad Mnih, Remi Munos, Demis Hassabis, Olivier Pietquin, et al. Noisy networks for exploration. arXiv preprint arXiv:1706.10295, 2017
 A weak (not good enough) way to add exploration to AI playing videogames
@@ -189,7 +196,7 @@ Research article on imagination, recursion, and abstraction. Guessing context vi
 Dauphin, Y. N., & Schoenholz, S. (2019). MetaInit: Initializing learning by learning to initialize. In Advances in Neural Information Processing Systems (pp. 12624-12636).
 https://papers.nips.cc/paper/9427-metainit-initializing-learning-by-learning-to-initialize
 
-## RL
+#rl
 
 Leibo, J. Z., Hughes, E., Lanctot, M., & Graepel, T. (2019). Autocurricula and the emergence of innovation from social interaction: A manifesto for multi-agent intelligence research. arXiv preprint arXiv:1903.00742.
 https://arxiv.org/pdf/1903.00742.pdf
@@ -218,7 +225,7 @@ Yu, H., Edunov, S., Tian, Y., & Morcos, A. S. (2019). Playing the lottery with r
 https://arxiv.org/abs/1906.02768
 Lottery tickets in RL domain.
 
-## RNNs
+## RNNs, Attention
 
 https://distill.pub/2019/memorization-in-rnns/
 How LSTM networks remember text: a visual intro.
@@ -226,8 +233,6 @@ How LSTM networks remember text: a visual intro.
 Hafner, D., Irpan, A., Davidson, J., & Heess, N. (2017). Learning hierarchical information flow with recurrent neural modules. In Advances in Neural Information Processing Systems (pp. 6724-6733).
 https://papers.nips.cc/paper/7249-learning-hierarchical-information-flow-with-recurrent-neural-modules.pdf
 ThalNet, which like a virtual thalamus. Only cited by 4 since 2017, so doesn't look like it caught on.
-
-## Attention
 
 Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., ... & Polosukhin, I. (2017). Attention is all you need. In Advances in neural information processing systems (pp. 5998-6008).
 Transformers network
@@ -250,29 +255,13 @@ Single Headed Attention RNN: Stop Thinking With Your Head
 https://arxiv.org/abs/1911.11423
 Looks somewhat advanced (from the technical, not math pov), but if I get it right, they tried to diversify the field by deliberately sticking to a non-mainstream approach (something that is NOT transformers), and got good performance. Also is apparently considered well-written.
 
-## Symbolic
-
-Yoshua Bengio’s short reading list
-* BabyAI: First Steps Towards Grounded Language Learning With a Human In the Loop, Chevalier-Boisvert et al.,
-2018: https://arxiv.org/abs/1810.08272v2.
-* A Meta-Transfer Objective for Learning to Disentangle Causal Mechanisms, Bengio et al., 2019:
-https://arxiv.org/abs/1901.10912.
-* Learning Neural Causal Models from Unknown Interventions, Ke et al., 2019: https://arxiv.org/abs/1910.
-01075.
-* Recurrent Independent Mechanisms, Goyal et al., 2019: https://arxiv.org/abs/1909.10893.
-* The Consciousness Prior, Bengio et al., 2017: https://arxiv.org/abs/1709.08568.
-
-Paul Smolensky. Next-generation architectures bridge gap between neural and symbolic representations with neural symbols. Microsoft Research blog. December 12, 2019.
-https://www.microsoft.com/en-us/research/blog/next-generation-architectures-bridge-gap-between-neural-and-symbolic-representations-with-neural-symbols/
-
-
-## Autoencoders
+# AEs, GANs, Generation
 
 Oord, A. V. D., Dieleman, S., Zen, H., Simonyan, K., Vinyals, O., Graves, A., ... & Kavukcuoglu, K. (2016). Wavenet: A generative model for raw audio. arXiv preprint arXiv:1609.03499.
 https://arxiv.org/abs/1609.03499
 1.4k citations: famous really successful realtime audio generation network from Google DeepMind.
 
-## GANs and generation
+#gan
 
 #todo: Find original Neurips GAN paper from 2016?
 
@@ -332,7 +321,7 @@ ArXiv e-prints. 2018.
 
 # Alternative network designes
 
-## Helmholtz Machines
+**Helmholtz Machines**
 
 Kevin G. Kirby (2006). A Tutorial on Helmholtz Machines 
 https://www.nku.edu/~kirby/docs/HelmholtzTutorialKoeln.pdf
@@ -341,21 +330,14 @@ Dayan, P., Hinton, G. E., Neal, R. M., & Zemel, R. S. (1995). The helmholtz mach
 http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.34.1800&rep=rep1&type=pdf
 Original paper by Hinton, 1k citations.
 
-## MNIST for small experiments
-
-Kim, T. H., & Choi, J. (2018). ScreenerNet: Learning Self-Paced Curriculum for Deep Neural Networks. arXiv preprint arXiv:1801.00904.
-https://arxiv.org/pdf/1801.00904.pdf
-Not a popular one (9 citations since 2018), but may have some points relevant for me specifically.
-
-Reduced MNIST: how well can machines learn from small data? By Michael Nielsen. Nov 15, 2017
-http://cognitivemedium.com/rmnist
-Blog post on learning on super-small subsets of MNIST (not an official pub, so never cited). One example of each digit apparently brings accuracy to 42% for a naive NN (vs 97% for full), and ~56% (vs 99% for full) for a pretrained conv net (2 layers, not trained on mnist specifically), followed by 2 fully connected. Regularization becomes extremely important, as a way to fight overfitting, and even switching to convnet for this may be considered a type of regularization, I think.
-
-# Meta and CogSci
-
+# CogSci and Meta
 Turing, A. M. (1950). Computing machinery and intelligence. In Parsing the Turing Test (pp. 23-65). Springer, Dordrecht. 2005.
 http://www.geielettronica.it/images/pdf/turing.pdf
 Said to be a really nicely written paper, seminal, good examples, and with 13k citations.
+
+van Rooij, I., Wright, C. D., Kwisthout, J., & Wareham, T. (2018). Rational analysis, intractability, and the prospects of ‘as if’-explanations. Synthese, 195(2), 491-510.
+On how humans (and thus AI) could handle intractable problems.
+Also these 2 blog posts that summarize and comment on this research: [one](https://experiencemachines.wordpress.com/2019/11/13/five-ways-the-mind-does-not-solve-computationally-intractable-problems-and-one-way-it-does/), and [two](https://irisvanrooijcogsci.com/2020/01/01/sampling-cannot-make-hard-work-light/)
 
 Mesulam, M. M. (1998). From sensation to cognition. Brain: a journal of neurology, 121(6), 1013-1052.
 http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.120.8687&rep=rep1&type=pdf
@@ -385,7 +367,22 @@ Cisek, P. (2019). Resynthesizing behavior through phylogenetic refinement. Atten
 https://link.springer.com/article/10.3758/s13414-019-01760-1
 On evolution of mamallian brain, and how you can draw a link between behavioral (computational?) complexity, and hierarchical organization of a vertebrate brain. Tries to ambitiously draw parallels between evolution, development, and behavior.
 
-# Complexity and Automata
+# Symbolic
+
+Yoshua Bengio’s short reading list
+* BabyAI: First Steps Towards Grounded Language Learning With a Human In the Loop, Chevalier-Boisvert et al.,
+2018: https://arxiv.org/abs/1810.08272v2.
+* A Meta-Transfer Objective for Learning to Disentangle Causal Mechanisms, Bengio et al., 2019:
+https://arxiv.org/abs/1901.10912.
+* Learning Neural Causal Models from Unknown Interventions, Ke et al., 2019: https://arxiv.org/abs/1910.
+01075.
+* Recurrent Independent Mechanisms, Goyal et al., 2019: https://arxiv.org/abs/1909.10893.
+* The Consciousness Prior, Bengio et al., 2017: https://arxiv.org/abs/1709.08568.
+
+Paul Smolensky. Next-generation architectures bridge gap between neural and symbolic representations with neural symbols. Microsoft Research blog. December 12, 2019.
+https://www.microsoft.com/en-us/research/blog/next-generation-architectures-bridge-gap-between-neural-and-symbolic-representations-with-neural-symbols/
+
+# Complexity
 Corominas-Murtra, B., Seoane, L. F., & Solé, R. (2018). Zipf’s law, unbounded complexity and open-ended evolution. Journal of the Royal Society Interface, 15(149), 20180395.
 https://royalsocietypublishing.org/doi/pdf/10.1098/rsif.2018.0395
 General patterns of increase in complexity during evolution, using several natural and artificial examples (texts, proteins, logic circuits, and even combinations of Legos). Information and string complexity.

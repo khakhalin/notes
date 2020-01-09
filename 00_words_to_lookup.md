@@ -9,7 +9,9 @@ Current point in the Google Course: https://developers.google.com/machine-learni
 * Make sure all Eric's recommendations are here
 
 Classic ML and friends
+* std rotate	
 * Hungarian algorithm
+* Bloom filter
 * Kalman filter (and its friends)
 * RBF - Radial basis function kernel: https://en.wikipedia.org/wiki/Radial_basis_function_kernel
 * AdaBoost
@@ -51,10 +53,11 @@ Technical stuff
 * Spark
 * Python closures, why they are a thing, what's dangerous about them, and how to use them
 
-Random pieces of math
+Other math
 * How to calculate single-value-decomposion and eigenvector decomposition in practice? How do they code it for numpy, for example?
-* Refresh the general flavor of Lagrangians and Hamiltonians
 * FFT
+* Lagrange multiplyier - proof
+* Hamiltonians and how dynamical systems invoke them
 * Perron–Frobenius theorem - something related to centralities and or network graph eigenvectors
 
 Neuro
