@@ -28,7 +28,10 @@ https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode
 
 Testing fancy formulas:
 
-$ლ = \frac{1}{ზ}\sum^{ზ}_{უ=1}{ტ_ბ\big(ბ_უ-წ(ქ_უ\cdot ჱ)\big)^2}$
+$\displaystyleლ = \frac{1}{ზ}\sum^{ზ} _ {უ=1}{ტ _ ბ\big(ბ_უ-წ(ქ_უ\cdot ჱ)\big)^2}$
+
+
+$\displaystyleⰊ=\frac{1}{4Ⰲ} \sum_{Ⱁ,Ⱂ \in Ⰸ} \big(Ⰳ_{ⰑⰒ} - Ⰱ_{ⰑⰒ} \sum_{Ⱇ\in Ⰸ} Ⰳ_{ⰑⰗ} \big)Ⰵ_{Ⱁ}Ⰵ_{Ⱂ}$
 
 
 

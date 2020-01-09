@@ -67,11 +67,15 @@ For many classes, each of log-odds for class g_i is fit linearly: log P(x∈gi)/
 To find a solution, use max-likelihood (maximize conditional P(g|x) ), which is equivalent to minimizing **logloss**. For two classes, Loss = -∑(y log(P(g|x)) + (1-y)log(1-P(g|x))), where y∈{0,1}. As p→0, -log(p)→inf, so we have a huge punishment for near-zero p. Because of that, if the data is too clean and some areas contain only points of one type, weights would explode (it's hard to fit infinity), making  **regularization** extremely important.
 
 The expression for loss can be simplified: 
-L(θ) = -∑( y log(p) + (1-y)log(1-p) ) 
-= -∑( y (log(p) - log(1-p)) + log(1-p)) = -∑( y log(p/(1-p)) + log(1-p) ) = …
-...Now log(p/(1-p)) is just plain Xθ by definition above. For log(1-p), substitute p=sigmoid(xᵀθ) = 1/(1+exp(-xᵀθ)), then calculated 1-p, take a log, and use log(1/a) = -log(a), resulting in log(1-p) = log(1+exp(xᵀθ))...
+L(θ) = -∑( y log(p) + (1-y)log(1-p) ) =
+-∑( y (log(p) - log(1-p)) + log(1-p)) =\
+-∑( y log(p/(1-p)) + log(1-p) ) = …
+
+...Now log(p/(1-p)) is just plain Xθ by definition above. For log(1-p), substitute p=sigmoid(xᵀθ) = 1/(1+exp(-xᵀθ)), then calculate 1-p, mutiply both numerator and denominator by exp(xᵀθ), take a log, use log(1/a) = -log(a), resulting in log(1-p) = log(1+exp(xᵀθ)). But both in the formula above, get:
+
 = -∑( yxᵀθ - log(1+exp(1+xᵀθ)) ). 
-Differentiate by θ, set to 0. Get ∂l/∂θ = -∑ (yx - exp(xᵀθ)/(1+exp(xᵀθ))x) = -∑x(y-p) := 0. Here x and 0 are vector length p+1, where p = dim number (and one more dim for the intecept θ0).
+
+Differentiate this by θ, set to 0. Get ∂L/∂θ = -∑ (xy - x∙exp(xᵀθ)/(1+exp(xᵀθ))) = -∑x(y-p) = 0. Here x and 0 are vectors length p+1, where p = ndim (our vectors use  one more dim for the intecept $θ_0$).
 
 > ESL p120-121 gives a solution for the updating (descent) procedure that I skip for now. Also a weighted self-consistency formula that ties θ, x, y, and p together, and can apparently be used to achieve some numerical shortcuts.
 
@@ -79,13 +83,13 @@ Differentiate by θ, set to 0. Get ∂l/∂θ = -∑ (yx - exp(xᵀθ)/(1+exp(x�
 **L1 penalty** (lasso) is good for this: take the previous L=-∑ y log(p) + (1-y) log(1-p), and add to it λ∑|θj| , where the sum runs by dimention (variable). Flip signs if you like maximizing stuff, as ESL does. Apparently, if you do the math, you get the following link between everything: xjᵀ(y-p) = λ∙sign(θj) for each dimension j.
 
 ## Discriminant Analysis
-An alternative to logistic regression? We assume that each class density is a multivariate Gaussian:
+As we'll see later, can be considered an alternative to logistic regression. We assume that each class density is a multivariate Gaussian:
 
 $Φ_k(x) = \frac{1}{უ}\exp\big( -½ (x-μ_k)^Tტ^{-1}_k(x-μ_k) \big)$,
 
-where უ = 2π^(p/2)∙sqrt(det(C)), and ტ is a covariance matrix. Without any extra assumptions, it is called **Quadratic Discriminant Analysis (QDA)**, but if we assume that all gaussians have the same shape, and ტ is shared across all classes, we have **Linear Discriminant Analysis (LDA)**. Apparently if you do log(P_k/P_l) for two classes k and l, you end up with an equation linear in x (ESL p108), making the decision boundary linear as well, because lots of terms cancel each out. _I don't understand the math, so park it._ Because ტ is not necessarily spherical (σ²I), bisectors are not necessarily ⊥ to lines connecting the centroids. _Here goes a formula for linear discriminant functions that I also don't quite understand:_
+where უ = 2π^(p/2)∙sqrt(det(C)), and ტ is a covariance matrix of this Gaussian, defining its shape (elongation) and orientation. If we don't put any extra assumptions into it, this approach would be called **Quadratic Discriminant Analysis (QDA)**, but if we assume that all gaussians have the same shape, in the sense that ტ is shared across all classes, we get **Linear Discriminant Analysis (LDA)**. Apparently if you do log(P_k/P_l) for two classes k and l, you end up with an equation linear in x (ESL p108), making the decision boundary linear as well, because lots of terms cancel each out. _I don't understand the math, but have to park it for now._ Because ტ is not necessarily spherical (σ²I would be spherical), bisectors of classes are not necessarily ⊥ to the lines connecting the centroids.
 
-The decision becomes a simple thersholding of a **lienar discriminant function**: δ(x) = ⟨x,ω⟩ against a certain threshold c, where vector ω = ტ⁻¹μ, and thresholds c = ½ μᵀტ⁻¹μ - log n. Here μ is the mean for this class, estimated as μ = ∑x/n for all xi in this class; n is the number of elements in this class. Whichever δ (for whichever class) has the highest value for a given x, defines the predicted class: g = argmax_k δ_k (x). As ტ is assumed to be the same for all gaussians, the formula for it is similar to pooled variance: ტ = ∑_i (xi - μi)(xi-μi)ᵀ/(N-K), where μi is a matching mean for point xi; N is the number of points, and K is the number of classes. The thresholds can also be optimized explicitly, as hyperparameters, to achieve optimal class separation.
+The decision becomes a simple thersholding of a **linear discriminant function**: δ(x) = ⟨x,ω⟩ against a certain threshold c, where vector ω = ტ⁻¹μ, and thresholds c = ½ μᵀტ⁻¹μ - log n. Here μ is the mean for this class, estimated as μ = ∑x/n for all xi in this class; n is the number of elements in this class. Whichever δ (for whichever class) has the highest value for a given x, defines the predicted class: g = argmax_k δ_k (x). As ტ is assumed to be the same for all gaussians, the formula for it is similar to pooled variance: ტ = ∑_i (xi - μi)(xi-μi)ᵀ/(N-K), where μi is a matching mean for point xi; N is the number of points, and K is the number of classes. The thresholds can also be optimized explicitly, as hyperparameters, to achieve optimal class separation.
 
 The results of LDA for 2 classes only match that of logistic regression if the number of points in all classes is the same.  For more than 2 classes, it doesn't match logistic regression.
 
