@@ -1,6 +1,8 @@
 # General To-Dos:
 
 #todo
+Write a very quick summary of this thing for A/B testing: https://chris-said.io/2020/01/10/optimizing-sample-sizes-in-ab-testing-part-I/
+
 Current point in the Google Course: https://developers.google.com/machine-learning/crash-course/production-ml-systems
 
 # Words and topics to look up
@@ -24,8 +26,12 @@ Classic ML and friends
 * Variational inference
 * Resampling techniques: SMOTE, isotonic regression, Platt scaling
 
+Practical stuff:
+* Checkpoints
+* Keras hyperparameter optimization
+
 Deep Learning:
-* Double-check what is eager about eager mode
+* What's so eager about eager mode
 * How to tell the receptive field of a neuron in a deep network? Do they gradient descend on it?
 * Maximum Mean Discrepancy trick
 * Replica trick and log-partition function (??)
@@ -59,6 +65,9 @@ Other math
 * Lagrange multiplyier - proof
 * Hamiltonians and how dynamical systems invoke them
 * Perron–Frobenius theorem - something related to centralities and or network graph eigenvectors
+
+Jax
+* [Baysian NN in Jax](https://colab.research.google.com/drive/1gMAXn123Pm58_NcRldjSuGYkbrXTUiN2) - collab notebook
 
 Neuro
 * ...

@@ -1,15 +1,23 @@
-# To-read: Neuro
+To-read: Neuro
+===
+
+**Bibliography collections:**
+* [[bib_reconstruction]] - On reconstructing biological connectivity from spike-trains and alike
+
+# General and top
 
 Raman, D. V., Rotondo, A. P., & O’Leary, T. (2019). Fundamental bounds on learning performance in neural circuits. Proceedings of the National Academy of Sciences, 116(21), 10537-10546.
 https://www.pnas.org/content/116/21/10537.short
 
-## Network structure
+# Topology and its development
 
 Relating network connectivity to dynamics: opportunities and challenges for theoretical neuroscience Carina Curto, Katherine Morrison
 https://www.sciencedirect.com/science/article/pii/S0959438819300443 
 Review. Exactly what it should be (networks, motifs, dynamics)
 
-## Criticality, inhibition, dynamics
+Morrison, A., Aertsen, A., and Diesmann, M. (2007). Spike-timing dependent plasticity in balanced random networks. Neural Computation, 19:1437–1467.
+
+# Criticality, inhibition, dynamics
 
 Popular account, harvest all links:
 https://www.quantamagazine.org/brains-may-teeter-near-their-tipping-point-20180614/
@@ -39,7 +47,7 @@ About what tunes inhibitory neurons, that in turn make excitatory activity prope
 
 Schaub, M. T., Billeh, Y. N., Anastassiou, C. A., Koch, C., and Barahona, M. (2015). Emergence of Slow-Switching Assemblies in Structured Neuronal Networks. PLoS Computational Biology, 11(7):1–28.
  
-## Reservoir computing
+# Reservoir computing
 
 Pogodin, R., Corneil, D., Seeholzer, A., Heng, J., & Gerstner, W. (2019). Working memory facilitates reward-modulated Hebbian learning in recurrent neural networks. arXiv preprint arXiv:1910.10559. 
 https://arxiv.org/pdf/1910.10559.pdf 
@@ -48,71 +56,9 @@ Reservoir computer + a "working memory network"
 Rotermund, D., & Pawelzik, K. R. (2019). Biologically plausible learning in a deep recurrent spiking network. bioRxiv, 613471.
 https://www.biorxiv.org/content/10.1101/613471v1.full
 
-## Synfire chains
+# Synfire chains, Sequence learning
 
 Zheng, P. and Triesch, J. (2014). Robust development of synfire chains
-
-## Developing topology
-
-Morrison, A., Aertsen, A., and Diesmann, M. (2007). Spike-timing dependent plasticity in balanced random networks. Neural Computation, 19:1437–1467.
-
-## Credit assignment
-
-Bellec, G., Scherr, F., Subramoney, A., Hajek, E., Salaj, D., Legenstein, R., & Maass, W. (2019). A solution to the learning dilemma for recurrent networks of spiking neurons. bioRxiv, 738385.
-https://www.biorxiv.org/content/10.1101/738385v3
-Something like backpropagation in spiking networks.
-
-Aljadeff, J., D'amour, J., Field, R. E., Froemke, R. C., & Clopath, C. (2019). Cortical credit assignment by Hebbian, neuromodulatory and inhibitory plasticity. arXiv preprint arXiv:1911.00307.
-[https://arxiv.org/pdf/1911.00307.pdf](<https://arxiv.org/pdf/1911.00307.pdf>)
-
-Gütig, R., & Sompolinsky, H. (2006). The tempotron: a neuron that learns spike timing–based decisions. Nature neuroscience, 9(3), 420.
-
-Zenke, F., Poole, B., & Ganguli, S. (2017, August). Continual learning through synaptic intelligence. In Proceedings of the 34th International Conference on Machine Learning-Volume 70 (pp. 3987-3995). JMLR. org.
-https://arxiv.org/pdf/1703.04200.pdf
-Abstract synapses (not biological) that somehow prioritize what to learn based on some information? Claim to be biologically inspired. Well cited.
-
-Krieg, D., & Triesch, J. (2014). A unifying theory of synaptic long-term plasticity based on a sparse distribution of synaptic strength. Frontiers in synaptic neuroscience, 6, 3.
-https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3941589/
-Try to marry Hebbian with gradient descent and something else? Lots of math, not that well cited.
-
-Rolfe, Jason Tyler (2012) Intrinsic Gradient Networks. Dissertation (Ph.D.), California Institute of Technology.
-https://thesis.library.caltech.edu/6953/
-PhD thesis that was never published on biologically plausible gradient descend in the brain? Check it out.
-
-## Bottom-up validation
-
-Misra, D. (2019). Mish: A Self Regularized Non-Monotonic Neural Activation Function. arXiv preprint arXiv:1908.08681.
-https://arxiv.org/abs/1908.08681
-Claim that if you make activation function non-monotonic (almost like a sigmoid, but with slight overshoots), it actually helps in some ways.
-Github: https://github.com/digantamisra98/Mish
-May be a curious parallel to this recent finding in Neuro, about XOR computation by dendrites of an individual cell Gidon, A., Zolnik, T. A., Fidzinski, P., Bolduan, F., Papoutsi, A., Poirazi, P., ... & Larkum, M. E. (2020). Dendritic action potentials and computation in human layer 2/3 cortical neurons. Science, 367(6473), 83-87. (no free pdf)
-
-Lim, S. et al. Inferring learning rules from distributions of fring rates in cortical neurons. Nat. Neurosci. 18, 1804–1810 (2015).
-
-Doerig, A., Bornet, A., Choung, O. H., & Herzog, M. H. (2019). Crowding Reveals Fundamental Differences in Local vs. Global Processing in Humans and Machines. bioRxiv, 744268.
-https://www.sciencedirect.com/science/article/pii/S0042698919302299
-Seem to be claiming that humans process images fundamentally differently than convolutional networks, because responding to perturbations follows a different logic. Sounds interesting!
-
-## Free energy
-
-#freeenergy
-
-Gershman, S. J. (2019). What does the free energy principle tell Us about the brain?. arXiv preprint arXiv:1901.07945.
-https://arxiv.org/abs/1901.07945
-
-The Markov blankets of life: autonomy, active inference and the free energy principle
-Michael Kirchhoff, Thomas Parr, Ensor Palacios, Karl Friston and Julian Kiverstein
-Published:17 January 2018
-https://royalsocietypublishing.org/doi/full/10.1098/rsif.2017.0792
-
-Friston, K. (2010). The free-energy principle: a unified brain theory?. Nature reviews neuroscience, 11(2), 127.
-3k references! So people do find it useful after all?
-
-https://www.frontiersin.org/articles/10.3389/fnsys.2019.00042/full 
-The Dialectics of Free Energy Minimization Evert A. Boonstra and Heleen A. Slagter
-Seems to be a review explaining the free energy minimization principle for an organism. It's not math though; looks almost like philosophy?
-
-## Sequence learning in spiking networks
 
 Abbott, L. F., DePasquale, B., and Memmesheimer, R. M. (2016). Building functional networks of spiking model neurons. Nature Neuroscience, 19(3):350–355.
 Sounds like may be a neat review or opinion piece.
@@ -140,7 +86,91 @@ Changing temporal context in human temporal lobe promotes memory of distinct epi
 https://www.nature.com/articles/s41467-018-08189-4
 Also a blog post summary: https://www.quantamagazine.org/how-the-brain-creates-a-timeline-of-the-past-20190212/
 
-## Large-scale dynamics
+# Credit assignment
+
+Bellec, G., Scherr, F., Subramoney, A., Hajek, E., Salaj, D., Legenstein, R., & Maass, W. (2019). A solution to the learning dilemma for recurrent networks of spiking neurons. bioRxiv, 738385.
+https://www.biorxiv.org/content/10.1101/738385v3
+Something like backpropagation in spiking networks.
+
+Aljadeff, J., D'amour, J., Field, R. E., Froemke, R. C., & Clopath, C. (2019). Cortical credit assignment by Hebbian, neuromodulatory and inhibitory plasticity. arXiv preprint arXiv:1911.00307.
+[https://arxiv.org/pdf/1911.00307.pdf](<https://arxiv.org/pdf/1911.00307.pdf>)
+
+Gütig, R., & Sompolinsky, H. (2006). The tempotron: a neuron that learns spike timing–based decisions. Nature neuroscience, 9(3), 420.
+
+Zenke, F., Poole, B., & Ganguli, S. (2017, August). Continual learning through synaptic intelligence. In Proceedings of the 34th International Conference on Machine Learning-Volume 70 (pp. 3987-3995). JMLR. org.
+https://arxiv.org/pdf/1703.04200.pdf
+Abstract synapses (not biological) that somehow prioritize what to learn based on some information? Claim to be biologically inspired. Well cited.
+
+Krieg, D., & Triesch, J. (2014). A unifying theory of synaptic long-term plasticity based on a sparse distribution of synaptic strength. Frontiers in synaptic neuroscience, 6, 3.
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3941589/
+Try to marry Hebbian with gradient descent and something else? Lots of math, not that well cited.
+
+Rolfe, Jason Tyler (2012) Intrinsic Gradient Networks. Dissertation (Ph.D.), California Institute of Technology.
+https://thesis.library.caltech.edu/6953/
+PhD thesis that was never published on biologically plausible gradient descend in the brain? Check it out.
+
+# Bottom-up validation
+
+Misra, D. (2019). Mish: A Self Regularized Non-Monotonic Neural Activation Function. arXiv preprint arXiv:1908.08681.
+https://arxiv.org/abs/1908.08681
+Claim that if you make activation function non-monotonic (almost like a sigmoid, but with slight overshoots), it actually helps in some ways.
+Github: https://github.com/digantamisra98/Mish
+May be a curious parallel to this recent finding in Neuro, about XOR computation by dendrites of an individual cell Gidon, A., Zolnik, T. A., Fidzinski, P., Bolduan, F., Papoutsi, A., Poirazi, P., ... & Larkum, M. E. (2020). Dendritic action potentials and computation in human layer 2/3 cortical neurons. Science, 367(6473), 83-87. (no free pdf)
+
+Lim, S. et al. Inferring learning rules from distributions of fring rates in cortical neurons. Nat. Neurosci. 18, 1804–1810 (2015).
+
+Doerig, A., Bornet, A., Choung, O. H., & Herzog, M. H. (2019). Crowding Reveals Fundamental Differences in Local vs. Global Processing in Humans and Machines. bioRxiv, 744268.
+https://www.sciencedirect.com/science/article/pii/S0042698919302299
+Seem to be claiming that humans process images fundamentally differently than convolutional networks, because responding to perturbations follows a different logic. Sounds interesting!
+
+Deep neuroethology of a virtual rodent
+Josh Merel, Diego Aldarondo, Jesse Marshall, Yuval Tassa, Greg Wayne, Bence Ölveczky
+https://arxiv.org/abs/1911.09451
+Apparently create a vidrual 3D rodent (like, with muscles, joints and what not), make it move in virtual environment, learn to move, then study its network using neuro methods.
+
+Li, Z., Brendel, W., Walker, E., Cobos, E., Muhammad, T., Reimer, J., ... & Tolias, A. (2019). Learning from brains how to regularize machines. In Advances in Neural Information Processing Systems (pp. 9525-9535).
+https://arxiv.org/abs/1911.05072
+
+Whiteway, M. R., & Butts, D. A. (2019). The quest for interpretable models of neural population activity. Current opinion in neurobiology, 58, 86-93.
+
+Feather, J., Durango, A., Gonzalez, R., & McDermott, J. (2019). Metamers of neural networks reveal divergence from human perceptual systems. In Advances in Neural Information Processing Systems (pp. 10078-10089).
+https://papers.nips.cc/paper/9198-metamers-of-neural-networks-reveal-divergence-from-human-perceptual-systems.pdf
+Metameres: in this case, different stimuli that cause identical activation in a part of a network. They seem to be claiming that there's a difference between humans and ANNs here.
+
+Calhoun, A. J., Pillow, J. W., & Murthy, M. (2019). Unsupervised identification of the internal states that shape natural behavior. Nature Neuroscience, 1-10.
+https://www.nature.com/articles/s41593-019-0533-x
+Use unsupervise learning to identify internal (latent) states in a fly; then correlate these states with activity of individual neurons.
+
+Spoerer, C. J., Kietzmann, T. C., & Kriegeskorte, N. (2019). Recurrent networks can recycle neural resources to flexibly trade speed for accuracy in visual recognition. bioRxiv, 677237.
+https://www.biorxiv.org/content/10.1101/677237v3.full
+Recurrent convolutional network  works better than a feed-forward convolutional network. It's slower, but better. Claim that it's similar to primate vision somehow.
+
+# Memory storage
+
+Context-modular memory networks support high-capacity, flexible, and robust associative memories. (2020). William F Podlaski,  Everton J Agnes,  Tim P Vogels
+https://www.biorxiv.org/content/10.1101/2020.01.08.898528v1
+About Hopfield limit. It seems they use an architecture in which large groups neurons or synapses can be modulated (via gating, inhibition) in a context-dependent manner. Show an increase in memory capacity; changes in active components (states), robustness to noise, memory search (??), memory stability. Gating of memories. Substrate for continuous learning? Related to the problem of catastrophic forgetting, including [this paper](https://www.pnas.org/content/115/44/E10467.short).
+There's also a [tweetprint](https://twitter.com/TPVogels/status/1215572496570896384).
+
+# Free energy
+#freeenergy
+
+Gershman, S. J. (2019). What does the free energy principle tell Us about the brain?. arXiv preprint arXiv:1901.07945.
+https://arxiv.org/abs/1901.07945
+
+The Markov blankets of life: autonomy, active inference and the free energy principle
+Michael Kirchhoff, Thomas Parr, Ensor Palacios, Karl Friston and Julian Kiverstein
+Published:17 January 2018
+https://royalsocietypublishing.org/doi/full/10.1098/rsif.2017.0792
+
+Friston, K. (2010). The free-energy principle: a unified brain theory?. Nature reviews neuroscience, 11(2), 127.
+3k references! So people do find it useful after all?
+
+https://www.frontiersin.org/articles/10.3389/fnsys.2019.00042/full 
+The Dialectics of Free Energy Minimization Evert A. Boonstra and Heleen A. Slagter
+Seems to be a review explaining the free energy minimization principle for an organism. It's not math though; looks almost like philosophy?
+
+# Large-scale dynamics
 
 Recurrence is required to capture the representational dynamics of the human visual system
 Kleinman
@@ -156,10 +186,7 @@ Kaplan .. Zimmer
 https://www.cell.com/neuron/fulltext/S0896-6273(19)30932-8
 C elegans, activation dynamics. How fixed action patterns emerge from (are encoded by) the nervous system.
 
-## Other
-
-**Bibliography collections:**
-* [[bib_reconstruction]] - On reconstructing biological connectivity from spike-trains and alike
+# Other
 
 Harnessing behavioral diversity to understand neural computations for cognition Simon Musall, Anne E Urai, David Sussillo, Anne K Churchland
 [https://www.sciencedirect.com/science/article/pii/S0959438819300285]
@@ -202,32 +229,9 @@ Kriegeskorte, N., Mur, M., & Bandettini, P. A. (2008). Representational similari
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2605405/
 1.5k citations; seminal conceptual work apparently. Important for ML?
 
-## ML of brain
+# ML of brain data
 
 Kietzmann, T. C., McClure, P., & Kriegeskorte, N. (2018). Deep neural networks in computational neuroscience. bioRxiv, 133504.
 https://www.biorxiv.org/content/10.1101/133504v2.abstract
 A review.
 
-## Reverse engineering through ML
-
-Deep neuroethology of a virtual rodent
-Josh Merel, Diego Aldarondo, Jesse Marshall, Yuval Tassa, Greg Wayne, Bence Ölveczky
-https://arxiv.org/abs/1911.09451
-Apparently create a vidrual 3D rodent (like, with muscles, joints and what not), make it move in virtual environment, learn to move, then study its network using neuro methods.
-
-Li, Z., Brendel, W., Walker, E., Cobos, E., Muhammad, T., Reimer, J., ... & Tolias, A. (2019). Learning from brains how to regularize machines. In Advances in Neural Information Processing Systems (pp. 9525-9535).
-https://arxiv.org/abs/1911.05072
-
-Whiteway, M. R., & Butts, D. A. (2019). The quest for interpretable models of neural population activity. Current opinion in neurobiology, 58, 86-93.
-
-Feather, J., Durango, A., Gonzalez, R., & McDermott, J. (2019). Metamers of neural networks reveal divergence from human perceptual systems. In Advances in Neural Information Processing Systems (pp. 10078-10089).
-https://papers.nips.cc/paper/9198-metamers-of-neural-networks-reveal-divergence-from-human-perceptual-systems.pdf
-Metameres: in this case, different stimuli that cause identical activation in a part of a network. They seem to be claiming that there's a difference between humans and ANNs here.
-
-Calhoun, A. J., Pillow, J. W., & Murthy, M. (2019). Unsupervised identification of the internal states that shape natural behavior. Nature Neuroscience, 1-10.
-https://www.nature.com/articles/s41593-019-0533-x
-Use unsupervise learning to identify internal (latent) states in a fly; then correlate these states with activity of individual neurons.
-
-Spoerer, C. J., Kietzmann, T. C., & Kriegeskorte, N. (2019). Recurrent networks can recycle neural resources to flexibly trade speed for accuracy in visual recognition. bioRxiv, 677237.
-https://www.biorxiv.org/content/10.1101/677237v3.full
-Recurrent convolutional network  works better than a feed-forward convolutional network. It's slower, but better. Claim that it's similar to primate vision somehow.

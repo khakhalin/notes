@@ -111,6 +111,12 @@ Tian, Y., Jiang, T., Gong, Q., & Morcos, A. (2019). Luck Matters: Understanding 
 https://arxiv.org/pdf/1905.13405.pdf
 To understand how "lucky tickets" work, they train a larger network from a smaller network, then study activation.
 
+Individual differences among deep neural network models (2020)
+Johannes Mehrer, Courtney J. Spoerer, Nikolaus Kriegeskorte, Tim C Kietzmann
+https://www.biorxiv.org/content/10.1101/2020.01.08.898288v1
+Neuro-inspired: approach ANNs as one would approach individual animals. Use "Representation Similarity analysis" from neuro, changing nothing but weight init. Describe differences (pretty pics!). Claim that dropout helps.
+Tweetprint: https://twitter.com/TimKietzmann/status/1215620270679044096
+
 Morcos, A. S., Yu, H., Paganini, M., & Tian, Y. (2019). One ticket to win them all: generalizing lottery ticket initializations across datasets and optimizers. arXiv preprint arXiv:1906.02773.
 https://arxiv.org/abs/1906.02773
 New paper about whether "lucky tickets" generalize across datasets.
@@ -338,6 +344,9 @@ Original paper by Hinton, 1k citations.
 Turing, A. M. (1950). Computing machinery and intelligence. In Parsing the Turing Test (pp. 23-65). Springer, Dordrecht. 2005.
 http://www.geielettronica.it/images/pdf/turing.pdf
 Said to be a really nicely written paper, seminal, good examples, and with 13k citations.
+
+Do language network learn what they think they learn?
+https://thegradient.pub/nlps-clever-hans-moment-has-arrived/
 
 van Rooij, I., Wright, C. D., Kwisthout, J., & Wareham, T. (2018). Rational analysis, intractability, and the prospects of ‘as if’-explanations. Synthese, 195(2), 491-510.
 On how humans (and thus AI) could handle intractable problems.
