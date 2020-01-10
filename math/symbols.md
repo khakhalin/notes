@@ -23,7 +23,7 @@ https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode
 ա	բ	գ	դ	ե	զ	է	ը	թ	ժ	ի	լ	խ	ծ	կ	հ	ձ	ղ	ճ	մ
 յ	ն	շ	ո	չ	պ	ջ	ռ	ս	վ	տ	ր	ց	ւ	փ	ք	օ	ֆ	ու	և
 
-ⰀⰁⰂⰃⰄⰅⰆⰇⰈⰉⰊⰋⰌⰍⰎⰏⰐⰑⰒⰓⰔⰕⰖⰗⰘⰙⰚⰛⰜⰝⰞⰟⰠⰡⰢⰣⰤⰥⰦⰧⰨⰩⰪⰫⰬⰭⰮ
+ ⰀⰁⰂⰃⰄⰅⰆⰇⰈⰉⰊⰋⰌⰍⰎⰏⰐⰑⰒⰓⰔⰕⰖⰗⰘⰙⰚⰛⰜⰝⰞⰟⰠⰡⰢⰣⰤⰥⰦⰧⰨⰩⰪⰫⰬⰭⰮ
 
 
 Testing fancy formulas:
@@ -31,7 +31,9 @@ Testing fancy formulas:
 $\displaystyleლ = \frac{1}{ზ}\sum^{ზ} _ {უ=1}{ტ _ ბ\big(ბ_უ-წ(ქ_უ\cdot ჱ)\big)^2}$
 
 
-$\displaystyleⰊ=\frac{1}{4Ⰲ} \sum_{Ⱁ,Ⱂ \in Ⰸ} \big(Ⰳ_{ⰑⰒ} - Ⰱ_{ⰑⰒ} \sum_{Ⱇ\in Ⰸ} Ⰳ_{ⰑⰗ} \big)Ⰵ_{Ⱁ}Ⰵ_{Ⱂ}$
+$\displaystyle \large{Ⱉ=\frac{1}{4Ⰲ} \sum_{Ⱁ,Ⱂ \in Ⰸ} \big(Ⱋ_{ⰑⰒ} - Ⱑ_{ⰑⰒ} \sum_{Ⰻ\in Ⰸ} Ⱋ_{ⰑⰋ} \big)Ⰵ_{Ⱁ}Ⰵ_{Ⱂ}}$
+
+$\displaystyle \large{Ⰱ(Ⱓ) = \frac{Ⰿ(\frac{Ⰳ+1}{2})}{\sqrt{ⰃⰗ}Ⰿ(Ⰳ/2)}\left(1+\frac{Ⱓ^2}{Ⰳ}\right)^{-\frac{Ⰳ+1}{2}}}$
 
 
 

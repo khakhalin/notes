@@ -253,7 +253,11 @@ https://arxiv.org/abs/1911.05507
 
 Single Headed Attention RNN: Stop Thinking With Your Head
 https://arxiv.org/abs/1911.11423
-Looks somewhat advanced (from the technical, not math pov), but if I get it right, they tried to diversify the field by deliberately sticking to a non-mainstream approach (something that is NOT transformers), and got good performance. Also is apparently considered well-written.
+Looks somewhat advanced (from the technical, not math pov), but if I get it right, they tried to diversify the field by deliberately sticking to a non-mainstream approach (something that is NOT transformers), and got good performance. Also the writing is wild.
+
+Lipton, Z. C., Berkowitz, J., & Elkan, C. (2015). A critical review of recurrent neural networks for sequence learning. arXiv preprint arXiv:1506.00019.
+[https://arxiv.org/pdf/1506.00019.pdf](<https://arxiv.org/pdf/1506.00019.pdf>)
+Great review for learning about RNNs (could be a textbook) 700 refs.
 
 # AEs, GANs, Generation
 

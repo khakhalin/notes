@@ -1,7 +1,8 @@
 # Recurrent Neural Networks
 
-## ToRead:
+# Transformers
+**An alternative to RNNs**. A chain of encoders …
+* https://towardsdatascience.com/transformers-141e32e69591
 
-Lipton, Z. C., Berkowitz, J., & Elkan, C. (2015). A critical review of recurrent neural networks for sequence learning. arXiv preprint arXiv:1506.00019.
-[https://arxiv.org/pdf/1506.00019.pdf](<https://arxiv.org/pdf/1506.00019.pdf>)
-Great review for learning about RNNs (could be a textbook) 700 refs.
+**Criticism.** There are claims that transformers are overrated, and same results may be achieved with simple architectures, and much lower computer:
+* Merity, S. (2019). Single Headed Attention RNN: Stop Thinking With Your Head. arXiv preprint arXiv:1911.11423. [link](https://arxiv.org/abs/1911.11423)
