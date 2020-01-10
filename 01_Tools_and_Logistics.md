@@ -200,7 +200,7 @@ Apparently it's possible not to grant users permissions to delete rows and drop 
 
 # GIT
 Most typical everyday use:
-* `git pull` - 	fetch latest changes, merge, and rebase head
+* `git pull` - 	fetch latest changes, merge them, and rebase HEAD to the latest commit
 * `git diff` - show differences to unstaged files
 * `git add .` - stage everytyhing
 * `git commit -m "Comment"` - commit
@@ -217,25 +217,38 @@ Backing up, carefully:
 * `git reset [file]` - when a file was staged, but not yet committed, unstage it.
 * `git stash` - put all uncommited files to a buffer
 * `git stash pop` - pop files from a buffer
-* `git rebase -i HEAD~3` - squash last 3 commits into one, interactively. Do it only if you haven't pushed yet (or you'll get a conflict with a remote repo), unless you're morally prepared to fix everything locally and force-push to origin, rewriting everything. "Interactively" here means that a list of commits is generated, and you leave `pick` for those you want to leave; replace it with `drop` for those you want to delete, and `squash` for those that needs to be squashed (just make sure there's a 'pick' before it, for somewhere to squash to). [r1](https://git-scm.com/docs/git-rebase#_interactive_mode)
+* `git commit --amend` #todo
+* `git rebase -i HEAD~3` - squash last 3 commits into one, interactively. Do it only if you haven't pushed yet (or you'll get a conflict with a remote repo), unless you're morally prepared to fix everything locally and force-push to origin, rewriting everything. "Interactively" here means that a list of commits is generated, and you leave `pick` for those you want to leave; replace it with `drop` for those you want to delete, and `squash` for those that needs to be squashed (just make sure there's a 'pick' before it, for somewhere to squash to). [1](https://git-scm.com/docs/git-rebase#_interactive_mode)
 
 Backing up, in panicky mode:
 * `git reflog` → find last commit that is good → `git reset HEAD@{index}`- resets head to this commit, deletes everything after.
 
 Branching:
-* `git checkout branch_name` - moving between branches.
+* `git branch` - to know the current branch
+* `git checkout branch_name` - move to a target branch.
 * `git branch branch_name` - creates a new branch.
+* `git checkout -p branch_name` - an alias for creating a new branch at current HEAD, and checking it out. May be a good idea after a pull, to do all sorting in a safe branch, without endangering Master. [1](https://blog.carbonfive.com/2017/08/28/always-squash-and-rebase-your-git-commits/)
+
+The concept of a **detached HEAD**: when HEAD points to an old commit. In this situation you cannot commit anything, as there's no branch to commit to (committing can only be done to the end of a branch). If you create a new branch there in the past however, you can commit, and then you can merge these changes if you need to. [1](https://www.atlassian.com/git/tutorials/using-branches/git-checkout)
 
 Dangerous practices:
-* `git pull --rebase` - rebasing appends one branch to another (streamlining the forks), turning any conflicts into back-and-forth changes (bad), and essentially recommitting commits from source branch in a goal branch (unlike with merge, there will be no trace of inheritence). b1→rebase b2→ merge b1 will duplicate commits in b1. The only benefit of rebase is that the history looks linear, simple, and without merge commits. OK on rewriting local branches, or for code cleanup. B	ad for public branches. [r1](http://thelazylog.com/git-rebase-or-git-pull/), [r2](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
-* `git push --force` - hard push to origin, overwriting it: probably very rarely a good idea?
+* `git rebase [target_branch]` - recommits new commits from the current branch (the one that is currently checked out) to the end of the target branch, then moves HEAD to the target branch. (Refs: [1](http://gitready.com/advanced/2009/02/11/pull-with-rebase.html)) Pluses and minuses:
+        * Good: it makes history linear, and thus clear, as there's no branching and merging
+        * Good: allows code clean-up (e.g. described above for interactive rebase and commit squishing)
+        * Bad: unlike for merging, commits are not inhereted, but are committed anew, so b1→rebase to b2→ merge to b1 will duplicate commits in b1 (they will be recommitted to b2 as new commits, but then merged back).
+        * Bad: If you have a conflict, you'll see contradicting commits (one adding something, the other one reverting this something back). Which can be hard to clean up.
+        * Bad: never use rebase on public branches, as rebasing rewrites history, and if somebody is synchronized with this branch, they'll get a weird conflict of histories. The only way to use it with remote branches is with hard-pushing at the end (rewriting the remote branch), which is of course an extreme measure. [1](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
+* `git pull --rebase` - in practice, this command integrates unpulled (relatively recent) commits form the origin, placing them before (sic!) recent commits in the local branch. Equivalent to virtually rebasing to the origin, and then hard-pulling the result to the local branch. The end-result is exactly as if you pulled origin before making your commits. Note how in this case rebase also rewrite the history, but in a safer way (it can be pushed back to origin without any issues), because rebasing happens locally. [1](http://thelazylog.com/git-rebase-or-git-pull/), [2](https://www.atlassian.com/git/tutorials/merging-vs-rebasing), [3](http://gitready.com/advanced/2009/02/11/pull-with-rebase.html)
+* `git push --force` - hard push to origin, overwriting it: generally, a very dangerous idea.
 * `git fetch origin master; git reset --hard origin/master` - hard-pull from origin overwriting local files. Equally dangerous. [r1](https://stackoverflow.com/questions/1125968/how-do-i-force-git-pull-to-overwrite-local-files)
 
 Destroying stuff
 * `git clean` - deletes all uncommited files
+* `git branch -d branch_name` - deletes branch
 
 Open questions:
-* `git checkout -b branchName` - [this](https://blog.carbonfive.com/2017/08/28/always-squash-and-rebase-your-git-commits/) recommends it as a first command after a pull, for the "bug/feature" branch. Does it create a new branch?
+* `--no-ff` for `git merge
+* `git rebase -p
 * `git pull -f` - what does this f mean?
 * `pick`
 * `fixup` - condenses several commits into one?
