@@ -148,6 +148,12 @@ von Oswald, J., Henning, C., Sacramento, J., & Grewe, B. F. (2019). Continual le
 https://arxiv.org/abs/1906.00695
 If it get it right from the abstract, this can be called meta-networks as well: a network that learns to predict weights for a network that would follow a task; so one step above learning the weights for each individual task. Essentially, instead of remembering all possible network configurations for all possible tasks, to reset the network each time, they use this hypernetwork to interpolate in the space of parameters.
 
+#bayesian
+
+Fort, S., Hu, H., & Lakshminarayanan, B. (2019). Deep Ensembles: A Loss Landscape Perspective. arXiv preprint arXiv:1912.02757. 
+https://arxiv.org/pdf/1912.02757.pdf
+How Bayesian networks help to understand ensemble effects in deep learning (as they learn the distributino of parameters instead of instances?). Some lovely, inspiring pictures.
+
 #curriculum
 
 Wang, T., Zhu, J. Y., Torralba, A., & Efros, A. A. (2018). Dataset Distillation. arXiv preprint arXiv:1811.10959.
@@ -249,21 +255,26 @@ Jaderberg, M., Simonyan, K., & Zisserman, A. (2015). Spatial transformer network
 https://arxiv.org/pdf/1506.02025.pdf
 2000 citations. Seems important.
 
-Press, O., Smith, N. A., & Levy, O. (2019). Improving Transformer Models by Reordering their Sublayers. arXiv preprint arXiv:1911.03864.
-https://ofir.io/sandwich_transformer.pdf
-An interesting tiny paper where all they did, I think, is play with the sequence of 2 common blocks, to show that the optimal sequence is not what everyone expected. May be neat. But I prob need to understand how transformers work to get it.
-
 "Compressive Transformers for Long-Range Sequence Modelling"
 by Jack W. Rae, Anna Potapenko, Siddhant M. Jayakumar, Timothy P. Lillicrap (at DeepMind)
 https://arxiv.org/abs/1911.05507
 
-Single Headed Attention RNN: Stop Thinking With Your Head
+Single Headed Attention RNN: Stop Thinking With Your Head. S Merity. (2019)
 https://arxiv.org/abs/1911.11423
-Looks somewhat advanced (from the technical, not math pov), but if I get it right, they tried to diversify the field by deliberately sticking to a non-mainstream approach (something that is NOT transformers), and got good performance. Also the writing is wild.
+He tried to diversify the field by deliberately sticking to a non-mainstream approach (something that is NOT transformers), and got good performance. Also the writing is wild.
+
+On the Relationship between Self-Attention and Convolutional Layers (2020)
+Jean-Baptiste Cordonnier, Andreas Loukas, Martin Jaggi
+https://openreview.net/forum?id=HJlnC1rKPB
+Describe that attention networks spontaneiously develop convolution?
 
 Lipton, Z. C., Berkowitz, J., & Elkan, C. (2015). A critical review of recurrent neural networks for sequence learning. arXiv preprint arXiv:1506.00019.
 [https://arxiv.org/pdf/1506.00019.pdf](<https://arxiv.org/pdf/1506.00019.pdf>)
 Great review for learning about RNNs (could be a textbook) 700 refs.
+
+Press, O., Smith, N. A., & Levy, O. (2019). Improving Transformer Models by Reordering their Sublayers. arXiv preprint arXiv:1911.03864.
+https://ofir.io/sandwich_transformer.pdf
+An interesting tiny paper where all they did, I think, is play with the sequence of 2 common blocks, to show that the optimal sequence is not what everyone expected. May be neat. But I prob need to understand how transformers work to get it.
 
 # AEs, GANs, Generation
 

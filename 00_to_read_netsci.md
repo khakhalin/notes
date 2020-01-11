@@ -14,7 +14,7 @@ Tao, T. (2013). Outliers in the spectrum of iid matrices with bounded rank pertu
 
 P. Van Mieghem. Graph Spectra for Complex Networks. Cambridge University Press, Cambridge, UK, 2013.
 
-## Centrality measures
+# Centrality measures
 
 J. Flores and M. Romance. On eigenvector-like centralities for temporal networks: Discrete
 vs. continuous time scales. J. Comp. App. Math., 330:1041–1051, 2018.
@@ -35,18 +35,18 @@ P. Grindrod and D. J. Higham. A matrix iteration for dynamic network summaries. 
 Rev., 55:118–128, Jan 2013.
 Introduces "communicatibility #centrality"
 
-## Cliques and ensembles
+# Cliques and ensembles
 
 P. Bonacich. Factoring and weighting approaches to clique identification. J. Math. Sociol.,
 2:113–120, 1972.
 
-## Network complexity
+# Network complexity
 
 da Fontoura Costa, L. (2018). What is a Complex Network?(CDT-2).
 [ResearchGate link](https://www.researchgate.net/profile/Luciano_Da_F_Costa/publication/324312765_What_is_a_Complex_Network_CDT-2/links/5aca49ba4585151e80a91abd/What-is-a-Complex-Network-CDT-2.pdf)
 Hmm. A very short illustrated mini-review, and the topic is good, but is it a good paper? Check.
 
-## Automata on networks
+# Automata on networks
 
 R. Pastor-Satorras, C. Castellano, P. Van Mieghem, and A. Vespignani. Epidemic processes
 in complex networks. Rev. Mod. Phys., 87:925–979, 2015.
@@ -64,11 +64,20 @@ Rep., 716–717:1–58, 2017.
 M. O. Jackson and Y. Zenou. Games on networks. In P. Young and S. Zamir, editors,
 Handbook of Game Theory Vol. 4, pages 95–163. Elsevier, 2014.
 
-## Dynamic networks
+# Graph-producing automata
+
+Eckel, W. (2015). Creating an Artificial World with a New Kind of Cellular Automata. arXiv preprint arXiv:1507.05789.
+https://arxiv.org/pdf/1507.05789.pdf
+
+Praba, B., & Saranya, R. (2020). Application of the graph cellular automaton in generating languages. Mathematics and Computers in Simulation, 168, 111-121.
+
+Mukhopadhyay, D. (2012, September). Generating Expander Graphs Using Cellular Automata. In International Conference on Cellular Automata (pp. 52-62). Springer, Berlin, Heidelberg.
+
+# Dynamic networks
 
 N. Perra, B. Gonçalves, R. Pastor-Satorras, and A. Vespignani. Activity driven modeling of time varying networks. Sci. Rep., 2:469, 2012. 
 
-## Oscillations and Swarming
+# Oscillations and Swarming
 
 O’Keeffe, K. P., Hong, H., & Strogatz, S. H. (2017). Oscillators that sync and swarm. Nature communications, 8(1), 1504.
 https://www.nature.com/articles/s41467-017-01190-3
