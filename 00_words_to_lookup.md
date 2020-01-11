@@ -3,7 +3,7 @@
 #todo
 Write a very quick summary of this thing for A/B testing: https://chris-said.io/2020/01/10/optimizing-sample-sizes-in-ab-testing-part-I/
 
-Current point in the Google Course: https://developers.google.com/machine-learning/crash-course/production-ml-systems
+Current point in the Google Course: https://developers.google.com/machine-learning/crash-course/production-ml-systems 
 
 # Words and topics to look up
 

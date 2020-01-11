@@ -1,5 +1,8 @@
 # To-read: ML and AI
 
+The Unreasonable Effectiveness of Recurrent Neural Networks
+http://karpathy.github.io/2015/05/21/rnn-effectiveness/
+
 Rahaman, N., Baratin, A., Arpit, D., Draxler, F., Lin, M., Hamprecht, F. A., ... & Courville, A. (2018). On the spectral bias of neural networks. arXiv preprint arXiv:1806.08734.
 https://arxiv.org/abs/1806.08734
 On what neural network can encode easily - seems to be a very useful read, potentially.
@@ -160,11 +163,11 @@ Wang, T., Zhu, J. Y., Torralba, A., & Efros, A. A. (2018). Dataset Distillation.
 https://arxiv.org/pdf/1811.10959.pdf
 10 images give 94% accuracy on MNIST.
 
-Generative teaching networks
-https://eng.uber.com/generative-teaching-networks/	
 Generative Teaching Networks: Accelerating Neural Architecture Search by Learning to Generate Synthetic Training Data.
 Felipe Petroski Such, Aditya Rawal, Joel Lehman, Kenneth O. Stanley, Jeff Clune
 https://arxiv.org/abs/1912.07768
+Blog post with a rather detailed description and commentary:
+https://eng.uber.com/generative-teaching-networks/
 
 Panagiotatos, G., Passalis, N., Iosifidis, A., Gabbouj, M., & Tefas, A. (2019, September). Curriculum-based Teacher Ensemble for Robust Neural Network Distillation. In 2019 27th European Signal Processing Conference (EUSIPCO) (pp. 1-5). IEEE.
 https://ieeexplore.ieee.org/abstract/document/8903112
@@ -192,6 +195,9 @@ What's the current view of greedy training of autoencoders? Is it an abandoned t
 * Bengio, Y., Lamblin, P., Popovici, D., & Larochelle, H. (2007). Greedy layer-wise training of deep networks. In Advances in neural information processing systems (pp. 153-160).
 * Hinton, G. E, Osindero, S., and Teh, Y. W. (2006). A fast learning algorithm for deep belief nets. Neural Computation, 18:1527-1554.
 * http://scholarpedia.org/article/Deep_belief_networks
+
+Zhai, X., Oliver, A., Kolesnikov, A., & Beyer, L. (2019). S4L: Self-Supervised Semi-Supervised Learning. arXiv preprint arXiv:1905.03670.
+https://arxiv.org/abs/1905.03670
 
 # Exploration, curiosity, RL
 
@@ -352,6 +358,10 @@ http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.34.1800&rep=rep1&type=p
 Original paper by Hinton, 1k citations.
 
 # CogSci and Meta
+
+Chollet, F. (2019). The Measure of Intelligence. arXiv preprint arXiv:1911.01547.
+https://arxiv.org/abs/1911.01547
+
 Turing, A. M. (1950). Computing machinery and intelligence. In Parsing the Turing Test (pp. 23-65). Springer, Dordrecht. 2005.
 http://www.geielettronica.it/images/pdf/turing.pdf
 Said to be a really nicely written paper, seminal, good examples, and with 13k citations.

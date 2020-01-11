@@ -14,27 +14,6 @@ Tao, T. (2013). Outliers in the spectrum of iid matrices with bounded rank pertu
 
 P. Van Mieghem. Graph Spectra for Complex Networks. Cambridge University Press, Cambridge, UK, 2013.
 
-# Centrality measures
-
-J. Flores and M. Romance. On eigenvector-like centralities for temporal networks: Discrete
-vs. continuous time scales. J. Comp. App. Math., 330:1041–1051, 2018.
-Introduces eigenvector #centrality for dynamic networks
-
-S. Praprotnik and V. Batagelj. Spectral centrality measures in temporal networks. Ars Math.
-Contemp., 11(1):11–33, 2015.
-
-P. Grindrod and D. J. Higham. A dynamical systems view of network centrality. Proc. Royal
-Soc. A, 470:20130835, May 2014.
-Introduces Katz and Bonacich #centrality measures for dynamic networks
-
-K. Lerman, R. Ghosh, and J. H. Kang. Centrality metric for dynamic networks. In Proc.
-Eighth Workshop on Mining and Learning with Graphs, pages 70–77. ACM, 2010.
-Introduces Katz and Bonacich #centrality measures for dynamic networks
-
-P. Grindrod and D. J. Higham. A matrix iteration for dynamic network summaries. SIAM
-Rev., 55:118–128, Jan 2013.
-Introduces "communicatibility #centrality"
-
 # Cliques and ensembles
 
 P. Bonacich. Factoring and weighting approaches to clique identification. J. Math. Sociol.,
@@ -76,6 +55,34 @@ Mukhopadhyay, D. (2012, September). Generating Expander Graphs Using Cellular Au
 # Dynamic networks
 
 N. Perra, B. Gonçalves, R. Pastor-Satorras, and A. Vespignani. Activity driven modeling of time varying networks. Sci. Rep., 2:469, 2012. 
+
+# Computations on graphs
+
+Farhoodi, R., Filom, K., Jones, I. S., & Kording, K. P. (2019). On functions computed on trees. arXiv preprint arXiv:1904.02309. https://arxiv.org/abs/1904.02309
+
+# Centrality measures
+#centrality
+
+J. Flores and M. Romance. On eigenvector-like centralities for temporal networks: Discrete
+vs. continuous time scales. J. Comp. App. Math., 330:1041–1051, 2018.
+Introduces eigenvector centrality for dynamic networks
+
+S. Praprotnik and V. Batagelj. Spectral centrality measures in temporal networks. Ars Math.
+Contemp., 11(1):11–33, 2015.
+
+P. Grindrod and D. J. Higham. A dynamical systems view of network centrality. Proc. Royal
+Soc. A, 470:20130835, May 2014.
+Introduces Katz and Bonacich centrality measures for dynamic networks
+
+K. Lerman, R. Ghosh, and J. H. Kang. Centrality metric for dynamic networks. In Proc.
+Eighth Workshop on Mining and Learning with Graphs, pages 70–77. ACM, 2010.
+Introduces Katz and Bonacich centrality measures for dynamic networks
+
+P. Grindrod and D. J. Higham. A matrix iteration for dynamic network summaries. SIAM
+Rev., 55:118–128, Jan 2013.
+Introduces "communicatibility centrality"
+
+Fagiolo, G. (2007). Clustering in complex directed networks. Physical Review E, 76(2), 026107.
 
 # Oscillations and Swarming
 

@@ -9,13 +9,33 @@ To-read: Neuro
 Raman, D. V., Rotondo, A. P., & O’Leary, T. (2019). Fundamental bounds on learning performance in neural circuits. Proceedings of the National Academy of Sciences, 116(21), 10537-10546.
 https://www.pnas.org/content/116/21/10537.short
 
-# Topology and its development
+# Topology and development
 
 Relating network connectivity to dynamics: opportunities and challenges for theoretical neuroscience Carina Curto, Katherine Morrison
 https://www.sciencedirect.com/science/article/pii/S0959438819300443 
 Review. Exactly what it should be (networks, motifs, dynamics)
 
 Morrison, A., Aertsen, A., and Diesmann, M. (2007). Spike-timing dependent plasticity in balanced random networks. Neural Computation, 19:1437–1467.
+
+Lazar, A., Pipa, G., & Triesch, J. (2006, April). The combination of STDP and intrinsic plasticity yields complex dynamics in recurrent spiking networks. In ESANN (pp. 647-652).
+
+Ozturk, I., & Halliday, D. M. (2016, December). Mapping spatio-temporally encoded patterns by reward-modulated STDP in Spiking neurons. In Computational Intelligence (SSCI), 2016 IEEE Symposium Series on (pp. 1-8). IEEE.
+
+Emergence of complex computational structures from chaotic neural networks through reward-modulated hebbian learning. GM Hoerzer, R Legenstein, W Maass, Cerebral Cortex, 24, 677-690, 2014
+
+Gilson, M., Burkitt, A., & van Hemmen, J. L. (2010). STDP in recurrent neuronal networks. Spike-timing dependent plasticity, 271.
+
+Naudé, J., Cessac, B., Berry, H., & Delord, B. (2013). Effects of cellular homeostatic intrinsic plasticity on dynamical and computational properties of biological recurrent neural networks. Journal of Neuroscience, 33(38), 15032-15043.
+
+Fremaux N, Sprekeler H, Gerstner W. Reinforcement learning using a continuous time actor-critic framework with spiking neurons. PLoS computational biology. 2013;9(4):e1003024.
+
+Gutig R, Aharonov R, Rotter S, Sompolinsky H. Learning input correlations through nonlinear temporally asymmetric Hebbian plasticity. The Journal of neuroscience: the official journal of the Society for Neuroscience. 2003;23(9):3697–714. Epub 2003/05/09.
+
+Morrison A, Diesmann M, Gerstner W. Phenomenological models of synaptic plasticity based on spike timing. Biol Cybern. 2008;98(6):459–78. Epub 2008/05/21.
+
+Gilson M, Burkitt AN, Grayden DB, Thomas DA, van Hemmen JL. Emergence of network structure due to spike-timing-dependent plasticity in recurrent neuronal networks III: Partially connected neurons driven by spontaneous activity. Biol Cybern. 2009;101(5–6):411–26.
+
+Hoerzer, G. M., Legenstein, R., & Maass, W. (2014). Emergence of Complex Computational Structures From Chaotic Neural Networks Through Reward-Modulated Hebbian Learning. Cerebral Cortex, 24, 677-690.
 
 # Criticality, inhibition, dynamics
 
@@ -49,6 +69,10 @@ Schaub, M. T., Billeh, Y. N., Anastassiou, C. A., Koch, C., and Barahona, M. (20
  
 # Reservoir computing
 
+Tanaka, G., Yamane, T., Héroux, J. B., Nakane, R., Kanazawa, N., Takeda, S., ... & Hirose, A. (2019). Recent advances in physical reservoir computing: a review. Neural Networks.
+https://www.sciencedirect.com/science/article/pii/S0893608019300784
+High priority #todo
+
 Pogodin, R., Corneil, D., Seeholzer, A., Heng, J., & Gerstner, W. (2019). Working memory facilitates reward-modulated Hebbian learning in recurrent neural networks. arXiv preprint arXiv:1910.10559. 
 https://arxiv.org/pdf/1910.10559.pdf 
 Reservoir computer + a "working memory network"
@@ -56,7 +80,7 @@ Reservoir computer + a "working memory network"
 Rotermund, D., & Pawelzik, K. R. (2019). Biologically plausible learning in a deep recurrent spiking network. bioRxiv, 613471.
 https://www.biorxiv.org/content/10.1101/613471v1.full
 
-# Synfire chains, Sequence learning
+# Synfire chains, Sequences
 
 Zheng, P. and Triesch, J. (2014). Robust development of synfire chains
 
@@ -145,12 +169,17 @@ Spoerer, C. J., Kietzmann, T. C., & Kriegeskorte, N. (2019). Recurrent networks 
 https://www.biorxiv.org/content/10.1101/677237v3.full
 Recurrent convolutional network  works better than a feed-forward convolutional network. It's slower, but better. Claim that it's similar to primate vision somehow.
 
+David, Beniaguev, Segev Idan, and London Michael. "Single Cortical Neurons as Deep Artificial Neural Networks." bioRxiv (2019): 613141. https://www.biorxiv.org/content/10.1101/613141v1.full.pdf
+
 # Memory storage
 
 Context-modular memory networks support high-capacity, flexible, and robust associative memories. (2020). William F Podlaski,  Everton J Agnes,  Tim P Vogels
 https://www.biorxiv.org/content/10.1101/2020.01.08.898528v1
 About Hopfield limit. It seems they use an architecture in which large groups neurons or synapses can be modulated (via gating, inhibition) in a context-dependent manner. Show an increase in memory capacity; changes in active components (states), robustness to noise, memory search (??), memory stability. Gating of memories. Substrate for continuous learning? Related to the problem of catastrophic forgetting, including [this paper](https://www.pnas.org/content/115/44/E10467.short).
 There's also a [tweetprint](https://twitter.com/TPVogels/status/1215572496570896384).
+
+Masse, N. Y., Yang, G. R., Song, H. F., Wang, X. J., & Freedman, D. J. (2019). Circuit mechanisms for the maintenance and manipulation of information in working memory. Nature neuroscience, 1.
+https://www.biorxiv.org/content/biorxiv/early/2018/05/21/305714.full.pdf
 
 # Free energy
 #freeenergy
@@ -185,6 +214,13 @@ Nested Neuronal Dynamics Orchestrate a Behavioral Hierarchy across Timescales
 Kaplan .. Zimmer
 https://www.cell.com/neuron/fulltext/S0896-6273(19)30932-8
 C elegans, activation dynamics. How fixed action patterns emerge from (are encoded by) the nervous system.
+
+# Variability
+
+Murakami, M., Shteingart, H., Loewenstein, Y., & Mainen, Z. F. (2016). Distinct sources of deterministic and stochastic components of action timing decisions in rodent frontal cortex. bioRxiv, 088963.
+
+Findling, C., Skvortsova, V., Dromnelle, R., Palminteri, S., & Wyart, V. (2019). Computational noise in reward-guided learning drives behavioral variability in volatile environments. Nature neuroscience, 22(12), 2066-2077.
+https://www.biorxiv.org/content/biorxiv/early/2018/10/11/439885.full.pdf
 
 # Other
 
