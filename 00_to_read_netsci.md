@@ -8,6 +8,10 @@ Go through publications of D. Krioukov (Northeastern):
 https://web.northeastern.edu/dima/pub/
 Has some publications (older, down the page) on percolation on networks.
 
+Video: The physics of brain network architecture, function, and control
+Lecture by Danielle Bassett
+https://www.youtube.com/watch?v=u-l-rdKvd8U
+
 # Spectral techniques
 
 Tao, T. (2013). Outliers in the spectrum of iid matrices with bounded rank perturbations. Probability Theory and Related Fields, 155(1-2):231–263.

@@ -139,7 +139,7 @@ Hinton, G., Vinyals, O., & Dean, J. (2015). Distilling the knowledge in a neural
 https://arxiv.org/pdf/1503.02531.pdf
 The splashy "original distillation paper" (2500 refs)
 
-Furlanello, T., Lipton, Z. C., Tschannen, M., Itti, L., & Anandkumar, A. (2018). Born again neural networks. arXiv preprint arXiv:1805.04770.
+Furlanello, T., Lipton, Z. C., Tschannen, M., Itti, L., & Anandkumar, A. (2018). Born-again neural networks. arXiv preprint arXiv:1805.04770.
 https://arxiv.org/pdf/1805.04770.pdf
 Top read!
 
@@ -282,6 +282,9 @@ Press, O., Smith, N. A., & Levy, O. (2019). Improving Transformer Models by Reor
 https://ofir.io/sandwich_transformer.pdf
 An interesting tiny paper where all they did, I think, is play with the sequence of 2 common blocks, to show that the optimal sequence is not what everyone expected. May be neat. But I prob need to understand how transformers work to get it.
 
+Arabshahi, F., Lu, Z., Singh, S., & Anandkumar, A. (2019). Memory Augmented Recursive Neural Networks. arXiv preprint arXiv:1911.01545.
+https://arxiv.org/abs/1911.01545
+
 # AEs, GANs, Generation
 
 Oord, A. V. D., Dieleman, S., Zen, H., Simonyan, K., Vinyals, O., Graves, A., ... & Kavukcuoglu, K. (2016). Wavenet: A generative model for raw audio. arXiv preprint arXiv:1609.03499.
@@ -401,9 +404,9 @@ Cisek, P. (2019). Resynthesizing behavior through phylogenetic refinement. Atten
 https://link.springer.com/article/10.3758/s13414-019-01760-1
 On evolution of mamallian brain, and how you can draw a link between behavioral (computational?) complexity, and hierarchical organization of a vertebrate brain. Tries to ambitiously draw parallels between evolution, development, and behavior.
 
-# Symbolic
+# Symbolic and related
 
-Yoshua Bengio’s short reading list
+Yoshua Bengio’s short reading list:
 * BabyAI: First Steps Towards Grounded Language Learning With a Human In the Loop, Chevalier-Boisvert et al.,
 2018: https://arxiv.org/abs/1810.08272v2.
 * A Meta-Transfer Objective for Learning to Disentangle Causal Mechanisms, Bengio et al., 2019:

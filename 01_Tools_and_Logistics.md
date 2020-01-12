@@ -1,4 +1,5 @@
-# Tools, coding, project management
+Tools, coding, project management
+===
 All sorts of infrastructure stuff.
 
 # Python
@@ -212,13 +213,16 @@ Most typical everyday use:
 * `git pull` - 	fetch latest changes, merge them, and rebase HEAD to the latest commit
 * `git diff` - show differences to unstaged files
 * `git add .` - stage everytyhing
-* `git commit -m "Comment"` - commit
+* `git commit -m "Message"` - commit
 * `git push` - push to origin ('Origin' is a silly name they use for a remote repo)
 
-Working with individual files and commits:
+Analyzing stuff:
+* `git status` - see uncommited files + comparison to origin
+* `git diff` - see unstaged changes
+* `git diff HEAD` - see both staged and unstaged changes
 * `git show [branch]:[file]` - show file changes. Tons of output formatting. On itself, describes head. [1](https://git-scm.com/docs/git-show)
 * `git blame [file]` - describes changes for a file. Note that filenames go without quotation marks.
-* `git diff commit1 commit2` - compare.
+* `git diff commit1 commit2` - compare two commits.
 * `git log -p [file/dir]` - full history for this file, with diffs.
 * `git add [file]` - add one file only.
 
@@ -229,7 +233,7 @@ Backing up, carefully:
 * `git commit --amend` #todo
 * `git rebase -i HEAD~3` - squash last 3 commits into one, interactively. **Do it only for commits that weren't pushed yet** (or you'll get a conflict with a remote repo), unless you're morally prepared to fix everything locally and force-push to origin, rewriting it. "Interactively" here means that a list of commits is generated, and you leave `pick` for those you want to leave; replace it with `drop` for those you want to delete, and `squash` for those that needs to be squashed (just make sure there's a 'pick' before it, for somewhere to squash to). This workflow is a reason why we shouldn't push to public repo too often (don't push micro-commits); wait until a reasonable piece of work is done, **clean the commits**, then push. [1](https://git-scm.com/docs/git-rebase#_interactive_mode), [2](https://medium.com/@porteneuve/getting-solid-at-git-rebase-vs-merge-4fa1a48c53aa)
 
-Backing up, in panicky mode:
+Backing up, panicky:
 * `git reflog` → find last commit that is good → `git reset HEAD@{index}`- resets head to this commit, deletes everything after.
 
 Branching:
@@ -252,8 +256,9 @@ Somewhat dangerous practices:
 * `git push --force` - hard push to origin, overwriting it: generally, a very dangerous idea.
 * `git fetch origin master; git reset --hard origin/master` - hard-pull from origin overwriting local files. Equally dangerous. [r1](https://stackoverflow.com/questions/1125968/how-do-i-force-git-pull-to-overwrite-local-files)
 
-Destroying stuff
-* `git clean` - deletes all uncommited files
+Destructive commands:
+* `git clean` - from the current dir, removes all files that are not under version control (all untracked files)
+* `git reset --hard [commit_id]` - purge all uncommited changes; reset to commit (last one by default)
 * `git branch -d branch_name` - deletes branch
 
 Open questions:
