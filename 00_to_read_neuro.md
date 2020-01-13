@@ -37,6 +37,10 @@ Gilson M, Burkitt AN, Grayden DB, Thomas DA, van Hemmen JL. Emergence of network
 
 Hoerzer, G. M., Legenstein, R., & Maass, W. (2014). Emergence of Complex Computational Structures From Chaotic Neural Networks Through Reward-Modulated Hebbian Learning. Cerebral Cortex, 24, 677-690.
 
+Fauth, M., & Tetzlaff, C. (2016). Opposing effects of neuronal activity on structural plasticity. Frontiers in neuroanatomy, 10, 75.
+https://www.frontiersin.org/articles/10.3389/fnana.2016.00075/full
+Review, looking how synapse potentiation (aka "activity") and elimination (aka "structural plasticity") compete and shape micro-connectivity.
+
 # Criticality, inhibition, dynamics
 
 Popular account, harvest all links:
@@ -66,6 +70,10 @@ Vogels, T. P., Sprekeler, H., Zenke, F., Clopath, C., & Gerstner, W. (2011). Inh
 About what tunes inhibitory neurons, that in turn make excitatory activity properly sparse.
 
 Schaub, M. T., Billeh, Y. N., Anastassiou, C. A., Koch, C., and Barahona, M. (2015). Emergence of Slow-Switching Assemblies in Structured Neuronal Networks. PLoS Computational Biology, 11(7):1–28.
+
+Kim, J. K., & Fiorillo, C. D. (2017). Theory of optimal balance predicts and explains the amplitude and decay time of synaptic inhibition. Nature communications, 8, 14566.
+https://www.nature.com/articles/ncomms14566
+How ideally balanced inhibition can emerge from anti-hebbian plasticity. Skim.
  
 # Reservoir computing
 
@@ -133,6 +141,57 @@ Rolfe, Jason Tyler (2012) Intrinsic Gradient Networks. Dissertation (Ph.D.), Cal
 https://thesis.library.caltech.edu/6953/
 PhD thesis that was never published on biologically plausible gradient descend in the brain? Check it out.
 
+# Single-neuron calculations
+
+Dendritic action potentials and computation in human layer 2/3 cortical neurons
+Albert Gidon1, Timothy Adam Zolnik1, Pawel Fidzinski2,3, Felix Bolduan4, Athanasia Papoutsi5, Panayiota Poirazi5, Martin Holtkamp2, Imre Vida3,4, Matthew Evan Larkum. Science  03 Jan 2020:
+https://science.sciencemag.org/content/367/6473/83
+Apparently show that individual cortical piramidal neurons can do XOR.
+
+David, Beniaguev, Segev Idan, and London Michael. "Single Cortical Neurons as Deep Artificial Neural Networks." bioRxiv (2019): 613141. https://www.biorxiv.org/content/10.1101/613141v1.full.pdf
+
+Unifying Long-Term Plasticity Rules for Excitatory Synapses by Modeling Dendrites of Cortical Pyramidal Neurons
+C Ebner, C Clopath, P Jedlicka, H Cuntz - Cell Reports, 2019
+https://www.sciencedirect.com/science/article/pii/S2211124719315591
+Compartments, NMDA, all sorts of STDP stuff.
+
+# Memory storage
+
+Context-modular memory networks support high-capacity, flexible, and robust associative memories. (2020). William F Podlaski,  Everton J Agnes,  Tim P Vogels
+https://www.biorxiv.org/content/10.1101/2020.01.08.898528v1
+About Hopfield limit. It seems they use an architecture in which large groups neurons or synapses can be modulated (via gating, inhibition) in a context-dependent manner. Show an increase in memory capacity; changes in active components (states), robustness to noise, memory search (??), memory stability. Gating of memories. Substrate for continuous learning? Related to the problem of catastrophic forgetting, including [this paper](https://www.pnas.org/content/115/44/E10467.short).
+There's also a [tweetprint](https://twitter.com/TPVogels/status/1215572496570896384).
+
+Masse, N. Y., Yang, G. R., Song, H. F., Wang, X. J., & Freedman, D. J. (2019). Circuit mechanisms for the maintenance and manipulation of information in working memory. Nature neuroscience, 1.
+https://www.biorxiv.org/content/biorxiv/early/2018/05/21/305714.full.pdf
+
+# DL models of brains
+
+https://www.biorxiv.org/content/10.1101/838383v1
+Training deep neural density estimators to identify mechanistic models of neural dynamics
+Gonçalves .. Macke 2019
+About how to use deep learning to guess neuronal parameters to fit the actual activity of the network (?) They seem to be looking at actual V(t) though.
+
+Richards, B. A., Xia, F., Santoro, A., Husse, J., Woodin, M. A., Josselyn, S. A., & Frankland, P. W. (2014). Patterns across multiple memories are identified over time. Nature neuroscience, 17(7), 981.
+https://www.nature.com/articles/nn.3736
+
+Wang, J. X., Kurth-Nelson, Z., Kumaran, D., Tirumala, D., Soyer, H., Leibo, J. Z., ... & Botvinick, M. (2018). Prefrontal cortex as a meta-reinforcement learning system. Nature neuroscience, 21(6), 860.
+https://www.nature.com/articles/s41593-018-0147-8
+
+Lillicrap, T. P., & Scott, S. H. (2013). Preference distributions of primary motor cortex neurons reflect control solutions optimized for limb biomechanics. Neuron, 77(1), 168-179.
+https://www.sciencedirect.com/science/article/pii/S0896627312009920
+
+Khaligh-Razavi, S. M., & Kriegeskorte, N. (2014). Deep supervised, but not unsupervised, models may explain IT cortical representation. PLoS computational biology, 10(11), e1003915.
+https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003915
+Very well cited, this one.
+
+Kording, K. P., Kayser, C., Einhauser, W., & Konig, P. (2004). How are complex cell properties adapted to the statistics of natural stimuli?. Journal of neurophysiology, 91(1), 206-212.
+https://www.ncbi.nlm.nih.gov/m/pubmed/12904330/
+
+Sorscher, B., Mel, G., Ganguli, S., & Ocko, S. (2019). A unified theory for the origin of grid cells through the lens of pattern formation. In Advances in Neural Information Processing Systems (pp. 10003-10013).
+https://papers.nips.cc/paper/9191-a-unified-theory-for-the-origin-of-grid-cells-through-the-lens-of-pattern-formation
+Supposedly, explains the development of grid cells, synthesizing two existing theories (recurrent with lateral inhibition and spontaneous development during navigation?)
+
 # Bottom-up validation
 
 Misra, D. (2019). Mish: A Self Regularized Non-Monotonic Neural Activation Function. arXiv preprint arXiv:1908.08681.
@@ -168,18 +227,6 @@ Use unsupervise learning to identify internal (latent) states in a fly; then cor
 Spoerer, C. J., Kietzmann, T. C., & Kriegeskorte, N. (2019). Recurrent networks can recycle neural resources to flexibly trade speed for accuracy in visual recognition. bioRxiv, 677237.
 https://www.biorxiv.org/content/10.1101/677237v3.full
 Recurrent convolutional network  works better than a feed-forward convolutional network. It's slower, but better. Claim that it's similar to primate vision somehow.
-
-David, Beniaguev, Segev Idan, and London Michael. "Single Cortical Neurons as Deep Artificial Neural Networks." bioRxiv (2019): 613141. https://www.biorxiv.org/content/10.1101/613141v1.full.pdf
-
-# Memory storage
-
-Context-modular memory networks support high-capacity, flexible, and robust associative memories. (2020). William F Podlaski,  Everton J Agnes,  Tim P Vogels
-https://www.biorxiv.org/content/10.1101/2020.01.08.898528v1
-About Hopfield limit. It seems they use an architecture in which large groups neurons or synapses can be modulated (via gating, inhibition) in a context-dependent manner. Show an increase in memory capacity; changes in active components (states), robustness to noise, memory search (??), memory stability. Gating of memories. Substrate for continuous learning? Related to the problem of catastrophic forgetting, including [this paper](https://www.pnas.org/content/115/44/E10467.short).
-There's also a [tweetprint](https://twitter.com/TPVogels/status/1215572496570896384).
-
-Masse, N. Y., Yang, G. R., Song, H. F., Wang, X. J., & Freedman, D. J. (2019). Circuit mechanisms for the maintenance and manipulation of information in working memory. Nature neuroscience, 1.
-https://www.biorxiv.org/content/biorxiv/early/2018/05/21/305714.full.pdf
 
 # Free energy
 #freeenergy

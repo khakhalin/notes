@@ -1,8 +1,6 @@
 # General To-Dos:
 
 #todo
-Write a very quick summary of this thing for A/B testing: https://chris-said.io/2020/01/10/optimizing-sample-sizes-in-ab-testing-part-I/
-
 Current point in the Google Course: https://developers.google.com/machine-learning/crash-course/production-ml-systems 
 
 # Words and topics to look up
@@ -15,7 +13,7 @@ Classic ML and friends
 * Hungarian algorithm
 * Bloom filter
 * Kalman filter (and its friends)
-* RBF - Radial basis function kernel: https://en.wikipedia.org/wiki/Radial_basis_function_kernel
+* RBF - [Radial basis function kernel](https://en.wikipedia.org/wiki/Radial_basis_function_kernel)
 * AdaBoost
 * Expectation-Maximization
 * Bayesian PCA
@@ -58,6 +56,7 @@ Technical stuff
 * Hadoop
 * Spark
 * Python closures, why they are a thing, what's dangerous about them, and how to use them
+* Jax: [Baysian NN in Jax](https://colab.research.google.com/drive/1gMAXn123Pm58_NcRldjSuGYkbrXTUiN2) - collab notebook
 
 Other math
 * How to calculate single-value-decomposion and eigenvector decomposition in practice? How do they code it for numpy, for example?
@@ -65,9 +64,7 @@ Other math
 * Lagrange multiplyier - proof
 * Hamiltonians and how dynamical systems invoke them
 * Perron–Frobenius theorem - something related to centralities and or network graph eigenvectors
-
-Jax
-* [Baysian NN in Jax](https://colab.research.google.com/drive/1gMAXn123Pm58_NcRldjSuGYkbrXTUiN2) - collab notebook
+* kuramoto oscillations 
 
 Neuro
 * ...
