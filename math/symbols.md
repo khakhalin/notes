@@ -2,7 +2,7 @@ Best search site:
 [https://www.compart.com/en/unicode/](<https://www.compart.com/en/unicode/>)
 
 ∙ 
-≠ ≤	≥ ≪	≫ ≈ ≡ ≔
+≠ ≤	≥ ≪	≫ ≈ ≡ ≔ ∥ ∦
 ∑ ∏ ∫ ∬
 ⟨ ⟩
 ⇒ ⇄ ↻ → 
@@ -24,7 +24,8 @@ https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode
 յ	ն	շ	ո	չ	պ	ջ	ռ	ս	վ	տ	ր	ց	ւ	փ	ք	օ	ֆ	ու	և
 
  ⰀⰁⰂⰃⰄⰅⰆⰇⰈⰉⰊⰋⰌⰍⰎⰏⰐⰑⰒⰓⰔⰕⰖⰗⰘⰙⰚⰛⰜⰝⰞⰟⰠⰡⰢⰣⰤⰥⰦⰧⰨⰩⰪⰫⰬⰭⰮ
-
+ 
+ æÆ
 
 Testing fancy formulas:
 

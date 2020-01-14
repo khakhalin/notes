@@ -143,6 +143,10 @@ PhD thesis that was never published on biologically plausible gradient descend i
 
 # Single-neuron calculations
 
+Abraham, W. C., Jones, O. D., & Glanzman, D. L. (2019). Is plasticity of synapses the mechanism of long-term memory storage?. NPJ science of learning, 4(1), 1-10.
+https://www.ncbi.nlm.nih.gov/pubmed/31285847
+A review on alternatives (non-synaptic) ways too store memories in the brain.
+
 Dendritic action potentials and computation in human layer 2/3 cortical neurons
 Albert Gidon1, Timothy Adam Zolnik1, Pawel Fidzinski2,3, Felix Bolduan4, Athanasia Papoutsi5, Panayiota Poirazi5, Martin Holtkamp2, Imre Vida3,4, Matthew Evan Larkum. Science  03 Jan 2020:
 https://science.sciencemag.org/content/367/6473/83
