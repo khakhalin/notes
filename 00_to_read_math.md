@@ -244,6 +244,12 @@ https://arxiv.org/abs/1906.02768
 Lottery tickets in RL domain.
 
 ## RNNs, Attention
+#attention
+
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., ... & Polosukhin, I. (2017). Attention is all you need. In Advances in neural information processing systems (pp. 5998-6008).
+Transformers network
+https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf
+First read about attention?
 
 https://distill.pub/2019/memorization-in-rnns/
 How LSTM networks remember text: a visual intro.
@@ -251,11 +257,6 @@ How LSTM networks remember text: a visual intro.
 Hafner, D., Irpan, A., Davidson, J., & Heess, N. (2017). Learning hierarchical information flow with recurrent neural modules. In Advances in Neural Information Processing Systems (pp. 6724-6733).
 https://papers.nips.cc/paper/7249-learning-hierarchical-information-flow-with-recurrent-neural-modules.pdf
 ThalNet, which like a virtual thalamus. Only cited by 4 since 2017, so doesn't look like it caught on.
-
-Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., ... & Polosukhin, I. (2017). Attention is all you need. In Advances in neural information processing systems (pp. 5998-6008).
-Transformers network
-https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf
-First read about attention?
 
 Jaderberg, M., Simonyan, K., & Zisserman, A. (2015). Spatial transformer networks. In Advances in neural information processing systems (pp. 2017-2025).
 https://arxiv.org/pdf/1506.02025.pdf
