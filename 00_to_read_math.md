@@ -100,6 +100,12 @@ Ba, J., & Caruana, R. (2014). Do deep nets really need to be deep?. In Advances 
 https://papers.nips.cc/paper/5484-do-deep-nets-really-need-to-be-deep.pdf
 Seems to be one of the original network distillation papers (800 refs)
 
+# Interpretability
+
+Gilboa, D., & Gur-Ari, G. (2019). Wider Networks Learn Better Features. arXiv preprint arXiv:1909.11572.
+https://arxiv.org/pdf/1909.11572.pdf
+train a network (they used MNIST), do UMAP of activations, find groups of neurons that together encode useful features, visualize them. Claim it to be a reasonable approach to understanding networks.
+
 # Tickets, distillation, transfer, curriculum
 #ticket
 
@@ -184,6 +190,10 @@ http://cognitivemedium.com/rmnist
 Blog post on learning on super-small subsets of MNIST (not an official pub, so never cited). One example of each digit apparently brings accuracy to 42% for a naive NN (vs 97% for full), and ~56% (vs 99% for full) for a pretrained conv net (2 layers, not trained on mnist specifically), followed by 2 fully connected. Regularization becomes extremely important, as a way to fight overfitting, and even switching to convnet for this may be considered a type of regularization, I think.
 
 # Self-supervised learning
+
+Jing, L., & Tian, Y. (2019). [Self-supervised visual feature learning with deep neural networks: A survey](https://arxiv.org/pdf/1902.06162.pdf). arXiv preprint arXiv:1902.06162.
+
+Kolesnikov, A., Zhai, X., & Beyer, L. (2019). [Revisiting self-supervised visual representation learning](http://openaccess.thecvf.com/content_CVPR_2019/papers/Kolesnikov_Revisiting_Self-Supervised_Visual_Representation_Learning_CVPR_2019_paper.pdf). arXiv preprint arXiv:1901.09005.
 
 He, K., Fan, H., Wu, Y., Xie, S., & Girshick, R. (2019). Momentum Contrast for Unsupervised Visual Representation Learning. arXiv preprint arXiv:1911.05722. https://arxiv.org/pdf/1911.05722.pdf
 

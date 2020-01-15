@@ -31,3 +31,5 @@ Attention = softmax(QKᵀ / √dim)∙V . Then multihead attention just concats 
 For decoders, used "masked attention", to manually make sure future doesn't affect the past.
 
 For positions, used a weird overtone series (they don't call it that way): sin and cos at geometrically increasing frequencies!
+
+> The original Transformers paper says: "The positional encodings have the same dimension d_model as the embeddings, so that the two can be summed." I really don't know what it means. And for sin / cos, it says "We chose this function because we hypothesized it would allow the model to easily learn to attend by relative positions, since for any fixed offset k, PEpos+k can be represented as a linear function of PEpos." Also no idea.

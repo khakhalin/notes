@@ -41,6 +41,12 @@ Fauth, M., & Tetzlaff, C. (2016). Opposing effects of neuronal activity on struc
 https://www.frontiersin.org/articles/10.3389/fnana.2016.00075/full
 Review, looking how synapse potentiation (aka "activity") and elimination (aka "structural plasticity") compete and shape micro-connectivity.
 
+Rabinovich, M., Volkovskii, A., Lecanda, P., Huerta, R., Abarbanel, H. D. I., & Laurent, G. (2001). Dynamical encoding by networks of competing neuron groups: winnerless competition. Physical review letters, 87(6), 068102.	
+https://pdfs.semanticscholar.org/a0e4/249b0ab6e34699b12d49ad0d0a4c5e121886.pdf
+
+Lagzi, F., & Rotter, S. (2015). Dynamics of competition between subnetworks of spiking neuronal networks in the balanced state. PloS one, 10(9), e0138947.
+https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0138947
+
 # Criticality, inhibition, dynamics
 
 Popular account, harvest all links:
