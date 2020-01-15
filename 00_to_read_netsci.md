@@ -23,7 +23,7 @@ P. Van Mieghem. Graph Spectra for Complex Networks. Cambridge University Press, 
 P. Bonacich. Factoring and weighting approaches to clique identification. J. Math. Sociol.,
 2:113–120, 1972.
 
-# Network complexity
+# Network topology analysis
 
 da Fontoura Costa, L. (2018). What is a Complex Network?(CDT-2).
 [ResearchGate link](https://www.researchgate.net/profile/Luciano_Da_F_Costa/publication/324312765_What_is_a_Complex_Network_CDT-2/links/5aca49ba4585151e80a91abd/What-is-a-Complex-Network-CDT-2.pdf)
@@ -56,7 +56,9 @@ Praba, B., & Saranya, R. (2020). Application of the graph cellular automaton in 
 
 Mukhopadhyay, D. (2012, September). Generating Expander Graphs Using Cellular Automata. In International Conference on Cellular Automata (pp. 52-62). Springer, Berlin, Heidelberg.
 
-# Dynamic networks
+# Dynamic on dynamic
+
+Zambra, M., Testolin, A., & Maritan, A. (2019). [Emergence of Network Motifs in Deep Neural Networks](https://arxiv.org/pdf/1912.12244.pdf). arXiv preprint arXiv:1912.12244.
 
 N. Perra, B. Gonçalves, R. Pastor-Satorras, and A. Vespignani. Activity driven modeling of time varying networks. Sci. Rep., 2:469, 2012. 
 
@@ -88,14 +90,21 @@ Introduces "communicatibility centrality"
 
 Fagiolo, G. (2007). Clustering in complex directed networks. Physical Review E, 76(2), 026107.
 
-# Oscillations and Swarming
+# Process complexity
+
+Toker, D., Sommer, F. T., & D’Esposito, M. (2020). [A simple method for detecting chaos in nature](https://www.nature.com/articles/s42003-019-0715-9). Communications Biology, 3(1), 1-13.
+Seems practical, and reasonable. They first make sure the data is ready to be analyzed (noise, downsampling). Takes considerable part of the text. Then they use a "0-1 test", resulting in one value K that is 0 for periodical, and approaches 1 for chaotic. Seems to be based on predictions for brownian motion, but need to look more closely.
+
+F. A. Rodrigues, T. K. DM. Peron, P. Ji, and J. Kurths. The Kuramoto model in complex
+networks. Phys. Rep., 469:1–98, 2016
+
+A Arenas, A Díaz-Guilera, J Kurths, Y Moreno, and C Zhou. Synchronization in complex
+networks. Phys. Rep., 469:93–153, 2008.
 
 O’Keeffe, K. P., Hong, H., & Strogatz, S. H. (2017). Oscillators that sync and swarm. Nature communications, 8(1), 1504.
 https://www.nature.com/articles/s41467-017-01190-3
 About collective self-organized behaviors. Can be useful for the modeling class maybe?
 
-A Arenas, A Díaz-Guilera, J Kurths, Y Moreno, and C Zhou. Synchronization in complex
-networks. Phys. Rep., 469:93–153, 2008.
+# Teaching
 
-F. A. Rodrigues, T. K. DM. Peron, P. Ji, and J. Kurths. The Kuramoto model in complex
-networks. Phys. Rep., 469:1–98, 2016
+* https://github.com/hsayama/PyCX - a set of materials for teaching complexity

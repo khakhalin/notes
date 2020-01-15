@@ -94,6 +94,9 @@ Reservoir computer + a "working memory network"
 Rotermund, D., & Pawelzik, K. R. (2019). Biologically plausible learning in a deep recurrent spiking network. bioRxiv, 613471.
 https://www.biorxiv.org/content/10.1101/613471v1.full
 
+Stimberg, M., Goodman, D. F., & Nowotny, T. (2019). [Brian2GeNN: accelerating spiking neural network simulations with graphics hardware](https://www.nature.com/articles/s41598-019-54957-7). Scientific Reports.
+Spiking network simulator that is apparently so optimized that it runs very fast. Check before writing any custom spiking models.
+
 # Synfire chains, Sequences
 
 Zheng, P. and Triesch, J. (2014). Robust development of synfire chains

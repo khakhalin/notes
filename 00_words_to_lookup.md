@@ -9,7 +9,6 @@ Current point in the Google Course: https://developers.google.com/machine-learni
 * Make sure all Eric's recommendations are here
 
 Classic ML and friends
-* std rotate	
 * Hungarian algorithm
 * Bloom filter
 * Kalman filter (and its friends)
