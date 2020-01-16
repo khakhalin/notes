@@ -48,15 +48,16 @@ Third priority books:
 Books that are not on my reading list, but keeping here just in case:
 * Problem solving with data structures in Python ([full text, web](https://runestone.academy/runestone/books/published/pythonds/index.html))
 * [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/index.html) by Michael Nielsen
-* Competitive Programmer's Handbook by Antti Laaksonen: [pdf](https://cses.fi/book/book.pdf) (C++) - great idea, but the descriptions of algorithms are not clear, while implementations seem ideosyncratic (or maybe not; maybe I )
+* Competitive Programmer's Handbook by Antti Laaksonen: [pdf](https://cses.fi/book/book.pdf) (C++) - great idea, but the descriptions of algorithms are not clear, while implementations seem ideosyncratic...
 
 Links for the computation course I'm teaching this spring:
 * Modeling and Simulation in Python, by Allen B. Downey: [link](https://greenteapress.com/wp/modsimpy/)
 * Examples of good student projects from Downey's course: [1](https://github.com/kdy304g/ComplexLizards-CA/blob/master/reports/final_report.md), [2](https://github.com/jzerez/swarm_classification/blob/master/reports/Final_Report.md)
 
-Job-search specific books:
+Job-search specific materials:
 * Cracking the code interview
 * [[Huyen2019book]] - a short book on data science / ML job interviewing
+* [Numbeo "cost of living" indices](https://www.numbeo.com/cost-of-living/rankings.jsp) - to scale salary expectations for the location
 
 ## Courses
 * [Google Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course/) - a really good introduction for complete noobs 
