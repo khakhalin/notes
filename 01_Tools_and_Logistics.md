@@ -2,6 +2,8 @@ Tools, coding, project management
 ===
 All sorts of infrastructure stuff.
 
+> Is it about time to move individual topics from this file to separate files? It's getting slower. Perhaps create a folder "Tools", and plop all data there, retaining only links here?
+
 # Python
 
 ## Core Python
@@ -18,6 +20,7 @@ References:
 * To get some (or rather, first) key from a dict: `next(iter(a.keys()))`
 * Objects (including empty lists `[]`) should never be used as default arguments for functions, as they are evaluated only once per program (during object definition), not when methods are called! Insetad use `x=None`, then `if x is None: x=[]`. It sounds super-cumbersome, but that's just how it is. ([source](https://docs.python-guide.org/writing/gotchas/))
 * **Docstring**: First constant in a declaration, starts and ends with triple double quotes `"""`, accessible via `object.__doc__` property. Minimum: one sentence, capitalized, with a full stop at the end, explaining what this function does. Don't include the name, or usage. Any other comments - lower, after an empty line. For modules, similar, at the very beginning, before any declarations. Refs: [1](https://www.python.org/dev/peps/pep-0257/), [2](https://www.pythonforbeginners.com/basics/python-docstrings)
+* **F-strings**: `f"bla {x['a']:.2f}"` - this version supports dicts (because diff quotation marks), and formats the output (after `:`).
 
 ## Matplotlib
 * Brief intro from Brad Solomon: https://realpython.com/python-matplotlib-guide/

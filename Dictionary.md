@@ -1,6 +1,6 @@
 Dictionary of Terms
 ===
-Not exhaustive: if a term is explained in one of the thematic chapters, it is not duplicated here.
+Not exhaustive: if a term is explained in one of the thematic chapters, it is not duplicated here. This list is only for "orphan" terms that are too short or off-topic to get their personal entry elsewhere.
 
 
 **Bagging** (ML): the simplest way to create an ensemble of classifiers using an algorithm: split data into bags (with replacement), train a different model on each of them. Final prediction = mean of all predictions. [ref](https://analyticsindiamag.com/primer-ensemble-learning-bagging-boosting/)
