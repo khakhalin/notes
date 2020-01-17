@@ -56,6 +56,9 @@ Praba, B., & Saranya, R. (2020). Application of the graph cellular automaton in 
 
 Mukhopadhyay, D. (2012, September). Generating Expander Graphs Using Cellular Automata. In International Conference on Cellular Automata (pp. 52-62). Springer, Berlin, Heidelberg.
 
+Hassan, B. A., & Hiesinger, P. R. (2015). Beyond molecular codes: simple rules to wire complex brains. Cell, 163(2), 285-291.
+A review of how simple developmental rules (in this case actual dendrites in 3D, growing and stopping) can produce different stochastic patterns, depending on the encoded rules.
+
 # Dynamic on dynamic
 
 Zambra, M., Testolin, A., & Maritan, A. (2019). [Emergence of Network Motifs in Deep Neural Networks](https://arxiv.org/pdf/1912.12244.pdf). arXiv preprint arXiv:1912.12244.

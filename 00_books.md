@@ -1,6 +1,7 @@
 # Courses, books, and links
+#book
 
-## To check and file:
+# To check and file:
 Matrix calculus for deep learning
 https://explained.ai/matrix-calculus/index.html
 
@@ -11,8 +12,8 @@ Look through, decide the priority, and how to file.
 Interesting practical intro to ML projects; look through:
 https://github.com/chiphuyen/machine-learning-systems-design
 
-## Books
-Currently at: ESL p139 (Basis expansion)
+# Books
+Currently at: ESL p219 (Model selection)
 
 (Given in subjective order of my gradual reading)
 * How to think like a computer scientist by Allen B. Downey: ([site](https://greenteapress.com/wp/think-python-2e/)) - best intro to Python ever
@@ -59,7 +60,7 @@ Job-search specific materials:
 * [[Huyen2019book]] - a short book on data science / ML job interviewing
 * [Numbeo "cost of living" indices](https://www.numbeo.com/cost-of-living/rankings.jsp) - to scale salary expectations for the location
 
-## Courses
+# Courses
 * [Google Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course/) - a really good introduction for complete noobs 
 * [Stanford, linear dynamical systems](http://stanford.edu/class/ee363/lectures.html) (Stephen Boyd) - includes stochastic control, Kalman filter, Lyapunov theory
 * [Linear algebra by Gilbert Strang](https://www.youtube.com/playlist?list=PLE7DDD91010BC51F8) - Youtube from MIT. Everybody loves it, as it achieves a beautiful balance between staying extremely practical, concise, but at the same time giving many proofs (or "almost proofs", extreme-physics style, like for good cases, with simplifying assumptions etc). MIT also has [notes for each lecture](https://ocw.mit.edu/courses/mathematics/18-06sc-linear-algebra-fall-2011/syllabus/) (not in one pdf, but easy to find).
@@ -67,7 +68,7 @@ Job-search specific materials:
 * [Maximum Entropy Network Ensembles](http://www.maths.qmul.ac.uk/~gbianconi/LTCCModule) - a series of lectures
 * [End-to-end machine learning](https://end-to-end-machine-learning.teachable.com) - sorta like a course from Brandon Rohrer
 
-## Aggregators of links
+# Link aggregators
 
 * [A very nice annotated list of book recommendations](https://towardsdatascience.com/beyond-the-mooc-a-bookworms-guide-to-data-science-e87271cb0572)
 * [Machine learning for humans, 80/20 reading list](https://medium.com/machine-learning-for-humans/ai-reading-list-c4753afd97a) - claims to be curated. Sections on ML, Deep, RL, and then various general readings about the meaning of it all.
