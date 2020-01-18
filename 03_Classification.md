@@ -1,4 +1,5 @@
 # Classification
+#classification
 
 # 1NN and KNN
 Simplest archetypical approach: **Nearest Neighbor**. Just pick the closest training case. This is an example of a **lazy** approach: instead of generating estimations upfront (that would be called **eager**), we only generate them at retrieval. A better. and more practical, approach: **K nearest neighbors** (aka KNN).
@@ -29,8 +30,7 @@ Interestingly, AUC = P(score of a true example > score of a wrong example). _I w
 
 **Prediction bias**: a very simple measure of model validity: average value of all predictions - average value of all learning points. In a reasonable model, prediction bias should be close to 0. A way to assess it: build a **calibration plot** - bucket values, calculate predictions, then plot mean(predictions) against mean(values). May help to find areas where the model misbehaves.
 
-## Validation and testing
-Canonical system of names:
+Canonical system of names for **Validation and Testing**:
 * **Training dataset** - obviously
 * **Validation dataset** - used to calculate validation error; monitored alongside training dataset. The difference between error on validation and training sets is used for model selection, regularization, hyperparameters tuning.
 * **Testing dataset** - ideally, whould never be seen by the model until the very end. But at the same time, as models are eventually evaluated based on their performance on the testing dataset, arguably, it indirectly participates in hyperparameter tuning and model selection. Still, try to minimize that.
@@ -78,7 +78,7 @@ Differentiate this by θ, set to 0. Get ∂L/∂θ = -∑ (xy - x∙exp(xᵀθ)/
 
 > ESL p120-121 gives a solution for the updating (descent) procedure that I skip for now. Also a weighted self-consistency formula that ties θ, x, y, and p together, and can apparently be used to achieve some numerical shortcuts.
 
-## Regularized Log Regression
+### Regularized Log Regression
 **L1 penalty** (lasso) is good for this: take the previous L=-∑ y log(p) + (1-y) log(1-p), and add to it λ∑|θj| , where the sum runs by dimention (variable). Flip signs if you like maximizing stuff, as ESL does. Apparently, if you do the math, you get the following link between everything: xjᵀ(y-p) = λ∙sign(θj) for each dimension j.
 
 ## Discriminant Analysis
@@ -102,7 +102,7 @@ Refs: ESL p109-113; [wiki](https://en.wikipedia.org/wiki/Linear_discriminant_ana
 
 What's the practical **difference between LDA and Log Regression?** In both cases, the math boils down to log P(x ∈ gi)/P(x ∈ gk) = xᵀθ, but θ are different. In both cases joint P(x,g) = P(x)P(g|x), where P(x) is called marginal density of inputs x. P(g|x) has the same form for both LDA and LR, but P(X) is different. With LR, P(x) is free (assumed to be arbitrary), and we maximize P(g|x). With LDA, we explicitly maximize P(x,g), and insist that P(x,g=k) = Φ(μk,ტ) is a p-dimensional Gaussian. Apparently, if the assumption of LDA is true, it gives you a boost of ~30% efficiency on error rate (you get same performance with ~30% less data). But if you aren't sure, then LR is safer.
 
-# SVM
+# SVM: Support Vector Machines
 General idea: widest street approach: find a line, so that if you have a band around the line, it separates the positive from the negative examples as best as possible. If the line is described with a normal vector ω ⊥ line, whether a point x is far from the line can be described as ⟨x , ω⟩. If b is a good threshold value for this product (if we get b when x lies right smack on the separating line), we have xᵀω + b ≥ 0. To find the best line, let's try to find ω and b, so that for positive samples we would get xᵀω+b>1 (not just >0), and for negative samples, xᵀω+b<-1. 
 
 We have already seen linear separators f(x) = xᵀθ = 0 before. The hyperplane (line in 2D) it defines is ⊥ to θ, and f(x) is proportinal to distance from x to the plane.
@@ -119,4 +119,10 @@ Instead of writing the constraint on θ explicitly, we can just write the equati
 
 Here, as in the prev paragraph norm(θ) is actually understood in terms of θ_1 to θ_p, but not θ_0. 1/norm(θ) can be called **thickness** of the decision boundary. Yields a convex problem with linear contraints, solvable via Lagrange optimization: L = |θ|² - ∑ λi ( yi ⟨x_i , θ⟩  - 1)…
 
-> At this point (ESL p133) I give up for now. It seems that math around p134 is not how SVMs are actually implemented anyways, so it can probably wait.
+> At this point (ESL p133) I give up for now. It seems that math around p134 is not how SVMs are actually implemented anyways, so it can probably wait. I'll rivisit this once I read the actual SVM chapter.
+
+SVMs are very popular with **Kernel tricks**, such as radial basis kernel [[RBF]], as it produces simple yet expressive models ([ref](https://towardsdatascience.com/support-vector-machines-svm-c9ef22815589)).
+
+
+
+**Refs**: [a very reasonable post by Ajay Yadav](https://towardsdatascience.com/support-vector-machines-svm-c9ef22815589)

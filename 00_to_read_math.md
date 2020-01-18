@@ -364,7 +364,7 @@ NetGAN: Generating Graphs via Random Walks
 A. Bojchevski, O. Shchur, D. Zugner, S. Gunnemann.
 ArXiv e-prints. 2018.
 
-# Alternative network designes
+# Alternative network designs
 
 **Helmholtz Machines**
 
@@ -376,6 +376,7 @@ http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.34.1800&rep=rep1&type=p
 Original paper by Hinton, 1k citations.
 
 # CogSci and Meta
+#meaning
 
 Chollet, F. (2019). The Measure of Intelligence. arXiv preprint arXiv:1911.01547.
 https://arxiv.org/abs/1911.01547
@@ -435,6 +436,8 @@ Paul Smolensky. Next-generation architectures bridge gap between neural and symb
 https://www.microsoft.com/en-us/research/blog/next-generation-architectures-bridge-gap-between-neural-and-symbolic-representations-with-neural-symbols/
 
 # Complexity
+#complexity
+
 Corominas-Murtra, B., Seoane, L. F., & Solé, R. (2018). Zipf’s law, unbounded complexity and open-ended evolution. Journal of the Royal Society Interface, 15(149), 20180395.
 https://royalsocietypublishing.org/doi/pdf/10.1098/rsif.2018.0395
 General patterns of increase in complexity during evolution, using several natural and artificial examples (texts, proteins, logic circuits, and even combinations of Legos). Information and string complexity.

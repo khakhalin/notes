@@ -29,9 +29,9 @@ Example from neuroscience: people feel that they "understand the brain" if they 
 
 "Instead of asking how the brain works we should, arguably, ask how it learns to work."
 
-### Interesting refs:
+### Some curious refs from this paper:
 History is full of seemingly impossible things that ended up being possible (4):
 Michael Dickinson. Solving the mystery of insect flight. Scientific American, 284(6):48–57, 2001.
 
-Humans know more than a MB worth of info about their own language (21):
+Humans know more than a megabyte worth of info about their own language (21):
 Francis Mollica and Steven T Piantadosi. Humans store about 1.5 megabytes of information during language acquisition. Royal Society Open Science, 6(3):181393, 2019.

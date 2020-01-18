@@ -121,7 +121,7 @@ ESL defines 3 broad classes of model smoothing / constraining:
 
 Or we can set some sort of smooth f(x), and use kernels for RSS calculations: RSS(x0) = ∑ K(x,x0)∙(y-f(x))² , where ∑ runs through all (x_i, y_i). If we assume f(x) = θ0 + θx, we get **local linear regression**. KNNs (see [[03_Classification]]) can also be considered a subtype of a kernal method, just with a weird step-wise kernel.
 
-**Basis functions**: includes linear and polynomial regressions, but the idea is that you have a basis of functions on R^n, and project into it: f = ∑_i θ_i h_i(x). Examples: **polynomial splines**; **radial basis functions** K(μ, x) defined around few centroids μ (not around every data point, as in kernel methods!). Gausssian kernels are still popular. Feed-forward **Deep Learning** also belongs here, with basis functions defined by network design.
+**Basis functions**: includes linear and polynomial regressions, but the idea is that you have a basis of functions on R^n, and project into it: f = ∑_i θ_i h_i(x). Examples: **polynomial splines**; **radial basis functions** [[RBF]] with K(μ, x) defined around several centroids μ that can itself be optimized. Gausssian kernels are still popular. Feed-forward **Deep Learning** actually also belongs here, it just htat basis functions are defined by network design (the space of functions that can be achieved with this particular network depth, activation functions etc.).
 
 **Are there alternatives to L2?** Sure, **L1 norm** = abs(distance), which effectively pushes f(x) towards median(y) rather than the mean(y): sum of distances to 2 points is min when you're exactly between them. Hard to work with, as derivatives are discontinuous.
 

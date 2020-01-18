@@ -12,7 +12,6 @@ Classic ML and friends
 * Hungarian algorithm
 * Bloom filter
 * Kalman filter (and its friends)
-* RBF - [Radial basis function kernel](https://en.wikipedia.org/wiki/Radial_basis_function_kernel)
 * AdaBoost
 * Expectation-Maximization
 * Bayesian PCA
