@@ -13,7 +13,6 @@ Interesting practical intro to ML projects; look through:
 https://github.com/chiphuyen/machine-learning-systems-design
 
 # Books
-Currently at: ESL p219 (Model selection)
 
 (Given in subjective order of my gradual reading)
 * How to think like a computer scientist by Allen B. Downey: ([site](https://greenteapress.com/wp/think-python-2e/)) - best intro to Python ever

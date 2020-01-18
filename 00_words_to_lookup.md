@@ -3,6 +3,12 @@
 #todo
 Current point in the Google Course: https://developers.google.com/machine-learning/crash-course/production-ml-systems 
 
+ESL progress. 
+Current position: 
+* p219 (Model selection)
+Parked parts that need to be revisited:
+* p161 to p218 - Smoothing, local regression, kernel size choice
+
 # Words and topics to look up
 
 * Move old recommendatinos from Sven down here
@@ -59,10 +65,10 @@ Technical stuff
 Other math
 * How to calculate single-value-decomposion and eigenvector decomposition in practice? How do they code it for numpy, for example?
 * FFT
-* Lagrange multiplyier - proof
+* Lagrange multiplyier - is there an easy (not formal, but intuitive) proof that it works?
 * Hamiltonians and how dynamical systems invoke them
 * Perron–Frobenius theorem - something related to centralities and or network graph eigenvectors
-* kuramoto oscillations 
+* kuramoto oscillations
 
 Neuro
 * ...
