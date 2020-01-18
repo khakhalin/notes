@@ -3,7 +3,7 @@
 Nov 10, 2019 by Lilian Weng 
 https://lilianweng.github.io/lil-log/2019/11/10/self-supervised-learning.html
  
-#blog #self-supervised
+#blog #self-supervised #bib
 
 Awesome informal review of the entire concept of self-supervized learning, with highlights from the field.
 
@@ -22,7 +22,7 @@ Come up with a useless supervised task derived from data (use any part of data a
 * Remove (previously added) noise:  [Vincent, et al, 2008](https://www.cs.toronto.edu/~larocheh/publications/icml-2008-denoising-autoencoders.pdf) 
 * Reconstruct a patch in the middle:  [Pathak, et al., 2016](https://arxiv.org/abs/1604.07379) 
 * Bidirectional GAN: generate data from internal features, but also generate features from actual data. Let the discriminator guess which pair (features, data) is which (one has true data (image), another one doesn't). Thus, at the end, we'll have a bidirectional projection:  [Donahue, et al, 2017](https://arxiv.org/abs/1605.09782)  (I'm not sure how it helps exactly if encoder and decoder don't inform each other explicitly. 
-* Tracking objects: [Wang & Gupta, 2015](https://arxiv.org/abs/1505.00687)  - I didn't understand this one. One interesting thing that I got (but that's for supervised learning) is the **triplet loss** (see Schroff2015facenet)
+* Tracking objects: [Wang & Gupta, 2015](https://arxiv.org/abs/1505.00687)  - I didn't understand this one. One interesting thing that I got (but that's for supervised learning) is the [[triplet_loss]]
 * Guess frame order:  [Misra, et al 2016](https://arxiv.org/abs/1603.08561) , one sequence of out many that has frames shuffled:   [Fernando et al. 2017](https://arxiv.org/abs/1611.06646) , or correct time direction:  [Wei et al., 2018](https://www.robots.ox.ac.uk/~vgg/publications/2018/Wei18/wei18.pdf) 
 * Colorize a video from a control frame:  [Vondrick et al. (2018)](https://arxiv.org/abs/1806.09594)  - sounds like something in-between image colorization and motion tracking, huh?
 * Let the robot move an object, and while doing so, learn that all camera views during the grasp encode the same object. Even though positions and views are all different. Did I get it right?  [Jang et al., 2018](https://arxiv.org/abs/1811.06964) 

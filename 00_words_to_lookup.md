@@ -39,12 +39,12 @@ Deep Learning:
 * Duality trick, easier Fenchel
 * Doubly Reparameterized Gradient Estimators
 * Do people use leakyReLus often? Do they prefer them for pruning, or is it ignored?
-* ADAM optimizer - what's the difference from othes?
 * Xavier initialization of weights - what's cool about it? Also, is it true that variance-scaled init is better? ([claim](https://pcc.cs.byu.edu/2017/10/02/practical-advice-for-building-deep-neural-networks/))
 * inception blocks
 * residual blocks / networks
 * noise-contrastive estimation
 * self-supervised boosting
+* Wavenet - that famous convolution network that generates audio on-the-fly
 
 Technical stuff
 * Relational databases: Snowflake, Redshift

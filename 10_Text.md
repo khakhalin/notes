@@ -1,5 +1,11 @@
 # Texts and Language
 
+> Should this document be split into a bunch of "concepts", a tag, and a "summary contents card", also living among the "concepts"?
+
+**To read:**
+* https://ruder.io/unsupervised-cross-lingual-learning/index.html
+* https://ruder.io/state-of-transfer-learning-in-nlp/index.html
+
 ## TFIDF
 TF-IDF = Text frequency - Inverse document frequency. A measure of how often a word is used in a document, compared to all other documents. tfidf() = tf()∙idf(). Here:
 
