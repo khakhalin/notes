@@ -1,5 +1,4 @@
 # Classification
-A zoo of classification approaches: [MNIST](http://yann.lecun.com/exdb/mnist/index.html) - link to a library of all thinkable approaches to classification, as applied to this dataset, each given with a test error rate.
 
 # 1NN and KNN
 Simplest archetypical approach: **Nearest Neighbor**. Just pick the closest training case. This is an example of a **lazy** approach: instead of generating estimations upfront (that would be called **eager**), we only generate them at retrieval. A better. and more practical, approach: **K nearest neighbors** (aka KNN).
@@ -15,7 +14,7 @@ How to find optimal k? We'll need a training and a testing set, then try differe
 KNN is an archetype for many fancy methods. For example, if instead of "nearest" δi that are all or none we'll use fuzzy weights that are larger when you are close to each data w(distance), it's the same as just regressing on distance, which is a type of a **kernel method**. If we want some dimensions of X matter differently than others, we can use non-round kernels. **Local regression** is also similar in spirit (sorta a combinatino of linear regression and the idea of contextual locality). DL networks also imitate something like that by mixing and mashing linear transformations.
 
 # Model assessement
-**Model accuracy**: The most primitive measure = number of true statements / total number of statements. Obvious dependency on class balance (famous example, a statement of "today is not Christmas" has an accuracy of 99.7%). But may work for toy examples with very carefully balanced classes (like MNIST).
+**Model accuracy**: The most primitive measure = number of true statements / total number of statements. Obvious dependency on class balance (famous example, a statement of "today is not Christmas" has an accuracy of 99.7%). But may work for toy examples with very carefully balanced classes (like [[mnist]] mnist).
 
 **Precision and recall**: Let's concentrate on detection only (positive predictions only). We want something that is proportinal to true positives (TP), but what to put in the denominator? Two options: 
 
