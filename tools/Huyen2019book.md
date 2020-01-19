@@ -1,6 +1,6 @@
 # Machine Learning Interviews
 by Chip Huyen, self-published brochure
-#book
+#book #lifehack
 
 https://github.com/chiphuyen/machine-learning-systems-design/blob/master/build/build1/consolidated.pdf
 

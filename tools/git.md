@@ -1,4 +1,6 @@
 # GIT
+#tools
+
 ## Typical everyday use
 * `git pull` - 	fetch latest changes, merge them, and rebase HEAD to the latest commit
 * `git diff` - show differences to unstaged files

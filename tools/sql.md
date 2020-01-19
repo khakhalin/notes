@@ -1,8 +1,8 @@
 # SQL
+#tools
 
 **Some refs:**
 * [Good reference](https://www.w3schools.com/sql/default.asp)
-
 
 ## Generic query
 ```sql
