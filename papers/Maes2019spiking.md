@@ -1,11 +1,11 @@
 # Learning spatiotemporal signals using a recurrent spiking network that discretizes time
 
-Amadeus Maes, Mauricio Barahona, Claudia Clopath
+Early citation: Maes, A., Barahona, M., & Clopath, C. (2019). Learning spatiotemporal signals using a recurrent spiking network that discretizes time. arXiv preprint arXiv:1907.08801.
+https://arxiv.org/abs/1907.08801
 
+Later published in PLoS Comp Bio. (no ref yet?)
 
 #neuro #synfire #spiking
-
-The published version (Plos Comp Bio) is pretty different from the first preprint (arxiv).
 
 A big problem with spiking networks is how to get from ms time scales to behaviors that take  seconds / minutes. (refs for motor tasks). Introduce sequential and stochastic dynamics as two main modes of operation (refs). Many ML-like approaches are not biologically plausible: either backprop in time, or non-local information.
 

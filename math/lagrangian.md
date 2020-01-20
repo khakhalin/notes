@@ -3,9 +3,9 @@
 
 A way to solve equations with constraints.
 
-**Statement:** to minimize f(x) given a consraint c(x)=0, just consider f(x)-λ∙c(x), and solve for ∂L/∂x=0 and ∂L/∂λ = 0 (like, unconstrained in dimensionality p+1).
+**Statement:** to minimize f(x) given a consraint c(x)=0, just consider f(x)-λ∙c(x), and solve for ∂L/∂x=0 and ∂L/∂λ = 0 (like, unconstrained in dimensionality p+1). Here, λ is called a **Lagrange multiplier**.
 
-**Some intuitive story:**
+**An intuitive illustration:**
 
 Say, c(x) is nice enough that we managed to solve it, and explicitly express some subset of X coordinates (let's call it y) through the rest of X (let's keep calling it x). 
 
@@ -27,4 +27,4 @@ $\displaystyle \frac{∂L}{∂y} = \frac{∂f}{∂y} - λ = 0$
 
 From the second one here, we see that λ = ∂f/∂y, which can be put in the 1st equation, giving us the same exact equation that we got above! So at least with the assumptions we made, and with this particular type of c(X) constraint, Langrangian leads to the same formulas, and thus the same optimum, as the direct calculation. Except it doesn't really need an explicit form of y=g(x), and so can handle more arbitrary constaint.
 
-> It's not a proof tho, is it? More of an illustration.
+> It's not a proof tho, is it? More of an illustration, as g(x)-y is a very specific form of c(x,y)=0.

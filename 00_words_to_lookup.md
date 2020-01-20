@@ -1,4 +1,4 @@
-# General To-Dos:
+# General To-Dos
 
 #todo
 Current point in the Google Course: https://developers.google.com/machine-learning/crash-course/production-ml-systems 
@@ -15,6 +15,7 @@ Parked parts that need to be revisited:
 * Make sure all Eric's recommendations are here
 
 Classic ML and friends
+* gradient boosting
 * Hungarian algorithm
 * Bloom filter
 * Kalman filter (and its friends)
@@ -35,6 +36,7 @@ Practical stuff:
 Deep Learning:
 * What's so eager about eager mode
 * How to tell the receptive field of a neuron in a deep network? Do they gradient descend on it?
+* Alexnet - some sort of efficient visual net that people use as a module. Is it pre-trained?
 * Maximum Mean Discrepancy trick
 * Replica trick and log-partition function (??)
 * Gumbel-max trick

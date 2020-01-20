@@ -205,6 +205,10 @@ Sorscher, B., Mel, G., Ganguli, S., & Ocko, S. (2019). A unified theory for the 
 https://papers.nips.cc/paper/9191-a-unified-theory-for-the-origin-of-grid-cells-through-the-lens-of-pattern-formation
 Supposedly, explains the development of grid cells, synthesizing two existing theories (recurrent with lateral inhibition and spontaneous development during navigation?)
 
+Michaels, J. A., Schaffelhofer, S., Agudelo-Toro, A., & Scherberger, H. (2019). A neural network model of flexible grasp movement generation. bioRxiv, 742189.
+https://www.biorxiv.org/content/10.1101/742189v1
+Modeled vision-controlled grasping (based on monkey data) as convolutional network (based on Alexnet, it seems) → RNN (fully connected) → bottlneck of 8 neurons → another RNN → another bottleneck → another RNN → output. They call these bottlenecks "sparsity", which is interesting. I wonder whether it is fair to call it brain-inspired. Is it something that works, as it forces the learning of representations, and then only claim that it is brain-inspired, to give it some conceptual validity? Or is there actual evidence in the brain that connections between motor systems are throttled like that? Something to explore. Also they mention some "feedback connections" that may be connections between RNN modules, but I'd need to read the methods section carefully to see what's happening there. One of the most important aspects of this paper for me may be the neuro-inspired analysis of model performance that they do, and the very attitude to validation that they have. I wonder if that's something that can be applied to spiking networks.
+
 # Bottom-up validation
 
 Misra, D. (2019). Mish: A Self Regularized Non-Monotonic Neural Activation Function. arXiv preprint arXiv:1908.08681.
