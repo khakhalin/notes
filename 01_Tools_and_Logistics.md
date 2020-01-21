@@ -8,6 +8,9 @@
 **Advice on ML projects:**
 * [[ml_lore]] - a collection of rules of thumb about everything Deep Learning (which defaults to pick etc.)
 
+Other #lifehack s
+* [[Clear2019zettelkasten]] - how to properly create and support this knowledge base
+
 # Python
 
 **References:**

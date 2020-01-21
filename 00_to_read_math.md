@@ -260,11 +260,6 @@ Lottery tickets in RL domain.
 ## RNNs, Attention
 #attention
 
-Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., ... & Polosukhin, I. (2017). Attention is all you need. In Advances in neural information processing systems (pp. 5998-6008).
-Transformers network
-https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf
-First read about attention?
-
 https://distill.pub/2019/memorization-in-rnns/
 How LSTM networks remember text: a visual intro.
 
@@ -276,13 +271,17 @@ Jaderberg, M., Simonyan, K., & Zisserman, A. (2015). Spatial transformer network
 https://arxiv.org/pdf/1506.02025.pdf
 2000 citations. Seems important.
 
-"Compressive Transformers for Long-Range Sequence Modelling"
+Compressive Transformers for Long-Range Sequence Modelling
 by Jack W. Rae, Anna Potapenko, Siddhant M. Jayakumar, Timothy P. Lillicrap (at DeepMind)
 https://arxiv.org/abs/1911.05507
 
 Single Headed Attention RNN: Stop Thinking With Your Head. S Merity. (2019)
 https://arxiv.org/abs/1911.11423
 He tried to diversify the field by deliberately sticking to a non-mainstream approach (something that is NOT transformers), and got good performance. Also the writing is wild.
+
+Kitaev, N., Kaiser, Ł., & Levskaya, A. (2020). Reformer: The Efficient Transformer. arXiv preprint arXiv:2001.04451.
+https://arxiv.org/abs/2001.04451v1
+Claim that somehow by two changes in logic they improved [[transformers]] so much that now they would be O(L log L) instead of O(L²) efficient, which is like a big deal.
 
 On the Relationship between Self-Attention and Convolutional Layers (2020)
 Jean-Baptiste Cordonnier, Andreas Loukas, Martin Jaggi
@@ -383,6 +382,7 @@ Original paper by Hinton, 1k citations.
 
 Chollet, F. (2019). The Measure of Intelligence. arXiv preprint arXiv:1911.01547.
 https://arxiv.org/abs/1911.01547
+Seems to be endorsed by many good people. Bump it up on the list!
 
 Turing, A. M. (1950). Computing machinery and intelligence. In Parsing the Turing Test (pp. 23-65). Springer, Dordrecht. 2005.
 http://www.geielettronica.it/images/pdf/turing.pdf

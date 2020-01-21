@@ -108,6 +108,8 @@ O’Keeffe, K. P., Hong, H., & Strogatz, S. H. (2017). Oscillators that sync and
 https://www.nature.com/articles/s41467-017-01190-3
 About collective self-organized behaviors. Can be useful for the modeling class maybe?
 
-# Teaching
+# Neuromorphic computing
 
-* https://github.com/hsayama/PyCX - a set of materials for teaching complexity
+Kendall, J. D., & Kumar, S. The building blocks of a brain-inspired computer. Applied Physics Reviews, 7(1), 011305.
+https://aip.scitation.org/doi/10.1063/1.5129306
+14 January 2020. A rather long review on the next steps in neuromorhic computing. With a review of what aspects of the brain are reflected, which ones aren't, and what to do with it?

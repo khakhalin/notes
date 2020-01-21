@@ -2,8 +2,12 @@
 #attention
 
 Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., ... & Polosukhin, I. (2017). Attention is all you need. In Advances in neural information processing systems (pp. 5998-6008).
-Transformers network
+(Google Research and Google Brain)
 https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf
+
+The paper introducing **Transformers**
+
+> **Note:** this summary below is realy rough, was not polished, and was not reworked. For a better explanation of transformers, see the main [[transformers]] entry. More info, asides, comments, detective work, etc.
 
 5k citations as of 2020, so seminal. I find it quite dry: it doesn't really try to explain the philosophy behind the model (what makes it work), neither does it build the rationale for the model. It just describes the architecture rather systematically, but leaves all conceptual work to the reader.
 
@@ -14,6 +18,8 @@ The paper that took RNNs + attention, and got rid of the RNN part (thus the name
 They didn't "invent" self-attention, and give 4 references for what it is.
 
 What they claim they were the first to do, is to use attention only for sequential tasks, without RNNs or sequence-aligned convolution. It seems that they mean "convolution that is like unrolled RNN, that runs _within_ each bag", as opposed to bag-like approach that handles each bags in the same way (like convolution), and somehow encodes word position (like convolution), but has to encode word position explicitly.
+
+
 
 **Architecture:** Auto-regressive model: input + existing output → new output. Inside, input: symbols → continuous representation {z} → encoder → decoder → output. 
 

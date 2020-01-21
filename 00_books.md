@@ -1,7 +1,11 @@
 # Courses, books, and links
 #book
 
-# To check and file:
+# Key resources
+* http://www.arxiv-sanity.com/ - AI search for arxiv
+
+# To check and file
+#todo
 Matrix calculus for deep learning
 https://explained.ai/matrix-calculus/index.html
 
@@ -66,6 +70,7 @@ Job-search specific materials:
 * [Matrix methods in data science](https://www.youtube.com/watch?v=Cx5Z-OslNWE&list=PLUl4u3cNGP63oMNUHXqIUcrkS2PivhN3k) (also Gilbert Strang)- YouTube from MIT. May be good for refreshing things.
 * [Maximum Entropy Network Ensembles](http://www.maths.qmul.ac.uk/~gbianconi/LTCCModule) - a series of lectures
 * [End-to-end machine learning](https://end-to-end-machine-learning.teachable.com) - sorta like a course from Brandon Rohrer
+* https://github.com/hsayama/PyCX - a set of notebooks on complexity (looks like weekly labs?)
 
 # Link aggregators
 

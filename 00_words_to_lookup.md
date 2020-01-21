@@ -36,6 +36,7 @@ Practical stuff:
 Deep Learning:
 * What's so eager about eager mode
 * How to tell the receptive field of a neuron in a deep network? Do they gradient descend on it?
+* residual blocks - why are they even a good idea? What's the deal here? How can it possibly help?
 * Alexnet - some sort of efficient visual net that people use as a module. Is it pre-trained?
 * Maximum Mean Discrepancy trick
 * Replica trick and log-partition function (??)
@@ -48,7 +49,6 @@ Deep Learning:
 * Do people use leakyReLus often? Do they prefer them for pruning, or is it ignored?
 * Xavier initialization of weights - what's cool about it? Also, is it true that variance-scaled init is better? ([claim](https://pcc.cs.byu.edu/2017/10/02/practical-advice-for-building-deep-neural-networks/))
 * inception blocks
-* residual blocks / networks
 * noise-contrastive estimation
 * self-supervised boosting
 * Wavenet - that famous convolution network that generates audio on-the-fly
