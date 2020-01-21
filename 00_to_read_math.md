@@ -1,11 +1,16 @@
 # To-read: ML and AI
 
-An overview of gradient descent optimization algorithms.  19 Jan 2016 (updated in 2018). By Sebastian Ruder.
-https://ruder.io/optimizing-gradient-descent/
-Adagrad, adam, and others like that.
+Reflections on Innateness in Machine Learning
+Thomas G. Dietterich. Mar 6, 2018.
+https://medium.com/@tdietterich/reflections-on-innateness-in-machine-learning-4eebefa3e1af
+Another must-do short read.
 
 The Unreasonable Effectiveness of Recurrent Neural Networks
 http://karpathy.github.io/2015/05/21/rnn-effectiveness/
+
+An overview of gradient descent optimization algorithms.  19 Jan 2016 (updated in 2018). By Sebastian Ruder.
+https://ruder.io/optimizing-gradient-descent/
+Adagrad, adam, and others like that.
 
 Rahaman, N., Baratin, A., Arpit, D., Draxler, F., Lin, M., Hamprecht, F. A., ... & Courville, A. (2018). On the spectral bias of neural networks. arXiv preprint arXiv:1806.08734.
 https://arxiv.org/abs/1806.08734
@@ -193,6 +198,19 @@ Reduced MNIST: how well can machines learn from small data? By Michael Nielsen. 
 http://cognitivemedium.com/rmnist
 Blog post on learning on super-small subsets of MNIST (not an official pub, so never cited). One example of each digit apparently brings accuracy to 42% for a naive NN (vs 97% for full), and ~56% (vs 99% for full) for a pretrained conv net (2 layers, not trained on mnist specifically), followed by 2 fully connected. Regularization becomes extremely important, as a way to fight overfitting, and even switching to convnet for this may be considered a type of regularization, I think.
 
+# Architecture search
+#archsearch
+
+Liu, H., Simonyan, K., Vinyals, O., Fernando, C., & Kavukcuoglu, K. (2017). Hierarchical representations for efficient architecture search. arXiv preprint arXiv:1711.00436.
+https://arxiv.org/pdf/1711.00436.pdf
+Summary by Connor Shorten. Sep 12 2019.
+https://towardsdatascience.com/hierarchical-neural-architecture-search-aae6bbdc3624
+How to optimize network architectures if training each model is so ridiculously expensive? By defining blocks, and then using them recursively to create larger networks… Not sure how it helps, but apparently it helps a lot? Read.
+
+Elsken, T., Metzen, J. H., & Hutter, F. (2018). Neural architecture search: A survey. arXiv preprint arXiv:1808.05377.
+http://www.jmlr.org/papers/volume20/18-598/18-598.pdf
+
+
 # Self-supervised learning
 
 Jing, L., & Tian, Y. (2019). [Self-supervised visual feature learning with deep neural networks: A survey](https://arxiv.org/pdf/1902.06162.pdf). arXiv preprint arXiv:1902.06162.
@@ -365,6 +383,18 @@ https://arxiv.org/abs/1907.05008
 
 Bojchevski, A., Shchur, O., Zügner, D., & Günnemann, S. (2018). Netgan: Generating graphs via random walks. arXiv preprint arXiv:1803.00816.
 https://arxiv.org/pdf/1803.00816.pdf
+
+# Bayesian
+
+The Case for Bayesian Deep Learning
+Andrew Gordon Wilson. January 11, 2020
+https://cims.nyu.edu/~andrewgw/caseforbdl/
+Serious blog post with some (non-scary) math.
+
+A Sober Look at Bayesian Neural Networks. January 17, 2020
+by Carles Gelada and Jacob Buckman
+https://jacobbuckman.com/2020-01-17-a-sober-look-at-bayesian-neural-networks/
+A response to Wilson 2020 above! :) Best type of scientific exchange! Also a blog post, also with math.
 
 # Alternative network designs
 

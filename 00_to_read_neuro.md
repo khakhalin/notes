@@ -4,11 +4,15 @@ To-read: Neuro
 **Bibliography collections:**
 * [[bib_reconstruction]] - On reconstructing biological connectivity from spike-trains and alike
 
-# General and top
-
 https://royalsocietypublishing.org/doi/full/10.1098/rspb.2010.2325
 Towards a scientific concept of free will as a biological trait: spontaneous actions and decision-making in invertebrates
 Björn Brembs
+
+Merel, J., Botvinick, M., & Wayne, G. (2019). Hierarchical motor control in mammals and machines. Nature Communications, 10(1), 1-12.
+https://www.nature.com/articles/s41467-019-13239-6
+Opinion? Seems short and general, so give it priority.
+
+# General and top
 
 Raman, D. V., Rotondo, A. P., & O’Leary, T. (2019). Fundamental bounds on learning performance in neural circuits. Proceedings of the National Academy of Sciences, 116(21), 10537-10546.
 https://www.pnas.org/content/116/21/10537.short
@@ -156,6 +160,9 @@ PhD thesis that was never published on biologically plausible gradient descend i
 
 # Single-neuron calculations
 
+Hidden Computational Power Found in the Arms of Neurons. Jordana Cepelewicz. Jan 14 2020.
+https://www.quantamagazine.org/neural-dendrites-reveal-their-computational-power-20200114/
+
 Abraham, W. C., Jones, O. D., & Glanzman, D. L. (2019). Is plasticity of synapses the mechanism of long-term memory storage?. NPJ science of learning, 4(1), 1-10.
 https://www.ncbi.nlm.nih.gov/pubmed/31285847
 A review on alternatives (non-synaptic) ways too store memories in the brain.
@@ -226,6 +233,9 @@ Claim that if you make activation function non-monotonic (almost like a sigmoid,
 Github: https://github.com/digantamisra98/Mish
 May be a curious parallel to this recent finding in Neuro, about XOR computation by dendrites of an individual cell Gidon, A., Zolnik, T. A., Fidzinski, P., Bolduan, F., Papoutsi, A., Poirazi, P., ... & Larkum, M. E. (2020). Dendritic action potentials and computation in human layer 2/3 cortical neurons. Science, 367(6473), 83-87. (no free pdf)
 
+Lappalainen, J., Herpich, J., & Tetzlaff, C. (2019). A theoretical framework to derive simple, firing-rate-dependent mathematical models of synaptic plasticity. Frontiers in computational neuroscience, 13, 26.
+https://www.frontiersin.org/articles/10.3389/fncom.2019.00026/full
+
 Lim, S. et al. Inferring learning rules from distributions of fring rates in cortical neurons. Nat. Neurosci. 18, 1804–1810 (2015).
 
 Doerig, A., Bornet, A., Choung, O. H., & Herzog, M. H. (2019). Crowding Reveals Fundamental Differences in Local vs. Global Processing in Humans and Machines. bioRxiv, 744268.
@@ -279,14 +289,19 @@ Kleinman
 https://www.pnas.org/content/116/43/21854
 Visual representation, clustering objects, cortex, primates
 
-https://www.biorxiv.org/content/10.1101/798553v1 
-Recurrent neural network models of multi-area computation underlying decision-making Michael Kleinman, Chandramouli Chandrasekaran, Jonathan C Kao
-It seems that they try recurrent networks (RNN) running in parallel, and compare their decision times to that from monkey cortex. Then show that one RNN doesn't match the distribution of times, but if you have several running in parallel, and then synthesizing info, you get similar results? Claim that different modes of distributed computation are experimentally testable like that.
-
 Nested Neuronal Dynamics Orchestrate a Behavioral Hierarchy across Timescales
 Kaplan .. Zimmer
 https://www.cell.com/neuron/fulltext/S0896-6273(19)30932-8
 C elegans, activation dynamics. How fixed action patterns emerge from (are encoded by) the nervous system.
+
+# Decision-making
+
+https://www.biorxiv.org/content/10.1101/798553v1 
+Recurrent neural network models of multi-area computation underlying decision-making Michael Kleinman, Chandramouli Chandrasekaran, Jonathan C Kao
+It seems that they try recurrent networks (RNN) running in parallel, and compare their decision times to that from monkey cortex. Then show that one RNN doesn't match the distribution of times, but if you have several running in parallel, and then synthesizing info, you get similar results? Claim that different modes of distributed computation are experimentally testable like that.
+
+Zoltowski, D. M., Pillow, J. W., & Linderman, S. W. (2020). Unifying and generalizing models of neural dynamics during decision-making. arXiv preprint arXiv:2001.04571.
+https://arxiv.org/abs/2001.04571
 
 # Variability
 

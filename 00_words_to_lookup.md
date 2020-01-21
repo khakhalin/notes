@@ -15,6 +15,9 @@ Parked parts that need to be revisited:
 * Make sure all Eric's recommendations are here
 
 Classic ML and friends
+* purity score
+* Gini
+* random forest
 * gradient boosting
 * Hungarian algorithm
 * Bloom filter

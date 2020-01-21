@@ -77,3 +77,10 @@ Job-search specific materials:
 * [A very nice annotated list of book recommendations](https://towardsdatascience.com/beyond-the-mooc-a-bookworms-guide-to-data-science-e87271cb0572)
 * [Machine learning for humans, 80/20 reading list](https://medium.com/machine-learning-for-humans/ai-reading-list-c4753afd97a) - claims to be curated. Sections on ML, Deep, RL, and then various general readings about the meaning of it all.
 * [Scientific visualization with matplotlib](https://github.com/rougier/scientific-visualization-book) - an open-source book project in the works that hadn't been released yet, but the previews look lovely
+
+# Temp teaching links
+* [A collection of Jupyter models on topics of complexity](https://github.com/hsayama/PyCX)
+* Think complexity: http://greenteapress.com/complexity2/thinkcomplexity2.pdf
+* Think Python (to send out): https://greenteapress.com/wp/think-python-2e/
+* Some notes on how to install Python (Anaconda + Jupyter): https://github.com/AllenDowney/ModSimPy
+

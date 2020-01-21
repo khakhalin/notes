@@ -9,9 +9,11 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 
 # C
 
+**CART** (ml): Classification And Regression Tree; often used for gradient boosting. See [[05_Ensembles]].
+
 **Clique** (math): an all-to-all subgraph within a graph. Two confusing names: **Maximal clique** is just a clique that is not a part of a larger clique (you cannot include one more vertex or ege from a graph, and still have a clique). **Maximum clique** is the largest clique in a graph. Apparently finding cliques, as well as enumerating cliques, is an NP problem with no good solution. [wiki](https://en.wikipedia.org/wiki/Clique_problem), [current best algorithm (hard)](https://www.sciencedirect.com/science/article/abs/pii/S0305054810001504)
 
-**Collaborative filtering** (business): a name for what Netflix users do when they watch movies and generate data of "co-occurrence".
+**Collaborative filtering** (business): a name for what Netflix users do when they watch movies and generate data of "co-occurrence". Probably a pre-DL synonim for Federated Learning?
 
 # D
 
@@ -21,7 +23,11 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 
 **Dynamic programming** (programming): Recursion (or some other form of divide-and-conquer) + memoization (to never calculate the same sub-problem twice).
 
+# F
+
 **Feature store** (data sci) A practical concept for data project implementation: a collection of curated features that are automatically produced (updated) from new data, and can be tapped into by various projects. Paying it forward with feature engineering.
+
+**GBM** (ml): Gradient Boosting Machine. See [[05_Ensembles]]
 
 **Heap** (programming): a tree-like structure where children < parents. An optimal realizatin of a priority queue (similar to a stack, but with a build-in sorting according to priority).
 
@@ -31,6 +37,8 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 **Petri net** (math): a way to model discrete dynamic systems via a directed bipartite graph with 2 types of nodes: places and transitions. Tokens (agents?) can accumulate at places (states, circles), until a transition (bar) fires (consumes input tokens, and creates output tokens). Because of that, tokens inherently interact with each other. May be deterministic or not. [wiki](https://en.wikipedia.org/wiki/Petri_net)
 
 **Pickling** (development): dumping binary data into a database, to be loaded later, instead of processing it in some meaningful (human readable) way. In Python, may be used for serializing Python object structure. A better alternative: JSON, which is human-readable, while pickles aren't.
+
+**POC** (development): Proof of Concept.
 
 **Propensity score matching** (stats, epidemiology) comparing output variable in a case of unavoidable confounding factors; go for something like range constriction for confounders by carefully matching them (many methods here), then analyzing this filtered set. The trick of this method in particular is that instead of matching in high-D, it uses an all-data linear model to conflate all confounding values into one "risk factor" (aka propensity score), and match based on it (both a strong, and a weak point obviously). [ref](https://en.wikipedia.org/wiki/Propensity_score_matching)
 
