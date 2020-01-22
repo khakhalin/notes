@@ -15,7 +15,7 @@ Variational Inference: A Review for Statisticians
 David M. Blei, Alp Kucukelbir, Jon D. McAuliffe
 
 ## Gaussian processes
-Relevant cards:
+See cards:
 * [[Gortler2019gaussian]]
 
 ## Markov Chain Monte Carlo (MCMC)
@@ -25,15 +25,15 @@ General references:
 * https://en.wikipedia.org/wiki/Slice_sampling
 * https://en.wikipedia.org/wiki/Gibbs_sampling
 
-Say, you have a multidimensional distribution with probability P(x). You don't know P(x) exactly, but you have a guess f(x) that is proportional to P(x). (Apparently this is an important nuance, as understanding which x are more probable and which are less probable is relatively easy, but ot know the P exactly requires integraing it over x, which is often an unachievable luxury). You want to sample points from P(x). Usually, because you want to integrate something over P(x).
+Say, you have a multidimensional distribution with probability P(x). You don't know P(x) exactly, but you have a guess f(x) that is proportional to P(x). Apparently this is an important nuance, as understanding which x are more probable and which are less probable is relatively easy, but to estimate P(x) exactly would require integraing it over X, which is often an unachievable luxury. You want to sample points from P(x). Usually, because you want to integrate something over X with P(x) inside the integral.
 
 To generate these points, we use an interative approach ("walkers"). Pick a random point x_t. Find a random step (from a good symmetrical distribution, usually Gaussian). Calculate how much probable it is compared to current x: α = f(x_next)/f(x_current). Accept the jump with probability α.
 
 Obviously, it makes consecutive samples highly correlated. One option is to throw most points away. Another, use wide jumps (but then we'll reject most jumps of course). Convergence may be very slow. Also, first few samples (before it finds the dense part) are also bad (known as *burn-in period*).
 
-Not sure if these methods are considered **Bayesian**, or are just similar to them, but clearly related.
+> Not sure if these methods are considered **Bayesian**, or are just similar to them, but it seems related, right?
 
-Various attempts to improve (listed on wiki):
+Some ways to improve:
 * Calculate gradient and try to use it
 * Jump back if dead-ended
 * Use momentum

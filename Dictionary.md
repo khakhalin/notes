@@ -2,10 +2,11 @@ Dictionary of Terms
 ===
 Not exhaustive: if a term is explained in one of the thematic chapters, it is not duplicated here. This list is only for "orphan" terms that are too short or off-topic to get their personal entry elsewhere.
 
+# AB
 
-**Bagging** (ML): the simplest way to create an ensemble of classifiers using an algorithm: split data into bags (with replacement), train a different model on each of them. Final prediction = mean of all predictions. [ref](https://analyticsindiamag.com/primer-ensemble-learning-bagging-boosting/)
+**Bagging** (ML): the simplest way to create an ensemble of classifiers using an algorithm: split data into bags (with replacement), train a different model on each of them. Final prediction = mean of all predictions. [ref](https://analyticsindiamag.com/primer-ensemble-learning-bagging-boosting/). See [[05_Ensembles]].
 
-**Boosting** (ML): an alternative to _bagging_ for ensemble generation: Iteratively select samples that previous learners failed to learn or disagreed upon, and use them to train new learners; majority vote at the end. [ref](https://analyticsindiamag.com/primer-ensemble-learning-bagging-boosting/)
+**Boosting** (ML): an alternative to _bagging_ for ensemble generation: Iteratively select samples that previous learners failed to learn or disagreed upon, and use them to train new learners; majority vote at the end. [ref](https://analyticsindiamag.com/primer-ensemble-learning-bagging-boosting/). See [[05_Ensembles]].
 
 # C
 
@@ -15,7 +16,7 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 
 **Collaborative filtering** (business): a name for what Netflix users do when they watch movies and generate data of "co-occurrence". Probably a pre-DL synonim for Federated Learning?
 
-# D
+# DE
 
 **Design Patterns** (programming): A famous programming paradigm, and a name of a book by Peter Norwig, about typical ways to engineer interactions between classes and objects in object-oriented programming. About 23 or so archetypical solutions and interfaces that Java/C++ programmers learn by heart. [wiki](https://en.wikipedia.org/wiki/Software_design_pattern)
 
@@ -23,7 +24,7 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 
 **Dynamic programming** (programming): Recursion (or some other form of divide-and-conquer) + memoization (to never calculate the same sub-problem twice).
 
-# F
+# FGHIJ
 
 **Feature store** (data sci) A practical concept for data project implementation: a collection of curated features that are automatically produced (updated) from new data, and can be tapped into by various projects. Paying it forward with feature engineering.
 
@@ -33,7 +34,11 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 
 **Indicator matrix** (data): A matrix Y, in which each row one-hot encodes the class g of a data point x. See [[03_Classification]].
 
-# P
+# KLMNO
+
+**MCMC** (ml) Markov Chain Monte-Carlo. See [[13_Stochastic]].
+
+# PQR
 **Petri net** (math): a way to model discrete dynamic systems via a directed bipartite graph with 2 types of nodes: places and transitions. Tokens (agents?) can accumulate at places (states, circles), until a transition (bar) fires (consumes input tokens, and creates output tokens). Because of that, tokens inherently interact with each other. May be deterministic or not. [wiki](https://en.wikipedia.org/wiki/Petri_net)
 
 **Pickling** (development): dumping binary data into a database, to be loaded later, instead of processing it in some meaningful (human readable) way. In Python, may be used for serializing Python object structure. A better alternative: JSON, which is human-readable, while pickles aren't.
@@ -53,3 +58,5 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 **Tehnical debt** (development) picking an easy (quick to implement) but inherently limiting solution, even though statistically every limiting decision now may have to be reingeneered (scaled up) later.
 
 **Zero-inflated models** (stats): models that are biased towards observations of zeros; for example a bimodal switch between active and inactive states, with inactive ==0, and active generating a Poisson process. [ref](https://en.wikipedia.org/wiki/Zero-inflated_model)
+
+# UVWXYZ

@@ -4,10 +4,12 @@
 Current point in the Google Course: https://developers.google.com/machine-learning/crash-course/production-ml-systems 
 
 ESL progress. 
-Current position: 
-* p219 (Model selection)
+Current position: p284
+
 Parked parts that need to be revisited:
-* p161 to p218 - Smoothing, local regression, kernel size choice
+* p161 to p218 - Smoothing, wavelets, smoothing kernels, local regression, kernel size choice
+* p219 - a whole chapter on Model selection, Bias-Variance Tradeoff, effective number of parameters, cross-validation, and bootstrapping
+* p261 - another whole chapter. Model averaging, max likelihood, some Bayesian inference, more bootstrapping, the EM algorithm (Expectation-Maximization), Gibbs samping, bagging, MCMC
 
 # Words and topics to look up
 
@@ -16,13 +18,12 @@ Parked parts that need to be revisited:
 
 Classic ML and friends
 * purity score
-* Gini
 * random forest
 * gradient boosting
+* loess - how is it different form b-splines?
 * Hungarian algorithm
 * Bloom filter
 * Kalman filter (and its friends)
-* AdaBoost
 * Expectation-Maximization
 * Bayesian PCA
 * more on Gaussian processes
@@ -31,6 +32,7 @@ Classic ML and friends
 * Markov random fields (precursor of modern graph models?)
 * Variational inference
 * Resampling techniques: SMOTE, isotonic regression, Platt scaling
+* Principal variables
 
 Practical stuff:
 * Checkpoints

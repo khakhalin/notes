@@ -1,6 +1,19 @@
-# Trees, forests, stumps
-
 Ensembles are about combining (or gradually refining) lots of poor predictions (aka **weak learners**) into a very good prediction.
+
+# Bagging
+
+Bootstrapping can be used to improve estimations. The idea: bootstrap the data many times; build an estimator on each of these subsets of data, then average predictions of these estimators.
+
+For linear estimators (like linear regression) this operation doesn't yield anything interesting, as in this case E(h(x)) = h(E(x)) = h(full data). But for non-linear h(), like **regression trees**, for example, intersting things may happen.
+
+How to combine opinions of several classifiers into one output? One option is to encode output labels as one-hot encoding, and produce a vector of probabilities; then pick max coordinate (the most popular one). Another is to make classifiers output vectors of probabilities for different levels, without actual argmax-ing, and then average these outputs. The benefit here is that the result of averaging also works as a probability (∑=1), and also it happens to have lower variance.
+
+> So from this part, it seems that the key power of bagging is that it takes a very discrete, run-down method that is by design jumpy, and also overfits like hell, and turns it into a smoothed landscape. Is this shifting from discrete to pseudo-continuous the main reason for why bagging works? Or is some hidden indirect serendipitous regularizaton also involved?
+
+> And I still dont' undertand how individual trees can output anything like probabilities, but it will clear once I read about trees.
+
+Refs:
+* ESL p282
 
 # Boosting
 

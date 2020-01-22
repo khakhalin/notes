@@ -6,7 +6,7 @@ https://royalsocietypublishing.org/doi/pdf/10.1098/rspb.2012.2863
 
 Go through publications of D. Krioukov (Northeastern):
 https://web.northeastern.edu/dima/pub/
-Has some publications (older, down the page) on percolation on networks.
+He has some publications (older, down the page) on percolation on networks.
 
 Video: The physics of brain network architecture, function, and control
 Lecture by Danielle Bassett

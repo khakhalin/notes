@@ -4,10 +4,6 @@ To-read: Neuro
 **Bibliography collections:**
 * [[bib_reconstruction]] - On reconstructing biological connectivity from spike-trains and alike
 
-https://royalsocietypublishing.org/doi/full/10.1098/rspb.2010.2325
-Towards a scientific concept of free will as a biological trait: spontaneous actions and decision-making in invertebrates
-Björn Brembs
-
 Merel, J., Botvinick, M., & Wayne, G. (2019). Hierarchical motor control in mammals and machines. Nature Communications, 10(1), 1-12.
 https://www.nature.com/articles/s41467-019-13239-6
 Opinion? Seems short and general, so give it priority.
@@ -34,8 +30,6 @@ Emergence of complex computational structures from chaotic neural networks throu
 Gilson, M., Burkitt, A., & van Hemmen, J. L. (2010). STDP in recurrent neuronal networks. Spike-timing dependent plasticity, 271.
 
 Naudé, J., Cessac, B., Berry, H., & Delord, B. (2013). Effects of cellular homeostatic intrinsic plasticity on dynamical and computational properties of biological recurrent neural networks. Journal of Neuroscience, 33(38), 15032-15043.
-
-Fremaux N, Sprekeler H, Gerstner W. Reinforcement learning using a continuous time actor-critic framework with spiking neurons. PLoS computational biology. 2013;9(4):e1003024.
 
 Gutig R, Aharonov R, Rotter S, Sompolinsky H. Learning input correlations through nonlinear temporally asymmetric Hebbian plasticity. The Journal of neuroscience: the official journal of the Society for Neuroscience. 2003;23(9):3697–714. Epub 2003/05/09.
 
@@ -87,7 +81,11 @@ Schaub, M. T., Billeh, Y. N., Anastassiou, C. A., Koch, C., and Barahona, M. (20
 
 Kim, J. K., & Fiorillo, C. D. (2017). Theory of optimal balance predicts and explains the amplitude and decay time of synaptic inhibition. Nature communications, 8, 14566.
 https://www.nature.com/articles/ncomms14566
-How ideally balanced inhibition can emerge from anti-hebbian plasticity. Skim.
+How ideally balanced inhibition can emerge from anti-hebbian plasticity.
+
+Kanders, K., Lee, H., Hong, N., Nam, Y., & Stoop, R. (2020). Fingerprints of a second order critical line in developing neural networks. Communications Physics, 3(1), 1-13.
+https://www.nature.com/articles/s42005-019-0276-8
+Transitions between two levels of criticality in neuronal culture.
  
 # Reservoir computing
 
@@ -135,29 +133,6 @@ Changing temporal context in human temporal lobe promotes memory of distinct epi
 https://www.nature.com/articles/s41467-018-08189-4
 Also a blog post summary: https://www.quantamagazine.org/how-the-brain-creates-a-timeline-of-the-past-20190212/
 
-# Credit assignment
-
-Bellec, G., Scherr, F., Subramoney, A., Hajek, E., Salaj, D., Legenstein, R., & Maass, W. (2019). A solution to the learning dilemma for recurrent networks of spiking neurons. bioRxiv, 738385.
-https://www.biorxiv.org/content/10.1101/738385v3
-Something like backpropagation in spiking networks.
-
-Aljadeff, J., D'amour, J., Field, R. E., Froemke, R. C., & Clopath, C. (2019). Cortical credit assignment by Hebbian, neuromodulatory and inhibitory plasticity. arXiv preprint arXiv:1911.00307.
-[https://arxiv.org/pdf/1911.00307.pdf](<https://arxiv.org/pdf/1911.00307.pdf>)
-
-Gütig, R., & Sompolinsky, H. (2006). The tempotron: a neuron that learns spike timing–based decisions. Nature neuroscience, 9(3), 420.
-
-Zenke, F., Poole, B., & Ganguli, S. (2017, August). Continual learning through synaptic intelligence. In Proceedings of the 34th International Conference on Machine Learning-Volume 70 (pp. 3987-3995). JMLR. org.
-https://arxiv.org/pdf/1703.04200.pdf
-Abstract synapses (not biological) that somehow prioritize what to learn based on some information? Claim to be biologically inspired. Well cited.
-
-Krieg, D., & Triesch, J. (2014). A unifying theory of synaptic long-term plasticity based on a sparse distribution of synaptic strength. Frontiers in synaptic neuroscience, 6, 3.
-https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3941589/
-Try to marry Hebbian with gradient descent and something else? Lots of math, not that well cited.
-
-Rolfe, Jason Tyler (2012) Intrinsic Gradient Networks. Dissertation (Ph.D.), California Institute of Technology.
-https://thesis.library.caltech.edu/6953/
-PhD thesis that was never published on biologically plausible gradient descend in the brain? Check it out.
-
 # Single-neuron calculations
 
 Hidden Computational Power Found in the Arms of Neurons. Jordana Cepelewicz. Jan 14 2020.
@@ -184,15 +159,42 @@ Jan 16, 2020. Aidan Rocke
 https://keplerlounge.com/neural-computation/2020/01/16/complex-auto-diff.html
 Aidan claims tha this math somehow helps to explain calculations in a dendritic tree, but it has lots of calculus, and seems like something one has to actually think about. It like has math and stuff! Complex functions, poles, and what not.
 
-# Memory storage
+# Credit assignment
 
-Context-modular memory networks support high-capacity, flexible, and robust associative memories. (2020). William F Podlaski,  Everton J Agnes,  Tim P Vogels
-https://www.biorxiv.org/content/10.1101/2020.01.08.898528v1
-About Hopfield limit. It seems they use an architecture in which large groups neurons or synapses can be modulated (via gating, inhibition) in a context-dependent manner. Show an increase in memory capacity; changes in active components (states), robustness to noise, memory search (??), memory stability. Gating of memories. Substrate for continuous learning? Related to the problem of catastrophic forgetting, including [this paper](https://www.pnas.org/content/115/44/E10467.short).
-There's also a [tweetprint](https://twitter.com/TPVogels/status/1215572496570896384).
+Bellec, G., Scherr, F., Subramoney, A., Hajek, E., Salaj, D., Legenstein, R., & Maass, W. (2019). A solution to the learning dilemma for recurrent networks of spiking neurons. bioRxiv, 738385.
+https://www.biorxiv.org/content/10.1101/738385v3
+Something like backpropagation in spiking networks.
 
-Masse, N. Y., Yang, G. R., Song, H. F., Wang, X. J., & Freedman, D. J. (2019). Circuit mechanisms for the maintenance and manipulation of information in working memory. Nature neuroscience, 1.
-https://www.biorxiv.org/content/biorxiv/early/2018/05/21/305714.full.pdf
+Aljadeff, J., D'amour, J., Field, R. E., Froemke, R. C., & Clopath, C. (2019). Cortical credit assignment by Hebbian, neuromodulatory and inhibitory plasticity. arXiv preprint arXiv:1911.00307.
+[https://arxiv.org/pdf/1911.00307.pdf](<https://arxiv.org/pdf/1911.00307.pdf>)
+
+Gütig, R., & Sompolinsky, H. (2006). The tempotron: a neuron that learns spike timing–based decisions. Nature neuroscience, 9(3), 420.
+
+Zenke, F., Poole, B., & Ganguli, S. (2017, August). Continual learning through synaptic intelligence. In Proceedings of the 34th International Conference on Machine Learning-Volume 70 (pp. 3987-3995). JMLR. org.
+https://arxiv.org/pdf/1703.04200.pdf
+Abstract synapses (not biological) that somehow prioritize what to learn based on some information? Claim to be biologically inspired. Well cited.
+
+Krieg, D., & Triesch, J. (2014). A unifying theory of synaptic long-term plasticity based on a sparse distribution of synaptic strength. Frontiers in synaptic neuroscience, 6, 3.
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3941589/
+Try to marry Hebbian with gradient descent and something else? Lots of math, not that well cited.
+
+Rolfe, Jason Tyler (2012) Intrinsic Gradient Networks. Dissertation (Ph.D.), California Institute of Technology.
+https://thesis.library.caltech.edu/6953/
+PhD thesis that was never published on biologically plausible gradient descend in the brain? Check it out.
+
+# RL in the brain
+#rl
+
+Dabney, W., Kurth-Nelson, Z., Uchida, N., Starkweather, C. K., Hassabis, D., Munos, R., & Botvinick, M. (2020). A distributional code for value in dopamine-based reinforcement learning. Nature, 1-5.
+https://www.nature.com/articles/s41586-019-1924-6
+(obv behind paywall)
+DeepMind. Some cover of it:
+https://www.technologyreview.com/s/615054/deepmind-ai-reiforcement-learning-reveals-dopamine-neurons-in-brain/
+
+Wang, J. X., Kurth-Nelson, Z., Kumaran, D., Tirumala, D., Soyer, H., Leibo, J. Z., ... & Botvinick, M. (2018). Prefrontal cortex as a meta-reinforcement learning system. Nature neuroscience, 21(6), 860.
+https://www.nature.com/articles/s41593-018-0147-8
+
+Fremaux N, Sprekeler H, Gerstner W. Reinforcement learning using a continuous time actor-critic framework with spiking neurons. PLoS computational biology. 2013;9(4):e1003024.
 
 # DL models of brains
 
@@ -203,9 +205,6 @@ About how to use deep learning to guess neuronal parameters to fit the actual ac
 
 Richards, B. A., Xia, F., Santoro, A., Husse, J., Woodin, M. A., Josselyn, S. A., & Frankland, P. W. (2014). Patterns across multiple memories are identified over time. Nature neuroscience, 17(7), 981.
 https://www.nature.com/articles/nn.3736
-
-Wang, J. X., Kurth-Nelson, Z., Kumaran, D., Tirumala, D., Soyer, H., Leibo, J. Z., ... & Botvinick, M. (2018). Prefrontal cortex as a meta-reinforcement learning system. Nature neuroscience, 21(6), 860.
-https://www.nature.com/articles/s41593-018-0147-8
 
 Lillicrap, T. P., & Scott, S. H. (2013). Preference distributions of primary motor cortex neurons reflect control solutions optimized for limb biomechanics. Neuron, 77(1), 168-179.
 https://www.sciencedirect.com/science/article/pii/S0896627312009920
@@ -224,6 +223,16 @@ Supposedly, explains the development of grid cells, synthesizing two existing th
 Michaels, J. A., Schaffelhofer, S., Agudelo-Toro, A., & Scherberger, H. (2019). A neural network model of flexible grasp movement generation. bioRxiv, 742189.
 https://www.biorxiv.org/content/10.1101/742189v1
 Modeled vision-controlled grasping (based on monkey data) as convolutional network (based on Alexnet, it seems) → RNN (fully connected) → bottlneck of 8 neurons → another RNN → another bottleneck → another RNN → output. They call these bottlenecks "sparsity", which is interesting. I wonder whether it is fair to call it brain-inspired. Is it something that works, as it forces the learning of representations, and then only claim that it is brain-inspired, to give it some conceptual validity? Or is there actual evidence in the brain that connections between motor systems are throttled like that? Something to explore. Also they mention some "feedback connections" that may be connections between RNN modules, but I'd need to read the methods section carefully to see what's happening there. One of the most important aspects of this paper for me may be the neuro-inspired analysis of model performance that they do, and the very attitude to validation that they have. I wonder if that's something that can be applied to spiking networks.
+
+# Memory storage
+
+Context-modular memory networks support high-capacity, flexible, and robust associative memories. (2020). William F Podlaski,  Everton J Agnes,  Tim P Vogels
+https://www.biorxiv.org/content/10.1101/2020.01.08.898528v1
+About Hopfield limit. It seems they use an architecture in which large groups neurons or synapses can be modulated (via gating, inhibition) in a context-dependent manner. Show an increase in memory capacity; changes in active components (states), robustness to noise, memory search (??), memory stability. Gating of memories. Substrate for continuous learning? Related to the problem of catastrophic forgetting, including [this paper](https://www.pnas.org/content/115/44/E10467.short).
+There's also a [tweetprint](https://twitter.com/TPVogels/status/1215572496570896384).
+
+Masse, N. Y., Yang, G. R., Song, H. F., Wang, X. J., & Freedman, D. J. (2019). Circuit mechanisms for the maintenance and manipulation of information in working memory. Nature neuroscience, 1.
+https://www.biorxiv.org/content/biorxiv/early/2018/05/21/305714.full.pdf
 
 # Bottom-up validation
 
@@ -264,24 +273,6 @@ Spoerer, C. J., Kietzmann, T. C., & Kriegeskorte, N. (2019). Recurrent networks 
 https://www.biorxiv.org/content/10.1101/677237v3.full
 Recurrent convolutional network  works better than a feed-forward convolutional network. It's slower, but better. Claim that it's similar to primate vision somehow.
 
-# Free energy
-#freeenergy
-
-Gershman, S. J. (2019). What does the free energy principle tell Us about the brain?. arXiv preprint arXiv:1901.07945.
-https://arxiv.org/abs/1901.07945
-
-The Markov blankets of life: autonomy, active inference and the free energy principle
-Michael Kirchhoff, Thomas Parr, Ensor Palacios, Karl Friston and Julian Kiverstein
-Published:17 January 2018
-https://royalsocietypublishing.org/doi/full/10.1098/rsif.2017.0792
-
-Friston, K. (2010). The free-energy principle: a unified brain theory?. Nature reviews neuroscience, 11(2), 127.
-3k references! So people do find it useful after all?
-
-https://www.frontiersin.org/articles/10.3389/fnsys.2019.00042/full 
-The Dialectics of Free Energy Minimization Evert A. Boonstra and Heleen A. Slagter
-Seems to be a review explaining the free energy minimization principle for an organism. It's not math though; looks almost like philosophy?
-
 # Large-scale dynamics
 
 Recurrence is required to capture the representational dynamics of the human visual system
@@ -305,10 +296,31 @@ https://arxiv.org/abs/2001.04571
 
 # Variability
 
+Brembs, B. (2011). Towards a scientific concept of free will as a biological trait: spontaneous actions and decision-making in invertebrates. Proceedings of the Royal Society B: Biological Sciences, 278(1707), 930-939.
+https://royalsocietypublishing.org/doi/full/10.1098/rspb.2010.2325
+
 Murakami, M., Shteingart, H., Loewenstein, Y., & Mainen, Z. F. (2016). Distinct sources of deterministic and stochastic components of action timing decisions in rodent frontal cortex. bioRxiv, 088963.
 
 Findling, C., Skvortsova, V., Dromnelle, R., Palminteri, S., & Wyart, V. (2019). Computational noise in reward-guided learning drives behavioral variability in volatile environments. Nature neuroscience, 22(12), 2066-2077.
 https://www.biorxiv.org/content/biorxiv/early/2018/10/11/439885.full.pdf
+
+# Free energy
+#freeenergy
+
+Gershman, S. J. (2019). What does the free energy principle tell Us about the brain?. arXiv preprint arXiv:1901.07945.
+https://arxiv.org/abs/1901.07945
+
+The Markov blankets of life: autonomy, active inference and the free energy principle
+Michael Kirchhoff, Thomas Parr, Ensor Palacios, Karl Friston and Julian Kiverstein
+Published:17 January 2018
+https://royalsocietypublishing.org/doi/full/10.1098/rsif.2017.0792
+
+Friston, K. (2010). The free-energy principle: a unified brain theory?. Nature reviews neuroscience, 11(2), 127.
+3k references! So people do find it useful after all?
+
+https://www.frontiersin.org/articles/10.3389/fnsys.2019.00042/full 
+The Dialectics of Free Energy Minimization Evert A. Boonstra and Heleen A. Slagter
+Seems to be a review explaining the free energy minimization principle for an organism. It's not math though; looks almost like philosophy?
 
 # Other
 
