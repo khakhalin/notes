@@ -4,7 +4,7 @@
 Current point in the Google Course: https://developers.google.com/machine-learning/crash-course/production-ml-systems 
 
 ESL progress. 
-Current position: p284
+Current position: p290
 
 Parked parts that need to be revisited:
 * p161 to p218 - Smoothing, wavelets, smoothing kernels, local regression, kernel size choice
@@ -17,14 +17,12 @@ Parked parts that need to be revisited:
 * Make sure all Eric's recommendations are here
 
 Classic ML and friends
-* purity score
-* random forest
-* gradient boosting
-* loess - how is it different form b-splines?
+* loess - how is it different from b-splines?
 * Hungarian algorithm
 * Bloom filter
 * Kalman filter (and its friends)
 * Expectation-Maximization
+* Bayes Information Criterion - will be naturually described once I cover model selection?
 * Bayesian PCA
 * more on Gaussian processes
 * Graphical models

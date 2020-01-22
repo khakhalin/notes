@@ -2,8 +2,8 @@
 
 Early citation: Maes, A., Barahona, M., & Clopath, C. (2019). Learning spatiotemporal signals using a recurrent spiking network that discretizes time. arXiv preprint arXiv:1907.08801.
 https://arxiv.org/abs/1907.08801
-
-Later published in PLoS Comp Bio. (no ref yet?)
+Final version:
+https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007606
 
 #neuro #synfire #spiking
 
