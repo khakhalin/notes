@@ -29,6 +29,7 @@ Classic ML and friends
 * Hidden markov models
 * Markov random fields (precursor of modern graph models?)
 * Variational inference
+* Influence functions ([this pdf may help](https://arxiv.org/pdf/1810.03260.pdf))
 * Resampling techniques: SMOTE, isotonic regression, Platt scaling
 * Principal variables
 

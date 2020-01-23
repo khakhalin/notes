@@ -12,6 +12,10 @@ An overview of gradient descent optimization algorithms.  19 Jan 2016 (updated i
 https://ruder.io/optimizing-gradient-descent/
 Adagrad, adam, and others like that.
 
+Neural Reparameterization Improves Structural Optimization, by Sam Greydanus
+https://greydanus.github.io/2019/12/15/neural-reparam/
+A really cool post on Neural reparameterization (ANN as a way to optimize search for new structures; like ANNs in the middle of a formal algorithms; the one with bridges for example - super-fun!)
+
 Rahaman, N., Baratin, A., Arpit, D., Draxler, F., Lin, M., Hamprecht, F. A., ... & Courville, A. (2018). On the spectral bias of neural networks. arXiv preprint arXiv:1806.08734.
 https://arxiv.org/abs/1806.08734
 On what neural network can encode easily - seems to be a very useful read, potentially.

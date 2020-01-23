@@ -1,5 +1,6 @@
 To-read: Neuro
 ===
+#neuro
 
 **Bibliography collections:**
 * [[bib_reconstruction]] - On reconstructing biological connectivity from spike-trains and alike
@@ -48,6 +49,9 @@ https://pdfs.semanticscholar.org/a0e4/249b0ab6e34699b12d49ad0d0a4c5e121886.pdf
 
 Lagzi, F., & Rotter, S. (2015). Dynamics of competition between subnetworks of spiking neuronal networks in the balanced state. PloS one, 10(9), e0138947.
 https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0138947
+
+Gutkin, B. S., Laing, C. R., Colby, C. L., Chow, C. C., & Ermentrout, G. B. (2001). Turning on and off with excitation: the role of spike-timing asynchrony and synchrony in sustained neural activity. Journal of computational neuroscience, 11(2), 121-134.
+Apparently, sorta seminal paper in this narrow field.
 
 # Criticality, inhibition, dynamics
 
