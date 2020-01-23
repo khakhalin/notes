@@ -17,7 +17,11 @@ Parked parts that need to be revisited:
 * Make sure all Eric's recommendations are here
 
 Classic ML and friends
+* gradient boosting
 * loess - how is it different from b-splines?
+* the difference between tSNE and UMAP
+* that one about types of DL optimizers
+* make sure all graph altorithms are covered
 * Hungarian algorithm
 * Bloom filter
 * Kalman filter (and its friends)

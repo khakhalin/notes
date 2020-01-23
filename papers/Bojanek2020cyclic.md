@@ -2,7 +2,7 @@
 Bojanek, K., Zhu, Y., & MacLean, J. (2019). Cyclic transitions between higher order motifs underlie sustained activity in asynchronous sparse recurrent networks. bioRxiv, 777219.
 https://www.biorxiv.org/content/10.1101/777219v1.article-info
 
-Updated version tbc
+Updated version tbc (plos?)
 
 #networks #neuro #spiking #motifs #criticality
 

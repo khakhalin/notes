@@ -83,4 +83,5 @@ Job-search specific materials:
 * Think complexity: http://greenteapress.com/complexity2/thinkcomplexity2.pdf
 * Think Python (to send out): https://greenteapress.com/wp/think-python-2e/
 * Some notes on how to install Python (Anaconda + Jupyter): https://github.com/AllenDowney/ModSimPy
+* [Good exploration of logistic map and chaos](https://geoffboeing.com/2015/03/chaos-theory-logistic-map/)
 
