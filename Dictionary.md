@@ -42,7 +42,9 @@ Redshift
 
 # EF
 
-**ECS** - Amazon Elastic Container Server. To manage (run, stop) **Docker** containers on a cluster.
+**ECS** (dev): Amazon Elastic Container Server. To manage (run, stop) **Docker** containers on a cluster.
+
+**EDA** (dev): Exploratory Data Analysis.
 
 **Feature store** (data sci) A practical concept for data project implementation: a collection of curated features that are automatically produced (updated) from new data, and can be tapped into by various projects. Paying it forward with feature engineering.
 

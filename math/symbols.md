@@ -1,7 +1,7 @@
 Best search site:
 [https://www.compart.com/en/unicode/](<https://www.compart.com/en/unicode/>)
 
-∙ 
+∙ −
 ≠ ≤	≥ ≪	≫ ≈ ≡ ≔ ∥ ∦
 ∑ ∏ ∫ ∬
 ⟨ ⟩
@@ -14,9 +14,11 @@ Best search site:
 □∎
 ⨀⨂⨁ ∘ •
 
-Α α, Β β, Γ γ, Δ δ, Ε ε, Ζ ζ, Η η, Θ θ, Ι ι, Κ κ, Λ λ, Μ μ, Ν ν, Ξ ξ, Ο ο, Π π, Ρ ρ, Σ σ/ς, Τ τ, Υ υ, Φ φ, Χ χ, Ψ ψ, Ω ω.
+Α α, Β β, Γ γ, Δ δ, Ε ε, Ζ ζ, Η η, Θ θ, Ι ι, Κ κ, Λ λ, Μ μ, Ν ν, Ξ ξ, Ο ο, Π π, Ρ ρ, Σ σ/ς, Τ τ, Υ υ, Φ φ, Χ χ, Ψ ψ, Ω ω ϵ ϖ ϰ ϑ ϱ ϒ ϕ
+ϐ ϗ Ϙϙ Ϛϛ Ϝϝ Ϟϟ Ϡϡ Ϣϣ Ϥϥ Ϧϧ Ϩϩ Ϫϫ Ϭϭ Ϯϯ ϴ ϵ ϶ Ϸϸ ϻ ϼ Ͻ Ͼ Ͽ
+℥ℨ
 
-https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode
+ᕵᕴᒋᒉᕕᕓᕗᕙᕈᕋᕂᕆ
 
 ა თ ი ო ბ ზ მ ნ პ რ ს შ ჩ ძ ხ ჰ გ დ ე ვ კ ლ ჟ ტ უ ფ ღ ყ ც ქ ჭ ჯ წ ჱ ჲ ჳ ჴ ჵ ჷ ჸ ჶ ჵ ჹ
 
@@ -28,6 +30,8 @@ https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode
  æÆ
  
  よのまて
+ 
+ https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode
 
 Testing fancy formulas:
 

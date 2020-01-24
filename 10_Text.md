@@ -1,6 +1,6 @@
 # Texts and Language
 
-**Toolbox:**
+**Toolbox of methods and concepts:**
 * [[ngram]] - N-grams: low-level feature for text analysis, beyond single words. "Bags" of several (2-3) words.
 * [[tfidf]] - Text Frequency - Inverse Document Frequency. A basic ranking approach for text relevance.
 
