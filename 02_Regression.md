@@ -1,5 +1,5 @@
 # Linear Regression
-**Linear model**: h(x) = estimation for y = ∑θ_i x_i = xᵀθ, or y ~ h = Xθ in matrix form. Here we assume that xᵀ is a row-vector length p+1, with x_0 = 1 (intercept), followed by n variables. The equation above defines a hyperplane in ℝ^p.
+**Linear model**: h(x) = estimation for y = $∑θ_i x_i$ = xᵀθ, or y ~ h = Xθ in matrix form. Here we assume that xᵀ is a row-vector length p+1, with x_0 = 1 (intercept), followed by n variables. The equation above defines a hyperplane in ℝ^p.
 
 ## L2 loss
 Loss: J(θ) = ∑(h-y)² across all data points i. Is called **Squared error**, or **squared distance**, or **Mean Squared Error** (MSE), or **Least Squares**. Sensitive to outliers, permissive to small deviations around zero (because of its convex shape). Nice practical illustration from [Google crash course](https://developers.google.com/machine-learning/crash-course/): 2 outliers of 2 are worse than 4 outliers of 1, as 8>4. 
