@@ -3,43 +3,20 @@ Features, Dim reduction, Clustering
 #features
 
 # Linear Basis Expansion
-The idea is to go beyond "linear" in linear regression, but retain the spirit of replacing complex and noisy X with some simple, probably smooth functions of fewer parameters.
-
-f(X) = ∑βj hj(X), 
-where X is our data, β are coefficients, and {h_j(X)} is a set of functions (transformations), each projecting ℝ^p → ℝ. So a non-linear transformation of X, followed by a linear model in these new coordinates.
+The idea is to go beyond "linear" in linear regression, but retain the spirit of replacing complex and noisy X with some simple, probably smooth functions of fewer parameters. $f(X) = ∑β_j h_j(X)$, where X is our data, β are coefficients, and {h_j(X)} is a set of functions (transformations), each projecting from X-like space to y-like values (ℝ^p → ℝ). So a non-linear transformation of X, followed by a linear model in these new coordinates.
 
 > So, this shows that fitting and smoothing can also be considered a case of basis transformations, where you have from a very high dimensionality (lots of consecutive points in a signal, treated as one long vector) into a low dim of parameter space (say, spline coefficients), from which the original high-D signal may be approximately reconstructed.
 
 **Some examples:**
 * h_j(X) = x_j. Linear regression
-* h_j(X) = x_j∘x_i (potentially, for all p(p-1) pairs of coordinates, including squares). **Cross-products**, aka **polynomial kernel** or **polynimal expansion**. Cheap and fast way to perform non-linear modeling with linear methods. Higher polynomials are also possible, but computationally expensive. 
+* h_j(X) = x_j∘x_i (**Cross-products**; potentially, for all p(p-1) pairs of coordinates, including self-products, aka squares). Aka **Polynomial kernel** or **polynimal expansion**. Cheap and fast way to perform non-linear modeling with linear methods. Higher polynomials are also possible, but computationally expensive. 
 * h_j(X) = indicator(x ∈ area): **binning** in p-dimensions. Emulates cluster analysis without actually running cluster analysis, as clusters are more likely to be covered by the same bin. Can also be used to transform a continuous variable into a pseudo-nominal one.
 * **Kernel tricks**: use various functions (kernels) to calculate new synthetic features from old features. For example, distance from a well chosen point in a high-D space would make a useful kernel (see [[RBF]]).
 
 The biggest problems with polynomials is that they are global (non-local), cannot extrapolate, and are unstable. Some alternative that combine mathematical simplicity with good behavior: **piecewise-polynomials**, **splines**, and **wavelets**. All these methods produce a very large **dictionary** of basis functions, and so need further constraints to keep the complexity of the model in check, such as **restriction** (e.g. always the same number of terms in a sum, for addittive functions), **selection** (only retain functions with large enough coefficients), or **regularization**.
 
-## Splines
-Consider **Piecewise polynomials**. The simplest example ever: downsampling, which is the same as piecewise constant, or just replacing values with their means. Better: piecewise linear fit. Even better: piecewise linear continuous at knots. Continuity implies limitations (as in a+bx = c+dx), and so a lower number of parameters to fit.  For **Splines**, not only f(x), but also first derivative f'(x) are continuous on the edges of segments. Usually cubic, but not necessarily. There's apparently an efficient way to calculate them, called a **B-spline basis**, but park for now. (ESL p144, referencing Esl chapter 5 appendix) 
-
-**Natural cubic spline**: is forced to become linear on all knots (with f''=0), with no curvature. Three benefits: 1) same polynomial can be safely extrapolated outside the range, as it fits edge data with a reasonable straight line (instead of a crazy overshoot that cubic splines always want to do), 2) two fewer degrees of freedom per spline to deal with, 3) arguably, look quite nice. Formulas may be solved explicitly, it is just annoying. [ref](https://towardsdatascience.com/numerical-interpolation-natural-cubic-spline-52c1157b98ac)
-
-## Smoothing splines
-Instead of picking knot points (for splines), let's use regularization. Loss = ∑(y-f(x))² + λ∫(f''(x))²dt, where λ is a **smoothing parameter**. Then apply it to a natural spline sequence with knots in unique values of x_i (that apparently happens to be an optimal function for this type of task). Apparently, there also exists an optimal basis of natural splines F (B-splines? _Or are B-splines different?_), so f = ∑Fi(x)θi, and after combining it with the equation fo loss, we get a generalized ridge regression:
-
-L(θ, λ) = (y-Fθ)ᵀ(y-Fθ) + λθᵀΩθ, where Ω is a matrix with $Ω_{jk} = \int F'' _ j(t)F''_ k(t)dt$. It gives the solution: θ = (FᵀF + λΩ)⁻¹Fᵀy. There exist computationally effective way to calculate that all. 
-
-An approximation for y can now be produced from here, by doing h = Fθ = F(FᵀF + λΩ)⁻¹Fᵀy = Sy, where S is a **smoother matrix**, or smoother operator. Linear in respect to y. This matrix S = F(FᵀF + λΩ)⁻¹Fᵀ is similar to a standard projection operator B(BᵀB)⁻¹Bᵀ; it's also symmetric positive semidefinite, but while H² = H, S² ≤ S (because of the shrinkage). As for a (reasonable?) projection operator tr(H) = the number of coordinates remaining in place = dimention of the projection space, we can use df$_ λ$= tr(S) an estimate for the **effective degrees of freedom**.
-
-Another way to write S is to split it in a so-called **Reinsch form**: S = (I+λK)⁻¹, where K is not depended on λ, and is called a **penalty matrix**. (_I'm not immediately sure why it is possible._) The igenvectors can be found (ESL p155), and they don't depend on λ. The **Bias-Variance Tradeoff** is quite prominent in this case (ESL p159)
-
-> #todo : ESL p161 to p181 skipped for now: Nonparametric Logistic Regression, Multididimensional splines, Reproducing Kernel Hilbert Spaces (RKHS), 
-
-## Wavelets
-
-> Also parked for now: Wavelet smoothing (around ESL p170)
-
-# Kernel Smoothing Method
-> ESL 192
+# Smoothing
+See: [[smoothing]]
 
 # Variable selection
 Key references:

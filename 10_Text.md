@@ -2,7 +2,7 @@
 
 **Toolbox:**
 * [[ngram]] - N-grams: low-level feature for text analysis, beyond single words. "Bags" of several (2-3) words.
-* [[tfidf]] - Text frequency - Inverse document frequency. A basic ranking approach for text relevance.
+* [[tfidf]] - Text Frequency - Inverse Document Frequency. A basic ranking approach for text relevance.
 
 # To read:
 https://ruder.io/unsupervised-cross-lingual-learning/index.html

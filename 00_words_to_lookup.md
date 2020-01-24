@@ -18,7 +18,6 @@ Parked parts that need to be revisited:
 
 Classic ML and friends
 * gradient boosting
-* loess - how is it different from b-splines?
 * the difference between tSNE and UMAP
 * that one about types of DL optimizers
 * make sure all graph altorithms are covered
@@ -62,15 +61,12 @@ Deep Learning:
 * Wavenet - that famous convolution network that generates audio on-the-fly
 
 Technical stuff
-* Relational databases: Snowflake, Redshift
 * regex in Python
 * JSON - how does it work, why everybody love it, and is it the present or the future? ([wiki](https://en.wikipedia.org/wiki/JSON))
 * YAML - some standard for keeping stuff that's like XML, but human-readable. Who uses it? Is it popular? ([wiki](https://en.wikipedia.org/wiki/YAML))
 * bash
-* Hadoop
-* Spark
 * Python closures, why they are a thing, what's dangerous about them, and how to use them
-* Jax: [Baysian NN in Jax](https://colab.research.google.com/drive/1gMAXn123Pm58_NcRldjSuGYkbrXTUiN2) - collab notebook
+* Jax: [Baysian NN in Jax](https://colab.research.google.com/drive/1gMAXn123Pm58_NcRldjSuGYkbrXTUiN2) - collab notebook 
 
 Other math
 * How to calculate single-value-decomposion and eigenvector decomposition in practice? How do they code it for numpy, for example?
