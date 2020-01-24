@@ -20,7 +20,7 @@ Classic ML and friends
 * gradient boosting
 * the difference between tSNE and UMAP
 * that one about types of DL optimizers
-* make sure all graph altorithms are covered
+* make sure all graph algorithms are covered
 * Hungarian algorithm
 * Bloom filter
 * Kalman filter (and its friends)

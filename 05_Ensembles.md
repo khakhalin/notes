@@ -26,7 +26,11 @@ Alternatively, try to estimate P(M) somehow; say, if a model has a set of parame
 
 > But then they say something that I don't understand; how with different models having different complexity somehow everything would break. Why again? ESL p290
 
-**Stacked generalization** or **Stacking**: ?????????????????
+**Stacked generalization** or **Stacking**: Say you have a way of building various models f_m, and training each of them on a dataset X. Models f_m may belong to the same class, or to different classes, but the important part is that they sufficiently different; that is, they are defined both by the training set X, and by some hyperparameters that come with the model itself. So while each model is a function of a dataset, f(X), two models f_m1(X) and f_m2(X) should still be different.
+
+Consider training each model f_m() on a dataset  X minus observation xi. It creates a family $f_m^{-i}(x)$ for each model class f_m(), providing a good way of assessing the accuracy of f_m() via cross-validation: ......................…
+
+p290
 
 Refs:
 * ESL p282-on

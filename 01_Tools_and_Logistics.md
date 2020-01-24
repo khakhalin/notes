@@ -4,7 +4,6 @@
 * [[git]] - GIT cheat sheet
 * [[sql]] - SQL cheat sheet
 * [[pandas]] - Pandas obviously :)
-* [[tool_list]] - various named software pieces and tools.
 
 **Advice on ML projects:**
 * [[ml_lore]] - a collection of rules of thumb about everything Deep Learning (which defaults to pick etc.)
