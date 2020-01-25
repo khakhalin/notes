@@ -1,5 +1,8 @@
 # To-read: ML and AI
 
+More info on decision trees, pruning
+https://towardsdatascience.com/the-complete-guide-to-decision-trees-28a4e3c7be14
+
 Reflections on Innateness in Machine Learning
 Thomas G. Dietterich. Mar 6, 2018.
 https://medium.com/@tdietterich/reflections-on-innateness-in-machine-learning-4eebefa3e1af

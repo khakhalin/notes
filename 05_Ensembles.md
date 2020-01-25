@@ -51,7 +51,7 @@ Boosting uses simplest decision trees possible:  single split into 2 categories,
 The most popular, archetypical approach: **AdaBoost**, aka **Adaptive Boosting**. For a binary discrete case:
 1. Start with all points x_i having identical weights {W}. ∑wi = 1, so w_i = 1/n.
 2. For each available coordinate, find the best split (aka stump), with smallest total error E = ∑wi ϵi, where ϵi = 1∙(h(xi)==yi).
-3. Across all coordinates, find a split that minimizes [[gini]] index (splits into 2 parts that are as similar in size as possible). For all loops after 1st (when weights are different), either use weighted gini index, or randomly draw points with p ∝ w (with repetition, keeping the total number of points about constant).
+3. Across all coordinates, find a split that minimizes [[gini]] index for this split. For all loops after 1st (when weights are different), either use weighted gini index, or randomly draw points with p ∝ w (with repetition, keeping the total number of points about constant).
 4. Calculate the weight of this stump as α = ½ log((1−E)/E) . This formula →+∞ for E→0, →-∞ for E→1, and 0 around chance, when E=1-E. In practice, to avoid ∞, a tiny ε is added both to both numerator and denominator.
 5. Increase the weights of misclassified samples: w_i ← w_i ∙ exp(α); decrease weights of correctly classified samples by multiplying by exp(−α); then normalize to ∑w = 1.
 6. Go to step 2.
