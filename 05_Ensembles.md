@@ -30,6 +30,10 @@ Alternatively, try to estimate P(M) somehow; say, if a model has a set of parame
 
 > But then they say something that I don't understand; how with different models having different complexity somehow everything would break. Why again? ESL p290
 
+# Stacking
+
+A practical way to create a reasonable linear combination of several non-linear models using cross-validation.
+
 **Stacked generalization** or **Stacking**: Say you have a way of building various models f_m, and training each of them on a dataset X. Models f_m may belong to the same class, or to different classes, but it is important that they are sufficiently different: that is, they need to be defined both by the training set X, and by some hyperparameters that come with the model itself. So while each model is a function of a dataset, f(X), two models f_m1(X) and f_m2(X) should still be different.
 
 Consider training each model f_m() on a dataset  X minus observation xi. It creates a family of predictors $f_m^{-i}(x)$ for each model class f_m(), providing a good way of assessing the accuracy of m-type models f_m() via cross-validation: just predict y_i by each f^{-i}, and sum all errors. But instead of just picking the best model, we will build the best linear combination of all these models, by finding an optimal vector of weights w, so that
@@ -93,7 +97,7 @@ References:
 * [Gentle Introduction to the Gradient Boosting Algorithm](https://machinelearningmastery.com/gentle-introduction-gradient-boosting-algorithm-machine-learning/), Jason Brownlee, 2016. Confusing.
 * [Understanding Gradient Boosting Machines](https://towardsdatascience.com/understanding-gradient-boosting-machines-9be756fe76ab),  Harshdeep Singh, 2018. Confusing.
 
-## Bagging-Boosting comparison
+## Bagging/Boosting comparison
 
 * Bagging tends to decrease variance, but not necessarily bias. Boosting tends to reduce both variance and bias.
 * Conversely, Bagging does not overfit, while Boosting can overfit easily, by slicing space very thin around every point.
