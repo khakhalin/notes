@@ -1,7 +1,10 @@
 
-# Zettelkasten — How One German Scholar Was So Freakishly Productive
-#blog #lifehack
+# Zettelkasten
 
+#lifehack #tools
+
+## How One German Scholar Was So Freakishly Productive
+Clear 2019
 https://writingcooperative.com/zettelkasten-how-one-german-scholar-was-so-freakishly-productive-997e4e0ca125
 
 A good description of how zettelkasten works. The main idea is linking cards. So, to paraphrase, **the rules** seem to be:
@@ -16,7 +19,7 @@ Some **asides and consequences**:
 * In Zettlr (as in paper card version) direct (outcoming links) are clearly visible, while incoming links are hidden. Still, unlike for paper notes, in Zettlr you can fetchc the name of this card, and put it in the search box. You'll get all cards linking this card.
 * My current system of naming cards after papers (author-year-topic) is actually still not complete Zettelkasten, as it retains (and follows) the desire to keep control of card readability. The original system by Luhmann allowed him to let go of this fear of control, and just inject information into the system, relying on the power of links.
 
-### Extra references and notes:
+## References about Luhmann
 
 * **Archive of Luhmann's cards:** https://niklas-luhmann-archiv.de/bestand/zettelkasten/zettel/ZK_1_NB_1_1_V
 
@@ -33,8 +36,9 @@ This note, for example, would have been represented by several linearly linked n
 
 > Which implies that maybe my current system has everything he had. The general outline and structure of the repo is analogous to his filing system; longer files that grow out of a seed of an individual card are analogous to his chains of linked cards, and tags are like keywords. Only better. And I can look for things. And I can search incoming links. And I can improve my cards much more easily! Yay!
 
-### Some writing by Luhmann himself: 
-**Communicating with Slip Boxes**:
+# Some writing by Luhmann himself
+
+## Communicating with Slip Boxes
 http://luhmann.surge.sh/communicating-with-slip-boxes
 
 For this system to work, it should feel like a communication. For it to feel like a communiation, it should be different (have a different schema) than whatever you have in your mind as you use the Zettelkasten, or try to use it to write. There has to be an element of surprise. 
@@ -49,7 +53,7 @@ A funny quotation: "If you wish to educate a partner in communication, it will b
 
 > Still unclear, from this short article, how he wrote after all. Did he start with an outline, and then followed it, going on tangents through the links?
 
-### Some more information on how Luhmann wrote
+## More info on how Luhmann wrote
 https://mindyourwriting.wordpress.com/2015/09/10/how-famous-researchers-work-niklas-luhmann/
 
 It seems that, when it was time for him to write the book, he would just start creating an outline, linking it to cards. He spent most of his time on that: linking cards, and maybe improving cards themselves, and not working with any kind of "final text". And then he would just produce a text; and he woudn't revise it.

@@ -30,19 +30,19 @@ Alternatively, try to estimate P(M) somehow; say, if a model has a set of parame
 
 > But then they say something that I don't understand; how with different models having different complexity somehow everything would break. Why again? ESL p290
 
-**Stacked generalization** or **Stacking**: Say you have a way of building various models f_m, and training each of them on a dataset X. Models f_m may belong to the same class, or to different classes, but the important part is that they sufficiently different; that is, they are defined both by the training set X, and by some hyperparameters that come with the model itself. So while each model is a function of a dataset, f(X), two models f_m1(X) and f_m2(X) should still be different.
+**Stacked generalization** or **Stacking**: Say you have a way of building various models f_m, and training each of them on a dataset X. Models f_m may belong to the same class, or to different classes, but it is important that they are sufficiently different: that is, they need to be defined both by the training set X, and by some hyperparameters that come with the model itself. So while each model is a function of a dataset, f(X), two models f_m1(X) and f_m2(X) should still be different.
 
-Consider training each model f_m() on a dataset  X minus observation xi. It creates a family of predictors $f_m^{-i}(x)$ for each model class f_m(), providing a good way of assessing the accuracy of m-type models f_m() via cross-validation: just predict y_i by each f^{-i}, and sum all errors. But if instead of picking the best model, we want to pick the best linear combination of these models, we shoudl just look for an optimal vector of weights W, such that
-$\sum_i \big( y_i - \sum_m w_m f_m^{-i}(x_i)\big)^2$ is minimal. It also helps to constrain W to w_i>0 ∀i and ∑w_i = 1, as it turns it into a quadratic problem.
+Consider training each model f_m() on a dataset  X minus observation xi. It creates a family of predictors $f_m^{-i}(x)$ for each model class f_m(), providing a good way of assessing the accuracy of m-type models f_m() via cross-validation: just predict y_i by each f^{-i}, and sum all errors. But instead of just picking the best model, we will build the best linear combination of all these models, by finding an optimal vector of weights w, so that
+$\sum_i \big( y_i - \sum_m w_m f_m^{-i}(x_i)\big)^2$ is minimal. In other words, we find a set of coefficients w, so that the linear combination of all f_m gives the best total cross-validation across all "remove one x_i". It also helps to constrain w to w_i>0 ∀i and ∑w_i = 1, as it turns it into a quadratic problem. That's called "stacking".
 
 Refs:
 * ESL p282-290
 
 # Bumping
 
-A way to find better models by randomly moving in model space, avoiding local minima. Train a model on subsamples of X, test on full X, pick the best. As in this case optimization is kinda shifted towards the end, here it's better to use really undersampled training sets. Say, for a **XOR** case, if you test enough small subsamples, at least one of them will probably split the data quite decently.
+A way to find better models by randomly moving in model space, avoiding local minima. Train a bunch of models on different subsamples of X, then test each on full X, and pick the best. As in this case optimization is kinda shifted towards the end, it's probably better to use quite undersampled training sets. Say, for a **XOR** case, if you test enough small subsamples, at least one of them will probably split the data decently, even though training on a full dataset may be hopeless for many types of models.
 
-It's important that all models compared by bumping are similar in their complexity (for trees, same number of terminal nodes).
+It's important to keep all models in  the comparison group similar in their complexity (for trees, same number of terminal nodes).
 
 # Boosting
 

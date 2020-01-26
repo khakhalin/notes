@@ -326,14 +326,15 @@ Arabshahi, F., Lu, Z., Singh, S., & Anandkumar, A. (2019). Memory Augmented Recu
 https://arxiv.org/abs/1911.01545
 
 # AEs, GANs, Generation
+#gan
+
+A Review on Generative Adversarial Networks: Algorithms, Theory, and Applications. Jie Gui, Zhenan Sun, Yonggang Wen, Dacheng Tao, Jieping Ye. 20 Jan 2020
+https://arxiv.org/abs/2001.06937
+Most recent review of the field.
 
 Oord, A. V. D., Dieleman, S., Zen, H., Simonyan, K., Vinyals, O., Graves, A., ... & Kavukcuoglu, K. (2016). Wavenet: A generative model for raw audio. arXiv preprint arXiv:1609.03499.
 https://arxiv.org/abs/1609.03499
 1.4k citations: famous really successful realtime audio generation network from Google DeepMind.
-
-#gan
-
-#todo: Find original Neurips GAN paper from 2016?
 
 Video tutorial on GANs from Ian Goodfellow (2016):
 https://www.youtube.com/watch?v=HGYYEUSm-0Q
@@ -372,6 +373,8 @@ They are trying to create some fancy mechanical structures, and instead of direc
 Makhzani, A. (2018). Implicit autoencoders. arXiv preprint arXiv:1805.09804.
 https://arxiv.org/abs/1805.09804
 Sort of GAN-like architecture that tries to optimize the latent space directly? Interesting, but hard to get from the abstract.
+
+Find original Neurips GAN paper from 2016?
 
 # Graphical
 Bacciu, D., Errica, F., Micheli, A., & Podda, M. (2019). A Gentle Introduction to Deep Learning for Graphs. arXiv preprint arXiv:1912.12693.
