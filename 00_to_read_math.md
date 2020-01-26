@@ -1,7 +1,17 @@
 # To-read: ML and AI
 
+#halfthere - a tag for papers that were added to the database, but that I haven't really read well. Papers to revisit!
+
+# Intros and top choices
+
 More info on decision trees, pruning
 https://towardsdatascience.com/the-complete-guide-to-decision-trees-28a4e3c7be14
+
+Try to get the gist of it, even if just to participate in the discussion. File, even if math turns to be harder than comfortable:
+Automatic Differentiation via Contour Integration
+Jan 16, 2020. Aidan Rocke
+https://keplerlounge.com/neural-computation/2020/01/16/complex-auto-diff.html
+Aidan claims tha this math somehow helps to explain calculations in a dendritic tree, but it has lots of calculus, and seems like something one has to actually think about. It like has math and stuff! Complex functions, poles, and what not.
 
 Reflections on Innateness in Machine Learning
 Thomas G. Dietterich. Mar 6, 2018.
@@ -154,6 +164,10 @@ https://arxiv.org/abs/1907.08549
 They trained the same network (or similar networks) thousands of times, and checked how similar the profiles are. Kind of related to both O'Leary neuro idea, and the ticket hypothesis. An interesting follow-up would be something like performance outside of the preferred distributions, and how this performance (individuality?) is distributed itself, and whether some architectures tend to produce clusters rather then smooth distributions (personality?)
 Tweetprint:
 https://twitter.com/SussilloDavid/status/1153427790672171009
+
+Ramanujan, V., Wortsman, M., Kembhavi, A., Farhadi, A., & Rastegari, M. (2019). What's Hidden in a Randomly Weighted Neural Network?. arXiv preprint arXiv:1911.13299.
+https://arxiv.org/pdf/1911.13299.pdf
+They do some math, and some modeling, trying to estimate how easy it is to find a subnetwork, within a randomly weighted wide network, that would work great without any training. A combination of ticket story, and weight-agnostic networks (see [[Gaier2019agnostic]]). Allen institute.
 
 #distillation #transfer
 
@@ -431,6 +445,10 @@ Said to be a really nicely written paper, seminal, good examples, and with 13k c
 
 Do language network learn what they think they learn?
 https://thegradient.pub/nlps-clever-hans-moment-has-arrived/
+
+Sinz, F. H., Pitkow, X., Reimer, J., Bethge, M., & Tolias, A. S. (2019). Engineering a less artificial intelligence. Neuron, 103(6), 967-979.
+http://xaqlab.com/wp-content/uploads/2019/09/LessArtificialIntelligence.pdf
+Review / Opinion piece on differences between intelligence as it operates in biological brains, and what modern AI offers. Very neuro-style, but it's more about AI than about neuro, so I file it here.
 
 van Rooij, I., Wright, C. D., Kwisthout, J., & Wareham, T. (2018). Rational analysis, intractability, and the prospects of ‘as if’-explanations. Synthese, 195(2), 491-510.
 On how humans (and thus AI) could handle intractable problems.

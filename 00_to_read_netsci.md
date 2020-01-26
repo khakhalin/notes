@@ -29,7 +29,10 @@ da Fontoura Costa, L. (2018). What is a Complex Network?(CDT-2).
 [ResearchGate link](https://www.researchgate.net/profile/Luciano_Da_F_Costa/publication/324312765_What_is_a_Complex_Network_CDT-2/links/5aca49ba4585151e80a91abd/What-is-a-Complex-Network-CDT-2.pdf)
 Hmm. A very short illustrated mini-review, and the topic is good, but is it a good paper? Check.
 
-# Automata on networks
+# Processes on networks
+
+Watts, D. J., & Strogatz, S. H. (1998). Collective dynamics of ‘small-world’networks. nature, 393(6684), 440.
+Seminal, very short (2 pages) work. 40k refs!! That's because this particular type of rewiring became known as the **Watts-Strogatz model**, and everyone who used it, referenced this original paper.
 
 R. Pastor-Satorras, C. Castellano, P. Van Mieghem, and A. Vespignani. Epidemic processes
 in complex networks. Rev. Mod. Phys., 87:925–979, 2015.

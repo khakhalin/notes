@@ -79,9 +79,13 @@ Job-search specific materials:
 * [Scientific visualization with matplotlib](https://github.com/rougier/scientific-visualization-book) - an open-source book project in the works that hadn't been released yet, but the previews look lovely
 
 # Temp teaching links
-* [A collection of Jupyter models on topics of complexity](https://github.com/hsayama/PyCX)
-* Think complexity: http://greenteapress.com/complexity2/thinkcomplexity2.pdf
-* Think Python (to send out): https://greenteapress.com/wp/think-python-2e/
-* Some notes on how to install Python (Anaconda + Jupyter): https://github.com/AllenDowney/ModSimPy
+Three books:
+* Think Python: https://greenteapress.com/wp/think-python-2e/
+* Think Complexity: http://greenteapress.com/complexity2/thinkcomplexity2.pdf
+* Modeling and simulation in Python: https://greenteapress.com/wp/modsimpy/
+
+Other materials:
+* An introduction into the logic (not formulas or programming, but the ideas) of agent-based modeing (a short chapter by Nigel Gilbert): http://epubs.surrey.ac.uk/1580/1/fulltext.pdf
 * [Good exploration of logistic map and chaos](https://geoffboeing.com/2015/03/chaos-theory-logistic-map/)
+* [A collection of Jupyter models on topics of complexity](https://github.com/hsayama/PyCX)
 

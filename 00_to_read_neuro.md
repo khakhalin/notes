@@ -158,11 +158,6 @@ C Ebner, C Clopath, P Jedlicka, H Cuntz - Cell Reports, 2019
 https://www.sciencedirect.com/science/article/pii/S2211124719315591
 Compartments, NMDA, all sorts of STDP stuff.
 
-Automatic Differentiation via Contour Integration
-Jan 16, 2020. Aidan Rocke
-https://keplerlounge.com/neural-computation/2020/01/16/complex-auto-diff.html
-Aidan claims tha this math somehow helps to explain calculations in a dendritic tree, but it has lots of calculus, and seems like something one has to actually think about. It like has math and stuff! Complex functions, poles, and what not.
-
 # Credit assignment
 
 Bellec, G., Scherr, F., Subramoney, A., Hajek, E., Salaj, D., Legenstein, R., & Maass, W. (2019). A solution to the learning dilemma for recurrent networks of spiking neurons. bioRxiv, 738385.
