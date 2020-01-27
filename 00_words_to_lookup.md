@@ -19,7 +19,9 @@ Parked parts that need to be revisited:
 Classic ML and friends
 * gradient boosting
 * the difference between tSNE and UMAP
-* that one about types of DL optimizers
+* what's the difference between hash-sets, hash-maps, and hash-tables?
+* radix-sort 
+* that visual blog post about types of DL optimizers
 * make sure all graph algorithms are covered
 * Hungarian algorithm
 * Bloom filter

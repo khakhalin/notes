@@ -116,3 +116,8 @@ About collective self-organized behaviors. Can be useful for the modeling class 
 Kendall, J. D., & Kumar, S. The building blocks of a brain-inspired computer. Applied Physics Reviews, 7(1), 011305.
 https://aip.scitation.org/doi/10.1063/1.5129306
 14 January 2020. A rather long review on the next steps in neuromorhic computing. With a review of what aspects of the brain are reflected, which ones aren't, and what to do with it?
+
+# Misc
+
+On teaching math
+https://www.uni-muenster.de/Physik.TP/~munsteg/arnold.html
