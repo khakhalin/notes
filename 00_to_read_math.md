@@ -25,13 +25,16 @@ An overview of gradient descent optimization algorithms.  19 Jan 2016 (updated i
 https://ruder.io/optimizing-gradient-descent/
 Adagrad, adam, and others like that.
 
-Neural Reparameterization Improves Structural Optimization, by Sam Greydanus
-https://greydanus.github.io/2019/12/15/neural-reparam/
-A really cool post on Neural reparameterization (ANN as a way to optimize search for new structures; like ANNs in the middle of a formal algorithms; the one with bridges for example - super-fun!)
-
 Rahaman, N., Baratin, A., Arpit, D., Draxler, F., Lin, M., Hamprecht, F. A., ... & Courville, A. (2018). On the spectral bias of neural networks. arXiv preprint arXiv:1806.08734.
 https://arxiv.org/abs/1806.08734
 On what neural network can encode easily - seems to be a very useful read, potentially.
+
+Challenging Common Deep Learning Conventions – Part 1: Rethinking Layer-wise Feature Amounts in Convolutional Neural Network Architectures. Martin Mundt. Jan 2020
+http://martin-mundt.com/rethinking-cnn-feature-amounts/
+
+Neural Reparameterization Improves Structural Optimization, by Sam Greydanus
+https://greydanus.github.io/2019/12/15/neural-reparam/
+A really cool post on Neural reparameterization (ANN as a way to optimize search for new structures; like ANNs in the middle of a formal algorithms; the one with bridges for example - super-fun!)
 
 He, K., Zhang, X., Ren, S., & Sun, J. (2016). Deep residual learning for image recognition. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 770-778).
 http://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf
@@ -257,11 +260,12 @@ https://arxiv.org/abs/1905.03670
 
 # Exploration, curiosity, RL
 
-Meire Fortunato, Mohammad Gheshlaghi Azar, Bilal Piot, Jacob Menick, Ian Osband, Alex Graves, Vlad Mnih, Remi Munos, Demis Hassabis, Olivier Pietquin, et al. Noisy networks for exploration. arXiv preprint arXiv:1706.10295, 2017
-A weak (not good enough) way to add exploration to AI playing videogames
-
 Ortega, P. A., Wang, J. X., Rowland, M., Genewein, T., Kurth-Nelson, Z., Pascanu, R., ... & Jayakumar, S. M. (2019). Meta-learning of Sequential Strategies. arXiv preprint arXiv:1905.03030.
 https://arxiv.org/pdf/1905.03030.pdf
+
+Meire Fortunato, Mohammad Gheshlaghi Azar, Bilal Piot, Jacob Menick, Ian Osband, Alex Graves, Vlad Mnih, Remi Munos, Demis Hassabis, Olivier Pietquin, et al. Noisy networks for exploration. arXiv preprint arXiv:1706.10295, 2017
+https://arxiv.org/pdf/1706.10295.pdf
+A weak (not good enough?) way to add exploration to AI playing videogames, by target-injecting noise into the network (?). Sometimes (?) elevates the performance from "sub-human to super-human" level (funny turn of a phrase).
 
 Lázaro-Gredilla, M., Lin, D., Guntupalli, J. S., & George, D. (2018). Beyond imitation: Zero-shot task transfer on robots by learning concepts as cognitive programs. arXiv preprint arXiv:1812.02788.
 https://robotics.sciencemag.org/content/4/26/eaav3150.full?ijkey=9p/p9D23WW2Ek&keytype=ref&siteid=robotics
@@ -302,6 +306,12 @@ Lottery tickets in RL domain.
 ## RNNs, Attention
 #attention
 
+Kitaev, N., Kaiser, Ł., & Levskaya, A. (2020). Reformer: The Efficient Transformer. arXiv preprint arXiv:2001.04451.
+https://arxiv.org/pdf/2001.04451.pdf
+Potentially a newer link:
+https://openreview.net/forum?id=rkgNKkHtvB
+Google research. Claim that somehow by two changes in logic they improved [[transformers]] so much that now they would be O(L log L) instead of O(L²) efficient, which is like a big deal.
+
 https://distill.pub/2019/memorization-in-rnns/
 How LSTM networks remember text: a visual intro.
 
@@ -313,17 +323,13 @@ Jaderberg, M., Simonyan, K., & Zisserman, A. (2015). Spatial transformer network
 https://arxiv.org/pdf/1506.02025.pdf
 2000 citations. Seems important.
 
-Compressive Transformers for Long-Range Sequence Modelling
-by Jack W. Rae, Anna Potapenko, Siddhant M. Jayakumar, Timothy P. Lillicrap (at DeepMind)
-https://arxiv.org/abs/1911.05507
-
 Single Headed Attention RNN: Stop Thinking With Your Head. S Merity. (2019)
 https://arxiv.org/abs/1911.11423
 He tried to diversify the field by deliberately sticking to a non-mainstream approach (something that is NOT transformers), and got good performance. Also the writing is wild.
 
-Kitaev, N., Kaiser, Ł., & Levskaya, A. (2020). Reformer: The Efficient Transformer. arXiv preprint arXiv:2001.04451.
-https://arxiv.org/abs/2001.04451v1
-Claim that somehow by two changes in logic they improved [[transformers]] so much that now they would be O(L log L) instead of O(L²) efficient, which is like a big deal.
+Yang, Y., Sautière, G., Ryu, J. J., & Cohen, T. S. (2019). Feedback Recurrent AutoEncoder. arXiv preprint arXiv:1911.04018.
+https://arxiv.org/abs/1911.04018
+Qualcomm AI Research.
 
 On the Relationship between Self-Attention and Convolutional Layers (2020)
 Jean-Baptiste Cordonnier, Andreas Loukas, Martin Jaggi
@@ -341,12 +347,20 @@ An interesting tiny paper where all they did, I think, is play with the sequence
 Arabshahi, F., Lu, Z., Singh, S., & Anandkumar, A. (2019). Memory Augmented Recursive Neural Networks. arXiv preprint arXiv:1911.01545.
 https://arxiv.org/abs/1911.01545
 
+Compressive Transformers for Long-Range Sequence Modelling
+by Jack W. Rae, Anna Potapenko, Siddhant M. Jayakumar, Timothy P. Lillicrap (at DeepMind)
+https://arxiv.org/abs/1911.05507
+
 # AEs, GANs, Generation
 #gan
 
 A Review on Generative Adversarial Networks: Algorithms, Theory, and Applications. Jie Gui, Zhenan Sun, Yonggang Wen, Dacheng Tao, Jieping Ye. 20 Jan 2020
 https://arxiv.org/abs/2001.06937
 Most recent review of the field.
+
+PCGRL: Procedural Content Generation via Reinforcement Learning. Ahmed Khalifa, Philip Bontrager, Sam Earle, Julian Togelius. 24 Jan 2020.
+https://arxiv.org/abs/2001.09212
+Independent researchers. Treat game level generation as a "game"; then try 3 different approaches (?) to solve this game with Markovian processes and #rl.
 
 Oord, A. V. D., Dieleman, S., Zen, H., Simonyan, K., Vinyals, O., Graves, A., ... & Kavukcuoglu, K. (2016). Wavenet: A generative model for raw audio. arXiv preprint arXiv:1609.03499.
 https://arxiv.org/abs/1609.03499
