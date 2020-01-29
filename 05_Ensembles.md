@@ -75,27 +75,26 @@ Refs: [Akash Desarda](https://towardsdatascience.com/understanding-adaboost-2f94
 
 # Gradient Boosting
 
-**Gradient Boosting Machine**, or **GBM**. Work in problems where the output is numerical, and each decision tree outputs two values for its split. Later outputs of all trees are summed together, producing the output of the ensemble.
+**Gradient Boosting Machine**, or **GBM**. Work in problems where the output is numerical rather than categorical, and each decision tree outputs two values (levels) for its split. Later outputs of all trees are summed together, producing the output of the ensemble. These splits with 2 outputs are called **regression trees**, or, in this case, more specifically, **regression tree stumps** (as each of them is just 1 split).
 
-New trees, strongly constrained in terms of their complexity (we want them simple), are added in a greedy manner, based on the **purity score**: [[gini]].
+TODO: LOOK UP regression tree stumps #todo
 
-Instead of assigning higher weights to misclassified elements, we introduce a differentiable loss function, and assign higher weights to elements that have most effect on this loss function, in terms of its gradient in respect to .… **UNCLEAR!!!**
+In this case, instead of assigning higher weights to misclassified elements (as there are no misclassified elements, there are only greater and smaller errors), we introduce a differentiable loss function (usually L2, if there are no outliers, or L1 if there are some). Then, we assign higher weights to elements that have most effect on this loss function, in terms of its gradient in respect to small changes in this element's value. _Is it true?_
 
-#todo
+Essentially, with GB we are performing gradient descent on this multi-parameter function, defined by all the splits. _What does it mean?_ #todo
 
-https://medium.com/mlreview/gradient-boosting-from-scratch-1e317ae4587d
+As a greedy algorithm, GB is prone to overfitting, but can be **regularized**. For example, stochastic GB only considers part of the data for each decision tree (kinda like bagging?). Unlike, for example, random forests requires hyperparameter tuning.
 
-> What is it that I don't get here: 1) Are we only talking about regression, or about classification as well? Sometimes (say, when they talk about custom losses) it feels like classification may also be covered, but then why insisting that these are regression trees that return real numbers?  2) How come the function is differentiable if it depends on splitting, and thus has to be discontinuous, as flipping an assignment for a point would give this function a jump? 3) What it is exactly that we are changing, for which we're calculating the gradient? 4) How do we calculate this gradient in practice? 5) How do we use it in practice?
+Can (and often should) be used with custom loss functions: for example, weighing false-positives and false-negatives (undershoots and overshoots) very differently.
 
-As a greedy algorithm, GB is prone to overfitting, but can be **regularized**. Stochastic GB only considers part of the data for each decision tree. 
-
-Can (and often should) be used with custom loss functions: for example, weighing false-positives and false-negatives (undershoots and overshoots) very differently (see Grover 2018 below).
-
-References:
-* [GB from scratch](https://medium.com/mlreview/gradient-boosting-from-scratch-1e317ae4587d) by Prince Grover
+**References:**
+* [How to explain gradient boosting](https://explained.ai/gradient-boosting/index.html), Parr, Howard. That's a good one.
 * [Custom loss functions for Gradient Boosting](https://towardsdatascience.com/custom-loss-functions-for-gradient-boosting-f79c1b40466d), Prince Grover, 2018
-* [Gentle Introduction to the Gradient Boosting Algorithm](https://machinelearningmastery.com/gentle-introduction-gradient-boosting-algorithm-machine-learning/), Jason Brownlee, 2016. Confusing.
-* [Understanding Gradient Boosting Machines](https://towardsdatascience.com/understanding-gradient-boosting-machines-9be756fe76ab),  Harshdeep Singh, 2018. Confusing.
+* https://statweb.stanford.edu/~jhf/ftp/trebst.pdf - a technical paper about GB
+* A bunch of confusing explanations that I either didn't like, or that explain boosting in general rather than gradient boosting specifically:
+    * [GB from scratch](https://medium.com/mlreview/gradient-boosting-from-scratch-1e317ae4587d)
+    * [Gentle Introduction to the Gradient Boosting Algorithm](https://machinelearningmastery.com/gentle-introduction-gradient-boosting-algorithm-machine-learning/)
+    * [Understanding Gradient Boosting Machines](https://towardsdatascience.com/understanding-gradient-boosting-machines-9be756fe76ab)
 
 ## Bagging/Boosting comparison
 
