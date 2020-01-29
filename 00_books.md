@@ -28,6 +28,7 @@ https://github.com/chiphuyen/machine-learning-systems-design
 * Programming in Python: Fluent Python, by Luciano Ramalho (no online version)
 * MML (Mathematics for Machine Learning) by M.P. Deisenroth: [full pdf](https://mml-book.github.io/)
 * Hands-On M with Scikit-Learn, Keras, and TensorFlow, by Aurélien Géron. Python obviously. [All labs on github](https://github.com/ageron/handson-ml2), but no full version of the book online.
+* Speech and Language Processing by D. Jurafsky & JH Martin ([draft pdf](https://web.stanford.edu/~jurafsky/slp3/))
 
 Second priority books:
 * On Programming Well, by Robert C. Martin (no online version)

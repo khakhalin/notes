@@ -76,7 +76,7 @@ In the original paper, for the final model, they averaged last 20 checkpoints. _
 
 For machine translation, they actually don't just apply the model, but use a thing called **beam search**: at each point they don't just take the max probability word for each word, but select first 4 options, and for each assume that it was taken, and re-run the model, generating a tree of solutions (depth 50, I think?). Finally, pick the most probable total solution out of all these solutions. And there's a punishment on length. 
 
->  So I don't think they have to explore the whole tree to full depth; I think they truncate branches if they exceed combined level of total inmprobability. Not sure how it is done in practice though. There's a link ("ref 31") below that explains beam search, apparently.
+>  So I don't think they explore the whole tree to full depth; I think they truncate branches if they exceed combined level of total inprobability. But not sure how it was done in practice. There's a link ("ref 31") below that explains beam search, apparently.
 
 # Open questions I still have
 * How many words do they process at once? What's the size of the bag? And why cannot I find this information in the original paper?

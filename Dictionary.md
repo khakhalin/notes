@@ -76,6 +76,10 @@ Redshift
 
 **Kubernetes** - Open-source system for deploying applications on a cloud. Originally developed by Google. Operates **pods** that each contains several **containers**, to be placed together, within the same localhost. Pods can communicate with each other via pod IP.
 
+**LDA** 
+1. (text): Latent Dirichlet Allocation
+2. (ml): Linear Discriminant Analysis
+
 **loess** (stats): Locally Estimated Scatterplot Smoothing, aka Savitzky-Golay filter. See [[smoothing]]
 
 **MapReduce** (dev): programming model for parallel computing; a type of split-apply-combine strategy. Essentially, seems to define two functions, one function on splittable tasks (something like `for each a in List`) that analyzes its `a` and sends answers out; and another one that catches answers and combines them all into one answer.
@@ -83,6 +87,8 @@ Redshift
 **MCMC** (ml) Markov Chain Monte-Carlo. See [[13_MC]].
 
 # N
+
+**NMF** (text): Non-negative Matrix Factorization, V=WH + U, where W and H are non-negative, and also typically V is alot×alot, but W is alot×little, and H is little×alot (similar to other dimensionality reduction techniques). Often used with text analysis.
 
 **noSQL** - a general word for non-relational [[database]]s, not tabular-based, good for realtime big data. May work with documents, key-values, wide-columns, graphs. Have lower guarantees on consistency (stale reads: updates don't update immediately), which can lead to data loss. [wiki](https://en.wikipedia.org/wiki/NoSQL)
 
@@ -119,10 +125,12 @@ Redshift
 
 **Tehnical debt** (development) picking an easy (quick to implement) but inherently limiting solution, even though statistically every limiting decision now may have to be reingeneered (scaled up) later.
 
-**Zero-inflated models** (stats): models that are biased towards observations of zeros; for example a bimodal switch between active and inactive states, with inactive ==0, and active generating a Poisson process. [ref](https://en.wikipedia.org/wiki/Zero-inflated_model)
+**Topic modeling** (text): unsupervised classification of pieces of text into different topics, similar to k-means clustering for numbers. Typically uses LDA or NMF. ([ref](https://medium.com/ml2vec/topic-modeling-is-an-unsupervised-learning-approach-to-clustering-documents-to-discover-topics-fdfbf30e27df))
 
 # UVW
 
 **Wide column store** (databases): Imagine a table, except that different rows may have different columns (number, names, types). 
 
 # XYZ
+
+**Zero-inflated models** (stats): models that are biased towards observations of zeros; for example a bimodal switch between active and inactive states, with inactive ==0, and active generating a Poisson process. [ref](https://en.wikipedia.org/wiki/Zero-inflated_model)

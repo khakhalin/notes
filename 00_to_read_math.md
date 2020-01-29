@@ -1,8 +1,11 @@
 # To-read: ML and AI
 
-#halfthere - a tag for papers that were added to the database, but that I haven't really read well. Papers to revisit!
+#halfthere - a tag for papers that were added to the database, but that I haven't really read well. Potentially, papers to revisit!
 
 # Intros and top choices
+
+* Move old  recommendatinos from Sven down here
+* Double-check that all Eric's recommendations are here
 
 More info on decision trees, pruning
 https://towardsdatascience.com/the-complete-guide-to-decision-trees-28a4e3c7be14

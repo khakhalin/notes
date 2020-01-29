@@ -13,13 +13,11 @@ Parked parts that need to be revisited:
 
 # Words and topics to look up
 
-* Move old recommendatinos from Sven down here
-* Make sure all Eric's recommendations are here
-
 Classic ML and friends
 * gradient boosting
 * the difference between tSNE and UMAP
 * what's the difference between hash-sets, hash-maps, and hash-tables?
+* Latent Dirichlet Allocation ([ref](https://towardsdatascience.com/end-to-end-topic-modeling-in-python-latent-dirichlet-allocation-lda-35ce4ed6b3e0))
 * radix-sort 
 * that visual blog post about types of DL optimizers
 * make sure all graph algorithms are covered
@@ -38,6 +36,7 @@ Classic ML and friends
 * Resampling techniques: SMOTE, isotonic regression, Platt scaling
 * Principal variables
 * Mahalanobis distance
+* Particle filter
 
 Practical stuff:
 * Checkpoints
