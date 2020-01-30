@@ -1,10 +1,10 @@
 # Linear algebra and networks
+#net
 
+## Graph representations
 **Adjacency matrix** (obv.). For a directed graph powers of A (A^k) give the number of paths length k that lead from node i to j.
 
-**Laplacian matrix**: L = D-A where A = adjacency, D = degree matrix (diagonal, with 0 at i≠j and d_ii = degree of i_th node)
-
-For oriented graphs: apparently, 2 different Laplacians, depending on whether you choose in-degree or out-degree? TBC
+**Laplacian matrix**: L = D-A where A = adjacency, D = degree matrix (diagonal, with 0 at i≠j and d_ii = degree of i_th node). For oriented graphs, apparently, there exist two different Laplacians, depending on whether you choose to work with in-degree or out-degree? _What does it mean in practice?_
 
 **Incidence matrix**: M(e,i) = 1 if edge e goes i->j, -1 if edge e goes  j->i exists, 0 for all other cases. Not square: E rows (number of edges), N columns (number of vertices).
 
@@ -20,8 +20,8 @@ Dirichlet sum seems to be related to Laplacian quadratic form, but for now I'm n
 
 ## Other weird Laplacians
 
-According to Wikipedia, there are like 6 alterenative formulations for a Laplasian, but let's park it for now.
+> According to Wikipedia, there are like 6 alterenative formulations for a Laplacian, but let's park it for now.
 
-## Spectra of A and L
+## Graph Spectra
 
 #todo

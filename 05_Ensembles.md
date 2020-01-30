@@ -85,7 +85,7 @@ To find the best split (best model improvement) at each step, we need to first i
 
 Often, each impovement f_k() also isn't applied in full, but is multiplied by a coefficient η < 1 (typically 0.5 to 1.0), called the **learning rate**. This smoothens the descent.
 
-The first (or rather, 0th) optimization step is to calculate the mean of all data (for L2 loss), or its median (for L1).
+The first (or rather 0th) optimization step is to calculate the mean of all data (for L2 loss), or its median (for L1).
 
 As GB is a greedy algorithm, it is prone to overfitting, and so requires **hyperparameter tuning** of the maximal number of stages M, and learning rate η. GB can also be **regularized**: for example, stochastic GB only considers a part of the data for each decision tree (kinda like in bagging). It is also possible to use GB with custom loss functions: for example, one can put more weight in false-positives compared to false-negatives, or ther other way around.
 
