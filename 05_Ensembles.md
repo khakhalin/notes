@@ -53,14 +53,14 @@ It's important to keep all models in  the comparison group similar in their comp
 Boosting uses simplest decision trees possible:  single split into 2 categories, aka **decision stumps**. But with every next group of trees, we increase the weights for those elements that weren't classified correctly by the previous generation of classifiers (starting with equal weights at the beginning of the process, for the first tree). These weights may either be explicitly included in the error calculation, or be used as probabilities of each data point  appearing in next training subset (the result is the same). At the end, predictions are made by **weighted majority rule**: weighted average by the **accuracy of individual trees**, followed by argmax.
 
 The most popular, archetypical approach: **AdaBoost**, aka **Adaptive Boosting**. For a binary discrete case:
-1. Start with all points x_i having identical weights {W}. ∑wi = 1, so w_i = 1/n.
-2. For each available coordinate, find the best split (aka stump), with smallest total error E = ∑wi ϵi, where ϵi = 1∙(h(xi)==yi).
-3. Across all coordinates, find a split that minimizes [[gini]] index for this split. For all loops after 1st (when weights are different), either use weighted gini index, or randomly draw points with p ∝ w (with repetition, keeping the total number of points about constant).
-4. Calculate the weight of this stump as α = ½ log((1−E)/E) . This formula →+∞ for E→0, →-∞ for E→1, and 0 around chance, when E=1-E. In practice, to avoid ∞, a tiny ε is added both to both numerator and denominator.
-5. Increase the weights of misclassified samples: w_i ← w_i ∙ exp(α); decrease weights of correctly classified samples by multiplying by exp(−α); then normalize to ∑w = 1.
+1. Start with all points x_i having identical weights {W}. ∑w_i = 1, so w_i = 1/n.
+2. For each available coordinate, find the best split (aka stump), with smallest total error E = ∑w_i ϵ_i, where ϵ_i = 1∙(h(x_i)==y_i).
+3. Across all coordinates, find a split that minimizes [[gini]] index for this split. For all loops after the 1st (for all loops when weights are different), either use **weighted gini index**, or randomly resample points with draw probability P ∝ w (draw with repetition, keeping the total number of points considered at each split ~constant).
+4. Calculate the weight of this stump as α = ½ log((1−E)/E) . This formula →+∞ for E→0 (perfect split), →-∞ for E→1 (perfectly erroneous split), and ~0 for splits that perform near chance level, when E=1-E, and so we get log(1). In practice, to avoid ∞, a tiny ε is added to both numerator and denominator of the fraction under the log().
+5. Increase the weights of misclassified samples: w_i ← w_i ∙ exp(α); decrease the weights of correctly classified samples by multiplying them by exp(−α); then normalize all weights to ∑w = 1.
 6. Go to step 2.
 
-> Is it true that in practice randomly resampling points is better than using a weighted formula? Nobody says it openly, but if it weren't the case, why would people tell this whole resampling story?
+> Is it true that in practice randomly resampling points is better than using a weighted formula? Nobody says it openly, but if it weren't the case, why would people repeat this whole resampling story in each tutorial?
 
 7. Once everything is classified, rejects trees with accuracy less than 50%. _Not all descriptions mention that._
 8. Produce an average of tree outputs, weighted by α .
@@ -69,26 +69,28 @@ Because each split is a single plane (line), || to all other variables, the deci
 
 For multi-class classification, either create lots of binary classifiers (each class against all others), or encode each class as a superposition of several binary "features" that may be present or absent (say, bunnies are cute and jumpy, cats are cute but not jumpy; crickets are jumpy but not cute etc.), then use AdaBoost to identify the presence of features ([ref](https://engineering.purdue.edu/kak/Tutorials/AdaBoost.pdf)).
 
-In many ways, AdaBoost goes against the conventional basis for classification: it doesn't try to build a good classifier (but instead uses a lot of crappy ones); it does not try to identify important variables, or isolate important features using dimentionality reduction (instead, thrives in this multi-var space).
+In many ways, AdaBoost goes against the conventional wisdom for classification: it doesn't try to build a good classifier (but instead uses a lot of crappy ones); it does not try to identify important variables, or isolate important features using dimentionality reduction (instead, it thrives in this high-D multi-variable space).
 
 Refs: [Akash Desarda](https://towardsdatascience.com/understanding-adaboost-2f94f22d5bfe); [wiki](https://en.wikipedia.org/wiki/AdaBoost); [Tommi Jaakkola](http://people.csail.mit.edu/dsontag/courses/ml12/slides/lecture13.pdf) lecture note; [Explaining AdaBoost](http://rob.schapire.net/papers/explaining-adaboost.pdf) by Robert Schapire; [YouTube video by StatQuest](https://www.youtube.com/watch?v=LsK-xG1cLYA) (good); [Slides by Avinash Kak, Purdue](https://engineering.purdue.edu/kak/Tutorials/AdaBoost.pdf) (very good).
 
 # Gradient Boosting
 
-**Gradient Boosting Machine**, or **GBM**. Work in problems where the output is numerical rather than categorical, and each decision tree outputs two values (levels) for its split. Later outputs of all trees are summed together, producing the output of the ensemble. These splits with 2 outputs are called **regression trees**, or, in this case, more specifically, **regression tree stumps** (as each of them is just 1 split).
+**Gradient Boosting Machines**, or **GBM**, work in problems where the output is numerical rather than categorical. GB recursively approximates Y as a series of models {F_k], with each next model F_k  improved over the previous one: F_k = F_k-1 + f_k(x), where f_k() is some sort of weak learner. The basic algorithm, therefore, is at each step to iteratively approximate the difference between Y and the previous best model F_k (aka the residual) with a new function f_k(x).
 
-TODO: LOOK UP regression tree stumps #todo
+In practice, the most popular type of weak learners f() for GB is a **regression tree**, or more precisely a **regression tree stump**: the simplest decision tree that consists of one basic split over one variable (one coordinate of X), and procudses two different values (levels) on each side of this split. Once the fitting procedure is over, all regression tree stumps are summed together, to produce the final output of the ensemble. 
 
-In this case, instead of assigning higher weights to misclassified elements (as there are no misclassified elements, there are only greater and smaller errors), we introduce a differentiable loss function (usually L2, if there are no outliers, or L1 if there are some). Then, we assign higher weights to elements that have most effect on this loss function, in terms of its gradient in respect to small changes in this element's value. _Is it true?_
+To find the best split (best model improvement) at each step, we need to first introduce a smooth differentiable loss function (usually L2, provided that there are no outliers, or L1 if outliers are common).  GB then performs a stepwise gradient descent to minimize this loss function. Depending on the function, descent can be performed in several different ways:
+* One, is to use f(x) to fit Y-F_k: a vector of differences between each y_i and its beast current estimation F_k(x_i), as described above. This leads to minimzation of L2.
+* Another approach is to fit sign(Y-F_k): some sort of Manhattan-style normalized direction towards the gradient. This leads to minimization of L1.
 
-Essentially, with GB we are performing gradient descent on this multi-parameter function, defined by all the splits. _What does it mean?_ #todo
+Often, each impovement f_k() also isn't applied in full, but is multiplied by a coefficient η < 1 (typically 0.5 to 1.0), called the **learning rate**. This smoothens the descent.
 
-As a greedy algorithm, GB is prone to overfitting, but can be **regularized**. For example, stochastic GB only considers part of the data for each decision tree (kinda like bagging?). Unlike, for example, random forests requires hyperparameter tuning.
+The first (or rather, 0th) optimization step is to calculate the mean of all data (for L2 loss), or its median (for L1).
 
-Can (and often should) be used with custom loss functions: for example, weighing false-positives and false-negatives (undershoots and overshoots) very differently.
+As GB is a greedy algorithm, it is prone to overfitting, and so requires **hyperparameter tuning** of the maximal number of stages M, and learning rate η. GB can also be **regularized**: for example, stochastic GB only considers a part of the data for each decision tree (kinda like in bagging). It is also possible to use GB with custom loss functions: for example, one can put more weight in false-positives compared to false-negatives, or ther other way around.
 
 **References:**
-* [How to explain gradient boosting](https://explained.ai/gradient-boosting/index.html), Parr, Howard. That's a good one.
+* [How to explain gradient boosting](https://explained.ai/gradient-boosting/index.html), Parr, Howard. Very good description!
 * [Custom loss functions for Gradient Boosting](https://towardsdatascience.com/custom-loss-functions-for-gradient-boosting-f79c1b40466d), Prince Grover, 2018
 * https://statweb.stanford.edu/~jhf/ftp/trebst.pdf - a technical paper about GB
 * A bunch of confusing explanations that I either didn't like, or that explain boosting in general rather than gradient boosting specifically:

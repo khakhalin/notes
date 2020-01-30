@@ -77,10 +77,12 @@ Redshift
 **Kubernetes** - Open-source system for deploying applications on a cloud. Originally developed by Google. Operates **pods** that each contains several **containers**, to be placed together, within the same localhost. Pods can communicate with each other via pod IP.
 
 **LDA** 
-1. (text): Latent Dirichlet Allocation
-2. (ml): Linear Discriminant Analysis
+1. (text): Latent Dirichlet Allocation (see [[10_Text]])
+2. (ml): Linear Discriminant Analysis (see [[04_Features]])
 
 **loess** (stats): Locally Estimated Scatterplot Smoothing, aka Savitzky-Golay filter. See [[smoothing]]
+
+**MAE** (ml): Mean Average Error, aka L1 loss.
 
 **MapReduce** (dev): programming model for parallel computing; a type of split-apply-combine strategy. Essentially, seems to define two functions, one function on splittable tasks (something like `for each a in List`) that analyzes its `a` and sends answers out; and another one that catches answers and combines them all into one answer.
 
@@ -90,7 +92,7 @@ Redshift
 
 **NMF** (text): Non-negative Matrix Factorization, V=WH + U, where W and H are non-negative, and also typically V is alot×alot, but W is alot×little, and H is little×alot (similar to other dimensionality reduction techniques). Often used with text analysis.
 
-**noSQL** - a general word for non-relational [[database]]s, not tabular-based, good for realtime big data. May work with documents, key-values, wide-columns, graphs. Have lower guarantees on consistency (stale reads: updates don't update immediately), which can lead to data loss. [wiki](https://en.wikipedia.org/wiki/NoSQL)
+**noSQL** - a general word for non-relational [[database]]s: not tabular-based, good for realtime big data. May work with documents, key-values, wide-columns, graphs. Have lower guarantees on consistency (stale reads: updates don't update immediately), which can lead to data loss. [wiki](https://en.wikipedia.org/wiki/NoSQL)
 
 # OPQR
 
