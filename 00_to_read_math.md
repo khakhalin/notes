@@ -100,6 +100,10 @@ A longish review (30 pages) on using ML to analyze programming code.
 
 # Why networks work?
 
+Saxe, A. M., Bansal, Y., Dapello, J., Advani, M., Kolchinsky, A., Tracey, B. D., & Cox, D. D. (2019). On the information bottleneck theory of deep learning. Journal of Statistical Mechanics: Theory and Experiment, 2019(12), 124020.
+https://iopscience.iop.org/article/10.1088/1742-5468/ab3985
+Seems to have struck a nerve (>100 citations in just one month!). And not that hard on math.
+
 Milne, T. (2019). Piecewise strong convexity of neural networks. In Advances in Neural Information Processing Systems (pp. 12953-12963).
 https://arxiv.org/abs/1810.12805
 
@@ -133,6 +137,11 @@ https://papers.nips.cc/paper/5484-do-deep-nets-really-need-to-be-deep.pdf
 Seems to be one of the original network distillation papers (800 refs)
 
 # Interpretability
+
+Golan, T., Raju, P. C., & Kriegeskorte, N. (2019). Controversial stimuli: pitting neural networks against each other as models of human recognition. arXiv preprint arXiv:1911.09288.
+https://arxiv.org/abs/1911.09288
+They played with MNIST, trained a bunch of models, and compared them. And also compared it all to humans. Also a nice twitter thread:
+https://twitter.com/TalGolanNeuro/status/1198394188481671168
 
 Gilboa, D., & Gur-Ari, G. (2019). Wider Networks Learn Better Features. arXiv preprint arXiv:1909.11572.
 https://arxiv.org/pdf/1909.11572.pdf
@@ -464,6 +473,10 @@ Said to be a really nicely written paper, seminal, good examples, and with 13k c
 
 Do language network learn what they think they learn?
 https://thegradient.pub/nlps-clever-hans-moment-has-arrived/
+
+Peterson, J. C., Battleday, R. M., Griffiths, T. L., & Russakovsky, O. (2019). Human uncertainty makes classification more robust. In Proceedings of the IEEE International Conference on Computer Vision (pp. 9617-9626).
+https://arxiv.org/abs/1908.07086
+On how categorization by humans (compareed to any single ANN) seems to benefit from uncertainty. Propose training on edge cases, which sounds like boosting. But also in the abstract (I haven't opened the paper yet) mention something abou increasing uncertainty (?) that sounds suprisingly as if meta-learning for harnessing uncertainty as a factor may help. Is it true, or is it just a turn of a phrase?
 
 Sinz, F. H., Pitkow, X., Reimer, J., Bethge, M., & Tolias, A. S. (2019). Engineering a less artificial intelligence. Neuron, 103(6), 967-979.
 http://xaqlab.com/wp-content/uploads/2019/09/LessArtificialIntelligence.pdf
