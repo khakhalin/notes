@@ -62,7 +62,9 @@ Redshift
 
 # HIJ
 
-**Hadoop** - collection of open-source software utils for cluster support, maintained by Apache.
+**Hadoop** (dev): collection of open-source software utils for cluster support, maintained by Apache.
+
+**HCI** (academia): Human-Computer Interaction. An academic area of research.
 
 **Heap** (programming): a tree-like structure where children < parents. An optimal realizatin of a priority queue (similar to a stack, but with a build-in sorting according to priority).
 

@@ -21,13 +21,16 @@ Other #lifehack(s):
 
 **Random Python tips:**
 * If in a module you start a method name with one underscore, like `_helper`, this method isn't imported on `from module import *`. Unfortunately it is still accessible if you do `import module`and address it as `module._helper()`.
-* Conventions: underscore for variables and functions; all-caps for constants, capitalized camelcase for objects, leading-underscore for local methods.
+* Conventions: **snake_case** underscore for variables and functions; all-caps for constants, capitalized CamelCase for objects, leading-underscore for local methods.
 * Nested comprehensions: same syntax as in writing nested loops (even tho it looks unformulaic), e.g. `[j for i in range(5) for j in range(i)]
-* To add += 1 to a dict when a key may not exist, use `get()` as it has a default value: `a[i] = a.get(i,0)+1`
+* To add += 1 to a dict when a key may not exist, use `get()` as it allows to set a default value: `a[i] = a.get(i,0)+1`
 * To get some (or rather, first) key from a dict: `next(iter(a.keys()))`
-* Objects (including empty lists `[]`) should never be used as default arguments for functions, as they are evaluated only once per program (during object definition), not when methods are called! Insetad use `x=None`, then `if x is None: x=[]`. It sounds super-cumbersome, but that's just how it is. ([source](https://docs.python-guide.org/writing/gotchas/))
+* Objects (including empty lists `[]`) should never be used as **default arguments** for functions, as they are evaluated only once per program (during object definition), not when methods are called! Insetad use `x=None`, then `if x is None: x=[]`. It sounds super-cumbersome, but that's just how it is. ([ref](https://docs.python-guide.org/writing/gotchas/))
 * **Docstring**: First constant in a declaration, starts and ends with triple double quotes `"""`, accessible via `object.__doc__` property. Minimum: one sentence, capitalized, with a full stop at the end, explaining what this function does. Don't include the name, or usage. Any other comments - lower, after an empty line. For modules, similar, at the very beginning, before any declarations. Refs: [1](https://www.python.org/dev/peps/pep-0257/), [2](https://www.pythonforbeginners.com/basics/python-docstrings)
 * **F-strings**: `f"bla {x['a']:.2f}"` - this version supports dicts (because diff quotation marks), and formats the output (after `:`).
+* Crazy fact: a built-in `round()` (not the one from math / numpy) rounds both 1.5 and 2.5 to 2 (always **rounds edge cases towards even numbers**). Apparently that's to fight the bias of floating number representation ([ref](https://realpython.com/python-rounding/)).
+* Sweetest way to iterate through a dictionary: `for key,val in d.items():`.
+* In **list comprehensions**, if you want to sometimes return nothing, move `if` to the end: then you don't have to write `else`: `[x for x in y if a]`.
 
 ## Matplotlib
 * Brief intro from Brad Solomon: https://realpython.com/python-matplotlib-guide/

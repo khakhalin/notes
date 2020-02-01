@@ -315,6 +315,11 @@ Yu, H., Edunov, S., Tian, Y., & Morcos, A. S. (2019). Playing the lottery with r
 https://arxiv.org/abs/1906.02768
 Lottery tickets in RL domain.
 
+Two papers describing a similar idea: Just going from 3d-person to first-person helps generalization in RL, as first-person is inherently closer to translation to actions.
+* Hill, F., Lampinen, A., Schneider, R., Clark, S., Botvinick, M., McClelland, J. L., & Santoro, A. (2019). Emergent systematic generalization in a situated agent. arXiv preprint arXiv:1910.00571. https://arxiv.org/abs/1910.00571
+* Ye, C., Khalifa, A., Bontrager, P., & Togelius, J. (2020). Rotation, Translation, and Cropping for Zero-Shot Generalization. arXiv preprint arXiv:2001.09908. https://arxiv.org/abs/2001.09908
+I wonder what are the implications for graphical networks. Arguably, RNNs and sliding attention-based convolutional networks are already like 1st-person for texts. But what about graphs? Does it mean that graph-crawlers can be better than holistic processors?
+
 ## RNNs, Attention
 #attention
 

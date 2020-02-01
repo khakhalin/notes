@@ -1,4 +1,5 @@
 # Graphical Methods
+#net
 
 ## Markov Random Fields
 
