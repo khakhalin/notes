@@ -1,7 +1,17 @@
 # General To-Dos
 
 #todo
-Current point in the Google Course: https://developers.google.com/machine-learning/crash-course/production-ml-systems 
+Glance through last few lectures of Google Course (are they all on production?): https://developers.google.com/machine-learning/crash-course/production-ml-systems 
+
+Matrix calculus for deep learning
+https://explained.ai/matrix-calculus/index.html
+
+Awesome collection of short tutorials (both ML and snippets of Python code) by Chris Albon:
+https://chrisalbon.com/
+Look through, decide the priority, and how to file.
+
+Interesting practical intro to ML projects; look through:
+https://github.com/chiphuyen/machine-learning-systems-design
 
 ESL progress. 
 Current position: p290
@@ -13,7 +23,7 @@ Parked parts that need to be revisited:
 
 # Words and topics to look up
 
-Classic ML and friends
+**Classic ML and friends**
 * gradient boosting
 * the difference between tSNE and UMAP
 * what's the difference between hash-sets, hash-maps, and hash-tables?
@@ -38,11 +48,11 @@ Classic ML and friends
 * Mahalanobis distance
 * Particle filter
 
-Practical stuff:
+**Practical stuff:**
 * Checkpoints
 * Keras hyperparameter optimization
 
-Deep Learning:
+**Deep Learning:**
 * What's so eager about eager mode
 * How to tell the receptive field of a neuron in a deep network? Do they gradient descend on it?
 * Word2vec - how does it work? And does it come pretrained or what?
@@ -63,7 +73,7 @@ Deep Learning:
 * self-supervised boosting
 * Wavenet - that famous convolution network that generates audio on-the-fly
 
-Technical stuff
+**Technical stuff**
 * regex in Python
 * JSON - how does it work, why everybody love it, and is it the present or the future? ([wiki](https://en.wikipedia.org/wiki/JSON))
 * YAML - some standard for keeping stuff that's like XML, but human-readable. Who uses it? Is it popular? ([wiki](https://en.wikipedia.org/wiki/YAML))
@@ -71,7 +81,7 @@ Technical stuff
 * Python closures, why they are a thing, what's dangerous about them, and how to use them
 * Jax: [Baysian NN in Jax](https://colab.research.google.com/drive/1gMAXn123Pm58_NcRldjSuGYkbrXTUiN2) - collab notebook 
 
-Other math
+**Other math**
 * How to calculate single-value-decomposion and eigenvector decomposition in practice? How do they code it for numpy, for example?
 * FFT
 * Lagrange multiplyier - is there an easy (not formal, but intuitive) proof that it works?
@@ -79,5 +89,3 @@ Other math
 * Perron–Frobenius theorem - something related to centralities and or network graph eigenvectors
 * kuramoto oscillations
 
-Neuro
-* ...

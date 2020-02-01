@@ -4,18 +4,6 @@
 # Key resources
 * http://www.arxiv-sanity.com/ - AI search for arxiv
 
-# To check and file
-#todo
-Matrix calculus for deep learning
-https://explained.ai/matrix-calculus/index.html
-
-Awesome collection of short tutorials (both ML and snippets of Python code) by Chris Albon:
-https://chrisalbon.com/
-Look through, decide the priority, and how to file.
-
-Interesting practical intro to ML projects; look through:
-https://github.com/chiphuyen/machine-learning-systems-design
-
 # Books
 
 (Given in subjective order of my gradual reading)
@@ -72,6 +60,10 @@ Job-search specific materials:
 * [Maximum Entropy Network Ensembles](http://www.maths.qmul.ac.uk/~gbianconi/LTCCModule) - a series of lectures
 * [End-to-end machine learning](https://end-to-end-machine-learning.teachable.com) - sorta like a course from Brandon Rohrer
 * https://github.com/hsayama/PyCX - a set of notebooks on complexity (looks like weekly labs?)
+
+**Systems design**
+* https://github.com/donnemartin/system-design-primer
+* https://github.com/checkcheckzz/system-design-interview
 
 # Link aggregators
 

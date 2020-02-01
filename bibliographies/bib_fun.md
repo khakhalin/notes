@@ -1,5 +1,5 @@
 # Temporary storage for all broad fun topics
-#fun
+#fun #bib
 
 # Free will
 #freewill
