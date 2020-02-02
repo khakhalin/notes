@@ -23,7 +23,9 @@ In general, 2 main ways to explore graphs:
 
 **Topological order** (aka topological sort): any sequence of vertex ids, such that for no directed edge A→B, vertex B is given in the sequence before vertex A. Is only possible in a **DAG** (**Directed Acyclic Graph**: a graph without  cycles), as obviously a directed cycle cannot be linearized.
 
-One can find topological order with **DFS**, if they consider the order in which DFS exploration **leaves** nodes (after processing them and all their dependencies). Except that, to get a final list, one needs to add elements to the beginning of a running list, as in stack, rather than at the end (or add to the end, and then reverse once the run is over). It's called **reveresed postorder**: reversed because you add to the beginning of the list, and postorder because you do it as you leave each node, rather than as you enter them.
+One can find topological order with **DFS**, if they consider the order in which DFS exploration **leaves** nodes (after processing them and all their dependencies). Except that, to get a final list, one needs to add elements to the beginning of a running list, as in stack, rather than at the end (or add to the end, and then reverse once the run is over). It's called **reveresed postorder**: reversed because you add to the beginning of the list (aka **prepend**, instead of appending), and postorder because you do it as you leave each node, rather than as you enter them.
+
+> If a graph is not a DAG, DFS still finds something similar to topological order, at least for DAG-like parts of it. Which is useful in many applications (see below), but is referred to awkwardly as **reversed postorder**.
 
 Here's an illustration. Imagine a graph with edges `(1,3)(2,3)(1,2)`. A good topological order for this graph is `1,2,3`, but DFS will explore the nodes in a sequence of `1,3,2` (aka pre-order). However, if you consider that DFS is recursive, and so 1 won't be left until all its branches are explored, the order of _leaving_ nodes is 3 (after it was explored), then 2, then 1 (once all its dependencies are explored). So `3,2,1` is the postorder, and `1,2,3` is a reverse postorder, and also appropriate topological order. 
 
@@ -47,3 +49,20 @@ A **Strongly Connectec Component** (SCC for the purposes of this section) of a d
 Every cycle begets a SCC.
 
 **Condensation**: represent each SCC with a single "super-node". Any graph can be presented as a DAG of nodes and "supernodes", standing for SCCs.
+
+## Kosaraju-Sharir algorithm
+A linear time algorithm (O(V+E)) for finding strongly connected components in a directed graph. Boils down to the following:
+* Using DFS, calculate reversed-postorder (a proxy for topological order). Call it L.
+* Reverse the graph. Run DFS on this graph, initiating new DFS recursions in the order of L. Every part on which DFS propagates recursively until completion is its own strongly connected component.
+
+> Sedgewik calls this algorithm "an extreme example of an algorithm that is easy to code, but difficult to understand". That's a great example of a comment you're grateful for, as you read a textbook!
+
+The trick here is that reversed-postorder will always place sink nodes (dead-ends) after nodes leading to them. Curiously, it will happen both if it samples the dead-end node before the feeder node, and it it taps the feeder-node first (even if the feeder is tapped first, because of post-order, it will be left last). So either way, downstream nodes will always trigger before upstream nodes. And because of prepending (aka "reversed"), in the final list they will aways come after feeder nodes (either immediately, or after a gap, but it doens't matter). 
+
+But this means that at the 2nd step we'll always try to reverse-DFS-propagate from upstream nodes first. Which means that once downstream nodes are tapped at the 2nd step, we won't be able to reverse-propagate from them, as all upstream nodes will be already visited. So in all unidirectional chains every node will become its own component. And also, we'll never be able to propagate upstream from SCCs, as by the time we reach any of them, all upstream nodes will be scorched (visited).
+
+All larger strongly connected components will behave like cycles though; each node will be upstream in some way and downstream in the other, so once it is tapped, we'll propagate through it. Obviously, we won't be able to go downstream from them, as in a reversed graph you don't go downstream, you go upstream. And we won't be able to go upstream, as it was just described above. So the DFS will halt once the component is exhausted.
+
+It is essentially a sketch of a proof, but all formal proofs I could find are extremely annoying, as they still have to go through these cases logical-tree-style, but also try to come up with a formal description of it that is more verbose than words.
+
+> Many online explanations of this algorithm are confusing. For example [this one](https://www.geeksforgeeks.org/strongly-connected-components/) describes everything correctly, but represents the stack in reversed order (first element last), which is confusing. [Wiki](https://en.wikipedia.org/wiki/Kosaraju%27s_algorithm) is better, but doesn't call either recursive process DFS, and uses different names for them (but at least it's actionable). Also Sedgewik does 1st run on reversed graph, and 2nd run on direct, but most online sources do it the other way around. The best way to convince oneself that it works at all is to do it a few times for different graphs.
