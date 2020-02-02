@@ -71,7 +71,7 @@ For multi-class classification, either create lots of binary classifiers (each c
 
 In many ways, AdaBoost goes against the conventional wisdom for classification: it doesn't try to build a good classifier (but instead uses a lot of crappy ones); it does not try to identify important variables, or isolate important features using dimentionality reduction (instead, it thrives in this high-D multi-variable space).
 
-Refs: [Akash Desarda](https://towardsdatascience.com/understanding-adaboost-2f94f22d5bfe); [wiki](https://en.wikipedia.org/wiki/AdaBoost); [Tommi Jaakkola](http://people.csail.mit.edu/dsontag/courses/ml12/slides/lecture13.pdf) lecture note; [Explaining AdaBoost](http://rob.schapire.net/papers/explaining-adaboost.pdf) by Robert Schapire; [YouTube video by StatQuest](https://www.youtube.com/watch?v=LsK-xG1cLYA) (good); [Slides by Avinash Kak, Purdue](https://engineering.purdue.edu/kak/Tutorials/AdaBoost.pdf) (very good).
+**Refs:** [Akash Desarda](https://towardsdatascience.com/understanding-adaboost-2f94f22d5bfe); [wiki](https://en.wikipedia.org/wiki/AdaBoost); [Tommi Jaakkola](http://people.csail.mit.edu/dsontag/courses/ml12/slides/lecture13.pdf) lecture note; [Explaining AdaBoost](http://rob.schapire.net/papers/explaining-adaboost.pdf) by Robert Schapire; [YouTube video by StatQuest](https://www.youtube.com/watch?v=LsK-xG1cLYA) (good); [Slides by Avinash Kak, Purdue](https://engineering.purdue.edu/kak/Tutorials/AdaBoost.pdf) (very good).
 
 # Gradient Boosting
 
@@ -92,7 +92,7 @@ As GB is a greedy algorithm, it is prone to overfitting, and so requires **hyper
 **References:**
 * [How to explain gradient boosting](https://explained.ai/gradient-boosting/index.html), Parr, Howard. Very good description!
 * [Custom loss functions for Gradient Boosting](https://towardsdatascience.com/custom-loss-functions-for-gradient-boosting-f79c1b40466d), Prince Grover, 2018
-* https://statweb.stanford.edu/~jhf/ftp/trebst.pdf - a technical paper about GB
+* Friedman, J. H. (2001). Greedy function approximation: a gradient boosting machine. Annals of statistics, 1189-1232. - Mathy paper with 10k citations explaining everything about gradient boosting. https://statweb.stanford.edu/~jhf/ftp/trebst.pdf
 * A bunch of confusing explanations that I either didn't like, or that explain boosting in general rather than gradient boosting specifically:
     * [GB from scratch](https://medium.com/mlreview/gradient-boosting-from-scratch-1e317ae4587d)
     * [Gentle Introduction to the Gradient Boosting Algorithm](https://machinelearningmastery.com/gentle-introduction-gradient-boosting-algorithm-machine-learning/)
