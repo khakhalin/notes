@@ -62,6 +62,11 @@ Mukhopadhyay, D. (2012, September). Generating Expander Graphs Using Cellular Au
 Hassan, B. A., & Hiesinger, P. R. (2015). Beyond molecular codes: simple rules to wire complex brains. Cell, 163(2), 285-291.
 A review of how simple developmental rules (in this case actual dendrites in 3D, growing and stopping) can produce different stochastic patterns, depending on the encoded rules.
 
+Lieberman, E., Hauert, C., & Nowak, M. A. (2005). Evolutionary dynamics on graphs. Nature, 433(7023), 312-316.
+Open version:
+http://web.mit.edu/manoli/www/publications/Lieberman_RECOMB_05.pdf
+Weird, but judging from the citations (~1k), very  popular! The 1-sentence summary is that some graphs can amplify the selection, while some graphs can suppress it.
+
 # Dynamic on dynamic
 
 Zambra, M., Testolin, A., & Maritan, A. (2019). [Emergence of Network Motifs in Deep Neural Networks](https://arxiv.org/pdf/1912.12244.pdf). arXiv preprint arXiv:1912.12244.

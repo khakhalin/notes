@@ -4,6 +4,9 @@
 
 # Intros and top choices
 
+A list of most influential DL papers of past decade, with pics and summaries!
+https://leogao.dev/2019/12/31/The-Decade-of-Deep-Learning/
+
 More info on decision trees, pruning
 https://towardsdatascience.com/the-complete-guide-to-decision-trees-28a4e3c7be14
 
@@ -271,6 +274,12 @@ https://arxiv.org/abs/1905.03670
 
 Ortega, P. A., Wang, J. X., Rowland, M., Genewein, T., Kurth-Nelson, Z., Pascanu, R., ... & Jayakumar, S. M. (2019). Meta-learning of Sequential Strategies. arXiv preprint arXiv:1905.03030.
 https://arxiv.org/pdf/1905.03030.pdf
+
+Berseth, G., Geng, D., Devin, C., Finn, C., Jayaraman, D., & Levine, S. (2019). SMiRL: Surprise Minimizing RL in Dynamic Environments. arXiv preprint arXiv:1912.05510.
+https://arxiv.org/abs/1912.05510
+Unsupervised learning by chaos minimization!
+Blog post: Emergent Behavior by Minimizing Chaos
+https://bair.berkeley.edu/blog/2019/12/18/smirl/
 
 Meire Fortunato, Mohammad Gheshlaghi Azar, Bilal Piot, Jacob Menick, Ian Osband, Alex Graves, Vlad Mnih, Remi Munos, Demis Hassabis, Olivier Pietquin, et al. Noisy networks for exploration. arXiv preprint arXiv:1706.10295, 2017
 https://arxiv.org/pdf/1706.10295.pdf
@@ -541,3 +550,8 @@ General patterns of increase in complexity during evolution, using several natur
 Zenil, H., & Villarreal-Zapata, E. (2013). Asymptotic behavior and ratios of complexity in cellular automata. International Journal of Bifurcation and Chaos, 23(09), 1350159.
 https://arxiv.org/pdf/1304.2816.pdf
 Some measures of complexity (Shannon's block entropy and Kolmogorov) applied to 1D cellular automata. They try to make some general statements. Give a look.
+
+# Math
+
+Eta-trick (η-trick) to smooth out local minima in the minima landscape, and improve convergence. Reformulates a non-quadratic problem as a series of quadratic problems.
+https://francisbach.com/the-%CE%B7-trick-or-the-effectiveness-of-reweighted-least-squares/
