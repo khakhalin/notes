@@ -147,7 +147,7 @@ Gilboa, D., & Gur-Ari, G. (2019). Wider Networks Learn Better Features. arXiv pr
 https://arxiv.org/pdf/1909.11572.pdf
 train a network (they used MNIST), do UMAP of activations, find groups of neurons that together encode useful features, visualize them. Claim it to be a reasonable approach to understanding networks.
 
-# Tickets, distillation, transfer, curriculum
+# Tickets, distillation, transfer
 #ticket
 
 Frankle, J., & Carbin, M. (2018). The lottery ticket hypothesis: Finding sparse, trainable neural networks. arXiv preprint arXiv:1803.03635.
@@ -202,13 +202,7 @@ von Oswald, J., Henning, C., Sacramento, J., & Grewe, B. F. (2019). Continual le
 https://arxiv.org/abs/1906.00695
 If it get it right from the abstract, this can be called meta-networks as well: a network that learns to predict weights for a network that would follow a task; so one step above learning the weights for each individual task. Essentially, instead of remembering all possible network configurations for all possible tasks, to reset the network each time, they use this hypernetwork to interpolate in the space of parameters.
 
-#bayesian
-
-Fort, S., Hu, H., & Lakshminarayanan, B. (2019). Deep Ensembles: A Loss Landscape Perspective. arXiv preprint arXiv:1912.02757. 
-https://arxiv.org/pdf/1912.02757.pdf
-How Bayesian networks help to understand ensemble effects in deep learning (as they learn the distributino of parameters instead of instances?). Some lovely, inspiring pictures.
-
-#curriculum
+# Curriculum
 
 Wang, T., Zhu, J. Y., Torralba, A., & Efros, A. A. (2018). Dataset Distillation. arXiv preprint arXiv:1811.10959.
 https://arxiv.org/pdf/1811.10959.pdf
@@ -224,15 +218,21 @@ Panagiotatos, G., Passalis, N., Iosifidis, A., Gabbouj, M., & Tefas, A. (2019, S
 https://ieeexplore.ieee.org/abstract/document/8903112
 Something similar: auto-generated curriculum. Not available online for some reason.
 
-**MNIST for small experiments**
-
 Kim, T. H., & Choi, J. (2018). ScreenerNet: Learning Self-Paced Curriculum for Deep Neural Networks. arXiv preprint arXiv:1801.00904.
 https://arxiv.org/pdf/1801.00904.pdf
-Not a popular one (9 citations since 2018), but may have some points relevant for me specifically.
+Not a popular one (9 citations since 2018), but may have some points relevant for me specifically. MNIST-based?
 
 Reduced MNIST: how well can machines learn from small data? By Michael Nielsen. Nov 15, 2017
 http://cognitivemedium.com/rmnist
 Blog post on learning on super-small subsets of MNIST (not an official pub, so never cited). One example of each digit apparently brings accuracy to 42% for a naive NN (vs 97% for full), and ~56% (vs 99% for full) for a pretrained conv net (2 layers, not trained on mnist specifically), followed by 2 fully connected. Regularization becomes extremely important, as a way to fight overfitting, and even switching to convnet for this may be considered a type of regularization, I think.
+
+# Sparsity
+> Exploring a general idea that intentionnal sparsity may be a good way to improve learning, aid pruning and/or distillation, improve interpretability (because fewer weights are involved, leading to more "high-contrast" connectivity patterns) etc.
+
+https://en.wikipedia.org/wiki/Sparse_dictionary_learning
+
+Makhzani, A., & Frey, B. (2013). K-sparse autoencoders. arXiv preprint arXiv:1312.5663.
+https://arxiv.org/pdf/1312.5663.pdf
 
 # Architecture search
 #archsearch
@@ -459,6 +459,10 @@ A Sober Look at Bayesian Neural Networks. January 17, 2020
 by Carles Gelada and Jacob Buckman
 https://jacobbuckman.com/2020-01-17-a-sober-look-at-bayesian-neural-networks/
 A response to Wilson 2020 above! :) Best type of scientific exchange! Also a blog post, also with math.
+
+Fort, S., Hu, H., & Lakshminarayanan, B. (2019). Deep Ensembles: A Loss Landscape Perspective. arXiv preprint arXiv:1912.02757. 
+https://arxiv.org/pdf/1912.02757.pdf
+How Bayesian networks help to understand ensemble effects in deep learning (as they learn the distributino of parameters instead of instances?). Some lovely, inspiring pictures.
 
 # Alternative network designs
 

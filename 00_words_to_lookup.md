@@ -1,17 +1,21 @@
 # General To-Dos
-
 #todo
-Glance through last few lectures of Google Course (are they all on production?): https://developers.google.com/machine-learning/crash-course/production-ml-systems 
+
+Glance through the last few lectures of Google Course (are they all on production?): https://developers.google.com/machine-learning/crash-course/production-ml-systems 
+
+practical intro to ML projects; look through:
+https://github.com/chiphuyen/machine-learning-systems-design
 
 Matrix calculus for deep learning
 https://explained.ai/matrix-calculus/index.html
 
-Awesome collection of short tutorials (both ML and snippets of Python code) by Chris Albon:
-https://chrisalbon.com/
-Look through, decide the priority, and how to file.
+Introduction to probabilistic computation:
+https://betanalpha.github.io/assets/case_studies/probabilistic_computation.html
+Seems to be very good; simultaneously visual and mathy. Stochastic estimators and what not. Must-read!
 
-Interesting practical intro to ML projects; look through:
-https://github.com/chiphuyen/machine-learning-systems-design
+Good collection of short tutorials (both ML and snippets of Python code) by Chris Albon:
+https://chrisalbon.com/
+Look through, decide the priority; how to file.
 
 ESL progress. 
 Current position: p290
