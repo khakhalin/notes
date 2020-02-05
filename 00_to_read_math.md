@@ -161,6 +161,11 @@ Tian, Y., Jiang, T., Gong, Q., & Morcos, A. (2019). Luck Matters: Understanding 
 https://arxiv.org/pdf/1905.13405.pdf
 To understand how "lucky tickets" work, they train a larger network from a smaller network, then study activation.
 
+Hooker, S., Courville, A., Dauphin, Y., & Frome, A. (2019). Selective Brain Damage: Measuring the Disparate Impact of Model Pruning. arXiv preprint arXiv:1911.05248.
+https://weightpruningdamage.github.io/
+Tweet-thread: https://twitter.com/sarahookr/status/1197514514167545858
+tldr: while pruning may preserve the bulk of performance, it's still a trade-off, and usually it lowers performance on selective rare special cases that networks stops recognizing. They used ImageNet, and identified which images exactly are "lost" during pruning.
+
 Individual differences among deep neural network models (2020)
 Johannes Mehrer, Courtney J. Spoerer, Nikolaus Kriegeskorte, Tim C Kietzmann
 https://www.biorxiv.org/content/10.1101/2020.01.08.898288v1
@@ -170,9 +175,6 @@ Tweetprint: https://twitter.com/TimKietzmann/status/1215620270679044096
 Morcos, A. S., Yu, H., Paganini, M., & Tian, Y. (2019). One ticket to win them all: generalizing lottery ticket initializations across datasets and optimizers. arXiv preprint arXiv:1906.02773.
 https://arxiv.org/abs/1906.02773
 New paper about whether "lucky tickets" generalize across datasets.
-
-Hooker, S., Courville, A., Dauphin, Y., & Frome, A. (2019). Selective Brain Damage: Measuring the Disparate Impact of Model Pruning. arXiv preprint arXiv:1911.05248.
-https://weightpruningdamage.github.io/
 
 Maheswaranathan, N., Williams, A., Golub, M., Ganguli, S., & Sussillo, D. (2019). Universality and individuality in neural dynamics across large populations of recurrent networks. In Advances in Neural Information Processing Systems (pp. 15603-15615).
 https://arxiv.org/abs/1907.08549
