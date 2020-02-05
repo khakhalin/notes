@@ -237,6 +237,10 @@ https://arxiv.org/pdf/1312.5663.pdf
 # Architecture search
 #archsearch
 
+Mishkin, D., Sergievskiy, N., & Matas, J. (2017). Systematic evaluation of convolution neural network advances on the imagenet. Computer Vision and Image Understanding, 161, 11-19.
+https://arxiv.org/abs/1606.02228
+A paper posed as an excellent, archetypal, systematic ablation study that really went down to the core of what aspects of a certain architecture are critical, and which ones are not. As an example of good, solid research methodology.
+
 Liu, H., Simonyan, K., Vinyals, O., Fernando, C., & Kavukcuoglu, K. (2017). Hierarchical representations for efficient architecture search. arXiv preprint arXiv:1711.00436.
 https://arxiv.org/pdf/1711.00436.pdf
 Summary by Connor Shorten. Sep 12 2019.

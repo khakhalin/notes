@@ -84,8 +84,10 @@ Basic ideas:
 11. Write tests for model performance (to be alerted if it unexpectedly drops on new data)
 
 How to fight bad fit:
-* Underfitting: bigger model (model capacity); less regularization; advanced architecture; hyperparameters; more features
+* Underfitting: bigger model (increase model capacity); less regularization; advanced architecture; tune hyperparameters; add more features
 * Overfitting: more training data; regularization; data augmentation; reduce model size
+
+Interesting point: in ML research, one kinda cannot afford to skip hyperparater tuning and data augmentation, as many changes to standard approaches that are supposedly helpful, may be just bad proxies for either regularization, or augmentation. So these additional directions shoudl be saturated for both "control" and "newsly developed" methods, to make all comparisons fair. (I'm guessing, unless the new methods are easier to run than regularization, but it is kinda unlikely.) Ref: [tweet by Jeremy Howard](https://twitter.com/jeremyphoward/status/1215320099134984194)
 
 Refs:
 * [Data Science Checklist](https://www.fast.ai/2020/01/07/data-questionnaire/) by Jeremy Howard
