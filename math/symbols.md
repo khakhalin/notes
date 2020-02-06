@@ -43,6 +43,7 @@ $\displaystyle \large{Ⱉ=\frac{1}{4Ⰲ} \sum_{Ⱁ,Ⱂ \in Ⰸ} \big(Ⱋ_{ⰑⰒ
 $\displaystyle \large{Ⰱ(Ⱓ) = \frac{Ⰿ(\frac{Ⰳ+1}{2})}{\sqrt{ⰃⰗ}Ⰿ(Ⰳ/2)}\left(1+\frac{Ⱓ^2}{Ⰳ}\right)^{-\frac{Ⰳ+1}{2}}}$
 
 
+ $\displaystyle \large \begin{cases} \dfrac{dⰁ}{dt} = -Ⰱთ + ზⰕⰁ\\ \\ \dfrac{dⰕ}{dt} = Ⱅე - ჹⰕⰁ \end{cases}$
 
 Testing weird interactions between italics and mathjax in markdown:
 
