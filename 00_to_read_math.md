@@ -186,6 +186,9 @@ Ramanujan, V., Wortsman, M., Kembhavi, A., Farhadi, A., & Rastegari, M. (2019). 
 https://arxiv.org/pdf/1911.13299.pdf
 They do some math, and some modeling, trying to estimate how easy it is to find a subnetwork, within a randomly weighted wide network, that would work great without any training. A combination of ticket story, and weight-agnostic networks (see [[Gaier2019agnostic]]). Allen institute.
 
+Proving the Lottery Ticket Hypothesis: Pruning is All You Need. Eran Malach, Gilad Yehudai, Shai Shalev-Shwartz, Ohad Shamir. (3 Feb 2020)
+https://arxiv.org/abs/2002.00585
+
 #distillation #transfer
 
 Hinton, G., Vinyals, O., & Dean, J. (2015). Distilling the knowledge in a neural network. arXiv preprint arXiv:1503.02531.
@@ -227,6 +230,12 @@ Not a popular one (9 citations since 2018), but may have some points relevant fo
 Reduced MNIST: how well can machines learn from small data? By Michael Nielsen. Nov 15, 2017
 http://cognitivemedium.com/rmnist
 Blog post on learning on super-small subsets of MNIST (not an official pub, so never cited). One example of each digit apparently brings accuracy to 42% for a naive NN (vs 97% for full), and ~56% (vs 99% for full) for a pretrained conv net (2 layers, not trained on mnist specifically), followed by 2 fully connected. Regularization becomes extremely important, as a way to fight overfitting, and even switching to convnet for this may be considered a type of regularization, I think.
+
+**Data poisoning and similar ideas**
+
+Radioactive data: tracing through training. Alexandre Sablayrolles, Matthijs Douze, Cordelia Schmid, Hervé Jégou
+(3 Feb 2020). https://arxiv.org/abs/2002.00937
+~1% of the dataset, make models trained on this data uniquely identifiable.
 
 # Sparsity
 > Exploring a general idea that intentionnal sparsity may be a good way to improve learning, aid pruning and/or distillation, improve interpretability (because fewer weights are involved, leading to more "high-contrast" connectivity patterns) etc.

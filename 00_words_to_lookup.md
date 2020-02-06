@@ -1,6 +1,11 @@
 # General To-Dos
 #todo
 
+"The missing semester of CS education": 
+https://missing.csail.mit.edu/
+lots of useful practical bits and pieces: the shell, debugging, metaprogramming and what not.
+Also have [lectures on youtube](https://www.youtube.com/playlist?list=PLyzOVJj3bHQuloKGG59rS43e29ro7I57J).
+
 Glance through the last few lectures of Google Course (are they all on production?): https://developers.google.com/machine-learning/crash-course/production-ml-systems 
 
 practical intro to ML projects; look through:
