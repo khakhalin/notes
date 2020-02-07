@@ -1,13 +1,6 @@
 # General To-Dos
 #todo
 
-"The missing semester of CS education": 
-https://missing.csail.mit.edu/
-lots of useful practical bits and pieces: the shell, debugging, metaprogramming and what not.
-Also have [lectures on youtube](https://www.youtube.com/playlist?list=PLyzOVJj3bHQuloKGG59rS43e29ro7I57J).
-
-Glance through the last few lectures of Google Course (are they all on production?): https://developers.google.com/machine-learning/crash-course/production-ml-systems 
-
 practical intro to ML projects; look through:
 https://github.com/chiphuyen/machine-learning-systems-design
 
@@ -33,7 +26,10 @@ Parked parts that need to be revisited:
 # Words and topics to look up
 
 **Classic ML and friends**
+* https://en.wikipedia.org/wiki/Maximum_subarray_problem
 * gradient boosting
+* https://cp-algorithms.com/data_structures/fenwick.html
+* https://cp-algorithms.com/data_structures/segment_tree.html
 * the difference between tSNE and UMAP
 * what's the difference between hash-sets, hash-maps, and hash-tables?
 * Latent Dirichlet Allocation ([ref](https://towardsdatascience.com/end-to-end-topic-modeling-in-python-latent-dirichlet-allocation-lda-35ce4ed6b3e0))

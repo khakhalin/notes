@@ -1,5 +1,13 @@
 # Tools, coding, project management
 
+#todo: "The missing semester of CS education": 
+https://missing.csail.mit.edu/
+lots of useful practical bits and pieces: the shell, debugging, metaprogramming and what not.
+Also have [lectures on youtube](https://www.youtube.com/playlist?list=PLyzOVJj3bHQuloKGG59rS43e29ro7I57J).
+
+#todo: Glance through the last few lectures of Google Course (are they all on production?): https://developers.google.com/machine-learning/crash-course/production-ml-systems 
+
+
 **Cheatsheets:**
 * [[git]] - GIT cheat sheet
 * [[sql]] - SQL cheat sheet
@@ -29,7 +37,7 @@ Other #lifehack(s):
 * **Docstring**: First constant in a declaration, starts and ends with triple double quotes `"""`, accessible via `object.__doc__` property. Minimum: one sentence, capitalized, with a full stop at the end, explaining what this function does. Don't include the name, or usage. Any other comments - lower, after an empty line. For modules, similar, at the very beginning, before any declarations. Refs: [1](https://www.python.org/dev/peps/pep-0257/), [2](https://www.pythonforbeginners.com/basics/python-docstrings)
 * **F-strings**: `f"bla {x['a']:.2f}"` - this version supports dicts (because diff quotation marks), and formats the output (after `:`).
 * Crazy fact: a built-in `round()` (not the one from math / numpy) rounds both 1.5 and 2.5 to 2 (always **rounds edge cases towards even numbers**). Apparently that's to fight the bias of floating number representation ([ref](https://realpython.com/python-rounding/)).
-* Sweetest way to iterate through a dictionary: `for key,val in d.items():`.
+* Sweetest way to **iterate through a dictionary**: `for key,val in d.items():`.
 * In **list comprehensions**, if you want to sometimes return nothing, move `if` to the end: then you don't have to write `else`: `[x for x in y if a]`.
 
 ## Matplotlib
