@@ -27,6 +27,7 @@ Parked parts that need to be revisited:
 
 **Classic ML and friends**
 * https://en.wikipedia.org/wiki/Maximum_subarray_problem
+* named tuples in Python
 * gradient boosting
 * https://cp-algorithms.com/data_structures/fenwick.html
 * https://cp-algorithms.com/data_structures/segment_tree.html
