@@ -72,7 +72,7 @@ Redshift
 
 **JVM** (dev): Java Virtual Machine.
 
-# KLM
+# KL
 
 **Kafka** - open-source stream-processing plantform developed by Linkedin, written in Scala, and donated to Apache. High-throughput low-latency platform to handle realtime data feeds.
 
@@ -84,11 +84,15 @@ Redshift
 
 **loess** (stats): Locally Estimated Scatterplot Smoothing, aka Savitzky-Golay filter. See [[smoothing]]
 
+# M
+
 **MAE** (ml): Mean Average Error, aka L1 loss.
 
 **MapReduce** (dev): programming model for parallel computing; a type of split-apply-combine strategy. Essentially, seems to define two functions, one function on splittable tasks (something like `for each a in List`) that analyzes its `a` and sends answers out; and another one that catches answers and combines them all into one answer.
 
 **MCMC** (ml) Markov Chain Monte-Carlo. See [[13_MC]].
+
+**MST** (algos): Minimum Spanning Tree. A cycle-less subgraph of a weighted graph with min ∑w_ij. See [[graph_algos]].
 
 # N
 

@@ -25,19 +25,17 @@ Parked parts that need to be revisited:
 
 # Words and topics to look up
 
-**Classic ML and friends**
-* https://en.wikipedia.org/wiki/Maximum_subarray_problem
-* named tuples in Python
+**Classic ML and algorithms**
 * gradient boosting
 * https://cp-algorithms.com/data_structures/fenwick.html
 * https://cp-algorithms.com/data_structures/segment_tree.html
 * the difference between tSNE and UMAP
 * what's the difference between hash-sets, hash-maps, and hash-tables?
 * Latent Dirichlet Allocation ([ref](https://towardsdatascience.com/end-to-end-topic-modeling-in-python-latent-dirichlet-allocation-lda-35ce4ed6b3e0))
-* radix-sort 
+* radix sort 
 * that visual blog post about types of DL optimizers
-* make sure all graph algorithms are covered
 * Hungarian algorithm
+* unit tests, pytests, mocking
 * Bloom filter
 * Kalman filter (and its friends)
 * Expectation-Maximization

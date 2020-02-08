@@ -237,8 +237,8 @@ Radioactive data: tracing through training. Alexandre Sablayrolles, Matthijs Dou
 (3 Feb 2020). https://arxiv.org/abs/2002.00937
 ~1% of the dataset, make models trained on this data uniquely identifiable.
 
-# Sparsity
-> Exploring a general idea that intentionnal sparsity may be a good way to improve learning, aid pruning and/or distillation, improve interpretability (because fewer weights are involved, leading to more "high-contrast" connectivity patterns) etc.
+**Sparsity**
+> Exploring a general idea that intentional sparsity may be a good way to improve learning, aid pruning and/or distillation, improve interpretability (because fewer weights are involved, leading to more "high-contrast" connectivity patterns) etc.
 
 https://en.wikipedia.org/wiki/Sparse_dictionary_learning
 
@@ -490,8 +490,11 @@ Dayan, P., Hinton, G. E., Neal, R. M., & Zemel, R. S. (1995). The helmholtz mach
 http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.34.1800&rep=rep1&type=pdf
 Original paper by Hinton, 1k citations.
 
-# CogSci and Meta
+# Meta, Meaning, CogSci
 #meaning
+
+Artificial Intelligence, Values and Alignment. Iason Gabriel. 2020
+https://deepmind.com/research/publications/Artificial-Intelligence-Values-and-Alignment
 
 Chollet, F. (2019). The Measure of Intelligence. arXiv preprint arXiv:1911.01547.
 https://arxiv.org/abs/1911.01547

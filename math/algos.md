@@ -1,16 +1,30 @@
 # Algorithms
-#algo
+#algo #bib
+
+Subtopics:
+* [[graph_algos]] - everything about graphs
+
+Data structures:
+* [[priority_queue]]
+
+Other curious algorithms
+* [[lis]] - Longest Increasing Subsequence
+
+Todo: #todo
+* https://en.wikipedia.org/wiki/Maximum_subarray_problem
 
 # Big O notation
 Limiting behavior at ∞. Different meaning in textbooks and in practical questions. In textbooks: upper bound, so if something is O(N), it is also O(N²) by definition. In practice, just say the truth. 
 
-* O(log N) appears when you have a tree, and always process one branch of this tree. Then the total number of steps = the number of branches = $\log_2 n$ . 
-* If you have to visit every branch of a tree, the total number of operations is n (for leaves) + n/2 + n/4 + ... = 2n, so we have O(N).
-* If we have to through all n elements at each recursion before going further, and if the recursion is good (we split in two equal sizes), then we have a recursion: T(n) = n + 2T(n/2) . Unraveling: T(n) = n + 2(n/2 + 2(n/4 + ... 2(1))) = n + n +  ... + n . This sum contains k ns where k = ceil(log_2 n), so the total O = nlogn. 
-    * Quick sort has O(n log n) on average, but still goes to O(n^2) for the worst case. 
-    * Mergesort is O(n log n) even for worst case, but takes more space.
-    * Heapsort is mathematically the best, but 1) is real hart to explain, because of the heap data structure (sort of a tree), in practice is slower than quicksort.
-* Selection sort (repeatedly find min element) is O(N^2) as it does the triangle thing (loop in a loop) through the array.
+* O(log N) appears when you have a tree, and a typical engagement with this tree is processing a branch of it. Then the total number of steps = the depth of the tree = $\log_2 n$ . 
+* If however you have to visit every branch of a tree, the total number of operations is n (for leaves) + n/2 + n/4 + ... = 2n, so we have O(N).
+* If we go through n elements and then use a divide-and-conquer approach, splitting in two equal sizes with recursion, then we have the complexity: T(n) = n + 2T(n/2). Unraveling this: T(n) = n + 2(n/2 + 2(n/4 + ... 2(1))) = n + n +  ... + n. This sum contains k ns where k = ceil(log_2 n), so the total T= O(N logN)
+
+# Sorting
+* **QuickSort** has O(n log n) on average, but still goes to O(n^2) for the worst case. 
+* **Mergesort** is O(n log n) even for the worst case, but takes more space: O(n) instead of O(1) as most types of sort.
+* **Heapsort** is mathematically the best (also O(n log n) for time, and O(1) for space), but heap is a slow data structure, making it slower than quicksort in practice. (See [[priority_queue]])
+* **Selection sort** (repeatedly find min element) is O(N^2) as it does the full triangle thing (loop in a loop) through the array.
 
 # Classic algorithms
 
