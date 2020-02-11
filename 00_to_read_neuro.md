@@ -9,7 +9,11 @@ Merel, J., Botvinick, M., & Wayne, G. (2019). Hierarchical motor control in mamm
 https://www.nature.com/articles/s41467-019-13239-6
 Opinion? Seems short and general, so give it priority.
 
-# General and top
+# General, top, and fun
+
+Aesthetic preference for art emerges from a weighted integration over hierarchically structured visual features in the brain (2020)
+Kiyohito Iigaya, Sanghyun Yi, Iman A. Wahle, Koranis Tanwisuth, John P O'Doherty
+https://www.biorxiv.org/content/10.1101/2020.02.09.940353v1
 
 Raman, D. V., Rotondo, A. P., & O’Leary, T. (2019). Fundamental bounds on learning performance in neural circuits. Proceedings of the National Academy of Sciences, 116(21), 10537-10546.
 https://www.pnas.org/content/116/21/10537.short
@@ -197,6 +201,10 @@ Fremaux N, Sprekeler H, Gerstner W. Reinforcement learning using a continuous ti
 
 # DL models of brains
 
+Deep Neural Networks as Scientific Models (2020). Radoslaw M. Cichy, Daniel Kaiser. Trends in Cognitive Sciences.
+https://www.cell.com/trends/cognitive-sciences/fulltext/S1364-6613(19)30034-8
+Seem to suggest that for some types of tasks data it may be easier to model a process with a DL and interpret a DL, instead of directly interpreting the data?
+
 https://www.biorxiv.org/content/10.1101/838383v1
 Training deep neural density estimators to identify mechanistic models of neural dynamics
 Gonçalves .. Macke 2019
@@ -225,13 +233,17 @@ Modeled vision-controlled grasping (based on monkey data) as convolutional netwo
 
 # Memory storage
 
+Masse, N. Y., Yang, G. R., Song, H. F., Wang, X. J., & Freedman, D. J. (2019). Circuit mechanisms for the maintenance and manipulation of information in working memory. Nature neuroscience, 1.
+https://www.biorxiv.org/content/biorxiv/early/2018/05/21/305714.full.pdf
+
+Dentate gyrus circuits for encoding, retrieval and discrimination of episodic memories. 2020. Thomas Hainmueller & Marlene Bartos. Nature Neuroscience. Review. May be interesting!
+https://www.nature.com/articles/s41583-019-0260-z?WT.mc_id=TWT_NatRevNeurosci
+It appears that they didn't pre-print it though, so paywalled, at least for now.
+
 Context-modular memory networks support high-capacity, flexible, and robust associative memories. (2020). William F Podlaski,  Everton J Agnes,  Tim P Vogels
 https://www.biorxiv.org/content/10.1101/2020.01.08.898528v1
 About Hopfield limit. It seems they use an architecture in which large groups neurons or synapses can be modulated (via gating, inhibition) in a context-dependent manner. Show an increase in memory capacity; changes in active components (states), robustness to noise, memory search (??), memory stability. Gating of memories. Substrate for continuous learning? Related to the problem of catastrophic forgetting, including [this paper](https://www.pnas.org/content/115/44/E10467.short).
 There's also a [tweetprint](https://twitter.com/TPVogels/status/1215572496570896384).
-
-Masse, N. Y., Yang, G. R., Song, H. F., Wang, X. J., & Freedman, D. J. (2019). Circuit mechanisms for the maintenance and manipulation of information in working memory. Nature neuroscience, 1.
-https://www.biorxiv.org/content/biorxiv/early/2018/05/21/305714.full.pdf
 
 # Bottom-up validation
 
