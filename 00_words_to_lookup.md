@@ -43,6 +43,7 @@ Python
 * gradient boosting
 * https://cp-algorithms.com/data_structures/fenwick.html
 * https://cp-algorithms.com/data_structures/segment_tree.html
+* capsule network - some sort of generalization of convolutional networks for hierarchical data?
 * the difference between tSNE and UMAP
 * what's the difference between hash-sets, hash-maps, and hash-tables?
 * radix sort 

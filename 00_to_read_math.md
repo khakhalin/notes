@@ -138,6 +138,10 @@ Seems to be one of the original network distillation papers (800 refs)
 
 # Interpretability
 
+TensorFlow Lattice: Flexible, controlled and interpretable ML
+https://blog.tensorflow.org/2020/02/tensorflow-lattice-flexible-controlled-and-interpretable-ML.html?linkId=82088125
+Constrained models? May be very nice and practical; not just theoretically cool, but immedeately useful.
+
 Golan, T., Raju, P. C., & Kriegeskorte, N. (2019). Controversial stimuli: pitting neural networks against each other as models of human recognition. arXiv preprint arXiv:1911.09288.
 https://arxiv.org/abs/1911.09288
 They played with MNIST, trained a bunch of models, and compared them. And also compared it all to humans. Also a nice twitter thread:
