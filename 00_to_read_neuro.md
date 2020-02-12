@@ -5,9 +5,9 @@ To-read: Neuro
 **Bibliography collections:**
 * [[bib_reconstruction]] - On reconstructing biological connectivity from spike-trains and alike
 
-Merel, J., Botvinick, M., & Wayne, G. (2019). Hierarchical motor control in mammals and machines. Nature Communications, 10(1), 1-12.
-https://www.nature.com/articles/s41467-019-13239-6
-Opinion? Seems short and general, so give it priority.
+Hasson, U., Nastase, S. A., & Goldstein, A. (2020). Direct Fit to Nature: An Evolutionary Perspective on Biological and Artificial Neural Networks. Neuron, 105(3), 416-434.
+https://www.cell.com/neuron/pdf/S0896-6273(19)31044-X.pdf
+An opinion (perspective) on how we could, and should, use deep models to understand psychology and neuroscience, as they are not that different than the results of evolution, after all.
 
 # General, top, and fun
 
@@ -285,6 +285,10 @@ https://www.biorxiv.org/content/10.1101/677237v3.full
 Recurrent convolutional network  works better than a feed-forward convolutional network. It's slower, but better. Claim that it's similar to primate vision somehow.
 
 # Large-scale dynamics
+
+Merel, J., Botvinick, M., & Wayne, G. (2019). Hierarchical motor control in mammals and machines. Nature Communications, 10(1), 1-12.
+https://www.nature.com/articles/s41467-019-13239-6
+Opinion? Seems short and general, so give it priority.
 
 Recurrence is required to capture the representational dynamics of the human visual system
 Kleinman

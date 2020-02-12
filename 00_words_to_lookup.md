@@ -1,6 +1,9 @@
 # General To-Dos
 #todo
 
+Google crash course, about ML production: #todo
+https://developers.google.com/machine-learning/crash-course/production-ml-systems
+
 practical intro to ML projects; look through:
 https://github.com/chiphuyen/machine-learning-systems-design
 
@@ -18,30 +21,41 @@ Look through, decide the priority; how to file.
 ESL progress. 
 Current position: p290
 
-Parked parts that need to be revisited:
+Parked parts of ESL that need to be revisited:
 * p161 to p218 - Smoothing, wavelets, smoothing kernels, local regression, kernel size choice
 * p219 - a whole chapter on Model selection, Bias-Variance Tradeoff, effective number of parameters, cross-validation, and bootstrapping
 * p261 - another whole chapter. Model averaging, max likelihood, some Bayesian inference, more bootstrapping, the EM algorithm (Expectation-Maximization), Gibbs samping, bagging, MCMC
 
 # Words and topics to look up
 
+#todo: [[system_design]] - sorta priority
+
+Python
+* refresh strings functions in Python, like the full set of them
+* f-strings in Python ([ref](https://docs.python.org/3/library/string.html#format-specification-mini-language)): summarize here somewhere, refresh
+* ascii codes
+* easiest way to convert '5' to 5 and the other way around
+* sets in Python: are they worth it?
+
 **Classic ML and algorithms**
+* https://www.byte-by-byte.com/google-interview/
+* https://www.byte-by-byte.com/strings/
 * gradient boosting
 * https://cp-algorithms.com/data_structures/fenwick.html
 * https://cp-algorithms.com/data_structures/segment_tree.html
 * the difference between tSNE and UMAP
 * what's the difference between hash-sets, hash-maps, and hash-tables?
-* Latent Dirichlet Allocation ([ref](https://towardsdatascience.com/end-to-end-topic-modeling-in-python-latent-dirichlet-allocation-lda-35ce4ed6b3e0))
 * radix sort 
 * that visual blog post about types of DL optimizers
 * Hungarian algorithm
+* Latent Dirichlet Allocation ([ref](https://towardsdatascience.com/end-to-end-topic-modeling-in-python-latent-dirichlet-allocation-lda-35ce4ed6b3e0))
 * unit tests, pytests, mocking
+* Bayesian PCA
 * Bloom filter
 * Kalman filter (and its friends)
 * Expectation-Maximization
 * Bayes Information Criterion - will be naturually described once I cover model selection?
-* Bayesian PCA
-* more on Gaussian processes
+* better understanding of Gaussian processes
 * Graphical models
 * Hidden markov models
 * Markov random fields (precursor of modern graph models?)

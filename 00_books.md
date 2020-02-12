@@ -21,7 +21,7 @@
 Second priority books:
 * On Programming Well, by Robert C. Martin (no online version)
 * Pattern recognition and ML by Christopher Bishop ([full pdf](https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/)) - apparently, has a more Bayesian perspective
-* [Dive into Deep Learning](http://d2l.ai/) - an interactive introduction to deep learning, based on NumPy, apparently (no TF, no PyTorch, ha! Is it true?) 
+* [Dive into Deep Learning](http://d2l.ai/) - an interactive introduction to deep learning, based on NumPy, apparently!
 * Think Complexity, by Allen B. Downey ([full pdf](https://greenteapress.com/wp/think-complexity-2e/)) - network sci, automata, all in Python
 * Foundations of ML by M. Mohri et al ([full pdf](https://cs.nyu.edu/~mohri/mlbook/)) - more mathy?
 * ML book by K.P. Murphy - ([site](https://www.cs.ubc.ca/~murphyk/MLbook/), but no full pdf)
@@ -60,10 +60,6 @@ Job-search specific materials:
 * [Maximum Entropy Network Ensembles](http://www.maths.qmul.ac.uk/~gbianconi/LTCCModule) - a series of lectures
 * [End-to-end machine learning](https://end-to-end-machine-learning.teachable.com) - sorta like a course from Brandon Rohrer
 * https://github.com/hsayama/PyCX - a set of notebooks on complexity (looks like weekly labs?)
-
-**Systems design**
-* https://github.com/donnemartin/system-design-primer
-* https://github.com/checkcheckzz/system-design-interview
 
 # Link aggregators
 

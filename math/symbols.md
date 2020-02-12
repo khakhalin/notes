@@ -31,6 +31,11 @@ Best search site:
  
  よのまて
  
+ ನೀ ಲಿ ಟಳಲಉಒ ನಒನಕೋ
+ ವರ್ಣಮಾಲೆ 
+ ನಿಊ
+ https://en.wikipedia.org/wiki/Kannada_script
+ 
  https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode
 
 Testing fancy formulas:
@@ -43,7 +48,7 @@ $\displaystyle \large{Ⱉ=\frac{1}{4Ⰲ} \sum_{Ⱁ,Ⱂ \in Ⰸ} \big(Ⱋ_{ⰑⰒ
 $\displaystyle \large{Ⰱ(Ⱓ) = \frac{Ⰿ(\frac{Ⰳ+1}{2})}{\sqrt{ⰃⰗ}Ⰿ(Ⰳ/2)}\left(1+\frac{Ⱓ^2}{Ⰳ}\right)^{-\frac{Ⰳ+1}{2}}}$
 
 
- $\displaystyle \large \begin{cases} \dfrac{dⰁ}{dt} = -Ⰱთ + ზⰕⰁ\\ \\ \dfrac{dⰕ}{dt} = Ⱅე - ჹⰕⰁ \end{cases}$
+ $\displaystyle \large \begin{cases} \dfrac{dಉ}{dt} = -ಉთ + ზಲಿಉ\\ \\ \dfrac{dಲಿ}{dt} = ಲಿე - ჹಲಿಉ \end{cases}$
 
 Testing weird interactions between italics and mathjax in markdown:
 

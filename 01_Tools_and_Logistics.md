@@ -5,15 +5,15 @@ https://missing.csail.mit.edu/
 lots of useful practical bits and pieces: the shell, debugging, metaprogramming and what not.
 Also have [lectures on youtube](https://www.youtube.com/playlist?list=PLyzOVJj3bHQuloKGG59rS43e29ro7I57J).
 
-#todo: Glance through the last few lectures of Google Course (are they all on production?): https://developers.google.com/machine-learning/crash-course/production-ml-systems 
+Topics:
+* [[system_design]]
 
-
-**Cheatsheets:**
+Cheatsheets:
 * [[git]] - GIT cheat sheet
 * [[sql]] - SQL cheat sheet
 * [[pandas]] - Pandas obviously :)
 
-**Advice on ML projects:**
+Advice on ML projects:
 * [[ml_lore]] - a collection of rules of thumb about everything Deep Learning (which defaults to pick etc.)
 
 Other #lifehack(s):
@@ -39,6 +39,9 @@ Other #lifehack(s):
 * Crazy fact: a built-in `round()` (not the one from math / numpy) rounds both 1.5 and 2.5 to 2 (always **rounds edge cases towards even numbers**). Apparently that's to fight the bias of floating number representation ([ref](https://realpython.com/python-rounding/)).
 * Sweetest way to **iterate through a dictionary**: `for key,val in d.items():`.
 * In **list comprehensions**, if you want to sometimes return nothing, move `if` to the end: then you don't have to write `else`: `[x for x in y if a]`.
+
+Other notes:
+* As strings are immutable, slicing a string creates a copy, and thus is O(N) rather than O(1). [ref](https://www.byte-by-byte.com/strings/)
 
 ## Matplotlib
 * Brief intro from Brad Solomon: https://realpython.com/python-matplotlib-guide/

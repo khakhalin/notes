@@ -1,14 +1,19 @@
 # GIT
 #tools
 
-## Typical everyday use
+Todo:
+* https://git-scm.com/docs/git-restore
+* https://git-scm.com/docs/git-rebase#_recovering_from_upstream_rebase
+
+# Typical everyday use
 * `git pull` - 	fetch latest changes, merge them, and rebase HEAD to the latest commit
 * `git diff` - show differences to unstaged files
 * `git add .` - stage everytyhing
 * `git commit -m "Message"` - commit
 * `git push` - push to origin ('Origin' is a silly name they use for a remote repo)
 
-## Analyzing stuff
+# Analyzing stuff
+* `git reflog` - some sort of most complete history? #todo
 * `git status` - see uncommited files + comparison to origin
 * `git diff` - see unstaged changes
 * `git diff HEAD` - see both staged and unstaged changes
@@ -18,25 +23,25 @@
 * `git log -p [file/dir]` - full history for this file, with diffs.
 * `git add [file]` - add one file only.
 
-## Backing up, carefully
+# Fixing mistakes, carefully
 * `git reset [file]` - when a file was staged, but not yet committed, unstage it.
 * `git stash` - put all uncommited files to a buffer
 * `git stash pop` - pop files from a buffer
+* `git reset --soft HEAD^` - returns everything to the stage before last commit. Here `HEAD^` signifies last commit, and is synonimous to `HEAD~1`.
 * `git commit --amend` #todo
 * `git rebase -i HEAD~3` - squash last 3 commits into one, interactively. **Do it only for commits that weren't pushed yet** (or you'll get a conflict with a remote repo), unless you're morally prepared to fix everything locally and force-push to origin, rewriting it. "Interactively" here means that a list of commits is generated, and you leave `pick` for those you want to leave; replace it with `drop` for those you want to delete, and `squash` for those that needs to be squashed (just make sure there's a 'pick' before it, for somewhere to squash to). This workflow is a reason why we shouldn't push to public repo too often (don't push micro-commits); wait until a reasonable piece of work is done, **clean the commits**, then push. [1](https://git-scm.com/docs/git-rebase#_interactive_mode), [2](https://medium.com/@porteneuve/getting-solid-at-git-rebase-vs-merge-4fa1a48c53aa)
+* `git restore [file]` - restore a file in the current tree from another tree or commit. Doesn't update the branch. In the past was homonymous with branch changing (both used the `checkout` keyword).
+* `git revert HEAD~3` - make a new commit that reverts changes in fourth last (3d with zero indexing) commit.
 
-## Backing up, panicky
-* `git reflog` → find last commit that is good → `git reset HEAD@{index}`- resets head to this commit, deletes everything after.
-
-## Branching
+# Branching
 * `git branch` - to know the current branch
-* `git checkout branch_name` - move to a target branch.
+* `git switch branch_name` - move to a target branch (in the past, used `checkout` command).
 * `git branch branch_name` - creates a new branch.
-* `git checkout -p branch_name` - an alias for creating a new branch at current HEAD, and checking it out. May be a good idea after a pull, to do all sorting in a safe branch, without endangering Master. [1](https://blog.carbonfive.com/2017/08/28/always-squash-and-rebase-your-git-commits/)
+* `git switch -p branch_name` - an alias for creating a new branch at current HEAD, and checking it out. May be a good idea after a pull, to do all sorting in a safe branch, without endangering Master. [1](https://blog.carbonfive.com/2017/08/28/always-squash-and-rebase-your-git-commits/)
 
 The concept of a **detached HEAD**: when HEAD points to an old commit. In this situation you cannot commit anything, as there's no branch to commit to (committing can only be done to the end of a branch). If you create a new branch there in the past however, you can commit, and then you can merge these changes if you need to. [1](https://www.atlassian.com/git/tutorials/using-branches/git-checkout)
 
-## Dangerous practices
+# Dangerous practices
 * `git rebase [target_branch] <source_branch>` - recommits new commits from the current branch (the one that is currently checked out), or the source_branch (if specified), to the end of the target branch; then moves HEAD to the target branch. The semantics here is "Rebase source onto target", and it is supposed to mirror "Merge source into target", as what you are doing is taking a thread of commits, and changing their base from whatever it is now, to target. 
 The pluses and minuses of rebase (compared to Merge):
         * Good: it makes history linear, and thus clear, as there's no branching and merging. Say, if a month ago you created a side-project file in a side branch, and nobody touched it since, but kept working on the main thing, there's no need in merging this file in; you can as well just recommit it on top of master (rebase).
@@ -49,12 +54,13 @@ The pluses and minuses of rebase (compared to Merge):
 * `git push --force` - hard push to origin, overwriting it: generally, a very dangerous idea.
 * `git fetch origin master; git reset --hard origin/master` - hard-pull from origin overwriting local files. Equally dangerous. [r1](https://stackoverflow.com/questions/1125968/how-do-i-force-git-pull-to-overwrite-local-files)
 
-## Destructive commands
+# Destructive commands
 * `git clean` - from the current dir, removes all files that are not under version control (all untracked files)
 * `git reset --hard [commit_id]` - purge all uncommited changes; reset to commit (last one by default)
 * `git branch -d branch_name` - deletes branch
+* `git reset --hard HEAD~3` - destroy and delete last 3 commits, reset HEAD three positions lower. Note: If you want to save their content just in case, before running this, do `git branch [branch_name]`. Then when you destroy commits in the original branch, they will still be present in this new branch. Note also that rewriting history like that is a very bad idea if those commits were already shared.
 
-## Open questions
+# Open questions
 * `git reset`
 * `--no-ff` for `git merge
 * `git pull -f` - what does this f mean?
