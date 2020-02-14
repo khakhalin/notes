@@ -6,7 +6,7 @@ Ensembles are about combining (or gradually refining) lots of poor predictions (
 
 Bootstrapping can be used to improve estimations: bootstrap the data repeatedly; each time build an estimator, then average predictions of these estimators. Why does it work though? For linear estimators (like linear regression) it doesn't, as E(h(x)) = h(E(x)) = h(full data). But for non-linear h(), like **regression trees**, it may smoothen idiosyncrasies of each individual h(x).
 
-How to best combine opinions of several classifiers into one output? One option is to one-hot encode output labels, average them up across models, produce a vector, then pick max coordinate (the most popular label). Another is to make classifiers output vectors of probabilities for different levels, without the last step (actual argmax-ing), and then average these outputs. It's smoother (lower variance), and also if each vector is ∑=1, then the final output would naturally ∑=1 as well.
+How to best combine opinions of several classifiers into one output? One option is to one-hot encode output labels, average them up across models, produce a vector, then pick max coordinate (the most popular label). Another is to make each classifier to output vectors of probabilities for different levels,  then average these probability. This latter approach is smoother (lower variance), and if each vector is ∑=1, then the final output would naturally ∑=1.
 
 > Bias is apparently unchanged (ESL p285, stated as a fact, followed by a page of confusing "illustration"). Is it because no additional constraints are introduced by the procedure? How to intuit it? In which cases the bias WOULD BE changed? What sorts of modifications of h(x) procedure change the bias, and which sorts do not?
 

@@ -272,6 +272,19 @@ Jing, L., & Tian, Y. (2019). [Self-supervised visual feature learning with deep 
 
 Kolesnikov, A., Zhai, X., & Beyer, L. (2019). [Revisiting self-supervised visual representation learning](http://openaccess.thecvf.com/content_CVPR_2019/papers/Kolesnikov_Revisiting_Self-Supervised_Visual_Representation_Learning_CVPR_2019_paper.pdf). arXiv preprint arXiv:1901.09005.
 
+Chollet, F. (2019). The Measure of Intelligence. arXiv preprint arXiv:1911.01547.
+https://arxiv.org/abs/1911.01547
+Endorsed by many great  people. Essentially, on how transfer and generalized intelligence may look, and how they may be tested. That's why I'm placing it in "Self-supervised learning" section: it is not really about it, but it is something that goes beyond approximating a data set; something like "transfer par excellence!""
+There is now also a Keggle challenge developed after it:
+https://www.kaggle.com/c/abstraction-and-reasoning-challenge
+Nice set of examples: repeat the pattern, move one part relative to another, color according to a certain rule, fill the gaps, etc. Like a set of nice IQ tests on a grid. A human (me) has no problem with some, and can figure others after 30-60s of concentration. But it's quite obvious that modern types of AI would have enormous problems with it.
+Will be hosted at [[Chollet2019measure]]
+
+A Simple Framework for Contrastive Learning of Visual Representations
+Ting Chen, Simon Kornblith, Mohammad Norouzi, Geoffrey Hinton
+https://arxiv.org/pdf/2002.05709.pdf
+Exploration of various unsupervized learning methods (contrastive learning with data augmentation). As a test of effectiveness, train the network in a supervized way on 1% of labels, measure its performance compared to the full set.
+
 Roads, B. D., & Love, B. C. (2020). Learning as the unsupervised alignment of conceptual systems. Nature Machine Intelligence, 1-7.
 https://arxiv.org/abs/1906.09012
 
@@ -291,6 +304,10 @@ https://arxiv.org/abs/1905.03670
 
 # Exploration, curiosity, RL
 
+Lázaro-Gredilla, M., Lin, D., Guntupalli, J. S., & George, D. (2018). Beyond imitation: Zero-shot task transfer on robots by learning concepts as cognitive programs. arXiv preprint arXiv:1812.02788.
+https://robotics.sciencemag.org/content/4/26/eaav3150.full?ijkey=9p/p9D23WW2Ek&keytype=ref&siteid=robotics
+Research article on imagination, recursion, and abstraction. Guessing context via transfer from prior experience.
+
 Ortega, P. A., Wang, J. X., Rowland, M., Genewein, T., Kurth-Nelson, Z., Pascanu, R., ... & Jayakumar, S. M. (2019). Meta-learning of Sequential Strategies. arXiv preprint arXiv:1905.03030.
 https://arxiv.org/pdf/1905.03030.pdf
 
@@ -303,10 +320,6 @@ https://bair.berkeley.edu/blog/2019/12/18/smirl/
 Meire Fortunato, Mohammad Gheshlaghi Azar, Bilal Piot, Jacob Menick, Ian Osband, Alex Graves, Vlad Mnih, Remi Munos, Demis Hassabis, Olivier Pietquin, et al. Noisy networks for exploration. arXiv preprint arXiv:1706.10295, 2017
 https://arxiv.org/pdf/1706.10295.pdf
 A weak (not good enough?) way to add exploration to AI playing videogames, by target-injecting noise into the network (?). Sometimes (?) elevates the performance from "sub-human to super-human" level (funny turn of a phrase).
-
-Lázaro-Gredilla, M., Lin, D., Guntupalli, J. S., & George, D. (2018). Beyond imitation: Zero-shot task transfer on robots by learning concepts as cognitive programs. arXiv preprint arXiv:1812.02788.
-https://robotics.sciencemag.org/content/4/26/eaav3150.full?ijkey=9p/p9D23WW2Ek&keytype=ref&siteid=robotics
-Research article on imagination, recursion, and abstraction. Guessing context via transfer from prior experience.
 
 Dauphin, Y. N., & Schoenholz, S. (2019). MetaInit: Initializing learning by learning to initialize. In Advances in Neural Information Processing Systems (pp. 12624-12636).
 https://papers.nips.cc/paper/9427-metainit-initializing-learning-by-learning-to-initialize
@@ -499,10 +512,6 @@ Original paper by Hinton, 1k citations.
 
 Artificial Intelligence, Values and Alignment. Iason Gabriel. 2020
 https://deepmind.com/research/publications/Artificial-Intelligence-Values-and-Alignment
-
-Chollet, F. (2019). The Measure of Intelligence. arXiv preprint arXiv:1911.01547.
-https://arxiv.org/abs/1911.01547
-Seems to be endorsed by many good people. Bump it up on the list!
 
 Turing, A. M. (1950). Computing machinery and intelligence. In Parsing the Turing Test (pp. 23-65). Springer, Dordrecht. 2005.
 http://www.geielettronica.it/images/pdf/turing.pdf

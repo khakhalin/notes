@@ -48,6 +48,7 @@ Python
 * what's the difference between hash-sets, hash-maps, and hash-tables?
 * radix sort 
 * that visual blog post about types of DL optimizers
+* graph cuts in computer vision
 * Hungarian algorithm
 * Latent Dirichlet Allocation ([ref](https://towardsdatascience.com/end-to-end-topic-modeling-in-python-latent-dirichlet-allocation-lda-35ce4ed6b3e0))
 * unit tests, pytests, mocking

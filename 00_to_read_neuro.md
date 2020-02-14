@@ -11,10 +11,6 @@ An opinion (perspective) on how we could, and should, use deep models to underst
 
 # General, top, and fun
 
-Aesthetic preference for art emerges from a weighted integration over hierarchically structured visual features in the brain (2020)
-Kiyohito Iigaya, Sanghyun Yi, Iman A. Wahle, Koranis Tanwisuth, John P O'Doherty
-https://www.biorxiv.org/content/10.1101/2020.02.09.940353v1
-
 Raman, D. V., Rotondo, A. P., & O’Leary, T. (2019). Fundamental bounds on learning performance in neural circuits. Proceedings of the National Academy of Sciences, 116(21), 10537-10546.
 https://www.pnas.org/content/116/21/10537.short
 
