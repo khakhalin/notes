@@ -40,3 +40,8 @@ K Wang, J Hinz, Y Zhang, TR Thiele, A Arrenberg - CELL-REPORTS-D-19-02981, 2019
 
 Antinucci, P., Folgueira, M., & Bianco, I. H. (2019). Pretectal neurons control hunting behaviour. Elife, 8.
 https://elifesciences.org/articles/48114.pdf
+
+# Adult frogs
+
+Thompson, P. A., & Boice, R. (1975). Attempts to train frogs: Review and experiments. Journal of Biological Psychology.
+(not available online)

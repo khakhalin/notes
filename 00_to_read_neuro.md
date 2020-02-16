@@ -160,6 +160,8 @@ Compartments, NMDA, all sorts of STDP stuff.
 
 # Credit assignment
 
+Bengio, Y., Lee, D. H., Bornschein, J., Mesnard, T., & Lin, Z. (2015). Towards biologically plausible deep learning. arXiv preprint arXiv:1502.04156.
+
 Bellec, G., Scherr, F., Subramoney, A., Hajek, E., Salaj, D., Legenstein, R., & Maass, W. (2019). A solution to the learning dilemma for recurrent networks of spiking neurons. bioRxiv, 738385.
 https://www.biorxiv.org/content/10.1101/738385v3
 Something like backpropagation in spiking networks.
@@ -296,6 +298,9 @@ Nested Neuronal Dynamics Orchestrate a Behavioral Hierarchy across Timescales
 Kaplan .. Zimmer
 https://www.cell.com/neuron/fulltext/S0896-6273(19)30932-8
 C elegans, activation dynamics. How fixed action patterns emerge from (are encoded by) the nervous system.
+
+Wilson–Cowan Equations for Neocortical Dynamics (2016)
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4733815/
 
 # Decision-making
 

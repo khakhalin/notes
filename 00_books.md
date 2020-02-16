@@ -25,6 +25,7 @@ Second priority books:
 * Think Complexity, by Allen B. Downey ([full pdf](https://greenteapress.com/wp/think-complexity-2e/)) - network sci, automata, all in Python
 * Foundations of ML by M. Mohri et al ([full pdf](https://cs.nyu.edu/~mohri/mlbook/)) - more mathy?
 * ML book by K.P. Murphy - ([site](https://www.cs.ubc.ca/~murphyk/MLbook/), but no full pdf)
+* Non-linear Dynamics and Chaos, by Steven Strogatz ([full pdf](http://www.hds.bme.hu/~fhegedus/Strogatz%20-%20Nonlinear%20Dynamics%20and%20Chaos.pdf))
 * Morgan, S. L., & Winship, C. (2015). Counterfactuals and causal inference (pdfs are googlable)
 * [Notes on dynamical systems](https://people.maths.bris.ac.uk/~macpd/ads/) ([pdf](https://people.maths.bris.ac.uk/~macpd/ads/bnotes.pdf)) from Carl Dettmann. Not a textbook, but close; worth scanning
 * Bayesian Statistics: Statistical Rethinking, by Richard McElreath
@@ -41,11 +42,13 @@ Third priority books:
 Books that are not on my reading list, but keeping here just in case:
 * Problem solving with data structures in Python ([full text, web](https://runestone.academy/runestone/books/published/pythonds/index.html))
 * [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/index.html) by Michael Nielsen
-* Competitive Programmer's Handbook by Antti Laaksonen: [pdf](https://cses.fi/book/book.pdf) (C++) - great idea, but the descriptions of algorithms are not clear, while implementations seem ideosyncratic...
+* Competitive Programmer's Handbook by Antti Laaksonen: [pdf](https://cses.fi/book/book.pdf) (C++) - great idea, but the descriptions of algorithms are not clear, while implementations seem ideosyncratic…
 
-Links for the computation course I'm teaching this spring:
-* Modeling and Simulation in Python, by Allen B. Downey: [link](https://greenteapress.com/wp/modsimpy/)
-* Examples of good student projects from Downey's course: [1](https://github.com/kdy304g/ComplexLizards-CA/blob/master/reports/final_report.md), [2](https://github.com/jzerez/swarm_classification/blob/master/reports/Final_Report.md)
+Coding problems
+* https://www.byte-by-byte.com/google-interview/
+* https://leetcode.com/
+* https://codingbat.com/java
+* https://codegolf.stackexchange.com/
 
 Job-search specific materials:
 * Cracking the code interview
@@ -74,8 +77,12 @@ Three books:
 * Think Complexity: http://greenteapress.com/complexity2/thinkcomplexity2.pdf
 * Modeling and simulation in Python: https://greenteapress.com/wp/modsimpy/
 
+On agent-based modeling, from "The Nature of Code" by Daniel Shiffman:
+* [Chapter 4, on particle systems](https://natureofcode.com/book/chapter-4-particle-systems/)
+* [Chapter 6, on autotonomous agents](https://natureofcode.com/book/chapter-6-autonomous-agents/) (he uses steering vehicles as an example)
+
 Other materials:
 * An introduction into the logic (not formulas or programming, but the ideas) of agent-based modeing (a short chapter by Nigel Gilbert): http://epubs.surrey.ac.uk/1580/1/fulltext.pdf
 * [Good exploration of logistic map and chaos](https://geoffboeing.com/2015/03/chaos-theory-logistic-map/)
 * [A collection of Jupyter models on topics of complexity](https://github.com/hsayama/PyCX)
-
+* Examples of good student projects from Downey's course: [1](https://github.com/kdy304g/ComplexLizards-CA/blob/master/reports/final_report.md), [2](https://github.com/jzerez/swarm_classification/blob/master/reports/Final_Report.md)

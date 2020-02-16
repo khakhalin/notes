@@ -40,6 +40,8 @@ Python
 **Classic ML and algorithms**
 * https://www.byte-by-byte.com/google-interview/
 * https://www.byte-by-byte.com/strings/
+* rust
+* finish Google production thing :) 
 * gradient boosting
 * https://cp-algorithms.com/data_structures/fenwick.html
 * https://cp-algorithms.com/data_structures/segment_tree.html
@@ -50,11 +52,12 @@ Python
 * that visual blog post about types of DL optimizers
 * graph cuts in computer vision
 * Hungarian algorithm
+* Kalman filter (and its friends)
 * Latent Dirichlet Allocation ([ref](https://towardsdatascience.com/end-to-end-topic-modeling-in-python-latent-dirichlet-allocation-lda-35ce4ed6b3e0))
 * unit tests, pytests, mocking
 * Bayesian PCA
 * Bloom filter
-* Kalman filter (and its friends)
+* Demixed principal component analysis - some MDS technique on top of PCA; seems to be moderately popular with some neuro people. What's the gist of it?
 * Expectation-Maximization
 * Bayes Information Criterion - will be naturually described once I cover model selection?
 * better understanding of Gaussian processes
