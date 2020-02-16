@@ -4,6 +4,9 @@
 
 # Intros and top choices
 
+Raschka, S., Patterson, J., & Nolet, C. (2020). Machine Learning in Python: Main developments and technology trends in data science, machine learning, and artificial intelligence. arXiv preprint arXiv:2002.04803.
+https://arxiv.org/abs/2002.04803
+
 A list of most influential DL papers of past decade, with pics and summaries!
 https://leogao.dev/2019/12/31/The-Decade-of-Deep-Learning/
 
@@ -136,6 +139,9 @@ Ba, J., & Caruana, R. (2014). Do deep nets really need to be deep?. In Advances 
 https://papers.nips.cc/paper/5484-do-deep-nets-really-need-to-be-deep.pdf
 Seems to be one of the original network distillation papers (800 refs)
 
+Virgolin, M., Alderliesten, T., & Bosman, P. A. (2020). On explaining machine learning models by evolving crucial and compact features. Swarm and Evolutionary Computation, 53, 100640.
+https://arxiv.org/abs/1907.02260
+
 # Interpretability
 
 TensorFlow Lattice: Flexible, controlled and interpretable ML
@@ -169,6 +175,16 @@ Hooker, S., Courville, A., Dauphin, Y., & Frome, A. (2019). Selective Brain Dama
 https://weightpruningdamage.github.io/
 Tweet-thread: https://twitter.com/sarahookr/status/1197514514167545858
 tldr: while pruning may preserve the bulk of performance, it's still a trade-off, and usually it lowers performance on selective rare special cases that networks stops recognizing. They used ImageNet, and identified which images exactly are "lost" during pruning.
+
+Liu, Z., Sun, M., Zhou, T., Huang, G., & Darrell, T. (2018). Rethinking the value of network pruning. arXiv preprint arXiv:1810.05270.
+https://arxiv.org/pdf/1810.05270.pdf
+They expressed concerns that ticket hypothesis might not be true, but later decided that for sparse enough networks it is true after all:
+Frankle, J., Dziugaite, G. K., Roy, D. M., & Carbin, M. Stabilizing the Lottery Ticket Hypothesis. arXiv, page.
+https://arxiv.org/abs/1903.01611
+
+Gale, T., Elsen, E., & Hooker, S. (2019). The state of sparsity in deep neural networks. arXiv preprint arXiv:1902.09574.
+https://arxiv.org/abs/1902.09574
+Showing that for networks that are sparse enough, the ticket hypothesis still works.
 
 Individual differences among deep neural network models (2020)
 Johannes Mehrer, Courtney J. Spoerer, Nikolaus Kriegeskorte, Tim C Kietzmann
@@ -459,7 +475,9 @@ Makhzani, A. (2018). Implicit autoencoders. arXiv preprint arXiv:1805.09804.
 https://arxiv.org/abs/1805.09804
 Sort of GAN-like architecture that tries to optimize the latent space directly? Interesting, but hard to get from the abstract.
 
-Find original Neurips GAN paper from 2016?
+Mordvintsev, A., Randazzo, E., Niklasson, E., & Levin, M. (2020). Growing Neural Cellular Automata. Distill, 5(2), e23.
+https://distill.pub/2020/growing-ca/
+A paper and a sim, two in one!
 
 # Graphical
 Bacciu, D., Errica, F., Micheli, A., & Podda, M. (2019). A Gentle Introduction to Deep Learning for Graphs. arXiv preprint arXiv:1912.12693.

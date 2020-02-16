@@ -2,7 +2,8 @@
 #algo #bib
 
 Subtopics:
-* [[graph_algos]] - everything about graphs
+* [[algos_graph]] - everything about graphs
+* [[algos_trees]]
 
 Data structures:
 * [[priority_queue]]

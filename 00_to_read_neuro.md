@@ -196,6 +196,7 @@ https://www.nature.com/articles/s41593-018-0147-8
 Fremaux N, Sprekeler H, Gerstner W. Reinforcement learning using a continuous time actor-critic framework with spiking neurons. PLoS computational biology. 2013;9(4):e1003024.
 
 # DL models of brains
+#deepneuro
 
 Deep Neural Networks as Scientific Models (2020). Radoslaw M. Cichy, Daniel Kaiser. Trends in Cognitive Sciences.
 https://www.cell.com/trends/cognitive-sciences/fulltext/S1364-6613(19)30034-8

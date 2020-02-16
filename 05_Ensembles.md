@@ -36,7 +36,7 @@ A practical way to create a reasonable linear combination of several non-linear 
 
 **Stacked generalization** or **Stacking**: Say you have a way of building various models f_m, and training each of them on a dataset X. Models f_m may belong to the same class, or to different classes, but it is important that they are sufficiently different: that is, they need to be defined both by the training set X, and by some hyperparameters that come with the model itself. So while each model is a function of a dataset, f(X), two models f_m1(X) and f_m2(X) should still be different.
 
-Consider training each model f_m() on a dataset  X minus observation xi. It creates a family of predictors $f_m^{-i}(x)$ for each model class f_m(), providing a good way of assessing the accuracy of m-type models f_m() via cross-validation: just predict y_i by each f^{-i}, and sum all errors. But instead of just picking the best model, we will build the best linear combination of all these models, by finding an optimal vector of weights w, so that
+Consider training each model f_m() on a dataset  X minus observation xi. It creates a family of predictors $f_m^{-i}(x)$ for each model class f_m(), providing a good way of assessing the accuracy of m-type models f_m() via cross-validation: just predict y_i by each $f^{-i}$, and sum all errors. But instead of just picking the best model, we will build the best linear combination of all these models, by finding an optimal vector of weights w, so that
 $\sum_i \big( y_i - \sum_m w_m f_m^{-i}(x_i)\big)^2$ is minimal. In other words, we find a set of coefficients w, so that the linear combination of all f_m gives the best total cross-validation across all "remove one x_i". It also helps to constrain w to w_i>0 ∀i and ∑w_i = 1, as it turns it into a quadratic problem. That's called "stacking".
 
 Refs:
@@ -50,14 +50,14 @@ It's important to keep all models in  the comparison group similar in their comp
 
 # Boosting
 
-Boosting uses simplest decision trees possible:  single split into 2 categories, aka **decision stumps**. But with every next group of trees, we increase the weights for those elements that weren't classified correctly by the previous generation of classifiers (starting with equal weights at the beginning of the process, for the first tree). These weights may either be explicitly included in the error calculation, or be used as probabilities of each data point  appearing in next training subset (the result is the same). At the end, predictions are made by **weighted majority rule**: weighted average by the **accuracy of individual trees**, followed by argmax.
+Boosting uses simplest decision trees possible:  for every coordinate we make a single split into 2 categories, aka **decision stumps**. But with every next series of trees, we increase the weights for those elements that weren't classified correctly by the previous generation of classifiers. (At the beginning of the process, for the very first tree, we start with equal weights). These weights may either be explicitly included in the error calculation, or be used as probabilities for each data point to appear in next training subset (mathematically, the results are the same). At the end, predictions are made by **weighted majority rule**: the average across all trees, weighted by the **accuracy of individual trees**, followed by argmax.
 
 The most popular, archetypical approach: **AdaBoost**, aka **Adaptive Boosting**. For a binary discrete case:
 1. Start with all points x_i having identical weights {W}. ∑w_i = 1, so w_i = 1/n.
 2. For each available coordinate, find the best split (aka stump), with smallest total error E = ∑w_i ϵ_i, where ϵ_i = 1∙(h(x_i)==y_i).
-3. Across all coordinates, find a split that minimizes [[gini]] index for this split. For all loops after the 1st (for all loops when weights are different), either use **weighted gini index**, or randomly resample points with draw probability P ∝ w (draw with repetition, keeping the total number of points considered at each split ~constant).
-4. Calculate the weight of this stump as α = ½ log((1−E)/E) . This formula →+∞ for E→0 (perfect split), →-∞ for E→1 (perfectly erroneous split), and ~0 for splits that perform near chance level, when E=1-E, and so we get log(1). In practice, to avoid ∞, a tiny ε is added to both numerator and denominator of the fraction under the log().
-5. Increase the weights of misclassified samples: w_i ← w_i ∙ exp(α); decrease the weights of correctly classified samples by multiplying them by exp(−α); then normalize all weights to ∑w = 1.
+3. Across all coordinates, find a split with minimal [[gini]] index. For all loops after the 1st (once the weights are different), either use **weighted gini index**, or randomly resample points with draw probability P ∝ w (draw with repetition, keeping the total number of points considered at each split constant).
+4. Calculate the weight of this stump as α = ½ log((1−E)/E) . This formula →+∞ for E→0 (perfect split), →-∞ for E→1 (perfectly erroneous split), and ~0 for splits that perform near chance level, when E=1-E, and so α≈log(1). In practice, to avoid ∞, a tiny ε is added to both numerator and denominator of the fraction under the log().
+5. Increase weights of misclassified samples: w_i ← w_i ∙ exp(α); decrease weights of correctly classified samples by multiplying them by exp(−α); then normalize all weights to ∑w = 1.
 6. Go to step 2.
 
 > Is it true that in practice randomly resampling points is better than using a weighted formula? Nobody says it openly, but if it weren't the case, why would people repeat this whole resampling story in each tutorial?
@@ -65,7 +65,7 @@ The most popular, archetypical approach: **AdaBoost**, aka **Adaptive Boosting**
 7. Once everything is classified, rejects trees with accuracy less than 50%. _Not all descriptions mention that._
 8. Produce an average of tree outputs, weighted by α .
 
-Because each split is a single plane (line), || to all other variables, the decision border looks like a combination of these planes (lines). But all are ⊥; there are no curves or non-right angles there. 
+Because each split is a single plane (line), || to all other variables, the decision border looks like a combination of these planes (lines). But all of them are ⊥ or || to each other, just shifted; there are no curves or non-right angles there. The final decision border will look kinda like a 
 
 For multi-class classification, either create lots of binary classifiers (each class against all others), or encode each class as a superposition of several binary "features" that may be present or absent (say, bunnies are cute and jumpy, cats are cute but not jumpy; crickets are jumpy but not cute etc.), then use AdaBoost to identify the presence of features ([ref](https://engineering.purdue.edu/kak/Tutorials/AdaBoost.pdf)).
 
@@ -75,15 +75,15 @@ In many ways, AdaBoost goes against the conventional wisdom for classification: 
 
 # Gradient Boosting
 
-**Gradient Boosting Machines**, or **GBM**, work in problems where the output is numerical rather than categorical. GB recursively approximates Y as a series of models {F_k], with each next model F_k  improved over the previous one: F_k = F_k-1 + f_k(x), where f_k() is some sort of weak learner. The basic algorithm, therefore, is at each step to iteratively approximate the difference between Y and the previous best model F_k (aka the residual) with a new function f_k(x).
+**Gradient Boosting Machines**, or **GBM**, work in problems where the output is numerical rather than categorical. GB recursively approximates Y as a series of models {F_k], with each next model F_k  improves over the previous one: F_k = F_k-1 + f_k(x), where f_k() is some sort of weak learner. The basic algorithm, therefore, is at each step to iteratively approximate the difference between Y and the previous best model F_k (aka the residual) with a new function f_k(x).
 
-In practice, the most popular type of weak learners f() for GB is a **regression tree**, or more precisely a **regression tree stump**: the simplest decision tree that consists of one basic split over one variable (one coordinate of X), and procudses two different values (levels) on each side of this split. Once the fitting procedure is over, all regression tree stumps are summed together, to produce the final output of the ensemble. 
+In practice, the most popular type of a weak learner f() for GB is a **regression tree**, or more precisely a **regression tree stump**: the simplest decision tree that consists of one basic split over one variable (one coordinate of X), and produces two different values (levels) on each side of this split. Once the fitting is complete, all regression tree stumps are summed together, to produce the final output of the ensemble. 
 
-To find the best split (best model improvement) at each step, we need to first introduce a smooth differentiable loss function (usually L2, provided that there are no outliers, or L1 if outliers are common).  GB then performs a stepwise gradient descent to minimize this loss function. Depending on the function, descent can be performed in several different ways:
-* One, is to use f(x) to fit Y-F_k: a vector of differences between each y_i and its beast current estimation F_k(x_i), as described above. This leads to minimzation of L2.
-* Another approach is to fit sign(Y-F_k): some sort of Manhattan-style normalized direction towards the gradient. This leads to minimization of L1.
+To find the best split (best model improvement) at each step, we need to first introduce a smooth differentiable loss function (usually L2, if there are no outliers, or L1 if outliers are common). GB then performs a stepwise gradient descent to minimize this loss function. Depending on the function, descent can be performed in several different ways:
+* One approach, is to use f(x) to fit Y-F_k: a vector of differences between each y_i and its best current estimation F_k(x_i), as described above. This leads to minimzation of L2.
+* Alternatively, one can fit sign(Y-F_k): some sort of Manhattan-style normalized direction towards the gradient. This leads to minimization of L1.
 
-Often, each impovement f_k() also isn't applied in full, but is multiplied by a coefficient η < 1 (typically 0.5 to 1.0), called the **learning rate**. This smoothens the descent.
+Often instead of applying each impovement f_k() in full, it is multiplied by a coefficient η < 1 (typically between 0.5 and 1.0), called the **learning rate**. This smoothens the descent.
 
 The first (or rather 0th) optimization step is to calculate the mean of all data (for L2 loss), or its median (for L1).
 
@@ -109,9 +109,9 @@ Refs: [1](https://quantdare.com/what-is-the-difference-between-bagging-and-boost
 
 # Random forest
 
-The idea: construct many full trees, by bagging (partial data), but also by providing to every tree a random subset of features (aka **feature bagging**; typically √p features out of p total, or something like max(5, p/3), ref: [wiki](https://en.wikipedia.org/wiki/Random_forest#From_bagging_to_random_forests)). This is an improvement upon bagging, as it makes trees less correlated, more diverse. 
+The idea: construct many full trees, by bagging (partial data), but also by providing to every tree a random subset of features (aka **feature bagging**; typically √p features out of p total, or something like max(5, p/3), ref: [wiki](https://en.wikipedia.org/wiki/Random_forest#From_bagging_to_random_forests)). This is an improvement upon bagging, as it makes trees less correlated, more diverse. In this approach, trees are always built to maximal depth, which makes them quite overfitted, but it's OK, as there are many of them.
 
-> Not sure if the sequence in which different values are used for splits is randomized for each tree, or allowed to be optimal. I'd expect that both approaches could be possible, depending on dimensionality; is it true?
+> Not sure if the sequence in which different values are used for splits is also randomized for each tree, or allowed to be optimal. I'd expect that both approaches could be possible, depending on dimensionality; is it true?
 
 Variant: **Extra Trees** of **Extremely Randomized Trees**, where for each tree the first split is made at random (random feature, random point), then the rest of a tree is allowed to be optimized.
 

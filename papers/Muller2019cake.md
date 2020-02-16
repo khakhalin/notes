@@ -1,5 +1,5 @@
 # Neocortical plasticity: an unsupervised cake but no free lunch
-Eilif B. Muller 
+Muller, E. B., & Beaudoin, P. (2019). Neocortical plasticity: an unsupervised cake but no free lunch. arXiv preprint arXiv:1911.08584.
 
 https://openreview.net/pdf?id=S1g_N7FIUS 
 

@@ -2,7 +2,7 @@
 
 #classification
 
-Has nothing to do with Gini coefficient from economics, except that it was introduced by the same mathematician Corrado Gini ([ref](https://jamesmccaffrey.wordpress.com/2018/09/06/calculating-gini-impurity-example/)). Good for quantifying the quality of classification by a decision tree (not necessarily with 2 categories). Lies betweein 0 (limit case for one category overpowering all) and 1 (limit case for inifinitely many equally represented categories).
+Has nothing to do with Gini coefficient from economics, except that both were introduced by the same dude Corrado Gini ([ref](https://jamesmccaffrey.wordpress.com/2018/09/06/calculating-gini-impurity-example/)). **Gini impurity** is good for quantifying the quality of classification by a decision tree (not necessarily with 2 categories). Lies betweein 0 (a limit case for one category overpowering all) and 1 (a limit case for inifinitely many equally represented categories).
 
 Quantifies the **probability of mislabeleing an element if we pick it at random**, and then **label it at random**, but with probabilities of different labels matching observed probabilities in the distribution.
 
