@@ -74,6 +74,7 @@ Python
 **Practical stuff:**
 * Checkpoints
 * Keras hyperparameter optimization
+* Python collections: deque, Counter, defaultdict etc.
 
 **Deep Learning:**
 * What's so eager about eager mode

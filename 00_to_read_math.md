@@ -217,7 +217,10 @@ The splashy "original distillation paper" (2500 refs)
 
 Furlanello, T., Lipton, Z. C., Tschannen, M., Itti, L., & Anandkumar, A. (2018). Born-again neural networks. arXiv preprint arXiv:1805.04770.
 https://arxiv.org/pdf/1805.04770.pdf
-Top read!
+
+Hossein Mobahi, Mehrdad Farajtabar, Peter L. Bartlett (2020). Self-Distillation Amplifies Regularization in Hilbert Space. https://arxiv.org/abs/2002.05715
+Feeding predictions of network as additional training points serves as regularization (or maybe rather, amplifies existing regularization?), and improves accuracy. Really good visuals, in this paper. In a way, self-distillation may be considered a case of self-supervised learning (almost unsupervised, in a way). Also a good twitterthread:
+https://twitter.com/TheGradient/status/1228132843630387201
 
 Self-training with Noisy Student improves ImageNet classification Qizhe Xie, Eduard Hovy, Minh-Thang Luong, Quoc V. Le
 https://arxiv.org/abs/1911.04252
