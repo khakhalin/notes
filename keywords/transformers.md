@@ -1,6 +1,11 @@
 # Transformers
 #attention #text #dl
 
+# Unprocessed bibliography:
+
+Peter Clark, Oyvind Tafjord, Kyle Richardson. (2020) Transformers as Soft Reasoners over Language https://arxiv.org/abs/2002.05867
+Show how, once learned on texts, transformers can solve sillogisms (infer T/F of a statement, given a set of statements.)
+
 # Background and history
 
 An alternative to RNNs (summary ref: [1](https://towardsdatascience.com/transformers-141e32e69591)). Text is inherently a stream of signals (words), organized in time, so it makes sense that it should be analyzed by **RNNs**. The problem is that text has long-ish connections (say, objects are elliptically passed from one sentence to another), and RNNs have problems with that (forget, or rather, don't even learn). Then **LSTM** was invented, which improves things, but not enough, as the context still tends to decay exponentially. Also, hard to parallelize, as inputs need to be processed word-by-word. Then they came up with **attention**, by assigning every word a certain "hidden state", and passing it to the entire line (_??? I really not sure how it works_), but still it didn't help enough. The lack of parallelization was the main bottleneck.
