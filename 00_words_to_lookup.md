@@ -39,8 +39,6 @@ Python
 
 **Classic ML and algorithms**
 * https://www.byte-by-byte.com/google-interview/
-* https://www.byte-by-byte.com/strings/
-* rust
 * finish Google production thing :) 
 * gradient boosting
 * https://cp-algorithms.com/data_structures/fenwick.html
@@ -50,9 +48,10 @@ Python
 * what's the difference between hash-sets, hash-maps, and hash-tables?
 * radix sort 
 * that visual blog post about types of DL optimizers
-* graph cuts in computer vision
 * Hungarian algorithm
 * Kalman filter (and its friends)
+* graph cuts in computer vision
+* https://www.byte-by-byte.com/strings/
 * Latent Dirichlet Allocation ([ref](https://towardsdatascience.com/end-to-end-topic-modeling-in-python-latent-dirichlet-allocation-lda-35ce4ed6b3e0))
 * unit tests, pytests, mocking
 * Bayesian PCA
