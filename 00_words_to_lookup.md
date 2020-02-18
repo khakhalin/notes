@@ -30,19 +30,17 @@ Parked parts of ESL that need to be revisited:
 
 #todo: [[system_design]] - sorta priority
 
-Python
-* refresh strings functions in Python, like the full set of them
-* f-strings in Python ([ref](https://docs.python.org/3/library/string.html#format-specification-mini-language)): summarize here somewhere, refresh
-* ascii codes
-* easiest way to convert '5' to 5 and the other way around
-* sets in Python: are they worth it?
-
 **Classic ML and algorithms**
-* https://www.byte-by-byte.com/google-interview/
+* https://www.byte-by-byte.com/google-interview/ - check other topics
 * finish Google production thing :) 
-* gradient boosting
-* https://cp-algorithms.com/data_structures/fenwick.html
-* https://cp-algorithms.com/data_structures/segment_tree.html
+* finish gradient boosting
+* finish SVM
+* random forest
+* apply svm, boostig
+* implement from scratch in numpy:
+    * small DL
+    * SVM
+    * random forest
 * Capsule neural network - some sort of generalization of convolutional networks for hierarchical data?? Never heard of them, but they are actually quite well cited!!
 * the difference between tSNE and UMAP
 * what's the difference between hash-sets, hash-maps, and hash-tables?
@@ -52,6 +50,8 @@ Python
 * Kalman filter (and its friends)
 * graph cuts in computer vision
 * https://www.byte-by-byte.com/strings/
+* https://cp-algorithms.com/data_structures/fenwick.html
+* https://cp-algorithms.com/data_structures/segment_tree.html
 * Latent Dirichlet Allocation ([ref](https://towardsdatascience.com/end-to-end-topic-modeling-in-python-latent-dirichlet-allocation-lda-35ce4ed6b3e0))
 * unit tests, pytests, mocking
 * Bayesian PCA
@@ -68,7 +68,7 @@ Python
 * Resampling techniques: SMOTE, isotonic regression, Platt scaling
 * Principal variables
 * Mahalanobis distance
-* Particle filter
+* Particle filters
 
 **Practical stuff:**
 * Checkpoints
@@ -97,6 +97,8 @@ Python
 * Wavenet - that famous convolution network that generates audio on-the-fly
 
 **Technical stuff**
+* f-strings in Python ([ref](https://docs.python.org/3/library/string.html#format-specification-mini-language)): summarize in a separate doc
+* sets in Python: are they worth it?
 * regex in Python
 * JSON - how does it work, why everybody love it, and is it the present or the future? ([wiki](https://en.wikipedia.org/wiki/JSON))
 * YAML - some standard for keeping stuff that's like XML, but human-readable. Who uses it? Is it popular? ([wiki](https://en.wikipedia.org/wiki/YAML))

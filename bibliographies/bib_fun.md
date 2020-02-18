@@ -15,3 +15,8 @@ Burns, K., & Bechara, A. (2007). Decision making and free will: A neuroscience p
 What explains the relationship between spatial and mathematical skills? A review of evidence from brain and behavior. (2020). Zachary Hawes. Daniel Ansari.
 (Available on ResearchGate)
 
+# Minimal cognition
+
+Plants can hear bees:
+https://onlinelibrary.wiley.com/doi/full/10.1111/ele.13331
+Veits, M., Khait, I., Obolski, U., Zinger, E., Boonman, A., Goldshtein, A., ... & Kabat, A. (2019). Flowers respond to pollinator sound within minutes by increasing nectar sugar concentration. Ecology letters, 22(9), 1483-1492.

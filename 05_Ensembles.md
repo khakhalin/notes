@@ -113,6 +113,9 @@ The idea: construct many full trees, by bagging (partial data), but also by prov
 
 > Not sure if the sequence in which different values are used for splits is also randomized for each tree, or allowed to be optimal. I'd expect that both approaches could be possible, depending on dimensionality; is it true?
 
-Variant: **Extra Trees** of **Extremely Randomized Trees**, where for each tree the first split is made at random (random feature, random point), then the rest of a tree is allowed to be optimized.
-
 All trees usually have an equal vote in the final classification.
+
+Random forests are great for ranging features in terms of their usefulness, as one can see at the average performance of trees that include a certain feature, and compare it to the average performance of all trees in a forest (aka **Feature Importance**). Scikit-Learn, for example, computes these scores automatically.
+
+A similar approach: **Extra Trees** of **Extremely Randomized Trees**, where for each tree the first split is made at random (random feature, random point), then the rest of a tree is allowed to be optimized. Sometimes performs better than a standard RF, sometimes not.
+

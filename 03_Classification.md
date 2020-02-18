@@ -28,7 +28,7 @@ An even better approach: **AUC** = **Area under the ROC (Receiver Operating Char
 
 Interestingly, AUC = P(score of a true example > score of a wrong example). _I wonder if proving this is hard?_ #todo
 
-**Prediction bias**: a very simple measure of model validity: average value of all predictions - average value of all learning points. In a reasonable model, prediction bias should be close to 0. A way to assess it: build a **calibration plot** - bucket values, calculate predictions, then plot mean(predictions) against mean(values). May help to find areas where the model misbehaves.
+**Confusion matrix**: a good diagnostic tool for multi-class classification. Take all true classes, and tally into which classes they are misclassified. Identify the issues. _Is it better to do it on the validation set?_ It's better to zero the diagonal, as most cases will be classified correctly, but we're interested in the errors!
 
 Canonical system of names for **Validation and Testing**:
 * **Training dataset** - obviously
