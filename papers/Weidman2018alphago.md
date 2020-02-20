@@ -1,7 +1,7 @@
 # The 3 Tricks That Made AlphaGo Zero Work
 by Seth Weidman, January 1st 2018
 https://hackernoon.com/the-3-tricks-that-made-alphago-zero-work-f3d47b6686ef
-#blog #rl
+#blog #rl #game
 
 A summary of how **AlphaGo** works
 
