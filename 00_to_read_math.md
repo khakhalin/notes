@@ -321,6 +321,9 @@ What's the current view of greedy training of autoencoders? Is it an abandoned t
 Zhai, X., Oliver, A., Kolesnikov, A., & Beyer, L. (2019). S4L: Self-Supervised Semi-Supervised Learning. arXiv preprint arXiv:1905.03670.
 https://arxiv.org/abs/1905.03670
 
+Ravanelli, M., Zhong, J., Pascual, S., Swietojanski, P., Monteiro, J., Trmal, J., & Bengio, Y. (2020). Multi-task self-supervised learning for Robust Speech Recognition. arXiv preprint arXiv:2001.09239.
+https://arxiv.org/abs/2001.09239
+
 # Exploration, curiosity, RL
 
 Lázaro-Gredilla, M., Lin, D., Guntupalli, J. S., & George, D. (2018). Beyond imitation: Zero-shot task transfer on robots by learning concepts as cognitive programs. arXiv preprint arXiv:1812.02788.
@@ -516,6 +519,12 @@ A response to Wilson 2020 above! :) Best type of scientific exchange! Also a blo
 Fort, S., Hu, H., & Lakshminarayanan, B. (2019). Deep Ensembles: A Loss Landscape Perspective. arXiv preprint arXiv:1912.02757. 
 https://arxiv.org/pdf/1912.02757.pdf
 How Bayesian networks help to understand ensemble effects in deep learning (as they learn the distributino of parameters instead of instances?). Some lovely, inspiring pictures.
+
+Bayesian Deep Learning and a Probabilistic Perspective of Generalization
+Andrew Gordon Wilson, Pavel Izmailov (2020)
+https://arxiv.org/abs/2002.08791
+Also a tweeprint: https://twitter.com/andrewgwils/status/1230669857840123906
+Something interesting about generalization and priors; I didn't quite understand it, so return to the tweetprint after reading the paper. They seem to be talking to people in the narrow field even while tweetprinting, unfortunately :)
 
 # Alternative network designs
 

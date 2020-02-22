@@ -19,7 +19,7 @@ KNN is an archetype for many fancy methods. For example, if instead of "nearest"
 
 **Precision and recall**: Let's concentrate on detection only (positive predictions only). We want something that is proportinal to true positives (TP), but what to put in the denominator? Two options: 
 
-* TP/(all positive predictions) = TP/(TP+FP) - how well can we believe positive predictions. Is called **Prediction**, and is related to false discovery rate (P=1-FDR). From the stats POV, it's about false-positives, or Type I.
+* TP/(all positive predictions) = TP/(TP+FP) - how well can we believe positive predictions. Is called **Precision**, and is related to false discovery rate (P=1-FDR). From the stats POV, it's about false-positives, or Type I.
 * TP/(all actual positives) = TP/(TP+FN) - how well does the model actually detect cases, and how sure can we be that most positive cases were detected, that not much was left behind. **Recall**. From the stats POV, it's about false-negatives, or Type II.
 
 Can we balance them somehow, to make sure the model is reasonably good on both accounts? Most popular approach: **F1 score**: F = 2∙(precision∙recall)/(precision+recall) = harmonic_mean(precision,recall) = inv(mean(inv(precision),inv(recall))).
@@ -88,7 +88,7 @@ $Φ_k(x) = \frac{1}{უ}\exp\big( -½ (x-μ_k)^Tტ^{-1}_k(x-μ_k) \big)$,
 
 where $უ = 2π^{(p/2)}\sqrt{\det(C)}$, and ტ is a covariance matrix of this Gaussian, defining its shape (elongation) and orientation. If we don't put any extra assumptions into it, this approach would be called **Quadratic Discriminant Analysis (QDA)**, but if we assume that all gaussians have the same shape, in the sense that ტ is shared across all classes, we get **Linear Discriminant Analysis (LDA)**.
 
-Apparently if you do log(P_k/P_l) for two classes k and l (decision boundary), you end up with an equation linear in x (ESL p108), making the decision boundary linear, because lots of terms cancel each out. _I don't get the math, but have to park it for now._ Because ტ is not necessarily spherical (σ²I would be spherical), bisectors of classes are not necessarily ⊥ to the lines connecting the centroids.
+Apparently if you do log(P_k/P_l) for two classes k and l (decision boundary), you end up with an equation linear in x (ESL p108), making the decision boundary linear, because lots of terms cancel each other out. _I don't get the math, but have to park it for now._ As ტ is not necessarily spherical (σ²I would be spherical), bisectors of classes are not necessarily ⊥ to lines connecting the centroids.
 
 The decision becomes a simple thersholding of a **linear discriminant function**: δ(x) = ⟨x,ω⟩ against a certain threshold c, where vector ω = ტ⁻¹μ, and thresholds c = ½ μᵀტ⁻¹μ - log n. Here μ is the mean for this class, estimated as μ = ∑x/n for all xi in this class; n is the number of elements in this class. Whichever δ (for whichever class) has the highest value for a given x, defines the predicted class: g = argmax_k δ_k (x). As ტ is assumed to be the same for all gaussians, the formula for it is similar to pooled variance: ტ = ∑_i (xi - μi)(xi-μi)ᵀ/(N-K), where μi is a matching mean for point xi; N is the number of points, and K is the number of classes. The thresholds can also be optimized explicitly, as hyperparameters, to achieve optimal class separation.
 

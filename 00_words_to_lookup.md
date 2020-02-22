@@ -36,7 +36,9 @@ Parked parts of ESL that need to be revisited:
 * finish gradient boosting
 * finish SVM
 * random forest
-* apply svm, boostig
+* random forest vs. adaboost?
+* apply svm, boosting
+* normal equation ([link?](http://mlwiki.org/index.php/Normal_Equation#Normal_Equation_vs_Gradient_Descent))
 * implement from scratch in numpy:
     * small DL
     * SVM
