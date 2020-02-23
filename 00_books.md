@@ -51,9 +51,10 @@ Coding problems
 * https://codegolf.stackexchange.com/
 
 Job-search specific materials:
-* Cracking the code interview
+* Cracking the code interview (a book)
 * [[Huyen2019book]] - a short book on data science / ML job interviewing
 * [Numbeo "cost of living" indices](https://www.numbeo.com/cost-of-living/rankings.jsp) - to scale salary expectations for the location
+* See also: [[ml_questions]] - an unstructured list of random ML and math questions
 
 # Courses
 * [Google Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course/) - a really good introduction for complete noobs 

@@ -66,7 +66,11 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 
 **Heap** (prog): a tree-like structure where children < parents. An optimal realization of a [[priority_queue]] (similar to a stack, but with built-in sorting by priority).
 
+**Hessian** (math): a matrix of all 2nd-order partial derivatives, for a scalar function, over all of its arguments. H_ij = ∂²f/∂x_j ∂x_i. H is a transposed Jacobian of a gradient (Hᵀ = J∇f). Appears in optimization as a Taylor approximation around the optimum.
+
 **Indicator matrix** (data): A matrix Y, in which each row one-hot encodes the class g of a data point x. See [[03_Classification]].
+
+**Jacobian** (math): a matrix of all 1st order partial derivates of a vector function over its arguments. J_ij = ∂f_i / ∂x_j.
 
 **JVM** (dev): Java Virtual Machine.
 

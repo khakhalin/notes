@@ -13,6 +13,10 @@ https://leogao.dev/2019/12/31/The-Decade-of-Deep-Learning/
 More info on decision trees, pruning
 https://towardsdatascience.com/the-complete-guide-to-decision-trees-28a4e3c7be14
 
+Ioffe, S., & Szegedy, C. (2015). Batch normalization: Accelerating deep network training by reducing internal covariate shift. arXiv preprint arXiv:1502.03167.
+[https://arxiv.org/abs/1502.03167](<https://arxiv.org/abs/1502.03167>)
+Main paper on batch normalization (with like 30k references). Read and summarize in the [[06_DL]] section.
+
 Try to get the gist of it, even if just to participate in the discussion. File, even if math turns to be harder than comfortable:
 Automatic Differentiation via Contour Integration
 Jan 16, 2020. Aidan Rocke
