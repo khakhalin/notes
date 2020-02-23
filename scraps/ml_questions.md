@@ -368,7 +368,36 @@ What are structured probabilistic models or graphical models?
 In the context of structured probabilistic models, what are directed and undirected models? How are they represented? What are cliques in undirected structured probabilistic models?
 What is population mean and sample mean?
 What is population standard deviation and sample standard deviation?
-Why population s.d. has N degrees of freedom while sample s.d. has N-1 degrees of freedom? In other words, why 1/N inside root for pop. s.d. and 1/(N-1) inside root for sample s.d.? (Here)
+Why population s.d. has N degrees of freedom while sample s.d. has N-1 degrees of freedom? In other words, why 1/N inside root for pop. s.d. and 1/(N-1) inside root for sample s.d.?
 What is the formula for calculating the s.d. of the sample mean?
 What is confidence interval?
 What is standard error?
+
+What is the difference between supervised and unsupervised Machine Learning
+What is bias, variance trade-off?
+What is exploding gradients?
+What is a confusion matrix?
+Explain how a ROC curve works.
+What is selection bias?
+Explain SVM machine learning algorithm in detail.
+What are support vectors in SVM?
+What are the different kernel functions in SVM?
+Explain decision tree algorithm in detail.
+What is Entropy and Information gain in a Decision tree algorithm?
+What is pruning in a decision tree?
+What is Ensemble learning?
+What is random forest? How does it work?
+What cross-validation technique would you use on a time series data set?
+What is logistic regression? Or State an example when you have used logistic regression recently.
+What do you understand by the term Normal Distribution?
+What is a Box-Cox Transformation?
+How will you define the number of clusters in a clustering algorithm?
+What is deep learning?
+What are Recurrent Neural Networks(RNNs)?
+What is the difference between Machine Learning and Deep Learning?
+What is reinforcement learning?
+What is selection bias?
+Explain what regularisation is and why is it useful
+What is TF/IDF vectorization?
+What are recommender systems?
+What is the difference between regression and classification of ML techniques?

@@ -255,6 +255,8 @@ May be a curious parallel to this recent finding in Neuro, about XOR computation
 Lappalainen, J., Herpich, J., & Tetzlaff, C. (2019). A theoretical framework to derive simple, firing-rate-dependent mathematical models of synaptic plasticity. Frontiers in computational neuroscience, 13, 26.
 https://www.frontiersin.org/articles/10.3389/fncom.2019.00026/full
 
+Raman, D. V., Rotondo, A. P., & O’Leary, T. (2019). Fundamental bounds on learning performance in neural circuits. Proceedings of the National Academy of Sciences, 116(21), 10537-10546.
+
 Lim, S. et al. Inferring learning rules from distributions of fring rates in cortical neurons. Nat. Neurosci. 18, 1804–1810 (2015).
 
 Doerig, A., Bornet, A., Choung, O. H., & Herzog, M. H. (2019). Crowding Reveals Fundamental Differences in Local vs. Global Processing in Humans and Machines. bioRxiv, 744268.
@@ -339,13 +341,19 @@ https://www.frontiersin.org/articles/10.3389/fnsys.2019.00042/full
 The Dialectics of Free Energy Minimization Evert A. Boonstra and Heleen A. Slagter
 Seems to be a review explaining the free energy minimization principle for an organism. It's not math though; looks almost like philosophy?
 
+# CogSci and Development
+
+Mandler, J. M. (1988). How to build a baby: On the development of an accessible representational system. Cognitive development, 3(2), 113-136. [link](https://s3.amazonaws.com/academia.edu.documents/48154476/How_to_build_a_baby_On_the_development_o20160818-28052-ns7nel.pdf?response-content-disposition=inline%3B%20filename%3DHow_to_build_a_baby_On_the_development_o.pdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWOWYYGZ2Y53UL3A%2F20200223%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200223T181627Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=11b1618e368d462df1af3b595c4c4c0775001e9a19e536a709c9b6f6d93ca8b1)
+Quite popular (500 citations), strongly endorsed by Melanie Mitchell.
+And part 2, with even more citations (1.6k):
+Mandler, J. M. (1992). How to build a baby: II. Conceptual primitives. Psychological review, 99(4), 587.
+http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.460.5280&rep=rep1&type=pdf
+
 # Other
 
 Harnessing behavioral diversity to understand neural computations for cognition Simon Musall, Anne E Urai, David Sussillo, Anne K Churchland
 [https://www.sciencedirect.com/science/article/pii/S0959438819300285]
 Potentially the most important section: "Relating rich behavior to neural activity by studying ANNs"
-
-Raman, D. V., Rotondo, A. P., & O’Leary, T. (2019). Fundamental bounds on learning performance in neural circuits. Proceedings of the National Academy of Sciences, 116(21), 10537-10546.
 
 Learning predictive structure without a teacher: decision strategies and brain routes
 Zoe Kourtzi, Andrew E Welchman
