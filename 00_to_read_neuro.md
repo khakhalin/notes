@@ -137,6 +137,10 @@ Changing temporal context in human temporal lobe promotes memory of distinct epi
 https://www.nature.com/articles/s41467-018-08189-4
 Also a blog post summary: https://www.quantamagazine.org/how-the-brain-creates-a-timeline-of-the-past-20190212/
 
+Bobier, B., Stewart, T. C., & Eliasmith, C. (2014). A unifying mechanistic model of selective attention in spiking neurons. PLoS computational biology, 10(6).
+https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003577
+Model of the cortex.
+
 # Single-neuron calculations
 
 Hidden Computational Power Found in the Arms of Neurons. Jordana Cepelewicz. Jan 14 2020.
@@ -229,6 +233,10 @@ Supposedly, explains the development of grid cells, synthesizing two existing th
 Michaels, J. A., Schaffelhofer, S., Agudelo-Toro, A., & Scherberger, H. (2019). A neural network model of flexible grasp movement generation. bioRxiv, 742189.
 https://www.biorxiv.org/content/10.1101/742189v1
 Modeled vision-controlled grasping (based on monkey data) as convolutional network (based on Alexnet, it seems) → RNN (fully connected) → bottlneck of 8 neurons → another RNN → another bottleneck → another RNN → output. They call these bottlenecks "sparsity", which is interesting. I wonder whether it is fair to call it brain-inspired. Is it something that works, as it forces the learning of representations, and then only claim that it is brain-inspired, to give it some conceptual validity? Or is there actual evidence in the brain that connections between motor systems are throttled like that? Something to explore. Also they mention some "feedback connections" that may be connections between RNN modules, but I'd need to read the methods section carefully to see what's happening there. One of the most important aspects of this paper for me may be the neuro-inspired analysis of model performance that they do, and the very attitude to validation that they have. I wonder if that's something that can be applied to spiking networks.
+
+Doerig, A., Schmittwilken, L., Sayim, B., Manassi, M., & Herzog, M. H. (2019). Capsule Networks as Recurrent Models of Grouping and Segmentation. BioRxiv, 747394.
+https://www.biorxiv.org/content/10.1101/747394v2
+Something on capsule networks better reproducing vision?
 
 # Memory storage
 
@@ -350,6 +358,10 @@ Mandler, J. M. (1992). How to build a baby: II. Conceptual primitives. Psycholog
 http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.460.5280&rep=rep1&type=pdf
 
 # Other
+
+Suzuki, M., & Larkum, M. E. (2020). General Anesthesia Decouples Cortical Pyramidal Neurons. Cell, 180(4), 666-676.
+https://www.cell.com/action/showPdf?pii=S0092-8674%2820%2930105-7
+About how general anesthesia actually retains FF signalling, but disrupts feedback signalling, and it is enough to disrupt consciousness. In all cortical neurons. Seems fun, and  important to understand the logic of cortical processing.
 
 Harnessing behavioral diversity to understand neural computations for cognition Simon Musall, Anne E Urai, David Sussillo, Anne K Churchland
 [https://www.sciencedirect.com/science/article/pii/S0959438819300285]

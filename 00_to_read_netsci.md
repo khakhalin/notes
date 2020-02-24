@@ -128,5 +128,6 @@ https://aip.scitation.org/doi/10.1063/1.5129306
 
 # Misc
 
-On teaching math
-https://www.uni-muenster.de/Physik.TP/~munsteg/arnold.html
+Perry Zurn and Danielle S. Bassett (2020). Network architectures supporting learnability
+https://royalsocietypublishing.org/doi/10.1098/rstb.2019.0323
+On how only some architectures can understand only some structures, and whether there's a link between the two? Something philosophy, not only math?
