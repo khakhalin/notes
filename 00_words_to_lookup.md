@@ -30,8 +30,7 @@ Parked parts of ESL that need to be revisited:
 
 #todo: [[system_design]] - sorta priority
 
-**Classic ML and algorithms**
-* https://www.byte-by-byte.com/google-interview/ - check other topics
+**Classic ML**
 * finish Google production thing :) 
 * finish gradient boosting
 * finish SVM
@@ -43,21 +42,15 @@ Parked parts of ESL that need to be revisited:
     * small DL
     * SVM
     * random forest
+* that visual blog post about types of DL optimizers
 * Capsule neural network - some sort of generalization of convolutional networks for hierarchical data?? Never heard of them, but they are actually quite well cited!!
 * the difference between tSNE and UMAP
-* what's the difference between hash-sets, hash-maps, and hash-tables?
-* radix sort 
-* that visual blog post about types of DL optimizers
-* Hungarian algorithm
 * Kalman filter (and its friends)
 * graph cuts in computer vision
-* https://www.byte-by-byte.com/strings/
-* https://cp-algorithms.com/data_structures/fenwick.html
-* https://cp-algorithms.com/data_structures/segment_tree.html
 * Latent Dirichlet Allocation ([ref](https://towardsdatascience.com/end-to-end-topic-modeling-in-python-latent-dirichlet-allocation-lda-35ce4ed6b3e0))
 * unit tests, pytests, mocking
 * Bayesian PCA
-* Bloom filter
+* Bloom filter (refs: [1](https://dominikschmidt.xyz/bloom-filter/))
 * Demixed principal component analysis - some MDS technique on top of PCA; seems to be moderately popular with some neuro people. What's the gist of it?
 * Expectation-Maximization
 * Bayes Information Criterion - will be naturually described once I cover model selection?
@@ -76,6 +69,17 @@ Parked parts of ESL that need to be revisited:
 * Checkpoints
 * Keras hyperparameter optimization
 * Python collections: deque, Counter, defaultdict etc.
+
+**Algorithms**
+* https://www.byte-by-byte.com/google-interview/ - check other topics
+* what's the difference between hash-sets, hash-maps, and hash-tables?
+* radix sort 
+* Dijkstra
+* Hungarian algorithm
+* rewrite graph traversals
+* minimum cut (on graphs), with related topics
+* https://cp-algorithms.com/data_structures/fenwick.html
+* https://cp-algorithms.com/data_structures/segment_tree.html
 
 **Deep Learning:**
 * What's so eager about eager mode
@@ -99,6 +103,8 @@ Parked parts of ESL that need to be revisited:
 * Wavenet - that famous convolution network that generates audio on-the-fly
 
 **Technical stuff**
+* Hadoop vs Spark video: https://hackr.io/blog/hadoop-vs-spark
+* Kubernetes and Docker video (30 min): https://www.youtube.com/watch?v=u8dW8DrcSmo
 * f-strings in Python ([ref](https://docs.python.org/3/library/string.html#format-specification-mini-language)): summarize in a separate doc
 * sets in Python: are they worth it?
 * regex in Python
