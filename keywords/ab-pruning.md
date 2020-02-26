@@ -1,6 +1,6 @@
 # Alpha-Beta Pruning
 
-#algo #games
+#algo #game
 
 A way to find best solution while looking forward in games. Improvement over **naive minimax**. With naive minimax, you look through the full tree of possible future moves, and pick a move that maximizes the minimal value of future possible position, assuming perfect play by the opponent. That is, if for any moves we make, the opponent plays optimally thus minimizing our gain, which of our moves would give us the best final outcome? Giving the adversity, which move would be best for us? ( [ref](https://en.wikipedia.org/wiki/Minimax#Minimax_algorithm_with_alternate_moves) ) This should, of course, rely on some heuristics, to estimate how good each state is, for eventually winning the game. The terminology is to call "us" the **maximizing player**, and them the **minimizing player**. The number of turns by either player that the algorithm is looking ahead is for some reason called **plies** (singular: ply). One full round (a "move") in a two-player game is typically worth 2 plies.
 

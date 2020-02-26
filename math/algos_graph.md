@@ -37,7 +37,7 @@ An alternative to DFS is a **Kahn's algorithm**. First of all, notice that a DAG
 1. Calculate in-degree of all nodes. Create an empthy queue of "nodes to visit". Create an empty list of "visited nodes".
 2. Add all nodes with in-degree of 0 to the queue.
 3. Pick an element V from the queue, and mark it as "visited".
-4. Reduce in-degrees of all elements to which V is conneced by 1.
+4. Reduce in-degrees of all elements to which V is connected by 1.
 5. Go to "2", and repeat until the queue is empty.
 6. If at the very end you haven't visited all nodes, topological sort is impossible.
 How does it work?
