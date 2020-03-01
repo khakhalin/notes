@@ -18,20 +18,29 @@ Good collection of short tutorials (both ML and snippets of Python code) by Chri
 https://chrisalbon.com/
 Look through, decide the priority; how to file.
 
-ESL progress. 
-Current position: p290
-
-Parked parts of ESL that need to be revisited:
-* p161 to p218 - Smoothing, wavelets, smoothing kernels, local regression, kernel size choice
-* p219 - a whole chapter on Model selection, Bias-Variance Tradeoff, effective number of parameters, cross-validation, and bootstrapping
-* p261 - another whole chapter. Model averaging, max likelihood, some Bayesian inference, more bootstrapping, the EM algorithm (Expectation-Maximization), Gibbs samping, bagging, MCMC
-
 # Words and topics to look up
 
 #todo: [[system_design]] - sorta priority
 
-**Classic ML**
-* finish Google production thing :) 
+**ML and Algos**
+* computational complexity of bfs and dfs
+* finish Google production thing
+* hash-tables
+* implement hash-table
+* what's the difference between hash-sets, hash-maps, and hash-tables?
+* repeat quicksort
+* repeat mergesort
+* trie
+* what is NP: definition
+* red-black tree
+* splay tree
+* avl tree
+* radix sort
+* Dijkstra
+* repeat 01 knapsack
+* A star search algorithm
+* https://cp-algorithms.com/data_structures/fenwick.html
+* https://cp-algorithms.com/data_structures/segment_tree.html
 * finish gradient boosting
 * finish SVM
 * random forest
@@ -65,21 +74,33 @@ Parked parts of ESL that need to be revisited:
 * Mahalanobis distance
 * Particle filters
 
+**OS**
+* Processes, threads, concurrency
+* locks, mutexes, semaphores, monitors
+* deadlocks, livelocks, and how to avoid them
+* resource allocation
+* context switching
+* scheduling
+* multicore concurrency
+
 **Practical stuff:**
 * Checkpoints
 * Keras hyperparameter optimization
 * Python collections: deque, Counter, defaultdict etc.
 
-**Algorithms**
+**Algorithms - other**
 * https://www.byte-by-byte.com/google-interview/ - check other topics
-* what's the difference between hash-sets, hash-maps, and hash-tables?
-* radix sort 
-* Dijkstra
 * Hungarian algorithm
 * rewrite graph traversals
 * minimum cut (on graphs), with related topics
-* https://cp-algorithms.com/data_structures/fenwick.html
-* https://cp-algorithms.com/data_structures/segment_tree.html
+
+**ESL progress**
+Current position: p290
+
+Parked parts of ESL that need to be revisited:
+* p161 to p218 - Smoothing, wavelets, smoothing kernels, local regression, kernel size choice
+* p219 - a whole chapter on Model selection, Bias-Variance Tradeoff, effective number of parameters, cross-validation, and bootstrapping
+* p261 - another whole chapter. Model averaging, max likelihood, some Bayesian inference, more bootstrapping, the EM algorithm (Expectation-Maximization), Gibbs samping, bagging, MCMC
 
 **Deep Learning:**
 * What's so eager about eager mode
