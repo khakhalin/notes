@@ -1,5 +1,5 @@
 # Linear algebra and networks
-#net
+#net #linalg
 
 ## Graph representations
 **Adjacency matrix** (obv.). For a directed graph powers of A (A^k) give the number of paths length k that lead from node i to j.

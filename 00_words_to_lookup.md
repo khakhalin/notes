@@ -23,13 +23,7 @@ Look through, decide the priority; how to file.
 #todo: [[system_design]] - sorta priority
 
 **ML and Algos**
-* computational complexity of bfs and dfs
 * finish Google production thing
-* hash-tables
-* implement hash-table
-* what's the difference between hash-sets, hash-maps, and hash-tables?
-* repeat quicksort
-* repeat mergesort
 * minimal spanning trees
 * trie
 * what is NP: definition
@@ -42,6 +36,7 @@ Look through, decide the priority; how to file.
 * A star search algorithm
 * https://cp-algorithms.com/data_structures/fenwick.html
 * https://cp-algorithms.com/data_structures/segment_tree.html
+* repeat quicksort and mergesort
 * finish gradient boosting
 * finish SVM
 * random forest

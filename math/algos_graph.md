@@ -12,12 +12,14 @@ In general, 2 main ways to explore graphs:
     2. Takes less memory than BFS (no need to store a queue)
     3. Naturally creates **topological order** (see below).
     4. _According to [this quora response](https://www.quora.com/What-are-the-advantages-of-using-BFS-over-DFS-or-using-DFS-over-BFS-What-are-the-applications-and-downsides-of-each), also has some other benefits that I don't quite understand yet: finding bridges, connected components, articulation points (aka cutvertices), planarity test._
-    5. Works great on shallow trees (but gets risky on linear linked lists, due to recursion depth)
+    5. Works great on shallow trees, but gets risky on linear linked lists, due to recursion depth.
 
 * **BFS**, aka **Breadth-First Search**. Benefits:
     1. Naturally finds a **shortest path** from the root node (while DFS can arrive at a vertex in a very roundabout way)
     2. Creates a more balanced tree (with more similar distances from the root to the furthest points in each branch)
-    3. Works great on long linked lists (but takes lots of memory on shallow trees).
+    3. Works great on long linked lists, but takes lots of memory on shallow trees.
+
+**Time complexity** is O(V+E) for both. **Space complexity** for a tree, is tree height for DFS, and tree width for BFS. In the worst-case scenario, it's O(V) in both cases, just worst-case scenarios are different. On a balanced tree, it would be O(V) for BFS (because last layer has ~V/2 leafs), and O(log V) for DFS (tree depth).
 
 # Topological order
 

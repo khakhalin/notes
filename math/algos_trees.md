@@ -2,7 +2,7 @@
 #algo
 
 See also: 
-* [[algos_graph]]
+* [[algos_graph]] - general chapter for algorithms
 
 # Terminology
 * **Binary tree** - two children for each node.

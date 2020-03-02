@@ -6,21 +6,23 @@
 
 # Books
 
-(Given in subjective order of my gradual reading)
+Given in the subjective order of my gradual reading.
+
 * How to think like a computer scientist by Allen B. Downey: ([site](https://greenteapress.com/wp/think-python-2e/)) - best intro to Python ever
 * VLMS (Introduction to Applied Linear Algebra) by Stephen Boyd. [full pdf](http://vmls-book.stanford.edu/)
 * Algorithms by Sedgewick - uses Java, but is exceptionally clearly written
-* ESL (The Elements of Statistical Learning) by Hastie, Tibshirani, Friedman. ([full pdf](https://web.stanford.edu/~hastie/ElemStatLearn/)) Very extensive, no code, most math is stated but not derived, poor exposition. If I could go back in time, I'd bumped ISLR and "Hands-On ML in Python" to this position, and moved ESL to the "Deeper Refresher" section ([ref](https://www.quora.com/How-do-I-learn-the-book-Elements-of-Statistical-Learning-What-books-materials-would-help-beef-up-my-foundations-so-that-I-will-be-able-to-comprehend-the-book-easily)). It's probably a great book to revisit and integrate the material you already know.
-* "The 100 pages ML book" by Andriy Burkov. [full pdf](http://themlbook.com/wiki/doku.php) 
+* ISLR: Introduction to Statistical Learning with R, by James, Witten, Hastie, Tibshirani. ([web with pdf](http://faculty.marshall.usc.edu/gareth-james/ISL/)). See this for a fan-made translation of the code Python: [JW](https://github.com/JWarmenhoven/ISLR-python).
 * Hands-On M with Scikit-Learn, Keras, and TensorFlow, by Aurélien Géron. Python obviously. [All labs on github](https://github.com/ageron/handson-ml2), but no full version of the book online.
+* "The 100 pages ML book" by Andriy Burkov. [full pdf](http://themlbook.com/wiki/doku.php) 
 * MML (Mathematics for Machine Learning) by M.P. Deisenroth: [full pdf](https://mml-book.github.io/)
 * Programming in Python: Fluent Python, by Luciano Ramalho (no online version)
 * Deep Learning by Ian Goodfellow et al. [full pdf](http://www.deeplearningbook.org/)
-* Speech and Language Processing by D. Jurafsky & JH Martin ([draft pdf](https://web.stanford.edu/~jurafsky/slp3/))
 
-Second priority books:
+Second set, to advance, or get a new perspective:
+* ESL (The Elements of Statistical Learning) by Hastie, Tibshirani, Friedman. ([full pdf](https://web.stanford.edu/~hastie/ElemStatLearn/)) A more encyclopaedic version of ISLR: extensive, no code, and with most proofs and derivations "left to the reader" ([ref](https://www.quora.com/How-do-I-learn-the-book-Elements-of-Statistical-Learning-What-books-materials-would-help-beef-up-my-foundations-so-that-I-will-be-able-to-comprehend-the-book-easily)). Great book to revisit and integrate the material you already know.
 * On Programming Well, by Robert C. Martin (no online version)
-* Pattern recognition and ML by Christopher Bishop ([full pdf](https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/)) - apparently, has a more Bayesian perspective
+* Speech and Language Processing by D. Jurafsky & JH Martin ([draft pdf](https://web.stanford.edu/~jurafsky/slp3/))
+* Pattern recognition and ML by Christopher Bishop ([full pdf](https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/)) - Has a more Bayesian perspective. [This set of notebooks](https://github.com/ctgk/PRML) implements this book, chapter by chapter.
 * [Dive into Deep Learning](http://d2l.ai/) - an interactive introduction to deep learning, based on NumPy, apparently!
 * Think Complexity, by Allen B. Downey ([full pdf](https://greenteapress.com/wp/think-complexity-2e/)) - network sci, automata, all in Python
 * Foundations of ML by M. Mohri et al ([full pdf](https://cs.nyu.edu/~mohri/mlbook/)) - more mathy?
@@ -32,7 +34,6 @@ Second priority books:
 * Artificial Intelligence: A Modern Approach, by Russel and Norvig. ([site](http://aima.cs.berkeley.edu/), but no online)
 
 Refresher books
-* ISLR: Introduction to Statistical Learning with R, by James, Witten, Hastie, Tibshirani - seems like a more practical and simpler version of ESLII? ([web with pdf](http://faculty.marshall.usc.edu/gareth-james/ISL/)). There are some fan-made translations of the code from R to Python: [JW](https://github.com/JWarmenhoven/ISLR-python).
 * Applied Predictive Modeling by Kuhn Johnson (no free pdf online). Code in R.
 
 Third priority books:

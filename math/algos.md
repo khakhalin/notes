@@ -2,10 +2,11 @@
 #algo #bib
 
 Subtopics:
-* [[algos_graph]] - everything about graphs
-* [[algos_trees]]
+* [[algos_graph]] - everything graphs
+* [[algos_trees]] - everything trees
 
 Data structures:
+* [[hash]] - hashmaps, hashtables, and hashing functions
 * [[priority_queue]]
 
 Other curious algorithms
