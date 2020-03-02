@@ -3,10 +3,11 @@
 
 **Toolbox of methods and concepts:**
 * [[ngram]] - N-grams: low-level feature for text analysis, beyond single words. "Bags" of several (2-3) words.
-* [[tfidf]] - Text Frequency - Inverse Document Frequency. A basic ranking approach for text relevance.
-* [[perplexity]] - main measure of language model quality, as well as a great objective function.
-* [[beam_search]] - a way to go beyound a level of "one word at a time" by tree exploration.
+* [[tfidf]] - **Text Frequency - Inverse Document Frequency**. A basic approach to ranking documents by their relevance for a given keyword.
+* [[perplexity]] - main measure of language model quality, as well as a good practical objective function during training.
+* [[beam_search]] - a way to go beyound a level of suggesting one word at a time for text generation, by exploring a decision tree.
 * [[stupid_back_off]] - a simplistic Markovian approach to text generation
+* [[word2vec]] - famous word embedding method developed by Google.
 
 # To read:
 https://ruder.io/unsupervised-cross-lingual-learning/index.html

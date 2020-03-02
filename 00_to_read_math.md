@@ -4,6 +4,20 @@
 
 # Intros and top choices
 
+Identity Crisis: Memorization and Generalization Under Extreme Overparameterization 
+Chiyuan Zhang, Samy Bengio, Moritz Hardt, Michael C. Mozer, Yoram Singer
+https://openreview.net/forum?id=B1l6y0VFPr
+https://arxiv.org/abs/1902.04698
+Google brain. Identity mapping: just train the output to be exactly like the input, then study the logic of transfer to other inputs.
+
+Mordvintsev, A., Randazzo, E., Niklasson, E., & Levin, M. (2020). Growing Neural Cellular Automata. Distill, 5(2), e23.
+https://distill.pub/2020/growing-ca/
+Google. A paper and a sim, two in one!
+
+Olah, C., Satyanarayan, A., Johnson, I., Carter, S., Schubert, L., Ye, K., & Mordvintsev, A. (2018). The building blocks of interpretability. Distill, 3(3), e10.
+https://distill.pub/2018/building-blocks/
+Google. About reverse-tracking through a visual network via optimizing inputs?
+
 Raschka, S., Patterson, J., & Nolet, C. (2020). Machine Learning in Python: Main developments and technology trends in data science, machine learning, and artificial intelligence. arXiv preprint arXiv:2002.04803.
 https://arxiv.org/abs/2002.04803
 
@@ -31,6 +45,10 @@ Another must-do short read.
 The Unreasonable Effectiveness of Recurrent Neural Networks
 http://karpathy.github.io/2015/05/21/rnn-effectiveness/
 
+Research dept
+https://distill.pub/2017/research-debt/
+(Some general ideas about explaining research)
+
 An overview of gradient descent optimization algorithms.  19 Jan 2016 (updated in 2018). By Sebastian Ruder.
 https://ruder.io/optimizing-gradient-descent/
 Adagrad, adam, and others like that.
@@ -50,12 +68,6 @@ He, K., Zhang, X., Ren, S., & Sun, J. (2016). Deep residual learning for image r
 http://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf
 36k citations, haha. The famous residual networks paper.
 
-Identity Crisis: Memorization and Generalization Under Extreme Overparameterization 
-Chiyuan Zhang, Samy Bengio, Moritz Hardt, Michael C. Mozer, Yoram Singer
-https://openreview.net/forum?id=B1l6y0VFPr
-https://openreview.net/pdf?id=B1l6y0VFPr
-Identity mapping (just training the output be exactly like the input).
-
 Berseth, G., Geng, D., Devin, C., Finn, C., Jayaraman, D., & Levine, S. (2019). SMiRL: Surprise Minimizing RL in Dynamic Environments. arXiv preprint arXiv:1912.05510.
 https://arxiv.org/abs/1912.05510
 Blog:
@@ -70,6 +82,7 @@ Your Classifier is Secretly an Energy Based Model and You Should Treat it Like O
 
 Metz, L., Maheswaranathan, N., Cheung, B., & Sohl-Dickstein, J. (2018). Meta-Learning Update Rules for Unsupervised Representation Learning. arXiv preprint arXiv:1804.00222.
 https://arxiv.org/abs/1804.00222
+Google.
 
 Finn, C., Abbeel, P., & Levine, S. (2017, August). Model-agnostic meta-learning for fast adaptation of deep networks. In Proceedings of the 34th International Conference on Machine Learning-Volume 70 (pp. 1126-1135). JMLR. org.
 https://arxiv.org/pdf/1703.03400.pdf
@@ -77,7 +90,7 @@ About few-shots learning, and generalizing from a very limited number of labels?
 
 Schroff, F., Kalenichenko, D., & Philbin, J. (2015). Facenet: A unified embedding for face recognition and clustering. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 815-823).
 https://arxiv.org/abs/1503.03832 
-[[triplet_loss]] triplet_loss
+See also: [[triplet_loss]]
 
 Van Steenkiste, S., Chang, M., Greff, K., & Schmidhuber, J. (2018). Relational neural expectation maximization: Unsupervised discovery of objects and their interactions. arXiv preprint arXiv:1802.10353.
 https://arxiv.org/abs/1802.10353
@@ -143,23 +156,23 @@ Ba, J., & Caruana, R. (2014). Do deep nets really need to be deep?. In Advances 
 https://papers.nips.cc/paper/5484-do-deep-nets-really-need-to-be-deep.pdf
 Seems to be one of the original network distillation papers (800 refs)
 
-Virgolin, M., Alderliesten, T., & Bosman, P. A. (2020). On explaining machine learning models by evolving crucial and compact features. Swarm and Evolutionary Computation, 53, 100640.
-https://arxiv.org/abs/1907.02260
-
 # Interpretability
-
-TensorFlow Lattice: Flexible, controlled and interpretable ML
-https://blog.tensorflow.org/2020/02/tensorflow-lattice-flexible-controlled-and-interpretable-ML.html?linkId=82088125
-Constrained models? May be very nice and practical; not just theoretically cool, but immedeately useful.
 
 Golan, T., Raju, P. C., & Kriegeskorte, N. (2019). Controversial stimuli: pitting neural networks against each other as models of human recognition. arXiv preprint arXiv:1911.09288.
 https://arxiv.org/abs/1911.09288
 They played with MNIST, trained a bunch of models, and compared them. And also compared it all to humans. Also a nice twitter thread:
 https://twitter.com/TalGolanNeuro/status/1198394188481671168
 
+Virgolin, M., Alderliesten, T., & Bosman, P. A. (2020). On explaining machine learning models by evolving crucial and compact features. Swarm and Evolutionary Computation, 53, 100640.
+https://arxiv.org/abs/1907.02260
+
+TensorFlow Lattice: Flexible, controlled and interpretable ML
+https://blog.tensorflow.org/2020/02/tensorflow-lattice-flexible-controlled-and-interpretable-ML.html?linkId=82088125
+Constrained models? May be very nice and practical; not just theoretically cool, but immedeately useful.
+
 Gilboa, D., & Gur-Ari, G. (2019). Wider Networks Learn Better Features. arXiv preprint arXiv:1909.11572.
 https://arxiv.org/pdf/1909.11572.pdf
-train a network (they used MNIST), do UMAP of activations, find groups of neurons that together encode useful features, visualize them. Claim it to be a reasonable approach to understanding networks.
+Google. Train a network (they used MNIST), do UMAP of activations, find groups of neurons that together encode useful features, visualize them. Reasonable approach to understanding networks.
 
 # Tickets, distillation, transfer
 #ticket
@@ -173,7 +186,7 @@ https://arxiv.org/abs/1905.01067
 
 Tian, Y., Jiang, T., Gong, Q., & Morcos, A. (2019). Luck Matters: Understanding Training Dynamics of Deep ReLU Networks. arXiv preprint arXiv:1905.13405.
 https://arxiv.org/pdf/1905.13405.pdf
-To understand how "lucky tickets" work, they train a larger network from a smaller network, then study activation.
+Facebook AI. To understand how "lucky tickets" work, they train a larger network from a smaller network, then study activation.
 
 Hooker, S., Courville, A., Dauphin, Y., & Frome, A. (2019). Selective Brain Damage: Measuring the Disparate Impact of Model Pruning. arXiv preprint arXiv:1911.05248.
 https://weightpruningdamage.github.io/
@@ -198,13 +211,11 @@ Tweetprint: https://twitter.com/TimKietzmann/status/1215620270679044096
 
 Morcos, A. S., Yu, H., Paganini, M., & Tian, Y. (2019). One ticket to win them all: generalizing lottery ticket initializations across datasets and optimizers. arXiv preprint arXiv:1906.02773.
 https://arxiv.org/abs/1906.02773
-New paper about whether "lucky tickets" generalize across datasets.
+Facebook AI. Whether "lucky tickets" generalize across datasets.
 
 Maheswaranathan, N., Williams, A., Golub, M., Ganguli, S., & Sussillo, D. (2019). Universality and individuality in neural dynamics across large populations of recurrent networks. In Advances in Neural Information Processing Systems (pp. 15603-15615).
 https://arxiv.org/abs/1907.08549
-They trained the same network (or similar networks) thousands of times, and checked how similar the profiles are. Kind of related to both O'Leary neuro idea, and the ticket hypothesis. An interesting follow-up would be something like performance outside of the preferred distributions, and how this performance (individuality?) is distributed itself, and whether some architectures tend to produce clusters rather then smooth distributions (personality?)
-Tweetprint:
-https://twitter.com/SussilloDavid/status/1153427790672171009
+Google. They trained the same network (or similar networks) thousands of times, and checked how similar the profiles are. Kind of related to both O'Leary neuro idea, and the ticket hypothesis. An interesting follow-up would be something like performance outside of the preferred distributions, and how this performance (individuality?) is distributed itself, and whether some architectures tend to produce clusters rather then smooth distributions (personality?) Tweetprint: https://twitter.com/SussilloDavid/status/1153427790672171009
 
 Ramanujan, V., Wortsman, M., Kembhavi, A., Farhadi, A., & Rastegari, M. (2019). What's Hidden in a Randomly Weighted Neural Network?. arXiv preprint arXiv:1911.13299.
 https://arxiv.org/pdf/1911.13299.pdf
@@ -223,12 +234,12 @@ Furlanello, T., Lipton, Z. C., Tschannen, M., Itti, L., & Anandkumar, A. (2018).
 https://arxiv.org/pdf/1805.04770.pdf
 
 Hossein Mobahi, Mehrdad Farajtabar, Peter L. Bartlett (2020). Self-Distillation Amplifies Regularization in Hilbert Space. https://arxiv.org/abs/2002.05715
-Feeding predictions of network as additional training points serves as regularization (or maybe rather, amplifies existing regularization?), and improves accuracy. Really good visuals, in this paper. In a way, self-distillation may be considered a case of self-supervised learning (almost unsupervised, in a way). Also a good twitterthread:
+Google. Feeding predictions of network as additional training points serves as regularization (or maybe rather, amplifies existing regularization?), and improves accuracy. Really good visuals, in this paper. In a way, self-distillation may be considered a case of self-supervised learning (almost unsupervised, in a way). But this is a mathy paper. Also a good twitter-thread:
 https://twitter.com/TheGradient/status/1228132843630387201
 
 Self-training with Noisy Student improves ImageNet classification Qizhe Xie, Eduard Hovy, Minh-Thang Luong, Quoc V. Le
 https://arxiv.org/abs/1911.04252
-Something weird semi-supervised learning with noisy teachers and distillation. Essentially, it seems that a badly labeled large dataset is better than a well-labeled small dataset, so it's better to train one model on a small dataset, then have it label a huge dataset (even tho many labels will be wrong), and then use this large dataset to train the next model. Or something like that. Weird.
+Google. Something weird semi-supervised learning with noisy teachers and distillation. Essentially, it seems that a badly labeled large dataset is better than a well-labeled small dataset, so it's better to train one model on a small dataset, then have it label a huge dataset (even tho many labels will be wrong), and then use this large dataset to train the next model. Or something like that. Weird.
 
 von Oswald, J., Henning, C., Sacramento, J., & Grewe, B. F. (2019). Continual learning with hypernetworks. arXiv preprint arXiv:1906.00695.
 https://arxiv.org/abs/1906.00695
@@ -238,12 +249,12 @@ If it get it right from the abstract, this can be called meta-networks as well: 
 
 Wang, T., Zhu, J. Y., Torralba, A., & Efros, A. A. (2018). Dataset Distillation. arXiv preprint arXiv:1811.10959.
 https://arxiv.org/pdf/1811.10959.pdf
-10 images give 94% accuracy on MNIST.
+Facebook AI. 10 images give 94% accuracy on MNIST. Images however are completely not-letter like (weird noisy fields), so in spirit it's closer to hacking (data poisoning, adversarial examples, except positive ones) than to interpretation.
 
 Generative Teaching Networks: Accelerating Neural Architecture Search by Learning to Generate Synthetic Training Data.
 Felipe Petroski Such, Aditya Rawal, Joel Lehman, Kenneth O. Stanley, Jeff Clune
 https://arxiv.org/abs/1912.07768
-Blog post with a rather detailed description and commentary:
+Uber AI. Blog post with a rather detailed description and commentary:
 https://eng.uber.com/generative-teaching-networks/
 
 Panagiotatos, G., Passalis, N., Iosifidis, A., Gabbouj, M., & Tefas, A. (2019, September). Curriculum-based Teacher Ensemble for Robust Neural Network Distillation. In 2019 27th European Signal Processing Conference (EUSIPCO) (pp. 1-5). IEEE.
@@ -275,6 +286,10 @@ https://arxiv.org/pdf/1312.5663.pdf
 # Architecture search
 #archsearch
 
+Ha, D., Dai, A., & Le, Q. V. (2016). Hypernetworks. arXiv preprint arXiv:1609.09106.
+https://arxiv.org/pdf/1609.09106.pdf
+Networks that output weights of a network.
+
 Mishkin, D., Sergievskiy, N., & Matas, J. (2017). Systematic evaluation of convolution neural network advances on the imagenet. Computer Vision and Image Understanding, 161, 11-19.
 https://arxiv.org/abs/1606.02228
 A paper posed as an excellent, archetypal, systematic ablation study that really went down to the core of what aspects of a certain architecture are critical, and which ones are not. As an example of good, solid research methodology.
@@ -283,21 +298,21 @@ Liu, H., Simonyan, K., Vinyals, O., Fernando, C., & Kavukcuoglu, K. (2017). Hier
 https://arxiv.org/pdf/1711.00436.pdf
 Summary by Connor Shorten. Sep 12 2019.
 https://towardsdatascience.com/hierarchical-neural-architecture-search-aae6bbdc3624
-How to optimize network architectures if training each model is so ridiculously expensive? By defining blocks, and then using them recursively to create larger networks… Not sure how it helps, but apparently it helps a lot? Read.
+DeepMind. How to optimize network architectures if training each model is so ridiculously expensive? By defining blocks, and then using them recursively to create larger networks… Not sure how it helps, but apparently it helps a lot?
 
 Elsken, T., Metzen, J. H., & Hutter, F. (2018). Neural architecture search: A survey. arXiv preprint arXiv:1808.05377.
 http://www.jmlr.org/papers/volume20/18-598/18-598.pdf
-
 
 # Self-supervised learning
 
 Jing, L., & Tian, Y. (2019). [Self-supervised visual feature learning with deep neural networks: A survey](https://arxiv.org/pdf/1902.06162.pdf). arXiv preprint arXiv:1902.06162.
 
 Kolesnikov, A., Zhai, X., & Beyer, L. (2019). [Revisiting self-supervised visual representation learning](http://openaccess.thecvf.com/content_CVPR_2019/papers/Kolesnikov_Revisiting_Self-Supervised_Visual_Representation_Learning_CVPR_2019_paper.pdf). arXiv preprint arXiv:1901.09005.
+Google.
 
 Chollet, F. (2019). The Measure of Intelligence. arXiv preprint arXiv:1911.01547.
 https://arxiv.org/abs/1911.01547
-Endorsed by many great  people. Essentially, on how transfer and generalized intelligence may look, and how they may be tested. That's why I'm placing it in "Self-supervised learning" section: it is not really about it, but it is something that goes beyond approximating a data set; something like "transfer par excellence!""
+Google. On how transfer and generalized intelligence may look, and how they may be tested. That's why I'm placing it in "Self-supervised learning" section: it is not really about it, but it is something that goes beyond approximating a data set; something like "transfer par excellence!""
 There is now also a Keggle challenge developed after it:
 https://www.kaggle.com/c/abstraction-and-reasoning-challenge
 Nice set of examples: repeat the pattern, move one part relative to another, color according to a certain rule, fill the gaps, etc. Like a set of nice IQ tests on a grid. A human (me) has no problem with some, and can figure others after 30-60s of concentration. But it's quite obvious that modern types of AI would have enormous problems with it.
@@ -306,16 +321,18 @@ Will be hosted at [[Chollet2019measure]]
 A Simple Framework for Contrastive Learning of Visual Representations
 Ting Chen, Simon Kornblith, Mohammad Norouzi, Geoffrey Hinton
 https://arxiv.org/pdf/2002.05709.pdf
-Exploration of various unsupervized learning methods (contrastive learning with data augmentation). As a test of effectiveness, train the network in a supervized way on 1% of labels, measure its performance compared to the full set.
+Google. Exploration of various unsupervized learning methods (contrastive learning with data augmentation). As a test of effectiveness, train the network in a supervized way on 1% of labels, measure its performance compared to the full set.
 
 Roads, B. D., & Love, B. C. (2020). Learning as the unsupervised alignment of conceptual systems. Nature Machine Intelligence, 1-7.
 https://arxiv.org/abs/1906.09012
 
 He, K., Fan, H., Wu, Y., Xie, S., & Girshick, R. (2019). Momentum Contrast for Unsupervised Visual Representation Learning. arXiv preprint arXiv:1911.05722. https://arxiv.org/pdf/1911.05722.pdf
+Facebook AI.
 
 Misra, I., & van der Maaten, L. (2019). Self-Supervised Learning of Pretext-Invariant Representations. arXiv preprint arXiv:1912.01991. https://arxiv.org/abs/1912.01991 
 
 Hénaff, O. J., Razavi, A., Doersch, C., Eslami, S. M., & Oord, A. V. D. (2019). Data-efficient image recognition with contrastive predictive coding. arXiv preprint arXiv:1905.09272. https://arxiv.org/abs/1905.09272v2
+DeepMind.
 
 What's the current view of greedy training of autoencoders? Is it an abandoned technique, or are people still working on it? Sample seminal papers:
 * Bengio, Y., Lamblin, P., Popovici, D., & Larochelle, H. (2007). Greedy layer-wise training of deep networks. In Advances in neural information processing systems (pp. 153-160).
@@ -324,6 +341,7 @@ What's the current view of greedy training of autoencoders? Is it an abandoned t
 
 Zhai, X., Oliver, A., Kolesnikov, A., & Beyer, L. (2019). S4L: Self-Supervised Semi-Supervised Learning. arXiv preprint arXiv:1905.03670.
 https://arxiv.org/abs/1905.03670
+Google.
 
 Ravanelli, M., Zhong, J., Pascual, S., Swietojanski, P., Monteiro, J., Trmal, J., & Bengio, Y. (2020). Multi-task self-supervised learning for Robust Speech Recognition. arXiv preprint arXiv:2001.09239.
 https://arxiv.org/abs/2001.09239
@@ -336,6 +354,7 @@ Research article on imagination, recursion, and abstraction. Guessing context vi
 
 Ortega, P. A., Wang, J. X., Rowland, M., Genewein, T., Kurth-Nelson, Z., Pascanu, R., ... & Jayakumar, S. M. (2019). Meta-learning of Sequential Strategies. arXiv preprint arXiv:1905.03030.
 https://arxiv.org/pdf/1905.03030.pdf
+DeepMind.
 
 Berseth, G., Geng, D., Devin, C., Finn, C., Jayaraman, D., & Levine, S. (2019). SMiRL: Surprise Minimizing RL in Dynamic Environments. arXiv preprint arXiv:1912.05510.
 https://arxiv.org/abs/1912.05510
@@ -345,16 +364,21 @@ https://bair.berkeley.edu/blog/2019/12/18/smirl/
 
 Meire Fortunato, Mohammad Gheshlaghi Azar, Bilal Piot, Jacob Menick, Ian Osband, Alex Graves, Vlad Mnih, Remi Munos, Demis Hassabis, Olivier Pietquin, et al. Noisy networks for exploration. arXiv preprint arXiv:1706.10295, 2017
 https://arxiv.org/pdf/1706.10295.pdf
-A weak (not good enough?) way to add exploration to AI playing videogames, by target-injecting noise into the network (?). Sometimes (?) elevates the performance from "sub-human to super-human" level (funny turn of a phrase).
+DeepMind. A weak (official term?) way to add exploration to AI playing videogames, by target-injecting noise into the network (?). Sometimes (?) elevates the performance from "sub-human to super-human" level (funny turn of a phrase).
 
 Dauphin, Y. N., & Schoenholz, S. (2019). MetaInit: Initializing learning by learning to initialize. In Advances in Neural Information Processing Systems (pp. 12624-12636).
 https://papers.nips.cc/paper/9427-metainit-initializing-learning-by-learning-to-initialize
+Google. Quite mathy (not this paper necessarily, but their line of research.)
 
 #rl
 
+Ha, D., & Schmidhuber, J. (2018). World models. arXiv preprint arXiv:1803.10122.
+https://arxiv.org/abs/1803.10122
+Generative network models for learning environments!
+
 Leibo, J. Z., Hughes, E., Lanctot, M., & Graepel, T. (2019). Autocurricula and the emergence of innovation from social interaction: A manifesto for multi-agent intelligence research. arXiv preprint arXiv:1903.00742.
 https://arxiv.org/pdf/1903.00742.pdf
-Something related to their multi-agent simulation (hide-and-seek). Seems promising.
+DeepMind. Something related to their multi-agent simulation (hide-and-seek). Seems promising.
 
 Proximal Policy Optimization by OpenAI:
 https://openai.com/blog/openai-baselines-ppo/
@@ -377,10 +401,10 @@ A paper about the most horrible type of learning: offline (model of the world in
 
 Yu, H., Edunov, S., Tian, Y., & Morcos, A. S. (2019). Playing the lottery with rewards and multiple languages: lottery tickets in RL and NLP. arXiv preprint arXiv:1906.02768.
 https://arxiv.org/abs/1906.02768
-Lottery tickets in RL domain.
+Facebook AI. Lottery tickets in RL domain.
 
 Two papers describing a similar idea: Just going from 3d-person to first-person helps generalization in RL, as first-person is inherently closer to translation to actions.
-* Hill, F., Lampinen, A., Schneider, R., Clark, S., Botvinick, M., McClelland, J. L., & Santoro, A. (2019). Emergent systematic generalization in a situated agent. arXiv preprint arXiv:1910.00571. https://arxiv.org/abs/1910.00571
+* Felix Hill, Andrew Lampinen, Rosalia Schneider, Stephen Clark, Matthew Botvinick, James L. McClelland, Adam Santoro (2019). Environmental drivers of systematicity and generalization in a situated agent. arXiv preprint arXiv:1910.00571. https://arxiv.org/abs/1910.00571 . DeepMind.
 * Ye, C., Khalifa, A., Bontrager, P., & Togelius, J. (2020). Rotation, Translation, and Cropping for Zero-Shot Generalization. arXiv preprint arXiv:2001.09908. https://arxiv.org/abs/2001.09908
 I wonder what are the implications for graphical networks. Arguably, RNNs and sliding attention-based convolutional networks are already like 1st-person for texts. But what about graphs? Does it mean that graph-crawlers can be better than holistic processors?
 
@@ -414,8 +438,8 @@ Qualcomm AI Research.
 
 On the Relationship between Self-Attention and Convolutional Layers (2020)
 Jean-Baptiste Cordonnier, Andreas Loukas, Martin Jaggi
-https://openreview.net/forum?id=HJlnC1rKPB
-Describe that attention networks spontaneiously develop convolution?
+https://arxiv.org/pdf/1911.03584.pdf
+EPFL. Describe that attention networks spontaneiously develop convolution?
 
 Lipton, Z. C., Berkowitz, J., & Elkan, C. (2015). A critical review of recurrent neural networks for sequence learning. arXiv preprint arXiv:1506.00019.
 [https://arxiv.org/pdf/1506.00019.pdf](<https://arxiv.org/pdf/1506.00019.pdf>)
@@ -423,14 +447,15 @@ Great review for learning about RNNs (could be a textbook) 700 refs.
 
 Press, O., Smith, N. A., & Levy, O. (2019). Improving Transformer Models by Reordering their Sublayers. arXiv preprint arXiv:1911.03864.
 https://ofir.io/sandwich_transformer.pdf
-An interesting tiny paper where all they did, I think, is play with the sequence of 2 common blocks, to show that the optimal sequence is not what everyone expected. May be neat. But I prob need to understand how transformers work to get it.
+Facebook AI. An interesting tiny paper where all they did, I think, is play with the sequence of 2 common blocks, to show that the optimal sequence is not what everyone expected. May be neat. But I prob need to understand how transformers work to get it.
 
 Arabshahi, F., Lu, Z., Singh, S., & Anandkumar, A. (2019). Memory Augmented Recursive Neural Networks. arXiv preprint arXiv:1911.01545.
 https://arxiv.org/abs/1911.01545
 
 Compressive Transformers for Long-Range Sequence Modelling
-by Jack W. Rae, Anna Potapenko, Siddhant M. Jayakumar, Timothy P. Lillicrap (at DeepMind)
+by Jack W. Rae, Anna Potapenko, Siddhant M. Jayakumar, Timothy P. Lillicrap
 https://arxiv.org/abs/1911.05507
+Deepmind
 
 # AEs, GANs, Generation
 #gan
@@ -439,13 +464,18 @@ A Review on Generative Adversarial Networks: Algorithms, Theory, and Application
 https://arxiv.org/abs/2001.06937
 Most recent review of the field.
 
+Reinke, C., Etcheverry, M., & Oudeyer, P. Y. (2019). Intrinsically Motivated Exploration for Automated Discovery of Patterns in Morphogenetic Systems. arXiv preprint arXiv:1908.06663.
+arxiv.org/abs/1908.06663
+Inria, France.
+Used an intrinsically motivated AI to explore Game Of Life to find cool patterns. The most interesting part (judging from the abstract) is that it developed a non-obvious representation, just looking for novelty (or whatever it used: looking for something interesting). Would be super-cool to try it for my networks, huh?
+
 PCGRL: Procedural Content Generation via Reinforcement Learning. Ahmed Khalifa, Philip Bontrager, Sam Earle, Julian Togelius. 24 Jan 2020.
 https://arxiv.org/abs/2001.09212
 Independent researchers. Treat game level generation as a "game"; then try 3 different approaches (?) to solve this game with Markovian processes and #rl.
 
 Oord, A. V. D., Dieleman, S., Zen, H., Simonyan, K., Vinyals, O., Graves, A., ... & Kavukcuoglu, K. (2016). Wavenet: A generative model for raw audio. arXiv preprint arXiv:1609.03499.
 https://arxiv.org/abs/1609.03499
-1.4k citations: famous really successful realtime audio generation network from Google DeepMind.
+1.4k citations: famous really successful realtime audio generation network from DeepMind.
 
 Video tutorial on GANs from Ian Goodfellow (2016):
 https://www.youtube.com/watch?v=HGYYEUSm-0Q
@@ -473,10 +503,6 @@ Separating latent vectors (aka "disentanglement"). Apparently something that we 
 https://arxiv.org/abs/1905.01164 
 SinGAN: Learning a Generative Model from a Single Natural Image Tamar Rott Shaham, Tali Dekel, Tomer Michaeli
 
-Reinke, C., Etcheverry, M., & Oudeyer, P. Y. (2019). Intrinsically Motivated Exploration for Automated Discovery of Patterns in Morphogenetic Systems. arXiv preprint arXiv:1908.06663.
-arxiv.org/abs/1908.06663
-Apparently used an intrinsically motivated AI to explore Game Of Life to find cool patterns. The most interesting part (judging from the abstract) is that it developed a non-obvious representation, just looking for novelty (or whatever it used: looking for something _interesting_). Would be super-cool to try it for my networks, huh?
-
 Hoyer, S., Sohl-Dickstein, J., & Greydanus, S. (2019). Neural reparameterization improves structural optimization. arXiv preprint arXiv:1909.04240.
 https://arxiv.org/pdf/1909.04240.pdf
 They are trying to create some fancy mechanical structures, and instead of directly optimizing the parameters of these structures, they optimize the parameters of an ANN that output these structures. Claim that it works better. Looks fun.
@@ -484,10 +510,6 @@ They are trying to create some fancy mechanical structures, and instead of direc
 Makhzani, A. (2018). Implicit autoencoders. arXiv preprint arXiv:1805.09804.
 https://arxiv.org/abs/1805.09804
 Sort of GAN-like architecture that tries to optimize the latent space directly? Interesting, but hard to get from the abstract.
-
-Mordvintsev, A., Randazzo, E., Niklasson, E., & Levin, M. (2020). Growing Neural Cellular Automata. Distill, 5(2), e23.
-https://distill.pub/2020/growing-ca/
-A paper and a sim, two in one!
 
 # Graphical
 Bacciu, D., Errica, F., Micheli, A., & Podda, M. (2019). A Gentle Introduction to Deep Learning for Graphs. arXiv preprint arXiv:1912.12693.
@@ -620,7 +642,11 @@ Zenil, H., & Villarreal-Zapata, E. (2013). Asymptotic behavior and ratios of com
 https://arxiv.org/pdf/1304.2816.pdf
 Some measures of complexity (Shannon's block entropy and Kolmogorov) applied to 1D cellular automata. They try to make some general statements. Give a look.
 
-# Math
+# Math and Other
 
 Eta-trick (η-trick) to smooth out local minima in the minima landscape, and improve convergence. Reformulates a non-quadratic problem as a series of quadratic problems.
 https://francisbach.com/the-%CE%B7-trick-or-the-effectiveness-of-reweighted-least-squares/
+
+Xiaoying PuMatthew Kay (2020). A Probabilistic Grammar of Graphics.
+https://osf.io/dy8qv/
+What visuals are better for presenting different types of conditional probabilities (interactions between various variables), with an inspiring zoo-gallery of solutions.
