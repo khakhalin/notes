@@ -30,6 +30,7 @@ Look through, decide the priority; how to file.
 * what's the difference between hash-sets, hash-maps, and hash-tables?
 * repeat quicksort
 * repeat mergesort
+* minimal spanning trees
 * trie
 * what is NP: definition
 * red-black tree

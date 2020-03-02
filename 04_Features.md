@@ -19,10 +19,8 @@ The biggest problems with polynomials is that they are global (non-local), canno
 See: [[smoothing]]
 
 # Variable selection
-Key references:
-* [[Guyon2003variable]] - review on feature selection (as well as some info on construction). 
  
-Basic checklist:
+Basic checklist for variable selection:
 1. Use domain knowledge
 2. Normalize variables (where appropriate)
 3. If variables aren't independent, construct **conjunctive features**
@@ -32,6 +30,9 @@ Basic checklist:
 7. Start with the simplest predictor (usually linear)
 8. If you have better ideas, implement, then compare (benchmark)
 9. Check stability by bootstrapping (cross-validation)
+
+Refs:
+* [[Guyon2003variable]] - review on feature selection (as well as some info on construction). 
 
 # Dimensionality reduction
 Local methods (like KNN) break down in high-dimensions to to the **curse of dimensionality**: it becomes impossible to find a good neighborhood to do local averaging. In high-dim, volume grows so fast with linear dimension (r^K for K dim) that most of volume lies in the shell, not around the center. Say, to find a subcube with 1% of total volume inside a unit-cube in 10-dim, we'd have to take a subcube with a side of 0.6 (because 0.6^10 ≈ 0.01). Meaning that this neighborhood won't be local in any meaningful set (it will span 0.6 of total range for each of the dimensions!). And if we keep the side length (r) small, we won't capture any meaningful examples. Similarly, if points are distributed uniformly within a unit volume, the closest point to any given point is expected to be half-way to the boundary. Especially for highly non-linear functions (say, exponents) it presents a huge problem, as mean(neighbors) no longer resembles the "true value". (ESL p23-25)
