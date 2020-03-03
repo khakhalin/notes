@@ -1,6 +1,8 @@
 # Perplexity
 #text
 
+See also: [[transformers]]
+
 Mostly used with text. Intuitively, in its simplest form, just the inverse of average probability of words in a sentence. Except averaging is geometric:
 
 per = P(combination of N words)^(-1/N)

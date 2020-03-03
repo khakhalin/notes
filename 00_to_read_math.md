@@ -1,6 +1,10 @@
 # To-read: ML and AI
 
-#halfthere - a tag for papers that were added to the database, but that I haven't really read well. Potentially, papers to revisit!
+#halfthere - a tag to be used for papers that have their separate entries, but that I haven't actually finished reading, or haven't read well. Papers to revisit!
+
+See also: other thematic to-read lists:
+* [[11_RL]] - Reinforcement Learning
+* [[09_Graphs]] - Graph (aka Graphical) networks
 
 # Intros and top choices
 
@@ -155,6 +159,10 @@ https://arxiv.org/pdf/1910.01663.pdf
 Ba, J., & Caruana, R. (2014). Do deep nets really need to be deep?. In Advances in neural information processing systems (pp. 2654-2662).
 https://papers.nips.cc/paper/5484-do-deep-nets-really-need-to-be-deep.pdf
 Seems to be one of the original network distillation papers (800 refs)
+
+Marc Finzi, Samuel Stanton, Pavel Izmailov, Andrew Gordon Wilson (2020). Generalizing Convolutional Neural Networks for Equivariance to Lie Groups on Arbitrary Continuous Data
+https://arxiv.org/pdf/2002.12880.pdf
+How to build convolution-like networks for data that has different invariants than rotation and translation. (Mathy, but try?)
 
 # Interpretability
 
@@ -510,25 +518,6 @@ They are trying to create some fancy mechanical structures, and instead of direc
 Makhzani, A. (2018). Implicit autoencoders. arXiv preprint arXiv:1805.09804.
 https://arxiv.org/abs/1805.09804
 Sort of GAN-like architecture that tries to optimize the latent space directly? Interesting, but hard to get from the abstract.
-
-# Graphical
-Bacciu, D., Errica, F., Micheli, A., & Podda, M. (2019). A Gentle Introduction to Deep Learning for Graphs. arXiv preprint arXiv:1912.12693.
-https://arxiv.org/abs/1912.12693
-Must read (seems short and gentle indeed)
-
-Battaglia, P. W., Hamrick, J. B., Bapst, V., Sanchez-Gonzalez, A., Zambaldi, V., Malinowski, M., ... & Gulcehre, C. (2018). Relational inductive biases, deep learning, and graph networks. arXiv preprint arXiv:1806.01261.
-https://arxiv.org/abs/1806.01261
-Was described as practical and particularly well-written.
-
-David Belli (2019). Generative graph transformer
-https://davide-belli.github.io/generative-graph-transformer.html
-Blog post with math and pretty pics: investigate!
-
-Dehmamy, N., Barabási, A. L., & Yu, R. (2019). Understanding the Representation Power of Graph Neural Networks in Learning Graph Topology. arXiv preprint arXiv:1907.05008.
-https://arxiv.org/abs/1907.05008
-
-Bojchevski, A., Shchur, O., Zügner, D., & Günnemann, S. (2018). Netgan: Generating graphs via random walks. arXiv preprint arXiv:1803.00816.
-https://arxiv.org/pdf/1803.00816.pdf
 
 # Bayesian
 
