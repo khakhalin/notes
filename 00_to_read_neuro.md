@@ -90,6 +90,20 @@ How ideally balanced inhibition can emerge from anti-hebbian plasticity.
 Kanders, K., Lee, H., Hong, N., Nam, Y., & Stoop, R. (2020). Fingerprints of a second order critical line in developing neural networks. Communications Physics, 3(1), 1-13.
 https://www.nature.com/articles/s42005-019-0276-8
 Transitions between two levels of criticality in neuronal culture.
+
+## Related
+
+Guzman, S. J., Schlögl, A., Frotscher, M., & Jonas, P. (2016). Synaptic mechanisms of pattern completion in the hippocampal CA3 network. Science, 353(6304), 1117-1123.
+https://science.sciencemag.org/content/353/6304/1117.long
+
+Carrillo-Reid, L., Miller, J. E. K., Hamm, J. P., Jackson, J., & Yuste, R. (2015). Endogenous sequential cortical activity evoked by visual stimuli. Journal of Neuroscience, 35(23), 8813-8828.
+https://www.ncbi.nlm.nih.gov/pubmed/26063915/
+
+Dabney, W., Kurth-Nelson, Z., Uchida, N., Starkweather, C. K., Hassabis, D., Munos, R., & Botvinick, M. (2020). A distributional code for value in dopamine-based reinforcement learning. Nature, 1-5.
+[Link from the authors](https://www.nature.com/articles/s41586-019-1924-6.epdf?author_access_token=ASaTR4qMH190wSHiKLjQ7NRgN0jAjWel9jnR3ZoTv0OgnvLoVhK46-VND2gsGkjz36rZENj3hLKoFtZ6yylssm1cot8UrjoCWaDrIBKZs-uF0doLijXxV5GpU93RmqJeFMCQ_BzuM9Sr7acs_dVtKg%3D%3D)
+
+Rangel, L. M., Alexander, A. S., Aimone, J. B., Wiles, J., Gage, F. H., Chiba, A. A., & Quinn, L. K. (2014). Temporally selective contextual encoding in the dentate gyrus of the hippocampus. Nature communications, 5, 3181.
+https://www.nature.com/articles/ncomms4181?origin=ppub
  
 # Reservoir computing
 
