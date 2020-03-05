@@ -23,7 +23,6 @@ Look through, decide the priority; how to file.
 #todo: [[system_design]] - sorta priority
 
 **ML and Algos**
-* RANSAC - Random Sample Consensus
 * finish Google production thing
 * minimal spanning trees
 * trie

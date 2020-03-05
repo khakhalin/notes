@@ -10,19 +10,46 @@ We can minimize this loss by differentiating by θ (partial derivative for each 
 
 Interpretation: if y ~ h = Xθ, then h is in the column-space of X, which forms a subspace of R^N (N data points, p+1 dimensions, assuming x0≡1). To find θ, we project y to col-space using a projection matrix, which obviously minimizes residual (unexplained) variance, by making it orthogonal to col-space.
 
-Another interpretation: 
-* for a univariate x, we have a classic projection of vector y (all observations) on x (all input values): y ~ h = xθ = x ∙ xᵀy / xᵀx (by definition of projection). 
+# Philosophy of prediction
+Returning to bias-variance tradeoff, we consider x and y as random variables, with a joint distribution P(x,y). Now try to build a predictor f(x) that approximates y. The squared error loss: L = (y-f)² = ∬ (y-f)² P(x,y) dx dy. We can split P(x,y) into P(x)∙P(y|x), and integrate by y first (inside), then by x outside. Then to minimize total L, we can bind f(x) to matching y point-wise: f(x) = E(y|X=x). Which would essentially give us the **nearest neighbor** method (see the very beginning of "Classification" chapter). An alternative to point-wise matching would be a global smooth model, like linear regression. It makes regression and 1NN two opposite extremes of what can be done with the data. Other stuff (like **additive models** where f = ∑ f_j(x)) are kinda in-between.
+
+In spirit, all models are about setting local and global constraints on the behavior of predictor (such as **behavior in the neighborhood**, that is const for KNN, linear for local linear etc.), and the **granularity** of these  neighborhoods. Some methods (kernels, trees) make this granularity parameter explicit, some don't. And high dimensionality is a problem for all methods, regardless of how they work. 
+
+There are **3 broad approaches to model smoothing**:
+* Roughness penalty
+* Local methods (kernel methods, aka local regression)
+* Constrained basis functions and dictionaries
+
+**Roughness penalty**: Use basic RSS (Residual Sum of Squares) with an explicit penalty: L = RSS(f) + λJ(f), where J grows as f() becomes too rough. For example, defining J as λ∫(f'')²dx leads to **cubic smoothing splines** as an optimal solution. Roughness penalty can be interpreted in a Bayesian way, as a log-prior.
+
+**Kernel methods**: explicitly specify local neighborhoods, and a type of function to fit it locally. The neighborhood is defined by the kernel function K(x0,x) that acts as weights for x around x0. Gaussian Kernel: K = 1/λ exp( - |x-x0|² / 2λ). The simplest way to use kernels, is to calculate a weighted average (aka Nadaraya–Watson kernel regression): f(x0) = ∑ K(x0,x_i)∙y_i / ∑ K(x0,x_i).
+
+Or we can set some sort of smooth f(x), and use kernels for RSS calculations: RSS(x0) = ∑ K(x,x0)∙(y-f(x))² , where ∑ runs through all (x_i, y_i). If we assume f(x) = θ0 + θx, we get **local linear regression**. KNNs (see [[03_Classification]]) can also be considered a subtype of a kernal method, just with a weird step-wise kernel.
+
+**Basis functions**: includes linear and polynomial regressions, but the idea is that you have a basis of functions on R^n, and project into it: f = ∑_i θ_i h_i(x). Examples: **polynomial splines**; **radial basis functions** [[RBF]] with K(μ, x) defined around several centroids μ that can itself be optimized. Gausssian kernels are still popular. Feed-forward **Deep Learning** actually also belongs here, it just htat basis functions are defined by network design (the space of functions that can be achieved with this particular network depth, activation functions etc.).
+
+**Are there alternatives to L2?** Sure, **L1 norm** = abs(distance), which effectively pushes f(x) towards median(y) rather than the mean(y): sum of distances to 2 points is min when you're exactly between them. Hard to work with, as derivatives are discontinuous.
+
+**Max Likelihood**: In some way, can be considered  an alternative to L2 (MSE) loss. For a data sample y_i, the log-prob of observing it is equal to: L(θ) = ∑ log P(y_i | θ), summed by i (all points). We try to find θ that maximizes ∏P, and thus ∑logP. It is connected to L2 though, as least squares maximizes likelihood for conditional probability P(y|x,θ)=𝒩(h,σ²) where h = Xβ. _ESL has a formula 2.35 for it, but without derivation. I think they may have found a derivative by θ, set it to zero, then integrate the right side by x, but I'm not sure._
+
+# The math behind it all
+
+Intepretations for h = Xθ:
+* For a univariate x, we have a classic projection of vector y (all observations) on x (all input values): y ~ h = xθ = x ∙ xᵀy / xᵀx (by definition of projection). 
 * If x is a vector, with several coordinates, but these coordinates are independent (say, in case of orthogonal experiment design design), so columns of X are orthogonal, we can just project to each dimension separately, and the result will be the sum of these projections. That's because once you dot-product y=∑θ_i x_i with x_j, all terms but one would die. Which means that essentially we can pretend that multiple linear regression is just a bunch of univariate regressions. It also matches the general formula, as in this case XᵀX is diagonal. 
 * If however columns of X are correlated (not orthogonal), we have to do repetitive elimination ( aka **Gram-Schmidt**) that leads to a full form projection matrix. See below.
 
 Or we can perform a gradient descent: θ := θ + α(h-y)x, with some learning rate α. As this loss is a convex quadratic function, it has only one minimum, and so it always converges. 
 
 ## Gram-Smidt
-A computationally better alternative to working with inverse matrices. The idea: beak y into x1 and everything else, as if the basis was orthonormal, changing it on the fly. (In practice, x0≡1 goes before x1, but it doesn't change the idea)
+
+> #todo: this description doesn't make sense currently. It's supposed to summarize ESL p54, but I cannot understand it upon re-reading it. Rewrite!
+
+A computationally solid approach to calculating θ, that works better than inverse matrices. The idea: break y into x and everything else, as if the basis was orthonormal, then update si iteratively.
 
 Algorithm (without normalization):
-1. Start with xi set to x0
-2. Replace xi  with its projection to the complement of all previously considered coordinates: qi = xi - ∑proj(xi→qj) = xi - ∑qj∙⟨xi,qj⟩/⟨qj,qj⟩ where j=0 to i-1. Remember all scalar products from this formula as cji = ⟨xi,qj⟩.
+1. Set xi (the current best guess for x) to x0
+2. Replace xi with its projection to the complement of all previously considered coordinates: qi = xi - ∑proj(xi→qj) = xi - ∑qj∙⟨xi,qj⟩/⟨qj,qj⟩ where j=0 to i-1. Remember all scalar products from this formula as cji = ⟨xi,qj⟩.
 3. Find the best projection of y on qi: γi = ⟨y,qi⟩
 4. Shift current x from xi to x_i+1. Go to step 2.
 
@@ -107,28 +134,6 @@ J ~ E( xᵀCov(X)⁻¹xσ²/N ) + σ²= trace(Cov(X)⁻¹Cov(x))σ²/N + σ² = 
 > This trace thing here is pretty annoying, but it works. If we E() the left part, we get a E() of sum_ij (x_i x_j C⁻¹ij), which is p^2 terms. But if you open this trace(C∙C⁻¹), you get the same expression (j coming from trace-sum, and j from internal multiplication). So E() indeed gives the trace(), and then as trace() only runs through p terms, and all of these terms happen to be =1 by def of CC⁻¹, we get what we get.
 
 Which means that the higher the number of dimensions, the worse the error (variance). Now, some methods are worse than others: linear regression is actually faring OK, while some (like KNN regressor) get cursed pretty fast (ESL p26), but the gist is the same for all. If you simulate this, you have diff deterioration curves for different data assumptions. IRL, we try to be in-between these two extremes (linear regression and 1NN) using some info (or assumptions) about the structure of the data. 
-
-# Philosophy of prediction
-Returning to bias-variance tradeoff, we consider x and y as random variables, with a joint distribution P(x,y). We're trying to build a predictor f(x) that approximates y. The squared error loss: L = (y-f)² = ∬ (y-f)² P(x,y) dx dy. We can split P(x,y) into P(x)∙P(y|x), and integrate by y first (inside), then by x outside. Then to minimize total L, we can bind f(x) to matching y point-wise: f(x) = E(y|X=x). Which would essentially give us the **nearest neighbor** method (see the very beginning of "Classification" chapter). An alternative to point-wise matching would be a global smooth model, like linear regression. It makes regression and 1NN two opposite extremes of what can be done with the data. Other stuff (like **additive models** where f = ∑ f_j(x)) are kinda in-between.
-
-In spirit, all models are about setting local and global constraints on the behavior of predictor (such as **behavior in the neighborhood**, that is const for KNN, linear for local linear etc.), and the **granularity** of these  neighborhoods. Some methods (kernels, trees) make this granularity parameter explicit, some don't. And high dimensionality is a problem for all methods, regardless of how they work. 
-
-ESL defines 3 broad classes of model smoothing / constraining:
-* Roughness penalty
-* Kernel methods (aka local regression)
-* Basis functions and dictionaries
-
-**Roughness penalty**: Use basic RSS (Residual Sum of Squares) with an explicit penalty: L = RSS(f) + λJ(f), where J grows as f() becomes too rough. For example, defining J as λ∫(f'')²dx leads to **cubic smoothing splines** as an optimal solution. Roughness penalty can be interpreted in a Bayesian way, as a log-prior.
-
-**Kernel methods**: explicitly specify local neighborhoods, and a type of function to fit it locally. The neighborhood is defined by the kernel function K(x0,x) that acts as weights for x around x0. Gaussian Kernel: K = 1/λ exp( - |x-x0|² / 2λ). The simplest way to use kernels, is to calculate a weighted average (aka Nadaraya–Watson kernel regression): f(x0) = ∑ K(x0,x_i)∙y_i / ∑ K(x0,x_i).
-
-Or we can set some sort of smooth f(x), and use kernels for RSS calculations: RSS(x0) = ∑ K(x,x0)∙(y-f(x))² , where ∑ runs through all (x_i, y_i). If we assume f(x) = θ0 + θx, we get **local linear regression**. KNNs (see [[03_Classification]]) can also be considered a subtype of a kernal method, just with a weird step-wise kernel.
-
-**Basis functions**: includes linear and polynomial regressions, but the idea is that you have a basis of functions on R^n, and project into it: f = ∑_i θ_i h_i(x). Examples: **polynomial splines**; **radial basis functions** [[RBF]] with K(μ, x) defined around several centroids μ that can itself be optimized. Gausssian kernels are still popular. Feed-forward **Deep Learning** actually also belongs here, it just htat basis functions are defined by network design (the space of functions that can be achieved with this particular network depth, activation functions etc.).
-
-**Are there alternatives to L2?** Sure, **L1 norm** = abs(distance), which effectively pushes f(x) towards median(y) rather than the mean(y): sum of distances to 2 points is min when you're exactly between them. Hard to work with, as derivatives are discontinuous.
-
-**Max Likelihood**: In some way, can be considered  an alternative to L2 (MSE) loss. For a data sample y_i, the log-prob of observing it is equal to: L(θ) = ∑ log P(y_i | θ), summed by i (all points). We try to find θ that maximizes ∏P, and thus ∑logP. It is connected to L2 though, as least squares maximizes likelihood for conditional probability P(y|x,θ)=𝒩(h,σ²) where h = Xβ. _ESL has a formula 2.35 for it, but without derivation. I think they may have found a derivative by θ, set it to zero, then integrate the right side by x, but I'm not sure._
 
 # Constrained models
 ## Best-subset regression
@@ -227,3 +232,7 @@ Refs: ESL p79
 The idea behind is to let y pull signal from X, regardless of how this signal is encoded (mixed?) in columns of X. ESL claims though that "variance aspect tends to dominate", so in practice this method doesn't behave too differently than Ridge regression. Seems to also be similar in spirit to "Canonical Correlation Analysis" (see [[04_Features]] section). Same as PCR above, may inflate weaker dimensions, making it unstable. Which all together is probably why it is not that widely used? 
 
 Refs: ESL p81, [wiki](https://en.wikipedia.org/wiki/Partial_least_squares_regression)
+
+# Related topics:
+
+* [[ransac]] - bootstrapping-like regression estimator based on inliners voting
