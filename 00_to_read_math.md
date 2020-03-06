@@ -311,6 +311,8 @@ DeepMind. How to optimize network architectures if training each model is so rid
 Elsken, T., Metzen, J. H., & Hutter, F. (2018). Neural architecture search: A survey. arXiv preprint arXiv:1808.05377.
 http://www.jmlr.org/papers/volume20/18-598/18-598.pdf
 
+
+
 # Self-supervised learning
 
 Jing, L., & Tian, Y. (2019). [Self-supervised visual feature learning with deep neural networks: A survey](https://arxiv.org/pdf/1902.06162.pdf). arXiv preprint arXiv:1902.06162.
@@ -353,6 +355,11 @@ Google.
 
 Ravanelli, M., Zhong, J., Pascual, S., Swietojanski, P., Monteiro, J., Trmal, J., & Bengio, Y. (2020). Multi-task self-supervised learning for Robust Speech Recognition. arXiv preprint arXiv:2001.09239.
 https://arxiv.org/abs/2001.09239
+
+Alex Nichol (2020). VQ-DRAW: A Sequential Discrete VAE
+https://arxiv.org/abs/2003.01599
+https://blog.aqnichol.com/2020/03/04/vq-draw-a-new-generative-model/
+Discrete varioational autoencoders; sorted latent space (from more important to less important factors), allowing approximation. Is it relevant?
 
 # Exploration, curiosity, RL
 

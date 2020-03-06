@@ -2,7 +2,7 @@
 
 He, K., Zhang, X., Ren, S., & Sun, J. (2015). Delving deep into rectifiers: Surpassing human-level performance on imagenet classification. In Proceedings of the IEEE international conference on computer vision (pp. 1026-1034).
 
-#dl
+#dl #init
 
 Aka "He-et-al". A famous paper with a simple technical result that everybody uses.
 

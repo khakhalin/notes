@@ -17,31 +17,31 @@ References:
 
 Definition: H(p,q) = -∑P(x)∙lg(Q(x)), or integral for continuous.
 
-Is used a loss for classification tasks (see respective chapters: classification and DL).
+Is used as loss for classification tasks (see chapters: [[03_Classification]] and [[06_DL]]).
 
-Not to be confused with joint entropy, even tho people use same notation H(p,q). Joint entropy is just an entropy of a vector variable composed of two variables that are "joined"; nothing fancy.
+The Information Theory interpretation: the expected message length when transmitting data from a (wrong) distribution P, using a code optimized for Q. So, Q is assumed, but P is happening. ([ref](https://en.wikipedia.org/wiki/Cross_entropy#Motivation))
+
+Not to be confused with joint entropy, even tho some people use similar or same notation for it H(p,q). Joint entropy is just an entropy of a vector variable composed of two variables that are "joined"; nothing fancy.
 
 ## KL divergence
 
 Kullback–Leibler Divergence between 2 probability distributions P and Q: 
-D(P||Q) = -∑p∙lg(q/p)
-(they use this funny symbol || everywhere)
+D(P||Q) = -∑p∙lg(q/p) . 
+(And yes, they really use this funny symbol || everywhere.)
 
 Note that:
-* division by p, so p cannot be 0 anywhere
-* Asymmetric. P is the "target distribution", and Q is the one you compare to it.
+* division by p, so p cannot be 0 anywhere. Although p∙log(1/p)→0 for p→0.
+* Asymmetric. P is the "target distribution", and Q is the one that you compare to it.
 
-Sometimes is called _relative entropy_ of P in respect to Q. Like, how much more you learned if you updated from Q to P (Bayesian), or how many bits you need to transmit a message from P using a code optimized for Q.
+Sometimes is called _relative entropy_ of P in respect to Q. Like, how much more you woudl have learned if you updated from Q to P (Bayesian). Or how many extra bits you would need to transmit a message from P using a code optimized for Q, as KL = D(P || Q) = H(P, Q) - H(P).
 
-From this point of view, entropy for a variable X following distribution P:
-H(X) = log(N_events) - D_KL( P || uniform_across_events )
-Because for uniform P(x) for every x we have max entropy, and we updated from it to P, entropy decreased. Like, we learned something ([ref: wikipedia](https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence)).
+From this point of view, entropy for a variable X following distribution P is lower than the max entropy for a uniform distribution exactly by its KL divergence with uniform distribution:
+H(X) = log(N_events) - D( P || uniform_across_events ) .
+For uniform P(x) for every x we have max entropy, and by updating from it to P, we demonstrate that we learned something, and so entropy decreases ([wiki](https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence)).
 
-> Interesting that in terms of update, it is P that is a posterior, or an update, while if you use it as a loss, P is the "ground truth", and Q is compared to it. So which one is known first, and which one second, is kind of opposite in these two scenarios. What is common, is that P is a better known, "more true" distribution.
+> Interesting that if we think of it in terms of an update, it is P that is a posterior, or an update, while if we use it as a loss function, P is the "ground truth", and Q is compared to it. So which one is known first, and which one second, is kind of opposite in these two scenarios. What is common, is that P is a better known, and thus a "more true" distribution.
 
-KL divergence is related to mutual information: I(X;Y) = D_KL( P(X,Y) || P(X) P(Y) ) . That is, how much extra information you have, if you know how events from X and Y match each other, compared to if you only know them separately).
-
-Cross-entropy of two random variables: H(p,q) = H(p) + D_KL(P || Q)
+KL divergence is also related to mutual information: I(X;Y) = D_KL( P(X,Y) || P(X) P(Y) ) . That is, how much extra information you have, if you know how events from X and Y match each other, compared to if you only know them separately).
 
 ## JS divergence
 

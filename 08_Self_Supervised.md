@@ -1,10 +1,21 @@
 # Self-Supervised Learning
 #self-supervised
 
-Related topics:
+Related:
 * [[triplet_loss]] - aka contrastive loss (or at least one type of it)
 
-# Autoencoders and GANs
+# Autoencoders
+
+Encoder → latent space (aka code) → Decoder → loss function.
+
+## VAE
+
+**Variational Auto-Encoders** are similar both to classic autoencoders, and to generative models. They use Bayesian reasoning ("_Stochastic Gradient Variational Bayes_" estimator), where the Bayesian task is formulated as inferring the parameters of the model, knowing the output. Basically, we assume that actual data was actually produced by a similar decoder, and we are trying to reconstruct the parameters of these decoder from the data. Instead of a "classic" loss function, it uses some weird thing based on KL-divergence (see [[Information]]). _Parked for now_
+
+Refs:
+* [Tutorial on VAEs](https://jaan.io/what-is-variational-autoencoder-vae-tutorial/) - explains the math
+
+# GANs
 
 Links:
 * Amazing demon on how GANs work: https://poloclub.github.io/ganlab/

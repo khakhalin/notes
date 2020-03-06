@@ -201,6 +201,11 @@ Rolfe, Jason Tyler (2012) Intrinsic Gradient Networks. Dissertation (Ph.D.), Cal
 https://thesis.library.caltech.edu/6953/
 PhD thesis that was never published on biologically plausible gradient descend in the brain? Check it out.
 
+Kunin, D., Nayebi, A., Sagastuy-Brena, J., Ganguli, S., Bloom, J., & Yamins, D. L. (2020). Two Routes to Scalable Credit Assignment without Weight Symmetry. arXiv preprint arXiv:2003.01513.	
+https://arxiv.org/abs/2003.01513
+Classical backprop uses same weights there and back; aka "weight symmetry". They seem to claim that by making the rules only slightly non-local, they can solve stuff.
+Code: https://github.com/neuroailab/neural-alignment
+
 # RL in the brain
 #rl
 

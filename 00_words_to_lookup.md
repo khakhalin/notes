@@ -23,6 +23,7 @@ Look through, decide the priority; how to file.
 #todo: [[system_design]] - sorta priority
 
 **ML and Algos**
+* that way to create ranking from asymmetric preferences via graphs
 * finish Google production thing
 * minimal spanning trees
 * trie
@@ -50,7 +51,7 @@ Look through, decide the priority; how to file.
 * that visual blog post about types of DL optimizers
 * Capsule neural network - some sort of generalization of convolutional networks for hierarchical data?? Never heard of them, but they are actually quite well cited!!
 * the difference between tSNE and UMAP
-* Kalman filter (and its friends)
+* Kalman filter
 * graph cuts in computer vision
 * Latent Dirichlet Allocation ([ref](https://towardsdatascience.com/end-to-end-topic-modeling-in-python-latent-dirichlet-allocation-lda-35ce4ed6b3e0))
 * unit tests, pytests, mocking

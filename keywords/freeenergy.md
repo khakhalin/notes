@@ -3,7 +3,7 @@
 
 A theory by Karl Friston, about Markov Blankets, and informatin flow (?).
 
-See also:
+Relevant papers:
 * [[Friston2016blog]]
 * [[Palacios2020blanket]]
 

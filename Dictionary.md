@@ -100,6 +100,8 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 
 # N
 
+**nat** (Information): it's like a bit, but for natural, rather than base 2 log. Way too nerdy for my taste.
+
 **NMF** (text): Non-negative Matrix Factorization, V=WH + U, where W and H are non-negative, and also typically V is alot×alot, but W is alot×little, and H is little×alot (similar to other dimensionality reduction techniques). Often used with text analysis.
 
 **noSQL** (db): a general word for non-relational [[database]]s: not tabular-based, good for realtime big data. May work with documents, key-values, wide-columns, graphs. Have lower guarantees on consistency (stale reads: updates don't update immediately), which can lead to data loss. [wiki](https://en.wikipedia.org/wiki/NoSQL)
@@ -147,6 +149,8 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 **Topic modeling** (text): unsupervised classification of pieces of text into different topics, similar to k-means clustering for numbers. Typically uses LDA or NMF. ([ref](https://medium.com/ml2vec/topic-modeling-is-an-unsupervised-learning-approach-to-clustering-documents-to-discover-topics-fdfbf30e27df))
 
 # UVW
+
+**VAE** (dl): Variational Auto-Encoder. See [[08_Self_Supervised]] 
 
 **Wide column store** (db): Imagine a table, except that different rows may have different columns (number, names, types). 
 
