@@ -1,8 +1,9 @@
-# Algorithms about trees
+# General tree algorithms
 #algo
 
 See also: 
 * [[algos_graph]] - general chapter for algorithms
+* [[bst]] - Binary Search Tree
 
 # Terminology
 * **Binary tree** - two children for each node.

@@ -12,6 +12,8 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 
 **Boosting** (ml): an alternative to _bagging_ for ensemble generation: Iteratively select samples that previous learners failed to learn or disagreed upon, and use them to train new learners; majority vote at the end. [ref](https://analyticsindiamag.com/primer-ensemble-learning-bagging-boosting/). See [[05_Ensembles]].
 
+**BST** (prog): Binary Search Tree. See [[bst]].
+
 # C
 
 **CART** (ml): Classification And Regression Tree; often used for gradient boosting. An umbrella term to cover decision trees (classifiers), but also trees that have real numbers assigned to their leaves as outputs. See [[05_Ensembles]].
@@ -42,7 +44,7 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 
 **ECS** (dev): Amazon Elastic Container Server. Is used to manage (run, stop) Docker containers on a cluster.
 
-**EDA** (): Exploratory Data Analysis.
+**EDA** (stats): Exploratory Data Analysis.
 
 **Feature store** (data) A practical concept for data project implementation: a collection of curated features that are automatically produced (updated) from new data, and can be tapped into by various projects. Paying it forward with feature engineering.
 

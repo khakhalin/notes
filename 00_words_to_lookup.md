@@ -23,18 +23,18 @@ Look through, decide the priority; how to file.
 #todo: [[system_design]] - sorta priority
 
 **ML and Algos**
-* that way to create ranking from asymmetric preferences via graphs
 * finish Google production thing
+* repeat 01 knapsack
 * minimal spanning trees
+* AVL tree
+* red-black tree
 * trie
 * what is NP: definition
-* red-black tree
 * splay tree
-* avl tree
 * radix sort
 * Dijkstra
-* repeat 01 knapsack
 * A star search algorithm
+* that way to create ranking from asymmetric preferences via graphs
 * https://cp-algorithms.com/data_structures/fenwick.html
 * https://cp-algorithms.com/data_structures/segment_tree.html
 * repeat quicksort and mergesort
