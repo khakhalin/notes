@@ -81,6 +81,7 @@ Look through, decide the priority; how to file.
 * multicore concurrency
 
 **Practical stuff:**
+* Decorators: in what scope do these variables live? ([link for memoization](https://www.python-course.eu/python3_memoization.php))
 * Checkpoints
 * Keras hyperparameter optimization
 * Python collections: deque, Counter, defaultdict etc.

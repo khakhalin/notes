@@ -1,11 +1,12 @@
 # Tools, coding, project management
 
+#todo: quickly summarize [this advice on naming stuff](https://hackernoon.com/the-art-of-naming-variables-52f44de00aad)
+
 #todo: "The missing semester of CS education": 
 https://missing.csail.mit.edu/
-lots of useful practical bits and pieces: the shell, debugging, metaprogramming and what not.
-Also have [lectures on youtube](https://www.youtube.com/playlist?list=PLyzOVJj3bHQuloKGG59rS43e29ro7I57J).
+lots of useful practical bits and pieces: the shell, debugging, metaprogramming and what not. Also has [lectures on youtube](https://www.youtube.com/playlist?list=PLyzOVJj3bHQuloKGG59rS43e29ro7I57J).
 
-Topics:
+Major topics:
 * [[system_design]]
 
 Cheatsheets:

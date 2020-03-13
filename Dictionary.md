@@ -142,7 +142,9 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 
 **Snowflake** (dev): cloud SQL data warehouse; mostly interesting as a contender for older / larger players. SQL, Java Script in queries; possibility of in-database ML. Emphasis on virtualization for deep cloning, allowing virtual queries on big data. Refs: [1](https://towardsdatascience.com/why-you-need-to-know-snowflake-as-a-data-scientist-d4e5a87c2f3d), [2](https://towardsdatascience.com/machine-learning-in-snowflake-fdcff3bdc1a7).
 
-**Spark** (dev): cluster computing framework (engine to work with big data). Written in **Scala**; donated to Apache. Runs on the JVM, nterfaces with programming languages, has its own SQL, graph processing, and what not.
+**Spark** (dev): cluster computing framework (engine to work with big data). Written in Scala; donated to Apache. Runs on the JVM, nterfaces with programming languages, has its own SQL, graph processing, and what not.
+
+**SPF** (prog): Shortest Path First, better known as Dijkstra's algorithm: [[dijkstra]]
 
 # T
 

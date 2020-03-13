@@ -21,6 +21,9 @@ In general, 2 main ways to explore graphs:
 
 **Time complexity** is O(V+E) for both. **Space complexity** for a tree, is tree height for DFS, and tree width for BFS. In the worst-case scenario, it's O(V) in both cases, just worst-case scenarios are different. On a balanced tree, it would be O(V) for BFS (because last layer has ~V/2 leafs), and O(log V) for DFS (tree depth).
 
+See also:
+* [[dijkstra]] - Dijsktra's shortest path algorithm
+
 # Topological order
 
 **Topological order** (aka topological sort): any sequence of vertex ids, such that for no directed edge A→B, vertex B is given in the sequence before vertex A. Is only possible in a **DAG** (**Directed Acyclic Graph**: a graph without  cycles), as obviously a directed cycle cannot be linearized.
@@ -31,7 +34,7 @@ One can find topological order with **DFS**, if they consider the order in which
 
 Here's an illustration. Imagine a graph with edges `(1,3)(2,3)(1,2)`. A good topological order for this graph is `1,2,3`, but DFS will explore the nodes in a sequence of `1,3,2` (aka pre-order). However, if you consider that DFS is recursive, and so 1 won't be left until all its branches are explored, the order of _leaving_ nodes is 3 (after it was explored), then 2, then 1 (once all its dependencies are explored). So `3,2,1` is the postorder, and `1,2,3` is a reverse postorder, and also appropriate topological order. 
 
-> How to find a good node to start? Unfortunately, it seems that the only way to guarantee it with DFS-algorithm only, is by starting with a yet different node every time you haven't covered the entire graph when starting from the current node. Until you find a good node to start. That is, assuming that you know that the graph is connected, and so ordering is possible. Which is of course not ideal, as it is super-slow, and doesn't work if a graph is not fully connected.
+> How to find a good node to start? Unfortunately, it seems that the only way to guarantee it with a DFS-algorithm only, is by starting with a yet different node every time you haven't covered the entire graph when starting from the current node. Until you find a good node to start. That is, assuming that you know that the graph is connected, and so ordering is possible. Which is of course not ideal, as it is super-slow, and doesn't work if a graph is not fully connected.
 
 > I am not quite sure it is true though, so this is something to be checked.
 
