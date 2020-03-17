@@ -6,6 +6,45 @@ See also: other thematic to-read lists:
 * [[11_RL]] - Reinforcement Learning
 * [[09_Graphs]] - Graph (aka Graphical) networks
 
+# Tab-dump work Mar 16
+
+AutoML-Zero: Evolving Machine Learning Algorithms From Scratch:
+* https://arxiv.org/abs/2003.03384
+* https://github.com/google-research/google-research/tree/master/automl_zero#automl-zero
+
+* https://distill.pub/2020/circuits/zoom-in/
+* How does the non-conscious become conscious:
+https://sci-hub.se/https://doi.org/10.1016/j.cub.2020.01.033
+
+
+### He 2015 work-in progress
+[[He2015init]]
+The paper:
+https://arxiv.org/pdf/1502.01852.pdf
+
+Related: Deep Residual Learning for Image Recognition
+https://arxiv.org/pdf/1512.03385.pdf
+
+Also Related:
+Mishkin, D., & Matas, J. (2015). All you need is a good init. arXiv preprint arXiv:1511.06422.
+https://arxiv.org/pdf/1511.06422.pdf
+
+### Other
+* https://ai.googleblog.com/2020/02/exploring-transfer-learning-with-t5.html
+* https://github.com/sergio-hcsoft/FractalAI
+* https://github.com/chuanli11/CNNMRF
+* https://arxiv.org/abs/2003.03988
+* https://arxiv.org/abs/2003.03461
+* https://www.goodai.com/implementation-of-generative-teaching-networks-for-pytorch/* 
+
+Reservoir memory machines!!
+* https://arxiv.org/abs/2003.04793
+* https://gitlab.ub.uni-bielefeld.de/bpaassen/reservoir-memory-machines
+
+Erik Bernhardsson 
+How to hire smarter than the market: a toy model
+https://erikbern.com/2020/01/13/how-to-hire-smarter-than-the-market-a-toy-model.html
+
 # Intros and top choices
 
 Identity Crisis: Memorization and Generalization Under Extreme Overparameterization 
@@ -102,7 +141,7 @@ Unsupervized discovery of objects: seems interesting
 
 Hu, J., Shen, L., & Sun, G. (2018). Squeeze-and-excitation networks. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 7132-7141).
 https://arxiv.org/abs/1709.01507
-Another paper with 1600 citations.
+Another paper with 1600 citations. Alternative to convolution networks, apparently? Is it faster, or better?
 
 On evolving network architectures:
 https://ai.googleblog.com/2018/03/using-evolutionary-automl-to-discover.html

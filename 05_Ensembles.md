@@ -75,6 +75,13 @@ In many ways, AdaBoost goes against the conventional wisdom for classification: 
 
 # Gradient Boosting
 
+#halfthere
+* https://explained.ai/gradient-boosting/index.html
+* https://explained.ai/gradient-boosting/L2-loss.html
+* https://explained.ai/gradient-boosting/L1-loss.html
+* https://explained.ai/gradient-boosting/descent.html
+* 
+
 **Gradient Boosting Machines**, or **GBM**, work in problems where the output is numerical rather than categorical. GB recursively approximates Y as a series of models {F_k], with each next model F_k  improves over the previous one: F_k = F_k-1 + f_k(x), where f_k() is some sort of weak learner. The basic algorithm, therefore, is at each step to iteratively approximate the difference between Y and the previous best model F_k (aka the residual) with a new function f_k(x).
 
 In practice, the most popular type of a weak learner f() for GB is a **regression tree**, or more precisely a **regression tree stump**: the simplest decision tree that consists of one basic split over one variable (one coordinate of X), and produces two different values (levels) on each side of this split. Once the fitting is complete, all regression tree stumps are summed together, to produce the final output of the ensemble. 

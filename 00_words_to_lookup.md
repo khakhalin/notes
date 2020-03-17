@@ -23,10 +23,19 @@ Look through, decide the priority; how to file.
 #todo: [[system_design]] - sorta priority
 
 **ML and Algos**
+* compare binary search recursive to looped to linear for break-even N
 * finish Google production thing
+* How to delete from a binary heap
+* finish AVL tree
+* implement AVL tree
+* https://www.geeksforgeeks.org/binary-search-tree-set-2-delete/
+* Go through all subtopics here:
+https://www.geeksforgeeks.org/binary-search-tree-data-structure/
 * repeat 01 knapsack
 * minimal spanning trees
-* AVL tree
+* https://towardsdatascience.com/8-useful-tree-data-structures-worth-knowing-8532c7231e8c
+* https://en.wikipedia.org/wiki/Fibonacci_heap
+* https://en.wikipedia.org/wiki/Pairing_heap
 * red-black tree
 * trie
 * what is NP: definition
