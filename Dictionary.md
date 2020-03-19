@@ -54,6 +54,8 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 
 **GBM** (ml): Gradient Boosting Machine. See [[05_Ensembles]]
 
+**GCD** (math): Greatest Common Divisor (see Euclidean algorithm: [[gcd]])
+
 **GCP** (db): Google Cloud Platform.
 
 **GOFAI** (ai): Good Old Fashioned Artificial Intelligence (aka Symbolic Intelligence). Dominant until 1980. Plugging inputs into a logic scheme (at most - fuzzy logic).

@@ -31,7 +31,6 @@ Look through, decide the priority; how to file.
 * https://www.geeksforgeeks.org/binary-search-tree-set-2-delete/
 * Go through all subtopics here:
 https://www.geeksforgeeks.org/binary-search-tree-data-structure/
-* repeat 01 knapsack
 * minimal spanning trees
 * https://towardsdatascience.com/8-useful-tree-data-structures-worth-knowing-8532c7231e8c
 * https://en.wikipedia.org/wiki/Fibonacci_heap
@@ -61,6 +60,7 @@ https://www.geeksforgeeks.org/binary-search-tree-data-structure/
 * Capsule neural network - some sort of generalization of convolutional networks for hierarchical data?? Never heard of them, but they are actually quite well cited!!
 * the difference between tSNE and UMAP
 * Kalman filter
+* HyperNEAT - a paradigm for generative network evolution
 * graph cuts in computer vision
 * Latent Dirichlet Allocation ([ref](https://towardsdatascience.com/end-to-end-topic-modeling-in-python-latent-dirichlet-allocation-lda-35ce4ed6b3e0))
 * unit tests, pytests, mocking
@@ -80,7 +80,7 @@ https://www.geeksforgeeks.org/binary-search-tree-data-structure/
 * Mahalanobis distance
 * Particle filters
 
-**OS**
+**Systems and OS**
 * Processes, threads, concurrency
 * locks, mutexes, semaphores, monitors
 * deadlocks, livelocks, and how to avoid them
@@ -88,17 +88,18 @@ https://www.geeksforgeeks.org/binary-search-tree-data-structure/
 * context switching
 * scheduling
 * multicore concurrency
+* how internet works (TCP, IP, DNS, HTTP)
 
-**Practical stuff:**
-* Decorators: in what scope do these variables live? ([link for memoization](https://www.python-course.eu/python3_memoization.php))
-* Checkpoints
+**Tools**
+* Python Decorators: in what scope do these variables live? ([link for memoization](https://www.python-course.eu/python3_memoization.php))
+* Keras heckpoints
 * Keras hyperparameter optimization
 * Python collections: deque, Counter, defaultdict etc.
+* Javascript React
 
 **Algorithms - other**
 * https://www.byte-by-byte.com/google-interview/ - check other topics
 * Hungarian algorithm
-* rewrite graph traversals
 * minimum cut (on graphs), with related topics
 
 **ESL progress**
