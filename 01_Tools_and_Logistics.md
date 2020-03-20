@@ -1,6 +1,7 @@
 # Tools, coding, project management
 
-#todo: quickly summarize [this advice on naming stuff](https://hackernoon.com/the-art-of-naming-variables-52f44de00aad)
+#todo: Command Line crash course
+https://learnpythonthehardway.org/book/appendixa.html
 
 #todo: "The missing semester of CS education": 
 https://missing.csail.mit.edu/
@@ -29,10 +30,12 @@ Other #lifehack(s):
 
 **Random Python tips:**
 * If in a module you start a method name with one underscore, like `_helper`, this method isn't imported on `from module import *`. Unfortunately it is still accessible if you do `import module`and address it as `module._helper()`.
-* Conventions: **snake_case** underscore for variables and functions; all-caps for constants, capitalized CamelCase for objects, leading-underscore for local methods.
+* **Ternary operator**: `x = 1 if condition else 2`.
+* Empty arrays, strings, and dicts are False, so write `if foo:` instead of `if foo!=[]:` or `if len(foo)>0:`. It's considered good form, [apparently](https://google.github.io/styleguide/pyguide.html).
 * Nested comprehensions: same syntax as in writing nested loops (even tho it looks unformulaic), e.g. `[j for i in range(5) for j in range(i)]
 * To add += 1 to a dict when a key may not exist, use `get()` as it allows to set a default value: `a[i] = a.get(i,0)+1`
 * To get some (or rather, first) key from a dict: `next(iter(a.keys()))`
+* To split a long line one could use `\`, but it is advised to use implicit line joining instead, which happens if brackets were open and not closed. It's better to add "unnecessary" brackets than usie a backslash.
 * Objects (including empty lists `[]`) should never be used as **default arguments** for functions, as they are evaluated only once per program (during object definition), not when methods are called! Insetad use `x=None`, then `if x is None: x=[]`. It sounds super-cumbersome, but that's just how it is. ([ref](https://docs.python-guide.org/writing/gotchas/))
 * **Docstring**: First constant in a declaration, starts and ends with triple double quotes `"""`, accessible via `object.__doc__` property. Minimum: one sentence, capitalized, with a full stop at the end, explaining what this function does. Don't include the name, or usage. Any other comments - lower, after an empty line. For modules, similar, at the very beginning, before any declarations. Refs: [1](https://www.python.org/dev/peps/pep-0257/), [2](https://www.pythonforbeginners.com/basics/python-docstrings)
 * **F-strings**: `f"bla {x['a']:.2f}"` - this version (with `"`) supports dicts (because diff quotation marks), and formats the output (after `:`). Refs: [intro](http://zetcode.com/python/fstring/) , [specification](https://docs.python.org/3/library/string.html#format-specification-mini-language) (a mini-language of sorts!)
@@ -50,7 +53,7 @@ Other notes:
 * Brief intro from Brad Solomon: https://realpython.com/python-matplotlib-guide/
 * Cheatsheet: [https://github.com/rougier/matplotlib-cheatsheet](<https://github.com/rougier/matplotlib-cheatsheet>)
 
-## Coding habits for data scientists
+# Good coding habits
 * Keep code clean (not smelly). Types of **smells** ([ref](https://www.thoughtworks.com/insights/blog/coding-habits-data-scientists)):
     1. Dead code (commented out, inconsequential)
     2. Print statements everywhere
@@ -61,6 +64,32 @@ Other notes:
 * Smuggle code from Jupyter to classes as soon as possible (Jupyter only for protopying, reporting, and use case)
 * Write unit tests ([link to a decent intro](https://www.freecodecamp.org/news/an-introduction-to-testing-in-python/))
 * Make small and frequent commits
+
+Some more Python-specific advice:
+* Import entire modules or packages, not classes or functions, to retain `module.class.method()` structure, and prevent name collisions.
+* Lines shouldn't be longer than 80 chars (Google style guide)
+* `.py` files are not scripts, so even executables	 should  be written inside a main function: `def main():`. And then inside, add:
+```python
+if __name__ == '__main__':
+    main()
+```
+The benefit of this construction is that this `.py` won't be auto-executed on import.
+
+## Naming variables
+* Python-specific:
+    * Variables: **snake_case** underscore for variables and functions
+    * Constants: all-caps
+    * Objects: capitalized CamelCase
+    * Local methods: leading-underscore
+* Arrays are plural, elements of array are singular: for fruit in fruits
+* Booleans: is, has, can (is_cat, has_hamburger, can_eat)
+* Methods that return a boolean: check_is_cat()
+* Numbers: n_cats, max_cats, min_cats, total_cats:
+* Transformers: to_dollars, to_uppercase
+
+Refs:
+* https://hackernoon.com/the-art-of-naming-variables-52f44de00aad
+* [Google style guide](https://github.com/google/styleguide), including that [for Python in particular](https://google.github.io/styleguide/pyguide.html).
 
 # TF and Keras
 * Links to several tutorials: https://github.com/sayakpaul/TF-2.0-Hacks/blob/master/README.md

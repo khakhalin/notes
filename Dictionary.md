@@ -94,7 +94,7 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 
 **MAE** (ml): Mean Average Error, aka L1 loss.
 
-**MapReduce** (dev): programming model for parallel computing; a type of split-apply-combine strategy. Essentially, seems to define two functions, one function on splittable tasks (something like `for each a in List`) that analyzes its `a` and sends answers out; and another one that catches answers and combines them all into one answer.
+**Map Reduce** (dev): programming model for parallel computing; a type of split-apply-combine strategy. Essentially, seems to define two functions, one function on splittable tasks (something like `for each a in List`) that analyzes its `a` and sends answers out; and another one that catches answers and combines them all into one answer.
 
 **MCMC** (ml) Markov Chain Monte-Carlo. See [[13_MC]].
 

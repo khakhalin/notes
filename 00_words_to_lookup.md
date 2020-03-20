@@ -28,6 +28,7 @@ Look through, decide the priority; how to file.
 * How to delete from a binary heap
 * finish AVL tree
 * implement AVL tree
+* Command line intro: https://learnpythonthehardway.org/book/appendixa.html
 * https://www.geeksforgeeks.org/binary-search-tree-set-2-delete/
 * Go through all subtopics here:
 https://www.geeksforgeeks.org/binary-search-tree-data-structure/
@@ -92,6 +93,7 @@ https://www.geeksforgeeks.org/binary-search-tree-data-structure/
 
 **Tools**
 * Python Decorators: in what scope do these variables live? ([link for memoization](https://www.python-course.eu/python3_memoization.php))
+* Lint (pylint) - what is it and why? It seems that it can catch errors, type mismatches etc.
 * Keras heckpoints
 * Keras hyperparameter optimization
 * Python collections: deque, Counter, defaultdict etc.

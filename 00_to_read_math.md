@@ -402,6 +402,14 @@ Discrete varioational autoencoders; sorted latent space (from more important to 
 
 # Exploration, curiosity, RL
 
+Yujin Tang, Duong Nguyen, David Ha (2020). Neuroevolution of Self-Interpretable Agents
+https://attentionagent.github.io/
+https://arxiv.org/abs/2003.08165
+Limiting attention of agents helps them to learn to play (bottlenecking of sorts?). Google Brain + Mind.
+
+Introducing Dreamer: Scalable Reinforcement Learning Using World Models (2020)
+https://ai.googleblog.com/2020/03/introducing-dreamer-scalable.html
+
 Lázaro-Gredilla, M., Lin, D., Guntupalli, J. S., & George, D. (2018). Beyond imitation: Zero-shot task transfer on robots by learning concepts as cognitive programs. arXiv preprint arXiv:1812.02788.
 https://robotics.sciencemag.org/content/4/26/eaav3150.full?ijkey=9p/p9D23WW2Ek&keytype=ref&siteid=robotics
 Research article on imagination, recursion, and abstraction. Guessing context via transfer from prior experience.
