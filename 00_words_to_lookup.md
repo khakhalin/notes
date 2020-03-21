@@ -23,7 +23,6 @@ Look through, decide the priority; how to file.
 #todo: [[system_design]] - sorta priority
 
 **ML and Algos**
-* compare binary search recursive to looped to linear for break-even N
 * finish Google production thing
 * How to delete from a binary heap
 * finish AVL tree
@@ -113,7 +112,8 @@ Parked parts of ESL that need to be revisited:
 * p261 - another whole chapter. Model averaging, max likelihood, some Bayesian inference, more bootstrapping, the EM algorithm (Expectation-Maximization), Gibbs samping, bagging, MCMC
 
 **Deep Learning:**
-* What's so eager about eager mode
+* Why rotate pictures (augmentation) if we can just enforce rotationally-symmetric kernels. Is it possible? Is it desirable?
+* What's so eager about eager mode, and why people like it?
 * How to tell the receptive field of a neuron in a deep network? Do they gradient descend on it?
 * Word2vec - how does it work? And does it come pretrained or what?
 * residual blocks - why are they even a good idea? What's the deal here? How can it possibly help?
