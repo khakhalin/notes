@@ -12,6 +12,11 @@ Video: The physics of brain network architecture, function, and control
 Lecture by Danielle Bassett
 https://www.youtube.com/watch?v=u-l-rdKvd8U
 
+# Julia
+
+Kaifeng Gao, Jingzhi Tu, Zenan Huo, Gang Mei, Francesco Piccialli, Salvatore Cuomo (2020) Julia Language in Machine Learning: Algorithms, Applications, and Open Issues
+https://arxiv.org/abs/2003.10146
+
 # Spectral techniques
 
 Tao, T. (2013). Outliers in the spectrum of iid matrices with bounded rank perturbations. Probability Theory and Related Fields, 155(1-2):231–263.

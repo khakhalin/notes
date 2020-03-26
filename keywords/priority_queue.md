@@ -19,11 +19,17 @@ In practice, instead of keeping this data as a linked tree, it is usually kept a
 
 For this to work, the left branch should always be full before the right branch is increased, so that there is no gap in presentation of the last layer (aka **complete tree**). Or you'll have to pad empty leaves with NaNs, instead of just making sure that the address of a potential child is ≤ n, where n is the current size of a heap. For a priority queue it is achievable, as we can make sure that we always modify the last element in the list, and the integrity of the leaf layer is never violated:
 
-* To add, always add as the last element, then swim it up.
-* To pop, swap the last element with the root, remove current last (former root), sink the current root (former last).
+* To **add**, always add as the last element, then swim it up.
+* To **pop**, swap the last element with the root, remove current last (former root), sink the current root (former last).
 
 As both swimming and sinking don't change the shape of the tree, but only the sequence of elements, it solves the issue!
+
+Obviously, **deletion** of elements in the middle are very similar to popping, just instead of exchanging with the root, we exchange the last element with this mid-element. Then kill former mid-element, then **heapify**: either swim up (if it's larger than the parent), or sink (if it's heavier. And in practice it will amost always be heavier).
 
 It is also possible to have **multi-way heaps** (not binary, but, say, tertiary).
 
 It is also possible to use a priority queue as a sorting algo, called **Heap Sort**: just add all elements to a priority queue one by one, then pop them all. ~O(n log n), or more accurately, O(2n log n + 2n).
+
+# Refs
+
+* http://www.mathcs.emory.edu/~cheung/Courses/171/Syllabus/9-BinTree/heap-delete.html

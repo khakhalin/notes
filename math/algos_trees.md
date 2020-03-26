@@ -4,6 +4,8 @@
 See also: 
 * [[algos_graph]] - general chapter for algorithms
 * [[bst]] - Binary Search Tree
+    * [[avl_tree]]
+    * red-black tree
 
 # Terminology
 * **Binary tree** - two children for each node.

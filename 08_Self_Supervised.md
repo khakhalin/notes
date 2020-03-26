@@ -4,6 +4,9 @@
 Related:
 * [[triplet_loss]] - aka contrastive loss (or at least one type of it)
 
+Cool keywords:
+* Triplet loss = contrastive learning (? is it true?) = negative sampling (may be a more popular term for that)
+
 # Autoencoders
 
 Encoder → latent space (aka code) → Decoder → loss function.

@@ -351,13 +351,16 @@ Elsken, T., Metzen, J. H., & Hutter, F. (2018). Neural architecture search: A su
 http://www.jmlr.org/papers/volume20/18-598/18-598.pdf
 
 
-
 # Self-supervised learning
 
 Jing, L., & Tian, Y. (2019). [Self-supervised visual feature learning with deep neural networks: A survey](https://arxiv.org/pdf/1902.06162.pdf). arXiv preprint arXiv:1902.06162.
 
 Kolesnikov, A., Zhai, X., & Beyer, L. (2019). [Revisiting self-supervised visual representation learning](http://openaccess.thecvf.com/content_CVPR_2019/papers/Kolesnikov_Revisiting_Self-Supervised_Visual_Representation_Learning_CVPR_2019_paper.pdf). arXiv preprint arXiv:1901.09005.
 Google.
+
+Kevin Musgrave, Serge Belongie, Ser-Nam Lim (2020). A Metric Learning Reality Check
+https://arxiv.org/pdf/2003.08505v1.pdf
+On a first glance, throw a bucket of cold water over the head of recent advancements in this particular type of self-supervized learning (all sorts of contrastive learning and negative sampling). Seem to claim that with proper optimization all methods proposed in last 4 years or so yield results of exactly same quality, and there was no progress after all. Facebook and Cornell.
 
 Chollet, F. (2019). The Measure of Intelligence. arXiv preprint arXiv:1911.01547.
 https://arxiv.org/abs/1911.01547

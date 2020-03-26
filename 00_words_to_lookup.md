@@ -24,9 +24,14 @@ Look through, decide the priority; how to file.
 
 **ML and Algos**
 * finish Google production thing
-* How to delete from a binary heap
 * finish AVL tree
 * implement AVL tree
+* red-black tree
+* trie
+* Dijkstra
+* A star search algorithm
+* repeat heap, now with deletion
+* repeat quicksort and mergesort
 * Command line intro: https://learnpythonthehardway.org/book/appendixa.html
 * https://www.geeksforgeeks.org/binary-search-tree-set-2-delete/
 * Go through all subtopics here:
@@ -35,17 +40,12 @@ https://www.geeksforgeeks.org/binary-search-tree-data-structure/
 * https://towardsdatascience.com/8-useful-tree-data-structures-worth-knowing-8532c7231e8c
 * https://en.wikipedia.org/wiki/Fibonacci_heap
 * https://en.wikipedia.org/wiki/Pairing_heap
-* red-black tree
-* trie
 * what is NP: definition
 * splay tree
 * radix sort
-* Dijkstra
-* A star search algorithm
 * that way to create ranking from asymmetric preferences via graphs
 * https://cp-algorithms.com/data_structures/fenwick.html
 * https://cp-algorithms.com/data_structures/segment_tree.html
-* repeat quicksort and mergesort
 * finish gradient boosting
 * finish SVM
 * random forest
