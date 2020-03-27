@@ -28,10 +28,8 @@ Look through, decide the priority; how to file.
 * implement AVL tree
 * red-black tree
 * trie
-* Dijkstra
-* A star search algorithm
 * repeat heap, now with deletion
-* repeat quicksort and mergesort
+* implement Dijsktra
 * Command line intro: https://learnpythonthehardway.org/book/appendixa.html
 * https://www.geeksforgeeks.org/binary-search-tree-set-2-delete/
 * Go through all subtopics here:

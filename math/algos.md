@@ -1,18 +1,16 @@
 # Algorithms - General
 #algo #bib
 
-Data structures:
+Subsets:
+* [[algos_graph]] - everything graphs
+* [[algos_trees]] - everything trees
+* [[sorting]]
+
+Popular data structures:
 * [[hash]] - hashmaps, hashtables, and hashing functions
 * [[priority_queue]] - priority queue, heap, heap sort
 
-Graphs:
-* [[algos_graph]] - everything graphs
-* [[algos_trees]] - everything trees
-
-Key algorithms:
-* [[sorting]]
-
-Other curious algorithms
+Misc curious algorithms
 * [[lis]] - Longest Increasing Subsequence
 
 Todo: #todo
