@@ -4,11 +4,66 @@
 
 # Resources
 
-* https://github.com/donnemartin/system-design-primer
-* https://github.com/checkcheckzz/system-design-interview
+* Go through 2-3 youtube lectures in the queue that describe some of the existing solutions
 * https://www.byte-by-byte.com/3-ways-to-ace-your-system-design-interview/
+* Go through the list of terms and write down a definition for each of them
+* https://github.com/donnemartin/system-design-primer
+    * https://github.com/donnemartin/system-design-primer#index-of-system-design-topics
+* https://github.com/checkcheckzz/system-design-interview
 
 Every solution depends on parameters of scale: amount of data, n users, requests per seconds, expected respont time, read/write ratio.
+
+# Topics to look up
+
+Concepts
+* [CAP theorem](https://en.wikipedia.org/wiki/CAP_theorem) (Consistency, Availability, Partition tolerance) - impossible to provide all three, always a trade-off.	 P is a given, so relational DBs favor C, while noSQL favors A
+* Data sharding (how to split data that doens't fit).
+* Consistent hashing - way to solve data sharding
+* Optimistic and pessimistic locking
+* Strong vs eventual consistency
+* Map reduce
+* Multithreading (consistency, locks, CAS)
+* Concurrency, threads, deadlocks, starvation
+
+Practicality - web
+* Bloom filters and count-min sketch
+* Design patterns (OOP)
+* Cashing in DBs
+* TCP/IP
+* IPv4 vs IPv6
+* DNS lookup
+* HTTP vs HTTP2 vs websockets
+* TCP vs UDDP
+* Data centers and how they work
+* Public key infrastructure, symmetric and asymmetric encryption
+* CDN - content delivery network - important for streaming
+
+List from Google
+* Processes, threads, concurrency
+* locks, mutexes, semaphores, monitors
+* deadlocks, livelocks, and how to avoid them
+* resource allocation
+* context switching
+* scheduling
+* multicore concurrency
+
+Practicality - local
+* Parts of a modern OS? Levels of cashing in a modern OS?
+* Performance (bandwidth) of CPU / memory / SDD / HD / network
+* How to use sequential (as opposed to random) reads and write on HD to speed up your processes
+* Paxos - what is it?
+* Virtual machines and containers
+
+Solutions and tools
+* MongeDB
+* Couchbase
+* Memcashed
+* Redis cluster
+* Zookeeper
+* Kafka
+* NGINX, HAProxy - balancers
+* Solr, ElasticSearch
+* Blobstore
 
 # System interviews mindset
 
@@ -42,53 +97,26 @@ Other considerations:
 * Distributions of values; patterns
 * Upper and lower bounds
 
-# Topics to look up
+# Web services
 
-* Bloom filters and count-min sketch
-* Design patterns (OOP)
-
-Concepts
-* [CAP theorem](https://en.wikipedia.org/wiki/CAP_theorem) (Consistency, Availability, Partition tolerance) - impossible to provide all three, always a trade-off.	 P is a given, so relational DBs favor C, while noSQL favors A
-* Data sharding (how to split data that doens't fit).
-* Consistent hashing - way to solve data sharding
-* Optimistic and pessimistic locking
-* Strong vs eventual consistency
-* Map reduce
-* Multithreading (consistency, locks, CAS)
-* Concurrency, threads, deadlocks, starvation
-
-Practicality
-* Parts of a modern OS? Levels of cashing in a modern OS?
-* Cashing in DBs
-* Data centers and how they work
-* Performance (bandwidth) of CPU / memory / SDD / HD / network
-* How to use sequential (as opposed to random) reads and write on HD to speed up your processes
-* HTTP vs HTTP2 vs websockets
-* TCP/IP
-* IPv4 vs IPv6
-* DNS lookup
-* TCP vs UDDP
-* Public key infrastructure, symmetric and asymmetric encryption
-* CDN - content delivery network - important for streaming
-* Paxos - what is it?
-* Virtual machines and containers
-
-Solutions and tools
-* MongeDB
-* Couchbase
-* Memcashed
-* Redis cluster
-* Zookeeper
-* Kafka
-* NGINX, HAProxy - balancers
-* Solr, ElasticSearch
-* Blobstore
-
-# Terminology and tools
+**Scaling**: **Vertical** - better CPU, better RAM etc. **Horizontal** - parallelize, potentially with cheaper hardware.
 
 **Load balancer**: a process of distributing tasks over resources. May involve scheduling tasks of different size; scheduling of tasks that depend on each other (there are heuristic methods to optimize computation of a directed graph that arises from dependencies); and effective segregation (splitting into "independent" tasks that can be parallelized).
 
 Possible balancing approaches for a client-server architecture:
-* Server-side balancing
-* Client-side random load balancicng
-* Round-robin (for IP service): resolve into a list of IP sorted by priority, and the list is adjusted (permuted) for every response. The client tries IP in the order, and goes to a diff IP after a time-out. An IP that ended up working is used again, but with a certain expiration time. ([ref](https://en.wikipedia.org/wiki/Round-robin_DNS))
+* Server-side balancing (necessary for horizontal scaling)
+* Client-side random load balancing (randomize where the requests are sent)
+* Round-robin (common for DNS/IP services): resolve into a list of IP sorted by priority, and the list is adjusted (permuted) for every response. The client tries IP in the order, and goes to a diff IP after a time-out. An IP that ended up working is used again, but with a certain expiration time. ([ref](https://en.wikipedia.org/wiki/Round-robin_DNS))
+
+In a **Data Center** lots of servers have private IP addresses, but share one public IP address, with messages managed by a load balancer. TCP/IP within the data center.
+
+# OS and hardware
+
+Quad-core processors have parallelism (4 cores, so can do 4 things at a time).
+
+Working with databases requires faster drives, as typically involves lots of writing. So one of the bottlenecks for a server.
+
+# Refs
+
+Lists of topics and keywords:
+* https://www.palantir.com/2011/10/how-to-rock-a-systems-design-interview/

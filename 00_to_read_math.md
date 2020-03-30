@@ -29,7 +29,7 @@ Also Related:
 Mishkin, D., & Matas, J. (2015). All you need is a good init. arXiv preprint arXiv:1511.06422.
 https://arxiv.org/pdf/1511.06422.pdf
 
-### Other
+### Work tabs dump, ~Mar 16
 * https://ai.googleblog.com/2020/02/exploring-transfer-learning-with-t5.html
 * https://github.com/sergio-hcsoft/FractalAI
 * https://github.com/chuanli11/CNNMRF

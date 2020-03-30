@@ -1,4 +1,5 @@
 # Multi-Armed Bandit
+
 #rl #game
 
 A mathematical abstraction for **exploitation / exploration** problem. Several entities (metaphorized as gaming slot machines), each with a certain distribution of gains. The agent should decide which choices to engage with (how allocate resourses) to maximize gain. 

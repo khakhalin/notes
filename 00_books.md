@@ -1,13 +1,19 @@
 # Courses, books, and links
 #book
 
-# Key resources
+# Online resources
 * http://www.arxiv-sanity.com/ - AI search for arxiv
+
+* Practical intro to ML projects: https://github.com/chiphuyen/machine-learning-systems-design
+* Good collection of short tutorials (both ML and snippets of Python code) by Chris Albon: https://chrisalbon.com/
+* Matrix calculus for deep learning: https://explained.ai/matrix-calculus/index.html
+* Introduction to probabilistic computation (good: at once visual and mathy): https://betanalpha.github.io/assets/case_studies/probabilistic_computation.html
 
 # Books
 
 Given in the subjective order of my gradual reading.
 
+**First set**
 * How to think like a computer scientist by Allen B. Downey: ([site](https://greenteapress.com/wp/think-python-2e/)) - best intro to Python ever
 * VLMS (Introduction to Applied Linear Algebra) by Stephen Boyd. [full pdf](http://vmls-book.stanford.edu/)
 * Algorithms by Sedgewick - uses Java, but is exceptionally clearly written
@@ -18,7 +24,7 @@ Given in the subjective order of my gradual reading.
 * Programming in Python: Fluent Python, by Luciano Ramalho (no online version)
 * Deep Learning by Ian Goodfellow et al. [full pdf](http://www.deeplearningbook.org/)
 
-Second set, to advance, or get a new perspective:
+**Second set**, to advance, or get a new perspective:
 * ESL (The Elements of Statistical Learning) by Hastie, Tibshirani, Friedman. ([full pdf](https://web.stanford.edu/~hastie/ElemStatLearn/)) A more encyclopaedic version of ISLR: extensive, no code, and with most proofs and derivations "left to the reader" ([ref](https://www.quora.com/How-do-I-learn-the-book-Elements-of-Statistical-Learning-What-books-materials-would-help-beef-up-my-foundations-so-that-I-will-be-able-to-comprehend-the-book-easily)). Great book to revisit and integrate the material you already know.
 * On Programming Well, by Robert C. Martin (no online version)
 * Speech and Language Processing by D. Jurafsky & JH Martin ([draft pdf](https://web.stanford.edu/~jurafsky/slp3/))
@@ -33,14 +39,14 @@ Second set, to advance, or get a new perspective:
 * Bayesian Statistics: Statistical Rethinking, by Richard McElreath
 * Artificial Intelligence: A Modern Approach, by Russel and Norvig. ([site](http://aima.cs.berkeley.edu/), but no online)
 
-Refresher books
+Potential **Refresher books**
 * Applied Predictive Modeling by Kuhn Johnson (no free pdf online). Code in R.
 
-Third priority books:
+**Third priority books:**
 * Algorithms by Erickson
 * Design Patterns for Python by Norvig: https://norvig.com/design-patterns/
 
-Books that are not on my reading list, but keeping here just in case:
+Books that are not currently on my reading list:
 * Problem solving with data structures in Python ([full text, web](https://runestone.academy/runestone/books/published/pythonds/index.html))
 * [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/index.html) by Michael Nielsen
 * Competitive Programmer's Handbook by Antti Laaksonen: [pdf](https://cses.fi/book/book.pdf) (C++) - great idea, but the descriptions of algorithms are not clear, while implementations seem ideosyncratic…
@@ -59,6 +65,7 @@ Job-search specific materials:
 
 # Courses
 * [Google Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course/) - a really good introduction for complete noobs 
+* [Dynamical systems](https://www.youtube.com/playlist?list=PL8erL0pXF3JZqdlYIfTTyibOqSqwzRdVV) - Youtube course by Robert Ghrist 
 * [Stanford, linear dynamical systems](http://stanford.edu/class/ee363/lectures.html) (Stephen Boyd) - includes stochastic control, Kalman filter, Lyapunov theory
 * [Linear algebra by Gilbert Strang](https://www.youtube.com/playlist?list=PLE7DDD91010BC51F8) - Youtube from MIT. Everybody loves it, as it achieves a beautiful balance between staying extremely practical, concise, but at the same time giving many proofs (or "almost proofs", extreme-physics style, like for good cases, with simplifying assumptions etc). MIT also has [notes for each lecture](https://ocw.mit.edu/courses/mathematics/18-06sc-linear-algebra-fall-2011/syllabus/) (not in one pdf, but easy to find).
 * [Matrix methods in data science](https://www.youtube.com/watch?v=Cx5Z-OslNWE&list=PLUl4u3cNGP63oMNUHXqIUcrkS2PivhN3k) (also Gilbert Strang)- YouTube from MIT. May be good for refreshing things.

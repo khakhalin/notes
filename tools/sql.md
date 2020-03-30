@@ -1,6 +1,8 @@
 # SQL
 #tools
 
+See also: [[database]]
+
 **Some refs:**
 * [Good reference](https://www.w3schools.com/sql/default.asp)
 

@@ -8,9 +8,6 @@ https://medium.com/bits-and-behavior/im-a-professor-d732ba26c522
 https://calculatedcontent.com/2020/02/16/weightwatcher-empirical-quality-metrics-for-deep-neural-networks/
 https://en.wikipedia.org/wiki/S-expression
 
-What is a Computation Graph and Who Cares?
-https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-network-methods/lectures/12194418
-
 https://www.biorxiv.org/content/10.1101/2020.03.24.006775v1
 The mouse cortico-tectal projectome
 
@@ -29,3 +26,10 @@ Random pretty medieaval images of ridiculous monsters walking around. Each one d
 
 https://htck.github.io/bayeux/#!/
 Bayeux Tapestry meme generator
+
+Antidote: a book written by Katherine the Great icocognito:
+https://www.nlobooks.ru/magazines/novoe_literaturnoe_obozrenie/144_nlo_2_2017/article/12411/
+
+Night lamps shaped like a Soviet building:
+https://www.instagram.com/anokhinnikita_store/
+

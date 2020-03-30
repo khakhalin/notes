@@ -4,7 +4,7 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 
 # AB
 
-**ACID** (db): standard requirements for relational databases that maximize their reliability: Atomic (each transaction either fails as a whole, or succeeds as a whole; you cannot half-update a table), Consistent (invariants are checked; database always remains valid), Isolated (if transactions are executed concurrently, the result is the same as if they were ran sequentially), Durable (completed transactions are recorded in non-volatile memory: important for power outages).
+**ACID** (db): Atomic, Consistent, Isolated, Durable. See: [[database]].
 
 **Bagging** (ml): the simplest way to create an ensemble of classifiers using an algorithm: split data into bags (with replacement), train a different model on each of them. Final prediction = mean of all predictions. [ref](https://analyticsindiamag.com/primer-ensemble-learning-bagging-boosting/). See [[05_Ensembles]].
 
@@ -26,13 +26,13 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 
 **DAG** (math): Directed Acyclic Graph
 
-**Databricks Workspace** (db): workspace (environment) bhy Databricks, to interact with programs (jobs), notebooks, libraries, data. (?)
+**Databricks Workspace** (db): workspace (environment) by Databricks, to interact with programs (jobs), notebooks, libraries, data. (?)
 
 **Dataiku**: some sort of visual programming language platform for data science?
 
 **Design Patterns** (prog): A famous programming paradigm, and a name of a book by Peter Norwig, about typical ways to engineer interactions between classes and objects in object-oriented programming. About 23 or so archetypical solutions and interfaces that Java/C++ programmers learn by heart. [wiki](https://en.wikipedia.org/wiki/Software_design_pattern)
 
-**Docker** (db): Cloud computing service that provides a pratform with OS-level virtualization: an isolated user space (called container) that looks like a dedicated computer to programs running on it. Containers can talk to each other via defined channels. But unlike virtual machines, there's only one OS, so is less resource-hungry.
+**Docker** (db): Cloud computing service that provides a pratform with OS-level virtualization: an isolated user space (called a **container**) that looks like a dedicated computer to programs running on it. Containers can talk to each other via defined channels. But unlike virtual machines, there's only one OS, so is less resource-hungry.
 
 **Document store** (db): instead of rows, returns XML documents or something similar. [wiki](https://en.wikipedia.org/wiki/Document-oriented_database)
 
@@ -64,7 +64,7 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 
 # HIJ
 
-**Hadoop** (db): collection of open-source software utils for cluster support, maintained by Apache. Apparently, an alternative to data warehouses and MPP (why?).
+**Hadoop** (db): a collection of open-source software utils for cluster support, maintained by Apache. Apparently, an alternative to data warehouses and MPP ( #todo why?).
 
 **HCI**: Human-Computer Interaction. An academic area of research.
 
@@ -98,7 +98,7 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 
 **MCMC** (ml) Markov Chain Monte-Carlo. See [[13_MC]].
 
-**MPP** (dev): Massively Parallel Processing: a data architecture for big data. Examples: Amazon Redshift, Microsoft Azure, Snowflake, Google BigQuery. "Share nothing" architecture: sets of data don't overlap. Easier to deploy; support SQL. Alternative to Hadoop.
+**MPP** (dev): Massively Parallel Processing: a data architecture for big data. Examples: Amazon Redshift, Microsoft Azure, Snowflake, Google BigQuery. "Share nothing" architecture: sets of data don't overlap. Easier to deploy; supports SQL. Alternative to Hadoop ( #todo why?).
 
 **MST** (algos): Minimum Spanning Tree. A cycle-less subgraph of a weighted graph with min ∑w_ij. See [[graph_algos]].
 
@@ -108,7 +108,7 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 
 **NMF** (text): Non-negative Matrix Factorization, V=WH + U, where W and H are non-negative, and also typically V is alot×alot, but W is alot×little, and H is little×alot (similar to other dimensionality reduction techniques). Often used with text analysis.
 
-**noSQL** (db): a general word for non-relational [[database]]s: not tabular-based, good for realtime big data. May work with documents, key-values, wide-columns, graphs. Have lower guarantees on consistency (stale reads: updates don't update immediately), which can lead to data loss. [wiki](https://en.wikipedia.org/wiki/NoSQL)
+**noSQL** (db): a general word for non-relational databases: not tabular-based, good for realtime big data. May work with documents, key-values, wide-columns, graphs. Have lower guarantees on consistency (stale reads: updates don't update immediately), which can lead to data loss. See: [[system_design]], [[database]]
 
 # OPQ
 
@@ -156,7 +156,9 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 
 # UVW
 
-**VAE** (dl): Variational Auto-Encoder. See [[08_Self_Supervised]] 
+**VAE** (dl): Variational Auto-Encoder. See [[08_Self_Supervised]]
+
+**VPS** (system): Virtual Private Server. Virtual Machine -style half-way between shared service and private server?
 
 **Wide column store** (db): Imagine a table, except that different rows may have different columns (number, names, types). 
 

@@ -1,22 +1,13 @@
 # General To-Dos
 #todo
 
-Google crash course, about ML production: #todo
+See also: [[system_design]] - has it own list of "todo" words and terms
+
+Google crash course, about ML production:
 https://developers.google.com/machine-learning/crash-course/production-ml-systems
 
-practical intro to ML projects; look through:
-https://github.com/chiphuyen/machine-learning-systems-design
-
-Matrix calculus for deep learning
-https://explained.ai/matrix-calculus/index.html
-
-Introduction to probabilistic computation:
-https://betanalpha.github.io/assets/case_studies/probabilistic_computation.html
-Seems to be very good; simultaneously visual and mathy. Stochastic estimators and what not. Must-read!
-
-Good collection of short tutorials (both ML and snippets of Python code) by Chris Albon:
-https://chrisalbon.com/
-Look through, decide the priority; how to file.
+What is a Computation Graph and Who Cares?
+https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-network-methods/lectures/12194418
 
 # Words and topics to look up
 
@@ -44,6 +35,7 @@ https://www.geeksforgeeks.org/binary-search-tree-data-structure/
 * that way to create ranking from asymmetric preferences via graphs
 * https://cp-algorithms.com/data_structures/fenwick.html
 * https://cp-algorithms.com/data_structures/segment_tree.html
+* Revisit [this link](https://cs.stackexchange.com/questions/111353/analyze-time-series-data-to-get-min-max-over-past-period-of-time) about keeping running max & min of a time series (monotonous wedge?) - describe it, code it. [Pdf of the paper](https://arxiv.org/pdf/cs/0610046.pdf).
 * finish gradient boosting
 * finish SVM
 * random forest
@@ -77,16 +69,6 @@ https://www.geeksforgeeks.org/binary-search-tree-data-structure/
 * Principal variables
 * Mahalanobis distance
 * Particle filters
-
-**Systems and OS**
-* Processes, threads, concurrency
-* locks, mutexes, semaphores, monitors
-* deadlocks, livelocks, and how to avoid them
-* resource allocation
-* context switching
-* scheduling
-* multicore concurrency
-* how internet works (TCP, IP, DNS, HTTP)
 
 **Tools**
 * Python Decorators: in what scope do these variables live? ([link for memoization](https://www.python-course.eu/python3_memoization.php))
