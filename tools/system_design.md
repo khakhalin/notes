@@ -4,7 +4,16 @@
 
 # Resources
 
-* Go through 2-3 youtube lectures in the queue that describe some of the existing solutions
+#todo
+
+Go through 2-3 youtube lectures in the queue that describe some of the existing solutions:
+* Scalability lecture: https://www.youtube.com/watch?v=-W9F__D3oY4
+(I'm at 24 m right now)
+* Scaling Etsy: https://www.youtube.com/watch?v=eenrfm50mXw
+* Docker and Kubernetes: https://www.youtube.com/watch?v=u8dW8DrcSmo
+* How to design Twitter: https://www.youtube.com/watch?v=KmAyPUv9gOY
+
+
 * https://www.byte-by-byte.com/3-ways-to-ace-your-system-design-interview/
 * Go through the list of terms and write down a definition for each of them
 * https://github.com/donnemartin/system-design-primer
