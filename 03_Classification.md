@@ -4,18 +4,20 @@
 # 1NN and KNN
 Simplest archetypical approach: **Nearest Neighbor**. Just pick the closest training case. This is an example of a **lazy** approach: instead of generating estimations upfront (that would be called **eager**), we only generate them at retrieval. A better. and more practical, approach: **K nearest neighbors** (aka KNN).
 
-While KNN is lazy, for analysis purposes we can calculate predictions on a grid, and thus identify borders between areas "assigned" to different categories. For k=1 (simple Nearest Neighbor) we get a Voronoi tesselation between all training points (disconnected and jaggedy, as each point gets its own area). Which presents a case of extreme overfitting: all training data is correctly classified, but it looks scary. Higher k: smoother areas, making k a **hyperparameter**. But the **effective number of parameters** for KNN is higher (about N/k), as data points themselves serve as parameters.
-
-**Can we use quadratic loss function for KNN?** No, coz it would go to 0 for k=1, so hyperparameter search would always recommend overfitting. We should use **Max Likelihood** instead: Say, you have data X and a qualitative output G with values g_k denoting several different classes. We can have P(G=g_k|X=x) = P_k(θ,X), and try to maximize ∏P for a given data. It's the same as maximising L = ∑log P(θ , g_i , x_i) in the space of θ.
+While KNN is lazy, for analysis purposes we can calculate predictions on a grid, and thus identify borders between areas "assigned" to different categories. For k=1 (simple Nearest Neighbor) we get a Voronoi tesselation between all training points (disconnected and jaggedy, as each point gets its own area). Which presents a case of extreme overfitting: all training data is correctly classified, but it looks scary. Higher k: smoother areas, making k a **hyperparameter**. But the **effective number of parameters** for KNN is higher (about N/k), as data points themselves serve as parameters. 
 
 KNN can be used for numerical predictions as well (beyond simple classification); just use the average of y-values for nearest k x-points (in fact, that's how ESL introduces it).
 
+**Can we use quadratic loss function for KNN?** No, coz it would go to 0 for k=1, so hyperparameter search would always recommend overfitting. We should use **Max Likelihood** instead: Say, you have data X and a qualitative output G with values g_k denoting several different classes. We can have P(G=g_k|X=x) = P_k(θ,X), and try to maximize ∏P for a given data. It's the same as maximising L = ∑log P(θ , g_i , x_i) in the space of θ.
+
 How to find optimal k? We'll need a training and a testing set, then try different values of k, and find the point when the test error (or some other measure) is lowest for test data (ESL Fig 2.4).
 
-KNN is an archetype for many fancy methods. For example, if instead of "nearest" δi that are all or none we'll use fuzzy weights that are larger when you are close to each data w(distance), it's the same as just regressing on distance, which is a type of a **kernel method**. If we want some dimensions of X matter differently than others, we can use non-round kernels. **Local regression** is also similar in spirit (sorta a combinatino of linear regression and the idea of contextual locality). DL networks also imitate something like that by mixing and mashing linear transformations.
+> OK, there's something I don't understand here. If we introduce training and testing sets, why cannot we use quadratic loss? For a smooth enough underlying function, k=1 (overfitting) would almost certainly lead to higher L2 loss than a more decent "averaging" k. Right? Please check. #todo
+
+KNN is an basic archetype for a whole family of fancy "local" methods. For example, if instead of "nearest" δi that are all or none we use fuzzy weights that are larger when you are close to each data w = K(distance), it's the same as just regressing on distance, which is a type of a **kernel method**. If we want some dimensions of X matter differently than others, we can use non-round kernels. **Local regression** is also similar in spirit (sorta a combination of linear regression and the idea of contextual locality). DL networks with RELU also imitate something like that by having different subnetworks effectively enabled for different inputs (depending on which neurons inactivate) _(is it true?)_.
 
 # Model assessement
-**Model accuracy**: The most primitive measure = number of true statements / total number of statements. Obvious dependency on class balance (famous example, a statement of "today is not Christmas" has an accuracy of 99.7%). But may work for toy examples with very carefully balanced classes (like [[mnist]] mnist).
+**Model accuracy**: The most primitive measure = number of true statements / total number of statements. Obvious dependency on class balance (famous example, a statement of "today is not Christmas" has an accuracy of 99.7%). But may work for toy examples with carefully balanced classes (like [[mnist]] for example).
 
 **Precision and recall**: Let's concentrate on detection only (positive predictions only). We want something that is proportinal to true positives (TP), but what to put in the denominator? Two options: 
 
@@ -24,9 +26,11 @@ KNN is an archetype for many fancy methods. For example, if instead of "nearest"
 
 Can we balance them somehow, to make sure the model is reasonably good on both accounts? Most popular approach: **F1 score**: F = 2∙(precision∙recall)/(precision+recall) = **harmonic_mean**(precision , recall) = inv(mean(inv(precision),inv(recall))).
 
-An even better approach: **AUC** = **Area under the ROC (Receiver Operating Characteristic) curve**. With this approach, you take a threshold-like parameter of the model, and slide it through all possible values from ideally permissive to fully prohibitive. For max permissive we get maximal recall, or TPR=1, but also no true negatives at all: TNR=0 ⇒ FP=1 (that's how false-positives are defined, as 1-TNR). For max prohibitive, we get TPR=0, but also FPR=0, as TNR=1. For random probability, AUC=1/2, for perfect knowledge AUC=1.
+An even better approach: **AUC** = **Area under the ROC (Receiver Operating Characteristic) curve**. With this approach, you take a threshold-like parameter of the model, and slide it through all possible values from ideally permissive to fully prohibitive. Then we connect the dots and build the **ROC** in TPR/FPR coordinates (aka Sensitivity vs 1-Specificity). For max permissive we get maximal recall, or TPR=1, but also no true negatives at all: TNR=0 ⇒ FPR=1 (that's how false-positive rate is defined, as 1-TNR). For max prohibitive, we get TPR=0, but also FPR=0, as TNR=1. And we look at the area under this curve. For random probability, AUC=1/2, for perfect knowledge AUC=1.
 
-Interestingly, AUC = P(score of a true example > score of a wrong example). _I wonder if proving this is hard?_ #todo
+> So FPR and TPR are not at all the opposites of each other; they have different everything! TPR = 1-FNR = TP/(TP + FN), while FPR = 1-TNR = FP/(FP+TN). Don't get confused here. Note that the denominator is always the numerator + its opposite, and if you use some common sense, you can always "reconstruct" what the negative is, as with incorrect classification both the label and the truthfulness of this label are negated.
+
+Interestingly, AUC = P(score of a true example > score of a wrong example). _I wonder if proving this is hard?_ #todo But at least for two extreme cases this statement can be "felt" inuitively: for perfect classification (where score is sorted, with all class 0 points having lower scores that all class 1 points) AUC=1, as for very low thresholds only FPR changes (all TP are classified correctly, but not all TN), and then at some point it reverses (all TN are classified incorrectly, but not all TP), so AUC makes a sharp bend through the top left corner of the square. And for random scoring (where, for a large N, class 0 and class 1 are about uniformly distributed), AUC draws a diagonal.
 
 **Confusion matrix**: a good diagnostic tool for multi-class classification. Take all true classes, and tally into which classes they are misclassified. Identify the issues. _Is it better to do it on the validation set?_ It's better to zero the diagonal, as most cases will be classified correctly, but we're interested in the errors!
 
@@ -37,16 +41,16 @@ Canonical system of names for **Validation and Testing**:
 
 **Cross-vallidation**: Instead of setting apart one validation dataset, generate lots of those by random splits. Recommendations for split are around 70/30 or 80/20, although extreme versions of 50/50, or "**leave one out**" also exist. Note that repeating random split 10 times is different from **10-fold cross-vallidation**, as there will be overlaps between random splits, while "repeated holdout" carefully cycles through hiding from the model each of the possible equally-sized validation blocks.
 
-What's the current best practice?
+What's the current best practice? Some opinions:
 * k=3 for big (slow, expensive) models, leave-one-out for small ones - [ref](https://medium.com/@george.drakos62/cross-validation-70289113a072?)
 * k=5 or 10 just because feels like reasonable numbers - [ref](https://machinelearningmastery.com/k-fold-cross-validation/)
 
-For unbalanced datasets and multi-class classification, it is honest to used **stratified cross-validation**, when each of the strata is split separately, and then mixed back, to avoid class imbalance.
+For unbalanced datasets and multi-class classification, it is proper and honest to used **stratified cross-validation**, when each of the strata is split separately, and then mixed back, to avoid class imbalance.
 
 # Linear separation
 **Can regression be used for classification?** Aye, just set a threshold (0.5) for the output value. Aka fitting a **dummy variable**. If h(x) is a hyperplane in (x,y), h=const becomes a 1-d-lower hyperplane (aka **decision boundary**; in 2D case: a line) separating the space of X into 2 parts. **Linear separation**. Apparently, the best we can do for 2 overlapping Gaussians.
 
-What about **multi-class classificaton**; can regression be used then? Also aye, but with a different loss (not L2), summing costs of all misclassifications (when a point from class Gk was erroneously classified as a point in Gl). We'll need a matrix of costs, and from it calculate a matrix of losses L(k,l). Most often though, one cost for all errors, and **Expected Prediction Error** EPE = E(L). We can try to optimize EPE point-wise: G = armin_g ∑ L(Gk counted as g) ∙ P(observing point from Gk | for X=x).
+What about **multi-class classificaton**; can regression be used then? Also aye, but with a different loss (not L2), but rather with summing costs of all misclassifications (when a point from class Gk was erroneously classified as a point in Gl). We'll need a matrix of costs, and from it calculate a matrix of losses L(k,l). Most often though, one cost for all errors, and **Expected Prediction Error** EPE = E(L). We can try to optimize EPE point-wise: G = armin_g ∑ L(Gk counted as g) ∙ P(observing point from Gk | for X=x).
 
 If all errors cost the same, G = argmin_g (1 - P(g | x)), known as likelihood optimization, or **Bayes classifier**: just go for the best guess of conditional probability P(class | observation). The error rate for it is called **Bayes rate**, and it is the lowest possible rate, coming from the variability of data itself, analogous to irreducible error for continuous data: [wiki](https://en.wikipedia.org/wiki/Bayes_error_rate). If data is deterministic (every x↔g), Bayes rate=0, but if same x can produce diff g, it's ≠0, because the model will never be able to perfectly overfit the data.
 

@@ -4,15 +4,15 @@ Ensembles are about combining (or gradually refining) lots of poor predictions (
 
 # Bagging
 
-Bootstrapping can be used to improve estimations: bootstrap the data repeatedly; each time build an estimator, then average predictions of these estimators. Why does it work though? For linear estimators (like linear regression) it doesn't, as E(h(x)) = h(E(x)) = h(full data). But for non-linear h(), like **regression trees**, it may smoothen idiosyncrasies of each individual h(x).
+Bootstrapping can be used to improve estimations. **Bagging**: bootstrap the data repeatedly; each time build an estimator, then average predictions of these estimators. Why does it work though? For linear estimators (like linear regression) it doesn't, as E(h(x)) = h(E(x)) = h(full data). But for non-linear h(), like **regression trees**, it may smoothen idiosyncrasies of each individual h(x).
 
-How to best combine opinions of several classifiers into one output? One option is to one-hot encode output labels, average them up across models, produce a vector, then pick max coordinate (the most popular label). Another is to make each classifier to output vectors of probabilities for different levels,  then average these probability. This latter approach is smoother (lower variance), and if each vector is ∑=1, then the final output would naturally ∑=1.
+How to best combine opinions of several classifiers into one output? One option is to one-hot encode output labels, average them up across models, produce a vector, then pick the maximal score (the most popular label). Another is to make each classifier output vectors of probabilities for different levels, instead of levels themselves; then average these probabilities. This latter approach is smoother (lower variance), and if each vector is ∑=1, then the final output would naturally ∑=1, which is helpful.
 
 > Bias is apparently unchanged (ESL p285, stated as a fact, followed by a page of confusing "illustration"). Is it because no additional constraints are introduced by the procedure? How to intuit it? In which cases the bias WOULD BE changed? What sorts of modifications of h(x) procedure change the bias, and which sorts do not?
 
 > So from this part, it seems that the key power of bagging is that it takes a very discrete, run-down method that is by design jumpy, and also overfits like hell, and turns it into a smoothed landscape. Is this shifting from discrete to pseudo-continuous the main reason for why bagging works? Or is some hidden indirect serendipitous regularizaton also involved?
 
-Note that bagging doesn't work if loss is heavily quantized (like in **0-1 loss**, which is essentially accuracy). In this case, if you get a saturated classifier (all points→one class), there's no way to improve on it. Moreover, for random classifier with constant probabilities (returns 0 with probability p0, and 1 with p1) bagging would only worsen things (as bagging will lead to const classifier for whatever p is greater, as it would win on average). _So for this to work, we need to make the classifier as uneven and moody as possible, right?_
+Note that bagging doesn't work if loss is heavily quantized (like in **0-1 loss**, which is essentially accuracy). In this case, if you get a saturated classifier (all points→one class), there's no way to improve on it. Moreover, for a random classifier with constant probabilities (returns 0 with probability p0, and 1 with p1) bagging would only worsen things (as bagging will lead to const classifier for whatever p is greater, as it would win on average). _So for this to work, we need to make the classifier as uneven and moody as possible, right?_
 
 A slightly more sophisticated **counter-example**: points uniformly fill a (0-1,0-1) R² square; 2 classes with a diagonal split (ESL p288). Any subsampling from this will look like a blobby squary cloud with a diagonal; a split will fall kinda in the middle, and the edges of the diagonal will never be resolved.
 
@@ -20,7 +20,7 @@ Trees are also notoriouly bad in splitting 2D **XOR** in a unit square, as avera
 
 > Great #todo : model that in a playground, just to get a feel of what it can and cannot do.
 
-ESL p288 claims that bagged estimate is an approximate posterior Bayesina mean, which is something I don't get yet.
+ESL p288 claims that bagged estimate is an approximate posterior Bayesian mean, which is something I don't get yet.
 
 **Bayesian interpretaton:** Suppose you're trying to estimate ζ, given a training set Z, and we have a family of models {M}. Then we can marginalize posterior P(ζ|Z) over the family of models {M_i}: P(ζ|Z) = ∑P(ζ| M,Z)∙P(M|Z), summing across M in {M}. It means that posterior mean E(ζ) will also be a weighted average across models, weighted by probability of each of these models given the data: E(ζ|Z) = ∑E(ζ | M)P(M|Z), summing across M in {M}. In practice, **Committee methods** give equal weight to each observed model. (_I'm guessing it means they assume that with enough models samples, P(observing a model) will be taken care of just by design of this model-sampling procedure?_)
 
@@ -34,10 +34,10 @@ Alternatively, try to estimate P(M) somehow; say, if a model has a set of parame
 
 A practical way to create a reasonable linear combination of several non-linear models using cross-validation.
 
-**Stacked generalization** or **Stacking**: Say you have a way of building various models f_m, and training each of them on a dataset X. Models f_m may belong to the same class, or to different classes, but it is important that they are sufficiently different: that is, they need to be defined both by the training set X, and by some hyperparameters that come with the model itself. So while each model is a function of a dataset, f(X), two models f_m1(X) and f_m2(X) should still be different.
+**Stacked generalization** or **Stacking**: Say you have a way of building various models f_m, and you train each of them on a dataset X. Models f_m may belong to the same class, or to different classes, but it is important that they are sufficiently different: that is, they need to be defined both by the training set X, and by some hyperparameters that come with the model itself. So while each model is a function of a dataset, f(X), two models f_m1(X) and f_m2(X) should still be different.
 
 Consider training each model f_m() on a dataset  X minus observation xi. It creates a family of predictors $f_m^{-i}(x)$ for each model class f_m(), providing a good way of assessing the accuracy of m-type models f_m() via cross-validation: just predict y_i by each $f^{-i}$, and sum all errors. But instead of just picking the best model, we will build the best linear combination of all these models, by finding an optimal vector of weights w, so that
-$\sum_i \big( y_i - \sum_m w_m f_m^{-i}(x_i)\big)^2$ is minimal. In other words, we find a set of coefficients w, so that the linear combination of all f_m gives the best total cross-validation across all "remove one x_i". It also helps to constrain w to w_i>0 ∀i and ∑w_i = 1, as it turns it into a quadratic problem. That's called "stacking".
+$\sum_i \big( y_i - \sum_m w_m f_m^{-i}(x_i)\big)^2$ is minimal. In other words, we find a set of coefficients w, so that the linear combination of all f_m gives the best total cross-validation across all "remove one x_i". It also helps to constrain w to w_i>0 ∀i and ∑w_i = 1, as it turns it into a quadratic problem.
 
 Refs:
 * ESL p282-290
@@ -55,19 +55,18 @@ Boosting uses simplest decision trees possible:  for every coordinate we make a 
 The most popular, archetypical approach: **AdaBoost**, aka **Adaptive Boosting**. For a binary discrete case:
 1. Start with all points x_i having identical weights {W}. ∑w_i = 1, so w_i = 1/n.
 2. For each available coordinate, find the best split (aka stump), with smallest total error E = ∑w_i ϵ_i, where ϵ_i = 1∙(h(x_i)==y_i).
-3. Across all coordinates, find a split with minimal [[gini]] index. For all loops after the 1st (once the weights are different), either use **weighted gini index**, or randomly resample points with draw probability P ∝ w (draw with repetition, keeping the total number of points considered at each split constant).
-4. Calculate the weight of this stump as α = ½ log((1−E)/E) . This formula →+∞ for E→0 (perfect split), →-∞ for E→1 (perfectly erroneous split), and ~0 for splits that perform near chance level, when E=1-E, and so α≈log(1). In practice, to avoid ∞, a tiny ε is added to both numerator and denominator of the fraction under the log().
+3. Across all coordinates, find a split with minimal [[gini]] index (one that achives best separation of classes). For all loops after the 1st (once the weights are different), either use **weighted gini index**, or randomly resample points with draw probability P ∝ w (draw with repetition, keeping the total number of points considered at each split constant).
+4. Calculate the weight of this stump as α = ½ log((1−E)/E) , where E again is the error. This formula →+∞ for E→0 (perfect split), →-∞ for E→1 (perfectly erroneous split), and ~0 for splits that perform near chance level, when E=1-E, and so α≈log(1). In practice, to avoid ∞, a tiny ε is added to both numerator and denominator of the fraction under the log().
 5. Increase weights of misclassified samples: w_i ← w_i ∙ exp(α); decrease weights of correctly classified samples by multiplying them by exp(−α); then normalize all weights to ∑w = 1.
 6. Go to step 2.
-
-> Is it true that in practice randomly resampling points is better than using a weighted formula? Nobody says it openly, but if it weren't the case, why would people repeat this whole resampling story in each tutorial?
-
 7. Once everything is classified, rejects trees with accuracy less than 50%. _Not all descriptions mention that._
 8. Produce an average of tree outputs, weighted by α .
 
-Because each split is a single plane (line), || to all other variables, the decision border looks like a combination of these planes (lines). But all of them are ⊥ or || to each other, just shifted; there are no curves or non-right angles there. The final decision border will look kinda like a 
+> Is it true that in practice randomly resampling points is better than using a weighted formula? Nobody says it openly, but if it weren't the case, why would people repeat this whole resampling story in each tutorial?
 
-For multi-class classification, either create lots of binary classifiers (each class against all others), or encode each class as a superposition of several binary "features" that may be present or absent (say, bunnies are cute and jumpy, cats are cute but not jumpy; crickets are jumpy but not cute etc.), then use AdaBoost to identify the presence of features ([ref](https://engineering.purdue.edu/kak/Tutorials/AdaBoost.pdf)).
+Because each split is a single plane (line), || to all other variables, the decision border looks like a combination of these planes (lines). But all of them are ⊥ or || to each other, just shifted; there are no curves or non-right angles there. The final decision border will look kinda like a square crystalline maze, like a crystal of bysmuth or salt.
+
+For multi-class classification, either create lots of binary classifiers (each class against all others), or encode each class as a superposition of several binary "features" that may be present or absent (say, bunnies are cute and jumpy, cats are cute but not jumpy; crickets are jumpy but not cute etc.), then use AdaBoost to identify the presence of each of these features separately ([ref](https://engineering.purdue.edu/kak/Tutorials/AdaBoost.pdf)).
 
 In many ways, AdaBoost goes against the conventional wisdom for classification: it doesn't try to build a good classifier (but instead uses a lot of crappy ones); it does not try to identify important variables, or isolate important features using dimentionality reduction (instead, it thrives in this high-D multi-variable space).
 
@@ -80,7 +79,6 @@ In many ways, AdaBoost goes against the conventional wisdom for classification: 
 * https://explained.ai/gradient-boosting/L2-loss.html
 * https://explained.ai/gradient-boosting/L1-loss.html
 * https://explained.ai/gradient-boosting/descent.html
-* 
 
 **Gradient Boosting Machines**, or **GBM**, work in problems where the output is numerical rather than categorical. GB recursively approximates Y as a series of models {F_k], with each next model F_k  improves over the previous one: F_k = F_k-1 + f_k(x), where f_k() is some sort of weak learner. The basic algorithm, therefore, is at each step to iteratively approximate the difference between Y and the previous best model F_k (aka the residual) with a new function f_k(x).
 

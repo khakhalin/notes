@@ -98,6 +98,8 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 
 **MCMC** (ml) Markov Chain Monte-Carlo. See [[13_MC]].
 
+**MLE** (stats): Max-Likelihod Estimation. See [[02_Regression]].
+
 **MPP** (dev): Massively Parallel Processing: a data architecture for big data. Examples: Amazon Redshift, Microsoft Azure, Snowflake, Google BigQuery. "Share nothing" architecture: sets of data don't overlap. Easier to deploy; supports SQL. Alternative to Hadoop ( #todo why?).
 
 **MST** (algos): Minimum Spanning Tree. A cycle-less subgraph of a weighted graph with min ∑w_ij. See [[graph_algos]].

@@ -14,6 +14,7 @@ https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-networ
 #todo: [[system_design]] - sorta priority
 
 **ML and Algos**
+* Figure out that connection between ridge regression and and PCA that I have-started in the ridge regression chapter! Seems important and reasonably doable, no?
 * finish Google production thing
 * finish AVL tree
 * implement AVL tree
