@@ -1,7 +1,10 @@
 # General To-Dos
-#todo
 
-See also: [[system_design]] - has it own list of "todo" words and terms
+Key tags:
+* #halfthere - for projects that are close to completion.
+* #todo - for follow-ups that need to be done 
+
+See also: [[system_design]] - for now, has it own "todo" list of words and terms
 
 Google crash course, about ML production:
 https://developers.google.com/machine-learning/crash-course/production-ml-systems
@@ -11,15 +14,14 @@ https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-networ
 
 # Words and topics to look up
 
-#todo: [[system_design]] - sorta priority
-
 **ML and Algos**
-* Figure out that connection between ridge regression and and PCA that I have-started in the ridge regression chapter! Seems important and reasonably doable, no?
 * finish Google production thing
 * finish AVL tree
 * implement AVL tree
 * red-black tree
 * trie
+* How come stochastic gradient descent provides regularization? Why adding bagging to GBM, for example, can be considered a case of regularization? [[05_Ensembles]].
+* Figure out that connection between ridge regression and and PCA that I've started in the ridge regression chapter! Seems important and reasonably doable, no? [[02_Regression]].
 * repeat heap, now with deletion
 * implement Dijsktra
 * Command line intro: https://learnpythonthehardway.org/book/appendixa.html
