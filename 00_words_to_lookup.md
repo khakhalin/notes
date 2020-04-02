@@ -16,11 +16,13 @@ https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-networ
 
 **ML and Algos**
 * finish Google production thing
+* dual bases: why is this term a thing? How does it help? Describe here: [[la_01]]
 * finish AVL tree
 * implement AVL tree
 * red-black tree
 * trie
 * How come stochastic gradient descent provides regularization? Why adding bagging to GBM, for example, can be considered a case of regularization? [[05_Ensembles]].
+* Do we have 2 different descriptions from Gram-Smidt: in [[la_01]] and in [[02_Regression]]? Can we isolate and combine?
 * Figure out that connection between ridge regression and and PCA that I've started in the ridge regression chapter! Seems important and reasonably doable, no? [[02_Regression]].
 * repeat heap, now with deletion
 * implement Dijsktra

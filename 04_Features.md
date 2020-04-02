@@ -3,9 +3,9 @@ Features, Dim reduction, Clustering
 #features
 
 # Linear Basis Expansion
-The idea is to go beyond "linear" in linear regression, but retain the spirit of replacing complex and noisy X with some simple, probably smooth functions of fewer parameters. $f(X) = ∑β_j h_j(X)$, where X is our data, β are coefficients, and {h_j(X)} is a set of functions (transformations), each projecting from X-like space to y-like values (ℝ^p → ℝ). So a non-linear transformation of X, followed by a linear model in these new coordinates.
+The idea is to go beyond "linear" in linear regression, but retain the spirit of replacing complex and noisy X with a combination of simple, probably smooth functions of fewer parameters. $f(X) = ∑β_j h_j(X)$, where X is our data, β are coefficients, and {h_j(X)} is a set of functions (transformations), each projecting from X-like space to y-like values (ℝ^p → ℝ). So a non-linear transformation of X, followed by a linear model in these new coordinates.
 
-> So, this shows that fitting and smoothing can also be considered a case of basis transformations, where you have from a very high dimensionality (lots of consecutive points in a signal, treated as one long vector) into a low dim of parameter space (say, spline coefficients), from which the original high-D signal may be approximately reconstructed.
+> So, this shows that fitting and smoothing can also be considered basis transformations, where you go from a very high dimensionality (lots of consecutive points in a signal, treated as one long vector) into a low dim of parameter space (say, spline coefficients), from which the original high-D signal may be approximately reconstructed.
 
 **Some examples:**
 * h_j(X) = x_j. Linear regression
@@ -44,11 +44,11 @@ Several possible possible approaches:
 * **PCA** (principal component anlaysis) - optimal reconstruction (minimal reconstruction error, given a limit on basis size), maximal variance of projections. Eigenspace of XᵀX
 * **LDA** (Linear Discriminant Analysis) - optimal separation of classes. At each step, maximize separation (distance) between classes, aka **Fisher Linear Discriminance**. Obviously, label-driven, and these labels are nominal. Refs: [wiki](https://en.wikipedia.org/wiki/Linear_discriminant_analysis); detailed descriptoin in [[03_Classification]].
 * **CCA** (Canonical Correlation Analysis) - in 1D case, finds a mix of X, optimally correlated with a given output value y (similar to LDA for labels, but for continuous y). More generally, for two high-D datasets X and Y, finds directions (projections to low-D) in both X and Y such that the correlation between these directions is maximal. In even more general case, develop a sequence of these correspondences, defining an "optimal rotation" from one space to another. Refs: [wiki](https://en.wikipedia.org/wiki/Canonical_correlation)
-* **ICA** (Independent Component Analysis) - makes the basis statistically independent. Can be considered an extension of PCA that goes beyound 2nd order statistics.
+* **ICA** (Independent Component Analysis) - makes the basis statistically independent. Can be considered an extension of PCA that goes beyound 2nd order statistics (_What does it mean? #todo_)
 * **NMF** (Nonnegative Matrix Factorization) - keeps all elements in the basis non-negative, which often aids interpretability. Is often used with constraints (e.g. "orthogonality of weights")
 
 Refs:
-* [A lecture with a list of approaches](https://www.cc.gatech.edu/~hic/8803-Fall-09/slides/SubSpace-Learning.pdf)	, by Horst Bischof and Ales Leonardis
+* [A presentation with a list of approaches](https://www.cc.gatech.edu/~hic/8803-Fall-09/slides/SubSpace-Learning.pdf)	, by Horst Bischof and Ales Leonardis
 
 ## PCA
 Simplest type of eigenvalue-based (spectral) factor analysis. X=TΛQᵀ, where X is the original data, T is a set of orthogonal signals (**scores** - like in how much each point scored, therefore dim scores = dim points), and ΛQ is a p×p matrix of weigts that transform basis T into the basis of original data, called **loadings** (like, how hidden factors load into the observed variables, thus dim loadings = p×p, as for basis transformation).
