@@ -70,29 +70,31 @@ For multi-class classification, either create lots of binary classifiers (each c
 
 In many ways, AdaBoost goes against the conventional wisdom for classification: it doesn't try to build a good classifier (but instead uses a lot of crappy ones); it does not try to identify important variables, or isolate important features using dimentionality reduction (instead, it thrives in this high-D multi-variable space).
 
+It is also possible to use boosting with custom loss functions: for example, one can put more weight in false-positives compared to false-negatives, or ther other way around.
+
 **Refs:** [Akash Desarda](https://towardsdatascience.com/understanding-adaboost-2f94f22d5bfe); [wiki](https://en.wikipedia.org/wiki/AdaBoost); [Tommi Jaakkola](http://people.csail.mit.edu/dsontag/courses/ml12/slides/lecture13.pdf) lecture note; [Explaining AdaBoost](http://rob.schapire.net/papers/explaining-adaboost.pdf) by Robert Schapire; [YouTube video by StatQuest](https://www.youtube.com/watch?v=LsK-xG1cLYA) (good); [Slides by Avinash Kak, Purdue](https://engineering.purdue.edu/kak/Tutorials/AdaBoost.pdf) (very good).
 
 # Gradient Boosting
 
-#halfthere
+#todo #halfthere
 * https://explained.ai/gradient-boosting/index.html
 * https://explained.ai/gradient-boosting/L2-loss.html
 * https://explained.ai/gradient-boosting/L1-loss.html
 * https://explained.ai/gradient-boosting/descent.html
 
-**Gradient Boosting Machines**, or **GBM**, work in problems where the output is numerical rather than categorical. GB recursively approximates Y as a series of models {F_k], with each next model F_k  improves over the previous one: F_k = F_k-1 + f_k(x), where f_k() is some sort of weak learner. The basic algorithm, therefore, is at each step to iteratively approximate the difference between Y and the previous best model F_k (aka the residual) with a new function f_k(x).
+**Gradient Boosting Machines**, or **GBM**, work in problems where the output is numerical rather than categorical. GBM recursively approximates Y as a series of models {F_k], with each next model F_k  improves over the previous one: $F_k = F_{k-1} + f_k(x)$, where f_k() is some sort of weak learner. The basic algorithm, therefore, is at each step to iteratively approximate the difference between Y and the previous best model F_k (aka the residual) with a new function f_k(x).
 
 In practice, the most popular type of a weak learner f() for GB is a **regression tree**, or more precisely a **regression tree stump**: the simplest decision tree that consists of one basic split over one variable (one coordinate of X), and produces two different values (levels) on each side of this split. Once the fitting is complete, all regression tree stumps are summed together, to produce the final output of the ensemble. 
 
 To find the best split (best model improvement) at each step, we need to first introduce a smooth differentiable loss function (usually L2, if there are no outliers, or L1 if outliers are common). GB then performs a stepwise gradient descent to minimize this loss function. Depending on the function, descent can be performed in several different ways:
-* One approach, is to use f(x) to fit Y-F_k: a vector of differences between each y_i and its best current estimation F_k(x_i), as described above. This leads to minimzation of L2.
-* Alternatively, one can fit sign(Y-F_k): some sort of Manhattan-style normalized direction towards the gradient. This leads to minimization of L1.
+* One approach, is to use f(x) to fit Y-F_k: a vector of differences between each y_i and its best current estimation F_k(x_i), as described above. This leads to the minimization of L2.
+* Alternatively, one can fit sign(Y-F_k): some sort of Manhattan-style normalized direction towards the gradient. This leads to the minimization of L1.
 
 Often instead of applying each impovement f_k() in full, it is multiplied by a coefficient η < 1 (typically between 0.5 and 1.0), called the **learning rate**. This smoothens the descent.
 
-The first (or rather 0th) optimization step is to calculate the mean of all data (for L2 loss), or its median (for L1).
+The initial (0th) optimization step is to calculate the mean of all data (for L2 loss), or its median (for L1).
 
-As GB is a greedy algorithm, it is prone to overfitting, and so requires **hyperparameter tuning** of the maximal number of stages M, and learning rate η. GB can also be **regularized**: for example, stochastic GB only considers a part of the data for each decision tree (kinda like in bagging). It is also possible to use GB with custom loss functions: for example, one can put more weight in false-positives compared to false-negatives, or ther other way around.
+As GBM is a greedy algorithm, and is prone to overfitting, and so requires **hyperparameter tuning** of the maximal number of stages M, and learning rate η. GBM can also be **regularized**: for example, stochastic GBM would only consider a part of the data for each decision tree (kinda like in bagging).
 
 **References:**
 * [How to explain gradient boosting](https://explained.ai/gradient-boosting/index.html), Parr, Howard. Very good description!
