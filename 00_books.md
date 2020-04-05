@@ -64,6 +64,7 @@ Job-search specific materials:
 * [[Huyen2019book]] - a short book on data science / ML job interviewing
 * [Numbeo "cost of living" indices](https://www.numbeo.com/cost-of-living/rankings.jsp) - to scale salary expectations for the location
 * See also: [[ml_questions]] - an unstructured list of random ML and math questions
+* Some interview prepping advice [from Quora](https://www.quora.com/How-should-I-prepare-for-my-Google-interview-if-I-have-1-month-left-and-I%E2%80%99m-applying-for-a-software-engineer-role)
 
 # Courses
 * [Google Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course/) - a really good introduction for complete noobs 
@@ -78,7 +79,8 @@ Job-search specific materials:
 
 # Link aggregators
 
-* [A very nice annotated list of book recommendations](https://towardsdatascience.com/beyond-the-mooc-a-bookworms-guide-to-data-science-e87271cb0572)
+* [How to prepare for Google interview](https://www.linkedin.com/pulse/average-googler-four-weeks-study-plan-milad-naseri/?trk=v-feed), by Milad Naseri. Nice list of books, practical advice. 
+* [A very nice annotated list of book recommendations](https://towardsdatascience.com/beyond-the-mooc-a-bookworms-guide-to-data-science-e87271cb0572) for data science
 * [Machine learning for humans, 80/20 reading list](https://medium.com/machine-learning-for-humans/ai-reading-list-c4753afd97a) - claims to be curated. Sections on ML, Deep, RL, and then various general readings about the meaning of it all.
 * [Scientific visualization with matplotlib](https://github.com/rougier/scientific-visualization-book) - an open-source book project in the works that hadn't been released yet, but the previews look lovely
 

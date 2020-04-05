@@ -1,7 +1,7 @@
 # Pandas
 #tools
 
-* `[[]]` simply means "a list inside a `[]` call"
+* `[[something]]` simply means "a list of lists". It's a type thing, not a separate synatx.
 * Select columns by label: `d['x']`. Alternative spelling: `d.x`. Returns a series. 
 * Select rows by label: `d.loc[1]`. Works for both df (returns a row-series), and for column-series (returns a single value).
 * **Chained Assignment**: a problem while writing to a frame, selecting by both column and row.

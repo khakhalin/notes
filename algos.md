@@ -23,6 +23,9 @@ Limiting behavior at ∞. Different meaning in textbooks and in practical questi
 * If however you have to visit every branch of a tree, the total number of operations is n (for leaves) + n/2 + n/4 + ... = 2n, so we have O(N).
 * If we go through n elements and then use a divide-and-conquer approach, splitting in two equal sizes with recursion, then we have the complexity: T(n) = n + 2T(n/2). Unraveling this: T(n) = n + 2(n/2 + 2(n/4 + ... 2(1))) = n + n +  ... + n. This sum contains k ns where k = ceil(log_2 n), so the total T= O(N logN)
 
+Refs:
+* https://www.bigocheatsheet.com/ - Big "O" cheat sheet
+
 # Misc classic algorithms
 
 **Median of medians**: Recursive way to find a median in linear time (median through sorting is O(n lg n) ). Imagine we have a linear agorithm for finding i-th element (i=N/2 for a median). Split the array into groups of 5. Find median of each; then find the median of medians. It is guaranteed to be between 30th and 70th percentiles (just draw it for a proof). Set this value as a pivot. Binary split all elements into those lower than the pivot, and those higher than it. If upper=lower, pivot is the median. If not, look either for the k-th elements of the upper part (if upper is larger), or i-k-1 -th elements of the lower part (if lower is larger.)  Because the size of the array is guaranteed to shrink fast (not slower than 0.7 for main recursion step, and 0.2 for the median of median), by induction, the entire thing is O(n), just multiplied by some weird factor. Refs: [wiki](https://en.wikipedia.org/wiki/Median_of_medians), [better explanation](https://www.austinrochford.com/posts/2013-10-28-median-of-medians.html)

@@ -4,7 +4,7 @@ Key tags:
 * #halfthere - for projects that are close to completion.
 * #todo - for follow-ups that need to be done 
 
-See also: [[system_design]] - for now, has it own "todo" list of words and terms
+See also: [[system_design]] - has it own "todo" list of words and terms
 
 Google crash course, about ML production:
 https://developers.google.com/machine-learning/crash-course/production-ml-systems
@@ -15,28 +15,38 @@ https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-networ
 # Words and topics to look up
 
 **ML and Algos**
+* refresh O: https://www.bigocheatsheet.com/
+* finish conspecting AVL tree
+* refresh "read from a console" and read from file in Python
+* implement AVL tree
+* refresh hashmaps
+* Look up at all keywords from the systems part, put them in the dictionary
+* red-black tree - document
+* treap
+* trie
+* finish scalability lecture, and watch any other one, from systems design
+* what is NP: definition
+* Bloom filter (refs: [1](https://dominikschmidt.xyz/bloom-filter/))
+* minimal spanning tree
+* repeat heap, now with deletion
+* implement Dijsktra
+* implement red-black tree?
 * finish Google production thing
 * dual bases: why is this term a thing? How does it help? Describe here: [[la_01]]
-* finish AVL tree
-* implement AVL tree
-* red-black tree
-* trie
 * How come stochastic gradient descent provides regularization? Why adding bagging to GBM, for example, can be considered a case of regularization? [[05_Ensembles]].
 * Do we have 2 different descriptions from Gram-Smidt: in [[la_01]] and in [[02_Regression]]? Can we isolate and combine?
 * Figure out that connection between ridge regression and and PCA that I've started in the ridge regression chapter! Seems important and reasonably doable, no? [[02_Regression]].
-* repeat heap, now with deletion
-* implement Dijsktra
 * Command line intro: https://learnpythonthehardway.org/book/appendixa.html
 * https://www.geeksforgeeks.org/binary-search-tree-set-2-delete/
 * Go through all subtopics here:
 https://www.geeksforgeeks.org/binary-search-tree-data-structure/
-* minimal spanning trees
 * https://towardsdatascience.com/8-useful-tree-data-structures-worth-knowing-8532c7231e8c
 * https://en.wikipedia.org/wiki/Fibonacci_heap
 * https://en.wikipedia.org/wiki/Pairing_heap
-* what is NP: definition
 * splay tree
 * radix sort
+* timsort (according to the cheat-sheet, it is better then merge sort- how come?)
+* How to iterate through rows of a pandas dataframe?
 * that way to create ranking from asymmetric preferences via graphs
 * https://cp-algorithms.com/data_structures/fenwick.html
 * https://cp-algorithms.com/data_structures/segment_tree.html
@@ -60,7 +70,6 @@ https://www.geeksforgeeks.org/binary-search-tree-data-structure/
 * Latent Dirichlet Allocation ([ref](https://towardsdatascience.com/end-to-end-topic-modeling-in-python-latent-dirichlet-allocation-lda-35ce4ed6b3e0))
 * unit tests, pytests, mocking
 * Bayesian PCA
-* Bloom filter (refs: [1](https://dominikschmidt.xyz/bloom-filter/))
 * Demixed principal component analysis - some MDS technique on top of PCA; seems to be moderately popular with some neuro people. What's the gist of it?
 * Expectation-Maximization
 * Bayes Information Criterion - will be naturually described once I cover model selection?

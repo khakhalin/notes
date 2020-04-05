@@ -13,7 +13,7 @@ Go through 2-3 youtube lectures in the queue that describe some of the existing 
 * Docker and Kubernetes: https://www.youtube.com/watch?v=u8dW8DrcSmo
 * How to design Twitter: https://www.youtube.com/watch?v=KmAyPUv9gOY
 
-
+* https://www.hiredintech.com/app - a whole intro mini-course on systems design?
 * https://www.byte-by-byte.com/3-ways-to-ace-your-system-design-interview/
 * Go through the list of terms and write down a definition for each of them
 * https://github.com/donnemartin/system-design-primer
