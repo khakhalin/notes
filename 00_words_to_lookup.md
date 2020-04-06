@@ -15,19 +15,20 @@ https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-networ
 # Words and topics to look up
 
 **ML and Algos**
+
 * refresh O: https://www.bigocheatsheet.com/
 * finish conspecting AVL tree
 * refresh "read from a console" and read from file in Python
 * implement AVL tree
-* refresh hashmaps
 * Look up at all keywords from the systems part, put them in the dictionary
 * red-black tree - document
+* Floyd Warshall - at least the main idea?
 * treap
 * trie
 * finish scalability lecture, and watch any other one, from systems design
 * what is NP: definition
 * Bloom filter (refs: [1](https://dominikschmidt.xyz/bloom-filter/))
-* minimal spanning tree
+* summarize Python sets
 * repeat heap, now with deletion
 * implement Dijsktra
 * implement red-black tree?
@@ -46,7 +47,7 @@ https://www.geeksforgeeks.org/binary-search-tree-data-structure/
 * splay tree
 * radix sort
 * timsort (according to the cheat-sheet, it is better then merge sort- how come?)
-* How to iterate through rows of a pandas dataframe?
+* minimal spanning tree - code
 * that way to create ranking from asymmetric preferences via graphs
 * https://cp-algorithms.com/data_structures/fenwick.html
 * https://cp-algorithms.com/data_structures/segment_tree.html
@@ -55,6 +56,7 @@ https://www.geeksforgeeks.org/binary-search-tree-data-structure/
 * finish SVM
 * random forest
 * random forest vs. adaboost?
+* self-organizing (Kohonen) maps
 * apply svm, boosting
 * normal equation ([link?](http://mlwiki.org/index.php/Normal_Equation#Normal_Equation_vs_Gradient_Descent))
 * implement from scratch in numpy:
@@ -65,6 +67,7 @@ https://www.geeksforgeeks.org/binary-search-tree-data-structure/
 * Capsule neural network - some sort of generalization of convolutional networks for hierarchical data?? Never heard of them, but they are actually quite well cited!!
 * the difference between tSNE and UMAP
 * Kalman filter
+* magic squares algorithm?
 * HyperNEAT - a paradigm for generative network evolution
 * graph cuts in computer vision
 * Latent Dirichlet Allocation ([ref](https://towardsdatascience.com/end-to-end-topic-modeling-in-python-latent-dirichlet-allocation-lda-35ce4ed6b3e0))
@@ -85,7 +88,6 @@ https://www.geeksforgeeks.org/binary-search-tree-data-structure/
 * Particle filters
 
 **Tools**
-* Python Decorators: in what scope do these variables live? ([link for memoization](https://www.python-course.eu/python3_memoization.php))
 * Lint (pylint) - what is it and why? It seems that it can catch errors, type mismatches etc.
 * Keras heckpoints
 * Keras hyperparameter optimization

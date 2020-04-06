@@ -26,7 +26,7 @@ Hashmaps are sensitive to the quality of hash functions, as collision resolution
 
 **For integers**, one simple approach is to use **modular arithmetic** `(a*x % p) % m` where p is prime, m is the size of the hash table, and a is some decent integer < p. The simplest approach ever would be to just do `a % m`, as long as m is prime.
 
-A better approach, apparently, is to use **multiply-shift** (much faster, easier, and more randomish ?). Mathematically, it's `(ax % 2^w) / 2^w-M`, but in practice it's just `(a*x) >> (w-M)`, where w is a number of bits in a machine word, and M is the desired address length (in binary). ([ref](https://en.wikipedia.org/wiki/Universal_hashing))
+A better approach is to use **multiply-shift** (much faster, easier, and more randomish ?). Mathematically, it's $(ax \mod 2^w) / 2^{w-M}$, but in practice it's just `(a*x) >> (w-M)` (right shift), where w is the number of bits in a machine word, M is the desired address length (in binary), and a is some "random-looking positive integer" a<2^w, such as 2654435769 (a good magic number). Refs: [wiki](https://en.wikipedia.org/wiki/Universal_hashing), [example](https://stackoverflow.com/questions/28463794/knuths-multiplication-hash-function-via-bit-shifting), [this magic number](https://cstheory.stackexchange.com/questions/6193/what-is-special-about-232-phi-in-cryptography).
 
 **Multiplication method**: `floor(m*frac(k*c))` where c ∈ (0,1), frac returns the fractional part. A known good choice for c, apparently, is `(sqrt(5)-1)/2` ([ref](https://www.geeksforgeeks.org/what-are-hash-functions-and-how-to-choose-a-good-hash-function/)).
 

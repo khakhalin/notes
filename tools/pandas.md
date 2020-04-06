@@ -1,9 +1,11 @@
 # Pandas
 #tools
 
+* Creation: `DataFrame` (curious capitalization)
 * `[[something]]` simply means "a list of lists". It's a type thing, not a separate synatx.
 * Select columns by label: `d['x']`. Alternative spelling: `d.x`. Returns a series. 
 * Select rows by label: `d.loc[1]`. Works for both df (returns a row-series), and for column-series (returns a single value).
+* Iterating through rows: either `for i in range(d.shape[0]): d.loc[i]`, or `for key,val in d.iterrows()`  (in both cases we get row-series). To slice into slivery dataframes, one could use `d.loc[[i]]`, but usefulness of that is unclear.
 * **Chained Assignment**: a problem while writing to a frame, selecting by both column and row.
     * Good: reference both by label (index): `d.loc[1,'x']`
     * Also Good: reference both by position:`d.iloc[1,0]`. Row goes first. 
