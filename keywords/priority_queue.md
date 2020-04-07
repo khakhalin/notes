@@ -24,7 +24,7 @@ For this to work, the left branch should always be full before the right branch 
 
 As both swimming and sinking don't change the shape of the tree, but only the sequence of elements, it solves the issue!
 
-Obviously, **deletion** of elements in the middle are very similar to popping, just instead of exchanging with the root, we exchange the last element with this mid-element. Then kill former mid-element, then **heapify**: either swim up (if it's larger than the parent), or sink (if it's heavier. And in practice it will amost always be heavier).
+**Deletion** of elements from the middle is very similar to popping, just instead of exchanging with the root, we exchange the last element with this mid-element, shorten (trim) the heap, then **heapify** the impostor: either swim it up (if it is larger than its parent), or sink it (if it's heavier than kids). In practice it will usually have to sink, as it had come from the bottom, but it's not guaranteed, as it could have been a bottom of a different branch, and branches never promised to have similar distributions.
 
 It is also possible to have **multi-way heaps** (not binary, but, say, tertiary).
 
