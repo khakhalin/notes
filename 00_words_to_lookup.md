@@ -18,11 +18,9 @@ https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-networ
 
 * refresh O: https://www.bigocheatsheet.com/
 * finish conspecting AVL tree
-* refresh "read from a console" and read from file in Python
 * implement AVL tree
 * Look up at all keywords from the systems part, put them in the dictionary
 * red-black tree - document
-* Floyd Warshall - at least the main idea?
 * treap
 * trie
 * finish scalability lecture, and watch any other one, from systems design
@@ -32,6 +30,7 @@ https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-networ
 * repeat heap, now with deletion
 * implement Dijsktra
 * implement red-black tree?
+* refresh "read from a console" and read from file in Python
 * finish Google production thing
 * dual bases: why is this term a thing? How does it help? Describe here: [[la_01]]
 * How come stochastic gradient descent provides regularization? Why adding bagging to GBM, for example, can be considered a case of regularization? [[05_Ensembles]].
@@ -52,6 +51,7 @@ https://www.geeksforgeeks.org/binary-search-tree-data-structure/
 * https://cp-algorithms.com/data_structures/fenwick.html
 * https://cp-algorithms.com/data_structures/segment_tree.html
 * Revisit [this link](https://cs.stackexchange.com/questions/111353/analyze-time-series-data-to-get-min-max-over-past-period-of-time) about keeping running max & min of a time series (monotonous wedge?) - describe it, code it. [Pdf of the paper](https://arxiv.org/pdf/cs/0610046.pdf).
+* Convex hull: [wrapping algorithm](https://www.geeksforgeeks.org/convex-hull-set-1-jarviss-algorithm-or-wrapping/)
 * finish gradient boosting
 * finish SVM
 * random forest

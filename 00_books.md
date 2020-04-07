@@ -54,17 +54,18 @@ Books that are not currently on my reading list:
 * Competitive Programmer's Handbook by Antti Laaksonen: [pdf](https://cses.fi/book/book.pdf) (C++) - great idea, but the descriptions of algorithms are not clear, while implementations seem ideosyncratic…
 
 Coding problems
-* https://www.byte-by-byte.com/google-interview/
+* https://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/
 * https://leetcode.com/
+* https://www.byte-by-byte.com/google-interview/
 * https://codingbat.com/java
 * https://codegolf.stackexchange.com/
 
 Job-search specific materials:
-* Cracking the code interview (a book)
+* Cracking the code interview (book)
 * [[Huyen2019book]] - a short book on data science / ML job interviewing
-* [Numbeo "cost of living" indices](https://www.numbeo.com/cost-of-living/rankings.jsp) - to scale salary expectations for the location
 * See also: [[ml_questions]] - an unstructured list of random ML and math questions
 * Some interview prepping advice [from Quora](https://www.quora.com/How-should-I-prepare-for-my-Google-interview-if-I-have-1-month-left-and-I%E2%80%99m-applying-for-a-software-engineer-role)
+* [Numbeo "cost of living" indices](https://www.numbeo.com/cost-of-living/rankings.jsp) - to scale salary expectations for the location
 
 # Courses
 * [Google Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course/) - a really good introduction for complete noobs 

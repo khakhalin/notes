@@ -45,7 +45,8 @@ Random facts and tips:
 * Crazy fact: a built-in `round()` (not the one from math / numpy) rounds both 1.5 and 2.5 to 2 (always **rounds edge cases towards even numbers**). Apparently that's to fight the bias of floating number representation ([ref](https://realpython.com/python-rounding/)).
 
 **OOP**
-* **Closures**: defining function within a function; in this case local variables of the outer function become sorta "global" for the inner function, which may be handy. One take on it: "it deliberately binds data to the function, and it is called a closure": [ref](http://www.trytoprogram.com/python-programming/python-closures/)
+* **Non-local variables**: when defining function within a function, we can make local variables of the outer function become sorta "global" for the inner function, which may be handy. If you only plan to read from this variable, just refer to it as if it's global. If you plan to update it, write `nonlocal var_name` inside the inner function, as if declaring it. After that it won't be masked. 
+* **Closures**: Writing a function that returns another function. One way to use it: to bind data to the function, as if it was hard-coded inside the function, as an alternative to either global variables, or passing data as an argument. Have a function that receives the data, whips out a function that uses this data, and then returns the function itself. Refs: [1](http://www.trytoprogram.com/python-programming/python-closures/), [2](https://www.programiz.com/python-programming/closure)
 * **Decorators**: a type of function that takes a function as an argument, writes a helper function around it, and returns this outer helper function.  May be used to wrap a closure around a function, to sorta "automate memoization": ([ref](https://www.python-course.eu/python3_memoization.php)). According to Google style code, while they may be helpful, they aren't exactly recommended, as they may complicate things.
 
 **Refs:**
