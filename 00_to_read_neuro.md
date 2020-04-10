@@ -382,6 +382,10 @@ http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.460.5280&rep=rep1&type=
 
 # Other
 
+Rahmani, P., Peruani, F., & Romanczuk, P. (2019). Flocking in complex environments--attention trade-offs in collective information processing. arXiv preprint arXiv:1907.11691.
+https://journals.plos.org/ploscompbiol/article?id=10.1371%2Fjournal.pcbi.1007697
+If you have a school of fish, with limited computational capacity, and only some individuals are "informed" (of danger, for example), what would be the optimal flocking strategy? A modeling paper.
+
 Suzuki, M., & Larkum, M. E. (2020). General Anesthesia Decouples Cortical Pyramidal Neurons. Cell, 180(4), 666-676.
 https://www.cell.com/action/showPdf?pii=S0092-8674%2820%2930105-7
 About how general anesthesia actually retains FF signalling, but disrupts feedback signalling, and it is enough to disrupt consciousness. In all cortical neurons. Seems fun, and  important to understand the logic of cortical processing.

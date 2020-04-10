@@ -11,7 +11,9 @@ The key to maintaining this balancing is to use two extra operations: left and r
 
 # Insertion
 
-With rotations, **insertion** in an AVL tree is followed by **balancing**. Insert a node as usual, then travel up until you find the **first unbalanced node**. Do it by comparing heights of the children. Each node remembers its own hight, and it is also recursively updated as you climb up during insertion. Then perform an appropriate rotation, to shorten the path that starts from this newly added node. In practice, you have to hard-code 4 cases, when the path from the unbalanced node towards the newly added node goes either LL, LR, RL, and RR. You can draw all 4 and figure which of the nodes should be rotated (it's either the unbalanced node itself, or its kid, and either left or right rotation). [ref with Python code](https://www.geeksforgeeks.org/avl-tree-set-1-insertion/). The operation has some overhead, but is strictly O(log n).
+With rotations, **insertion** in an AVL tree is followed by **balancing**. Insert a node as usual, then travel up until you find the **first unbalanced node**. Do it by comparing heights of the children. Each node remembers its own hight, and it is also recursively updated as you climb up during insertion. 
+
+Then perform the appropriate rotations (either 1 or 2), to shorten the path that starts from this newly added node. In practice, you have to hard-code 4 cases, when the path from the unbalanced node towards the newly added node goes either LL, LR, RL, and RR. You can draw all 4 and figure which of the nodes should be rotated (it's either the unbalanced node itself, or its kid, and either left or right rotation). [ref with Python code](https://www.geeksforgeeks.org/avl-tree-set-1-insertion/). The operation has some overhead, but is strictly O(log n).
 
 # Deletion
 

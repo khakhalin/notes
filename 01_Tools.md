@@ -27,7 +27,7 @@ Other #lifehack(s):
 Random facts and tips:
 * If in a module you start a method name with one underscore, like `_helper`, this method isn't imported on `from module import *`. Unfortunately it is still accessible if you do `import module`and address it as `module._helper()`.
 * **Ternary operator**: `x = 1 if condition else 2`.
-* Empty arrays, strings, and dicts are False, so write `if foo:` instead of `if foo!=[]:` or `if len(foo)>0:`. It's considered good form, [apparently](https://google.github.io/styleguide/pyguide.html).
+* Empty arrays, strings, and dicts are False, so write `if foo:` instead of `if foo!=[]:` or `if len(foo)>0:`. It's considered a good form ([proof](https://google.github.io/styleguide/pyguide.html)).
 * To add += 1 to a dict when a key may not exist, use `get()` as it allows to set a default value: `a[i] = a.get(i,0)+1`
 * To get some (or rather, first) key from a dict: `next(iter(a.keys()))`
 * To split a long line one could use `\`, but it is advised to use implicit line joining instead, which happens if brackets were open and not closed. It's better to add "unnecessary" brackets than usie a backslash.
@@ -43,6 +43,8 @@ Random facts and tips:
 * Objects (including empty lists `[]`) should never be used as **default arguments** for functions, as they are evaluated only once per program (during object definition), not when methods are called! Insetad use `x=None`, then `if x is None: x=[]`. It sounds super-cumbersome, but that's just how it is. ([ref](https://docs.python-guide.org/writing/gotchas/))
 * As strings are immutable, slicing a string creates a copy, and thus is O(N) rather than O(1). [ref](https://www.byte-by-byte.com/strings/)
 * Crazy fact: a built-in `round()` (not the one from math / numpy) rounds both 1.5 and 2.5 to 2 (always **rounds edge cases towards even numbers**). Apparently that's to fight the bias of floating number representation ([ref](https://realpython.com/python-rounding/)).
+* In Python, logic operators (and, or) are **short-circuit**, which means that `(True or None.field)` will return True, even though on its own `None.field` is obviously a mistake (Nones don't have fields.)
+* **Slices** don't throw index out of bounds exceptions, but evaluate to `[]` if they are out of bounds. so for `a=[0]`, `a[1]`would give an "index out of range" mistake, but `a[1:]` gives an empty list.
 
 **OOP**
 * **Non-local variables**: when defining function within a function, we can make local variables of the outer function become sorta "global" for the inner function, which may be handy. If you only plan to read from this variable, just refer to it as if it's global. If you plan to update it, write `nonlocal var_name` inside the inner function, as if declaring it. After that it won't be masked. 
@@ -53,13 +55,6 @@ Random facts and tips:
 * Tips from Chip Huyen: https://github.com/chiphuyen/python-is-cool
 * Nice [list of Python gotchas](https://www.toptal.com/python/top-10-mistakes-that-python-programmers-make) from Martin Chilikian
 
-## Numpy
-* For linear algebra, to start flipping vectors and use them as matrices, use `np.atleast_2d` - it turns vectors, and even scalars, into low-ranked 2D arrays. I think, rows for vectors.
-
-## Matplotlib
-* Brief intro from Brad Solomon: https://realpython.com/python-matplotlib-guide/
-* Cheatsheet: [https://github.com/rougier/matplotlib-cheatsheet](<https://github.com/rougier/matplotlib-cheatsheet>)
-
 # Good coding habits
 * Keep code clean (not smelly). Types of **smells** ([ref](https://www.thoughtworks.com/insights/blog/coding-habits-data-scientists)):
     1. Dead code (commented out, inconsequential)
@@ -68,35 +63,42 @@ Random facts and tips:
     4. Functions that do too many things instead of one thing
     5. Code repetition
     6. Magic values
-* Smuggle code from Jupyter to classes as soon as possible (Jupyter only for protopying, reporting, and use case)
 * Write unit tests ([link to a decent intro](https://www.freecodecamp.org/news/an-introduction-to-testing-in-python/))
 * Make small and frequent commits
 
-Some more Python-specific advice:
+Python-specific tips:
 * Import entire modules or packages, not classes or functions, to retain `module.class.method()` structure, and prevent name collisions.
 * Lines shouldn't be longer than 80 chars (Google style guide)
-* `.py` files are not scripts, so even executables	 should  be written inside a main function: `def main():`. And then inside, add:
+* `.py` files are not scripts, so even executables	 should  be written inside a main function: `def main():`. The benefit of this construction is that this `.py` won't be auto-executed on import. And to make them collable script-like from the command line, add this inside:
 ```python
 if __name__ == '__main__':
     main()
 ```
-The benefit of this construction is that this `.py` won't be auto-executed on import.
+* Smuggle code from Jupyter to classes as soon as possible (Jupyter only for protopying, reporting, and use case)
 
 ## Naming variables
 * Python-specific:
     * Variables: **snake_case** underscore for variables and functions
     * Constants: all-caps
     * Objects: capitalized CamelCase
-    * Local methods: leading-underscore
+    * Local methods: leading-underscore (like `_add()`)
 * Arrays are plural, elements of array are singular: for fruit in fruits
 * Booleans: is, has, can (is_cat, has_hamburger, can_eat)
+* Methods: verbs may be helpful (set, get, move)
 * Methods that return a boolean: check_is_cat()
-* Numbers: n_cats, max_cats, min_cats, total_cats:
+* Numbers: use a numerical prefix (n_cats, max_cats, min_cats, total_cats)
 * Transformers: to_dollars, to_uppercase
 
 Refs:
 * https://hackernoon.com/the-art-of-naming-variables-52f44de00aad
 * [Google style guide](https://github.com/google/styleguide), including that [for Python in particular](https://google.github.io/styleguide/pyguide.html).
+
+# Numpy
+* For linear algebra, to start flipping vectors and use them as matrices, use `np.atleast_2d` - it turns vectors, and even scalars, into low-ranked 2D arrays. I think, rows for vectors.
+
+# Matplotlib
+* Brief intro from Brad Solomon: https://realpython.com/python-matplotlib-guide/
+* Cheatsheet: [https://github.com/rougier/matplotlib-cheatsheet](<https://github.com/rougier/matplotlib-cheatsheet>)
 
 # TF and Keras
 * Links to several tutorials: https://github.com/sayakpaul/TF-2.0-Hacks/blob/master/README.md
