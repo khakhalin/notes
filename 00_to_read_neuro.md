@@ -51,7 +51,8 @@ Lagzi, F., & Rotter, S. (2015). Dynamics of competition between subnetworks of s
 https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0138947
 
 Gutkin, B. S., Laing, C. R., Colby, C. L., Chow, C. C., & Ermentrout, G. B. (2001). Turning on and off with excitation: the role of spike-timing asynchrony and synchrony in sustained neural activity. Journal of computational neuroscience, 11(2), 121-134.
-Apparently, sorta seminal paper in this narrow field.
+Apparently, sorta seminal paper in this narrow field. But check out their later papers as well:
+https://scholar.google.com/citations?user=Q2aFVoYAAAAJ&hl=en&oi=sra
 
 # Criticality, inhibition, dynamics
 

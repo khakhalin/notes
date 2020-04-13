@@ -1,10 +1,11 @@
 # Cyclic transitions between higher order motifs underlie sustained activity in asynchronous sparse recurrent networks
+
 Bojanek, K., Zhu, Y., & MacLean, J. (2019). Cyclic transitions between higher order motifs underlie sustained activity in asynchronous sparse recurrent networks. bioRxiv, 777219.
 https://www.biorxiv.org/content/10.1101/777219v1.article-info
 
 Updated version tbc (plos?)
 
-#networks #neuro #spiking #motifs #criticality
+#networks #neuro #spiking #motifs #criticality #synchrony
 
 Is it possible to predict whether a spiking network with a given topology would spontaneously halt (truncate), or become persistently active, after being activated with a kick to a few newurons? Can we guess it, either from simple network properties, or early on, from the dynamics of network activation?
 
@@ -12,9 +13,9 @@ Is it possible to predict whether a spiking network with a given topology would 
 
 While simple properties, such as network density, define the region at which persistent activity is possible, there is lots of variability in activation stability between different instantiations of a random network. Moreover, even for networks that can support persistent activity, a reasonable change in the starting conditions may lead to a truncation. 
 
-Even more curiously, truncation is not always easy to predict, as the network may seem to be quite active, before suddenly coming to an unexpected halt. 
+Even more curiously, truncation is not always easy to predict from raw observations of activity, as the network may seem to be quite active, before suddenly coming to an unexpected halt. On the other hand, truncation can be predicted from slightly more advanced statistics of network activity, and perhaps in somewhat unexpected ways: **synchronous networks are more prone to truncation**, compared to asynchronous networks. (_It was not quite obvious to me, but apparently there's some literature about it, like Gutkin 2001._)
 
-To some extent, truncation can be predicted from the statistics of network activity, but perhaps in somewhat unexpected ways: say, **synchronous networks are more prone to truncation**, compared to asynchronous networks. That's not what many people would have probably guessed.
+First 9 or 13 references should be interesting to read ( #todo )
 
 # Motif analysis
 
@@ -32,7 +33,7 @@ The statement about motif cycling was quantitatively replicated on random Erdos-
 
 > An interesting statement then: can you fix a halting (truncating) network? Like, what is the minimal number of edges to add (or remove?) from a halting network to make it persistent? And how to find them? Is there a good heuristic?
 
-> It seems that in this particular paper, they rewired networks randomly (not sure if from scratch every time, or continuously with continuous monitoring), but there was no genetic alrogirhm, and ther was no target rewiring.
+> It seems that in this particular paper, they rewired networks randomly (not sure if from scratch every time, or continuously with continuous monitoring), but there was no genetic alrogirhm, and there was no target rewiring. Which may indicate an opportunity.
 
 # Model
 
@@ -51,3 +52,4 @@ And then, it seems they rewired networks randomly, keeping the density of connec
 # References
 
 * When talking about quantification of network branching (a measure of critiquality): Beggs JM, Plenz D. Neuronal avalanches in neocortical circuits. J Neurosci. 2003;23(35): 11167-11177. doi: 10.1523/JNEUROSCI.23-35-11167.2003.
+* Previous studies that showed the interplay between asynchrony and persistent activity (?): Gutkin, B. S., Laing, C. R., Colby, C. L., Chow, C. C., & Ermentrout, G. B. (2001). Turning on and off with excitation: the role of spike-timing asynchrony and synchrony in sustained neural activity. Journal of computational neuroscience, 11(2), 121-134.

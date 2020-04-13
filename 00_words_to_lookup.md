@@ -12,19 +12,24 @@ https://developers.google.com/machine-learning/crash-course/production-ml-system
 What is a Computation Graph and Who Cares?
 https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-network-methods/lectures/12194418
 
+https://medium.com/dair-ai/an-illustrated-guide-to-graph-neural-networks-d5564a551783
+
 # Words and topics to look up
 
 **ML and Algos**
 
+* scrum
 * refresh O: https://www.bigocheatsheet.com/
 * finish conspecting AVL tree
 * implement AVL tree
+* Laplacian operator (create a new page for basic vector calc) [1h youtube](https://www.youtube.com/watch?v=oEq9ROl9Umk)
 * Look up at all keywords from the systems part, put them in the dictionary
+* trie
 * red-black tree - document
 * treap
-* trie
+* Ruby on rails - what is it, how it works, and why so popular?
 * finish scalability lecture, and watch any other one, from systems design
-* what is NP: definition
+* what is NP: definition ([this youtube again?](https://www.youtube.com/watch?v=YX40hbAHx3s))
 * Bloom filter (refs: [1](https://dominikschmidt.xyz/bloom-filter/))
 * summarize Python sets
 * repeat heap, now with deletion
