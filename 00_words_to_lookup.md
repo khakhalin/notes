@@ -4,6 +4,10 @@ Key tags:
 * #halfthere - for projects that are close to completion.
 * #todo - for follow-ups that need to be done 
 
+Videos
+* Conway, the free will theorem: https://www.youtube.com/watch?v=ftIllWczf5w
+* Laplace operator: https://www.youtube.com/watch?v=oEq9ROl9Umk
+
 See also: [[system_design]] - has it own "todo" list of words and terms
 
 Google crash course, about ML production:
@@ -18,12 +22,15 @@ https://medium.com/dair-ai/an-illustrated-guide-to-graph-neural-networks-d5564a5
 
 **ML and Algos**
 
+* refresh format in Python once again, as it's useful for compeititions
 * scrum
+* finish Google production thing
 * refresh O: https://www.bigocheatsheet.com/
-* finish conspecting AVL tree
+* finish conspecting AVL tree ([link](https://www.geeksforgeeks.org/avl-tree-set-1-insertion/))
 * implement AVL tree
-* Laplacian operator (create a new page for basic vector calc) [1h youtube](https://www.youtube.com/watch?v=oEq9ROl9Umk)
+* Laplacian operator (create a new page for basic vector calc) [1h youtube](https://www.youtube.com/watch?v=oEq9ROl9Umk), [wiki](https://en.wikipedia.org/wiki/Laplace_operator)
 * Look up at all keywords from the systems part, put them in the dictionary
+* Scan [this helpful list](https://www.freecodecamp.org/news/coding-interviews-for-dummies-5e048933b82b/); digest into unit-items if needed
 * trie
 * red-black tree - document
 * treap
@@ -31,12 +38,12 @@ https://medium.com/dair-ai/an-illustrated-guide-to-graph-neural-networks-d5564a5
 * finish scalability lecture, and watch any other one, from systems design
 * what is NP: definition ([this youtube again?](https://www.youtube.com/watch?v=YX40hbAHx3s))
 * Bloom filter (refs: [1](https://dominikschmidt.xyz/bloom-filter/))
-* summarize Python sets
+* summarize [Python sets](https://docs.python.org/2/library/sets.html)
+* Make sure [this list from geekforgeeks](https://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/) is exhausted
 * repeat heap, now with deletion
 * implement Dijsktra
 * implement red-black tree?
 * refresh "read from a console" and read from file in Python
-* finish Google production thing
 * dual bases: why is this term a thing? How does it help? Describe here: [[la_01]]
 * How come stochastic gradient descent provides regularization? Why adding bagging to GBM, for example, can be considered a case of regularization? [[05_Ensembles]].
 * Do we have 2 different descriptions from Gram-Smidt: in [[la_01]] and in [[02_Regression]]? Can we isolate and combine?

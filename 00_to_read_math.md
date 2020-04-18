@@ -123,6 +123,11 @@ Seems to be a classic text, on model interpretatibility (that is often critical 
 
 Your Classifier is Secretly an Energy Based Model and You Should Treat it Like One Will Grathwohl, Kuan-Chieh Wang, Jörn-Henrik Jacobsen, David Duvenaud, Mohammad Norouzi, Kevin Swersky. https://arxiv.org/abs/1912.03263
 
+Normalized Convolution: the idea that convolutional layers actually work much better if layers themselves, and not inputs or activation, are kept normalized
+* https://www.reddit.com/r/MachineLearning/comments/g0nkof/d_normalized_convolution/
+* https://arxiv.org/abs/1602.07868
+* https://arxiv.org/abs/1903.10520
+
 Metz, L., Maheswaranathan, N., Cheung, B., & Sohl-Dickstein, J. (2018). Meta-Learning Update Rules for Unsupervised Representation Learning. arXiv preprint arXiv:1804.00222.
 https://arxiv.org/abs/1804.00222
 Google.
