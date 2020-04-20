@@ -1,13 +1,18 @@
 # General tree algorithms
 #algo
 
-See also: 
-* [[algos_graph]] - general chapter for algorithms
+Stem: [[algos]] / [[algos_graph]]
+
+Information-related algorithms:
 * [[bst]] - Binary Search Tree
     * [[avl_tree]], [[red-black_tree]] - two balanced implementations
 * [[trie]]
 
+Space-related:
+* [[rrt]] - Rapidly exploring Random Tree (fractal-like growth algo)
+
 # Terminology
+
 * **Binary tree** - two children for each node.
 * **Complete tree** - without gaps in its right branches; can be written as a vector with child = 2k logic, as we used in [[priority_queue]]. In the last layer, all leaves are on the left, without gaps.
 * **Full tree** - not only complete, but also the last layer is finished. I'm guessing it means that a full tree always has 2^k-1 elements, and is stored in a 2^k vector (with dummy head in 0). Also known as **proper** or **plane** binary tree.

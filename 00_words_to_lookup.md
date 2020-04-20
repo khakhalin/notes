@@ -22,9 +22,10 @@ https://medium.com/dair-ai/an-illustrated-guide-to-graph-neural-networks-d5564a5
 
 **ML and Algos**
 
-* refresh format in Python once again, as it's useful for compeititions
+* * how to solve sudoku?
 * scrum
 * finish Google production thing
+* collections - or whatever is this common module ppl often use with prepackaged datastructures
 * refresh O: https://www.bigocheatsheet.com/
 * finish conspecting AVL tree ([link](https://www.geeksforgeeks.org/avl-tree-set-1-insertion/))
 * implement AVL tree
@@ -43,6 +44,8 @@ https://medium.com/dair-ai/an-illustrated-guide-to-graph-neural-networks-d5564a5
 * repeat heap, now with deletion
 * implement Dijsktra
 * implement red-black tree?
+* collision-detection algorithms
+* https://en.wikipedia.org/wiki/Universal_approximation_theorem
 * refresh "read from a console" and read from file in Python
 * dual bases: why is this term a thing? How does it help? Describe here: [[la_01]]
 * How come stochastic gradient descent provides regularization? Why adding bagging to GBM, for example, can be considered a case of regularization? [[05_Ensembles]].
@@ -70,6 +73,7 @@ https://www.geeksforgeeks.org/binary-search-tree-data-structure/
 * random forest vs. adaboost?
 * self-organizing (Kohonen) maps
 * apply svm, boosting
+* https://en.wikipedia.org/wiki/Probabilistic_roadmap
 * normal equation ([link?](http://mlwiki.org/index.php/Normal_Equation#Normal_Equation_vs_Gradient_Descent))
 * implement from scratch in numpy:
     * small DL

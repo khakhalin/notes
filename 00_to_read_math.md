@@ -64,6 +64,10 @@ Google. About reverse-tracking through a visual network via optimizing inputs?
 Raschka, S., Patterson, J., & Nolet, C. (2020). Machine Learning in Python: Main developments and technology trends in data science, machine learning, and artificial intelligence. arXiv preprint arXiv:2002.04803.
 https://arxiv.org/abs/2002.04803
 
+Cohen, T., & Welling, M. (2016, June). Group equivariant convolutional networks. In International conference on machine learning (pp. 2990-2999).
+https://arxiv.org/pdf/1602.07576.pdf
+Group-CNNs: an extention of CNNs that are not only translational, but rotation and flip-symmetric. For a neuro person, it seems to be a no-brainer that they should be a strictly better solution than common CNNs. So, are they?
+
 A list of most influential DL papers of past decade, with pics and summaries!
 https://leogao.dev/2019/12/31/The-Decade-of-Deep-Learning/
 
