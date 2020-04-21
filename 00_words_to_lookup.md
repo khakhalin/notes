@@ -18,11 +18,15 @@ https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-networ
 
 https://medium.com/dair-ai/an-illustrated-guide-to-graph-neural-networks-d5564a551783
 
+Music: https://www.youtube.com/watch?v=7NOSDKb0HlU
+Kick-start videos: https://www.youtube.com/playlist?list=PLllx_3tLoo4csmLveWHpjcRTXVMCcvvmc
+
 # Words and topics to look up
 
 **ML and Algos**
 
-* * how to solve sudoku?
+* how to solve sudoku?
+* https://www.youtube.com/watch?v=oEq9ROl9Umk 
 * scrum
 * finish Google production thing
 * collections - or whatever is this common module ppl often use with prepackaged datastructures

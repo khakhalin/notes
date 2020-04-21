@@ -11,47 +11,56 @@
 
 # Books
 
-Given in the subjective order of my gradual reading.
+Given in the subjective order of gradual reading.
 
-**First set**
-* How to think like a computer scientist by Allen B. Downey: ([site](https://greenteapress.com/wp/think-python-2e/)) - best intro to Python ever
-* VLMS (Introduction to Applied Linear Algebra) by Stephen Boyd. [pdf](http://vmls-book.stanford.edu/)
+**Algorithms**
 * Algorithms by Sedgewick - uses Java, but is exceptionally clearly written
-* ISLR: Introduction to Statistical Learning with R, by James, Witten, Hastie, Tibshirani. ([pdf](http://faculty.marshall.usc.edu/gareth-james/ISL/)). See also this fan-made translation of all code into Python: [JW](https://github.com/JWarmenhoven/ISLR-python).
-* Hands-On M with Scikit-Learn, Keras, and TensorFlow, by Aurélien Géron. Python obviously. [All labs on github](https://github.com/ageron/handson-ml2), but no full version of the book online.
-* "The 100 pages ML book" by Andriy Burkov. [full pdf](http://themlbook.com/wiki/doku.php) 
-* MML (Mathematics for Machine Learning), by M.P. Deisenroth: [pdf](https://mml-book.github.io/)
-* Convex Optimization, by Stephen Boyd. [site](https://web.stanford.edu/~boyd/cvxbook/), [pdf](https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
-* Deep Learning, by Ian Goodfellow et al. [pdf](http://www.deeplearningbook.org/)
-* All of Statistics, Larry Wasserman (no online version)
-* Programming in Python: Fluent Python, by Luciano Ramalho (no online version)
-
-**Second set**, to advance, or get a new perspective:
-* ESL (The Elements of Statistical Learning) by Hastie, Tibshirani, Friedman. ([pdf](https://web.stanford.edu/~hastie/ElemStatLearn/)) A more encyclopaedic version of ISLR: extensive, no code, and with most proofs and derivations "left to the reader" ([ref](https://www.quora.com/How-do-I-learn-the-book-Elements-of-Statistical-Learning-What-books-materials-would-help-beef-up-my-foundations-so-that-I-will-be-able-to-comprehend-the-book-easily)). Great book to revisit and integrate the material you already know.
-* On Programming Well, by Robert C. Martin (no online version)
-* Speech and Language Processing by D. Jurafsky & JH Martin ([draft pdf](https://web.stanford.edu/~jurafsky/slp3/))
-* Pattern recognition and ML by Christopher Bishop ([pdf](https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/)) - Has a more Bayesian perspective. [This set of notebooks](https://github.com/ctgk/PRML) implements this book, chapter by chapter.
-* [Dive into Deep Learning](http://d2l.ai/) - an interactive introduction to deep learning, based on NumPy, apparently!
-* Think Complexity, by Allen B. Downey ([pdf](https://greenteapress.com/wp/think-complexity-2e/)) - network sci, automata, all in Python
-* Foundations of ML by M. Mohri et al ([pdf](https://cs.nyu.edu/~mohri/mlbook/)) - more mathy?
-* ML book by K.P. Murphy - ([site](https://www.cs.ubc.ca/~murphyk/MLbook/), but no full pdf)
-* Non-linear Dynamics and Chaos, by Steven Strogatz ([pdf](http://www.hds.bme.hu/~fhegedus/Strogatz%20-%20Nonlinear%20Dynamics%20and%20Chaos.pdf))
-* Morgan, S. L., & Winship, C. (2015). Counterfactuals and causal inference (pdfs are googlable)
-* [Notes on dynamical systems](https://people.maths.bris.ac.uk/~macpd/ads/) ([pdf](https://people.maths.bris.ac.uk/~macpd/ads/bnotes.pdf)) from Carl Dettmann. Not a textbook, but close; worth scanning
-* Bayesian Statistics: Statistical Rethinking, by Richard McElreath
-* Artificial Intelligence: A Modern Approach, by Russel and Norvig. ([site](http://aima.cs.berkeley.edu/), but no online)
-
-Potential **Refresher books**
-* Applied Predictive Modeling by Kuhn Johnson (no free pdf online). Code in R.
-
-**Third priority books:**
+* Introduction to Algorithms, Cormen, Leiserson, Rivest, Stein (CLRS)
+* The Algorithm Design Manual, Skiena
+* Programming Pearls, Bentley
+* Algorithm Design, Kleinberg
 * Algorithms by Erickson
 * Design Patterns for Python by Norvig: https://norvig.com/design-patterns/
 
-Books that are not currently on my reading list:
+Also:
+* How to Solve It: A New Aspect of Mathematical Method, by Polya
+
+**Systems**
+* Operating System Concepts, Silberschatz
+* Computer Networking: A Top-Down Approach, by Kuroze (7th ed)
+* Introduction to Information Retrieval, Manning
+
+**Coding**
+* How to think like a computer scientist by Allen B. Downey: ([site](https://greenteapress.com/wp/think-python-2e/)) - best intro to Python ever
 * Problem solving with data structures in Python ([full text online](https://runestone.academy/runestone/books/published/pythonds/index.html))
+* Competitive Programmer's Handbook by Antti Laaksonen: [pdf](https://cses.fi/book/book.pdf) (C++) - great idea, but the descriptions of algorithms are not clear, while implementations seem a bit itiosynchratic. Worth revisiting tho.
+* Programming in Python: Fluent Python, by Luciano Ramalho (no online version)
+* On Programming Well, by Robert C. Martin (no online version)
+
+**Math**
+* VLMS (Introduction to Applied Linear Algebra) by Stephen Boyd. [pdf](http://vmls-book.stanford.edu/)
+* MML (Mathematics for Machine Learning), by M.P. Deisenroth: [pdf](https://mml-book.github.io/)
+* Non-linear Dynamics and Chaos, by Steven Strogatz ([pdf](http://www.hds.bme.hu/~fhegedus/Strogatz%20-%20Nonlinear%20Dynamics%20and%20Chaos.pdf))
+* [Notes on dynamical systems](https://people.maths.bris.ac.uk/~macpd/ads/) ([pdf](https://people.maths.bris.ac.uk/~macpd/ads/bnotes.pdf)) from Carl Dettmann. Not a textbook, but close; worth scanning
+
+**ML and Stats**
+* ISLR: Introduction to Statistical Learning with R, by James, Witten, Hastie, Tibshirani. ([pdf](http://faculty.marshall.usc.edu/gareth-james/ISL/)). See also this fan-made translation of all code into Python: [JW](https://github.com/JWarmenhoven/ISLR-python).
+* Applied Predictive Modeling by Kuhn Johnson (no free pdf online). Code in R.
+* Hands-On M with Scikit-Learn, Keras, and TensorFlow, by Aurélien Géron. Python obviously. [All labs on github](https://github.com/ageron/handson-ml2), but no full version of the book online.
+* "The 100 pages ML book" by Andriy Burkov. [full pdf](http://themlbook.com/wiki/doku.php) 
+* Convex Optimization, by Stephen Boyd. [site](https://web.stanford.edu/~boyd/cvxbook/), [pdf](https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
+* Deep Learning, by Ian Goodfellow et al. [pdf](http://www.deeplearningbook.org/)
+* All of Statistics, Larry Wasserman (no online version)
+* ESL (The Elements of Statistical Learning) by Hastie, Tibshirani, Friedman. ([pdf](https://web.stanford.edu/~hastie/ElemStatLearn/)) A more encyclopaedic version of ISLR: extensive, no code, and with most proofs and derivations "left to the reader" ([ref](https://www.quora.com/How-do-I-learn-the-book-Elements-of-Statistical-Learning-What-books-materials-would-help-beef-up-my-foundations-so-that-I-will-be-able-to-comprehend-the-book-easily)). Great book to revisit and integrate the material you already know.
+* Speech and Language Processing by D. Jurafsky & JH Martin ([draft pdf](https://web.stanford.edu/~jurafsky/slp3/))
+* Pattern recognition and ML by Christopher Bishop ([pdf](https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/)) - Has a more Bayesian perspective. [This set of notebooks](https://github.com/ctgk/PRML) implements this book, chapter by chapter.
+* [Dive into Deep Learning](http://d2l.ai/) - an interactive introduction to deep learning, based on NumPy, apparently!
+* Foundations of ML by M. Mohri et al ([pdf](https://cs.nyu.edu/~mohri/mlbook/)) - more mathy?
+* ML book by K.P. Murphy - ([site](https://www.cs.ubc.ca/~murphyk/MLbook/), but no full pdf)
+* Morgan, S. L., & Winship, C. (2015). Counterfactuals and causal inference (pdfs are googlable)
+* Bayesian Statistics: Statistical Rethinking, by Richard McElreath
+* Artificial Intelligence: A Modern Approach, by Russel and Norvig. ([site](http://aima.cs.berkeley.edu/), but no online)
 * [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/index.html) by Michael Nielsen
-* Competitive Programmer's Handbook by Antti Laaksonen: [pdf](https://cses.fi/book/book.pdf) (C++) - great idea, but the descriptions of algorithms are not clear, while implementations seem ideosyncratic…
 
 Coding problems
 * https://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/
@@ -64,6 +73,7 @@ Job-search specific materials:
 * Cracking the code interview (book)
 * [[Huyen2019book]] - a short book on data science / ML job interviewing
 * See also: [[ml_questions]] - an unstructured list of random ML and math questions
+* [From average to Googler in 4 weeks](https://www.linkedin.com/pulse/average-googler-four-weeks-study-plan-milad-naseri/?trk=v-feed) - a detailed post by Milad Naseri with book recommendations etc.
 * Some interview prepping advice [from Quora](https://www.quora.com/How-should-I-prepare-for-my-Google-interview-if-I-have-1-month-left-and-I%E2%80%99m-applying-for-a-software-engineer-role)
 * [Numbeo "cost of living" indices](https://www.numbeo.com/cost-of-living/rankings.jsp) - to scale salary expectations for the location
 * [Coding interviews for dummies](https://www.freecodecamp.org/news/coding-interviews-for-dummies-5e048933b82b/), including curious links to [pramp](https://www.pramp.com/)
