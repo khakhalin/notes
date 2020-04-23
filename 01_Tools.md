@@ -11,9 +11,10 @@ Major topics:
 * [[system_design]]
 
 Cheatsheets, tips, and notes:
+* [[python]] - everything Python (but not numpy or pandas that have their own )
+* [[pandas]] - Pandas obviously :)
 * [[git]] - GIT cheat sheet
 * [[sql]] - SQL cheat sheet
-* [[pandas]] - Pandas obviously :)
 
 Advice on ML projects:
 * [[ml_lore]] - a collection of rules of thumb about everything Deep Learning (which defaults to pick etc.)
@@ -21,39 +22,6 @@ Advice on ML projects:
 Other #lifehack(s):
 * [[Clear2019zettelkasten]] - how to properly create and support this knowledge base
 * [How to do citations with Zettlr](https://docs.zettlr.com/en/academic/citations/) - #todo, this must be nice! 
-
-# Python
-
-Random facts and tips:
-* If in a module you start a method name with one underscore, like `_helper`, this method isn't imported on `from module import *`. Unfortunately it is still accessible if you do `import module`and address it as `module._helper()`.
-* **Ternary operator**: `x = 1 if condition else 2`.
-* Empty arrays, strings, and dicts are False, so write `if foo:` instead of `if foo!=[]:` or `if len(foo)>0:`. It's considered a good form ([proof](https://google.github.io/styleguide/pyguide.html)).
-* To add += 1 to a dict when a key may not exist, use `get()` as it allows to set a default value: `a[i] = a.get(i,0)+1`
-* To get some (or rather, first) key from a dict: `next(iter(a.keys()))`
-* To split a long line one could use `\`, but it is advised to use implicit line joining instead, which happens if brackets were open and not closed. It's better to add "unnecessary" brackets than usie a backslash.
-* **Docstring**: First constant in a declaration, starts and ends with triple double quotes `"""`, accessible via `object.__doc__` property. Minimum: one sentence, capitalized, with a full stop at the end, explaining what this function does. Don't include the name, or usage. Any other comments - lower, after an empty line. For modules, similar, at the very beginning, before any declarations. Refs: [1](https://www.python.org/dev/peps/pep-0257/), [2](https://www.pythonforbeginners.com/basics/python-docstrings)
-* **F-strings**: `f"bla {x['a']:.2f}"` - this version (with `"`) supports dicts (because diff quotation marks), and formats the output (after `:`). Refs: [intro](http://zetcode.com/python/fstring/) , [specification](https://docs.python.org/3/library/string.html#format-specification-mini-language) (a mini-language of sorts!)
-* Sweetest way to **iterate through a dictionary**: `for key,val in d.items():`.
-
-**List comprehensions**
-* Nested comprehensions: same syntax as in writing nested loops (even tho it looks unformulaic), e.g. `[j for i in range(5) for j in range(i)]
-* If you want to sometimes return nothing, move `if` to the end: then you don't have to write `else`: `[x for x in y if a]`.
-
-**Gotchas**
-* Objects (including empty lists `[]`) should never be used as **default arguments** for functions, as they are evaluated only once per program (during object definition), not when methods are called! Insetad use `x=None`, then `if x is None: x=[]`. It sounds super-cumbersome, but that's just how it is. ([ref](https://docs.python-guide.org/writing/gotchas/))
-* As strings are immutable, slicing a string creates a copy, and thus is O(N) rather than O(1). [ref](https://www.byte-by-byte.com/strings/)
-* Crazy fact: a built-in `round()` (not the one from math / numpy) rounds both 1.5 and 2.5 to 2 (always **rounds edge cases towards even numbers**). Apparently that's to fight the bias of floating number representation ([ref](https://realpython.com/python-rounding/)).
-* In Python, logic operators (and, or) are **short-circuit**, which means that `(True or None.field)` will return True, even though on its own `None.field` is obviously a mistake (Nones don't have fields.)
-* **Slices** don't throw index out of bounds exceptions, but evaluate to `[]` if they are out of bounds. so for `a=[0]`, `a[1]`would give an "index out of range" mistake, but `a[1:]` gives an empty list.
-
-**OOP**
-* **Non-local variables**: when defining function within a function, we can make local variables of the outer function become sorta "global" for the inner function, which may be handy. If you only plan to read from this variable, just refer to it as if it's global. If you plan to update it, write `nonlocal var_name` inside the inner function, as if declaring it. After that it won't be masked. 
-* **Closures**: Writing a function that returns another function. One way to use it: to bind data to the function, as if it was hard-coded inside the function, as an alternative to either global variables, or passing data as an argument. Have a function that receives the data, whips out a function that uses this data, and then returns the function itself. Refs: [1](http://www.trytoprogram.com/python-programming/python-closures/), [2](https://www.programiz.com/python-programming/closure)
-* **Decorators**: a type of a function that acts as a meta-function: takes another function as an argument, writes a helper function around it, and returns this outer helper function. May be used to wrap a closure around a function, to sorta "automate memoization": ([ref](https://www.python-course.eu/python3_memoization.php)). According to Google style code, while they may be helpful, they aren't exactly recommended, as they may complicate things.
-
-**Refs:**
-* Tips from Chip Huyen: https://github.com/chiphuyen/python-is-cool
-* Nice [list of Python gotchas](https://www.toptal.com/python/top-10-mistakes-that-python-programmers-make) from Martin Chilikian
 
 # Good coding habits
 * Keep code clean (not smelly). Types of **smells** ([ref](https://www.thoughtworks.com/insights/blog/coding-habits-data-scientists)):
@@ -65,33 +33,6 @@ Random facts and tips:
     6. Magic values
 * Write unit tests ([link to a decent intro](https://www.freecodecamp.org/news/an-introduction-to-testing-in-python/))
 * Make small and frequent commits
-
-Python-specific tips:
-* Import entire modules or packages, not classes or functions, to retain `module.class.method()` structure, and prevent name collisions.
-* Lines shouldn't be longer than 80 chars (Google style guide)
-* `.py` files are not scripts, so even executables	 should  be written inside a main function: `def main():`. The benefit of this construction is that this `.py` won't be auto-executed on import. And to make them collable script-like from the command line, add this inside:
-```python
-if __name__ == '__main__':
-    main()
-```
-* Smuggle code from Jupyter to classes as soon as possible (Jupyter only for protopying, reporting, and use case)
-
-## Naming variables
-* Python-specific:
-    * Variables: **snake_case** underscore for variables and functions
-    * Constants: all-caps
-    * Objects: capitalized CamelCase
-    * Local methods: leading-underscore (like `_add()`)
-* Arrays are plural, elements of array are singular: for fruit in fruits
-* Booleans: is, has, can (is_cat, has_hamburger, can_eat)
-* Methods: verbs may be helpful (set, get, move)
-* Methods that return a boolean: check_is_cat()
-* Numbers: use a numerical prefix (n_cats, max_cats, min_cats, total_cats)
-* Transformers: to_dollars, to_uppercase
-
-Refs:
-* https://hackernoon.com/the-art-of-naming-variables-52f44de00aad
-* [Google style guide](https://github.com/google/styleguide), including that [for Python in particular](https://google.github.io/styleguide/pyguide.html).
 
 # Numpy
 * For linear algebra, to start flipping vectors and use them as matrices, use `np.atleast_2d` - it turns vectors, and even scalars, into low-ranked 2D arrays. I think, rows for vectors.

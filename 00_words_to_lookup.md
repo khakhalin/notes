@@ -25,19 +25,24 @@ Kick-start videos: https://www.youtube.com/playlist?list=PLllx_3tLoo4csmLveWHpjc
 
 **ML and Algos**
 
+* largest increasing subsequence - reimplement
+* Interpolation search
+* queens on a board
+* finish conspecting AVL tree ([link](https://www.geeksforgeeks.org/avl-tree-set-1-insertion/))
+* implement AVL tree
+* in a sequence, if any k elements sum to target
+* trie
+* this search that is default in Python - reimplement
+* red-black tree - document
 * how to solve sudoku?
 * https://www.youtube.com/watch?v=oEq9ROl9Umk 
 * scrum
 * finish Google production thing
 * collections - or whatever is this common module ppl often use with prepackaged datastructures
 * refresh O: https://www.bigocheatsheet.com/
-* finish conspecting AVL tree ([link](https://www.geeksforgeeks.org/avl-tree-set-1-insertion/))
-* implement AVL tree
 * Laplacian operator (create a new page for basic vector calc) [1h youtube](https://www.youtube.com/watch?v=oEq9ROl9Umk), [wiki](https://en.wikipedia.org/wiki/Laplace_operator)
 * Look up at all keywords from the systems part, put them in the dictionary
 * Scan [this helpful list](https://www.freecodecamp.org/news/coding-interviews-for-dummies-5e048933b82b/); digest into unit-items if needed
-* trie
-* red-black tree - document
 * treap
 * Ruby on rails - what is it, how it works, and why so popular?
 * finish scalability lecture, and watch any other one, from systems design
