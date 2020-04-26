@@ -697,6 +697,9 @@ Zenil, H., & Villarreal-Zapata, E. (2013). Asymptotic behavior and ratios of com
 https://arxiv.org/pdf/1304.2816.pdf
 Some measures of complexity (Shannon's block entropy and Kolmogorov) applied to 1D cellular automata. They try to make some general statements. Give a look.
 
+Cellular automata for music (a review from 2005, but seems fun)
+https://web2.qatar.cmu.edu/~gdicaro/15382/additional/generative-music-ca-review.pdf
+
 # Math and Other
 
 Eta-trick (η-trick) to smooth out local minima in the minima landscape, and improve convergence. Reformulates a non-quadratic problem as a series of quadratic problems.

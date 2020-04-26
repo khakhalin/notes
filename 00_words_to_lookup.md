@@ -25,19 +25,19 @@ Kick-start videos: https://www.youtube.com/playlist?list=PLllx_3tLoo4csmLveWHpjc
 
 **ML and Algos**
 
-* largest increasing subsequence - reimplement
-* Interpolation search
 * queens on a board
 * finish conspecting AVL tree ([link](https://www.geeksforgeeks.org/avl-tree-set-1-insertion/))
 * implement AVL tree
 * in a sequence, if any k elements sum to target
 * trie
-* this search that is default in Python - reimplement
+* Timsort - reimplement
 * red-black tree - document
 * how to solve sudoku?
 * https://www.youtube.com/watch?v=oEq9ROl9Umk 
 * scrum
 * finish Google production thing
+* splay tree
+* radix sort
 * collections - or whatever is this common module ppl often use with prepackaged datastructures
 * refresh O: https://www.bigocheatsheet.com/
 * Laplacian operator (create a new page for basic vector calc) [1h youtube](https://www.youtube.com/watch?v=oEq9ROl9Umk), [wiki](https://en.wikipedia.org/wiki/Laplace_operator)
@@ -67,8 +67,6 @@ https://www.geeksforgeeks.org/binary-search-tree-data-structure/
 * https://towardsdatascience.com/8-useful-tree-data-structures-worth-knowing-8532c7231e8c
 * https://en.wikipedia.org/wiki/Fibonacci_heap
 * https://en.wikipedia.org/wiki/Pairing_heap
-* splay tree
-* radix sort
 * timsort (according to the cheat-sheet, it is better then merge sort- how come?)
 * minimal spanning tree - code
 * that way to create ranking from asymmetric preferences via graphs

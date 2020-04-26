@@ -68,6 +68,7 @@ Coding problems
 * https://www.byte-by-byte.com/google-interview/
 * https://codingbat.com/java
 * https://codegolf.stackexchange.com/
+* https://projecteuler.net/archives
 
 Job-search specific materials:
 * Cracking the code interview (book)
