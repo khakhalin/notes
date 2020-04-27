@@ -5,8 +5,8 @@ Stem: [[algos]] / [[algos_graph]]
 
 Information-related algorithms:
 * [[bst]] - Binary Search Tree
-    * [[avl_tree]], [[red-black_tree]] - two balanced implementations
-* [[trie]]
+    * [[avl_tree]], [[red-black_tree]] - two balanced implementations of BST
+* [[trie]] - space-compact and fail-efficient string representation
 
 Space-related:
 * [[rrt]] - Rapidly exploring Random Tree (fractal-like growth algo)
