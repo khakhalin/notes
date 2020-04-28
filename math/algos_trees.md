@@ -33,3 +33,7 @@ So it sets the priorities in this order: Left>Current>Right>Up. And also Left an
 **Recursively**, this is super-easy to implement: recurse on left, then process yourself, then recurse on right (left-self-right). Similarly, for pre-order it would be "self-left-right", and for post-order, "left-right-self".
 
 **Level-order traversal**: first all 1st order elements (in practice, only one: root), then all 2nd order ones (all 2 of them), then all 3d etc. This one is easier to do with a queue, without recursion, as in BFS. And for **Reverse order traversal** (where you start with the lowest layer), we do almost the same thing, just 1) go right-left at each fork, and 2) don't process anything, but just populate the queue; then, once it is fully built, process it backwards, from the end to the beginning. As each layer was added there right-to-left, with backwards processing it would produce the correct order.
+
+# Other types of trees
+
+**Quad Tree**: For data compression and searching on 2D imaging and graphics applications. Each node is a square, and can have either 0 or 4 children (for sub-squares). A matching concept in 3D is called an **Octree**.

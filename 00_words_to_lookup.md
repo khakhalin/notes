@@ -24,25 +24,26 @@ Kick-start videos: https://www.youtube.com/playlist?list=PLllx_3tLoo4csmLveWHpjc
 # Words and topics to look up
 
 **ML and Algos**
-
+* re-write tree, as a prep for red-black
 * queens on a board
-* finish conspecting AVL tree ([link](https://www.geeksforgeeks.org/avl-tree-set-1-insertion/))
-* implement AVL tree
+* finish conspecting AVL tree ([link](https://www.geeksforgeeks.org/avl-tree-set-1-insertion/)) 
+* finish (or re-visit) [[avl_tree]] implementation
 * in a sequence, if any k elements sum to target
-* trie
 * Timsort - reimplement
-* red-black tree - document
+* red-black tree - document and implement
 * how to solve sudoku?
 * https://www.youtube.com/watch?v=oEq9ROl9Umk 
+* string sort from the red book
 * scrum
 * finish Google production thing
 * splay tree
 * radix sort
 * collections - or whatever is this common module ppl often use with prepackaged datastructures
 * refresh O: https://www.bigocheatsheet.com/
-* Laplacian operator (create a new page for basic vector calc) [1h youtube](https://www.youtube.com/watch?v=oEq9ROl9Umk), [wiki](https://en.wikipedia.org/wiki/Laplace_operator)
+* Code two types of hash-tables from memory
 * Look up at all keywords from the systems part, put them in the dictionary
 * Scan [this helpful list](https://www.freecodecamp.org/news/coding-interviews-for-dummies-5e048933b82b/); digest into unit-items if needed
+* Rotate array in-place with juggling
 * treap
 * Ruby on rails - what is it, how it works, and why so popular?
 * finish scalability lecture, and watch any other one, from systems design
@@ -50,16 +51,10 @@ Kick-start videos: https://www.youtube.com/playlist?list=PLllx_3tLoo4csmLveWHpjc
 * Bloom filter (refs: [1](https://dominikschmidt.xyz/bloom-filter/))
 * summarize [Python sets](https://docs.python.org/2/library/sets.html)
 * Make sure [this list from geekforgeeks](https://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/) is exhausted
-* repeat heap, now with deletion
 * implement Dijsktra
-* implement red-black tree?
 * collision-detection algorithms
 * https://en.wikipedia.org/wiki/Universal_approximation_theorem
 * refresh "read from a console" and read from file in Python
-* dual bases: why is this term a thing? How does it help? Describe here: [[la_01]]
-* How come stochastic gradient descent provides regularization? Why adding bagging to GBM, for example, can be considered a case of regularization? [[05_Ensembles]].
-* Do we have 2 different descriptions from Gram-Smidt: in [[la_01]] and in [[02_Regression]]? Can we isolate and combine?
-* Figure out that connection between ridge regression and and PCA that I've started in the ridge regression chapter! Seems important and reasonably doable, no? [[02_Regression]].
 * Command line intro: https://learnpythonthehardway.org/book/appendixa.html
 * https://www.geeksforgeeks.org/binary-search-tree-set-2-delete/
 * Go through all subtopics here:
@@ -67,13 +62,19 @@ https://www.geeksforgeeks.org/binary-search-tree-data-structure/
 * https://towardsdatascience.com/8-useful-tree-data-structures-worth-knowing-8532c7231e8c
 * https://en.wikipedia.org/wiki/Fibonacci_heap
 * https://en.wikipedia.org/wiki/Pairing_heap
-* timsort (according to the cheat-sheet, it is better then merge sort- how come?)
 * minimal spanning tree - code
+* Regular expressions, including in Python
 * that way to create ranking from asymmetric preferences via graphs
 * https://cp-algorithms.com/data_structures/fenwick.html
 * https://cp-algorithms.com/data_structures/segment_tree.html
 * Revisit [this link](https://cs.stackexchange.com/questions/111353/analyze-time-series-data-to-get-min-max-over-past-period-of-time) about keeping running max & min of a time series (monotonous wedge?) - describe it, code it. [Pdf of the paper](https://arxiv.org/pdf/cs/0610046.pdf).
+* Laplacian operator (create a new page for basic vector calc) [1h youtube](https://www.youtube.com/watch?v=oEq9ROl9Umk), [wiki](https://en.wikipedia.org/wiki/Laplace_operator)
 * Convex hull: [wrapping algorithm](https://www.geeksforgeeks.org/convex-hull-set-1-jarviss-algorithm-or-wrapping/)
+* Why autoencoders use KL and not L2 as loss? What's the logic of when KL is used?
+* dual bases: why is this term a thing? How does it help? Describe here: [[la_01]]
+* How come stochastic gradient descent provides regularization? Why adding bagging to GBM, for example, can be considered a case of regularization? [[05_Ensembles]].
+* Do we have 2 different descriptions from Gram-Smidt: in [[la_01]] and in [[02_Regression]]? Can we isolate and combine?
+* Figure out that connection between ridge regression and and PCA that I've started in the ridge regression chapter! Seems important and reasonably doable, no? [[02_Regression]].
 * finish gradient boosting
 * finish SVM
 * random forest
@@ -109,6 +110,9 @@ https://www.geeksforgeeks.org/binary-search-tree-data-structure/
 * Principal variables
 * Mahalanobis distance
 * Particle filters
+
+**Open Python questions**
+* should nodes self-delete and not just plug references with Nones?
 
 **Tools**
 * Lint (pylint) - what is it and why? It seems that it can catch errors, type mismatches etc.

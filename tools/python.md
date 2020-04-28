@@ -13,20 +13,28 @@ Path: [[01_Tools]]
 * To get some (or rather, first) key from a dict: `next(iter(a.keys()))`
 * To split a long line one could use `\`, but it is advised to use implicit line joining instead, which happens if brackets were open and not closed. It's better to add "unnecessary" brackets than usie a backslash.
 * **Docstring**: First constant in a declaration, starts and ends with triple double quotes `"""`, accessible via `object.__doc__` property. Minimum: one sentence, capitalized, with a full stop at the end, explaining what this function does. Don't include the name, or usage. Any other comments - lower, after an empty line. For modules, similar, at the very beginning, before any declarations. Refs: [1](https://www.python.org/dev/peps/pep-0257/), [2](https://www.pythonforbeginners.com/basics/python-docstrings)
-* **F-strings**: `f"bla {x['a']:.2f}"` - this version (with `"`) supports dicts (because diff quotation marks), and formats the output (after `:`). Refs: [intro](http://zetcode.com/python/fstring/) , [specification](https://docs.python.org/3/library/string.html#format-specification-mini-language) (a mini-language of sorts!)
 * Sweetest way to **iterate through a dictionary**: `for key,val in d.items():`.
-* **Sets:** another hashed structure with O(1) for testing `i in a`. [ref](https://docs.python.org/3/library/stdtypes.html#set-types-set-frozenset)
-    * Create: `set()` or a comprehension `{a for a in whatever}`, but not `{}` (this makes a dict).
-    * Sets are unhashable, so they cannot be keys in a dict, and sets of sets are impossible. Thre's a sister type however `frozenset([])` that creates immutable sets that are hashable, and can be used as keys.
-    * Element-level operations: `a.add(1)`, `a.remove(1)` (raises an error if not found), `a.discard(1)` (doesn't raise an error if not found). `a.pop()` exists (removes and returns an element), but doesn't take arguments (coz no position). And of course the crowd-pleaser `x in a`
-    * Set-level checks: `a.issubset(b)` (whether a is a subset of b), `a.superset(b)` (the other way around). So these two comparisons should be read in the same sequence in which they are written, as in plain English. Also `isdisjoint()`. Alternatively, just do `a < b`, `a <= b` etc.
-    * Set-level operations: `a.union(b)` (alternatively, `|` as an operator), and similarly `intersection` (or `&` as an operator), `difference` (or `-`), `symmetric_difference` (`^`). All these operators work as update-operators (like `|=`) as well (unless it's a frozen set of course). Another version for `a |= b` is `a.update(b)` (makes for more readable code?). Single-digit operators work only on sets, while methods accept any iterables.
-    * Gotcha: note that if you do `a.update('string')`, it will get disassembled into letters!
-    * `a = list(set(a))` - a neat way to do unique(). Doesn't preserve the original order though.
+* With big numbers, we can write `100_000`, and it's still a number :)
+* We can do chain comparisons: `1 <= x < 3`, which is equivalent to `1<=x and x<3`.
+
+# Sets
+**Sets:** another hashed structure with O(1) for testing `i in a`. [ref](https://docs.python.org/3/library/stdtypes.html#set-types-set-frozenset)
+
+* Create: `set()` or a comprehension `{a for a in whatever}`, but not `{}` (this makes a dict).
+* Sets are unhashable, so they cannot be keys in a dict, and sets of sets are impossible. Thre's a sister type however `frozenset([])` that creates immutable sets that are hashable, and can be used as keys.
+* Element-level operations: `a.add(1)`, `a.remove(1)` (raises an error if not found), `a.discard(1)` (doesn't raise an error if not found). `a.pop()` exists (removes and returns an element), but doesn't take arguments (coz no position). And of course the crowd-pleaser `x in a`
+* Set-level checks: `a.issubset(b)` (whether a is a subset of b), `a.superset(b)` (the other way around). So these two comparisons should be read in the same sequence in which they are written, as in plain English. Also `isdisjoint()`. Alternatively, just do `a < b`, `a <= b` etc.
+* Set-level operations: `a.union(b)` (alternatively, `|` as an operator), and similarly `intersection` (or `&` as an operator), `difference` (or `-`), `symmetric_difference` (`^`). All these operators work as update-operators (like `|=`) as well (unless it's a frozen set of course). Another version for `a |= b` is `a.update(b)` (makes for more readable code?). Single-digit operators work only on sets, while methods accept any iterables.
+* Gotcha: note that if you do `a.update('string')`, it will get disassembled into letters!
+* `a = list(set(a))` - a neat way to do unique(). Doesn't preserve the original order though.
 
 # List comprehensions
 * Nested comprehensions: same syntax as in writing nested loops (even tho it looks unformulaic), e.g. `[j for i in range(5) for j in range(i)]
 * If you want to sometimes return nothing, move `if` to the end: then you don't have to write `else`: `[x for x in y if a]`.
+
+# Strings
+
+* **F-strings**: `f"bla {x['a']:.2f}"` - this version (with `"`) supports dicts (because diff quotation marks), and formats the output (after `:`). Refs: [intro](http://zetcode.com/python/fstring/) , [specification](https://docs.python.org/3/library/string.html#format-specification-mini-language) (a mini-language of sorts!)
 
 # Gotchas
 * Objects (including empty lists `[]`) should never be used as **default arguments** for functions, as they are evaluated only once per program (during object definition), not when methods are called! Insetad use `x=None`, then `if x is None: x=[]`. It sounds super-cumbersome, but that's just how it is. ([ref](https://docs.python-guide.org/writing/gotchas/))
@@ -37,9 +45,29 @@ Path: [[01_Tools]]
 * **Slices** don't throw index out of bounds exceptions, but evaluate to `[]` if they are out of bounds. so for `a=[0]`, `a[1]`would give an "index out of range" mistake, but `a[1:]` gives an empty list.
 * Remember that `copy()` is a shallow copy, so for complex nested structures it may not be enough.
 
-Refs:
+**Refs:**
 * Tips from Chip Huyen: https://github.com/chiphuyen/python-is-cool
 * Nice [list of Python gotchas](https://www.toptal.com/python/top-10-mistakes-that-python-programmers-make) from Martin Chilikian
+
+# Errors
+
+To **raise an error** do: `raise KeyError('Error Message')`, except instead of a `KeyError` there are lots of "Base error types" to try. Some useful examples include:
+
+* `Exception`: the most basic class for all exception types
+* `ArithmeticError`, including `ZeroDivisionError`, `OverflowError` ...)
+* `LookupError`, including `IndexError`, `KeyError`
+* `AssertionError`: when assert fails
+* And many more: [see the list](https://docs.python.org/3/library/exceptions.html)
+
+To **handle an error**, do something like this code below. This whole traceback things creates a proper stack of exception handling.
+```python
+try:
+    x = 1/0
+except KeyError:
+    # do something
+    tb = sys.exc_info()[2]
+    raise SomeOtherException(...).with_traceback(tb)
+```
 
 # OOP
 * **Non-local variables**: when defining function within a function, we can make local variables of the outer function become sorta "global" for the inner function, which may be handy. If you only plan to read from this variable, just refer to it as if it's global. If you plan to update it, write `nonlocal var_name` inside the inner function, as if declaring it. After that it won't be masked. 

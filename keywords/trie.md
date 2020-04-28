@@ -12,7 +12,7 @@ Consider a fixed alphabet R. Each node uses one character with a key, stores som
 
 Another really cool thing about tries is that they support **wildcard match** relatively easily (you'd only need to loop through options at a branch).
 
-**Size** can be done recursively lazily (on request), but it's slow, so may be better to update it on addition. **Collecting keys** is similar, also recursive. **Deleting** can also benefit from recursion, in the style of  `this.next = this.next.delete()`.
+**Size** can be done recursively lazily (on request), but it's slow, so may be better to update it on addition. **Collecting keys** is similar, also recursive. **Deleting** can also benefit from recursion, in the style of  `this.next = this.next.delete()`. The logic here is funny: if you are getting deleted, and you have kids, just become a transit node. If you don't have kids, it's branch-trimming, so not only delete yourself, but return None. Then upon recursion (for nomal-not-deleting node), check if you are still used: a node without children and value is a member of a dead branch and should also delete itself, sending the deletion signal further upstream.
 
 # Example
 
