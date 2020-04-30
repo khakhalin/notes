@@ -24,13 +24,12 @@ Kick-start videos: https://www.youtube.com/playlist?list=PLllx_3tLoo4csmLveWHpjc
 # Words and topics to look up
 
 **ML and Algos**
-* re-write tree, as a prep for red-black
 * queens on a board
-* finish conspecting AVL tree ([link](https://www.geeksforgeeks.org/avl-tree-set-1-insertion/)) 
+* How does garbage collection work in Python? What's the logic, and how fast is it?
 * finish (or re-visit) [[avl_tree]] implementation
 * in a sequence, if any k elements sum to target
 * Timsort - reimplement
-* red-black tree - document and implement
+* [[red-black_tree]] red-black_tree - document and implement
 * how to solve sudoku?
 * https://www.youtube.com/watch?v=oEq9ROl9Umk 
 * string sort from the red book

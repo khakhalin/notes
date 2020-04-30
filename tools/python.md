@@ -30,7 +30,7 @@ Path: [[01_Tools]]
 
 # List comprehensions
 * Nested comprehensions: same syntax as in writing nested loops (even tho it looks unformulaic), e.g. `[j for i in range(5) for j in range(i)]
-* If you want to sometimes return nothing, move `if` to the end: then you don't have to write `else`: `[x for x in y if a]`.
+* You can use ternary operator in LC: `[1 if i==0 else 0 for i in a]`. But if you want to sometimes return nothing, move `if` to the end: then you don't have to write `else`: `[x for x in y if a]`.
 
 # Strings
 

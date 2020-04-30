@@ -46,7 +46,7 @@ https://www.geeksforgeeks.org/avl-tree-set-2-deletion/
 
 # Comparison to other trees
 
-Compared to a **red-black tree** [[red-black_tree]], AVL trees are more balanced, but may require more rotations, so they are good if you are mostly reading, but don't insert and delete that much.
+Compared to a [[red-black_tree]], AVL trees are more balanced, but may require more rotations, so they are good if you are mostly reading, but don't insert and delete that much.
 
 # Refs
 
