@@ -24,19 +24,22 @@ Kick-start videos: https://www.youtube.com/playlist?list=PLllx_3tLoo4csmLveWHpjc
 # Words and topics to look up
 
 **ML and Algos**
-* queens on a board
-* How does garbage collection work in Python? What's the logic, and how fast is it?
-* finish (or re-visit) [[avl_tree]] implementation
-* in a sequence, if any k elements sum to target
-* Timsort - reimplement
 * [[red-black_tree]] red-black_tree - document and implement
+* queens on a board
+* in a sequence, if any k elements sum to target 
+* Timsort - reimplement
 * how to solve sudoku?
-* https://www.youtube.com/watch?v=oEq9ROl9Umk 
+* https://www.youtube.com/watch?v=oEq9ROl9Umk
+* Minimal spanning tree on a lennon
+* Relax trees to ribbons, do it on a lennon
+* How does garbage collection work in Python? What's the logic, and how fast is it? ([link](https://gist.github.com/osavsunenko-ring/205fa72c65d6343eaede0dc43f1c79d4))
+* Re-implement [[avl_tree]]: make it neater, and fix delete (it's wrong now I think). Make everything very recurrent. Can we avoid storing parents?
 * string sort from the red book
 * scrum
 * finish Google production thing
 * splay tree
 * radix sort
+* Do Bellman-Ford
 * collections - or whatever is this common module ppl often use with prepackaged datastructures
 * refresh O: https://www.bigocheatsheet.com/
 * Code two types of hash-tables from memory
@@ -109,6 +112,7 @@ https://www.geeksforgeeks.org/binary-search-tree-data-structure/
 * Principal variables
 * Mahalanobis distance
 * Particle filters
+* Can I code a line graph algorithm? Refs: [wolfram](https://mathworld.wolfram.com/LineGraph.html), [wiki](https://en.wikipedia.org/wiki/Line_graph), [overflow](https://stackoverflow.com/questions/13700954/graph-transformation-vertices-into-edges-and-edges-into-vertices)
 
 **Open Python questions**
 * should nodes self-delete and not just plug references with Nones?
