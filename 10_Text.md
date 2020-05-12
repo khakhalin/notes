@@ -1,7 +1,8 @@
 # Texts and Language
-#text
 
-**Toolbox of methods and concepts:**
+#text #bib
+
+### Toolbox of methods and concepts
 * [[ngram]] - N-grams: low-level feature for text analysis, beyond single words. "Bags" of several (2-3) words.
 * [[tfidf]] - **Text Frequency - Inverse Document Frequency**. A basic approach to ranking documents by their relevance for a given keyword.
 * [[perplexity]] - main measure of language model quality, as well as a good practical objective function during training.
@@ -10,11 +11,10 @@
 * [[word2vec]] - famous word embedding method developed by Google.
 
 # To read:
-https://ruder.io/unsupervised-cross-lingual-learning/index.html
 
-https://ruder.io/state-of-transfer-learning-in-nlp/index.html
-
-https://www.aclweb.org/anthology/P19-1334/ 
+* https://ruder.io/unsupervised-cross-lingual-learning/index.html
+* https://ruder.io/state-of-transfer-learning-in-nlp/index.html
+* https://www.aclweb.org/anthology/P19-1334/ 
 
 Two posts about BERT by Jesse Vig:
 * https://towardsdatascience.com/openai-gpt-2-understanding-language-generation-through-visualization-8252f683b2f8
@@ -30,3 +30,11 @@ https://arxiv.org/pdf/2001.09876.pdf
 Blog post:
 https://deepai.org/publication/the-polar-framework-polar-opposites-enable-interpretability-of-pre-trained-word-embeddings
 Improved word embeddings by somehow forcing (encouraging) the development of semantic opposites (aka "Semantic diffentials", like white-black, that are apparently well-known to be prominent in human cognition / language use). Not quite sure how it works, but there's some dimensionality reduction in the middle, trying to rotate the representation into a set of interpretable axes. Apparently, may be really helpful for the interpretation of language models.
+
+**GloVe** - Global Vectors for Word Representation: a dataset from Standford, which is like word2vec, but pre-calculated, and shared as a dataset ([link](https://nlp.stanford.edu/projects/glove/))
+
+# Analysis of code
+
+Allamanis, M., Barr, E. T., Devanbu, P. T., & Sutton, C. A. (2017). A survey of machine learning
+for big code and naturalness. CoRR.
+Key review on ANN methods to the analysis, prediction, and debugging of code.

@@ -1,7 +1,7 @@
 # Graphical Methods
-#net #bib
 
-# To read:
+#net #bib #graphs
+
 Benchmarking Graph Neural Networks (2020). Vijay Prakash Dwivedi Chaitanya K. Joshi Thomas Laurent Yoshua Bengio Xavier Bresson
 https://arxiv.org/pdf/2003.00982.pdf
 Looking for which patterns seem to hold for successful graph neural networks. A review.
@@ -24,10 +24,12 @@ https://arxiv.org/abs/1907.05008
 Bojchevski, A., Shchur, O., Zügner, D., & Günnemann, S. (2018). Netgan: Generating graphs via random walks. arXiv preprint arXiv:1803.00816.
 https://arxiv.org/pdf/1803.00816.pdf
 
-# Markov Random Fields
-
-.
-
 # Convolutional Graph Networks
+
+* [[Li2017graph]] -  Gated graph sequence neural networks
+
+Grover, A., & Leskovec, J. (2016, August). node2vec: Scalable feature learning for networks. In Proceedings of the 22nd ACM SIGKDD international conference on Knowledge discovery and data mining (pp. 855-864).
+
+# Markov Random Fields
 
 .

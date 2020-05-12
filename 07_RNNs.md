@@ -1,7 +1,11 @@
 # Recurrent Neural Networks
 
-* Attention and Augmented Recurrent Neural Networks: https://distill.pub/2016/augmented-rnns/
+#rnn
 
-## LSTM
-* http://colah.github.io/posts/2015-08-Understanding-LSTMs/
+Subtopics:
+* [[lstm]] - Long Short-Term Memory
+* [[gru]] - Gated Recurrent Unit (kinda a simplified version of LSTM)
 
+# Bibliography
+
+Attention and Augmented Recurrent Neural Networks: https://distill.pub/2016/augmented-rnns/
