@@ -15,7 +15,10 @@ Burns, K., & Bechara, A. (2007). Decision making and free will: A neuroscience p
 What explains the relationship between spatial and mathematical skills? A review of evidence from brain and behavior. (2020). Zachary Hawes. Daniel Ansari.
 (Available on ResearchGate)
 
-# Minimal cognition
+# Non-human cognition
+
+Jønsson, K. A., Fabre, P. H., & Irestedt, M. (2012). Brains, tools, innovation and biogeography in crows and ravens. BMC evolutionary biology, 12(1), 72.
+The history of crows and ravens (inlcuding genetic analysis), and what they can do.
 
 Plants can hear bees:
 https://onlinelibrary.wiley.com/doi/full/10.1111/ele.13331

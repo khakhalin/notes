@@ -2,7 +2,7 @@
 
 Key tags:
 * #halfthere - for projects that are close to completion.
-* #todo - for follow-ups that need to be done 
+* #todo - for follow-ups that need to be done
 
 Videos
 * Conway, the free will theorem: https://www.youtube.com/watch?v=ftIllWczf5w
@@ -25,11 +25,12 @@ Kick-start videos: https://www.youtube.com/playlist?list=PLllx_3tLoo4csmLveWHpjc
 
 **ML and Algos**
 * [[red-black_tree]] red-black_tree - document and implement
-* queens on a board
+* Splitter into groups from an eurlerian circuit
+* sieve of eratosphenes
 * in a sequence, if any k elements sum to target 
 * Timsort - reimplement
 * how to solve sudoku?
-* https://www.youtube.com/watch?v=oEq9ROl9Umk
+* Laplacian short video: https://www.youtube.com/watch?v=oEq9ROl9Umk
 * Minimal spanning tree on a lennon
 * Relax trees to ribbons, do it on a lennon
 * How does garbage collection work in Python? What's the logic, and how fast is it? ([link](https://gist.github.com/osavsunenko-ring/205fa72c65d6343eaede0dc43f1c79d4))
