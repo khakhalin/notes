@@ -4,6 +4,8 @@
 
 **Bibliography collections:**
 * [[bib_reconstruction]] - On reconstructing biological connectivity from spike-trains and alike
+* [[bib_stdp]]
+* [[criticality]]
 
 Hasson, U., Nastase, S. A., & Goldstein, A. (2020). Direct Fit to Nature: An Evolutionary Perspective on Biological and Artificial Neural Networks. Neuron, 105(3), 416-434.
 https://www.cell.com/neuron/pdf/S0896-6273(19)31044-X.pdf
@@ -31,7 +33,8 @@ Lazar, A., Pipa, G., & Triesch, J. (2006, April). The combination of STDP and in
 
 Ozturk, I., & Halliday, D. M. (2016, December). Mapping spatio-temporally encoded patterns by reward-modulated STDP in Spiking neurons. In Computational Intelligence (SSCI), 2016 IEEE Symposium Series on (pp. 1-8). IEEE.
 
-Emergence of complex computational structures from chaotic neural networks through reward-modulated hebbian learning. GM Hoerzer, R Legenstein, W Maass, Cerebral Cortex, 24, 677-690, 2014
+Hoerzer, G. M., Legenstein, R., & Maass, W. (2014). Emergence of complex computational structures from chaotic neural networks through reward-modulated Hebbian learning. Cerebral cortex, 24 (3), 677-690.
+#todo
 
 Gilson, M., Burkitt, A., & van Hemmen, J. L. (2010). STDP in recurrent neuronal networks. Spike-timing dependent plasticity, 271.
 
@@ -58,74 +61,6 @@ https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0138947
 Gutkin, B. S., Laing, C. R., Colby, C. L., Chow, C. C., & Ermentrout, G. B. (2001). Turning on and off with excitation: the role of spike-timing asynchrony and synchrony in sustained neural activity. Journal of computational neuroscience, 11(2), 121-134.
 Apparently, sorta seminal paper in this narrow field. But check out their later papers as well:
 https://scholar.google.com/citations?user=Q2aFVoYAAAAJ&hl=en&oi=sra
-
-# Criticality, inhibition, dynamics
-
-Popular account, harvest all links:
-https://www.quantamagazine.org/brains-may-teeter-near-their-tipping-point-20180614/
-
-25 years of criticality in neuroscience — established results, open controversies, novel concepts J Wilting, V Priesemann
-[https://www.sciencedirect.com/science/article/pii/S0959438819300248]
-Very short, so a must read.
-
-Mechanisms underlying gain modulation in the cortex (2020)
-Katie A. Ferguson & Jessica A. Cardin 
-https://www.nature.com/articles/s41583-019-0253-y?WT.mc_id=TWT_NatRevNeurosci
-New review in Nature; ppl seem to like
-
-Sussillo, D. and Abbott, L. F. (2009). Generating Coherent Patterns of Activity from Chaotic Neural Networks. Neuron, 63(4):544–557.
-
-Universality and individuality in neural dynamics across large populations of recurrent networks Niru Maheswaranathan, Alex H. Williams, Matthew D. Golub, Surya Ganguli, David Sussillo
-https://arxiv.org/abs/1907.08549 
- 
-Mastrogiuseppe, F. and Ostojic, S. (2018). Linking Connectivity, Dynamics, and Computations in Low-Rank Recurrent Neural Networks. Neuron, 554 99(3):609–623.e29.
-
-Cortical computations via metastable activity Giancarlo La Camera, Alfredo Fontanini, Luca Mazzucato
-https://www.sciencedirect.com/science/article/pii/S0959438818302198 
-Interesting; includes a section of spiking models of those. It's like criticality, but better, and also super-relevant.
-
-Vogels, T. P., Sprekeler, H., Zenke, F., Clopath, C., & Gerstner, W. (2011). Inhibitory plasticity balances excitation and inhibition in sensory pathways and memory networks. *Science*, *334*(6062), 1569-1573. 
-About what tunes inhibitory neurons, that in turn make excitatory activity properly sparse.
-
-Schaub, M. T., Billeh, Y. N., Anastassiou, C. A., Koch, C., and Barahona, M. (2015). Emergence of Slow-Switching Assemblies in Structured Neuronal Networks. PLoS Computational Biology, 11(7):1–28.
-
-Kim, J. K., & Fiorillo, C. D. (2017). Theory of optimal balance predicts and explains the amplitude and decay time of synaptic inhibition. Nature communications, 8, 14566.
-https://www.nature.com/articles/ncomms14566
-How ideally balanced inhibition can emerge from anti-hebbian plasticity.
-
-Kanders, K., Lee, H., Hong, N., Nam, Y., & Stoop, R. (2020). Fingerprints of a second order critical line in developing neural networks. Communications Physics, 3(1), 1-13.
-https://www.nature.com/articles/s42005-019-0276-8
-Transitions between two levels of criticality in neuronal culture.
-
-## Related
-
-Guzman, S. J., Schlögl, A., Frotscher, M., & Jonas, P. (2016). Synaptic mechanisms of pattern completion in the hippocampal CA3 network. Science, 353(6304), 1117-1123.
-https://science.sciencemag.org/content/353/6304/1117.long
-
-Carrillo-Reid, L., Miller, J. E. K., Hamm, J. P., Jackson, J., & Yuste, R. (2015). Endogenous sequential cortical activity evoked by visual stimuli. Journal of Neuroscience, 35(23), 8813-8828.
-https://www.ncbi.nlm.nih.gov/pubmed/26063915/
-
-Dabney, W., Kurth-Nelson, Z., Uchida, N., Starkweather, C. K., Hassabis, D., Munos, R., & Botvinick, M. (2020). A distributional code for value in dopamine-based reinforcement learning. Nature, 1-5.
-[Link from the authors](https://www.nature.com/articles/s41586-019-1924-6.epdf?author_access_token=ASaTR4qMH190wSHiKLjQ7NRgN0jAjWel9jnR3ZoTv0OgnvLoVhK46-VND2gsGkjz36rZENj3hLKoFtZ6yylssm1cot8UrjoCWaDrIBKZs-uF0doLijXxV5GpU93RmqJeFMCQ_BzuM9Sr7acs_dVtKg%3D%3D)
-
-Rangel, L. M., Alexander, A. S., Aimone, J. B., Wiles, J., Gage, F. H., Chiba, A. A., & Quinn, L. K. (2014). Temporally selective contextual encoding in the dentate gyrus of the hippocampus. Nature communications, 5, 3181.
-https://www.nature.com/articles/ncomms4181?origin=ppub
- 
-# Reservoir computing
-
-Tanaka, G., Yamane, T., Héroux, J. B., Nakane, R., Kanazawa, N., Takeda, S., ... & Hirose, A. (2019). Recent advances in physical reservoir computing: a review. Neural Networks.
-https://www.sciencedirect.com/science/article/pii/S0893608019300784
-High priority #todo
-
-Pogodin, R., Corneil, D., Seeholzer, A., Heng, J., & Gerstner, W. (2019). Working memory facilitates reward-modulated Hebbian learning in recurrent neural networks. arXiv preprint arXiv:1910.10559. 
-https://arxiv.org/pdf/1910.10559.pdf 
-Reservoir computer + a "working memory network"
-
-Rotermund, D., & Pawelzik, K. R. (2019). Biologically plausible learning in a deep recurrent spiking network. bioRxiv, 613471.
-https://www.biorxiv.org/content/10.1101/613471v1.full
-
-Stimberg, M., Goodman, D. F., & Nowotny, T. (2019). [Brian2GeNN: accelerating spiking neural network simulations with graphics hardware](https://www.nature.com/articles/s41598-019-54957-7). Scientific Reports.
-Spiking network simulator that is apparently so optimized that it runs very fast. Check before writing any custom spiking models.
 
 # Synfire chains, Sequences
 
@@ -322,7 +257,9 @@ Spoerer, C. J., Kietzmann, T. C., & Kriegeskorte, N. (2019). Recurrent networks 
 https://www.biorxiv.org/content/10.1101/677237v3.full
 Recurrent convolutional network  works better than a feed-forward convolutional network. It's slower, but better. Claim that it's similar to primate vision somehow.
 
-# Large-scale dynamics
+# Dynamics
+
+Maheswaranathan, N., Williams, A., Golub, M., Ganguli, S., & Sussillo, D. (2019). Universality and individuality in neural dynamics across large populations of recurrent networks. In_Advances in neural information processing systems_(pp. 15603-15615).
 
 Merel, J., Botvinick, M., & Wayne, G. (2019). Hierarchical motor control in mammals and machines. Nature Communications, 10(1), 1-12.
 https://www.nature.com/articles/s41467-019-13239-6

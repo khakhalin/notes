@@ -1,5 +1,7 @@
 # To-read: Network Science
 
+#bib #todo #networks #graphs
+
 Clune, J., Mouret, J. B., & Lipson, H. (2013). The evolutionary origins of modularity. Proceedings of the Royal Society b: Biological sciences, 280(1755), 20122863.
 https://royalsocietypublishing.org/doi/pdf/10.1098/rspb.2012.2863
 500 citations: pretty cool for a bio paper
@@ -54,10 +56,6 @@ Rep., 716–717:1–58, 2017.
 
 M. O. Jackson and Y. Zenou. Games on networks. In P. Young and S. Zamir, editors,
 Handbook of Game Theory Vol. 4, pages 95–163. Elsevier, 2014.
-
-# Processes as a way to quantify
-
-.
 
 # Graph-producing automata
 

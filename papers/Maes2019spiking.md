@@ -1,4 +1,5 @@
 # Learning spatiotemporal signals using a recurrent spiking network that discretizes time
+
 Maes, A., Barahona, M., & Clopath, C. (2019). Learning spatiotemporal signals using a recurrent spiking network that discretizes time. arXiv preprint arXiv:1907.08801.
 https://arxiv.org/abs/1907.08801
 Final version:

@@ -1,4 +1,5 @@
 # Griffiths phases and the stretching of criticality in brain networks
+
 #criticality #complexity #modularity #spectral
 
 Moretti, P., & Muñoz, M. A. (2013). Griffiths phases and the stretching of criticality in brain networks. Nature communications, 4, 2521.

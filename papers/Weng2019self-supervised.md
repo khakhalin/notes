@@ -7,11 +7,9 @@ https://lilianweng.github.io/lil-log/2019/11/10/self-supervised-learning.html
 
 Awesome informal review of the entire concept of self-supervized learning, with highlights from the field.
 
-#### General idea:
+**General idea:** Come up with a useless supervised task derived from data (use any part of data as a label, predict the label from the rest). By doing that, the model will have to learn rich representations. Then use intermediate level (representation) as an input to actual your actual model.
 
-Come up with a useless supervised task derived from data (use any part of data as a label, predict the label from the rest). By doing that, the model will have to learn rich representations. Then use intermediate level (representation) as an input to actual your actual model.
-
-#### Examples:
+**Bibliography:**
 
 * Take a small image, distort and transform it in various ways, teach the model to know that all these images still belong to the same class:  [Dosovitskiy et al., 2015](https://arxiv.org/abs/1406.6909)
 * Rotate images, let the model guess down direction:  [Gidaris et al. 2018](https://arxiv.org/abs/1803.07728) 

@@ -255,7 +255,7 @@ They expressed concerns that ticket hypothesis might not be true, but later deci
 Frankle, J., Dziugaite, G. K., Roy, D. M., & Carbin, M. Stabilizing the Lottery Ticket Hypothesis. arXiv, page.
 https://arxiv.org/abs/1903.01611
 
-Gale, T., Elsen, E., & Hooker, S. (2019). The state of sparsity in deep neural networks. arXiv preprint arXiv:1902.09574.
+Gale, T., Elsen, E., & Hooker, S. (2019). The state of sparsity in deep neural networks. arXiv preprint arXiv:1902.09574.ellu
 https://arxiv.org/abs/1902.09574
 Showing that for networks that are sparse enough, the ticket hypothesis still works.
 

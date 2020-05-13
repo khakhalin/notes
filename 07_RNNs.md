@@ -1,6 +1,9 @@
 # Recurrent Neural Networks
 
-#rnn
+#rnn #bib
+
+See also: 
+* [[echo_state]] - Echo-State Networks (my favorite variety :)
 
 Subtopics:
 * [[lstm]] - Long Short-Term Memory
