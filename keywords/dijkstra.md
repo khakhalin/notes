@@ -3,8 +3,10 @@
 #algo #graphs
 
 Parent: [[algos_graph]]
-Related: [[a-star]] (an improvement upon Dijsktra's), [[floyd_warshall]] (all to all for dense graphs)
-Uses: [[priority_queue]]
+Related: 
+* [[a-star]] - a heuristic improvement upon Dijsktra's
+* [[floyd_warshall]] - similar, but calcualting all-to-all shortest paths for a dense graph
+* [[priority_queue]] - a data structure used in Dijsktra
 
 Finding a shortest path between two points (or to all points from a starting point) on a weighted graph. The idea is simple: do something like Breadth-First-Search, but instead of marking how far you are from the starting point in terms of the number of transition, for each node, keep track of its current min() distance.
 

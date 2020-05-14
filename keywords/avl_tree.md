@@ -1,5 +1,6 @@
 # AVL trees
-#algo
+
+#algo #trees
 
 Hierarchy: [[algos]] / [[algos_trees]] /
 See also: [[bst]], [[red-black_tree]]

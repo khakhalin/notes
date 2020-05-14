@@ -2,14 +2,16 @@
 
 #echo #rnn #graphs #bib
 
-## Echo-State Networks
-
 Parents: [[07_RNNs]]
 See also: [[criticality]], [[bib_stdp]]
 
-## Liquid State Machines
+# Echo-State Networks
 
 #todo
+
+# Liquid State Machines
+
+Similar to ESN, but on spiking neurons? #todo
 
 # Papers
 

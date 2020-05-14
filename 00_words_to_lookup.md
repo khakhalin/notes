@@ -16,15 +16,13 @@ https://developers.google.com/machine-learning/crash-course/production-ml-system
 What is a Computation Graph and Who Cares?
 https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-network-methods/lectures/12194418
 
-https://medium.com/dair-ai/an-illustrated-guide-to-graph-neural-networks-d5564a551783
-
-Music: https://www.youtube.com/watch?v=7NOSDKb0HlU
 Kick-start videos: https://www.youtube.com/playlist?list=PLllx_3tLoo4csmLveWHpjcRTXVMCcvvmc
 
 # Words and topics to look up
 
 **ML and Algos**
 * [[red-black_tree]] red-black_tree - document and implement
+* salesmen problem with dynamic programming
 * Splitter into groups from an eurlerian circuit
 * sieve of eratosphenes
 * in a sequence, if any k elements sum to target 

@@ -1,6 +1,6 @@
 # Minimum Spanning Tree
 
-#algo #graphs
+#algo #graphs #trees
 
 Parents: [[algos]] / [[algos_graph]]
 Related: [[algos_trees]]

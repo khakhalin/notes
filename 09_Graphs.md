@@ -2,6 +2,8 @@
 
 #net #bib #graphs
 
+https://medium.com/dair-ai/an-illustrated-guide-to-graph-neural-networks-d5564a551783
+
 Benchmarking Graph Neural Networks (2020). Vijay Prakash Dwivedi Chaitanya K. Joshi Thomas Laurent Yoshua Bengio Xavier Bresson
 https://arxiv.org/pdf/2003.00982.pdf
 Looking for which patterns seem to hold for successful graph neural networks. A review.

@@ -2,7 +2,7 @@
 
 #algo
 
-Aka **GCD**. Can be found using an Euclidean Algorithm:
+Aka **GCD**. Can be found using an **Euclidean Algorithm**:
 
 ```python
 def gcd(a,b):

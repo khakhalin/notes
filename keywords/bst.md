@@ -1,9 +1,9 @@
 # Binary Search Tree
 
-#algo
+#algo #trees
 
 Hierarchy: [[algos]] / [[algos_trees]] /
-See also: [[algos_graph]]
+See also: [[algos_graph]], [[avl_tree]], [[red-black_tree]]
 
 In a BST, each node has a value, and each node has 2 children: left and right, with left value < self value, and right value > self value. **Search** is trivial: just repeat checking if value matches, then go left or right depending on whether what you are looking for is smaller or larger than self value. Can be easily implemented using **recursion**:
 

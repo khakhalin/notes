@@ -1,6 +1,6 @@
 # To-read: Neuro
 
-#neuro
+#neuro #bib
 
 **Bibliography collections:**
 * [[bib_reconstruction]] - On reconstructing biological connectivity from spike-trains and alike

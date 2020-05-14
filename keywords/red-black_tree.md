@@ -1,6 +1,6 @@
 # Red-Black Tree
 
-#algo
+#algo #trees
 
 Hierarchy: [[algos]] / [[algos_trees]] / [[bst]]
 Related: [[avl_tree]]
@@ -31,13 +31,16 @@ Now let's represent **3-nodes** from a 2-3-tree as pairs of 2-nodes, connected w
 
 Fortunately for coding all this, we don't have to "translate" a 2-3-tree into a RB-tree, or implement it as an abstraction, but rather we can code the RB-tree directly, by adding just a few extra checks and adjustments to a standard BST, and then showing that the resultis equivalent to a 2-3-tree (as 2-3 tree is easier to undersand, and it's easier to build formal proofs about it). The adjustments in question are two **rotations** (left and right), and a color flip. (What's nice is that these rotations are far less involved than for an AVL tree)
 
-* **Left rotation**: we start with a case when a node A has a normal (black) left kid, and a red (improper) right kid B. We make B the root of this system, and we make A its left, red child.
-* **Right rotation**: the opposite: A is a left kid of B, but we make A the root, and B - its' right kid. The color of the edge is again preserved, making B a RED child (improper, but that's OK, it's temporary)
+* **Left rotation**: we start with a case when a node A has a red (improper) right kid B, and either no left kid, or black left kid. (Coz if bothleft and right kids are red, it's a 3d case, below, that is cured by color flip). We move the nodes to the left, making B the root of this system, and A its left, red child. B (the new root) should inherit the color of A (as it's the color of the incoming edge), while A is now red for sure. Former left kid of B should become the right kid of A. 
+* **Right rotation**: the opposite: A is a left kid of B, and we make A the root, and B - its' right kid. The color of the edge is again preserved, making B a RED child (improper, but that's OK, it's temporary), while A inherits former color of B. The former right kid of A becomes a left kid of B.
 * In **Color flip** we make all three connections surrounding the node (L, R, and parent) flip their colors.
 
 Here's how these operations are used in balancing:
 
-* If right kid is red, rotate left.
-* If left kid is left, but its kid is also red (two reds in a row, which is illegal), rotate right, then flip.
+* If right kid is red, and left link isn't red: rotate left.
+* If left kid is left, and its kid is also red (two reds in a row, which is illegal): rotate right. (Color flip will auto-happen at next step)
+* if both right and left links are red: flip colors
 
 This operation should be performed after tree modification, recurrently (in post-order), so if it leads to a creation of a wrong configuration upstream, it will propagate upstream, until everything is fixed. The last touch to it all is that the very top, root node is always forced to be black, even if color-flipping tries to make it red.
+
+This set of operations doesn't guarantee a fully balanced structure (unlike for an [[avl_tree]]), as massive chain restructuring of a tree only starts once you accrue 2 consecutive red links, but it is pretty darn close. I am not sure it is true (haven't checked, althoughly surely there's a proof), but at least after playing with these trees aimlessly, it seems that at any moment, at every branch, you can be exactly 1 extra layer away from a fully balanced tree. But once the height of a branch is 2 away from balanced, it gets tucked in, through a chain balancing, that incidentally also brings a new node on top.
