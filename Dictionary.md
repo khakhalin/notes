@@ -110,6 +110,8 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 
 **NMF** (text): Non-negative Matrix Factorization, V=WH + U, where W and H are non-negative, and also typically V is alot×alot, but W is alot×little, and H is little×alot (similar to other dimensionality reduction techniques). Often used with text analysis.
 
+**Non-functional requirements** : true global requirements on the product, as opposed to functional requirements (particular functions a system should be able to do). Examples: safety, secuirity, transparency, testability, scalability, usability, various types of compliance, open source etc.
+
 **noSQL** (db): a general word for non-relational databases: not tabular-based, good for realtime big data. May work with documents, key-values, wide-columns, graphs. Have lower guarantees on consistency (stale reads: updates don't update immediately), which can lead to data loss. See: [[system_design]], [[database]]
 
 # OPQ

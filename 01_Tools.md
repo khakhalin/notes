@@ -1,5 +1,7 @@
 # Tools, coding, project management
 
+#tools
+
 #todo: Command Line crash course
 https://learnpythonthehardway.org/book/appendixa.html
 
@@ -7,7 +9,7 @@ https://learnpythonthehardway.org/book/appendixa.html
 https://missing.csail.mit.edu/
 lots of useful practical bits and pieces: the shell, debugging, metaprogramming and what not. Also has [lectures on youtube](https://www.youtube.com/playlist?list=PLyzOVJj3bHQuloKGG59rS43e29ro7I57J).
 
-Major topics:
+Major subtopics:
 * [[system_design]]
 
 Cheatsheets, tips, and notes:
@@ -16,7 +18,10 @@ Cheatsheets, tips, and notes:
 * [[git]] - GIT cheat sheet
 * [[sql]] - SQL cheat sheet
 
-Advice on ML projects:
+Project management and alike:
+* [[scrum]]
+
+ML projects, general advice:
 * [[ml_lore]] - a collection of rules of thumb about everything Deep Learning (which defaults to pick etc.)
 
 Other #lifehack(s):
@@ -57,7 +62,7 @@ Three different ways to fit:
 * `fit_generator` - accepts a data generator instead of static data, and in this case it is the Dataset generator object (or your custom function) that specifies the shape, including batch size. With `steps_per_epoch`, you can tell it just how many new data points to generate per epoch. Note that with fit_generator, you'll have an extra dimension for batch in the model, at the inputs level, so for prediction you'd either have to use `predict_generator` (which makes sense if you generate data for it on the fly), or expand x with a leading empty axis using numpy (np.reshape(1, … )), and then np.squeeze(y) the output back to normal.
 * `train_on_batch` - trains on one batch and updates the mode.
 
-# ML Project Organization
+# ML Project Structure
 #management
 
 Basic ideas:

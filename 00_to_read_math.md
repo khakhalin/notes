@@ -37,15 +37,7 @@ https://arxiv.org/pdf/1511.06422.pdf
 * https://github.com/chuanli11/CNNMRF
 * https://arxiv.org/abs/2003.03988
 * https://arxiv.org/abs/2003.03461
-* https://www.goodai.com/implementation-of-generative-teaching-networks-for-pytorch/* 
-
-Reservoir memory machines!!
-* https://arxiv.org/abs/2003.04793
-* https://gitlab.ub.uni-bielefeld.de/bpaassen/reservoir-memory-machines
-
-Erik Bernhardsson 
-How to hire smarter than the market: a toy model
-https://erikbern.com/2020/01/13/how-to-hire-smarter-than-the-market-a-toy-model.html
+* https://www.goodai.com/implementation-of-generative-teaching-networks-for-pytorch/
 
 # Intros and top choices
 

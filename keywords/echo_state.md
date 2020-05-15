@@ -15,9 +15,13 @@ Similar to ESN, but on spiking neurons? #todo
 
 # Papers
 
-* [[Jaeger2004harness]] - Harnessing Nonlinearity - first description? (CHECK!)
+* [[Jaeger2004harness]] - Harnessing Nonlinearity - first description? (CHECK!) #halfthere
 
 # To-read
+
+Paassen, B., & Schulz, A. (2020). Reservoir memory machines. arXiv preprint arXiv:2003.04793.
+https://arxiv.org/abs/2003.04793
+https://gitlab.ub.uni-bielefeld.de/bpaassen/reservoir-memory-machines
 
 Jaeger, H. (2007). Echo state network._scholarpedia_,_2_(9), 2330.
 

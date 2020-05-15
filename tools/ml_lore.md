@@ -7,7 +7,7 @@
 * Never use activation function in the last layer (last layer needs to scale)
 * Use bias in every layer
 * Use variance-scaled weight initialization: $\mathcal{N}(0,\sqrt{2/n})$, aka "He et al." (after 2015 paper: [[He2015init]])
-* Normalize (-m, /s) input data. Particularly critical if L1/L2 regularization is used ([ref](https://medium.com/ai%C2%B3-theory-practice-business/top-6-errors-novice-machine-learning-engineers-make-e82273d394db))
+* Normalize (-m, /s) input data. Particularly critical if L1/L2 regularization is used! ([ref](https://medium.com/ai%C2%B3-theory-practice-business/top-6-errors-novice-machine-learning-engineers-make-e82273d394db))
 * Compress (transform) variables if necessary (say, apply  tanh(x/C) )
 * 128 filters in a convolution layer is a lot; if you need more, something is wrong
 * Pooling (maxpooling) helps with transformation invariance (_why???_)

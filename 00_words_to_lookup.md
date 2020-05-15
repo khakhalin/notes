@@ -21,20 +21,19 @@ Kick-start videos: https://www.youtube.com/playlist?list=PLllx_3tLoo4csmLveWHpjc
 # Words and topics to look up
 
 **ML and Algos**
-* [[red-black_tree]] red-black_tree - document and implement
 * salesmen problem with dynamic programming
 * Splitter into groups from an eurlerian circuit
 * sieve of eratosphenes
 * in a sequence, if any k elements sum to target 
 * Timsort - reimplement
+* string sort from the red book
+* Do words-based analysis
 * how to solve sudoku?
 * Laplacian short video: https://www.youtube.com/watch?v=oEq9ROl9Umk
 * Minimal spanning tree on a lennon
-* Relax trees to ribbons, do it on a lennon
 * How does garbage collection work in Python? What's the logic, and how fast is it? ([link](https://gist.github.com/osavsunenko-ring/205fa72c65d6343eaede0dc43f1c79d4))
-* Re-implement [[avl_tree]]: make it neater, and fix delete (it's wrong now I think). Make everything very recurrent. Can we avoid storing parents?
-* string sort from the red book
-* scrum
+* Re-implement [[red-black_tree]], this time without parents, or with compartmentalized parents (`a,b = link(from=a,to=b)` that sets both connections?)
+* Re-implement [[avl_tree]]: make it neater, and fix delete.
 * finish Google production thing
 * splay tree
 * radix sort
