@@ -30,12 +30,12 @@ Other #lifehack(s):
 
 # Good coding habits
 * Keep code clean (not smelly). Types of **smells** ([ref](https://www.thoughtworks.com/insights/blog/coding-habits-data-scientists)):
-    1. Dead code (commented out, inconsequential)
-    2. Print statements everywhere
-    3. Bad variable names
-    4. Functions that do too many things instead of one thing
-    5. Code repetition
-    6. Magic values
+    1. Bad variable names
+    2. Functions that do too many things instead of one thing
+    3. Code repetition
+    4. Magic values
+    5. Dead code (commented out, inconsequential)
+    6. Print statements everywhere
 * Write unit tests ([link to a decent intro](https://www.freecodecamp.org/news/an-introduction-to-testing-in-python/))
 * Make small and frequent commits
 

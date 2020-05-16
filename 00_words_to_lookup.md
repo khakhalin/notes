@@ -23,9 +23,13 @@ Kick-start videos: https://www.youtube.com/playlist?list=PLllx_3tLoo4csmLveWHpjc
 **ML and Algos**
 * salesmen problem with dynamic programming
 * Splitter into groups from an eurlerian circuit
+* wrong assortativity on different circuits	
 * sieve of eratosphenes
+* finish Google production thing
+* splay tree
 * in a sequence, if any k elements sum to target 
 * Timsort - reimplement
+* figure out how to do automatic hyperparameter optimization on Keras
 * string sort from the red book
 * Do words-based analysis
 * how to solve sudoku?
@@ -34,8 +38,6 @@ Kick-start videos: https://www.youtube.com/playlist?list=PLllx_3tLoo4csmLveWHpjc
 * How does garbage collection work in Python? What's the logic, and how fast is it? ([link](https://gist.github.com/osavsunenko-ring/205fa72c65d6343eaede0dc43f1c79d4))
 * Re-implement [[red-black_tree]], this time without parents, or with compartmentalized parents (`a,b = link(from=a,to=b)` that sets both connections?)
 * Re-implement [[avl_tree]]: make it neater, and fix delete.
-* finish Google production thing
-* splay tree
 * radix sort
 * Do Bellman-Ford
 * collections - or whatever is this common module ppl often use with prepackaged datastructures
