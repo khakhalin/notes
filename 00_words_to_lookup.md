@@ -1,4 +1,4 @@
-# General To-Dos
+# Words and topics to look up
 
 Key tags:
 * #halfthere - for projects that are close to completion.
@@ -8,8 +8,6 @@ Videos
 * Conway, the free will theorem: https://www.youtube.com/watch?v=ftIllWczf5w
 * Laplace operator: https://www.youtube.com/watch?v=oEq9ROl9Umk
 
-See also: [[system_design]] - has it own "todo" list of words and terms
-
 Google crash course, about ML production:
 https://developers.google.com/machine-learning/crash-course/production-ml-systems
 
@@ -18,14 +16,15 @@ https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-networ
 
 Kick-start videos: https://www.youtube.com/playlist?list=PLllx_3tLoo4csmLveWHpjcRTXVMCcvvmc
 
-# Words and topics to look up
+See also: [[system_design]]
 
-**ML and Algos**
+# Algos
 * salesmen problem with dynamic programming
 * Splitter into groups from an eurlerian circuit
 * wrong assortativity on different circuits	
 * sieve of eratosphenes
 * finish Google production thing
+* finish scalability lecture, and watch any other one, from systems design
 * splay tree
 * in a sequence, if any k elements sum to target 
 * Timsort - reimplement
@@ -33,45 +32,136 @@ Kick-start videos: https://www.youtube.com/playlist?list=PLllx_3tLoo4csmLveWHpjc
 * string sort from the red book
 * Do words-based analysis
 * how to solve sudoku?
-* Laplacian short video: https://www.youtube.com/watch?v=oEq9ROl9Umk
-* Minimal spanning tree on a lennon
-* How does garbage collection work in Python? What's the logic, and how fast is it? ([link](https://gist.github.com/osavsunenko-ring/205fa72c65d6343eaede0dc43f1c79d4))
 * Re-implement [[red-black_tree]], this time without parents, or with compartmentalized parents (`a,b = link(from=a,to=b)` that sets both connections?)
 * Re-implement [[avl_tree]]: make it neater, and fix delete.
 * radix sort
+* Regular expressions, including in Python
 * Do Bellman-Ford
-* collections - or whatever is this common module ppl often use with prepackaged datastructures
 * refresh O: https://www.bigocheatsheet.com/
 * Code two types of hash-tables from memory
-* Look up at all keywords from the systems part, put them in the dictionary
 * Scan [this helpful list](https://www.freecodecamp.org/news/coding-interviews-for-dummies-5e048933b82b/); digest into unit-items if needed
 * Rotate array in-place with juggling
 * treap
-* Ruby on rails - what is it, how it works, and why so popular?
-* finish scalability lecture, and watch any other one, from systems design
 * what is NP: definition ([this youtube again?](https://www.youtube.com/watch?v=YX40hbAHx3s))
 * Bloom filter (refs: [1](https://dominikschmidt.xyz/bloom-filter/))
-* summarize [Python sets](https://docs.python.org/2/library/sets.html)
 * Make sure [this list from geekforgeeks](https://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/) is exhausted
 * implement Dijsktra
-* collision-detection algorithms
-* https://en.wikipedia.org/wiki/Universal_approximation_theorem
-* refresh "read from a console" and read from file in Python
-* Command line intro: https://learnpythonthehardway.org/book/appendixa.html
-* https://www.geeksforgeeks.org/binary-search-tree-set-2-delete/
+* geometrical collision-detection algorithms
 * Go through all subtopics here:
 https://www.geeksforgeeks.org/binary-search-tree-data-structure/
 * https://towardsdatascience.com/8-useful-tree-data-structures-worth-knowing-8532c7231e8c
 * https://en.wikipedia.org/wiki/Fibonacci_heap
 * https://en.wikipedia.org/wiki/Pairing_heap
-* minimal spanning tree - code
-* Regular expressions, including in Python
-* that way to create ranking from asymmetric preferences via graphs
 * https://cp-algorithms.com/data_structures/fenwick.html
 * https://cp-algorithms.com/data_structures/segment_tree.html
 * Revisit [this link](https://cs.stackexchange.com/questions/111353/analyze-time-series-data-to-get-min-max-over-past-period-of-time) about keeping running max & min of a time series (monotonous wedge?) - describe it, code it. [Pdf of the paper](https://arxiv.org/pdf/cs/0610046.pdf).
-* Laplacian operator (create a new page for basic vector calc) [1h youtube](https://www.youtube.com/watch?v=oEq9ROl9Umk), [wiki](https://en.wikipedia.org/wiki/Laplace_operator)
 * Convex hull: [wrapping algorithm](https://www.geeksforgeeks.org/convex-hull-set-1-jarviss-algorithm-or-wrapping/)
+* Can I code a line graph algorithm? Refs: [wolfram](https://mathworld.wolfram.com/LineGraph.html), [wiki](https://en.wikipedia.org/wiki/Line_graph), [overflow](https://stackoverflow.com/questions/13700954/graph-transformation-vertices-into-edges-and-edges-into-vertices)
+* https://www.byte-by-byte.com/google-interview/ - check other topics
+* Hungarian algorithm
+* minimum cut (on graphs), with related topics
+
+# Python and tools
+* f-strings in Python ([ref](https://docs.python.org/3/library/string.html#format-specification-mini-language)): summarize in a separate doc
+* How does garbage collection work in Python? What's the logic, and how fast is it? ([link](https://gist.github.com/osavsunenko-ring/205fa72c65d6343eaede0dc43f1c79d4))
+* collections - or whatever is this common module ppl often use with prepackaged datastructures
+* refresh "read from a console" and read from file in Python
+* Command line intro: https://learnpythonthehardway.org/book/appendixa.html
+* Lint (pylint) - what is it and why? It seems that it can catch errors, type mismatches etc.
+* Keras heckpoints
+* Keras hyperparameter optimization
+* Python collections: deque, Counter, defaultdict etc.
+* Javascript React - how does it look like?
+* Python closures, why they are a thing, what's dangerous about them, and how to use them
+* bash
+
+# Systems
+
+List from Google
+* Processes, threads, concurrency
+* locks, mutexes, semaphores, monitors
+* deadlocks, livelocks, and how to avoid them
+* resource allocation
+* context switching
+* scheduling
+* multicore concurrency
+
+Go through 2-3 youtube lectures in the queue that describe some of the existing solutions:
+* Scalability lecture: https://www.youtube.com/watch?v=-W9F__D3oY4
+(I'm at 24 m right now)
+* Scaling Etsy: https://www.youtube.com/watch?v=eenrfm50mXw
+* Docker and Kubernetes: https://www.youtube.com/watch?v=u8dW8DrcSmo
+* How to design Twitter: https://www.youtube.com/watch?v=KmAyPUv9gOY
+* Ruby on rails - what is it, how it works, and why so popular?
+* Hadoop vs Spark video: https://hackr.io/blog/hadoop-vs-spark
+* Kubernetes and Docker video (30 min): https://www.youtube.com/watch?v=u8dW8DrcSmo
+* JSON - how does it work, why everybody love it, and is it the present or the future? ([wiki](https://en.wikipedia.org/wiki/JSON))
+* YAML - some standard for keeping stuff that's like XML, but human-readable. Who uses it? Is it popular? ([wiki](https://en.wikipedia.org/wiki/YAML))
+* Avro
+* Parquet (data storage format)
+	* data warehouse technologies
+* difference between columnar and row-oriented data stores
+* star schema
+* difference between dimension and fact tables
+
+* https://www.hiredintech.com/app - a whole intro mini-course on systems design?
+* https://www.byte-by-byte.com/3-ways-to-ace-your-system-design-interview/
+* Go through the list of terms and write down a definition for each of them
+* https://github.com/donnemartin/system-design-primer
+    * https://github.com/donnemartin/system-design-primer#index-of-system-design-topics
+* https://github.com/checkcheckzz/system-design-interview
+
+Every solution depends on parameters of scale: amount of data, n users, requests per seconds, expected respont time, read/write ratio.
+
+Concepts
+* [CAP theorem](https://en.wikipedia.org/wiki/CAP_theorem) (Consistency, Availability, Partition tolerance) - impossible to provide all three, always a trade-off.	 P is a given, so relational DBs favor C, while noSQL favors A
+* Data sharding (how to split data that doens't fit).
+* Consistent hashing - way to solve data sharding
+* Optimistic and pessimistic locking
+* Strong vs eventual consistency
+* Map reduce
+* Multithreading (consistency, locks, CAS)
+* Concurrency, threads, deadlocks, starvation
+
+Practicality - web
+* Bloom filters and count-min sketch
+* Design patterns (OOP)
+* Cashing in DBs
+* TCP/IP
+* IPv4 vs IPv6
+* DNS lookup
+* HTTP vs HTTP2 vs websockets
+* TCP vs UDDP
+* Data centers and how they work
+* Public key infrastructure, symmetric and asymmetric encryption
+* CDN - content delivery network - important for streaming
+
+Practicality - local
+* Parts of a modern OS? Levels of cashing in a modern OS?
+* Performance (bandwidth) of CPU / memory / SDD / HD / network
+* How to use sequential (as opposed to random) reads and write on HD to speed up your processes
+* Paxos - what is it?
+* Virtual machines and containers
+
+Solutions and tools
+* MongeDB
+* Couchbase
+* Memcashed
+* Redis cluster
+* Zookeeper
+* Kafka
+* NGINX, HAProxy - balancers
+* Solr, ElasticSearch
+* Blobstore
+* Spark
+* Hadoop
+* Flink
+
+# Classic ML and related math
+* Laplacian short video: https://www.youtube.com/watch?v=oEq9ROl9Umk
+* https://en.wikipedia.org/wiki/Universal_approximation_theorem
+* that way to create ranking from asymmetric preferences via graphs
+* Laplacian operator (create a new page for basic vector calc) [1h youtube](https://www.youtube.com/watch?v=oEq9ROl9Umk), [wiki](https://en.wikipedia.org/wiki/Laplace_operator)
 * Why autoencoders use KL and not L2 as loss? What's the logic of when KL is used?
 * dual bases: why is this term a thing? How does it help? Describe here: [[la_01]]
 * How come stochastic gradient descent provides regularization? Why adding bagging to GBM, for example, can be considered a case of regularization? [[05_Ensembles]].
@@ -89,6 +179,7 @@ https://www.geeksforgeeks.org/binary-search-tree-data-structure/
     * small DL
     * SVM
     * random forest
+* Jax: [Baysian NN in Jax](https://colab.research.google.com/drive/1gMAXn123Pm58_NcRldjSuGYkbrXTUiN2) - collab notebook 
 * that visual blog post about types of DL optimizers
 * Capsule neural network - some sort of generalization of convolutional networks for hierarchical data?? Never heard of them, but they are actually quite well cited!!
 * the difference between tSNE and UMAP
@@ -112,32 +203,8 @@ https://www.geeksforgeeks.org/binary-search-tree-data-structure/
 * Principal variables
 * Mahalanobis distance
 * Particle filters
-* Can I code a line graph algorithm? Refs: [wolfram](https://mathworld.wolfram.com/LineGraph.html), [wiki](https://en.wikipedia.org/wiki/Line_graph), [overflow](https://stackoverflow.com/questions/13700954/graph-transformation-vertices-into-edges-and-edges-into-vertices)
 
-**Open Python questions**
-* should nodes self-delete and not just plug references with Nones?
-
-**Tools**
-* Lint (pylint) - what is it and why? It seems that it can catch errors, type mismatches etc.
-* Keras heckpoints
-* Keras hyperparameter optimization
-* Python collections: deque, Counter, defaultdict etc.
-* Javascript React
-
-**Algorithms - other**
-* https://www.byte-by-byte.com/google-interview/ - check other topics
-* Hungarian algorithm
-* minimum cut (on graphs), with related topics
-
-**ESL progress**
-Current position: p290
-
-Parked parts of ESL that need to be revisited:
-* p161 to p218 - Smoothing, wavelets, smoothing kernels, local regression, kernel size choice
-* p219 - a whole chapter on Model selection, Bias-Variance Tradeoff, effective number of parameters, cross-validation, and bootstrapping
-* p261 - another whole chapter. Model averaging, max likelihood, some Bayesian inference, more bootstrapping, the EM algorithm (Expectation-Maximization), Gibbs samping, bagging, MCMC
-
-**Deep Learning:**
+# Deep Learning
 * Why rotate pictures (augmentation) if we can just enforce rotationally-symmetric kernels. Is it possible? Is it desirable?
 * What's so eager about eager mode, and why people like it?
 * How to tell the receptive field of a neuron in a deep network? Do they gradient descend on it?
@@ -159,19 +226,16 @@ Parked parts of ESL that need to be revisited:
 * self-supervised boosting
 * Wavenet - that famous convolution network that generates audio on-the-fly
 
-**Technical stuff**
-* Hadoop vs Spark video: https://hackr.io/blog/hadoop-vs-spark
-* Kubernetes and Docker video (30 min): https://www.youtube.com/watch?v=u8dW8DrcSmo
-* f-strings in Python ([ref](https://docs.python.org/3/library/string.html#format-specification-mini-language)): summarize in a separate doc
-* sets in Python: are they worth it?
-* regex in Python
-* JSON - how does it work, why everybody love it, and is it the present or the future? ([wiki](https://en.wikipedia.org/wiki/JSON))
-* YAML - some standard for keeping stuff that's like XML, but human-readable. Who uses it? Is it popular? ([wiki](https://en.wikipedia.org/wiki/YAML))
-* bash
-* Python closures, why they are a thing, what's dangerous about them, and how to use them
-* Jax: [Baysian NN in Jax](https://colab.research.google.com/drive/1gMAXn123Pm58_NcRldjSuGYkbrXTUiN2) - collab notebook 
+# ESL progress
 
-**Other math**
+Current position: p290
+
+Parked parts of ESL that need to be revisited:
+* p161 to p218 - Smoothing, wavelets, smoothing kernels, local regression, kernel size choice
+* p219 - a whole chapter on Model selection, Bias-Variance Tradeoff, effective number of parameters, cross-validation, and bootstrapping
+* p261 - another whole chapter. Model averaging, max likelihood, some Bayesian inference, more bootstrapping, the EM algorithm (Expectation-Maximization), Gibbs samping, bagging, MCMC
+
+# Other math
 * How to calculate single-value-decomposion and eigenvector decomposition in practice? How do they code it for numpy, for example?
 * FFT
 * Lagrange multiplyier - is there an easy (not formal, but intuitive) proof that it works?

@@ -91,7 +91,7 @@ if __name__ == '__main__':
     * Objects: capitalized CamelCase
     * Local methods: one leading-underscore (like `_add()`)
 * Arrays are plural, elements of an array are singular: for fruit in fruits
-* Methods: verbs may be helpful (set, get, move)
+* Methods: use verbs (set, get, move)
 * Booleans: is, has, can (is_cat, has_hamburger, can_eat)
 * Methods that return a boolean: check_is_cat()
 * Numbers: use a numerical prefix (n_cats, max_cats, min_cats, total_cats)

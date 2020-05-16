@@ -30,14 +30,22 @@ Other #lifehack(s):
 
 # Good coding habits
 * Keep code clean (not smelly). Types of **smells** ([ref](https://www.thoughtworks.com/insights/blog/coding-habits-data-scientists)):
-    1. Bad variable names
-    2. Functions that do too many things instead of one thing
+    1. Bad variable names (Remember: a long name is always better than a long comment!)
+    2. Functions that do many things instead of one thing
     3. Code repetition
-    4. Magic values
+    4. Magic values (hard-coded values like 256, 0.9 etc.)
     5. Dead code (commented out, inconsequential)
-    6. Print statements everywhere
-* Write unit tests ([link to a decent intro](https://www.freecodecamp.org/news/an-introduction-to-testing-in-python/))
+    6. Print statements everywhere (ruins of abandoned debugging)
+ 
+Instead:
+* Write unit tests, and start with tests (aka **test-driven development**; [ref](https://www.freecodecamp.org/news/an-introduction-to-testing-in-python/))
 * Make small and frequent commits
+* Functions ([ref](https://drive.google.com/file/d/1TraVwRkbkCbHq-s_-NS69ZEbRNwH8XNh/view)):
+    * should be small (~20 lines = 1 screen; better lesst than that), 
+    * do one thing, 
+    * at one level of abstraction (like, it shouldn't combine high-level processing of an object, and low-level processing of its parts; it should be dealt with by a hierarchy of functions, not raw code in one function)
+    * have few arguments (ideally, 0-2)
+    * avoid flags (`also_do_this=True`); consider writing 2 functions instead
 
 # Numpy
 * For linear algebra, to start flipping vectors and use them as matrices, use `np.atleast_2d` - it turns vectors, and even scalars, into low-ranked 2D arrays. I think, rows for vectors.
