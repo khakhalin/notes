@@ -16,16 +16,16 @@ https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-networ
 
 Kick-start videos: https://www.youtube.com/playlist?list=PLllx_3tLoo4csmLveWHpjcRTXVMCcvvmc
 
-See also: [[system_design]]
-
 # Algos
-* salesmen problem with dynamic programming
 * Splitter into groups from an eurlerian circuit
-* wrong assortativity on different circuits	
+* How to color a graph in 4 colors?
+* wrong assortativity on different circuits	 - for blog post
+* check out "Competitive programming" textbook
 * sieve of eratosphenes
 * finish Google production thing
 * finish scalability lecture, and watch any other one, from systems design
 * splay tree
+* read / watch kickstarter competition advice (on their site)
 * in a sequence, if any k elements sum to target 
 * Timsort - reimplement
 * figure out how to do automatic hyperparameter optimization on Keras
@@ -37,7 +37,7 @@ See also: [[system_design]]
 * radix sort
 * Regular expressions, including in Python
 * Do Bellman-Ford
-* refresh O: https://www.bigocheatsheet.com/
+* refresh and summarize O: https://www.bigocheatsheet.com/
 * Code two types of hash-tables from memory
 * Scan [this helpful list](https://www.freecodecamp.org/news/coding-interviews-for-dummies-5e048933b82b/); digest into unit-items if needed
 * Rotate array in-place with juggling
@@ -45,10 +45,10 @@ See also: [[system_design]]
 * what is NP: definition ([this youtube again?](https://www.youtube.com/watch?v=YX40hbAHx3s))
 * Bloom filter (refs: [1](https://dominikschmidt.xyz/bloom-filter/))
 * Make sure [this list from geekforgeeks](https://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/) is exhausted
+* Make sure [this other list](https://www.geeksforgeeks.org/find-subarray-with-given-sum-in-array-of-integers/) from geekforgeeks is exhausted
 * implement Dijsktra
 * geometrical collision-detection algorithms
-* Go through all subtopics here:
-https://www.geeksforgeeks.org/binary-search-tree-data-structure/
+* Go through all subtopics here: https://www.geeksforgeeks.org/binary-search-tree-data-structure/
 * https://towardsdatascience.com/8-useful-tree-data-structures-worth-knowing-8532c7231e8c
 * https://en.wikipedia.org/wiki/Fibonacci_heap
 * https://en.wikipedia.org/wiki/Pairing_heap
@@ -76,6 +76,8 @@ https://www.geeksforgeeks.org/binary-search-tree-data-structure/
 * bash
 
 # Systems
+
+See also: [[system_design]]
 
 List from Google
 * Processes, threads, concurrency

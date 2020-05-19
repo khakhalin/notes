@@ -7,3 +7,6 @@ https://arxiv.org/pdf/1902.00506.pdf
 
 Kowalski, J., & Miernik, R. (2020). Evolutionary Approach to Collectible Card Game Arena Deckbuilding using Active Genes. arXiv preprint arXiv:2001.01326.
 https://arxiv.org/abs/2001.01326v1
+
+An unpublished (and dead-ended?) project about some other drafting thing.
+https://github.com/tpapp157/EternalDraftAnalysis

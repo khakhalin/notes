@@ -18,11 +18,11 @@ Todo: #todo
 * https://en.wikipedia.org/wiki/Maximum_subarray_problem
 
 # Big O notation
-Limiting behavior at ∞. Different meaning in textbooks and in practical questions. In textbooks: upper bound, so if something is O(N), it is also O(N²) by definition. In practice, just say the truth. 
+Limiting behavior at ∞. Different meaning in textbooks and in practical questions. In textbooks: upper bound, so if something is O(N), it is also O(N²) by definition (as N²>N). In practice, during interviews just say the truth (the closest approximation, aka lowest possible upper bound). 
 
 * O(log N) appears when you have a tree, and a typical engagement with this tree is processing a branch of it. Then the total number of steps = the depth of the tree = $\log_2 n$ . 
 * If however you have to visit every branch of a tree, the total number of operations is n (for leaves) + n/2 + n/4 + ... = 2n, so we have O(N).
-* If we go through n elements and then use a divide-and-conquer approach, splitting in two equal sizes with recursion, then we have the complexity: T(n) = n + 2T(n/2). Unraveling this: T(n) = n + 2(n/2 + 2(n/4 + ... 2(1))) = n + n +  ... + n. This sum contains k ns where k = ceil(log_2 n), so the total T= O(N logN)
+* If we go through n elements and use a divide-and-conquer approach, splitting the list in two equal sizes with recursion, then we have the complexity: T(n) = n + 2T(n/2). Unraveling this: T(n) = n + 2(n/2 + 2(n/4 + ... 2(1))) = n + n +  ... + n. This sum contains k ns where k = ceil(log_2 n), so the total T= O(N logN)
 
 It seems that for dynamic programming, the time complexity is the number of subproblems considered. Which in most cases matches the size of the memoization structure, as memoization is based on the structure of problem space. So O for time = O for space = max size of the grid used for memoization. Exceptions are possible, but only when memoization doesn't quite fit the structure of the problem, which is should be fairly easy to spot / feel.
 
