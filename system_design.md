@@ -15,7 +15,7 @@ Some people say that you shouldn't really ask what are the defining features, an
 
 Typicall, with real white boards, they always expect you to draw block diagrams.
 
-# Questions to ask (oneself)
+# Questions to address
 
 Identify:
 * Key features, functionalities, tasks
@@ -41,9 +41,9 @@ Other considerations:
 **Load balancer**: a process of distributing tasks over resources. May involve scheduling tasks of different size; scheduling of tasks that depend on each other (there are heuristic methods to optimize computation of a directed graph that arises from dependencies); and effective segregation (splitting into "independent" tasks that can be parallelized).
 
 Possible balancing approaches for a client-server architecture:
-* Server-side balancing (necessary for horizontal scaling)
+* **Round-robin** (common for DNS/IP services): resolve into a list of IP sorted by priority, and the list is adjusted (permuted) for every response. The client tries IP in the order, and goes to a diff IP after a time-out. An IP that ended up working is used again (cashing), but with a certain expiration time. ([ref](https://en.wikipedia.org/wiki/Round-robin_DNS)) But it means that within-user load is not balanced, which is a potential issue.
 * Client-side random load balancing (randomize where the requests are sent)
-* Round-robin (common for DNS/IP services): resolve into a list of IP sorted by priority, and the list is adjusted (permuted) for every response. The client tries IP in the order, and goes to a diff IP after a time-out. An IP that ended up working is used again, but with a certain expiration time. ([ref](https://en.wikipedia.org/wiki/Round-robin_DNS))
+* Server-side balancing (necessary for horizontal scaling). May combine round-robing (randomizing) with more sophisticated load balancing.
 
 In a **Data Center** lots of servers have private IP addresses, but share one public IP address, with messages managed by a load balancer. TCP/IP within the data center.
 

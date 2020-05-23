@@ -208,6 +208,9 @@ How to build convolution-like networks for data that has different invariants th
 
 # Interpretability
 
+https://distill.pub/2020/circuits/early-vision/
+Can we understand some very first layers of an image recognition network? Those that supposedly should be "simple", and maybe similar to that of first few connections in the brain? (The answer seems to be, that it is much tricker than one could have hoped)
+
 Golan, T., Raju, P. C., & Kriegeskorte, N. (2019). Controversial stimuli: pitting neural networks against each other as models of human recognition. arXiv preprint arXiv:1911.09288.
 https://arxiv.org/abs/1911.09288
 They played with MNIST, trained a bunch of models, and compared them. And also compared it all to humans. Also a nice twitter thread:
@@ -230,6 +233,9 @@ Google. Train a network (they used MNIST), do UMAP of activations, find groups o
 Frankle, J., & Carbin, M. (2018). The lottery ticket hypothesis: Finding sparse, trainable neural networks. arXiv preprint arXiv:1803.03635.
 https://arxiv.org/abs/1803.03635
 Original paper presenting the lottery ticket hypothesis.
+
+http://news.mit.edu/2020/foolproof-way-shrink-deep-learning-models-0430
+Recent blog post and publication from MIT that got some decent press.
 
 Zhou, H., Lan, J., Liu, R., & Yosinski, J. (2019). Deconstructing lottery tickets: Zeros, signs, and the supermask. arXiv preprint arXiv:1905.01067.
 https://arxiv.org/abs/1905.01067
@@ -294,6 +300,10 @@ Google. Something weird semi-supervised learning with noisy teachers and distill
 von Oswald, J., Henning, C., Sacramento, J., & Grewe, B. F. (2019). Continual learning with hypernetworks. arXiv preprint arXiv:1906.00695.
 https://arxiv.org/abs/1906.00695
 If it get it right from the abstract, this can be called meta-networks as well: a network that learns to predict weights for a network that would follow a task; so one step above learning the weights for each individual task. Essentially, instead of remembering all possible network configurations for all possible tasks, to reset the network each time, they use this hypernetwork to interpolate in the space of parameters.
+
+Sanh, V., Wolf, T., & Rush, A. M. (2020). Movement Pruning: Adaptive Sparsity by Fine-Tuning. arXiv preprint arXiv:2005.07683.
+https://arxiv.org/abs/2005.07683
+Pruning optimized for language models somehow?
 
 # Curriculum
 
@@ -579,7 +589,10 @@ Makhzani, A. (2018). Implicit autoencoders. arXiv preprint arXiv:1805.09804.
 https://arxiv.org/abs/1805.09804
 Sort of GAN-like architecture that tries to optimize the latent space directly? Interesting, but hard to get from the abstract.
 
-# Bayesian
+# Bayesian and stats
+
+Negative probabilities (a short essay by Richard Feinman)
+http://cds.cern.ch/record/154856/files/pre-27827.pdf
 
 The Case for Bayesian Deep Learning
 Andrew Gordon Wilson. January 11, 2020

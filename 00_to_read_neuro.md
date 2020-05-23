@@ -213,7 +213,7 @@ It appears that they didn't pre-print it though, so paywalled, at least for now.
 
 Context-modular memory networks support high-capacity, flexible, and robust associative memories. (2020). William F Podlaski,  Everton J Agnes,  Tim P Vogels
 https://www.biorxiv.org/content/10.1101/2020.01.08.898528v1
-About Hopfield limit. It seems they use an architecture in which large groups neurons or synapses can be modulated (via gating, inhibition) in a context-dependent manner. Show an increase in memory capacity; changes in active components (states), robustness to noise, memory search (??), memory stability. Gating of memories. Substrate for continuous learning? Related to the problem of catastrophic forgetting, including [this paper](https://www.pnas.org/content/115/44/E10467.short).
+About Hopfield limit. It seems they use an architecture in which large groups neurons or synapses can be modulated (via gating, inhibition) in a context-dependent manner. Show an increase in memory capacity; changes in active components (states), robustness to noise, memory search (??), memory stability. Gating of memories. Substrate for continuous learning? Related to the problem of [[catastrophic_forgetting]], including [this paper](https://www.pnas.org/content/115/44/E10467.short).
 There's also a [tweetprint](https://twitter.com/TPVogels/status/1215572496570896384).
 
 # Bottom-up validation

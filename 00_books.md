@@ -40,7 +40,7 @@ Also:
 **Math**
 * VLMS (Introduction to Applied Linear Algebra) by Stephen Boyd. [pdf](http://vmls-book.stanford.edu/)
 * MML (Mathematics for Machine Learning), by M.P. Deisenroth: [pdf](https://mml-book.github.io/)
-* Non-linear Dynamics and Chaos, by Steven Strogatz ([pdf](http://www.hds.bme.hu/~fhegedus/Strogatz%20-%20Nonlinear%20Dynamics%20and%20Chaos.pdf))
+* Non-linear Dynamics and Chaos, by Steven Strogatz ([pdf](http://www.hds.bme.hu/~fhegedus/Strogatz%20-%20Nonlinear%20Dynamics%20and%20Chaos.pdf)), [youtube lectures](https://www.youtube.com/playlist?list=PLbN57C5Zdl6j_qJA-pARJnKsmROzPnO9V)
 * [Notes on dynamical systems](https://people.maths.bris.ac.uk/~macpd/ads/) ([pdf](https://people.maths.bris.ac.uk/~macpd/ads/bnotes.pdf)) from Carl Dettmann. Not a textbook, but close; worth scanning
 
 **ML and Stats**
