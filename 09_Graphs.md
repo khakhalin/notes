@@ -26,6 +26,9 @@ https://arxiv.org/abs/1907.05008
 Bojchevski, A., Shchur, O., Zügner, D., & Günnemann, S. (2018). Netgan: Generating graphs via random walks. arXiv preprint arXiv:1803.00816.
 https://arxiv.org/pdf/1803.00816.pdf
 
+Yaron Lipman - Deep Learning of Irregular and Geometric Data (a clear 30-min presentation)
+https://www.youtube.com/watch?v=fveyx5zKReo
+
 # Convolutional Graph Networks
 
 * [[Li2017graph]] -  Gated graph sequence neural networks

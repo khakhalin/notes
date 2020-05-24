@@ -17,18 +17,17 @@ https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-networ
 Kick-start videos: https://www.youtube.com/playlist?list=PLllx_3tLoo4csmLveWHpjcRTXVMCcvvmc
 
 # Algos
-* Splitter into groups from an eurlerian circuit
+* finish Google production thing
 * How to color a graph in 4 colors?
 * wrong assortativity on different circuits	 - for blog post
 * check out "Competitive programming" textbook
 * sieve of eratosphenes
-* finish Google production thing
 * finish scalability lecture, and watch any other one, from systems design
 * splay tree
 * read / watch kickstarter competition advice (on their site)
-* in a sequence, if any k elements sum to target 
+* in a sequence, if any k elements sum to target - code from scratch quickly
 * Timsort - reimplement
-* figure out how to do automatic hyperparameter optimization on Keras
+* All graph exercises from here (they are excellent!): https://algs4.cs.princeton.edu/41graph/
 * string sort from the red book
 * Do words-based analysis
 * how to solve sudoku?
@@ -115,7 +114,7 @@ Go through 2-3 youtube lectures in the queue that describe some of the existing 
 
 Every solution depends on parameters of scale: amount of data, n users, requests per seconds, expected respont time, read/write ratio.
 
-Concepts
+**Concepts**
 * [CAP theorem](https://en.wikipedia.org/wiki/CAP_theorem) (Consistency, Availability, Partition tolerance) - impossible to provide all three, always a trade-off.	 P is a given, so relational DBs favor C, while noSQL favors A
 * Data sharding (how to split data that doens't fit).
 * Consistent hashing - way to solve data sharding
@@ -125,7 +124,7 @@ Concepts
 * Multithreading (consistency, locks, CAS)
 * Concurrency, threads, deadlocks, starvation
 
-Practicality - web
+**Practicality - web**
 * Bloom filters and count-min sketch
 * Design patterns (OOP)
 * Cashing in DBs
@@ -138,14 +137,14 @@ Practicality - web
 * Public key infrastructure, symmetric and asymmetric encryption
 * CDN - content delivery network - important for streaming
 
-Practicality - local
+**Practicality - local**
 * Parts of a modern OS? Levels of cashing in a modern OS?
 * Performance (bandwidth) of CPU / memory / SDD / HD / network
 * How to use sequential (as opposed to random) reads and write on HD to speed up your processes
 * Paxos - what is it?
 * Virtual machines and containers
 
-Solutions and tools
+**Solutions and tools**
 * MongeDB
 * Couchbase
 * Memcashed
@@ -207,6 +206,9 @@ Solutions and tools
 * Particle filters
 
 # Deep Learning
+* Why drop-out can be considered a type of regularization? What's the intuition, and what's the math?
+* Eutoencoders in Keras: https://blog.keras.io/building-autoencoders-in-keras.html
+* figure out how to do automatic hyperparameter optimization on Keras
 * Why rotate pictures (augmentation) if we can just enforce rotationally-symmetric kernels. Is it possible? Is it desirable?
 * What's so eager about eager mode, and why people like it?
 * How to tell the receptive field of a neuron in a deep network? Do they gradient descend on it?
