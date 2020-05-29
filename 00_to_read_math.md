@@ -41,6 +41,14 @@ https://arxiv.org/pdf/1511.06422.pdf
 
 # Intros and top choices
 
+Hinton, G. E., & Salakhutdinov, R. R. (2006). Reducing the dimensionality of data with neural networks. science, 313(5786), 504-507.
+https://dbirman.github.io/learn/hierarchy/pdfs/Hinton2006.pdf
+Seminal, with 12k citations. Good start.
+
+Olah, C., Satyanarayan, A., Johnson, I., Carter, S., Schubert, L., Ye, K., & Mordvintsev, A. (2018). The building blocks of interpretability. Distill, 3(3), e10.
+https://distill.pub/2018/building-blocks/
+Google. About reverse-tracking through a visual network via optimizing inputs?
+
 Identity Crisis: Memorization and Generalization Under Extreme Overparameterization 
 Chiyuan Zhang, Samy Bengio, Moritz Hardt, Michael C. Mozer, Yoram Singer
 https://openreview.net/forum?id=B1l6y0VFPr
@@ -50,10 +58,6 @@ Google brain. Identity mapping: just train the output to be exactly like the inp
 Mordvintsev, A., Randazzo, E., Niklasson, E., & Levin, M. (2020). Growing Neural Cellular Automata. Distill, 5(2), e23.
 https://distill.pub/2020/growing-ca/
 Google. A paper and a sim, two in one!
-
-Olah, C., Satyanarayan, A., Johnson, I., Carter, S., Schubert, L., Ye, K., & Mordvintsev, A. (2018). The building blocks of interpretability. Distill, 3(3), e10.
-https://distill.pub/2018/building-blocks/
-Google. About reverse-tracking through a visual network via optimizing inputs?
 
 Raschka, S., Patterson, J., & Nolet, C. (2020). Machine Learning in Python: Main developments and technology trends in data science, machine learning, and artificial intelligence. arXiv preprint arXiv:2002.04803.
 https://arxiv.org/abs/2002.04803
@@ -699,6 +703,9 @@ https://www.microsoft.com/en-us/research/blog/next-generation-architectures-brid
 Corominas-Murtra, B., Seoane, L. F., & Solé, R. (2018). Zipf’s law, unbounded complexity and open-ended evolution. Journal of the Royal Society Interface, 15(149), 20180395.
 https://royalsocietypublishing.org/doi/pdf/10.1098/rsif.2018.0395
 General patterns of increase in complexity during evolution, using several natural and artificial examples (texts, proteins, logic circuits, and even combinations of Legos). Information and string complexity.
+
+Axelrod, R., & Hamilton, W. D. (1981). The evolution of cooperation. science, 211(4489), 1390-1396.
+41k citations. Also Henry's one single favorite paper ever :)
 
 Zenil, H., & Villarreal-Zapata, E. (2013). Asymptotic behavior and ratios of complexity in cellular automata. International Journal of Bifurcation and Chaos, 23(09), 1350159.
 https://arxiv.org/pdf/1304.2816.pdf

@@ -1,11 +1,14 @@
 # Math course
 
+#edu #bib
+
 Sketches for how to teach kids non-school math?
 
 **General plan**:
-1. Symbolic logic
-2. Elementary set theory
-3. Statements with ∀, ∃
+Symbolic logic → Statements with ∀, ∃ → Elementary set theory
+Graphs
+Elements of number theory
+
 4. Groups
 * Permutations
 * Affine transforms and similar examples
@@ -18,6 +21,13 @@ Sketches for how to teach kids non-school math?
 Lean towards discrete math, maybe with elements of computational (algebraic) geometry
 
 But then inject calculus as well at some point, but with some key lemmas and theorems (??)
+
+Trigonometry links:
+* https://www2.clarku.edu/faculty/djoyce/trig/
+* https://www2.clarku.edu/faculty/djoyce/trig/oblique.html
+* https://www2.clarku.edu/faculty/djoyce/trig/area.html
+* https://services.math.duke.edu/~rann/labs106.2018pdfs/Lab1.A.Crash.Course.in.Trig.pdf
+* https://www.mathopenref.com/lawofcosinesproof.html
 
 # Refs
 

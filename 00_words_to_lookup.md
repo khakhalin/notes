@@ -22,12 +22,19 @@ Kick-start videos: https://www.youtube.com/playlist?list=PLllx_3tLoo4csmLveWHpjc
 * wrong assortativity on different circuits	 - for blog post
 * check out "Competitive programming" textbook
 * sieve of eratosphenes
+* Code a fast 	spanning tree of a graph (using bfs or dfs)
 * finish scalability lecture, and watch any other one, from systems design
 * splay tree
 * read / watch kickstarter competition advice (on their site)
 * in a sequence, if any k elements sum to target - code from scratch quickly
 * Timsort - reimplement
 * All graph exercises from here (they are excellent!): https://algs4.cs.princeton.edu/41graph/
+    * Bridge: an edge that disconnects the graph if removed. Using DFS, find a way to check if E is a bridge in O(V+E)
+    * Articulation point: same, but for a vertex (disconnects the graph if removed). Find an O(V+E) way to check if V is an articulation point.
+    * Check if a graph is biconnected, aka 2 paths with diff V between any v1, v2, aka a simple cycle through any v1 v2
+    * Center of a tree
+    * Deletion sequence (without disconecting a graph)
+    * "Rogue" game
 * string sort from the red book
 * Do words-based analysis
 * how to solve sudoku?
