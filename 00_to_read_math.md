@@ -4,7 +4,7 @@
 
 #halfthere - a tag to be used for papers that have their separate entries, but that I haven't actually finished reading, or haven't read well. Papers to revisit!
 
-See also: other thematic to-read lists:
+**See also** (other thematic to-read lists):
 * [[11_RL]] - Reinforcement Learning
 * [[09_Graphs]] - Graph (aka Graphical) networks
 

@@ -1,4 +1,5 @@
-# Datavis inspirations
+# Datavis inspirations and bibliography
+
 #datavis #bib
 
 # Links

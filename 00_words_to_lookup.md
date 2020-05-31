@@ -22,6 +22,7 @@ lots of useful practical bits and pieces: the shell, debugging, metaprogramming 
 (the link is also in [[01_Tools]] / Resources, so fee free to delete it from here later)
 
 # Algos
+* https://blog.reverberate.org/2020/05/29/hoares-rebuttal-bubble-sorts-comeback.html
 * finish Google production thing
 * How to color a graph in 4 colors?
 * wrong assortativity on different circuits	 - for blog post
@@ -175,11 +176,11 @@ Every solution depends on parameters of scale: amount of data, n users, requests
 * Flink
 
 # Classic ML and related math
+* Why autoencoders use KL and not L2 as loss? What's the logic of when KL is used? Older papers, like [[Hinton2006dim]] used cross-entropy. Why?
 * Laplacian short video: https://www.youtube.com/watch?v=oEq9ROl9Umk
 * https://en.wikipedia.org/wiki/Universal_approximation_theorem
 * that way to create ranking from asymmetric preferences via graphs
 * Laplacian operator (create a new page for basic vector calc) [1h youtube](https://www.youtube.com/watch?v=oEq9ROl9Umk), [wiki](https://en.wikipedia.org/wiki/Laplace_operator)
-* Why autoencoders use KL and not L2 as loss? What's the logic of when KL is used?
 * dual bases: why is this term a thing? How does it help? Describe here: [[la_01]]
 * How come stochastic gradient descent provides regularization? Why adding bagging to GBM, for example, can be considered a case of regularization? [[05_Ensembles]].
 * Do we have 2 different descriptions from Gram-Smidt: in [[la_01]] and in [[02_Regression]]? Can we isolate and combine?
