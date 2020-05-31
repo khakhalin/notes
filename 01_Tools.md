@@ -5,10 +5,6 @@
 #todo: Command Line crash course
 https://learnpythonthehardway.org/book/appendixa.html
 
-#todo: "The missing semester of CS education": 
-https://missing.csail.mit.edu/
-lots of useful practical bits and pieces: the shell, debugging, metaprogramming and what not. Also has [lectures on youtube](https://www.youtube.com/playlist?list=PLyzOVJj3bHQuloKGG59rS43e29ro7I57J).
-
 Major subtopics:
 * [[system_design]]
 
@@ -109,3 +105,8 @@ Refs:
 * [Presentation by Josh Tobin](http://josh-tobin.com/assets/pdf/troubleshooting-deep-neural-networks-01-19.pdf)
 * [Andrej Karpathy on training NNs](http://karpathy.github.io/2019/04/25/recipe/)
 * [Advice from Chip Huyen](https://github.com/chiphuyen/machine-learning-systems-design/blob/master/build/build1/consolidated.pdf)
+
+# Misc tools
+
+* The missing semester of CS education: https://missing.csail.mit.edu/
+Lots of useful practical bits and pieces: the shell, debugging, metaprogramming and what not. Also has [lectures on youtube](https://www.youtube.com/playlist?list=PLyzOVJj3bHQuloKGG59rS43e29ro7I57J).

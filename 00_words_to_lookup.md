@@ -16,6 +16,11 @@ https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-networ
 
 Kick-start videos: https://www.youtube.com/playlist?list=PLllx_3tLoo4csmLveWHpjcRTXVMCcvvmc
 
+**The missing semester of CS education**
+https://missing.csail.mit.edu/
+lots of useful practical bits and pieces: the shell, debugging, metaprogramming and what not. Also has [lectures on youtube](https://www.youtube.com/playlist?list=PLyzOVJj3bHQuloKGG59rS43e29ro7I57J).
+(the link is also in [[01_Tools]] / Resources, so fee free to delete it from here later)
+
 # Algos
 * finish Google production thing
 * How to color a graph in 4 colors?
@@ -122,6 +127,7 @@ Go through 2-3 youtube lectures in the queue that describe some of the existing 
 Every solution depends on parameters of scale: amount of data, n users, requests per seconds, expected respont time, read/write ratio.
 
 **Concepts**
+* FAIR data principles and support FAIRification of legacy data
 * [CAP theorem](https://en.wikipedia.org/wiki/CAP_theorem) (Consistency, Availability, Partition tolerance) - impossible to provide all three, always a trade-off.	 P is a given, so relational DBs favor C, while noSQL favors A
 * Data sharding (how to split data that doens't fit).
 * Consistent hashing - way to solve data sharding
@@ -152,6 +158,9 @@ Every solution depends on parameters of scale: amount of data, n users, requests
 * Virtual machines and containers
 
 **Solutions and tools**
+* RDF
+* SPARQL
+* Triple (RDF) and graph stores
 * MongeDB
 * Couchbase
 * Memcashed
@@ -231,7 +240,6 @@ Every solution depends on parameters of scale: amount of data, n users, requests
 * Duality trick, easier Fenchel
 * Doubly Reparameterized Gradient Estimators
 * Do people use leakyReLus often? Do they prefer them for pruning, or is it ignored?
-* Xavier initialization of weights - what's cool about it? Also, is it true that variance-scaled init is better? ([claim](https://pcc.cs.byu.edu/2017/10/02/practical-advice-for-building-deep-neural-networks/))
 * inception blocks
 * noise-contrastive estimation
 * self-supervised boosting

@@ -18,19 +18,6 @@ AutoML-Zero: Evolving Machine Learning Algorithms From Scratch:
 * How does the non-conscious become conscious:
 https://sci-hub.se/https://doi.org/10.1016/j.cub.2020.01.033
 
-
-### He 2015 work-in progress
-[[He2015init]]
-The paper:
-https://arxiv.org/pdf/1502.01852.pdf
-
-Related: Deep Residual Learning for Image Recognition
-https://arxiv.org/pdf/1512.03385.pdf
-
-Also Related:
-Mishkin, D., & Matas, J. (2015). All you need is a good init. arXiv preprint arXiv:1511.06422.
-https://arxiv.org/pdf/1511.06422.pdf
-
 ### Work tabs dump, ~Mar 16
 * https://ai.googleblog.com/2020/02/exploring-transfer-learning-with-t5.html
 * https://github.com/sergio-hcsoft/FractalAI
@@ -41,13 +28,16 @@ https://arxiv.org/pdf/1511.06422.pdf
 
 # Intros and top choices
 
-Hinton, G. E., & Salakhutdinov, R. R. (2006). Reducing the dimensionality of data with neural networks. science, 313(5786), 504-507.
-https://dbirman.github.io/learn/hierarchy/pdfs/Hinton2006.pdf
-Seminal, with 12k citations. Good start.
-
 Olah, C., Satyanarayan, A., Johnson, I., Carter, S., Schubert, L., Ye, K., & Mordvintsev, A. (2018). The building blocks of interpretability. Distill, 3(3), e10.
 https://distill.pub/2018/building-blocks/
 Google. About reverse-tracking through a visual network via optimizing inputs?
+
+Deep Residual Learning for Image Recognition. Related to [[He2015init]]?
+https://arxiv.org/pdf/1512.03385.pdf
+
+Mishkin, D., & Matas, J. (2015). All you need is a good init. arXiv preprint arXiv:1511.06422.
+https://arxiv.org/pdf/1511.06422.pdf
+Related to [[He2015init]]?
 
 Identity Crisis: Memorization and Generalization Under Extreme Overparameterization 
 Chiyuan Zhang, Samy Bengio, Moritz Hardt, Michael C. Mozer, Yoram Singer

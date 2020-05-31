@@ -1,10 +1,11 @@
 # Deoldify: auto-colorizing old photos
+
+#self-supervised #society #gi #art
+
 https://github.com/jantic/DeOldify
 
 Free online version: 
 https://deepai.org/machine-learning-model/colorizer
-
-#self-supervised #society #gi
 
 Colorization of old photos is not just a great example of self-supervized learning (see [[Weng2019self-supervised]]), but also a great test for **generalized intelligence**, separate from text. Which is nice.
 

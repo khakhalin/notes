@@ -1,11 +1,13 @@
 # The measure of Intelligence
 
-#meaning #transfer #cellularautomata
+#meaning #transfer #automata
 
 Chollet, F. (2019). The Measure of Intelligence. arXiv preprint arXiv:1911.01547.
 https://arxiv.org/abs/1911.01547
 
 Endorsed by many great  people. Essentially, on how transfer and generalized intelligence may look, and how they may be tested. That's why I'm placing it in "Self-supervised learning" section: it is not really about it, but it is something that goes beyond approximating a data set; something like "transfer par excellence!""
+
+#halfthere
 
 # Related Kaggle challenge
 

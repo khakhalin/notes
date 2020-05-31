@@ -1,6 +1,9 @@
 # Recruiting, hiring, interviewing
 
-#management
+#management #bib
+
+See also: 
+* [[job_search]] - kind of the opposite perspective
 
 Erik Bernhardsson 
 How to hire smarter than the market: a toy model
