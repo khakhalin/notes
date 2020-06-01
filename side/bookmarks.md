@@ -1,25 +1,12 @@
 # Random bookmarks
-#fun
 
-https://www.google.com/search?q=best+downtempo+albums
-https://www.google.com/search?q=Maria+Stolarova&source=lnms&tbm=isch
-https://medium.com/bits-and-behavior/im-a-professor-d732ba26c522
+#fun
 
 Lyx publishing system (a less painful alternative to latex):
 https://www.lyx.org/
 
-https://calculatedcontent.com/2020/02/16/weightwatcher-empirical-quality-metrics-for-deep-neural-networks/
-https://en.wikipedia.org/wiki/S-expression
-
-https://www.biorxiv.org/content/10.1101/2020.03.24.006775v1
-The mouse cortico-tectal projectome
-
-https://arxiv.org/pdf/2003.11038.pdf
-Deformable Style Transfer
-
--— End of dump
-
-If we are collecting links here, why not using one of a pages as a random collection of bookmarks?
+A nice simple demo for exploring various L-systems (fractals)
+https://anvaka.github.io/lsystem/
 
 On properly teaching math (famous Russian essay)
 https://www.uni-muenster.de/Physik.TP/~munsteg/arnold.html
@@ -38,3 +25,6 @@ https://www.instagram.com/anokhinnikita_store/
 
 Lidar map NY:
 https://orthos.dhses.ny.gov/
+
+Кремль без цензуры (interactive map, stories, lots of photos)
+https://www.arcgis.com/apps/MapJournal/index.html?appid=eb282817aaee4dda8dbfcf66358152f0
