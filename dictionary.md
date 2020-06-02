@@ -142,6 +142,8 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 
 **Scala** (dev): functional programming language, improved Java. Compiles to Java bytecode. Looks vaguely like a mix of Java and Pascal, but inspired by Python: more features, shorter code, but without compromising the integrity. No semicolons; different ways to define variables, functions; declare types; can define control structures. Less verbose, runs faster, supports parallelism better.
 
+**SGD** (ml): Stochastic Gradient Descent. When gradient is calculated for every point, instead of the entire dataset (as for classic, aka batch gradient descent), or a large-ish number of points (mini-batch). [ref](https://www.geeksforgeeks.org/ml-stochastic-gradient-descent-sgd/)
+
 **Singular Value Decomposition** (math): A = UDV, where U and V are unitary (orthonormal, may be complex), and D is diagonal with d_ii ∈ R, d_ii>0. Dimensions: mn = mm∙mn∙nn. More general than spectral decomposition, as applies to all matrices on C, unlike QDQᵀ that only works for symmetic, or a slightly more general PDP⁻¹ for diagonalizable (sum dim eigenspaces = dim A).
 
 **SMOTE** (stats): Synthetic Minority Oversampling Technique. A simple approach to oversampling (supplementing) under-represented categories by creating fake points (in pD of variables describing each case), that are linearlly shifted from under-represented points to one of its closest neighbors. [wiki](https://en.wikipedia.org/wiki/Oversampling_and_undersampling_in_data_analysis) 

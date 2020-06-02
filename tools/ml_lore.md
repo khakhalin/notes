@@ -1,8 +1,10 @@
 # ML lore
 #lifehack
 
+Related: [[06_DL]]
+
 **Deep learning maxims**: ([ref](https://pcc.cs.byu.edu/2017/10/02/practical-advice-for-building-deep-neural-networks/)):
-* Use ADAM with 3e-4 learning rate. Don't decay learning rate: ADAM takes care of that.
+* Use [[adam]] with 3e-4 learning rate. Don't try to decay learning rate: ADAM takes care of that.
 * ReLU are best units (except for LSTMs that use tanhs ([ref](http://josh-tobin.com/assets/pdf/troubleshooting-deep-neural-networks-01-19.pdf)))
 * Never use activation function in the last layer (last layer needs to scale)
 * Use bias in every layer

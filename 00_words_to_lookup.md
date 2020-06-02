@@ -38,6 +38,8 @@ https://arxiv.org/pdf/2003.11038.pdf
 Deformable Style Transfer
 
 # Algos
+* What's the difference between ADAM and SGD? (Also, add entries for both)
+* Haskell
 * Postgres - what is it even?	
 * Operations Research - the type of DS they do for logistics. Flip through a book?
 * https://blog.reverberate.org/2020/05/29/hoares-rebuttal-bubble-sorts-comeback.html

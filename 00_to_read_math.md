@@ -84,10 +84,6 @@ Research dept
 https://distill.pub/2017/research-debt/
 (Some general ideas about explaining research)
 
-An overview of gradient descent optimization algorithms.  19 Jan 2016 (updated in 2018). By Sebastian Ruder.
-https://ruder.io/optimizing-gradient-descent/
-Adagrad, adam, and others like that.
-
 Rahaman, N., Baratin, A., Arpit, D., Draxler, F., Lin, M., Hamprecht, F. A., ... & Courville, A. (2018). On the spectral bias of neural networks. arXiv preprint arXiv:1806.08734.
 https://arxiv.org/abs/1806.08734
 On what neural network can encode easily - seems to be a very useful read, potentially.

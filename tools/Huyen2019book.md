@@ -1,6 +1,10 @@
-# Machine Learning Interviews
-by Chip Huyen, self-published brochure
+# Machine Learning Interviews, Huyen 2019
+
+by Chip Huyen, self-published brochure. 2019.
+
 #book #lifehack
+
+See also: [[job_search]]
 
 https://github.com/chiphuyen/machine-learning-systems-design/blob/master/build/build1/consolidated.pdf
 
@@ -22,4 +26,4 @@ Baselines:
 
 Some comments on working with very big datasets (when even one case doesn't fit into  memory: Gradient Checkpoint), parallel computing (Asynchronous SGD). Some refs.
 
-Nice list of references to well documented ML cases on the web, followed by a [list of sample interview questions](https://github.com/chiphuyen/machine-learning-systems-design/blob/master/content/exercises.md).
+Nice list of references to well documented ML cases on the web, followed by a [list of sample interview questions](https://github.com/chiphuyen/machine-learning-systems-design/blob/master/content/exercises.md) (or rather, prompts for creative ML scenario exploration).

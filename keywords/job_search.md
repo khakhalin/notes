@@ -5,6 +5,7 @@
 A collection of advice on job searching and interviewing.
 
 Related pages:
+* [[Huyen2019book]] - advice on ML interviews
 * [[ml_questions]] - a horribly long and, some people say, insulting boring list of ML-related interview questions
 
 # Cover letter
