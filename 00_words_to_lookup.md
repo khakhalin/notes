@@ -38,9 +38,7 @@ https://arxiv.org/pdf/2003.11038.pdf
 Deformable Style Transfer
 
 # Algos
-* What's the difference between ADAM and SGD? (Also, add entries for both)
 * Haskell
-* Postgres - what is it even?	
 * Operations Research - the type of DS they do for logistics. Flip through a book?
 * https://blog.reverberate.org/2020/05/29/hoares-rebuttal-bubble-sorts-comeback.html
 * finish Google production thing
@@ -282,4 +280,3 @@ Parked parts of ESL that need to be revisited:
 * Hamiltonians and how dynamical systems invoke them
 * Perron–Frobenius theorem - something related to centralities and or network graph eigenvectors
 * kuramoto oscillations
-

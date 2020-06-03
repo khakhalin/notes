@@ -124,6 +124,8 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 
 **POC** (dev): Proof of Concept.
 
+**PostgreSQL** (sys): 
+
 **Propensity score matching** (stats): way to compare output variables in case of unavoidable confounding factors. Based on careful matching of confounding factors between individuals in groups (many methods here), then analyzing this constrained set. The trick is that instead of matching in high-D, it uses an all-data linear model to conflate all confounding values into one "risk factor" (aka propensity score), and match based on it. This is obviously both a strong, and a weak point. Polular in epidemiology. [ref](https://en.wikipedia.org/wiki/Propensity_score_matching)
 
 **PubSub** or **Pub/Sub** (db): asynchronous messaging (event ingestion and delivery) service used by Google cloud. [wiki](https://cloud.google.com/pubsub/docs/tasks-vs-pubsub)
@@ -142,7 +144,7 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 
 **Scala** (dev): functional programming language, improved Java. Compiles to Java bytecode. Looks vaguely like a mix of Java and Pascal, but inspired by Python: more features, shorter code, but without compromising the integrity. No semicolons; different ways to define variables, functions; declare types; can define control structures. Less verbose, runs faster, supports parallelism better.
 
-**SGD** (ml): Stochastic Gradient Descent. When gradient is calculated for every point, instead of the entire dataset (as for classic, aka batch gradient descent), or a large-ish number of points (mini-batch). [ref](https://www.geeksforgeeks.org/ml-stochastic-gradient-descent-sgd/)
+**SGD** (ml): Stochastic Gradient Descent. When gradient is calculated for every point, instead of the entire dataset (as for classic, aka batch gradient descent). See: [[Ruder2016descent]]
 
 **Singular Value Decomposition** (math): A = UDV, where U and V are unitary (orthonormal, may be complex), and D is diagonal with d_ii ∈ R, d_ii>0. Dimensions: mn = mm∙mn∙nn. More general than spectral decomposition, as applies to all matrices on C, unlike QDQᵀ that only works for symmetic, or a slightly more general PDP⁻¹ for diagonalizable (sum dim eigenspaces = dim A).
 
