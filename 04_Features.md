@@ -1,6 +1,9 @@
-Features, Dim reduction, Clustering
-===
+# Features, Dim reduction, Clustering
+
 #features
+
+Subtopics:
+* [[clustering]]
 
 # Linear Basis Expansion
 The idea is to go beyond "linear" in linear regression, but retain the spirit of replacing complex and noisy X with a combination of simple, probably smooth functions of fewer parameters. $f(X) = ∑β_j h_j(X)$, where X is our data, β are coefficients, and {h_j(X)} is a set of functions (transformations), each projecting from X-like space to y-like values (ℝ^p → ℝ). So a non-linear transformation of X, followed by a linear model in these new coordinates.
@@ -35,7 +38,7 @@ Refs:
 * [[Guyon2003variable]] - review on feature selection (as well as some info on construction). 
 
 # Dimensionality reduction
-Local methods (like KNN) break down in high-dimensions to to the **curse of dimensionality**: it becomes impossible to find a good neighborhood to do local averaging. In high-dim, volume grows so fast with linear dimension (r^K for K dim) that most of volume lies in the shell, not around the center. Say, to find a subcube with 1% of total volume inside a unit-cube in 10-dim, we'd have to take a subcube with a side of 0.6 (because 0.6^10 ≈ 0.01). Meaning that this neighborhood won't be local in any meaningful set (it will span 0.6 of total range for each of the dimensions!). And if we keep the side length (r) small, we won't capture any meaningful examples. Similarly, if points are distributed uniformly within a unit volume, the closest point to any given point is expected to be half-way to the boundary. Especially for highly non-linear functions (say, exponents) it presents a huge problem, as mean(neighbors) no longer resembles the "true value". (ESL p23-25)
+Local methods (like KNN) break down in high-dimensions to to the **curse of dimensionality** ([[curse_dim]]): it becomes impossible to find a good neighborhood to do local averaging.
 
 ## Subspace Methods
 **Overview**: define subspaces and assign vectors to classes to minimize the distance between these vectors and these subspaces. Usually distance = acos cosine similarity = acos (v∙proj(v))/v² = acos vPv/v², where P is a projection matrix. PCA is one way to achieve it, but not the only one. But in all cases, the idea is that (Signals) = (Basis)∙(Scores), where Scores can be interpreted as representations.
@@ -75,8 +78,6 @@ ToRead:
 * [https://towardsdatascience.com/how-exactly-umap-works-13e3040e1668](<https://towardsdatascience.com/how-exactly-umap-works-13e3040e1668>)
 * [https://towardsdatascience.com/how-to-program-umap-from-scratch-e6eff67f55fe](<https://towardsdatascience.com/how-to-program-umap-from-scratch-e6eff67f55fe>)
 * Category theory behind UMAP: https://johncarlosbaez.wordpress.com/2020/02/10/the-category-theory-behind-umap/
-
-# Clustering
 
 # Very High Dimensions
 For high dimensions (say, word counts in a document) simple Eucledian distance doesn't work that well, as it becomes impossible to compare long documents to short documents. One way would be to normalize vectors before calculating Eucledian distance, but there's an easier way: use **cosine similarity** (described above). It sorta auto-normalizes lengths, is easier to calculate, and ordering of proximity is the same for normalized Eucledian and cosine similarity. (_unproved here, but apparently it's the case, hmm_)

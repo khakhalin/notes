@@ -1,11 +1,12 @@
 # An introduction to variable and feature selection
+
 Guyon, I., & Elisseeff, A. (2003). An introduction to variable and feature selection. Journal of machine learning research, 3(Mar), 1157-1182.
 
-#review #features
+#review #features #clustering
 
 14000 citations!
 
-Typical for modern (as of 2003) solutions to work with >10^6 variables (genes, words), as opposed to old-school papers that were in the dozens. The problem: build useful features, and also avoid redundancy. 
+It's typical for modern (as of 2003 haha) solutions to work with >10^6 variables (genes, words), as opposed to old-school papers that had it in the dozens. This poses a problem: build useful, informative features, but also avoid redundancy. 
 
 Nice checklist (summarized in my main chapter)
 

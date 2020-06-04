@@ -23,10 +23,6 @@ lots of useful practical bits and pieces: the shell, debugging, metaprogramming 
 
 **Temp dump**
 
-https://www.google.com/search?q=best+downtempo+albums
-https://www.google.com/search?q=Maria+Stolarova&source=lnms&tbm=isch
-https://medium.com/bits-and-behavior/im-a-professor-d732ba26c522
-
 https://calculatedcontent.com/2020/02/16/weightwatcher-empirical-quality-metrics-for-deep-neural-networks/
 
 https://en.wikipedia.org/wiki/S-expression

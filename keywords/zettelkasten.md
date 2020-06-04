@@ -2,7 +2,10 @@
 
 #lifehack #tools
 
-## How One German Scholar Was So Freakishly Productive
+Related:
+* [[JohnMcPhee]] - on his writing system, which is not dissimilar to Zettelkasten
+
+# How One German Scholar Was So Freakishly Productive
 Clear 2019
 https://writingcooperative.com/zettelkasten-how-one-german-scholar-was-so-freakishly-productive-997e4e0ca125
 
@@ -18,7 +21,7 @@ Some **asides and consequences**:
 * In Zettlr (as in paper card version) direct (outcoming links) are clearly visible, while incoming links are hidden. Still, unlike for paper notes, in Zettlr you can fetchc the name of this card, and put it in the search box. You'll get all cards linking this card.
 * My current system of naming cards after papers (author-year-topic) is actually still not complete Zettelkasten, as it retains (and follows) the desire to keep control of card readability. The original system by Luhmann allowed him to let go of this fear of control, and just inject information into the system, relying on the power of links.
 
-## References about Luhmann
+# References about Luhmann
 
 * **Archive of Luhmann's cards:** https://niklas-luhmann-archiv.de/bestand/zettelkasten/zettel/ZK_1_NB_1_1_V
 
@@ -31,7 +34,7 @@ It seems that while his system was ingenious, Luhmann was also constrained by th
 
 This note, for example, would have been represented by several linearly linked notes in his system. But in Zettlr, it's easier to just keep writing, until you need to branch (and actually, maybe, even for some time after that, until the branch becomes too long).
 
-* From another [blog polst by Phil Houtz](https://writingcooperative.com/zettelkasten-its-like-gtd-for-writing-and-here-s-why-you-should-consider-it-7dddf02be394): Actually, as it turns out, **Luhmann had tags** as well. For keywrords and key themes, he used special cards that listed cards related to this keyword.
+* From another [blog polst by Phil Houtz](https://writingcooperative.com/zettelkasten-its-like-gtd-for-writing-and-here-s-why-you-should-consider-it-7dddf02be394): Actually, as it turns out, **Luhmann had tags** as well. For keywords and key themes, he used special cards that listed cards related to this keyword.
 
 > Which implies that maybe my current system has everything he had. The general outline and structure of the repo is analogous to his filing system; longer files that grow out of a seed of an individual card are analogous to his chains of linked cards, and tags are like keywords. Only better. And I can look for things. And I can search incoming links. And I can improve my cards much more easily! Yay!
 

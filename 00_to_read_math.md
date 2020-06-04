@@ -8,7 +8,7 @@
 * [[11_RL]] - Reinforcement Learning
 * [[09_Graphs]] - Graph (aka Graphical) networks
 
-# Tab-dump work Mar 16
+# Tab-dumps
 
 AutoML-Zero: Evolving Machine Learning Algorithms From Scratch:
 * https://arxiv.org/abs/2003.03384
@@ -18,7 +18,6 @@ AutoML-Zero: Evolving Machine Learning Algorithms From Scratch:
 * How does the non-conscious become conscious:
 https://sci-hub.se/https://doi.org/10.1016/j.cub.2020.01.033
 
-### Work tabs dump, ~Mar 16
 * https://ai.googleblog.com/2020/02/exploring-transfer-learning-with-t5.html
 * https://github.com/sergio-hcsoft/FractalAI
 * https://github.com/chuanli11/CNNMRF
@@ -27,6 +26,13 @@ https://sci-hub.se/https://doi.org/10.1016/j.cub.2020.01.033
 * https://www.goodai.com/implementation-of-generative-teaching-networks-for-pytorch/
 
 # Intros and top choices
+
+Tishby, N., Pereira, F. C., & Bialek, W. (2000). The information bottleneck method. arXiv preprint physics/0004057.
+https://arxiv.org/pdf/physics/0004057.pdf
+2k citations.
+
+https://distill.pub/2017/feature-visualization/
+Interpretability, latent space detectors visualization.
 
 Olah, C., Satyanarayan, A., Johnson, I., Carter, S., Schubert, L., Ye, K., & Mordvintsev, A. (2018). The building blocks of interpretability. Distill, 3(3), e10.
 https://distill.pub/2018/building-blocks/
@@ -65,6 +71,8 @@ https://towardsdatascience.com/the-complete-guide-to-decision-trees-28a4e3c7be14
 Ioffe, S., & Szegedy, C. (2015). Batch normalization: Accelerating deep network training by reducing internal covariate shift. arXiv preprint arXiv:1502.03167.
 [https://arxiv.org/abs/1502.03167](<https://arxiv.org/abs/1502.03167>)
 Main paper on batch normalization (with like 30k references). Read and summarize in the [[06_DL]] section.
+* Related paper on batch norm: Frankle, J., Schwab, D. J., & Morcos, A. S. (2020). Training BatchNorm and Only BatchNorm: On the Expressive Power of Random Features in CNNs. arXiv preprint arXiv:2003.00152. - about how only training batch norm layers, keeping all other parameters random, is enough to create a functional network
+* [Some blog follow-up](https://app.wandb.ai/sayakpaul/training-bn-only/reports/The-Power-of-Random-Features-of-a-CNN--VmlldzoxMTIxODA) from which I actually learned about this paper.
 
 Try to get the gist of it, even if just to participate in the discussion. File, even if math turns to be harder than comfortable:
 Automatic Differentiation via Contour Integration
@@ -154,6 +162,10 @@ Allamanis, M., Barr, E. T., Devanbu, P., & Sutton, C. (2018). A survey of machin
 https://arxiv.org/pdf/1709.06182.pdf
 A longish review (30 pages) on using ML to analyze programming code.
 
+Simonyan, K., & Zisserman, A. (2014). Very deep convolutional networks for large-scale image recognition. arXiv preprint arXiv:1409.1556.
+https://arxiv.org/pdf/1409.1556.pdf
+40k citations. Seminal in some way?
+
 # Why networks work?
 
 Saxe, A. M., Bansal, Y., Dapello, J., Advani, M., Kolchinsky, A., Tracey, B. D., & Cox, D. D. (2019). On the information bottleneck theory of deep learning. Journal of Statistical Mechanics: Theory and Experiment, 2019(12), 124020.
@@ -184,6 +196,10 @@ Nakkiran, P., Kaplun, G., Bansal, Y., Yang, T., Barak, B., & Sutskever, I. (2019
 https://mltheory.org/deep.pdf
 Blog description:
 https://openai.com/blog/deep-double-descent/
+
+Le Cun, Y., Kanter, I., & Solla, S. A. (1991). Eigenvalues of covariance matrices: Application to neural-network learning. Physical Review Letters, 66(18), 2396.
+https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.66.2396
+Related to "Double Descent", but 30 years prior haha :)
 
 Arora, S., Du, S. S., Li, Z., Salakhutdinov, R., Wang, R., & Yu, D. (2019). Harnessing the Power of Infinitely Wide Deep Nets on Small-data Tasks. arXiv preprint arXiv:1910.01663.
 https://arxiv.org/pdf/1910.01663.pdf
@@ -293,7 +309,11 @@ If it get it right from the abstract, this can be called meta-networks as well: 
 
 Sanh, V., Wolf, T., & Rush, A. M. (2020). Movement Pruning: Adaptive Sparsity by Fine-Tuning. arXiv preprint arXiv:2005.07683.
 https://arxiv.org/abs/2005.07683
-Pruning optimized for language models somehow?
+Pruning somehow optimized for language models.
+
+How We Scaled Bert To Serve 1+ Billion Daily Requests on CPUs. By: Quoc N. Le and Kip Kaehler (2020).
+https://medium.com/roblox-tech-blog/how-we-scaled-bert-to-serve-1-billion-daily-requests-on-cpus-d99be090db26
+On pruning BERT to achieve both high throughput and high accuracy (claim that they found a better way to do it, compared to pruning precise models, or training small models)
 
 # Curriculum
 

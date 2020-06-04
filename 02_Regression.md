@@ -10,9 +10,9 @@ We can minimize this loss by differentiating by θ (partial derivative for each 
 = 2(h-y)∙x_j (by formula-definition of h).
 Minimum: dJ/dθ = 0, ⇒ Xᵀ(Xθ-y) = 0 (if we write the derivative above in matrix notation). Here X is a matrix in which each _row_ is an input vector, and y is a column-vector of target outputs. If XᵀX is nonsignular, we can open the brackets, send y to the right, muliply from the left on inverse, get: θ = (XᵀX)⁻¹Xᵀy.
 
-> To sum up **notation choices** (roughly matching ESL): one data point is a row-vector of coordinate, so all points make a high matrix (a column of row- vectors). The values of y are also a column. As data-point is a row, parameters θ are a column, so that dim(y) = N×1 = dim(Xθ). When writing it all, a part that is a bit confusing is that X (matrix) of N×k is multiplied by θ from the right (Xθ), but individual points x have to be written as xᵀθ to show that they are row-vectors (by default x would have been a column-vector).
+> To sum up **notation choices** (roughly matching ESL): one data point is a row-vector of coordinates, so all points in a dataset make up a tall slim matrix (a column of row- vectors). The values of y are also a column. Next, as one data-point is a row, parameters θ have to be a column, so that dim(y) = N×1 = dim(Xθ). When writing it all, a part that is a bit confusing is that X (matrix) of N×k is multiplied by θ from the right (Xθ), but individual points x may have to be written as xᵀθ to show that they are row-vectors (by default x would have been a column-vector).
 
-> Also, as Unicode makes diacritics a hassle, I try to use θ for parameter estimates, and β for true values. x_j is typically a column of X. Subscripts are shortened (xi instead of x_i) where it looks ok. Cdot (∙) may mean both normal and inner product; ⟨x,y⟩ always means inner product. 
+> Also, as Unicode makes diacritics a hassle, I try to use θ for parameter estimates, and β for true values. x_j is typically a column (one coordinate) of X, to match a corresponding θ_j. Subscripts are shortened (xi instead of x_i) where it looks ok. Cdot (∙) may mean both normal "single-number" product and inner product; ⟨x,y⟩ always means inner product. 
 
 Interpretation: if y ~ h = Xθ, then h is in the column-space of X, which forms a subspace of R^N (N data points, p+1 dimensions, assuming x0≡1). To find θ, we project y to col-space using a projection matrix, which obviously minimizes residual (unexplained) variance, by making it orthogonal to col-space.
 
@@ -28,7 +28,7 @@ There are **3 broad approaches to model smoothing**:
 
 **Roughness penalty**: Use basic RSS (Residual Sum of Squares) with an explicit penalty: L = RSS(f) + λJ(f), where J grows as f() becomes too rough. For example, defining J as λ∫(f'')²dx leads to **cubic smoothing splines** as an optimal solution. Roughness penalty can be interpreted in a Bayesian way, as a log-prior.
 
-**Kernel methods**: explicitly specify local neighborhoods, and a type of a function to fit it locally. The neighborhood is defined by the kernel function K(x0,x) that acts as weights for x around x0. Gaussian Kernel: K = 1/λ exp( - |x-x0|² / 2λ). The simplest way to use kernels K is to calculate a weighted average of y using these kernels (aka Nadaraya–Watson kernel regression): f(x0) = ∑ K(x0,x_i)∙y_i / ∑ K(x0,x_i).
+**Kernel methods**: explicitly specify local neighborhoods, and a type of a function to fit it locally. The neighborhood is defined by the kernel function K(x0,x) that acts as weights for x around x0. Gaussian Kernel: K = 1/λ exp( - |x-x0|² / 2λ). The simplest way to use kernels K is to calculate a weighted average of y using these kernels (aka Nadaraya–Watson kernel regression): f(x0) = ∑ K(x0,x_i)∙y_i / ∑ K(x0,x_i). #kernel
 
 Or we can choose some smooth f(x), and then optimize it using kernels in RSS calculations: RSS(x0) = ∑ K(x,x0)∙(y-f(x))² , where ∑ runs through all (x_i, y_i). If we assume f(x) = θ0 + θx, we get **local linear regression**. KNNs (see [[03_Classification]]) can also be considered a subtype of a kernal method, just with a weird discontinuous stepwise kernel.
 
@@ -47,7 +47,7 @@ Intepretations for h = Xθ:
 * If each x_i is a vector, with several coordinates, but these coordinates come from an orthogonal experiment design, we can just project to each dimension separately, and the result will be the sum of these projections. That's because once you dot-product y=∑θ_i x_i with x_j, all terms but one would die. Which means that essentially we can pretend that multiple linear regression is just a bunch of univariate regressions. It also matches the general formula, as in this case the matrix XᵀX is diagonal. 
 * If however columns of X are correlated (not orthogonal), we have to do repetitive elimination ( aka **Gram-Schmidt**) that leads to a full form projection matrix. See below.
 
-Or we can perform a gradient descent: θ := θ + α(h-y)x, with some learning rate α. As our L2 loss is a convex quadratic function, it has only one minimum, and so it always converges. 
+Or we can perform a **gradient descent**: θ ← θ + α(h-y)x, with some learning rate α. As our L2 loss is a convex quadratic function, it has only one minimum, and so it always converges. 
 
 ## Gram-Smidt
 
@@ -125,17 +125,8 @@ In practice, it means that there are estimators with lower variance, but they ar
 
 Refs: ESL p51, [wiki](https://en.wikipedia.org/wiki/Gauss%E2%80%93Markov_theorem)
 
-### Dimensionality curse
-Now let's consider a special case of bias-variance trade-off in a case of very high dimensions. Say, we have a linear model with error: y = Xᵀθ + ε (aka **additive error model**), where ε is normal noise with variance σ². Try to infer θ from a training set of Y. As θ = (XᵀX)⁻¹Xᵀy, we get it with errors of (XᵀX)⁻¹Xᵀε. Which in turns means that when we try to estimate y as h = Xθ during training, we get errors for these estimations: X(XᵀX)⁻¹Xᵀε . 
-
-J for one point xᵀ (x0 = one row in X) is given by a bias-variance formula: J = E( (h-Eh)² + (Eh-y)² ) = xᵀ(XᵀX)⁻¹xσ² + Bias + σ². Here Bias≡0 because linear fit is unbiased, and σ² is irreducable error.
-
-If training process is randomized enough (??? _what is the official name for this criterion?_), (XᵀX)→N∙Cov(X), and so we have:
-J ~ E( xᵀCov(X)⁻¹xσ²/N ) + σ²= trace(Cov(X)⁻¹Cov(x))σ²/N + σ² = pσ²/N + σ², where p is the number of dimensions. So J grows as a linear function of the number of dimentions p.
-
-> This trace thing here is pretty annoying, but it works. If we E() the left part, we get a E() of ∑_ij (x_i x_j C⁻¹ij), which is formally a sum with p^2 terms. But if you open this trace(C∙C⁻¹) on the right, you get the same expression (j coming from trace-sum, and i from the multiplication of two matrices). So E() indeed gives the trace(). And then, once this is proven, we notice that trace() only runs through p terms, and all of these terms happen to be = 1 by def of CC⁻¹, and we get what we get.
-
-Which means that the higher the number of dimensions, the worse the error (variance). Now, some methods are worse than others: linear regression is actually faring OK, while some (like KNN regressor) get cursed quite fast (ESL p26), but the gist is the same for all. If you simulate this, you have diff deterioration curves for different data assumptions. IRL, we try to be in-between these two extremes (global linear regression and 1NN) using some info (or assumptions) about the structure of the data. 
+See also:
+* [[curse_dim]] - Curse Dimensionality, which can be considered a special (and very unpleasant) case of Bias-Variance trade-off
 
 # Constrained models
 

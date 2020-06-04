@@ -124,7 +124,7 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 
 **POC** (dev): Proof of Concept.
 
-**PostgreSQL** (sys): 
+**PostgreSQL** (sys): An open-source SQL server that is a bit slower tham mySQL, but more reliable, and fully ACID compliant (mySQL is not necesarily). Fault-tolerant because of "write-ahead logging". ([ref](https://www.guru99.com/introduction-postgresql.html))
 
 **Propensity score matching** (stats): way to compare output variables in case of unavoidable confounding factors. Based on careful matching of confounding factors between individuals in groups (many methods here), then analyzing this constrained set. The trick is that instead of matching in high-D, it uses an all-data linear model to conflate all confounding values into one "risk factor" (aka propensity score), and match based on it. This is obviously both a strong, and a weak point. Polular in epidemiology. [ref](https://en.wikipedia.org/wiki/Propensity_score_matching)
 
@@ -171,5 +171,7 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 **Wide column store** (db): Imagine a table, except that different rows may have different columns (number, names, types). 
 
 # XYZ
+
+**XGBoost** (dev): an open-source library that does gradient boosting. Same type of an object as Keras, for example: available for many languages, as libraries; can run locally, or in a scaled-up distributed way; takes care of some fine-turning. Popular with Kagglers, apparently. ([wiki](https://en.wikipedia.org/wiki/XGBoost))
 
 **Zero-inflated model** (stats): a model that is intentially biased towards observations of zeros; for example a bimodal switch between active and inactive states, with inactive resulting in always-0, and active generating a Poisson process. [ref](https://en.wikipedia.org/wiki/Zero-inflated_model)
