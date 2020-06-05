@@ -3,7 +3,7 @@
 #dim #clustering
 
 Related: [[04_Features]], [[02_Regression]]
-See also: [[typical_sample]]
+See also: [[typical_sample]] - an alternative to average sample for cursed datasets
 
 In high-dim, volume grows so fast with linear dimensions (r^K for K different dimensions) that most of volume lies in the thin shell, not around the center.
 
@@ -12,6 +12,10 @@ Say, to find a subcube with 1% of total volume inside a unit-cube in 10-dim, we'
 Which means that a neighborhood containing 1% of points won't be local in any meaningful sense of this word (it will span 0.6 of total range for each of the dimensions! It's not what most people would call local!). And if we keep the side length (r) small, we won't capture any meaningful examples.
 
 Similarly, if points are distributed uniformly within a unit volume, the closest point to any given point is expected to be half-way to the range boundary. Especially for highly non-linear functions (say, exponents) it presents a huge problem, as the mean of neighbors no longer resembles the "true value". (ESL p23-25)
+
+Gaussian distributions are bubbles with all mass in the narrow shell (see [[typical_sample]])
+
+Two randomly picked vectors from the same very-high-D distribution are usually perpendicular to each other.
 
 Solution: dimensionality reduction (see [[04_Features]])
 

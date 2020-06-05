@@ -31,12 +31,31 @@ Tishby, N., Pereira, F. C., & Bialek, W. (2000). The information bottleneck meth
 https://arxiv.org/pdf/physics/0004057.pdf
 2k citations.
 
-https://distill.pub/2017/feature-visualization/
-Interpretability, latent space detectors visualization.
+Saxe, A. M., Bansal, Y., Dapello, J., Advani, M., Kolchinsky, A., Tracey, B. D., & Cox, D. D. (2019). On the information bottleneck theory of deep learning. Journal of Statistical Mechanics: Theory and Experiment, 2019(12), 124020.
+https://iopscience.iop.org/article/10.1088/1742-5468/ab3985
+Seems to have struck a nerve (>100 citations in just one month!). And not that hard on math.
+
+Reflections on Innateness in Machine Learning
+Thomas G. Dietterich. Mar 6, 2018.
+https://medium.com/@tdietterich/reflections-on-innateness-in-machine-learning-4eebefa3e1af
+Another must-do short read.
+
+The Unreasonable Effectiveness of Recurrent Neural Networks
+http://karpathy.github.io/2015/05/21/rnn-effectiveness/
+
+Gatys, L. A., Ecker, A. S., & Bethge, M. (2015). A neural algorithm of artistic style. arXiv preprint arXiv:1508.06576.
+https://arxiv.org/pdf/1508.06576.pdf
 
 Olah, C., Satyanarayan, A., Johnson, I., Carter, S., Schubert, L., Ye, K., & Mordvintsev, A. (2018). The building blocks of interpretability. Distill, 3(3), e10.
 https://distill.pub/2018/building-blocks/
 Google. About reverse-tracking through a visual network via optimizing inputs?
+Should be placed here: [[Olah2018interpretability]]
+
+Identity Crisis: Memorization and Generalization Under Extreme Overparameterization 
+Chiyuan Zhang, Samy Bengio, Moritz Hardt, Michael C. Mozer, Yoram Singer
+https://openreview.net/forum?id=B1l6y0VFPr
+https://arxiv.org/abs/1902.04698
+Google brain. Identity mapping: just train the output to be exactly like the input, then study the logic of transfer to other inputs.
 
 Deep Residual Learning for Image Recognition. Related to [[He2015init]]?
 https://arxiv.org/pdf/1512.03385.pdf
@@ -44,12 +63,6 @@ https://arxiv.org/pdf/1512.03385.pdf
 Mishkin, D., & Matas, J. (2015). All you need is a good init. arXiv preprint arXiv:1511.06422.
 https://arxiv.org/pdf/1511.06422.pdf
 Related to [[He2015init]]?
-
-Identity Crisis: Memorization and Generalization Under Extreme Overparameterization 
-Chiyuan Zhang, Samy Bengio, Moritz Hardt, Michael C. Mozer, Yoram Singer
-https://openreview.net/forum?id=B1l6y0VFPr
-https://arxiv.org/abs/1902.04698
-Google brain. Identity mapping: just train the output to be exactly like the input, then study the logic of transfer to other inputs.
 
 Mordvintsev, A., Randazzo, E., Niklasson, E., & Levin, M. (2020). Growing Neural Cellular Automata. Distill, 5(2), e23.
 https://distill.pub/2020/growing-ca/
@@ -79,14 +92,6 @@ Automatic Differentiation via Contour Integration
 Jan 16, 2020. Aidan Rocke
 https://keplerlounge.com/neural-computation/2020/01/16/complex-auto-diff.html
 Aidan claims tha this math somehow helps to explain calculations in a dendritic tree, but it has lots of calculus, and seems like something one has to actually think about. It like has math and stuff! Complex functions, poles, and what not.
-
-Reflections on Innateness in Machine Learning
-Thomas G. Dietterich. Mar 6, 2018.
-https://medium.com/@tdietterich/reflections-on-innateness-in-machine-learning-4eebefa3e1af
-Another must-do short read.
-
-The Unreasonable Effectiveness of Recurrent Neural Networks
-http://karpathy.github.io/2015/05/21/rnn-effectiveness/
 
 Research dept
 https://distill.pub/2017/research-debt/
@@ -168,10 +173,6 @@ https://arxiv.org/pdf/1409.1556.pdf
 
 # Why networks work?
 
-Saxe, A. M., Bansal, Y., Dapello, J., Advani, M., Kolchinsky, A., Tracey, B. D., & Cox, D. D. (2019). On the information bottleneck theory of deep learning. Journal of Statistical Mechanics: Theory and Experiment, 2019(12), 124020.
-https://iopscience.iop.org/article/10.1088/1742-5468/ab3985
-Seems to have struck a nerve (>100 citations in just one month!). And not that hard on math.
-
 Milne, T. (2019). Piecewise strong convexity of neural networks. In Advances in Neural Information Processing Systems (pp. 12953-12963).
 https://arxiv.org/abs/1810.12805
 
@@ -224,6 +225,9 @@ https://twitter.com/TalGolanNeuro/status/1198394188481671168
 
 Virgolin, M., Alderliesten, T., & Bosman, P. A. (2020). On explaining machine learning models by evolving crucial and compact features. Swarm and Evolutionary Computation, 53, 100640.
 https://arxiv.org/abs/1907.02260
+
+Mahendran, A., & Vedaldi, A. (2015). Understanding deep image representations by inverting them. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 5188-5196).
+https://arxiv.org/pdf/1412.0035v1.pdf
 
 TensorFlow Lattice: Flexible, controlled and interpretable ML
 https://blog.tensorflow.org/2020/02/tensorflow-lattice-flexible-controlled-and-interpretable-ML.html?linkId=82088125

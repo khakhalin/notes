@@ -41,3 +41,6 @@ https://www.arcgis.com/apps/MapJournal/index.html?appid=eb282817aaee4dda8dbfcf66
 
 A good collection of folksy (popular with the folk) Orthodox Icons: not highest resolution, but well sorted, and not bad taste overall:
 https://www.orthodoxchristiansupply.com/
+
+Patterns of Islamic art:
+https://patterninislamicart.com/

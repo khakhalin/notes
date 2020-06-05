@@ -33,8 +33,8 @@ The mouse cortico-tectal projectome
 https://arxiv.org/pdf/2003.11038.pdf
 Deformable Style Transfer
 
-# Algos
-* Haskell
+# Algos and top priorities
+* Bash
 * Operations Research - the type of DS they do for logistics. Flip through a book?
 * https://blog.reverberate.org/2020/05/29/hoares-rebuttal-bubble-sorts-comeback.html
 * finish Google production thing
@@ -88,7 +88,6 @@ Deformable Style Transfer
 * minimum cut (on graphs), with related topics
 
 # Python and tools
-* f-strings in Python ([ref](https://docs.python.org/3/library/string.html#format-specification-mini-language)): summarize in a separate doc
 * How does garbage collection work in Python? What's the logic, and how fast is it? ([link](https://gist.github.com/osavsunenko-ring/205fa72c65d6343eaede0dc43f1c79d4))
 * collections - or whatever is this common module ppl often use with prepackaged datastructures
 * refresh "read from a console" and read from file in Python
@@ -99,7 +98,6 @@ Deformable Style Transfer
 * Python collections: deque, Counter, defaultdict etc.
 * Javascript React - how does it look like?
 * Python closures, why they are a thing, what's dangerous about them, and how to use them
-* bash
 
 # Systems
 

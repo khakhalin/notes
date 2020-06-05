@@ -97,6 +97,12 @@ Job-search specific materials:
 * [Machine learning for humans, 80/20 reading list](https://medium.com/machine-learning-for-humans/ai-reading-list-c4753afd97a) - claims to be curated. Sections on ML, Deep, RL, and then various general readings about the meaning of it all.
 * [Scientific visualization with matplotlib](https://github.com/rougier/scientific-visualization-book) - an open-source book project in the works that hadn't been released yet, but the previews look lovely
 
+# Computational Neuro
+
+* http://neural-reckoning.org/comp-neuro-resources.html - a collection of links from Dan Goodman
+* https://baicsworkshop.github.io/resources.html - AI-cognitive science bridge
+* https://lcnwww.epfl.ch/gerstner/NeuronalDynamics-MOOCall.html - Comp Neuro course by Wulfram Gerstner
+
 # Temp teaching links
 Three books:
 * Think Python: https://greenteapress.com/wp/think-python-2e/
