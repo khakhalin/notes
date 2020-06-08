@@ -34,8 +34,11 @@ https://arxiv.org/pdf/2003.11038.pdf
 Deformable Style Transfer
 
 # Algos and top priorities
+* Kimbell data warehouse model
+* Code linear regression manually
+* Code logistic regression manually
+* Actually do gradual boosting (from a library) for some synthetic dataset; visualize
 * Bash
-* Operations Research - the type of DS they do for logistics. Flip through a book?
 * https://blog.reverberate.org/2020/05/29/hoares-rebuttal-bubble-sorts-comeback.html
 * finish Google production thing
 * How to color a graph in 4 colors?
@@ -86,6 +89,7 @@ Deformable Style Transfer
 * https://www.byte-by-byte.com/google-interview/ - check other topics
 * Hungarian algorithm
 * minimum cut (on graphs), with related topics
+* Operations Research - the type of DS they do for logistics. Flip through a book?
 
 # Python and tools
 * How does garbage collection work in Python? What's the logic, and how fast is it? ([link](https://gist.github.com/osavsunenko-ring/205fa72c65d6343eaede0dc43f1c79d4))
@@ -111,6 +115,31 @@ List from Google
 * context switching
 * scheduling
 * multicore concurrency
+
+**Data solutions**
+* sqlalchemy
+* airflow,
+* Docker
+* What does it mean to "learn NoSQL"? What technical, practical skills are meant here?
+* ETL (Extract, Transform and Load) pipelines
+* Hadoop
+* Hive
+* DevOps
+* Orchestration
+* RDF
+* SPARQL
+* Triple (RDF) and graph stores
+* MongeDB
+* Couchbase
+* Memcashed
+* Redis cluster
+* Zookeeper
+* Kafka
+* NGINX, HAProxy - balancers
+* Solr, ElasticSearch
+* Blobstore
+* Spark
+* Flink
 
 Go through 2-3 youtube lectures in the queue that describe some of the existing solutions:
 * Scalability lecture: https://www.youtube.com/watch?v=-W9F__D3oY4
@@ -169,23 +198,6 @@ Every solution depends on parameters of scale: amount of data, n users, requests
 * How to use sequential (as opposed to random) reads and write on HD to speed up your processes
 * Paxos - what is it?
 * Virtual machines and containers
-
-**Solutions and tools**
-* RDF
-* SPARQL
-* Triple (RDF) and graph stores
-* MongeDB
-* Couchbase
-* Memcashed
-* Redis cluster
-* Zookeeper
-* Kafka
-* NGINX, HAProxy - balancers
-* Solr, ElasticSearch
-* Blobstore
-* Spark
-* Hadoop
-* Flink
 
 # Classic ML and related math
 * Why autoencoders use KL and not L2 as loss? What's the logic of when KL is used? Older papers, like [[Hinton2006dim]] used cross-entropy. Why?
