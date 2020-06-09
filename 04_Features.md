@@ -68,22 +68,9 @@ Why projecting to these ellipsoid-aligned axes maximizes the variance along this
 
 **Promax rotation**: similar to varimax, but oblique (with shears, making components non-orthogonal), which allows higher contrasting, and is also cheaper computationally.
 
-## tSNE
-"The art of using tSNE" from Nature:
-[https://www.nature.com/articles/s41467-019-13056-x](<https://www.nature.com/articles/s41467-019-13056-x>)
-
-## UMAP
-ToRead:
-* [https://pair-code.github.io/understanding-umap/](<https://pair-code.github.io/understanding-umap/>)
-* [https://towardsdatascience.com/how-exactly-umap-works-13e3040e1668](<https://towardsdatascience.com/how-exactly-umap-works-13e3040e1668>)
-* [https://towardsdatascience.com/how-to-program-umap-from-scratch-e6eff67f55fe](<https://towardsdatascience.com/how-to-program-umap-from-scratch-e6eff67f55fe>)
-* Category theory behind UMAP: https://johncarlosbaez.wordpress.com/2020/02/10/the-category-theory-behind-umap/
-
 # Very High Dimensions
-For high dimensions (say, word counts in a document) simple Eucledian distance doesn't work that well, as it becomes impossible to compare long documents to short documents. One way would be to normalize vectors before calculating Eucledian distance, but there's an easier way: use **cosine similarity** (described above). It sorta auto-normalizes lengths, is easier to calculate, and ordering of proximity is the same for normalized Eucledian and cosine similarity. (_unproved here, but apparently it's the case, hmm_)
 
-**Specifics of working with very high dimensions:**
-(Genomic data in this case)
-* https://towardsdatascience.com/no-true-effects-in-high-dimensions-1f56360182cd
-* https://towardsdatascience.com/pitfalls-of-data-normalization-bf05d65f1f4c
-* https://towardsdatascience.com/how-to-cluster-in-high-dimensions-4ef693bacc6
+See:
+* [[curse_dim]] - Dimensionality curse
+* [[umap]] - one key method of clustering
+* [[tsne]] - t-SNE - another key method of clustering

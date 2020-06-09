@@ -32,7 +32,7 @@ https://arxiv.org/pdf/2003.11038.pdf
 Deformable Style Transfer
 
 # Algos and top priorities
-* postgre and postgreSQL
+* How to prove that both entropy and gini coeff max when all $p_i$ are the same and = 1/n?
 * Code linear regression manually
 * Code logistic regression manually
 * Why autoencoders use KL and not L2 as loss? What's the logic of when KL is used? Older papers, like [[Hinton2006dim]] used cross-entropy. Why?
@@ -40,6 +40,8 @@ Deformable Style Transfer
 * churn prediction problem
 * Bash
 * Regular expressions [[regex]], including in Python
+* [[umap]]
+* [[tsne]] and how it's different from UMAP
 * https://blog.reverberate.org/2020/05/29/hoares-rebuttal-bubble-sorts-comeback.html
 * finish Google production thing
 * How to color a graph in 4 colors?
@@ -145,7 +147,7 @@ List from Google
 * Blobstore
 * Spark
 * Flink
-* OLAP ([wiki](https://en.wikipedia.org/wiki/Online_analytical_processing))
+* postgreSQL
 
 Go through 2-3 youtube lectures in the queue that describe some of the existing solutions:
 * Scalability lecture: https://www.youtube.com/watch?v=-W9F__D3oY4
@@ -164,6 +166,7 @@ Go through 2-3 youtube lectures in the queue that describe some of the existing 
 * difference between columnar and row-oriented data stores
 * star schema
 * difference between dimension and fact tables
+* OLAP ([wiki](https://en.wikipedia.org/wiki/Online_analytical_processing))
 
 * https://www.hiredintech.com/app - a whole intro mini-course on systems design?
 * https://www.byte-by-byte.com/3-ways-to-ace-your-system-design-interview/
@@ -238,7 +241,6 @@ Every solution depends on parameters of scale: amount of data, n users, requests
 * Jax: [Baysian NN in Jax](https://colab.research.google.com/drive/1gMAXn123Pm58_NcRldjSuGYkbrXTUiN2) - collab notebook 
 * that visual blog post about types of DL optimizers
 * Capsule neural network - some sort of generalization of convolutional networks for hierarchical data?? Never heard of them, but they are actually quite well cited!!
-* the difference between tSNE and UMAP
 * Kalman filter
 * magic squares algorithm?
 * HyperNEAT - a paradigm for generative network evolution

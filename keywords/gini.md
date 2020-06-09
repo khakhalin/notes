@@ -14,6 +14,8 @@ In a binary case, 1-p²-(1-p)² = 2(p-p²), where p=Ncases/Npoints (for either c
 
 It seems that for **weighted Gini index** the formula is the same, just pi for each class is no longer just ni/N where N=∑ni, but rather the sum of weights within class, divided byt the total sum of weights: $p_i = ∑_j w_j δ_{ij} / ∑_j w_j$.
 
+Gini coefficient is not a monotonous function of entropy, as ∑p(1-p) is obviously different from -∑p log(p). However, both Gini and Entropy dive to 0 for uniform sequences (one class only), and max when all p are equal… So this is similar.
+
 # References
 * [wiki](https://en.wikipedia.org/wiki/Decision_tree_learning#Gini_impurity)
 * Example calculation: https://jamesmccaffrey.wordpress.com/2018/09/06/calculating-gini-impurity-example/
