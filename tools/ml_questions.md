@@ -1,6 +1,6 @@
 # ML interview questions
 
-#lifehack #interviewing
+#lifehack #interview
 
 Sources:
 * https://twitter.com/Al_Grigor via [this summary](https://www.reddit.com/r/datascience/comments/f7cdwg/data_science_and_machine_learning_interview/)

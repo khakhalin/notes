@@ -22,6 +22,8 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 
 **Collaborative filtering** (pipe): a name for what Netflix users do when they watch movies and generate data of "co-occurrence". Probably a pre-DL synonim for Federated Learning?
 
+**CRM** (business): Customer Relationship Management system. A customer DB + a system to aid conversations (aka "Contact Management": history of conversations etc.) + pipeline tracking (aka Lead management) + analytics and forecasting + tools for within-organization info sharing. ([ref](https://www.salesforce.com/eu/learning-centre/crm/crm-systems/))
+
 # D
 
 **DAG** (math): Directed Acyclic Graph
@@ -45,6 +47,10 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 **ECS** (dev): Amazon Elastic Container Server. Is used to manage (run, stop) Docker containers on a cluster.
 
 **EDA** (stats): Exploratory Data Analysis.
+
+**ERP** (business): Enterprize Resource Planning. Stuff like inventory, shipments, production, raw materials, capacity, etc. ([wiki](https://en.wikipedia.org/wiki/Enterprise_resource_planning))
+
+**ETL** (db): Extract Transform and Loading tool. See [[data_wh]]
 
 **Feature store** (data) A practical concept for data project implementation: a collection of curated features that are automatically produced (updated) from new data, and can be tapped into by various projects. Paying it forward with feature engineering.
 
@@ -82,6 +88,8 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 
 **Kafka** (db): open-source stream-processing plantform developed by Linkedin, written in Scala, and donated to Apache. High-throughput low-latency platform to handle realtime data feeds.
 
+**Kimball data warehouse model**: see [[data_wh]]
+
 **Kubernetes** (db): Open-source system for deploying applications on a cloud. Originally developed by Google. Operates **pods** that each contains several **containers**, to be placed together, within the same localhost. Pods can communicate with each other via pod IP.
 
 **LDA** 
@@ -115,6 +123,10 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 **noSQL** (db): a general word for non-relational databases: not tabular-based, good for realtime big data. May work with documents, key-values, wide-columns, graphs. Have lower guarantees on consistency (stale reads: updates don't update immediately), which can lead to data loss. See: [[system_design]], [[database]]
 
 # OPQ
+
+**OLAP** (db): Online analytical processing. An approach to business analytics that involves quering with slicing, consolidation (aggregation) and drill-down (going to the details). OLAP systems are mostly optimized for reading, and apparently are not too scalable (compared to [[data_wh]]) [wiki](https://en.wikipedia.org/wiki/Online_analytical_processing)
+
+**OLTP** (db): Online Transaction Processing. A kind of an antonym for OLAP, as online transactions imply lots of writing (not only reading), and higher volume. [wiki](https://en.wikipedia.org/wiki/Online_transaction_processing)
 
 **Petri net** (math): a way to model discrete dynamic systems via a directed bipartite graph with 2 types of nodes: places and transitions. Tokens (agents?) can accumulate at places (states, circles), until a transition (bar) fires (consumes input tokens, and creates output tokens). Because of that, tokens inherently interact with each other. May be deterministic or not. [wiki](https://en.wikipedia.org/wiki/Petri_net)
 

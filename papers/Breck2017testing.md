@@ -4,7 +4,10 @@ Breck, E., Cai, S., Nielsen, E., Salib, M., & Sculley, D. (2017, December). The 
 
 https://storage.googleapis.com/pub-tools-public-publication-data/pdf/aad9f93b86b7addfea4c419b9100c6cdd26cacea.pdf
 
-#management
+#tools #testing #lifehack #management
+
+Parents: [[01_Tools]]
+See also: [[ml_lore]], [[Huyen2019book]]
 
 Tests for features and data:
 1. Schema: encode tests for some obvious facts or asymptotics, end test them explicitly (and automatically). Visuals are helpful to identify and produce the schema.
@@ -45,5 +48,5 @@ Monitoring tests:
     * If possible, measure or estimate actual performance
     * If not, manually generate new testing data every now and then
 
-Other pieces advice:
-Checklistgs are good. Use them.
+Other pieces of advice:
+* Checklists are good. Use them.

@@ -1,18 +1,10 @@
 # Notes on databases
-#tools #todo
 
-# Unprocessed:
+#tools #bib #db
 
-* https://en.wikipedia.org/wiki/Database_transaction
-* https://en.wikipedia.org/wiki/Consistency_(database_systems)
-* https://en.wikipedia.org/wiki/Document-oriented_database
-* https://en.wikipedia.org/wiki/Graph_database
-* ACID transactions
-* https://en.wikipedia.org/wiki/Polyglot_persistence
-* https://en.wikipedia.org/wiki/Object-relational_impedance_mismatch
-* https://en.wikipedia.org/wiki/Eventual_consistency
-
-Should not some of it go in the [[dictionary]]?
+Parents: [[01_Tools]], [[system_design]], [[dictionary]] - many names are still sitting there
+See also:
+* [[data_wh]] - Data Warehouse
 
 # Principles and guarantees
 

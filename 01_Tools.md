@@ -7,6 +7,7 @@ https://learnpythonthehardway.org/book/appendixa.html
 
 Major subtopics:
 * [[system_design]]
+* [[database]]
 
 Cheatsheets, tips, notes:
 * [[python]] - everything Python (but not numpy or pandas that have their own )
@@ -20,6 +21,7 @@ Project management and alike:
 
 ML projects, general advice:
 * [[ml_lore]] - a collection of rules of thumb about everything Deep Learning (which defaults to pick etc.)
+* [[Breck2017testing]] - a rubric for ML project readiness
 
 Other #lifehack(s):
 * [[Clear2019zettelkasten]] - how to properly create and support this knowledge base

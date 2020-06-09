@@ -1,5 +1,9 @@
 # N-grams
+
 #text
+
+Parent: [[10_Text]]
+See also: [[trie]], [[beam_search]]
 
 https://en.wikipedia.org/wiki/N-gram
 One of the simpler ways of text analysis: just take n consecutive words (or characters, DNA bases, aminoacids etc), and count the frequency of all n-pairs. It's obviously better than just word or letter statistics (that can be considered an 1-gram), but worse than actually understanding the meaning, or projecting larger bags-of words into semantic space DL-style.

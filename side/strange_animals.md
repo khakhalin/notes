@@ -1,13 +1,13 @@
 # Strange creatures
 A collection of weird animals (and plants) that make you think "how come I've never head about it!"
 
-#fun
+#fun #bio
 
 That plant that looks like a blob
 Those giant unicellular plants
 That copepod (?) with eyes like scopes
 
-**Jacana** - an african bird with giant legs that looks like it has 6 legs, as it carries its chicks under its wings.
+**Jacana** - an african bird with giant legs that also looks as if it had 6 legs, as it thpically carries its (rather large) chicks under its wings.
 
 **Epomis** - a beetle larva that tries to get swallowed by a frog, then eats it from inside. [ref](https://www.wired.com/2016/01/absurd-creature-of-the-week-this-toad-isnt-eating-a-bug-the-bug-is-eating-it/)
 

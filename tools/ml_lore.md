@@ -1,7 +1,7 @@
 # ML lore
 #lifehack
 
-Related: [[06_DL]]
+Related: [[06_DL]], [[Breck2017testing]]
 
 **Deep learning maxims**: ([ref](https://pcc.cs.byu.edu/2017/10/02/practical-advice-for-building-deep-neural-networks/)):
 * Use [[adam]] with 3e-4 learning rate. Don't try to decay learning rate: ADAM takes care of that.

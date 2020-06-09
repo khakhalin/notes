@@ -1,4 +1,4 @@
-# Board and Card games AI
+# AI in Board and Card games
 
 #bib #game
 

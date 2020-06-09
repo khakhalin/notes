@@ -2,9 +2,9 @@
 
 by Chip Huyen, self-published brochure. 2019.
 
-#book #lifehack
+#book #lifehack #interview
 
-See also: [[job_search]]
+See also: [[job_search]], [[ml_lore]]
 
 https://github.com/chiphuyen/machine-learning-systems-design/blob/master/build/build1/consolidated.pdf
 

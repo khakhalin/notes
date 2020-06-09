@@ -25,8 +25,6 @@ lots of useful practical bits and pieces: the shell, debugging, metaprogramming 
 
 https://calculatedcontent.com/2020/02/16/weightwatcher-empirical-quality-metrics-for-deep-neural-networks/
 
-https://en.wikipedia.org/wiki/S-expression
-
 https://www.biorxiv.org/content/10.1101/2020.03.24.006775v1
 The mouse cortico-tectal projectome
 
@@ -34,14 +32,18 @@ https://arxiv.org/pdf/2003.11038.pdf
 Deformable Style Transfer
 
 # Algos and top priorities
-* Kimbell data warehouse model
+* postgre and postgreSQL
 * Code linear regression manually
 * Code logistic regression manually
-* Actually do gradual boosting (from a library) for some synthetic dataset; visualize
+* Why autoencoders use KL and not L2 as loss? What's the logic of when KL is used? Older papers, like [[Hinton2006dim]] used cross-entropy. Why?
+* https://en.wikipedia.org/wiki/Universal_approximation_theorem
+* churn prediction problem
 * Bash
+* Regular expressions [[regex]], including in Python
 * https://blog.reverberate.org/2020/05/29/hoares-rebuttal-bubble-sorts-comeback.html
 * finish Google production thing
 * How to color a graph in 4 colors?
+* https://en.wikipedia.org/wiki/Rope_(data_structure)
 * wrong assortativity on different circuits	 - for blog post
 * check out "Competitive programming" textbook
 * sieve of eratosphenes
@@ -51,6 +53,7 @@ Deformable Style Transfer
 * read / watch kickstarter competition advice (on their site)
 * in a sequence, if any k elements sum to target - code from scratch quickly
 * Timsort - reimplement
+* radix sort
 * All graph exercises from here (they are excellent!): https://algs4.cs.princeton.edu/41graph/
     * Bridge: an edge that disconnects the graph if removed. Using DFS, find a way to check if E is a bridge in O(V+E)
     * Articulation point: same, but for a vertex (disconnects the graph if removed). Find an O(V+E) way to check if V is an articulation point.
@@ -63,8 +66,6 @@ Deformable Style Transfer
 * how to solve sudoku?
 * Re-implement [[red-black_tree]], this time without parents, or with compartmentalized parents (`a,b = link(from=a,to=b)` that sets both connections?)
 * Re-implement [[avl_tree]]: make it neater, and fix delete.
-* radix sort
-* Regular expressions, including in Python
 * Do Bellman-Ford
 * refresh and summarize O: https://www.bigocheatsheet.com/
 * Code two types of hash-tables from memory
@@ -90,8 +91,9 @@ Deformable Style Transfer
 * Hungarian algorithm
 * minimum cut (on graphs), with related topics
 * Operations Research - the type of DS they do for logistics. Flip through a book?
+* https://en.wikipedia.org/wiki/S-expression
 
-# Python and tools
+# Python tools
 * How does garbage collection work in Python? What's the logic, and how fast is it? ([link](https://gist.github.com/osavsunenko-ring/205fa72c65d6343eaede0dc43f1c79d4))
 * collections - or whatever is this common module ppl often use with prepackaged datastructures
 * refresh "read from a console" and read from file in Python
@@ -121,6 +123,9 @@ List from Google
 * airflow,
 * Docker
 * What does it mean to "learn NoSQL"? What technical, practical skills are meant here?
+    * NoSQL has a badge on LinkedIn - is it passiable?
+* AWS - also has a badge on Linkedin
+* Kotlin - also has a badge
 * ETL (Extract, Transform and Load) pipelines
 * Hadoop
 * Hive
@@ -140,6 +145,7 @@ List from Google
 * Blobstore
 * Spark
 * Flink
+* OLAP ([wiki](https://en.wikipedia.org/wiki/Online_analytical_processing))
 
 Go through 2-3 youtube lectures in the queue that describe some of the existing solutions:
 * Scalability lecture: https://www.youtube.com/watch?v=-W9F__D3oY4
@@ -178,6 +184,15 @@ Every solution depends on parameters of scale: amount of data, n users, requests
 * Map reduce
 * Multithreading (consistency, locks, CAS)
 * Concurrency, threads, deadlocks, starvation
+* https://en.wikipedia.org/wiki/Database_transaction
+* https://en.wikipedia.org/wiki/Database_normalization
+* https://en.wikipedia.org/wiki/Consistency_(database_systems)
+* https://en.wikipedia.org/wiki/Document-oriented_database
+* https://en.wikipedia.org/wiki/Graph_database
+* ACID transactions
+* https://en.wikipedia.org/wiki/Polyglot_persistence
+* https://en.wikipedia.org/wiki/Object-relational_impedance_mismatch
+* https://en.wikipedia.org/wiki/Eventual_consistency
 
 **Practicality - web**
 * Bloom filters and count-min sketch
@@ -200,9 +215,8 @@ Every solution depends on parameters of scale: amount of data, n users, requests
 * Virtual machines and containers
 
 # Classic ML and related math
-* Why autoencoders use KL and not L2 as loss? What's the logic of when KL is used? Older papers, like [[Hinton2006dim]] used cross-entropy. Why?
+* Actually do gradual boosting (from a library) for some synthetic dataset; visualize
 * Laplacian short video: https://www.youtube.com/watch?v=oEq9ROl9Umk
-* https://en.wikipedia.org/wiki/Universal_approximation_theorem
 * that way to create ranking from asymmetric preferences via graphs
 * Laplacian operator (create a new page for basic vector calc) [1h youtube](https://www.youtube.com/watch?v=oEq9ROl9Umk), [wiki](https://en.wikipedia.org/wiki/Laplace_operator)
 * dual bases: why is this term a thing? How does it help? Describe here: [[la_01]]
