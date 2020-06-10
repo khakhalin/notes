@@ -39,6 +39,7 @@ Deformable Style Transfer
 * https://en.wikipedia.org/wiki/Universal_approximation_theorem
 * churn prediction problem
 * Bash
+* Visual guide to Evolution strategies: http://blog.otoro.net/2017/10/29/visual-evolution-strategies/ Must, because visual and nice!! See [[gen_alg]]
 * Regular expressions [[regex]], including in Python
 * [[umap]]
 * [[tsne]] and how it's different from UMAP
