@@ -6,7 +6,9 @@ https://arxiv.org/abs/1909.07528
 Also this blog summary with illustrations and videos.
 [https://openai.com/blog/emergent-tool-use/](<https://openai.com/blog/emergent-tool-use/>)
 
-#agents #curriculum #game
+#agents #curriculum #game #self-supervised #rl
+
+See also: [[11_RL]], [[08_Self_Supervised]]
 
 That OpenAI hide-and-seek study. Agents progressively built 6 distinct strategies and counter-strategies (some of them glitch-based).
 

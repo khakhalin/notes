@@ -3,7 +3,7 @@
 Chrabaszcz, P., Loshchilov, I., & Hutter, F. (2018). Back to basics: Benchmarking canonical evolution strategies for playing atari. arXiv preprint arXiv:1802.08842.
 https://arxiv.org/abs/1802.08842
 
-#game #evolution #atari #hack
+#game #evolution #atari #hack #gen_alg
 
 Coverage:
 * https://twitter.com/Miles_Brundage/status/968322848724004864

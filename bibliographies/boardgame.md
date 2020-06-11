@@ -7,13 +7,11 @@ https://arxiv.org/pdf/1902.00506.pdf
 
 # Collectable Cards and Drafting
 
+* [[Weidman2018alphago]] - blog post with a detailed explanation of AlphaGo
 * [[Chen2018deckrec]] - Q-deckrec: A fast deck recommendation system for collectible card games
-
-Kowalski, J., & Miernik, R. (2020). Evolutionary Approach to Collectible Card Game Arena Deckbuilding using Active Genes. arXiv preprint arXiv:2001.01326.
-https://arxiv.org/abs/2001.01326v1
-
-Świechowski, M., Tajmajer, T., & Janusz, A. (2018, August). Improving hearthstone ai by combining mcts and supervised learning algorithms. In 2018 IEEE Conference on Computational Intelligence and Games (CIG) (pp. 1-8). IEEE.
-https://arxiv.org/pdf/1808.04794.pdf
+* [[Swiechowski2018metagame]] - Improving hearthstone AI by tree search and supervised learning
+* [[Kowalski2020arena]] - Genetic algorithms ([[gen_alg]]) for deckbuilding in Arena (they dont look at card synergies though; just rank them).
+* [[Bjorke2017deckbuilding]] - Master thesis, about Genetic Algotirhms for MTG
 
 An unpublished (and dead-ended?) project about some other drafting thing.
 https://github.com/tpapp157/EternalDraftAnalysis

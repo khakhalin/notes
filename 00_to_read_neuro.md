@@ -290,10 +290,15 @@ It seems that they try recurrent networks (RNN) running in parallel, and compare
 Zoltowski, D. M., Pillow, J. W., & Linderman, S. W. (2020). Unifying and generalizing models of neural dynamics during decision-making. arXiv preprint arXiv:2001.04571.
 https://arxiv.org/abs/2001.04571
 
-# Variability
+# Variability, Stochastic Behaviors
+
+#behav
 
 Brembs, B. (2011). Towards a scientific concept of free will as a biological trait: spontaneous actions and decision-making in invertebrates. Proceedings of the Royal Society B: Biological Sciences, 278(1707), 930-939.
 https://royalsocietypublishing.org/doi/full/10.1098/rspb.2010.2325
+
+Noble, R., & Noble, D. (2018). Harnessing stochasticity: How do organisms make choices?. Chaos: An Interdisciplinary Journal of Nonlinear Science, 28(10), 106309.
+https://aip.scitation.org/doi/full/10.1063/1.5039668#.XuDOjHNMscw.twitter
 
 Murakami, M., Shteingart, H., Loewenstein, Y., & Mainen, Z. F. (2016). Distinct sources of deterministic and stochastic components of action timing decisions in rodent frontal cortex. bioRxiv, 088963.
 
@@ -301,6 +306,7 @@ Findling, C., Skvortsova, V., Dromnelle, R., Palminteri, S., & Wyart, V. (2019).
 https://www.biorxiv.org/content/biorxiv/early/2018/10/11/439885.full.pdf
 
 # Free energy
+
 #freeenergy
 
 Gershman, S. J. (2019). What does the free energy principle tell Us about the brain?. arXiv preprint arXiv:1901.07945.

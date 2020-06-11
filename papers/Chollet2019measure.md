@@ -26,4 +26,4 @@ Here's an interesting attempt to solve them using **cellular automata**:
 
 Their approach (may be similar to that of Mordvintsev?) - use a convolutional network as a cellular automaton that recurrently processes the image. They try to alternate between teaching it to transform the input image towards the output, and transforming output towards the output (stabilization). It works reasonably well.
 
-I wonder if it can be combined with [[wave_function_collapse]].
+> I wonder if it can be combined with [[wf_collapse]].
