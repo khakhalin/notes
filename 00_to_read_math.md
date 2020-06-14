@@ -43,19 +43,27 @@ Another must-do short read.
 The Unreasonable Effectiveness of Recurrent Neural Networks
 http://karpathy.github.io/2015/05/21/rnn-effectiveness/
 
-Gatys, L. A., Ecker, A. S., & Bethge, M. (2015). A neural algorithm of artistic style. arXiv preprint arXiv:1508.06576.
-https://arxiv.org/pdf/1508.06576.pdf
-
-Olah, C., Satyanarayan, A., Johnson, I., Carter, S., Schubert, L., Ye, K., & Mordvintsev, A. (2018). The building blocks of interpretability. Distill, 3(3), e10.
-https://distill.pub/2018/building-blocks/
-Google. About reverse-tracking through a visual network via optimizing inputs?
-Should be placed here: [[Olah2018interpretability]]
+Finding lottery tickets without training, by looking at "Synaptic flow":
+Hidenori Tanaka, Daniel Kunin, Daniel L. K. Yamins, Surya Ganguli
+Pruning neural networks without any data by iteratively conserving synaptic flow
+https://arxiv.org/abs/2006.05467
+Tweetprint:
+https://twitter.com/Hidenori8Tanaka/status/1271709221206151168
+May it be relevant for my graph optimization?
 
 Identity Crisis: Memorization and Generalization Under Extreme Overparameterization 
 Chiyuan Zhang, Samy Bengio, Moritz Hardt, Michael C. Mozer, Yoram Singer
 https://openreview.net/forum?id=B1l6y0VFPr
 https://arxiv.org/abs/1902.04698
 Google brain. Identity mapping: just train the output to be exactly like the input, then study the logic of transfer to other inputs.
+
+Olah, C., Satyanarayan, A., Johnson, I., Carter, S., Schubert, L., Ye, K., & Mordvintsev, A. (2018). The building blocks of interpretability. Distill, 3(3), e10.
+https://distill.pub/2018/building-blocks/
+Google. About reverse-tracking through a visual network via optimizing inputs?
+Should be placed here: [[Olah2018interpretability]]
+
+Gatys, L. A., Ecker, A. S., & Bethge, M. (2015). A neural algorithm of artistic style. arXiv preprint arXiv:1508.06576.
+https://arxiv.org/pdf/1508.06576.pdf
 
 Deep Residual Learning for Image Recognition. Related to [[He2015init]]?
 https://arxiv.org/pdf/1512.03385.pdf
