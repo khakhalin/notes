@@ -4,7 +4,8 @@ Glorot, X., & Bengio, Y. (2010, March). Understanding the difficulty of training
 
 #dl #init
 
-See also (an improment): [[He2015init]]
+See also:
+* [[He2015init]] - an improment upon this paper
 
 The first idea (?) to make the variance of weights in each layer related to the size of this layer, to preserve the variance of signal as it propagates through the layers. Shows that for a liniar case, $\text{sd}(w) \sim \sqrt{1/n}$, where n is the size of that layer.
 

@@ -43,13 +43,8 @@ Another must-do short read.
 The Unreasonable Effectiveness of Recurrent Neural Networks
 http://karpathy.github.io/2015/05/21/rnn-effectiveness/
 
-Finding lottery tickets without training, by looking at "Synaptic flow":
-Hidenori Tanaka, Daniel Kunin, Daniel L. K. Yamins, Surya Ganguli
-Pruning neural networks without any data by iteratively conserving synaptic flow
-https://arxiv.org/abs/2006.05467
-Tweetprint:
-https://twitter.com/Hidenori8Tanaka/status/1271709221206151168
-May it be relevant for my graph optimization?
+Bahri, Y., Kadmon, J., Pennington, J., Schoenholz, S. S., Sohl-Dickstein, J., & Ganguli, S. (2020). Statistical mechanics of deep learning. Annual Review of Condensed Matter Physics.
+https://www.annualreviews.org/doi/pdf/10.1146/annurev-conmatphys-031119-050745
 
 Identity Crisis: Memorization and Generalization Under Extreme Overparameterization 
 Chiyuan Zhang, Samy Bengio, Moritz Hardt, Michael C. Mozer, Yoram Singer

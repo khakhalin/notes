@@ -12,7 +12,7 @@ Best search site:
 ∀ ∃ ∄ ∅ ∈ ∉
 𝒩 ∞ ℕ ℤ ℚ ℝ ℂ
 □∎
-⨀⨂⨁ ∘ • ×
+⨀⨂⨁ ∘ • × ◉
 
 Α α Β β ϐ Γ γ, Δ δ, Ε ε ϵ Ζ ζ, Η η, Θ θ ϑ Ι ι, Κ κ ϰ ϗ Λ λ, Μ μ, Ν ν, Ξ ξ, Ο ο, Π π, Ρ ρ ϱ Σ σ ς Τ τ Υ ϒ υ Φ φ ϕ Χ χ Ψ ψ Ω ω ϖ 
 𐊬𐋄𐊙𐊃𐋆𐊯 ([carian](https://en.wikipedia.org/wiki/Carian_language) & [lycian](https://en.wikipedia.org/wiki/Lycian_alphabet) , [u](https://unicodes.smpc.io/%F0%90%8A%AF))
