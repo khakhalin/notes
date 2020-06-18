@@ -48,6 +48,8 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 
 **EDA** (stats): Exploratory Data Analysis.
 
+**ELA** (image): Error Level Analysis - analysis of JPG artifacts that can indicated that the imate is photoshoped (first saved in a lossy format, then combined, then saved again), as the stats of errors would be different at different parts of the image. [wiki](https://en.wikipedia.org/wiki/Error_level_analysis)
+	
 **ERP** (business): Enterprize Resource Planning. Stuff like inventory, shipments, production, raw materials, capacity, etc. ([wiki](https://en.wikipedia.org/wiki/Enterprise_resource_planning))
 
 **ETL** (db): Extract Transform and Loading tool. See [[data_wh]]
