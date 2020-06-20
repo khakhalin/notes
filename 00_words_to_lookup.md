@@ -32,7 +32,6 @@ https://arxiv.org/pdf/2003.11038.pdf
 Deformable Style Transfer
 
 # Algos and top priorities
-* perceptual loss
 * How to prove that both entropy and gini coeff max when all $p_i$ are the same and = 1/n?
 * write backprop on a piece of paper
 * Code linear regression manually

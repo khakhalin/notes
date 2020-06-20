@@ -240,6 +240,14 @@ Gilboa, D., & Gur-Ari, G. (2019). Wider Networks Learn Better Features. arXiv pr
 https://arxiv.org/pdf/1909.11572.pdf
 Google. Train a network (they used MNIST), do UMAP of activations, find groups of neurons that together encode useful features, visualize them. Reasonable approach to understanding networks.
 
+Simonyan, K., Vedaldi, A., & Zisserman, A. (2013). Deep inside convolutional networks: Visualising image classification models and saliency maps. arXiv preprint arXiv:1312.6034.
+https://arxiv.org/pdf/1312.6034.pdf
+Features visualization.
+
+Mahendran, A., & Vedaldi, A. (2015). Understanding deep image representations by inverting them. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 5188-5196).
+[final pdf](https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Mahendran_Understanding_Deep_Image_2015_CVPR_paper.pdf)
+Feature inversion (Images, CNNs)
+
 # Tickets, distillation, transfer
 #ticket
 

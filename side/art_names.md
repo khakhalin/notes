@@ -47,6 +47,7 @@ Sources
 Contemporary
 * Ian McQue - obviously
 * Fred Ingrams - obviously
+* Pascale Rentsch - abstract expressionist landscapes: reeds, flowers, shrubs
 * Colin Bigelow - geometrized British landscapes, post-60s, post-computery
 * Chen Huimin - magic glowing flowers
 * Sue Nichol - British towns, geometrized in a rather impressionistic fashion
