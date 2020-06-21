@@ -34,6 +34,8 @@ Deformable Style Transfer
 # Algos and top priorities
 * How to prove that both entropy and gini coeff max when all $p_i$ are the same and = 1/n?
 * write backprop on a piece of paper
+* "Good Enough" architecture: https://www.youtube.com/watch?v=PzEox3szeRc
+* "Mastering chaos" - Netflix microservices: https://www.youtube.com/watch?v=CZ3wIuvmHeM
 * Code linear regression manually
 * Code logistic regression manually
 * Why autoencoders use KL and not L2 as loss? What's the logic of when KL is used? Older papers, like [[Hinton2006dim]] used cross-entropy. Why?
@@ -193,13 +195,11 @@ Every solution depends on parameters of scale: amount of data, n users, requests
 * Concurrency, threads, deadlocks, starvation
 * https://en.wikipedia.org/wiki/Database_transaction
 * https://en.wikipedia.org/wiki/Database_normalization
-* https://en.wikipedia.org/wiki/Consistency_(database_systems)
 * https://en.wikipedia.org/wiki/Document-oriented_database
 * https://en.wikipedia.org/wiki/Graph_database
 * ACID transactions
 * https://en.wikipedia.org/wiki/Polyglot_persistence
 * https://en.wikipedia.org/wiki/Object-relational_impedance_mismatch
-* https://en.wikipedia.org/wiki/Eventual_consistency
 
 **Practicality - web**
 * Bloom filters and count-min sketch

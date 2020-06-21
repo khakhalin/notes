@@ -4,9 +4,11 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 
 # AB
 
-**ACID** (db): Atomic, Consistent, Isolated, Durable. See: [[database]].
+**ACID** (db): Atomic, Consistent, Isolated, Durable. An opposite of BASE. See: [[database]], [[db_consistency]]
 
 **Bagging** (ml): the simplest way to create an ensemble of classifiers using an algorithm: split data into bags (with replacement), train a different model on each of them. Final prediction = mean of all predictions. [ref](https://analyticsindiamag.com/primer-ensemble-learning-bagging-boosting/). See [[05_Ensembles]].
+
+**BASE** (db): basically Available, Soft state, Eventually consistent (a silly backronym of an antonym to ACID). See [[db_consistency]], [[database]]
 
 **BIC** (stats): Bayes Information Criterion, an approach to model selection. To be described (for now, [wiki](https://en.wikipedia.org/wiki/Bayesian_information_criterion)).
 
@@ -39,6 +41,8 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 **Document store** (db): instead of rows, returns XML documents or something similar. [wiki](https://en.wikipedia.org/wiki/Document-oriented_database)
 
 **Drop-in replacement** (prog): Replacing part of the code without rewriting anything else. Aka "bug for bug compatibility" (drop-in will only work if all idiosynctratic bugs match exactly).
+
+**DSS** (db): Decision Support System. Executive dashboards, medical diagnosis systems etc.
 
 **Dynamic programming** (prog): Recursion (or some other form of divide-and-conquer) + memoization (to never calculate the same sub-problem twice).
 
@@ -130,7 +134,7 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 
 **OLAP** (db): Online analytical processing. An approach to business analytics that involves quering with slicing, consolidation (aggregation) and drill-down (going to the details). OLAP systems are mostly optimized for reading, and apparently are not too scalable (compared to [[data_wh]]) [wiki](https://en.wikipedia.org/wiki/Online_analytical_processing)
 
-**OLTP** (db): Online Transaction Processing. A kind of an antonym for OLAP, as online transactions imply lots of writing (not only reading), and higher volume. [wiki](https://en.wikipedia.org/wiki/Online_transaction_processing)
+**OLTP** (db): Online Transaction Processing. A kind of an antonym for OLAP, as OLTP (online transactions) implies lots of writing (not only reading), and higher volume. [wiki](https://en.wikipedia.org/wiki/Online_transaction_processing)
 
 **Petri net** (math): a way to model discrete dynamic systems via a directed bipartite graph with 2 types of nodes: places and transitions. Tokens (agents?) can accumulate at places (states, circles), until a transition (bar) fires (consumes input tokens, and creates output tokens). Because of that, tokens inherently interact with each other. May be deterministic or not. [wiki](https://en.wikipedia.org/wiki/Petri_net)
 
