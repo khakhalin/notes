@@ -4,8 +4,7 @@ aka **Data Cleansing**, including **Data Scrubbing**
 
 #tools #db
 
-See also:
-* [[data_wh]]
+See also: [[data_wh]], [[database]]
 
 **Data cleansing** involves identifying duplicates, data inconsistencies, and then marking them for verification, or fixing them. A catch-all term that may include things like simply ignoring bad data.
 

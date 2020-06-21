@@ -1,4 +1,4 @@
-# Courses, books, and links
+# Courses, books, links
 #book
 
 # Online resources
@@ -79,8 +79,9 @@ Job-search specific materials:
 * [Numbeo "cost of living" indices](https://www.numbeo.com/cost-of-living/rankings.jsp) - to scale salary expectations for the location
 * [Coding interviews for dummies](https://www.freecodecamp.org/news/coding-interviews-for-dummies-5e048933b82b/), including curious links to [pramp](https://www.pramp.com/)
 
-# Courses
+# Online courses
 * [Google Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course/) - a really good introduction for complete noobs 
+* [Theory of computation](https://www.youtube.com/playlist?list=PL601FC994BDD963E4) - Youtube
 * [Dynamical systems](https://www.youtube.com/playlist?list=PL8erL0pXF3JZqdlYIfTTyibOqSqwzRdVV) - Youtube course by Robert Ghrist 
 * [Stanford, linear dynamical systems](http://stanford.edu/class/ee363/lectures.html) (Stephen Boyd) - includes stochastic control, Kalman filter, Lyapunov theory
 * [Linear algebra by Gilbert Strang](https://www.youtube.com/playlist?list=PLE7DDD91010BC51F8) - Youtube from MIT. Everybody loves it, as it achieves a beautiful balance between staying extremely practical, concise, but at the same time giving many proofs (or "almost proofs", extreme-physics style, like for good cases, with simplifying assumptions etc). MIT also has [notes for each lecture](https://ocw.mit.edu/courses/mathematics/18-06sc-linear-algebra-fall-2011/syllabus/) (not in one pdf, but easy to find).

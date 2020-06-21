@@ -1,10 +1,11 @@
 # System Design
 
-#tools #system #bib #interview
+#tools #systems #bib #interview
 
 See also:
 * [[job_search]]
 * [[database]]
+* [[nosql]]
 
 # Web services
 

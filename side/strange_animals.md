@@ -1,7 +1,7 @@
 # Strange creatures
 A collection of weird animals (and plants) that make you think "how come I've never head about it!"
 
-#fun #bio
+#side #bio
 
 That plant that looks like a blob
 Those giant unicellular plants

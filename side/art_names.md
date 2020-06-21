@@ -2,7 +2,7 @@
 
 Just a list of names (of artists) that are always inspirational. Something to feed to Google Images Search in a dark moment.
 
-#art #fun
+#art #side
 
 Older
 * Peter Brook - The Pennine Painter

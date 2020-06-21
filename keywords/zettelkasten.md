@@ -9,16 +9,15 @@ Related:
 Clear 2019
 https://writingcooperative.com/zettelkasten-how-one-german-scholar-was-so-freakishly-productive-997e4e0ca125
 
-A good description of how zettelkasten works. The main idea is linking cards. So, to paraphrase, **the rules** seem to be:
-1. Always add new stuff to the system. Don't take other notes, in other notebooks and places. Feed the Zettelkasten!
-2. Don't be afraid to create new notes. Don't try to impose a pre-conceived rigid structure. Add new notes (nodes), and let the graph live.
-3. Always link new nodes to existing nodes. Don't leave them alone, integrate them into the system, by linking to stuff.
-4. Never just cite; always either comment liberally, or rephrase. Treat it as a conversatoin, ot shape it into an external memory.
+A good description of how zettelkasten works. The main idea is linking cards. To paraphrase, **the rules** seem to be:
+1. Constantly add new material to the system. Don't take notes anywhere else, in other notebooks and places. Always feed the Zettelkasten!
+2. Don't be afraid to create new notes. Don't try to impose a pre-conceived rigid structure on your notes. Just add new notes (nodes), and let the graph live.
+3. Always link new nodes to existing nodes. Don't leave them hanging alone; integrate them into the system with links.
+4. Never just cite stuff; always either comment liberally, or rephrase. Treat it as a conversatoin; shape it into an external memory.
 
 Some **asides and consequences**:
-* As an aside: tags are good, but limiting. Still it's probably a good idea to at least tag any new card.
-* Aside to aside: at this point I don't know how to tag this one ;)
-* In Zettlr (as in paper card version) direct (outcoming links) are clearly visible, while incoming links are hidden. Still, unlike for paper notes, in Zettlr you can fetchc the name of this card, and put it in the search box. You'll get all cards linking this card.
+* Tags are good, but limiting. Still, at the very least, tag every card you create.
+* In Zettlr (as in paper card version) direct (outcoming links) are clearly visible, while incoming links are hidden. Still, unlike for paper notes, in Zettlr you can fetch the name of this card, and put it in the search box. You'll get all cards linking this card.
 * My current system of naming cards after papers (author-year-topic) is actually still not complete Zettelkasten, as it retains (and follows) the desire to keep control of card readability. The original system by Luhmann allowed him to let go of this fear of control, and just inject information into the system, relying on the power of links.
 
 # References about Luhmann
@@ -45,7 +44,7 @@ http://luhmann.surge.sh/communicating-with-slip-boxes
 
 For this system to work, it should feel like a communication. For it to feel like a communiation, it should be different (have a different schema) than whatever you have in your mind as you use the Zettelkasten, or try to use it to write. There has to be an element of surprise. 
 
-Advices against "filing in order", as in a book catalog, precisely because it would bind you to a certain system of thinking for decades. Instead, just file them one after another, with incremental address-liek numbers. _Which implies that either I have misunderstood the structure of the archive above, or that the archive was restructured when it was put online, to make reading easier, or that Luhmann actually was more systematic than he wanted to be, and than he recommended._
+Advices against "filing in order", as in a book catalog, precisely because it would bind you to a certain system of thinking for decades. Instead, just file them one after another, with incremental address-like numbers. _(But that said, while Luhmann wrote about the danger of overstructuring the archive, his archive was still structured in a thematic tree.)_
 
 He also had bibliographic notes (that only contan info about the books), and then cards dedicated to these books, once he read them. At which point, obviously, the former link to the latter. But at the same time, different thoughts and ideas from the same book should be split across different cards, so that, ideally, they would aquire a life of their own. Because some will be involved into clusters of cards, while some will be forgotten, or maybe even lost, and it is OK.
 

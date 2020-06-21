@@ -1,6 +1,6 @@
 # Drawing
 
-#bib #art #fun
+#bib #art #side
 
 Best lessons from **Draw A Box**:
 * https://drawabox.com/lesson/2/organicintersections

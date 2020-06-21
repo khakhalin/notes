@@ -2,7 +2,7 @@
 
 A collection of links and short notes.
 
-#fun #evolution
+#side #evolution
 
 Dunsworth, H. M. (2020). Expanding the evolutionary explanations for sex differences in the human skeleton. Evolutionary Anthropology: Issues, News, and Reviews.
 https://digitalcommons.uri.edu/cgi/viewcontent.cgi?article=1036&context=soc_facpubs

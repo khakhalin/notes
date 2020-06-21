@@ -1,6 +1,6 @@
 # German-learning resources
 
-#fun #language
+#side #language
 
 Dictionary:
 https://www.linguee.com/

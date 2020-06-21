@@ -3,8 +3,10 @@
 #tools #bib #db
 
 Parents: [[01_Tools]], [[system_design]], [[dictionary]] - many names are still sitting there
+
 See also:
 * [[data_wh]] - Data Warehouse
+* [[nosql]]
 
 # Principles and guarantees
 

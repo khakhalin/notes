@@ -1,6 +1,6 @@
 # Random bookmarks
 
-#fun
+#side #bib
 
 # Temp-dumps
 
