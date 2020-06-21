@@ -1,5 +1,14 @@
 # Linear algebra
-#linalg
+
+#math #linalg #bib
+
+Subtopics:
+* [[la_net]] - Linear algebra for graphs
+* [[la_sig]] - Linalg for signal processing
+
+Articles: [[dual_basis]]
+
+# Intro
 
 **Linear** means f(ax) = a f(x), and f(a+b) = f(a)+f(b). Examples of linear: negation, reversal, running sum, demeaning (subtract mean(x) from all x_i elements of x).
 
@@ -13,7 +22,8 @@ Examples:
 * Difference matrix: the opposite of that, and not square, as takes n-long x, and outputs n-1-long with elements x2-x1 etc. Elements of this matrix are like -1 1 shaped into a diagonal, which fits fine as the matrix has a shape of (n-1)n.
 * First-order Taylor approximation: f(x) ~ f(x0) + Df(x0)(x-x0) where D = [[Jacobian]], or matrix of all possible derivatives of coordinates of f over coordinates of x: Df_ij = df_i/dx_j . Obviously affine.
 
-## Examples of linear equations
+# Examples of linear equations
+
 Ax = b means that b is a linear combination of columns in A. If x like that exists, then b can be represented via columns of A. An example: **Polynomial interpolation**: $y_i = \sum c_k x_i^k$ . If we consider  A with elements a_ij = x_i^j , this turns into a matrix equation. And an A like that is called **Vandermonde matrix**.
 
 **Markov model**, aka linear dynamics model : states in next moment of time x(t+1) = Ax(t). A is a matrix of transitions. (There may also be an input with matching dimensions). Example of a model: pandemics (not as a network model, but a basic model of transitions: health -> infected -> either recovered or dead).

@@ -1,10 +1,11 @@
 # Information and entropy
 
-#todo
+#todo #math #entropy
+
 Stone, J. V. (2018). Information Theory: A Tutorial Introduction. arXiv preprint arXiv:1802.05968.
 https://arxiv.org/abs/1802.05968
 
-## Entropy
+# Entropy
 
 For an event x with probability p(x), the amount of information obtained if we learned that the event happened is -lg(p(x)). Nice property, because if two independent events happen together, probabilities multiply, and so informations add. lg() is a base-2 logarithm.
 
@@ -13,7 +14,7 @@ Entropy of a random variable = expectation of entropy of a message (expectations
 References:
 * Jason Brownlee about [entropy](https://machinelearningmastery.com/what-is-information-entropy/), [cross-entropy](https://machinelearningmastery.com/cross-entropy-for-machine-learning/) (confusing)
 
-## Cross-entropy
+# Cross-entropy
 
 Definition: H(p,q) = -∑P(x)∙lg(Q(x)), or integral for continuous.
 
@@ -23,7 +24,7 @@ The Information Theory interpretation: the expected message length when transmit
 
 Not to be confused with joint entropy, even tho some people use similar or same notation for it H(p,q). Joint entropy is just an entropy of a vector variable composed of two variables that are "joined"; nothing fancy.
 
-## KL divergence
+# KL divergence
 
 Kullback–Leibler Divergence between 2 probability distributions P and Q: 
 D(P||Q) = -∑p∙lg(q/p) . 
@@ -43,7 +44,7 @@ For uniform P(x) for every x we have max entropy, and by updating from it to P, 
 
 KL divergence is also related to mutual information: I(X;Y) = D_KL( P(X,Y) || P(X) P(Y) ) . That is, how much extra information you have, if you know how events from X and Y match with each other, compared to if you only knew them separately).
 
-## JS divergence
+# JS divergence
 
 Most commonly used symmetric alternative to LK ([wiki](https://en.wikipedia.org/wiki/Jensen%E2%80%93Shannon_divergence)). 
 JSD(P||Q) = ( LK(P||M) + LK(Q||M) )/2

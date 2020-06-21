@@ -148,7 +148,7 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 
 **PySpark** (db): a Pythonic language (wrapper) to run on a JVM and interact with Spark. Coz it's a wrapper, it doesn't like dynamic typing that Python tolerates, but other than that is mostly similar.
 
-**QR Factorizatoin** (math): A = QR where Q is orthonormal, and R is upper triangular. Achieved via Gram-Schmidt algorithm (aka elimination). See [[la_01]].
+**QR Factorizatoin** (math): A = QR where Q is orthonormal, and R is upper triangular. Achieved via Gram-Schmidt algorithm (aka elimination). See [[linalg]].
 
 # R
 

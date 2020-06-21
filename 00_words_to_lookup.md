@@ -226,7 +226,7 @@ Every solution depends on parameters of scale: amount of data, n users, requests
 * Laplacian short video: https://www.youtube.com/watch?v=oEq9ROl9Umk
 * that way to create ranking from asymmetric preferences via graphs
 * Laplacian operator (create a new page for basic vector calc) [1h youtube](https://www.youtube.com/watch?v=oEq9ROl9Umk), [wiki](https://en.wikipedia.org/wiki/Laplace_operator)
-* dual bases: why is this term a thing? How does it help? Describe here: [[la_01]]
+* dual bases: why is this term a thing? How does it help? Describe here: [[linalg]]
 * How come stochastic gradient descent provides regularization? Why adding bagging to GBM, for example, can be considered a case of regularization? [[05_Ensembles]].
 * Do we have 2 different descriptions from Gram-Smidt: in [[la_01]] and in [[02_Regression]]? Can we isolate and combine?
 * Figure out that connection between ridge regression and and PCA that I've started in the ridge regression chapter! Seems important and reasonably doable, no? [[02_Regression]].

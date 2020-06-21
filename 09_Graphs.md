@@ -1,6 +1,10 @@
-# Graphical Methods
+# Graphical Methods in ML
 
 #net #bib #graphs
+
+See also:
+* [[graph_th]] - graph theory
+* [[algos_graph]] - algorithms on graphs
 
 https://medium.com/dair-ai/an-illustrated-guide-to-graph-neural-networks-d5564a551783
 

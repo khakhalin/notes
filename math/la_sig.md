@@ -1,7 +1,10 @@
 # LA for signal processing
+
 #linalg
 
-## Convolution
+Parents: [[linalg]]
+
+# Convolution
 
 $c_i = \sum_{k=1}^n a_{i-k+1} b_k$ . For example, for n = len(b) = 3, c3 = a3b1 + a2b2 + a1b3 , so b goes backwards in time. On edges (where b doesn't fit), it's logical to just crop it (so use min(n,legal) for upper target)
 

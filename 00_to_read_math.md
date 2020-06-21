@@ -46,6 +46,12 @@ http://karpathy.github.io/2015/05/21/rnn-effectiveness/
 Bahri, Y., Kadmon, J., Pennington, J., Schoenholz, S. S., Sohl-Dickstein, J., & Ganguli, S. (2020). Statistical mechanics of deep learning. Annual Review of Condensed Matter Physics.
 https://www.annualreviews.org/doi/pdf/10.1146/annurev-conmatphys-031119-050745
 
+Poggio, T., Banburski, A., & Liao, Q. (2020). Theoretical issues in deep networks. Proceedings of the National Academy of Sciences.	
+https://www.pnas.org/content/pnas/early/2020/06/08/1907369117.full.pdf
+
+Rolnick, D., & Tegmark, M. (2017). The power of deeper networks for expressing natural functions. arXiv preprint arXiv:1705.05502.
+https://arxiv.org/abs/1705.05502
+
 Identity Crisis: Memorization and Generalization Under Extreme Overparameterization 
 Chiyuan Zhang, Samy Bengio, Moritz Hardt, Michael C. Mozer, Yoram Singer
 https://openreview.net/forum?id=B1l6y0VFPr
@@ -56,6 +62,9 @@ Olah, C., Satyanarayan, A., Johnson, I., Carter, S., Schubert, L., Ye, K., & Mor
 https://distill.pub/2018/building-blocks/
 Google. About reverse-tracking through a visual network via optimizing inputs?
 Should be placed here: [[Olah2018interpretability]]
+
+Liao, Q., Miranda, B., Rosasco, L., Banburski, A., Liang, R., Hidary, J., & Poggio, T. (2019). Generalization Puzzles in Deep Networks.
+https://openreview.net/pdf?id=BkelnhNFwB
 
 Gatys, L. A., Ecker, A. S., & Bethge, M. (2015). A neural algorithm of artistic style. arXiv preprint arXiv:1508.06576.
 https://arxiv.org/pdf/1508.06576.pdf
@@ -71,15 +80,11 @@ Mordvintsev, A., Randazzo, E., Niklasson, E., & Levin, M. (2020). Growing Neural
 https://distill.pub/2020/growing-ca/
 Google. A paper and a sim, two in one!
 
-Raschka, S., Patterson, J., & Nolet, C. (2020). Machine Learning in Python: Main developments and technology trends in data science, machine learning, and artificial intelligence. arXiv preprint arXiv:2002.04803.
-https://arxiv.org/abs/2002.04803
-
-Cohen, T., & Welling, M. (2016, June). Group equivariant convolutional networks. In International conference on machine learning (pp. 2990-2999).
-https://arxiv.org/pdf/1602.07576.pdf
-Group-CNNs: an extention of CNNs that are not only translational, but rotation and flip-symmetric. For a neuro person, it seems to be a no-brainer that they should be a strictly better solution than common CNNs. So, are they?
-
 A list of most influential DL papers of past decade, with pics and summaries!
 https://leogao.dev/2019/12/31/The-Decade-of-Deep-Learning/
+
+Raschka, S., Patterson, J., & Nolet, C. (2020). Machine Learning in Python: Main developments and technology trends in data science, machine learning, and artificial intelligence. arXiv preprint arXiv:2002.04803.
+https://arxiv.org/abs/2002.04803
 
 More info on decision trees, pruning
 https://towardsdatascience.com/the-complete-guide-to-decision-trees-28a4e3c7be14
@@ -174,6 +179,9 @@ Simonyan, K., & Zisserman, A. (2014). Very deep convolutional networks for large
 https://arxiv.org/pdf/1409.1556.pdf
 40k citations. Seminal in some way?
 
+The Topology of Neural Networks, Part 2: Compositions and Dimensions. 2020. Jesse Johnson. Blog post.
+https://ldtopology.wordpress.com/2019/03/07/the-topology-of-neural-networks-part-2-compositions-and-dimensions/#more-4903
+
 # Why networks work?
 
 Milne, T. (2019). Piecewise strong convexity of neural networks. In Advances in Neural Information Processing Systems (pp. 12953-12963).
@@ -183,6 +191,7 @@ Yang, G. (2019). Wide Feedforward or Recurrent Neural Networks of Any Architectu
 https://arxiv.org/abs/1910.12478
 
 #variance
+
 Belkin, M., Hsu, D., Ma, S., & Mandal, S. (2019). Reconciling modern machine-learning practice and the classical bias–variance trade-off. Proceedings of the National Academy of Sciences, 116(32), 15849-15854.
 https://arxiv.org/abs/1812.11118
 
@@ -215,6 +224,12 @@ Seems to be one of the original network distillation papers (800 refs)
 Marc Finzi, Samuel Stanton, Pavel Izmailov, Andrew Gordon Wilson (2020). Generalizing Convolutional Neural Networks for Equivariance to Lie Groups on Arbitrary Continuous Data
 https://arxiv.org/pdf/2002.12880.pdf
 How to build convolution-like networks for data that has different invariants than rotation and translation. (Mathy, but try?)
+
+Johnson, J. (2018). Deep, skinny neural networks are not universal approximators. arXiv preprint arXiv:1810.00393.
+https://arxiv.org/abs/1810.00393
+
+Poggio, T., Liao, Q., & Banburski, A. (2020). Complexity control by gradient descent in deep networks. Nature communications, 11(1), 1-5.
+https://www.nature.com/articles/s41467-020-14663-9
 
 # Interpretability
 
@@ -368,16 +383,24 @@ https://en.wikipedia.org/wiki/Sparse_dictionary_learning
 Makhzani, A., & Frey, B. (2013). K-sparse autoencoders. arXiv preprint arXiv:1312.5663.
 https://arxiv.org/pdf/1312.5663.pdf
 
-# Architecture search
+# Architectures and Arch search
+
 #archsearch
 
 Ha, D., Dai, A., & Le, Q. V. (2016). Hypernetworks. arXiv preprint arXiv:1609.09106.
 https://arxiv.org/pdf/1609.09106.pdf
 Networks that output weights of a network.
 
+Cohen, T., & Welling, M. (2016, June). Group equivariant convolutional networks. In International conference on machine learning (pp. 2990-2999).
+https://arxiv.org/pdf/1602.07576.pdf
+Group-CNNs: an extention of CNNs that are not only translational, but rotation and flip-symmetric. For a neuro person, it seems to be a no-brainer that they should be a strictly better solution than common CNNs. So, are they?
+
 Mishkin, D., Sergievskiy, N., & Matas, J. (2017). Systematic evaluation of convolution neural network advances on the imagenet. Computer Vision and Image Understanding, 161, 11-19.
 https://arxiv.org/abs/1606.02228
 A paper posed as an excellent, archetypal, systematic ablation study that really went down to the core of what aspects of a certain architecture are critical, and which ones are not. As an example of good, solid research methodology.
+
+Li, Z., Wang, R., Yu, D., Du, S. S., Hu, W., Salakhutdinov, R., & Arora, S. (2019). Enhanced convolutional neural tangent kernels. arXiv preprint arXiv:1911.00809.
+https://arxiv.org/abs/1911.00809
 
 Liu, H., Simonyan, K., Vinyals, O., Fernando, C., & Kavukcuoglu, K. (2017). Hierarchical representations for efficient architecture search. arXiv preprint arXiv:1711.00436.
 https://arxiv.org/pdf/1711.00436.pdf

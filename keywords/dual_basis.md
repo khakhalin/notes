@@ -1,5 +1,8 @@
 # Dual basis
+
 #linalg
+
+Parent: [[linalg]]
 
 **Dual space** (V*) for a space V, is defined as a space of all linear functionals f:V→ℝ. 
 

@@ -1,7 +1,15 @@
 # Linear algebra and networks
-#net #linalg
 
-## Graph representations
+#net #linalg #bib #math
+
+Parents and siblings:
+* [[linalg]] - linear algebra
+* [[graph_th]] - graph theory of discrete kind
+* [[algos_graph]] - algorithms on graphs
+* [[09_Graphs]] - ML for graphs
+
+# Graph matrix representations
+
 **Adjacency matrix** (obv.). For a directed graph powers of A (A^k) give the number of paths length k that lead from node i to j.
 
 **Laplacian matrix**: L = D-A where A = adjacency, D = degree matrix (diagonal, with 0 at i≠j and d_ii = degree of i_th node). For oriented graphs, apparently, there exist two different Laplacians, depending on whether you choose to work with in-degree or out-degree? _What does it mean in practice?_
@@ -22,6 +30,6 @@ Dirichlet sum seems to be related to Laplacian quadratic form, but for now I'm n
 
 > According to Wikipedia, there are like 6 alterenative formulations for a Laplacian, but let's park it for now.
 
-## Graph Spectra
+# Graph Spectra
 
 #todo
