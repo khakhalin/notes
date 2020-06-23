@@ -679,6 +679,10 @@ Original paper by Hinton, 1k citations.
 Artificial Intelligence, Values and Alignment. Iason Gabriel. 2020
 https://deepmind.com/research/publications/Artificial-Intelligence-Values-and-Alignment
 
+Arjovsky, M., Bottou, L., Gulrajani, I., & Lopez-Paz, D. (2019). Invariant risk minimization. arXiv preprint arXiv:1907.02893.
+https://arxiv.org/abs/1907.02893
+On how to make ML models less racist (some mathematical way to eliminate spurious correlations)
+
 Turing, A. M. (1950). Computing machinery and intelligence. In Parsing the Turing Test (pp. 23-65). Springer, Dordrecht. 2005.
 http://www.geielettronica.it/images/pdf/turing.pdf
 Said to be a really nicely written paper, seminal, good examples, and with 13k citations.

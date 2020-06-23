@@ -35,7 +35,7 @@ Deformable Style Transfer
 * How to prove that both entropy and gini coeff max when all $p_i$ are the same and = 1/n?
 * write backprop on a piece of paper
 * "Good Enough" architecture: https://www.youtube.com/watch?v=PzEox3szeRc
-* "Mastering chaos" - Netflix microservices: https://www.youtube.com/watch?v=CZ3wIuvmHeM
+* "Mastering chaos" - Netflix microservices: https://www.youtube.com/watch?v=CZ3wIuvmHeM	
 * Code linear regression manually
 * Code logistic regression manually
 * Why autoencoders use KL and not L2 as loss? What's the logic of when KL is used? Older papers, like [[Hinton2006dim]] used cross-entropy. Why?
