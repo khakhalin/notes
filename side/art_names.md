@@ -40,6 +40,13 @@ Older
 * Karin Larsson - Svedish interior designer from early 20c that basically invented Ikea and 60s, but better
 * Hilma af Klint - inventor of abstract art (before Kandinsky. But Hildegard von Bingen is also cool)
 
+Icons
+* Natalya Rusetska
+* Ivanka Demchuk
+* Lyuba Yatskiv
+* Ulyana Tomkevych
+* Jerzy Nowosielski
+
 Sources
 * St Anne from the Faras cathedral in Sudan - Nubians invented Anime (the eyes!)
 * Mudlarking - lots of pretty sorted objects from the mud

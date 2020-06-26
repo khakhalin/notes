@@ -12,6 +12,9 @@ When the target is large and slow (like, a collection of food), Levy walks are s
 
 ### Refs
 
+Levy walk simulation:
+https://www.complexity-explorables.org/explorables/anomalous-itinerary/
+
 Levy walks in different animals, overall summary:
 https://www.quantamagazine.org/random-search-wired-into-animals-may-help-them-hunt-20200611/
 
