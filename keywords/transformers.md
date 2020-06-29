@@ -1,4 +1,5 @@
 # Transformers
+
 #attention #text #dl
 
 # Unprocessed bibliography:
@@ -6,11 +7,19 @@
 Peter Clark, Oyvind Tafjord, Kyle Richardson. (2020) Transformers as Soft Reasoners over Language https://arxiv.org/abs/2002.05867
 Show how, once learned on texts, transformers can solve sillogisms (infer T/F of a statement, given a set of statements.)
 
+# Open questions I still have
+* How many words do they process at once? What's the size of the bag? And why cannot I find this information in the original paper?
+* Why position encoding is so weird
+* Why residual connections are a good idea
+* Why decoders are so weird, with this KV from one sourse, and Q from another?
+* Why this masking of self-attention layers in decoders is ever a good idea?
+* How come we ended up with this really weird architecture, and how have we convinced ourselves that it is beautiful and optimal in any sense? Is it really optimal in some way, as our concepts of simplicity and symmetry are wrong, or is it an example of ad-hoc "evolution of human thought", as wild and random as Darwinian evolution?
+
 # Background and history
 
 An alternative to RNNs (summary ref: [1](https://towardsdatascience.com/transformers-141e32e69591)). Text is inherently a stream of signals (words), organized in time, so it makes sense that it should be analyzed by **RNNs**. The problem is that text has long-ish connections (say, objects are elliptically passed from one sentence to another), and RNNs have problems with that (forget, or rather, don't even learn). Then **LSTM** was invented, which improves things, but not enough, as the context still tends to decay exponentially. Also, hard to parallelize, as inputs need to be processed word-by-word. Then they came up with **attention**, by assigning every word a certain "hidden state", and passing it to the entire line (_??? I really not sure how it works_), but still it didn't help enough. The lack of parallelization was the main bottleneck.
 
-But convolutional networks that process info in chunks are highly parallelizable! And the information depth is lower (instead of going through all N elements, activation from the furthest element climbs up the hirarchy through just log N layers). Transformers (developed by Google Research and Google Brain) combine the idea CNNs with attention.
+But convolutional networks that process info in chunks are highly parallelizable! And the information depth is lower (instead of going through all N elements, activation from the furthest element climbs up the hirarchy through just log N layers). **Transformers** (developed by Google Research and Google Brain) combine the idea CNNs with attention.
 
 # Structure
 
@@ -83,13 +92,11 @@ For machine translation, they actually don't just apply the model, but use a thi
 
 >  So I don't think they explore the whole tree to full depth; I think they truncate branches if they exceed combined level of total inprobability. But not sure how it was done in practice. There's a link ("ref 31") below that explains beam search, apparently.
 
-# Open questions I still have
-* How many words do they process at once? What's the size of the bag? And why cannot I find this information in the original paper?
-* Why position encoding is so weird
-* Why residual connections are a good idea
-* Why decoders are so weird, with this KV from one sourse, and Q from another?
-* Why this masking of self-attention layers in decoders is ever a good idea?
-* How come we ended up with this really weird architecture, and how have we convinced ourselves that it is beautiful and optimal in any sense? Is it really optimal in some way, as our concepts of simplicity and symmetry are wrong, or is it an example of ad-hoc "evolution of human thought", as wild and random as Darwinian evolution?
+# Practical examples
+
+* GPT - first version by OpenAI
+* Bert (2018, Google)
+* GPT-2 (2019, OpenAI)
 
 # Criticism
 There are claims that transformers are overrated, and same results may be achieved with simple architectures, and much lower computer:

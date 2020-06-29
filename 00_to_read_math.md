@@ -35,6 +35,11 @@ Saxe, A. M., Bansal, Y., Dapello, J., Advani, M., Kolchinsky, A., Tracey, B. D.,
 https://iopscience.iop.org/article/10.1088/1742-5468/ab3985
 Seems to have struck a nerve (>100 citations in just one month!). And not that hard on math.
 
+Xie, Q., Luong, M. T., Hovy, E., & Le, Q. V. (2020). Self-training with noisy student improves imagenet classification. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 10687-10698).
+https://arxiv.org/abs/1911.04252
+Google. Something weird semi-supervised learning with noisy teachers and distillation. Essentially, it seems that a badly labeled large dataset is better than a well-labeled small dataset, so it's better to train one model on a small dataset, then have it label a huge dataset (even tho many labels will be wrong), and then use this large dataset to train the next model. Or something like that. Weird.
+Stub: [[Xie2020noisy_student]]
+
 Reflections on Innateness in Machine Learning
 Thomas G. Dietterich. Mar 6, 2018.
 https://medium.com/@tdietterich/reflections-on-innateness-in-machine-learning-4eebefa3e1af
@@ -328,10 +333,6 @@ https://arxiv.org/pdf/1805.04770.pdf
 Hossein Mobahi, Mehrdad Farajtabar, Peter L. Bartlett (2020). Self-Distillation Amplifies Regularization in Hilbert Space. https://arxiv.org/abs/2002.05715
 Google. Feeding predictions of network as additional training points serves as regularization (or maybe rather, amplifies existing regularization?), and improves accuracy. Really good visuals, in this paper. In a way, self-distillation may be considered a case of self-supervised learning (almost unsupervised, in a way). But this is a mathy paper. Also a good twitter-thread:
 https://twitter.com/TheGradient/status/1228132843630387201
-
-Self-training with Noisy Student improves ImageNet classification Qizhe Xie, Eduard Hovy, Minh-Thang Luong, Quoc V. Le
-https://arxiv.org/abs/1911.04252
-Google. Something weird semi-supervised learning with noisy teachers and distillation. Essentially, it seems that a badly labeled large dataset is better than a well-labeled small dataset, so it's better to train one model on a small dataset, then have it label a huge dataset (even tho many labels will be wrong), and then use this large dataset to train the next model. Or something like that. Weird.
 
 von Oswald, J., Henning, C., Sacramento, J., & Grewe, B. F. (2019). Continual learning with hypernetworks. arXiv preprint arXiv:1906.00695.
 https://arxiv.org/abs/1906.00695
