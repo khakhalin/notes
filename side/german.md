@@ -17,5 +17,20 @@ https://www.youtube.com/watch?v=vqRWMDv0r78
 
 # Notes
 
-Prepositions that don't separate:
+**Prepositions that don't separate:**
 be ge | er ver zer | ent emp miss
+
+**Schwache Substantive** (they get -n or -en in non-Nominative cases)
+Allmost all are masculine:
+* Types of people (nationalities, ages): Däne, Franzose, Grieche, Bulgare, Ungar, Junge
+* Masculine animals on -e: Affe, Löwe
+* Religion-relatd types of people ending on -t or -d: Atheist, Christ, Protestant
+* Präsident, Prinz
+* Professons on -ge: Archäologe, Ethnologe, Psychologe …
+* Bär, Bauer, Held, Mensch, Philosoph
+
+Weird cases:
+* Herr, Herrn, but Herren in plural
+* Name, Namen, but Namens in Dativ
+* Same as Name: Gedanke, Friede, Glaube, Wille
+* das Herz (the only non-masculine one): das Herz - das Herz - dem Herzen - des Herzens - die Herzen

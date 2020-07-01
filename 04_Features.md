@@ -4,6 +4,7 @@
 
 Subtopics:
 * [[clustering]]
+* [[bib_fairness]] - on practical choice and interpretation of features
 
 # Linear Basis Expansion
 The idea is to go beyond "linear" in linear regression, but retain the spirit of replacing complex and noisy X with a combination of simple, probably smooth functions of fewer parameters. $f(X) = ∑β_j h_j(X)$, where X is our data, β are coefficients, and {h_j(X)} is a set of functions (transformations), each projecting from X-like space to y-like values (ℝ^p → ℝ). So a non-linear transformation of X, followed by a linear model in these new coordinates.

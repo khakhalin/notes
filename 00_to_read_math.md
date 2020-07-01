@@ -251,6 +251,7 @@ https://arxiv.org/abs/1907.02260
 
 Mahendran, A., & Vedaldi, A. (2015). Understanding deep image representations by inverting them. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 5188-5196).
 https://arxiv.org/pdf/1412.0035v1.pdf
+[final pdf](https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Mahendran_Understanding_Deep_Image_2015_CVPR_paper.pdf)
 
 TensorFlow Lattice: Flexible, controlled and interpretable ML
 https://blog.tensorflow.org/2020/02/tensorflow-lattice-flexible-controlled-and-interpretable-ML.html?linkId=82088125
@@ -264,9 +265,9 @@ Simonyan, K., Vedaldi, A., & Zisserman, A. (2013). Deep inside convolutional net
 https://arxiv.org/pdf/1312.6034.pdf
 Features visualization.
 
-Mahendran, A., & Vedaldi, A. (2015). Understanding deep image representations by inverting them. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 5188-5196).
-[final pdf](https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Mahendran_Understanding_Deep_Image_2015_CVPR_paper.pdf)
-Feature inversion (Images, CNNs)
+Doshi-Velez, F., & Kim, B. (2017). Towards a rigorous science of interpretable machine learning. arXiv preprint arXiv:1702.08608.
+https://arxiv.org/abs/1702.08608
+(This is actually about [[bib_fairness]])
 
 # Tickets, distillation, transfer
 #ticket
