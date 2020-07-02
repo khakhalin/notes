@@ -64,13 +64,28 @@ To **raise an error** do: `raise KeyError('Error Message')`, except instead of a
 
 To **handle an error**, do something like this code below. This whole traceback things creates a proper stack of exception handling.
 ```python
+a = 0
 try:
-    x = 1/0
+    x = 1/a
 except KeyError:
     # do something
     tb = sys.exc_info()[2]
     raise SomeOtherException(...).with_traceback(tb)
+finally:
+    # Clean-up part that is always executed
+    del a
 ```
+
+### With
+
+An alternative to `try - except - finally`.	 Relies on the fact that many objects are shipped with methods `__enter__` and `__exit__`: one to create an object, set it up, and return the instance; the other one to gracefully stop and close the object. In practice, I most often see it used with files, and tensorflow objects.
+
+```python
+with LEG() as a:
+    a.move()
+```
+
+Refs: [2006 intro](https://effbot.org/zone/python-with-statement.htm), [official description with examples](https://docs.python.org/3/reference/compound_stmts.html), [another one](https://www.python.org/dev/peps/pep-0343/)
 
 # OOP
 * **Non-local variables**: when defining function within a function, we can make local variables of the outer function become sorta "global" for the inner function, which may be handy. If you only plan to read from this variable, just refer to it as if it's global. If you plan to update it, write `nonlocal var_name` inside the inner function, as if declaring it. After that it won't be masked. 

@@ -5,6 +5,14 @@
 Subtopics:
 * [[clustering]]
 * [[bib_fairness]] - on practical choice and interpretation of features
+* [[smoothing]] - as a type of feature transformation
+
+Dim Reduction
+On dim reduction proper, see below.
+On working with very high dimensions, see:
+* [[curse_dim]] - Dimensionality curse
+* [[umap]] - one key method of clustering
+* [[tsne]] - t-SNE - another key method of clustering
 
 # Linear Basis Expansion
 The idea is to go beyond "linear" in linear regression, but retain the spirit of replacing complex and noisy X with a combination of simple, probably smooth functions of fewer parameters. $f(X) = ∑β_j h_j(X)$, where X is our data, β are coefficients, and {h_j(X)} is a set of functions (transformations), each projecting from X-like space to y-like values (ℝ^p → ℝ). So a non-linear transformation of X, followed by a linear model in these new coordinates.
@@ -18,9 +26,6 @@ The idea is to go beyond "linear" in linear regression, but retain the spirit of
 * **Kernel tricks**: use various functions (kernels) to calculate new synthetic features from old features. For example, distance from a well chosen point in a high-D space would make a useful kernel (see [[RBF]]).
 
 The biggest problems with polynomials is that they are global (non-local), cannot extrapolate, and are unstable. Some alternative that combine mathematical simplicity with good behavior: **piecewise-polynomials**, **splines**, and **wavelets**. All these methods produce a very large **dictionary** of basis functions, and so need further constraints to keep the complexity of the model in check, such as **restriction** (e.g. always the same number of terms in a sum, for addittive functions), **selection** (only retain functions with large enough coefficients), or **regularization**.
-
-# Smoothing
-See: [[smoothing]]
 
 # Variable selection
  
@@ -38,10 +43,12 @@ Basic checklist for variable selection:
 Refs:
 * [[Guyon2003variable]] - review on feature selection (as well as some info on construction). 
 
-# Dimensionality reduction
+# Dimensionality reduction methods
+
 Local methods (like KNN) break down in high-dimensions to to the **curse of dimensionality** ([[curse_dim]]): it becomes impossible to find a good neighborhood to do local averaging.
 
 ## Subspace Methods
+
 **Overview**: define subspaces and assign vectors to classes to minimize the distance between these vectors and these subspaces. Usually distance = acos cosine similarity = acos (v∙proj(v))/v² = acos vPv/v², where P is a projection matrix. PCA is one way to achieve it, but not the only one. But in all cases, the idea is that (Signals) = (Basis)∙(Scores), where Scores can be interpreted as representations.
 
 Several possible possible approaches:
@@ -68,10 +75,3 @@ Why projecting to these ellipsoid-aligned axes maximizes the variance along this
 **Varimax rotation**: orthogonal rotation of PCA results (so components stay orthogonal) that maximizes the share of near-zero coordinates (scores) for points. It tries to rotate points (scores) to the axes, and away from "innards" of each quadrant. Makes points commit to "mostly one axis", instead of being torn between many axes.
 
 **Promax rotation**: similar to varimax, but oblique (with shears, making components non-orthogonal), which allows higher contrasting, and is also cheaper computationally.
-
-# Very High Dimensions
-
-See:
-* [[curse_dim]] - Dimensionality curse
-* [[umap]] - one key method of clustering
-* [[tsne]] - t-SNE - another key method of clustering

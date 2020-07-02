@@ -1,6 +1,6 @@
 # Neuro and behavioral stochasticity
 
-#neuro #bib #freewill #behav
+#neuro #bib #freewill #behav #variance
 
 To find:
 * Info on moths?
@@ -10,6 +10,7 @@ To find:
 Notes:
 * [[Fraenkel1961woodlice]] - about how random motion is a good strategy
 * [[Mitchell2002shell_games]] - about exploration / exploitation in small animals (similar to Levy walks described below)
+* [[randomness]] - what randomness even is? Also randomness in humans
 * [[levy_walks]] - random exploration / exploitation in space, used by various animals during foraging
 
 # Refs

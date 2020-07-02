@@ -32,6 +32,7 @@ https://arxiv.org/pdf/2003.11038.pdf
 Deformable Style Transfer
 
 # Algos and top priorities
+* When to use BatchNormalization() in a network? Why don't we use it always? Or should we use it always? What's the logic here?
 * How to prove that both entropy and gini coeff max when all $p_i$ are the same and = 1/n?
 * write backprop on a piece of paper
 * "Good Enough" architecture: https://www.youtube.com/watch?v=PzEox3szeRc
@@ -271,7 +272,6 @@ Every solution depends on parameters of scale: amount of data, n users, requests
 * Eutoencoders in Keras: https://blog.keras.io/building-autoencoders-in-keras.html
 * figure out how to do automatic hyperparameter optimization on Keras
 * Why rotate pictures (augmentation) if we can just enforce rotationally-symmetric kernels. Is it possible? Is it desirable?
-* What's so eager about eager mode, and why people like it?
 * How to tell the receptive field of a neuron in a deep network? Do they gradient descend on it?
 * Word2vec - how does it work? And does it come pretrained or what?
 * residual blocks - why are they even a good idea? What's the deal here? How can it possibly help?

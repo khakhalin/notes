@@ -1,7 +1,9 @@
 # Linear Regression
+
 **Linear model**: h(x) = (estimation for y) = $∑θ_j x_j$ = xᵀθ, or in matrix form: h = Xθ ~ y. We assume that xᵀ is a row-vector length p+1, with x_0 = 1 (intercept), followed by n "normal" variables on which we regress. The equation above defines a hyperplane in ℝ^p.
 
 ## L2 loss
+
 Loss: J(θ) = ∑(h-y)² across all data points i. Is called **Squared error**, or **squared distance**, or **Mean Squared Error** (MSE), or **Least Squares**. Sensitive to outliers, permissive to small deviations around zero (because of its convex shape). Nice practical illustration from [Google crash course](https://developers.google.com/machine-learning/crash-course/): 2 outliers of 2 are worse than 4 outliers of 1, as 8>4. 
 
 We can minimize this loss by differentiating by θ (partial derivative for each of the coordinates). For one point: 
@@ -95,7 +97,7 @@ So we ended up with 3 terms:
 * Bias: (Eh-Ey)²
 * Irreducable error, aka noise, aka variance of the data: (Ey-y)²
 
-It seems to be somewhat similar to the **precision / recall** situation. If you try to minimize bias (make your classifier cling to the data), you fall at mercy of your training set, and so increase variance. Each particular classifier, understood as an instance produced by some particular set of training data, will cling to this testing data, so all classifiers will be slightly different, if you train on different data. If however you believe that the underlying solution has some constraints to it, you can restrain your classifier, even at a cost of accepting higher bias (Eh-Ey), to ensure that it does not change too widely for different subsets of your testing data. Regularization and the use of simplified, constrained models, achieve that. In this case, for each given training set you'll get higher bias, but lower variance (of your classifier, across all possible training sets), as all models will be more similar to each other (and hopefully also closer to the "ground truth"). A parsimony principle: this logic is guided by an assumption that simpler, more constrained models are better.
+It seems to be somewhat similar to the **precision / recall** situation. If you try to minimize bias (make your classifier cling to the data), you fall at mercy of your training set, and so increase variance. Each particular classifier, understood as an instance produced by some particular set of training data, will cling to this testing data, so all classifiers will be slightly different, if you train on different data. If however you believe that the underlying solution has some constraints to it, you can restrain your classifier, even at a cost of accepting higher bias (Eh-Ey), to ensure that it does not change too widely for different subsets of your testing data. **Regularization** and the use of simplified, constrained models, achieve that. In this case, for each given training set you'll get higher bias, but lower variance (of your classifier, across all possible training sets), as all models will be more similar to each other (and hopefully also closer to the "ground truth"). A parsimony principle: this logic is guided by an assumption that simpler, more constrained models are better.
 
 Whether this effect will be manifest IRL depends on whether it is exacerbated by overfitting (problems of interpolation and extrapolation). When a constrained model tries to cling to the data, it may also diverge in parts of the landscape that have no or few observed training values, driving variance up. (Imagine a textbook picture of a polynomial overfitting here). In this case, low bias ⇒ high variance ⇒ great fit on the training set ⇒  horrible fit on parts of the testing set. This is because variance can be further split into **variance due to sampling** and **variance due to optimization**, and it is the strength of the 2nd component of variance that matters.
 
@@ -151,6 +153,7 @@ Refs:
 There's also a thing called **Forward-Stagewise Regression** that is based on correlations between remaining features and the current residual, and it is just plan horrible.
 
 ## Ridge regression
+
 Also known as **Shrinkage Methods**, closely related to **Tikhonov regularization**. Modern DL name: **L2 regularization** (see DL chapter).
 
 Motivation: Consider Ax = b, and x doesn't exist. In a most typical practical case, it gives a superposition of an over-determined (still unsolvable) problem Aξ = b for the component of x that is in the row-space of A ( ξ = proj(x→RowSpace(A)) ), and so is affected by the actual value of the matrix A, and an under-determined problem A(x-ξ) = 0 for the components x-ξ that are in the null-space of A, orthogonal to the RowSpace(A), and thus projected to 0. (A reminder: null-space is orthogonal to the row-space, as from Ax=0 we can conclude that x is orthogonal too every row of A). But it means that the part x-ξ can be chosen arbitrary without any effect on the value of Ax. So we are free to pick this part in some "nice" fashion, to satisfy some priors, for example, or minimize solution complexity. 
@@ -182,6 +185,7 @@ Refs:
 * ESL p61
 
 ## Lasso and Elastic Net
+
 **L1 regularization**, aka **basis pursuit**, aka **Lasso**: require ∑|θ_i| < t, or add λ∑|θ_i| penalty to the loss (again summing from 1 to p, meaning no punishment for the intercept $θ_0$). Unlike for L2, it has no closed form solution (because abs() is harder to optimize). The word Lasso is actually a weird abbreviation from Least Absolute Shrinkage and Selection Operator.
 
 Overall, while Ridge tends to scale θ_i values down with a coefficient, lasso tends to slide (shift) them towards zero by a certain value, until they bury in 0 and become 0. For an orthonormal X, this can be proven theoretically (ESL p71). The most critical benefit of L1 regularization is that is performs **covariate selection**: when some x_i are strongly correlated, L2 would tend to distribute θ equally between them, while L1 would kill one, and glorify the other.
@@ -193,6 +197,7 @@ There's a generalizaton of both L1 and L2: one can try to use a penalty of λ∑
 **Elastic net penalty**: An mix (weighted sum) of both Ridge and Lasso that can be used to approximate these generalized romboid shapes. It's way easier to calculate, but also shares the ability to set some junk coefficients to exactly 0 (because of pointy points )
 
 ## Least Angle Regression
+
 Similar to stepwise regression, but with penalized coefficients, as in shrinkage. The approach:
 1. Standardize all variables
 2. Set up the residual; initialize it as res = y-intercept

@@ -17,11 +17,18 @@ Three different ways to fit: _Isn't it obsolete now? I think it is actually! At 
 * `fit_generator` - accepts a data generator instead of static data, and in this case it is the Dataset generator object (or your custom function) that specifies the shape, including batch size. With `steps_per_epoch`, you can tell it just how many new data points to generate per epoch. Note that with fit_generator, you'll have an extra dimension for batch in the model, at the inputs level, so for prediction you'd either have to use `predict_generator` (which makes sense if you generate data for it on the fly), or expand x with a leading empty axis using numpy (np.reshape(1, … )), and then np.squeeze(y) the output back to normal.
 * `train_on_batch` - trains on one batch and updates the model.
 
-Some recent advice from FCH:
+Practical advice from FCH:
 1 - Test the parts before you test the whole
 2 - Use `model.summary()` and `plot_model()` to check output shapes and connectivity graph
 3 - Use `run_eagerly=True` in `compile()` to debug training step-by-step
 4 - Use the TF profiler (simple callback) to fix performance issues
+
+# Eager execution
+
+In TF2, enabled by default. To test, check the value of `tf.executing_eagerly()` (should be True).
+
+Refs:
+* Official description: https://www.tensorflow.org/guide/eager
 
 # Selected references
 
