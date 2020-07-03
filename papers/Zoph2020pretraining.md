@@ -3,7 +3,7 @@
 Zoph, B., Ghiasi, G., Lin, T. Y., Cui, Y., Liu, H., Cubuk, E. D., & Le, Q. V. (2020). Rethinking Pre-training and Self-training. arXiv preprint arXiv:2006.06882.
 https://arxiv.org/abs/2006.06882
 
-#self-supervised #image
+#self-supervised #image #transfer
 
 Basic terms:
 * **Pre-training**: train (or half-train) a model on one dataset, then train it on a different dataset. Example: **ImageNet** pre-trained networks (say, to about 85% of max performance).

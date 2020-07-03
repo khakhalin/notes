@@ -32,6 +32,7 @@ https://arxiv.org/pdf/2003.11038.pdf
 Deformable Style Transfer
 
 # Algos and top priorities
+* [[Xie2020noisy_student]] - finish this one first and foremost
 * When to use BatchNormalization() in a network? Why don't we use it always? Or should we use it always? What's the logic here?
 * How to prove that both entropy and gini coeff max when all $p_i$ are the same and = 1/n?
 * write backprop on a piece of paper

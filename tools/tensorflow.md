@@ -6,9 +6,10 @@ Related: [[01_Tools]], [[06_DL]]
 
 Intro concepts:
 * **Tensor object**:  type, shape, and a bunch of numbers. For example, when working with images, we have a 4D structure: image# × W × H × ColorChannels.
-* TF relies on a function that iterates through (features, labels) as tuples. For lazy / parallel execution, instead of directly linking to data, it can receive a data-generating function.
+* TF relies on a function that iterates through (features, labels) as tuples. For parallel (aka lazy) execution, instead of directly linking to the data, it can receive a data-generating function.
 
-**Data Pipeline**: TF can take a Python iterable. If data can be loaded in memory, use `tf.data.Dataset.from_tensors()` or `from_tensor_slices()`. Later, a dataset object may be transformed using various TF methods, like `shuffle()` for reshuffling, or `batch(bath_size)` to create a batched dataset.
+**Data Pipeline**: 
+TF can take a Python iterable. If data can be loaded in memory, use `tf.data.Dataset.from_tensors()` or `from_tensor_slices()`. Later, a dataset object may be transformed using various TF methods, like `shuffle()` for reshuffling, or `batch(bath_size)` to create a batched dataset.
 
 When building the model, for the first layer, set `input_shape` to a tuple describing the dimensions, assuming that the first (silent, unspecified) dimension will be the batch size. TF can also directly 'cosume' Python generators (functions that produce values lazily, using `yield` instead of `return`), although documentation warns that there are some potential traps with this.
 
