@@ -1,13 +1,14 @@
 # Perplexity
+
 #text
 
-See also: [[transformers]]
+See also: [[transformers]], [[10_Text]]
 
-Mostly used with text. Intuitively, in its simplest form, just the inverse of average probability of words in a sentence. Except averaging is geometric:
+Mostly used with text. Intuitively, in its simplest form, just the inverse of geometric-average probability of words in a sentence:
 
 per = P(combination of N words)^(-1/N)
 
-If all words are independent and have the same probability p=1/k, for example, then perplexity = 1/(p^n)^1/n = 1/p = k. So in this case perplexity is ≈ vocabulary size.
+If all words are independent and have the same probability p=1/k, for example, then perplexity = 1/(p^n)^1/n = 1/p = k. So in this case perplexity ≈ vocabulary size.
 
 As multiplying probabilities is lame, usually people do log, sum them, and exp. Except that instead of e^x,  it's more fun to use 2^x.
 

@@ -12,7 +12,7 @@ Related:
 
 Papers:
 * [[Weng2019self-supervised.md]] - a review of sorts
-* [[Yu2020lookback]] - an attempt to improve embeddings in early layers durings the training
+* [[Yu2020lookback]] - graph networks and label propagation for few-shots learning, using embedding from both late and early layers.
 * [[Zoph2020pretraining]] - pre-training on images hurts more often than it helps	
 
 # Embedding layers

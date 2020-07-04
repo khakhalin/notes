@@ -30,3 +30,6 @@ It doesn't seem that sklearn would have a ready plug-and-play version of it. Unl
 # Refs
 
 https://en.wikipedia.org/wiki/Elastic_map
+
+See also:
+https://en.wikipedia.org/wiki/Thin_plate_spline

@@ -44,7 +44,7 @@ Deformable Style Transfer
 * https://en.wikipedia.org/wiki/Universal_approximation_theorem
 * churn prediction problem
 * Bash
-* https://en.wikipedia.org/wiki/Thin_plate_spline
+* https://en.wikipedia.org/wiki/Gated_recurrent_unit
 * https://en.wikipedia.org/wiki/Q-learning - file to [[q-learning]]
 * Visual guide to Evolution strategies: http://blog.otoro.net/2017/10/29/visual-evolution-strategies/ Must, because visual and nice!! See [[gen_alg]]
 * Regular expressions [[regex]], including in Python
