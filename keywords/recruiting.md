@@ -1,6 +1,6 @@
 # Recruiting, hiring, interviewing
 
-#management #bib
+#management #bib #interview
 
 See also: 
 * [[job_search]] - kind of the opposite perspective

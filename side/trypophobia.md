@@ -2,7 +2,7 @@
 
 A phobia of holes.
 
-#cognition
+#cognition #fun
 
 Trypophobia as an urbanized emotion: comparative research in ethnic minority regions of China
 https://peerj.com/articles/8837/
