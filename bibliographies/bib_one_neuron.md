@@ -1,4 +1,5 @@
 # How much can one neuron do?
+
 #bib #neuro
 
 Approximate logic neuron model trained by states of matter search algorithm

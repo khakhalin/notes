@@ -7,11 +7,13 @@ To find:
 * What are those randomized neurons in the hindbrain (or where?) to which one can connect to randomize escapes?
 * Brembs on flying flies?
 
-Notes:
+Related:
+* [[randomness]] - what randomness even is? How to define it?
+* [[levy_walks]] - random exploration / exploitation in space, used by various animals during foraging
+
+Papers:
 * [[Fraenkel1961woodlice]] - about how random motion is a good strategy
 * [[Mitchell2002shell_games]] - about exploration / exploitation in small animals (similar to Levy walks described below)
-* [[randomness]] - what randomness even is? Also randomness in humans
-* [[levy_walks]] - random exploration / exploitation in space, used by various animals during foraging
 
 # Refs
 

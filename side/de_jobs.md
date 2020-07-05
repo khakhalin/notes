@@ -1,4 +1,4 @@
-# IT/AI leads in Germany
+# IT (and AI) leads in Germany
 
 #interview
 
@@ -7,7 +7,12 @@ General links:
 * [More similar discussions](https://www.reddit.com/r/cscareerquestions/comments/17n5a1/getting_in_to_a_cs_career_from_outside_cs/)
 * [FAQ on resumes](https://www.reddit.com/r/cscareerquestions/wiki/faq_resumes)
 
-Germany salary calculator / comparator:
+Average salaries:
+https://www.payscale.com/research/DE/Job=Data_Scientist/Salary
+https://www.payscale.com/research/DE/Job=Software_Engineer/Salary
+About 55 kEur/Y
+
+Germany taxes calculator / comparator:
 https://www.brutto-netto-rechner.info/
 
 Neuromorphic initiative in Dresden:

@@ -2,6 +2,10 @@
 
 #attention #text #dl
 
+Parents: [[10_Text]]
+Papers:
+* [[Vaswani2017attention]] - original main paper
+
 # Unprocessed bibliography:
 
 Peter Clark, Oyvind Tafjord, Kyle Richardson. (2020) Transformers as Soft Reasoners over Language https://arxiv.org/abs/2002.05867

@@ -54,6 +54,10 @@ https://www.annualreviews.org/doi/pdf/10.1146/annurev-conmatphys-031119-050745
 Poggio, T., Banburski, A., & Liao, Q. (2020). Theoretical issues in deep networks. Proceedings of the National Academy of Sciences.	
 https://www.pnas.org/content/pnas/early/2020/06/08/1907369117.full.pdf
 
+One of the original DeepLerning review papers (28k citations!!!)
+LeCun, Y., Bengio, Y., & Hinton, G. (2015). Deep learning. nature, 521(7553), 436-444.
+https://www.nature.com/articles/nature14539
+
 Rolnick, D., & Tegmark, M. (2017). The power of deeper networks for expressing natural functions. arXiv preprint arXiv:1705.05502.
 https://arxiv.org/abs/1705.05502
 

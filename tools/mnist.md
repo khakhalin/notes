@@ -8,7 +8,7 @@ A famous database. Included as a standard dataset in both scikit-learn, and tens
 
 GAN examples, generating inputs for a MNIST classifier:
 * https://www.tensorflow.org/tutorials/generative/dcgan
-* https://towardsdatascience.com/demystifying-gans-in-tensorflow-2-0-9890834ab3d9
+* https://towardsdatascience.com/demystifying-gans-in-tensorflow-2-0-9890834ab3d9 (only visible once a month, due to paywall)
     * Notebook: https://github.com/MonteChristo46/GAN-Notebooks/blob/master/GAN.ipynb
 
 # Core Refs

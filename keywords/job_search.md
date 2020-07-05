@@ -8,6 +8,8 @@ Related pages:
 * [[system_interview]] - system design interviews
 * [[Huyen2019book]] - advice on ML interviews
 * [[ml_questions]] - a horribly long and, some people say, insulting boring list of ML-related interview questions
+* [[behav_interview]] - behavioral interview
+* [[recruiting]] - the opposite side of the story
 
 # Cover letter
 

@@ -2,13 +2,14 @@
 
 #text #bib
 
-### Toolbox of methods and concepts
+**Related methods and concepts:**
 * [[ngram]] - N-grams: low-level feature for text analysis, beyond single words. "Bags" of several (2-3) words.
 * [[tfidf]] - **Text Frequency - Inverse Document Frequency**. A basic approach to ranking documents by their relevance for a given keyword.
 * [[perplexity]] - main measure of language model quality, as well as a good practical objective function during training.
 * [[beam_search]] - a way to go beyound a level of suggesting one word at a time for text generation, by exploring a decision tree.
 * [[stupid_back_off]] - a simplistic Markovian approach to text generation
 * [[word2vec]] - famous word embedding method developed by Google.
+* [[transformers]] - currently popular architecture
 
 # To read:
 
@@ -16,9 +17,11 @@
 * https://ruder.io/state-of-transfer-learning-in-nlp/index.html
 * https://www.aclweb.org/anthology/P19-1334/ 
 
-Two posts about BERT by Jesse Vig:
+Two posts about **BERT** by Jesse Vig:
 * https://towardsdatascience.com/openai-gpt-2-understanding-language-generation-through-visualization-8252f683b2f8
 * https://towardsdatascience.com/deconstructing-bert-part-2-visualizing-the-inner-workings-of-attention-60a16d86b5c1
+BERT itself (a combo of linear and graphical embedding?)
+https://arxiv.org/pdf/1810.04805.pdf
 
 McCoy, R. T., Pavlick, E., & Linzen, T. (2019). Right for the Wrong Reasons: Diagnosing Syntactic Heuristics in Natural Language Inference. arXiv preprint arXiv:1902.01007.
 https://www.aclweb.org/anthology/P19-1334/
