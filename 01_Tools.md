@@ -24,7 +24,7 @@ ML projects, general advice:
 * [[Breck2017testing]] - a rubric for ML project readiness
 
 Other #lifehack(s):
-* [[Clear2019zettelkasten]] - how to properly create and support this knowledge base
+* [[zettelkasten]] - how to properly create and support this knowledge base
 * [How to do citations with Zettlr](https://docs.zettlr.com/en/academic/citations/) - #todo, this must be nice! 
 
 # Good coding habits

@@ -6,6 +6,7 @@ Related:
 * [[JohnMcPhee]] - on his writing system, which is not dissimilar to Zettelkasten
 
 # How One German Scholar Was So Freakishly Productive
+
 Clear 2019
 https://writingcooperative.com/zettelkasten-how-one-german-scholar-was-so-freakishly-productive-997e4e0ca125
 
