@@ -6,15 +6,14 @@ See also:
 * [[graph_th]] - graph theory
 * [[algos_graph]] - algorithms on graphs
 
+Papers:
+* [[Bacciu2019gentlegraph]] - Intro to Graph NNs
+
 https://medium.com/dair-ai/an-illustrated-guide-to-graph-neural-networks-d5564a551783
 
 Benchmarking Graph Neural Networks (2020). Vijay Prakash Dwivedi Chaitanya K. Joshi Thomas Laurent Yoshua Bengio Xavier Bresson
 https://arxiv.org/pdf/2003.00982.pdf
 Looking for which patterns seem to hold for successful graph neural networks. A review.
-
-Bacciu, D., Errica, F., Micheli, A., & Podda, M. (2019). A Gentle Introduction to Deep Learning for Graphs. arXiv preprint arXiv:1912.12693.
-https://arxiv.org/abs/1912.12693
-Must read (seems short and gentle indeed)
 
 Battaglia, P. W., Hamrick, J. B., Bapst, V., Sanchez-Gonzalez, A., Zambaldi, V., Malinowski, M., ... & Gulcehre, C. (2018). Relational inductive biases, deep learning, and graph networks. arXiv preprint arXiv:1806.01261.
 https://arxiv.org/abs/1806.01261

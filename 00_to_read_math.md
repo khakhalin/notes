@@ -27,6 +27,8 @@ https://sci-hub.se/https://doi.org/10.1016/j.cub.2020.01.033
 
 # Intros and top choices
 
+Peyré, G., & PSL, É. N. S. Mathematics of Neural Networks.
+
 Tishby, N., Pereira, F. C., & Bialek, W. (2000). The information bottleneck method. arXiv preprint physics/0004057.
 https://arxiv.org/pdf/physics/0004057.pdf
 2k citations.

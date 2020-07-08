@@ -1,4 +1,5 @@
 # Graphical algorithms
+
 #net #algo
 
 Famous algorithms:
@@ -10,6 +11,7 @@ Famous algorithms:
 See also:
 * [[la_net]] - linear algebra about graphs
 * [[graph_th]] - graph theory (more of gropu theory kind)
+* [[09_Graphs]] - ANNs for graphs
 
 # Basic graph exploration
 
