@@ -4,6 +4,8 @@ Key tags:
 * #halfthere - for projects that are close to completion.
 * #todo - for follow-ups that need to be done
 
+[[Bacciu2019gentlegraph.md]] - current
+
 Videos
 * Conway, the free will theorem: https://www.youtube.com/watch?v=ftIllWczf5w
 * Laplace operator: https://www.youtube.com/watch?v=oEq9ROl9Umk
@@ -33,6 +35,7 @@ Deformable Style Transfer
 
 # Algos and top priorities
 * [[Xie2020noisy_student]] - finish this one first and foremost
+* difference between conda install and pip install
 * When to use BatchNormalization() in a network? Why don't we use it always? Or should we use it always? What's the logic here?
 * How to prove that both entropy and gini coeff max when all $p_i$ are the same and = 1/n?
 * write backprop on a piece of paper
