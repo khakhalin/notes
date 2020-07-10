@@ -1,35 +1,42 @@
-# Anaconda and installing packages
+# Anaconda and packages
 
 #tools
 
-Parent [[python]]
+Parent: [[python]]
 
-# Installing packages
-
-Two key ways:
+Two key ways to install stuff
 * **conda** installs packages written in any language. Makes sure there are no conflicts using a "Satisfiability Solver".
 * **pip** installs python packages. Installs in an "overwrite" mode: recursively installs all downstream dependencies, but doesn't look for overall consistency.
 
-**Environments**
-If, say, Tensorflow and Pytorch have conflicting requirements on versions of everything, we can isolate them in different environments. Conda can create its environments itself; for pip it's possible via some weird tools (venv?).
+## Environments
+
+If, say, Tensorflow and Pytorch have conflicting requirements on versions of everything, we can isolate them in different environments. Conda can create its environments itself; for pip it's possible to use some weird tools (venv?), but it's better to just do pip within a decidated conda environment.
+
+* Create an environment for a package: `conda create -n NAME PACKAGE`. For example `conda create -n tf tensorflow-gpu`
+* Switch: `conda activate NAME`.
+* To go to base: `conda deactivate`
+
+**Jupyter** doesn't seem to be aware of Anaconda environments by default, although apparently it is possible to hack it. Because of that, for now, I'll probably forgo environments. Even though not being able to easily make backup version of a conda state is a pain. _Maybe I can still use environments like that, tho? Like, make a copy of base, them mofidify base, then if it doesn't work, copy from the backup version back to base?_
 
 ## Conda
-
+`
 * List all packages: `conda list`
-* Find all available versions of a certain package: `conda search NAME`
+* Find all available versions of a certain package: `conda search NAME` (same for core python)
 * Figure out which one is installed: `conda list NAME`
 * Force update to a certain version `conda install NAME=VERSION` (like 2.2.0 or smth)
+
+Never do `update all`, or it can ruin your TF installation. Only upgrade point-by-point, and give up easily if any risky conflicts emerge. It's a house of cards.
 
 ## PIP
 
 * Install: `pip install NAME==version`
 * Remoe: `pip uninstall NAME`
 
-Currently removed
-tensorboard
-tensorflow-gpu-estimator
+For Windows GPU work, do something like `pip install tensorflow-gpu==2.2.0`. (Though it defaults to the highest possible value anyways). Conda usually lags behind PIP by a few releases, and it's harder to satisfy its stricter 
 
-grpcio 1.24.3
+# CUDA and technical stuff
+
+To check if CUDA is installed, and if it sees GPU, on conda, do `numba -s`, then scroll to the top (where hardware is described).
 
 # Refs
 

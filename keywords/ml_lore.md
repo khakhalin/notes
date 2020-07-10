@@ -2,11 +2,13 @@
 
 #lifehack
 
-Related: [[06_DL]], [[Breck2017testing]]
+Parent: [[06_DL]]
+Related: [[Breck2017testing]], [[tensorflow]], [[hyperparameters]]
 
 **Deep learning maxims**: ([ref](https://pcc.cs.byu.edu/2017/10/02/practical-advice-for-building-deep-neural-networks/)):
+* Use 80/10/10 split in training / validation / testing tests ([ref](https://medium.com/@staceysvetlichnaya/hyperparameter-search-with-iterative-sweeps-3799df1a4d45))
 * Use [[adam]] with 3e-4 learning rate. Don't try to decay learning rate: ADAM takes care of that.
-* ReLU are best units (except for LSTMs that use tanhs ([ref](http://josh-tobin.com/assets/pdf/troubleshooting-deep-neural-networks-01-19.pdf)))
+* ReLU are best units (except for LSTMs that use tanhs) ([ref](http://josh-tobin.com/assets/pdf/troubleshooting-deep-neural-networks-01-19.pdf))
 * Never use activation function in the last layer (last layer needs to scale)
 * Use bias in every layer
 * Use variance-scaled weight initialization: $\mathcal{N}(0,\sqrt{2/n})$, aka "He et al." (after 2015 paper: [[He2015init]])
@@ -32,6 +34,11 @@ Related: [[06_DL]], [[Breck2017testing]]
 * Find a bunch of incorrect predictions, look for commonalities
 * Make sure you don't softmax outputs to a loss that expects logits or something like that
 * Check for class imbalance in the testing set (compared to training)
+
+**Hyperparameter tuning**
+* Have a strategy (see [[hyperparameters]]), don't chaise idle hopes
+* Come up with a time budget in advance. Ideally, automate, as it takes ~day, so maybe use this time to do something else ([ref](https://medium.com/@staceysvetlichnaya/hyperparameter-search-with-iterative-sweeps-3799df1a4d45))
+* Analyze, visualize, take copious notes. Parallel coordinates with lines colored by end-result is a good way to grap the overall picture ([ref](https://medium.com/@staceysvetlichnaya/hyperparameter-search-with-iterative-sweeps-3799df1a4d45))
 
 **Unit tests for ML**:
 * Unit tests for ML: write a test that takes one step, and compared before and after, or at least check that it changed ([ref](https://medium.com/@keeper6928/how-to-unit-test-machine-learning-code-57cf6fd81765))
