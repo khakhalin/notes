@@ -24,7 +24,7 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 
 **Clique** (math): an all-to-all subgraph within a graph. Two confusing names: **Maximal clique** is just a clique that is not a part of a larger clique (you cannot include one more vertex or ege from a graph, and still have a clique). **Maximum clique** is the largest clique in a graph. Apparently finding cliques, as well as enumerating cliques, is an NP problem with no good solution. [wiki](https://en.wikipedia.org/wiki/Clique_problem), [current best algorithm (hard)](https://www.sciencedirect.com/science/article/abs/pii/S0305054810001504)
 
-**Collaborative filtering** (pipe): a name for what Netflix users do when they watch movies and generate data of "co-occurrence". Probably a pre-DL synonim for Federated Learning?
+**Collaborative filtering** (pipe): a name for what Netflix users do when they watch movies and generate data of "co-occurrence". Similar to Federated Learning. [[collab_filtering]]
 
 **CRM** (business): Customer Relationship Management system. A customer DB + a system to aid conversations (aka "Contact Management": history of conversations etc.) + pipeline tracking (aka Lead management) + analytics and forecasting + tools for within-organization info sharing. ([ref](https://www.salesforce.com/eu/learning-centre/crm/crm-systems/))
 

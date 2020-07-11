@@ -6,7 +6,7 @@ Related: [[01_Tools]], [[06_DL]]
 
 ## Intro concepts
 
-* **Tensor object**:  type, shape, and a bunch of numbers. For example, when working with images, we have a 4D structure: image# × W × H × ColorChannels.
+* **Tensor object**:  type, shape, and a bunch of numbers. For example, when working with images, we have a 4D structure: image# × W × H × ColorChannels. See also: [[tensor]]
 * TF relies on a function that iterates through (features, labels) as tuples. For parallel (aka lazy) execution, instead of directly linking to the data, it can receive a data-generating function.
 
 **Data Pipeline**: 

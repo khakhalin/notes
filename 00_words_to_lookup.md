@@ -35,7 +35,6 @@ Deformable Style Transfer
 
 # Algos and top priorities
 * [[Xie2020noisy_student]] - finish this one first and foremost
-* difference between conda install and pip install
 * When to use BatchNormalization() in a network? Why don't we use it always? Or should we use it always? What's the logic here?
 * How to prove that both entropy and gini coeff max when all $p_i$ are the same and = 1/n?
 * write backprop on a piece of paper
@@ -50,6 +49,7 @@ Deformable Style Transfer
 * https://en.wikipedia.org/wiki/Gated_recurrent_unit
 * https://en.wikipedia.org/wiki/Q-learning - file to [[q-learning]]
 * Visual guide to Evolution strategies: http://blog.otoro.net/2017/10/29/visual-evolution-strategies/ Must, because visual and nice!! See [[gen_alg]]
+* Python decorators
 * Regular expressions [[regex]], including in Python
 * [[umap]]
 * [[tsne]] and how it's different from UMAP
@@ -112,8 +112,7 @@ Deformable Style Transfer
 * refresh "read from a console" and read from file in Python
 * Command line intro: https://learnpythonthehardway.org/book/appendixa.html
 * Lint (pylint) - what is it and why? It seems that it can catch errors, type mismatches etc.
-* Keras heckpoints
-* Keras hyperparameter optimization
+* Keras checkpoints
 * Python collections: deque, Counter, defaultdict etc.
 * Javascript React - how does it look like?
 * Python closures, why they are a thing, what's dangerous about them, and how to use them
@@ -274,7 +273,6 @@ Every solution depends on parameters of scale: amount of data, n users, requests
 # Deep Learning
 * Why drop-out can be considered a type of regularization? What's the intuition, and what's the math?
 * Eutoencoders in Keras: https://blog.keras.io/building-autoencoders-in-keras.html
-* figure out how to do automatic hyperparameter optimization on Keras
 * Why rotate pictures (augmentation) if we can just enforce rotationally-symmetric kernels. Is it possible? Is it desirable?
 * How to tell the receptive field of a neuron in a deep network? Do they gradient descend on it?
 * Word2vec - how does it work? And does it come pretrained or what?
