@@ -6,7 +6,7 @@ Subtopics:
 * [[la_net]] - Linear algebra for graphs
 * [[la_sig]] - Linalg for signal processing
 
-Articles: [[dual_basis]]
+Articles: [[dual_basis]], [[svd]]
 
 # Intro
 

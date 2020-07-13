@@ -17,8 +17,9 @@ https://www.youtube.com/watch?v=vqRWMDv0r78
 
 # Notes
 
-**Prepositions that don't separate:**
-be ge | er ver zer | ent emp miss
+* Prepositions that don't separate: be ge | er ver zer | ent emp miss
+* Those that do (most of the rest): ab an auf aus bei ein los mit nach her hin vor weg zu zurück
+* Those that go both ways: durch hinter über um unter
 
 **Schwache Substantive** (they get -n or -en in non-Nominative cases)
 Allmost all are masculine:

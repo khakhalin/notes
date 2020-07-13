@@ -168,7 +168,7 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 
 **SGD** (ml): Stochastic Gradient Descent. When gradient is calculated for every point, instead of the entire dataset (as for classic, aka batch gradient descent). See: [[Ruder2016descent]]
 
-**Singular Value Decomposition** (math): A = UDV, where U and V are unitary (orthonormal, may be complex), and D is diagonal with d_ii ∈ R, d_ii>0. Dimensions: mn = mm∙mn∙nn. More general than spectral decomposition, as applies to all matrices on C, unlike QDQᵀ that only works for symmetic, or a slightly more general PDP⁻¹ for diagonalizable (sum dim eigenspaces = dim A).
+**Singular Value Decomposition** (math): See: [[svd]]
 
 **SMOTE** (stats): Synthetic Minority Oversampling Technique. A simple approach to oversampling (supplementing) under-represented categories by creating fake points (in pD of variables describing each case), that are linearlly shifted from under-represented points to one of its closest neighbors. [wiki](https://en.wikipedia.org/wiki/Oversampling_and_undersampling_in_data_analysis) 
 
