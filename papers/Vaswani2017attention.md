@@ -10,7 +10,7 @@ Parent: [[transformers]]
 
 The paper introducing **Transformers**
 
-> **Note:** this summary below is realy rough. For a better explanation of transformers, see the main [[transformers]] entry. More info, asides, comments, detective work, etc.
+> **Note:** this summary below is rough and edited. For a smooth explanation of transformers, and this paper, read the main [[transformers]] entry.
 
 5k citations as of 2020, so seminal. I find it quite dry: it doesn't really try to explain the philosophy behind the model (what makes it work), neither does it build the rationale for the model. It just describes the architecture rather systematically, but leaves all conceptual work to the reader.
 

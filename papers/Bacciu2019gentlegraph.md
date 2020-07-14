@@ -35,7 +35,32 @@ To represent the entire graph (ascend from node-level to graph-level) we need **
 
 Three possible architectures here:
 * **Recurrent**. Examples: **Graph Neural Network**, **Graph Echo State Network**, **Gated Graph Neural Network**, **Fast and Deep Graph Neural Network** (apparently, a variety of Echo State actually?).
-* **Feed-Forward**.
+* **Feed-Forward**. Examples: **Neural networks for graphs**. But really it's not that dissimilar to RRNs, just the rules of proparagion change from one layer to another, creating receptive fields.
+* **Constructive Architectures**: similar to FF, but with greedy training of layers (layer by layer). Each layer is assigned (and trained for) a dedicated role. (_By nature, interpretable then? Not a black box?_)
+
+> The notation they use in this paper is really annoying and seems needlessly complicated. A cost for trying to express everything in the most general way possible.
+
+**Attention**: similar to how it works for text, one can separately estimate how important different parts of the story are, and use these estimations as weights when propagating averages (in this case: estimating which neighbors of each node are more  important). See: [[transformers]].
+
+**Sampling** of neighbors is apparently a problem, so in some solutions only some nodes are considered (also helps to make input shapes more predictable). This can also be done via **pooling** with clustering layers. See: [[clustering]]
+
+> What the heck are clustering layers? They reference some "DNGN layer", but Google isn't aware of this term. Is it a typo? Citation given: Zhitao Ying, Jiaxuan You, Christopher Morris, Xiang Ren, Will Hamilton, and Jure Leskovec. Hierarchical graph representation learning with differentiable pooling. In Proceedings of the 32nd Conference on Neural Information Processing Systems (NeurIPS), 2018
+
+Another type of pooling: **Node aggregation** (seems to be the same as **graph condensation**). _But this probably doesn't work for all graphs? Unless you somehow encode the motif-like like properties as a feature vector for each aggregated meta-node. Right?_
+
+Learning criteria:
+* Graph classification
+* Unsupervised classification / clustering
+* Distribution of properties on a graph
+* Link prediction
+* Generative learning / graph reconstruction from representation: GANs and auto-encoder
+* Mutual information between pairs of graphs
+* Community detection
+* Node classification
+
+Open problems (_a sublist of those  I related to_)
+* Time-evolving graphs
+* Hypergraphs (algebraic topology?)
 
 # Key Refs
 

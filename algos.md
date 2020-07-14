@@ -11,8 +11,9 @@ Popular data structures:
 * [[priority_queue]] - priority queue, heap, heap sort
 
 Misc curious algorithms
-* [[lis]] - Longest Increasing Subsequence
 * [[gcd]] - aka "Euclidean algorithm"
+* [[nimbers]] - on effectively solving stone games
+* [[lis]] - Longest Increasing Subsequence
 
 Todo: #todo
 * https://en.wikipedia.org/wiki/Maximum_subarray_problem
