@@ -9,6 +9,7 @@ Famous algorithms:
 * [[min_span_tree]] - minimal spanning tree (Prim and Kruskall)
 
 See also:
+* [[graph_intro]] - basic introduction to graphs
 * [[la_net]] - linear algebra about graphs
 * [[graph_th]] - graph theory (more of gropu theory kind)
 * [[09_Graphs]] - ANNs for graphs

@@ -1,13 +1,20 @@
-# Graphical Methods in ML
+# Graphs and Graphical Methods
 
 #net #bib #graphs
 
-See also:
-* [[graph_th]] - graph theory
-* [[algos_graph]] - algorithms on graphs
+Topics:
+* [[graph_intro]] - Intro to graphs
+* [[graph_properties]] - How to characterize graphs
+* [[algos_graph]] - Classic algorithms on graphs
+* [[graph_th]] - Assorted topics in graph theory
+* [[la_net]] - Linear algebra on graphs
 
 Papers:
 * [[Bacciu2019gentlegraph]] - Intro to Graph NNs
+
+# ToRead:
+
+[[Li2017graph]] -  Gated graph sequence neural networks (started, but never finished)
 
 https://medium.com/dair-ai/an-illustrated-guide-to-graph-neural-networks-d5564a551783
 
@@ -32,12 +39,4 @@ https://arxiv.org/pdf/1803.00816.pdf
 Yaron Lipman - Deep Learning of Irregular and Geometric Data (a clear 30-min presentation)
 https://www.youtube.com/watch?v=fveyx5zKReo
 
-# Convolutional Graph Networks
-
-* [[Li2017graph]] -  Gated graph sequence neural networks
-
 Grover, A., & Leskovec, J. (2016, August). node2vec: Scalable feature learning for networks. In Proceedings of the 22nd ACM SIGKDD international conference on Knowledge discovery and data mining (pp. 855-864).
-
-# Markov Random Fields
-
-.

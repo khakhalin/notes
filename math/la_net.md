@@ -4,17 +4,14 @@
 
 Parents and siblings:
 * [[linalg]] - linear algebra
+* [[graph_intro]] - introduction to graphs
 * [[graph_th]] - graph theory of discrete kind
 * [[algos_graph]] - algorithms on graphs
 * [[09_Graphs]] - ML for graphs
 
-# Graph matrix representations
-
-**Adjacency matrix** (obv.). For a directed graph powers of A (A^k) give the number of paths length k that lead from node i to j.
+For a directed graph, powers of **Adjacency matrix** A (A^k) give the number of paths length k that lead from node i to j.
 
 **Laplacian matrix**: L = D-A where A = adjacency, D = degree matrix (diagonal, with 0 at i≠j and d_ii = degree of i_th node). For oriented graphs, apparently, there exist two different Laplacians, depending on whether you choose to work with in-degree or out-degree? _What does it mean in practice?_
-
-**Incidence matrix**: M(e,i) = 1 if edge e goes i->j, -1 if edge e goes  j->i exists, 0 for all other cases. Not square: E rows (number of edges), N columns (number of vertices).
 
 If f is E-long vector of total flow in each edge, then Mf = total flow into each vertex. If the flow is balanced (no accumulation of stuff in nodes), Mf = 0. If it's not balanced (there are sources: a V-long vector s), then Mf = -s, or Mf + s = 0.
 
