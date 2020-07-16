@@ -1,6 +1,6 @@
 # Graph theory
 
-#bib #math #graphs
+#bib #math #graph
 
 Random notes on graph theory.
 

@@ -1,6 +1,6 @@
 # Rapidly Exploring Random Tree (RRT)
 
-#algo #monte-carlo #graphs
+#algo #monte-carlo #graph
 
 Stems: [[algos]] / [[algos_graph]] / [[algos_trees]]
 

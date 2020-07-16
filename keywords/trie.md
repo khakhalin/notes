@@ -1,6 +1,6 @@
 # Trie
 
-#algo #text #graphs
+#algo #text #graph
 
 Path: [[algos_trees]]
 

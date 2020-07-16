@@ -1,9 +1,9 @@
 # Reservoir computing
 
-#echo #rnn #graphs #bib
+#echo #rnn #graph #bib
 
 Parents: [[07_RNNs]]
-See also: [[criticality]], [[bib_stdp]]
+See also: [[criticality]], [[bib_stdp]], [[cellular_automata]]
 
 # Echo-State Networks
 

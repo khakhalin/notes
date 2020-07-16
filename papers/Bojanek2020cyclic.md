@@ -5,7 +5,9 @@ https://www.biorxiv.org/content/10.1101/777219v1.article-info
 
 Updated version tbc (plos?)
 
-#networks #neuro #spiking #motifs #criticality #synchrony
+#networks #neuro #spiking #motifs #criticality #synchrony #graphs
+
+Related: [[graph_properties]]
 
 Is it possible to predict whether a spiking network with a given topology would spontaneously halt (truncate), or become persistently active, after being activated with a kick to a few newurons? Can we guess it, either from simple network properties, or early on, from the dynamics of network activation?
 

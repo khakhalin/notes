@@ -56,7 +56,7 @@ How does it work?
 
 # Strongly connected component
 
-A **Strongly Connectec Component** (SCC for the purposes of this section) of a directed graph is a maximal (largest) set of nodes for which each node is reachable from each other node.
+A **Strongly Connected Component** (SCC for the purposes of this section) of a directed graph is a maximal (largest) set of nodes for which each node is reachable from each other node.
 
 Every cycle begets a SCC.
 

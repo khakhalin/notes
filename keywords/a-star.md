@@ -1,6 +1,6 @@
 # A-star (A*) search algorithm
 
-#graphs
+#graph
 
 Placement: [[algos_graph]] / [[dijkstra]] /
 

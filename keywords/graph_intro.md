@@ -1,7 +1,7 @@
 # Graphs Intro
 
 Parents: [[09_Graphs]]
-See also: [[graph_th]], [[algos_graph]], [[la_net]]
+See also: [[graph_properties]] (next), [[graph_th]], [[algos_graph]], [[la_net]]
 
 **Motivation**: everything is complex systems (agents), and information (exchange of it between some… nodes?), so graphs and networks are everywhere. Knowledge itself is best to be represented as a graph (relations of items, elements). Human society is a graph, and our brains are a graph, and everything is a graph :) Universal language.
 
@@ -35,7 +35,7 @@ More terminology:
 * **Weighted graphs**: each edge now carries a number, encoding something like weak and strong connections, or distances of some sort etc.
 * **Multigraphs**: may have more than one edge between any given 2 nodes. Can be modeled with weighted edges.
 * **Loops**: nodes linking to themselves (non-zero elements on the diagonal in A). Are sometimes prohibited.
-* **Path**: a sequence of edges leading from one node to another.
+* **Path**: a sequence of nodes, so that each next node is linked to a prev one with an edge. Or a sequence of edges leading to each other.
 
 **Connectedness** or connectivity of a graph: if there's a path from one node to another.
 * For undirected graphs - simple, just see whether you can reach one node from another.
