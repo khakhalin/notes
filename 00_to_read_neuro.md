@@ -334,6 +334,9 @@ http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.460.5280&rep=rep1&type=
 
 # Other
 
+https://www.biorxiv.org/content/10.1101/2020.03.24.006775v1
+The mouse cortico-tectal projectome
+
 Rahmani, P., Peruani, F., & Romanczuk, P. (2019). Flocking in complex environments--attention trade-offs in collective information processing. arXiv preprint arXiv:1907.11691.
 https://journals.plos.org/ploscompbiol/article?id=10.1371%2Fjournal.pcbi.1007697
 If you have a school of fish, with limited computational capacity, and only some individuals are "informed" (of danger, for example), what would be the optimal flocking strategy? A modeling paper.

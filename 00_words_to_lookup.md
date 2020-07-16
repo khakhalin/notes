@@ -4,8 +4,6 @@ Key tags:
 * #halfthere - for projects that are close to completion.
 * #todo - for follow-ups that need to be done
 
-[[Bacciu2019gentlegraph.md]] - current
-
 Videos
 * Conway, the free will theorem: https://www.youtube.com/watch?v=ftIllWczf5w
 * Laplace operator: https://www.youtube.com/watch?v=oEq9ROl9Umk
@@ -23,21 +21,13 @@ https://missing.csail.mit.edu/
 lots of useful practical bits and pieces: the shell, debugging, metaprogramming and what not. Also has [lectures on youtube](https://www.youtube.com/playlist?list=PLyzOVJj3bHQuloKGG59rS43e29ro7I57J).
 (the link is also in [[01_Tools]] / Resources, so fee free to delete it from here later)
 
-**Temp dump**
-
-https://calculatedcontent.com/2020/02/16/weightwatcher-empirical-quality-metrics-for-deep-neural-networks/
-
-https://www.biorxiv.org/content/10.1101/2020.03.24.006775v1
-The mouse cortico-tectal projectome
-
-https://arxiv.org/pdf/2003.11038.pdf
-Deformable Style Transfer
-
 # Algos and top priorities
 * [[Xie2020noisy_student]] - finish this one first and foremost
+* How to do bayesian 01 guesser? How does process 001 if current history is 0? How to combine n-grams of diff length? Derive, and also google / check on the web.
 * When to use BatchNormalization() in a network? Why don't we use it always? Or should we use it always? What's the logic here?
 * How to prove that both entropy and gini coeff max when all $p_i$ are the same and = 1/n?
 * write backprop on a piece of paper
+* https://calculatedcontent.com/2020/02/16/weightwatcher-empirical-quality-metrics-for-deep-neural-networks/
 * "Good Enough" architecture: https://www.youtube.com/watch?v=PzEox3szeRc
 * "Mastering chaos" - Netflix microservices: https://www.youtube.com/watch?v=CZ3wIuvmHeM	
 * Code linear regression manually
@@ -46,6 +36,7 @@ Deformable Style Transfer
 * https://en.wikipedia.org/wiki/Universal_approximation_theorem
 * churn prediction problem
 * Bash
+* Bayesian extensions of the stochastic blockmodel
 * https://en.wikipedia.org/wiki/Gated_recurrent_unit
 * https://en.wikipedia.org/wiki/Q-learning - file to [[q-learning]]
 * Visual guide to Evolution strategies: http://blog.otoro.net/2017/10/29/visual-evolution-strategies/ Must, because visual and nice!! See [[gen_alg]]
@@ -114,7 +105,6 @@ Deformable Style Transfer
 * Lint (pylint) - what is it and why? It seems that it can catch errors, type mismatches etc.
 * Keras checkpoints
 * Python collections: deque, Counter, defaultdict etc.
-* Javascript React - how does it look like?
 * Python closures, why they are a thing, what's dangerous about them, and how to use them
 
 # Systems
@@ -206,6 +196,7 @@ Every solution depends on parameters of scale: amount of data, n users, requests
 * https://en.wikipedia.org/wiki/Object-relational_impedance_mismatch
 
 **Practicality - web**
+* Javascript React - how does it even look like?
 * Bloom filters and count-min sketch
 * Design patterns (OOP)
 * Cashing in DBs

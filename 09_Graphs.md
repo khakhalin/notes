@@ -7,6 +7,7 @@ Topics:
 * [[graph_properties]] - Characterize networks
 * [[graph_generate]] - Generative models for graphs
 * [[algos_graph]] - Classic algorithms on graphs
+* [[graph_embedding]] - learning graph representations
 * [[graph_th]] - Assorted topics in graph theory
 * [[la_net]] - Linear algebra on graphs
 

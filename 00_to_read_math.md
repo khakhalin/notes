@@ -625,6 +625,9 @@ Karras, T., Laine, S., & Aila, T. (2019). A style-based generator architecture f
 Reimplementation of StyleGAN from scratch in TF 2.0. Seem to be well-written, and worth studying:
 https://github.com/manicman1999/StyleGAN-Tensorflow-2.0
 
+https://arxiv.org/pdf/2003.11038.pdf
+Deformable Style Transfer
+
 Contrastive Learning of Structured World Models
 Thomas Kipf, Elise van der Pol, Max Welling
 [https://arxiv.org/abs/1911.12247](<https://arxiv.org/abs/1911.12247>)

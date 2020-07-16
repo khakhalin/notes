@@ -47,3 +47,7 @@ More terminology:
 If a graph is not connected (can be broken into several disconnected graphs), the adjacency matrix can be represented as a block matrix $\begin{pmatrix} B & 0\\ 0 & C \end{pmatrix}$, but we may have to re-arrange lines and columns. A "barely connected" graph will have "almost zeros" in these blocks, and this logic is used for community detection.
 * **Cycle**: a path that leads back.
 * **Acyclic graph**: a graph without cycles. 
+
+# Refs
+
+https://snap-stanford.github.io/cs224w-notes/preliminaries/introduction-graph-structure

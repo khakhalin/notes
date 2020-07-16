@@ -1,7 +1,9 @@
 # Word2vec
+
 #text #embedding 
 
-Path: [[10_Text]]
+Parent: [[10_Text]]
+See also: ???
 
 #todo
 
