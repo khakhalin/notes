@@ -2,12 +2,10 @@
 
 #rnn #bib
 
-See also: 
-* [[echo_state]] - Echo-State Networks (my favorite variety :)
-
 Subtopics:
 * [[lstm]] - Long Short-Term Memory
 * [[gru]] - Gated Recurrent Unit (kinda a simplified version of LSTM)
+* [[echo_state]] - Echo-State Networks (my favorite variety :)
 
 # Bibliography
 

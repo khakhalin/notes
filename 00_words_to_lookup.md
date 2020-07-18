@@ -22,6 +22,7 @@ lots of useful practical bits and pieces: the shell, debugging, metaprogramming 
 (the link is also in [[01_Tools]] / Resources, so fee free to delete it from here later)
 
 # Algos and top priorities
+* Why exp() in softmax, and why node2vec replaced it with sigmoids?
 * [[Xie2020noisy_student]] - finish this one first and foremost
 * How to do bayesian 01 guesser? How does process 001 if current history is 0? How to combine n-grams of diff length? Derive, and also google / check on the web.
 * When to use BatchNormalization() in a network? Why don't we use it always? Or should we use it always? What's the logic here?
@@ -159,7 +160,7 @@ Go through 2-3 youtube lectures in the queue that describe some of the existing 
 * Hadoop vs Spark video: https://hackr.io/blog/hadoop-vs-spark
 * Kubernetes and Docker video (30 min): https://www.youtube.com/watch?v=u8dW8DrcSmo
 * JSON - how does it work, why everybody love it, and is it the present or the future? ([wiki](https://en.wikipedia.org/wiki/JSON))
-* YAML - some standard for keeping stuff that's like XML, but human-readable. Who uses it? Is it popular? ([wiki](https://en.wikipedia.org/wiki/YAML))
+* YAML - some standard for keeping stuff that's like XML or JSON, but human-readable. Apparently much hated, as it breaks at edge cases.
 * Avro
 * Parquet (data storage format)
 	* data warehouse technologies

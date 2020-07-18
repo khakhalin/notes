@@ -19,6 +19,7 @@ How to find optimal k? We'll need a training and a testing set, then try differe
 KNN is an basic archetype for a whole family of fancy "local" methods. For example, if instead of "nearest" δi that are all or none we use fuzzy weights that are larger when you are close to each data w = K(distance), it's the same as just regressing on distance, which is a type of a **kernel method**. If we want some dimensions of X matter differently than others, we can use non-round kernels. **Local regression** is also similar in spirit (sorta a combination of linear regression and the idea of contextual locality). DL networks with RELU also imitate something like that by having different subnetworks effectively enabled for different inputs (depending on which neurons inactivate) _(is it true?)_.
 
 # Model assessement
+
 **Model accuracy**: The most primitive measure = number of true statements / total number of statements. Obvious dependency on class balance (famous example, a statement of "today is not Christmas" has an accuracy of 99.7%). But may work for toy examples with carefully balanced classes (like [[mnist]] for example).
 
 **Precision and recall**: Let's concentrate on detection only (positive predictions only). We want something that is proportinal to true positives (TP), but what to put in the denominator? Two options: 
@@ -50,6 +51,7 @@ What's the current best practice? Some opinions:
 For unbalanced datasets and multi-class classification, it is proper and honest to used **stratified cross-validation**, when each of the strata is split separately, and then mixed back, to avoid class imbalance.
 
 # Linear separation
+
 **Can regression be used for classification?** Aye, just set a threshold (0.5) for the output value. Aka fitting a **dummy variable**. If h(x) is a hyperplane in (x,y), h=const becomes a 1-d-lower hyperplane (aka **decision boundary**; in 2D case: a line) separating the space of X into 2 parts. **Linear separation**. Apparently, the best we can do for 2 overlapping Gaussians.
 
 What about **multi-class classificaton**; can regression be used then? Also aye, but with a different loss (not L2), but rather with summing costs of all misclassifications (when a point from class Gk was erroneously classified as a point in Gl). We'll need a matrix of costs, and from it calculate a matrix of losses L(k,l). Most often though, one cost for all errors, and **Expected Prediction Error** EPE = E(L). We can try to optimize EPE point-wise: G = armin_g ∑ L(Gk counted as g) ∙ P(observing point from Gk | for X=x).
@@ -63,6 +65,7 @@ If each class dummy variable is fit with f_i = Xθ_i, then the decision boundary
 Another problem is **class masking**: imagine 3 separable classes ABC lying roughly on a line. Decision boundaries between AB and BC will be roughly parallel, but when taking together, 3 linear functions will form only one boundary somewhere in the middle, leaving class B completely unresolved. With a quadratic regression one can resolve 3 classes, but cannot resolve 4, etc. To resolve more classes, one has to transform regression values with "increasingly non-linear" functions F(Xθ_k): they should be monotonous and fall down fast enough to offer fine class resolution. refs: [1](https://stats.stackexchange.com/questions/43867/why-does-the-least-square-solution-give-poor-results-in-this-case)
 
 ## Logistic Regression
+
 But by Bayes theorem, our best guess about P(g|x) woudl be P(g|x) = f(x)p/∑f(x)p , where p is prior probability, and sum goes through all classes. Not only it looks a more like a probability, but actually leads to the math behind logistic regression (_Can we show that?.._).
 
 **Logistic function**: $\sigma(x) = \frac{1}{1+e^{-x}} = \frac{e^x}{1+e^x}$. The inverse function is called **logit**: logit(p) $=\ln \frac{p}{1-p}$. **Logistic regeresion assumes that log-odds** are linear: log p/(1-p) = Xθ, which means that p/(1-p)=exp(Xθ), leading to p = σ(Xθ). This shape is nice and doesn't suffer from class masking.
@@ -85,9 +88,11 @@ Differentiate this by θ, set to 0. Get ∂L/∂θ = −∑ (xy − x∙exp(xᵀ
 > ESL p120-121 gives a solution for the updating (descent) procedure that I skip for now. Also there's a weighted self-consistency formula that ties θ, x, y, and p together, and can apparently be used to achieve some numerical shortcuts.
 
 ### Regularized Log Regression
+
 **L1 penalty** (lasso) is good for this: take the previous L=-∑ y log(p) + (1-y) log(1-p), and add to it λ∑|θj| , where the sum runs by dimention (variable). Flip signs if you like maximizing stuff, as ESL does. Apparently, if you do the math, you get the following link between everything: xjᵀ(y-p) = λ∙sign(θj) for each dimension j.
 
 ## Discriminant Analysis
+
 As we'll see later, can be considered an alternative to logistic regression. We assume that each class density is a multivariate Gaussian:
 
 $Φ_k(x) = \frac{1}{უ}\exp\big( -½ (x-μ_k)^Tტ^{-1}_k(x-μ_k) \big)$,
@@ -111,6 +116,7 @@ Refs: ESL p109-113; [wiki](https://en.wikipedia.org/wiki/Linear_discriminant_ana
 What's the practical **difference between LDA and Log Regression?** In both cases, the math boils down to log P(x ∈ gi)/P(x ∈ gk) = xᵀθ, but θ are different. In both cases joint P(x,g) = P(x)P(g|x), where P(x) is called marginal density of inputs x. P(g|x) has the same form for both LDA and LR, but P(X) is different. With LR, P(x) is free (assumed to be arbitrary), and we maximize P(g|x). With LDA, we explicitly maximize P(x,g), and insist that P(x,g=k) = Φ(μk,ტ) is a p-dimensional Gaussian. Apparently, if the assumption of LDA is true, it gives you a boost of ~30% efficiency on error rate (you get same performance with ~30% less data). But if you aren't sure, then LR is safer.
 
 # SVM: Support Vector Machines
+
 General idea: widest street approach: find a line, so that if you have a band around the line, it separates the positive from the negative examples as best as possible. If the line is described with a normal vector ω ⊥ line, whether a point x is far from the line can be described as ⟨x , ω⟩. If b is a good threshold value for this product (if we get b when x lies right smack on the separating line), we have xᵀω + b ≥ 0. To find the best line, let's try to find ω and b, so that for positive samples we would get xᵀω+b>1 (not just >0), and for negative samples, xᵀω+b<-1. 
 
 We have already seen linear separators f(x) = xᵀθ = 0 before. The hyperplane (line in 2D) it defines is ⊥ to θ, and f(x) is proportinal to distance from x to the plane.
@@ -131,6 +137,5 @@ Here, as in the prev paragraph norm(θ) is actually understood in terms of θ_1 
 
 SVMs are very popular with **Kernel tricks**, such as radial basis kernel [[RBF]], as it produces simple yet expressive models ([ref](https://towardsdatascience.com/support-vector-machines-svm-c9ef22815589)).
 
-
-
-**Refs**: [a very reasonable post by Ajay Yadav](https://towardsdatascience.com/support-vector-machines-svm-c9ef22815589)
+# Refs
+[A reasonable post abut SVM, by Ajay Yadav](https://towardsdatascience.com/support-vector-machines-svm-c9ef22815589)

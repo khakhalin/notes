@@ -211,6 +211,7 @@ As a result of this procedure, we get a piecewise-linear change of θ with "iter
 > Not sure what are the benefits of this approach though.
 
 ## Principal Components Regression
+
 1. Standardaze columns of X.
 2. Calculate **PCA** of X: Z=XV, where columns of Z are orthonormal.
 3. Regress y on Z: Zξ~y. As z_i are orthonormal, it's like running p univariate regressions.
@@ -221,6 +222,7 @@ Similar to Shrinkage, in the sence that Shrinkage also ends up shrinking compone
 Refs: ESL p79
 
 ## Partial Least Squares
+
 1. Standardize columns of X
 2. Start cycle i=1
 3. Calculate φij = ⟨x_j , y⟩ for each i. Synthesize z_i = ∑j φij xj

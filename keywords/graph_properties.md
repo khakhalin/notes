@@ -3,7 +3,7 @@
 #graph
 
 Parent: [[09_Graphs]]
-See also: [[graph_intro]] (prev), [[algos_graph]], [[graph_th]]
+See also: [[graph_intro]] (prev), [[graph_generate]] (next) [[algos_graph]], [[graph_th]]
 
 Four main ways to provide a large-scale characteristic of a graph:
 * Degree distribution P(k)

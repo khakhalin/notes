@@ -4,7 +4,7 @@
 
 #halfthere - a tag to be used for papers that have their separate entries, but that I haven't actually finished reading, or haven't read well. Papers to revisit!
 
-**See also** (other thematic to-read lists):
+Other thematic to-read lists:
 * [[11_RL]] - Reinforcement Learning
 * [[09_Graphs]] - Graph (aka Graphical) networks
 
@@ -192,6 +192,9 @@ https://arxiv.org/pdf/1409.1556.pdf
 
 The Topology of Neural Networks, Part 2: Compositions and Dimensions. 2020. Jesse Johnson. Blog post.
 https://ldtopology.wordpress.com/2019/03/07/the-topology-of-neural-networks-part-2-compositions-and-dimensions/#more-4903
+
+On capsule networks and their limitations:
+https://oatml.cs.ox.ac.uk/blog/2020/07/10/are-capsules-a-good-idea-a-generative-perspective.html
 
 # Why networks work?
 
