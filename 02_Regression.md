@@ -2,7 +2,23 @@
 
 **Linear model**: h(x) = (estimation for y) = $∑θ_j x_j$ = xᵀθ, or in matrix form: h = Xθ ~ y. We assume that xᵀ is a row-vector length p+1, with x_0 = 1 (intercept), followed by n "normal" variables on which we regress. The equation above defines a hyperplane in ℝ^p.
 
-## L2 loss
+# Subtopics
+
+**Constrained models**
+
+Reliable approaches:
+* [[ridge_regression]] - class. Aka **L2**, aka **shrinkage**, aka Tikhonov
+* [[lasso]] - aka **L1** regression. Also **Elastic Net** (a combo of L1 and L2)
+
+Trickier approaches:
+* [[aic]] - Akaike Information Criterion and Best-Subset Regression
+* [[stepwise_regression]] - a bit dangerious, but fast? Also least angle regression
+* [[pca_regression]] - pca regression and partial least squares
+
+See also:
+* [[ransac]] - bootstrapping-like regression estimator based on inliners voting
+
+# L2 loss
 
 Loss: J(θ) = ∑(h-y)² across all data points i. Is called **Squared error**, or **squared distance**, or **Mean Squared Error** (MSE), or **Least Squares**. Sensitive to outliers, permissive to small deviations around zero (because of its convex shape). Nice practical illustration from [Google crash course](https://developers.google.com/machine-learning/crash-course/): 2 outliers of 2 are worse than 4 outliers of 1, as 8>4. 
 
@@ -51,7 +67,7 @@ Intepretations for h = Xθ:
 
 Or we can perform a **gradient descent**: θ ← θ + α(h-y)x, with some learning rate α. As our L2 loss is a convex quadratic function, it has only one minimum, and so it always converges. 
 
-## Gram-Smidt
+# Gram-Smidt
 
 > #todo: this description doesn't make sense currently. It's supposed to summarize ESL p54, but I cannot understand it upon re-reading it. Rewrite!
 
@@ -75,7 +91,8 @@ In a general case, coordinates of X may be dependent, or be very close to it. In
 
 If Y is multivariate as well, but all errors in Y are independent, we just have several independent linear regressions. If errors in Y are correlated, the very definition of RSS is changed (to encorporate the covariance matrix), but we don't go deep into it here. Refs: ESL p56
 
-## Bias-Variance Tradeoff
+# Bias-Variance Tradeoff
+
 #variance
 
 Total prediction error (L2 loss) consists of two parts: **bias** and **variance**. 
@@ -109,12 +126,14 @@ Refs: ESL p24, p37; [lecture by K Weinberger](https://www.youtube.com/watch?v=zU
 
 **Prediction bias**: a very simple measure of model validity: average value of all predictions - average value of all learning points. In a reasonable model, prediction bias should be close to 0. A way to assess it: build a **calibration plot** - bucket values, calculate predictions, then plot mean(predictions) against mean(values). May help to find areas where the model misbehaves.
 
-### Variance of parameter estimations
+## Variance of parameter estimations
+
 How well can we guess θ? Assuming that y_i have normal uncorrelated noise with variance σ², we get var(θ) = (XᵀX)⁻¹σ², where σ² can be estimated from σ² ~ ∑ (y-h)² / (N-p-1). (ESL p47). In this case, θ are destributed multivariate-Gaussian, and estimations for σ² are chi-squared with N-p-1 degrees of freedom. Which also means that we can use t-test for particular θ_i.
 
 For **categorical variables** (in X), the situation is a bit different, as each of them is represented by several **dummy variables**  (one for each of the levels), and these dummy variables need to be included or excluded all together. F-statistics (with p1-p0, N-p1-1 degrees of freedom). This is also known as **one-hot encoding**.
 
-### Gauss-Markov theorem
+## Gauss-Markov theorem
+
 **Theorem:** The least squares estimate for β has the smallest variance of all unbiased linear estimators for true parameters β.
 
 In other words, consider that we actually have a linear system plus some independent errors for each data point: y = Xβ + ε. We're saying that the estimation θ obtained by the least squared process ( θ = (XᵀX)⁻¹Xᵀy ) is unbiased, in the sense that E(θ) = E(β), and crucially, Var(θ) is minimal among all possible unbiased linear estimators ( ξ = Cᵀy ) for β. 
@@ -129,113 +148,3 @@ Refs: ESL p51, [wiki](https://en.wikipedia.org/wiki/Gauss%E2%80%93Markov_theorem
 
 See also:
 * [[curse_dim]] - Curse Dimensionality, which can be considered a special (and very unpleasant) case of Bias-Variance trade-off
-
-# Constrained models
-
-## Best-subset regression
-Manually find a combination (subset) of k variables that offers best fit for this k. There's an efficient algorithm for that, called **Leaps and Bounds procedure**. Main ways to decide which one to use: empirical **cross-validation**, and AIC = **Akaike Information Criterion**. 
-
-## Stepwise Regression
-A (bad) compromise between performance and speed: automated stepwise selection of features based on the quality of fit, and a complexity penalty (regularization). Two main approaches: **Forward selection** and **Backward selection**. Or a combinationof both (*not sure how?*)
-
-The maxim about stepwise regression is that it is useless for hypothesis testing, questionable for prediction, and OK for variable selection (see [[07_Features]]). 
-* It can't be used for hypotheses, as p-values after this procedure are meaningless, and arguably shouldn't even be reported, as their direct probabilistic intepretation is impossible, and adjustment is too complicated (p-values aren't independent, so you cannot do FDR), making adjustment impossible in practice.
-* It can be used for prediction, but usually full models (or, assumably, probably regularized models) are more powerful anyways.
-* It's an OK method to select variables tho.
-
-Some people (like Thompson cited below) are really vehemently against them tho. That's because they are usually too optimistic (the very concept of degrees of freedom becomes problematic after multiple testing), yet are strictly less powerful than proper regularization, and also typically don't replicate, as the sequence of descent depends on the data, so performing stepwise regression on different subsets of data is much more likely to yield different results, compared to a more sophisticated model.
-
-Refs:
-* [[Guyon2003variable]], [wiki](https://en.wikipedia.org/wiki/Stepwise_regression), ESL p59
-* Steyerberg, E. W., Eijkemans, M. J., Harrell Jr, F. E., & Habbema, J. D. F. (2001). Prognostic modeling with logistic regression analysis: in search of a sensible strategy in small data sets. Medical Decision Making, 21(1), 45-56.
-* Thompson, B. (2001). Significance, effect sizes, stepwise methods, and other issues: Strong arguments move the field. The Journal of Experimental Education, 70(1), 80-93. 
-
-There's also a thing called **Forward-Stagewise Regression** that is based on correlations between remaining features and the current residual, and it is just plan horrible.
-
-## Ridge regression
-
-Also known as **Shrinkage Methods**, closely related to **Tikhonov regularization**. Modern DL name: **L2 regularization** (see DL chapter).
-
-Motivation: Consider Ax = b, and x doesn't exist. In a most typical practical case, it gives a superposition of an over-determined (still unsolvable) problem Aξ = b for the component of x that is in the row-space of A ( ξ = proj(x→RowSpace(A)) ), and so is affected by the actual value of the matrix A, and an under-determined problem A(x-ξ) = 0 for the components x-ξ that are in the null-space of A, orthogonal to the RowSpace(A), and thus projected to 0. (A reminder: null-space is orthogonal to the row-space, as from Ax=0 we can conclude that x is orthogonal too every row of A). But it means that the part x-ξ can be chosen arbitrary without any effect on the value of Ax. So we are free to pick this part in some "nice" fashion, to satisfy some priors, for example, or minimize solution complexity. 
-
-Compared to variable selection, this approach is smooth and stable: while with model (variable) selection loss may oscillate pretty wildly as you add more features, with shrinkage it usually changes monotonously.
-
-This is especially important in case of **Multicollinearity**, when you're trying to predict y from many variables X as y = Xθ, but some of x_i (columns = variables) are strongly correlated. In this case trying to painfully minimize y-Xθ would be counter-productive, as we'd be trying to fit noise in y with noise in x_i. Imagine an extreme case: all p columns of X are the same (rank=1), but are observed with noise, and noise is independent (so formally rank = p). What we actually need is only one (doesn't matter which one) θ_i>0, and all others ≡0. But what will happen, is that we'll fit noise in y with noise in X.
-
-**Ridge regression**: we add a penalty on θ in the form of λ∑θ². Note that this sum runs from 1 to p, as $θ_0$ (intercept) is not penalized. Included in the formula for h, but is not penalized. Alternatively, one can just insist that λ∑θ²<t: because the rest of the loss is defined by {X,y}, for any given task there's an exact match between λ and t. As the values of θ depend on the scale of x_i, **standardization** of x (de-biasing + normalization) becomes critical.
-
-> If using shrinkage methods, **always standardize your X!**
-
-The name "**ridge**" comes from a visual example of what is describe above. Imagine that only a part of the solution is well defined, and the rest is close to the null-space of X. Then the "true solution" is a "generalized cylinder" made of the true solution (in those coordinates that make sense), which is nice, convex, and has one smooth minimum, and its arbitrary extension across all "irrelevant coordinates", as any vector from the null-space of X will be zeroed by the multiplication by X. Moreover, small changes in training data (right side of the Xθ=y equation) would wildly sway the solution along this "ridge". By adding regularization, we change a "ridge" into a "peak" (lines turn into parabolas), which stabilizes the solution against perturbations in both X and y.
-
-**How to pick  λ?** One method: **Ridge trace**: plot found coefficients as a function of λ, and eyeball a value at which they stop oscillating, and switch to a  monotonous change regime (they never become const, but switch from curving to almost-linear, like willow twigs in a vase). A better approach, of course, is **cross-validation**. Also, for any given λ, one can estimate the effective degrees of freedom (as a trace of a certain matrix, see ESL p68), so for these plots it's common to use df(λ) for x axis, not λ itself.
-
-Interestingly, if all x_i (columns, variables) are orthonormal, ridge regression has no reasons to penalize any one θ in particular, and just all of them get equally scaled by 1/(1+λ).
-
-> I am not quite sure why this is the case, even though it feels like something that could be intuitive and visual. It seems that the point where an ellipse (minization of y-Xθ) and a circle (λ∑θ²) touch doesn't necessarily lie on a straight line between the centers of said circle and ellipse... #todo : figure it out!
-
-**Tikhonov regularization**: a generalization of Ridge. In this case we minimize |Aθ-b|² + |Γθ|² where Γ is some matrix. If Г=identity matrix I multiplied by a coefficient λ, we have a sum of squared x_i, and so Ridge regression. 
-
-> ESL p67 also seems to suggest that ridge regression is somehow related to PCA, or can be understood in terms of first moving to the PCA space, then doing something, then projecting back, but the math is sketchy, and no good comments, so I'll park it for now.
-
-#todo : Deconstruct this post that seems to have a reasonably concise and systematic summary of all math involved in parallels between shrinkage and PCA, and in the same system as ESL: https://stats.stackexchange.com/questions/220243/the-proof-of-shrinking-coefficients-using-ridge-regression-through-spectral-dec
-
-Refs:
-* [Stackexchange](https://stats.stackexchange.com/questions/118712/why-does-ridge-estimate-become-better-than-ols-by-adding-a-constant-to-the-diago/119708#119708), on visual interpretations
-* ESL p61
-
-## Lasso and Elastic Net
-
-**L1 regularization**, aka **basis pursuit**, aka **Lasso**: require ∑|θ_i| < t, or add λ∑|θ_i| penalty to the loss (again summing from 1 to p, meaning no punishment for the intercept $θ_0$). Unlike for L2, it has no closed form solution (because abs() is harder to optimize). The word Lasso is actually a weird abbreviation from Least Absolute Shrinkage and Selection Operator.
-
-Overall, while Ridge tends to scale θ_i values down with a coefficient, lasso tends to slide (shift) them towards zero by a certain value, until they bury in 0 and become 0. For an orthonormal X, this can be proven theoretically (ESL p71). The most critical benefit of L1 regularization is that is performs **covariate selection**: when some x_i are strongly correlated, L2 would tend to distribute θ equally between them, while L1 would kill one, and glorify the other.
-
-Visual representation: romboid and a quadratic (elliptic) optimum nearby. A circle (ridge) projected on an elliptic field always has a global minimum. A corner made of two lines (lasso) would either reach a mininum on a line (non-zero optimal θ), or at the corner (zero θ). Graphically, one can see that θ sets to 0 the moment the unpenalized minimum leaves the band that continues the diamond (draw it to see it).
-
-There's a generalizaton of both L1 and L2: one can try to use a penalty of λ∑|θ_i|^q, where q is some value in R. For q=2 we get ridge, for q=1 lasso, and for q in (0,1) - something in-between. Which is nice, but computationally expensive.
-
-**Elastic net penalty**: An mix (weighted sum) of both Ridge and Lasso that can be used to approximate these generalized romboid shapes. It's way easier to calculate, but also shares the ability to set some junk coefficients to exactly 0 (because of pointy points )
-
-## Least Angle Regression
-
-Similar to stepwise regression, but with penalized coefficients, as in shrinkage. The approach:
-1. Standardize all variables
-2. Set up the residual; initialize it as res = y-intercept
-3. Find the variable x_i with a highest correlation with y, and add it to the mix. But at first set its θ_i to 0.
-4. Move θ _for all {i} currently in the mix? or what?_ towards the least-squares value ⟨x_i , r⟩ (linearly; not proportionally to the error as in gradient descent). After ech movement of θ, update the residual, and calculate the total correlation of variables already in the mix (current Xθ) with the residual.
-5. Calculate correlations of all runners-up (other x_j currently not in the mix) with the residual r. The moment some other x_j becomes as correlated with r as the current mix Xθ, add x_j to the mix (with its θ_j originally zeroed).
-6. Repeat 4-5 until least squared is reached.
-
-As a result of this procedure, we get a piecewise-linear change of θ with "iteration time". We can then go back in time, and pick various levels of simplified approximations for the least squares solution. The results are pretty similar to that for lasso, except for some histeresis effects around θ=0 point.
-
-> Not sure what are the benefits of this approach though.
-
-## Principal Components Regression
-
-1. Standardaze columns of X.
-2. Calculate **PCA** of X: Z=XV, where columns of Z are orthonormal.
-3. Regress y on Z: Zξ~y. As z_i are orthonormal, it's like running p univariate regressions.
-4. Recalculate θ from ξ: θ = Vξ, but only using first m biggest eigenvectors.
-
-Similar to Shrinkage, in the sence that Shrinkage also ends up shrinking components with small eigenvalues more. With the principal components regression, we just zero them altogether. Unlike ridge, it can amplify "unworthy" coefficients in the original X space though, what would have been shrunk by both Ridge and Lasso.
-
-Refs: ESL p79
-
-## Partial Least Squares
-
-1. Standardize columns of X
-2. Start cycle i=1
-3. Calculate φij = ⟨x_j , y⟩ for each i. Synthesize z_i = ∑j φij xj
-4. Regress (project) y by z_i, get ξ_i.
-5. Switch from y to residual (y-(ξi z_i) = res: res ⊥ z_i)
-6. Orthogonalize all x_j to z_i (simiarly, project to ⊥ z_i)
-7. Repeat 3-6 m times (m<p)
-8. Project ξ back to θ
-
-The idea behind is to let y pull signal from X, regardless of how this signal is encoded (mixed?) in columns of X. ESL claims though that "variance aspect tends to dominate", so in practice this method doesn't behave too differently than Ridge regression. Seems to also be similar in spirit to "Canonical Correlation Analysis" (see [[04_Features]] section). Same as PCR above, may inflate weaker dimensions, making it unstable. Which all together is probably why it is not that widely used? 
-
-Refs: ESL p81, [wiki](https://en.wikipedia.org/wiki/Partial_least_squares_regression)
-
-# Related topics:
-
-* [[ransac]] - bootstrapping-like regression estimator based on inliners voting

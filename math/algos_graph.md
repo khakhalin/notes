@@ -1,6 +1,6 @@
 # Graphical algorithms
 
-#net #algo
+#algo #networks
 
 Famous algorithms:
 * [[dijkstra]] - Dijsktra's shortest path algorithm (from source to all nodes)

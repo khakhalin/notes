@@ -1,11 +1,14 @@
 # Graphs and Graphical Methods
 
-#net #bib #graphs
+#bib #graphs #networks
 
 Topics:
 * [[graph_intro]] - Intro to graphs
 * [[graph_properties]] - Characterize networks
 * [[graph_generate]] - Generative models for graphs
+    * [[erdos_graph]] - basis
+    * [[small_world]]  - SW model
+    * [[kronecker_graph]] - fractal model
 * [[algos_graph]] - Classic algorithms on graphs
 * [[graph_embedding]] - Learning graph representations, random walks
     * [[node2vec]] - fancier use of random walks for graph embedding
@@ -16,7 +19,7 @@ Topics:
 Papers:
 * [[Bacciu2019gentlegraph]] - Intro to Graph NNs
 
-# ToRead:
+# ToRead
 
 [[Li2017graph]] -  Gated graph sequence neural networks (started, but never finished)
 

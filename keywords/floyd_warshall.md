@@ -1,6 +1,6 @@
 # Floyd Warshall algorithm
 
-#net #algo #graph
+#algo #graph
 
 Parents: [[algos]] / [[algos_graph]]
 See also: [[dijkstra]], [[a-star]]
