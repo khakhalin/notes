@@ -27,7 +27,7 @@ Related: [[Breck2017testing]], [[tensorflow]], [[hyperparameters]]
 * Try a rock-bottom simple model, iteratively add stuff back
 * Switch to a simplified training set (fewer labels, classes, [ref](http://josh-tobin.com/assets/pdf/troubleshooting-deep-neural-networks-01-19.pdf))
 * Verify that your loss starts at a theoretically expected value ([ref](http://karpathy.github.io/2019/04/25/recipe/))
-* Overfit one batch (shoudl always be doable)
+* Overfit one batch (should always be doable)
 * Play with learning rate (higher to get the gist of dynamics, lower to assess the minima)
 * Play with batch size (1 to get the gist of what's happening, very high for most gentle and careful descent)
 * Remove bach normalization, check if explosions or vanishings are happening (batch normalization is so good and useful that it obscures problems, such as NaNs)

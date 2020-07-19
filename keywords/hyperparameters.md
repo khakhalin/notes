@@ -3,7 +3,7 @@
 #dl
 
 Parents: [[06_DL]]
-Related: [[ml_lore]]
+Related: [[ml_lore]], [[optimizers]], [[regularization]]
 
 * A list: 
     * number of training epochs, batch size, optimizer, 
