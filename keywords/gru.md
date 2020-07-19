@@ -1,9 +1,9 @@
 # Gated Recurrent Unit (GRU)
 
-#rnn
+#rnn #dl
 
 Parents: [[07_RNNs]]
-See also: [[LSTM]], [[09_Graphs]]
+See also: [[LSTM]], [[09_Graphs]], [[activation_functions]]
 
 Introduced in 2014; similar to LSTM, but fewer parameters (3 layers in GRU, compared to 4 in LSTM, as GRUs ahve no output gate). Wiki claims that LSTMs are  better and outperform GRUs (e.g. LSTM can count, while GRUs can't). _But there seem to be no clear trend on google trends, so it's not obvious if they are really outdated, or whether wiki article is just biased._
 

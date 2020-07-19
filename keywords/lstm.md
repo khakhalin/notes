@@ -1,13 +1,14 @@
 # Long Short-Term Memory (LSTM)
 
-#rnn
+#rnn #dl
 
 Path: [[09_Graphs]]
-See also: [[gru]]
+See also: [[gru]], [[activation_functions]]
 
 Introduced in 1997 by Schmidhuber. Solves the issue of vanishing gradients for recurrent networks.
 
 **Formulas:**
+
 #todo
 
 **Core ideas:** 

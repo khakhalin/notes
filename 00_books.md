@@ -104,6 +104,10 @@ Job-search specific materials:
 * https://baicsworkshop.github.io/resources.html - AI-cognitive science bridge
 * https://lcnwww.epfl.ch/gerstner/NeuronalDynamics-MOOCall.html - Comp Neuro course by Wulfram Gerstner
 
+# Demos
+
+* ConvNetJS in-browser DL by Karpathy: https://cs.stanford.edu/people/karpathy/convnetjs/
+
 # Temp teaching links
 Three books:
 * Think Python: https://greenteapress.com/wp/think-python-2e/
