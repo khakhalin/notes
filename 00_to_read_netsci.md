@@ -1,6 +1,6 @@
 # To-read: Network Science
 
-#bib #todo #networks #graphs
+#bib #todo #networks #graph
 
 Clune, J., Mouret, J. B., & Lipson, H. (2013). The evolutionary origins of modularity. Proceedings of the Royal Society b: Biological sciences, 280(1755), 20122863.
 https://royalsocietypublishing.org/doi/pdf/10.1098/rspb.2012.2863

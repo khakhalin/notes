@@ -1,4 +1,4 @@
-# CNN - Convolutional Neural Network
+# CNN : Convolutional Neural Network : convnet
 
 #dl #convnet
 

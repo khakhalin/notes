@@ -2,6 +2,8 @@
 
 #management #bib
 
+See also: [[time_management]]
+
 **Maxims**
 * Be long-term
 * Give credit

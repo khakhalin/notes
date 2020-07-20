@@ -1,6 +1,6 @@
 # Graphs and Graphical Methods
 
-#bib #graphs #networks
+#bib #graph #networks
 
 Topics:
 * [[graph_intro]] - Intro to graphs
@@ -8,13 +8,15 @@ Topics:
 * [[graph_generate]] - Generative models for graphs
     * [[erdos_graph]] - basis
     * [[small_world]]  - SW model
-    * [[kronecker_graph]] - fractal model
+    * [[kronecker_graph]] - Fractal model for graph generation
 * [[algos_graph]] - Classic algorithms on graphs
+* [[la_net]] - Linear algebra on graphs
 * [[graph_embedding]] - Learning graph representations, random walks
     * [[node2vec]] - fancier use of random walks for graph embedding
     * [[knowledge_graph]] - TransE method
-* [[graph_th]] - Assorted topics in graph theory
-* [[la_net]] - Linear algebra on graphs
+    * [[deep_graphs]] - Deep Learning on graphs
+        * [[graphsage]] - a particular implementation of DL for graphs
+* [[graph_th]] - Assorted wild topics in graph theory
 
 Papers:
 * [[Bacciu2019gentlegraph]] - Intro to Graph NNs

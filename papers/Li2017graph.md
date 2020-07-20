@@ -2,7 +2,7 @@
 
 Li, Y., Tarlow, D., Brockschmidt, M., & Zemel, R. (2015). Gated graph sequence neural networks. arXiv preprint arXiv:1511.05493.
 
-#rnn #graphs
+#rnn #graph
 
 Related: [[09_Graphs]], [[gru]]
 
