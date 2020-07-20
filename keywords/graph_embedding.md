@@ -46,32 +46,13 @@ Simplest situation: If we are going after co-location in a graph, we can expect 
 
 > So a follow-up question: how to implement (or simulate) random walks in practice, effeciently?
 
-Because IRL most networks follow a power-law distribution, neighborhoods of each node quickly grow very large.
+## Implementations
 
-We want to find the vector embeddings z_u ∈ $R^d$ to maximize log-likelihood $\sum_u \log P(N_R(u) | z_u)$ where $N_R$ is a neighborhood of node u obtained via strategy R.
-We define loss as $L = - \sum_{u ∈ V} \sum_{v ∈ N_R} \log P(v|z_u)$ , and eventually we'll be using SGD on it.
+* [[node2vec]] - optimization of random walk embedding using biased graph exploration, negative sampling and chierarchical softmax (essentially, optimized random walks, and a segue to [[word2vec]])
 
-The probability here may be calculated using a sofmax: $P(v|z_u) = \exp(z_u^\intercal z_v) / Σ_i \exp(z_u^\intercal z_i)$
+# Other methods
 
-> At this point I don't have a good intuition for how it can help to identify motifs (nodes that are very far from each other, but are very similar in terms of their topological context).
-
-The problem with the expression above is that we have to loop through too many nodes in the denominator here (normalization term). We cannot afford it, so we need to approximate it. Solution: **negative sampling**:
-
-$\displaystyle \log\frac{\exp(z_u^\intercal z_v)}{Σ_i \exp(z_u^\intercal z_i)} \approx \log(σ(z_u \cdot z_v)) - \sum_{i \in S} \log(σ(z_u \cdot z_i))$ where σ is a sigmoid function, and S is sampled from all nodes in some representative way. Normalize againt a negative sample. This is simple to [[word2vec]]: noise-contrastive estimation. And now we have linear complexity. How to sample? Typically, proportional to a node degree; sample sizes k~5-20.
-
-It is also important to bound z_u, or trying to maximize dot-products, z vectors will try grow to inf, and we don't want it.
-
-> Why sigmoid function, intuitively? One reason is that we want to take a log of it, and zi∙zj are between -1 and 1 (assuming that the are normalized), so we need to force them within 0,1. But why not exp() as in original softmax?
-
-> Why sampling proportional to degree? Does it come from some info about how real random walks behave?
-
-> Potentially, a good homework: check empirically that sampling proportional to node degree makes sense.
-
-# Fürther developments
-
-Advanced techniques and publications:
-* [[node2vec]] - go from microscopic to meso/macroscopic level with biased random walks
-* [[knowledge_graph]] - semantic embedding through negative sampling
+[[knowledge_graph]] - semantic embedding through negative sampling
 
 # Embedding entire graphs
 

@@ -22,7 +22,8 @@ lots of useful practical bits and pieces: the shell, debugging, metaprogramming 
 (the link is also in [[01_Tools]] / Resources, so fee free to delete it from here later)
 
 # Algos and top priorities
-* Why exp() in softmax, and why node2vec replaced it with sigmoids?
+
+* Softmax approximations: https://ruder.io/word-embeddings-softmax/index.html
 * [[Xie2020noisy_student]] - finish this one first and foremost
 * How to do bayesian 01 guesser? How does process 001 if current history is 0? How to combine n-grams of diff length? Derive, and also google / check on the web.
 * When to use BatchNormalization() in a network? Why don't we use it always? Or should we use it always? What's the logic here?
@@ -99,6 +100,7 @@ lots of useful practical bits and pieces: the shell, debugging, metaprogramming 
 * https://en.wikipedia.org/wiki/S-expression
 
 # Python tools
+
 * How does garbage collection work in Python? What's the logic, and how fast is it? ([link](https://gist.github.com/osavsunenko-ring/205fa72c65d6343eaede0dc43f1c79d4))
 * collections - or whatever is this common module ppl often use with prepackaged datastructures
 * refresh "read from a console" and read from file in Python
@@ -218,6 +220,7 @@ Every solution depends on parameters of scale: amount of data, n users, requests
 * Virtual machines and containers
 
 # Classic ML and related math
+
 * Actually do gradual boosting (from a library) for some synthetic dataset; visualize
 * Laplacian short video: https://www.youtube.com/watch?v=oEq9ROl9Umk
 * that way to create ranking from asymmetric preferences via graphs
@@ -263,7 +266,7 @@ Every solution depends on parameters of scale: amount of data, n users, requests
 * Particle filters
 
 # Deep Learning
-* Why drop-out can be considered a type of regularization? What's the intuition, and what's the math?
+
 * Eutoencoders in Keras: https://blog.keras.io/building-autoencoders-in-keras.html
 * Why rotate pictures (augmentation) if we can just enforce rotationally-symmetric kernels. Is it possible? Is it desirable?
 * How to tell the receptive field of a neuron in a deep network? Do they gradient descend on it?
@@ -294,6 +297,7 @@ Parked parts of ESL that need to be revisited:
 * p261 - another whole chapter. Model averaging, max likelihood, some Bayesian inference, more bootstrapping, the EM algorithm (Expectation-Maximization), Gibbs samping, bagging, MCMC
 
 # Other math
+
 * How to calculate single-value-decomposion and eigenvector decomposition in practice? How do they code it for numpy, for example?
 * FFT
 * Lagrange multiplyier - is there an easy (not formal, but intuitive) proof that it works?

@@ -7,17 +7,17 @@ Best search site:
 ⟨ ⟩
 ⇒ ⇄ ↻ → 
 ∆ ∇ ∂
-ᵀ ° ²
+ᵀ ° ² ⊤
 ⁻¹ √ ∝
 ∀ ∃ ∄ ∅ ∈ ∉
 ⊂⊄⊃⊅⊆⊇ ∩∪
 ≺≻≼≽
 ∧∨
-𝒩 ∞ ℕ ℤ ℚ ℝ ℂ
+𝒩 ∞ ℕ ℤ ℚ ℝ ℂ 𝕀 𝔼
 □∎
 ⨀⨂⨁ ∘ • × ◉
 
-Α α Β β ϐ Γ γ, Δ δ, Ε ε ϵ Ζ ζ, Η η, Θ θ ϑ Ι ι, Κ κ ϰ ϗ Λ λ, Μ μ, Ν ν, Ξ ξ, Ο ο, Π π, Ρ ρ ϱ Σ σ ς Τ τ Υ ϒ υ Φ φ ϕ Χ χ Ψ ψ Ω ω ϖ 
+Α α Β β ϐ Γ γ, Δ δ, Ε ε ϵ Ζ ζ, Η η, Θ θ ϑ Ι ι, Κ κ ϰ ϗ Λ λ, Μ μ, Ν ν, Ξ ξ, Ο ο, Π π, Ρ ρ ϱ Σ σ ς Τ τ ϒ υ Φ φ ϕ Χ χ Ψ ψ Ω ω ϖ 
 𐊬𐋄𐊙𐊃𐋆𐊯 ([carian](https://en.wikipedia.org/wiki/Carian_language) & [lycian](https://en.wikipedia.org/wiki/Lycian_alphabet) , [u](https://unicodes.smpc.io/%F0%90%8A%AF))
 Ϙϙ Ϛϛ Ϝϝ Ϟϟ Ϡϡ Ϣϣ Ϥϥ Ϧϧ Ϩϩ Ϫϫ Ϭϭ Ϯϯ ϴ ϵ ϶ Ϸϸ ϻ ϼ Ͻ Ͼ Ͽ
 ℥ ℨ ў ð
@@ -47,6 +47,8 @@ Pictograms: [u1](https://unicodes.smpc.io/%F0%9F%8C%80)🌱🍒, [u2](https://un
  https://en.wikipedia.org/wiki/Kannada_script
  
  https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode
+ 
+ http://qaz.wtf/u/convert.cgi?text=Just+change+the+text%2C+then+copy+the+Unicode+and+paste+it
 
 Testing fancy formulas:
 
