@@ -23,6 +23,9 @@ Papers:
 
 # ToRead
 
+Kipf, T. N., & Welling, M. (2016). Semi-supervised classification with graph convolutional networks. arXiv preprint arXiv:1609.02907.
+Graph convolutional networks (analogous to SAGE, but from a different group of people).
+
 [[Li2017graph]] -  Gated graph sequence neural networks (started, but never finished)
 
 https://medium.com/dair-ai/an-illustrated-guide-to-graph-neural-networks-d5564a551783
@@ -48,4 +51,7 @@ https://arxiv.org/pdf/1803.00816.pdf
 Yaron Lipman - Deep Learning of Irregular and Geometric Data (a clear 30-min presentation)
 https://www.youtube.com/watch?v=fveyx5zKReo
 
-Grover, A., & Leskovec, J. (2016, August). node2vec: Scalable feature learning for networks. In Proceedings of the 22nd ACM SIGKDD international conference on Knowledge discovery and data mining (pp. 855-864).
+# Resources
+
+Graphvis online:
+https://dreampuf.github.io/GraphvizOnline/

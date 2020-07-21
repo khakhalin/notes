@@ -9,8 +9,9 @@ Let's generalize the simple idea from [[deep_graphs]] to a case of
 1. more general aggregation function
 2. concatenation instead of summation
 
-$\displaystyle h^k_v = ϕ \left( \left[A_k \cdot \bigotimes_{u∈N(v)}h^{k-1}_u \; , \; B_k h^{k-1}_v \right] \right)$
-* ⨂ - some generalized aggregation function. We can try mean, but also pooling (element-wise min/max), or even something learnable like LSTM over several inputs (except that in this case we would have to try several random orderings of inputs and average the results, to keep it order-invariant).
+$\displaystyle h^k_v = ϕ \left( \left[A_k \cdot \bigotimes_{u∈N(v)}h^{k-1}_u \; , \; B_k h^{k-1}_v \right] \right)$ . Here:
+
+* ⨂ - some generalized aggregation function. We can try mean, but also [[pooling]] (element-wise min or max), or even something learnable like LSTM over several inputs (except that in this case we would have to try several random orderings of inputs and average the results, to keep it order-invariant).
 * $[ \cdot \, , \cdot ]$ - concatenation
 
 Many aggregators can be rewritten in a vector form as sparse matrix multiplication (A is an adjacency matrix):
@@ -18,6 +19,10 @@ Many aggregators can be rewritten in a vector form as sparse matrix multiplicati
 * Another example from (Kipf 2017): $H^k = D^{-1/2}A D^{-1/2}H^{k-1}$
 
 > The lecture has a whole slide with small-font bibliography. Parse?
+
+The approach works best for feature-rich graphs (when each node comes with lots of info), but allegedly can do "topology-only" as well.
+
+The paper claims it to be conceptually related to the **Weisfeiler-Lehman Isomorphism Test** - look it up? #todo
 
 # Attention on graphs
 
@@ -42,6 +47,7 @@ How to learn a good $a()$? Maybe use a simple network and learn its weights?
 Hamilton, W., Ying, Z., & Leskovec, J. (2017). Inductive representation learning on large graphs. In Advances in neural information processing systems (pp. 1024-1034).
 https://papers.nips.cc/paper/6703-inductive-representation-learning-on-large-graphs.pdf
 (2k citations in 3 years!)
+SAGE stands for "SAmple and aggreGatE" - really?
 
 Veličković, P., Cucurull, G., Casanova, A., Romero, A., Lio, P., & Bengio, Y. (2017). Graph attention networks. arXiv preprint arXiv:1710.10903.
 https://arxiv.org/pdf/1710.10903.pdf

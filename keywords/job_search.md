@@ -18,6 +18,9 @@ Related pages:
 
 # Resources
 
+Famous Stanford course on passing whiteboards interviews
+* https://web.stanford.edu/class/cs9/
+
 General:
 * https://www.askamanager.org/
 

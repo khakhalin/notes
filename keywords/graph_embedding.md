@@ -3,7 +3,7 @@
 #graph #embedding
 
 Parent: [[09_Graphs]]
-See also: [[embedding]]
+See also: [[embedding]], [[deep_graphs]]
 Children: [[node2vec]], [[knowledge_graph]]
 
 

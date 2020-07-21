@@ -24,7 +24,7 @@ $P_i=...$
 * Lilian Weng blog 2017:          $σ(𝕀_\text{turn}(n(w_O,k),n(w_O,k+1))⋅v'_{n(w_O,k)} {}^⊤ v_{w_I})$
 
 $P_i(\text{right})=...$
-* Benjamin Wilsonj blog 2017: $σ(γ_n ^\top α_C)$
+* Benjamin Wilson blog 2017:  $σ(γ_n ^\top α_C)$
 * Sebastian Ruder:                    $σ(h ^⊤ v'_n)$
 
 @lilianweng, @benwilson_ml

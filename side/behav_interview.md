@@ -16,3 +16,6 @@ Typical questions:
 # Refs
 
 https://zety.com/blog/star-method-interview
+
+From Standford course on passing interviews:
+* https://web.stanford.edu/class/cs9/lectures/CS9Teamwork.pdf

@@ -2,9 +2,21 @@
 
 #lifehack #interview
 
-Sources:
-* https://twitter.com/Al_Grigor via [this summary](https://www.reddit.com/r/datascience/comments/f7cdwg/data_science_and_machine_learning_interview/)
-* https://github.com/Sroy20/machine-learning-interview-questions
+1. Know what a p-value is and its limitations in decisions.
+2. Linear regression and its assumptions.
+3. When to use different statistical distributions.
+4. How an effect size impacts results/decisions.
+5. Mean, variance for Normal, Uniform, Poisson.
+6. Sampling techniques and common designs (e.g. A/B).
+7. Bayes' theorem (applied calculations).
+8. Common conjugate priors (Bayesian stats).
+9. Logistic regression and ROC curves.
+10. Resampling (Cross validation + bootstrapping).
+11. Dimensionality reduction.
+12. Tree-based models (particularly how to prune)
+13. Ridge and Lasso for regression.
+
+https://www.linkedin.com/posts/eric-weber-060397b7_data-datascience-statistics-activity-6690747775702888448-9Pnq/
 
 What is supervised machine learning? 
 What is regression? Which models can you use to solve a regression problem? 
@@ -402,3 +414,7 @@ Explain what regularisation is and why is it useful
 What is TF/IDF vectorization?
 What are recommender systems?
 What is the difference between regression and classification of ML techniques?
+
+Sources:
+* https://twitter.com/Al_Grigor via [this summary](https://www.reddit.com/r/datascience/comments/f7cdwg/data_science_and_machine_learning_interview/)
+* https://github.com/Sroy20/machine-learning-interview-questions

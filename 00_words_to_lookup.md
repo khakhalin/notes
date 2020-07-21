@@ -27,17 +27,26 @@ lots of useful practical bits and pieces: the shell, debugging, metaprogramming 
 * [[Xie2020noisy_student]] - finish this one first and foremost
 * How to do bayesian 01 guesser? How does process 001 if current history is 0? How to combine n-grams of diff length? Derive, and also google / check on the web.
 * When to use BatchNormalization() in a network? Why don't we use it always? Or should we use it always? What's the logic here?
+* Mean, variance for Normal, Uniform, Poisson, binomial, write Gaussian pdf formula
+* Sampling techniques and common designs (e.g. A/B).
+* Common conjugate priors (Bayesian stats).
 * How to prove that both entropy and gini coeff max when all $p_i$ are the same and = 1/n?
+* Weisfeiler-Lehman Isomorphism Test (see also: [[graphsage]])
 * write backprop on a piece of paper
 * https://calculatedcontent.com/2020/02/16/weightwatcher-empirical-quality-metrics-for-deep-neural-networks/
 * "Good Enough" architecture: https://www.youtube.com/watch?v=PzEox3szeRc
 * "Mastering chaos" - Netflix microservices: https://www.youtube.com/watch?v=CZ3wIuvmHeM	
+* Refresh Linear regression and its assumptions
+* Refresh Logistic regression and ROC curves
+* Be able to draw confusion matrix on classification tasks
+* How to prune tree-based models
 * Code linear regression manually
 * Code logistic regression manually
 * Why autoencoders use KL and not L2 as loss? What's the logic of when KL is used? Older papers, like [[Hinton2006dim]] used cross-entropy. Why?
 * https://en.wikipedia.org/wiki/Universal_approximation_theorem
 * churn prediction problem
 * Bash
+* Wald’s sequential analysis
 * Bayesian extensions of the stochastic blockmodel
 * https://en.wikipedia.org/wiki/Gated_recurrent_unit
 * https://en.wikipedia.org/wiki/Q-learning - file to [[q-learning]]

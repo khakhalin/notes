@@ -5,8 +5,8 @@
 Random notes on graph theory.
 
 Parents:
+* [[09_Graphs]] - The hub
 * [[graph_intro]] - introduction to graphs
-* [[09_Graphs]] - Graph-oriented ML
 * [[algos_graph]] - graph algorithms
 
 See also:
