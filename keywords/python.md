@@ -88,10 +88,17 @@ with LEG() as a:
 
 Refs: [2006 intro](https://effbot.org/zone/python-with-statement.htm), [official description with examples](https://docs.python.org/3/reference/compound_stmts.html), [another one](https://www.python.org/dev/peps/pep-0343/)
 
-# OOP
-* **Non-local variables**: when defining function within a function, we can make local variables of the outer function become sorta "global" for the inner function, which may be handy. If you only plan to read from this variable, just refer to it as if it's global. If you plan to update it, write `nonlocal var_name` inside the inner function, as if declaring it. After that it won't be masked. 
-* **Closures**: Writing a function that returns another function. One way to use it: to bind data to the function, as if it was hard-coded inside the function, as an alternative to either global variables, or passing data as an argument. Have a function that receives the data, whips out a function that uses this data, and then returns the function itself. Refs: [1](http://www.trytoprogram.com/python-programming/python-closures/), [2](https://www.programiz.com/python-programming/closure)
-* **Decorators**: a type of a function that acts as a meta-function: takes another function as an argument, writes a helper function around it, and returns this outer helper function. May be used to wrap a closure around a function, to sorta "automate memoization": ([ref](https://www.python-course.eu/python3_memoization.php)). According to Google style code, while they may be helpful, they aren't exactly recommended, as they may complicate things.
+# OOP in Python
+
+**Inheritance** and **mixins** are fine. Use `super().method` or `super(className, self)` to invoke methods of a parent class. These two notations above are technically synonymous, so `super()` is preferred, as it's simpler. Note that it's not `self.super()`, bu just `super()`, as it's not strictly speaking a method of a class. https://realpython.com/python-super/
+
+There's an agrument that composition (having a hierarchy of types of classes) is eaiser to maintain than class inheritance. Ref: https://realpython.com/inheritance-composition-python/
+
+**Non-local variables**: when defining function within a function, we can make local variables of the outer function become sorta "global" for the inner function, which may be handy. If you only plan to read from this variable, just refer to it as if it's global. If you plan to update it, write `nonlocal var_name` inside the inner function, as if declaring it. After that it won't be masked. 
+
+**Closures**: Writing a function that returns another function. One way to use it: to bind data to the function, as if it was hard-coded inside the function, as an alternative to either global variables, or passing data as an argument. Have a function that receives the data, whips out a function that uses this data, and then returns the function itself. Refs: [1](http://www.trytoprogram.com/python-programming/python-closures/), [2](https://www.programiz.com/python-programming/closure)
+
+**Decorators**: a type of a function that acts as a meta-function: takes another function as an argument, writes a helper function around it, and returns this outer helper function. May for example be used to wrap a closure around a function, to sorta "automate memoization": ([ref](https://www.python-course.eu/python3_memoization.php)). According to Google style code, while they may be helpful, they aren't exactly recommended, as they may complicate things.
 
 # Style habits
 * Import entire modules or packages, not classes or functions, to retain `module.class.method()` structure, and prevent name collisions.

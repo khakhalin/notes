@@ -63,6 +63,11 @@ https://www.nature.com/articles/nature14539
 Rolnick, D., & Tegmark, M. (2017). The power of deeper networks for expressing natural functions. arXiv preprint arXiv:1705.05502.
 https://arxiv.org/abs/1705.05502
 
+A Unifying Perspective on Neighbor Embeddings along the Attraction-Repulsion Spectrum
+Jan Niklas Böhm, Philipp Berens, Dmitry Kobak. Jul 2020.
+https://arxiv.org/abs/2007.08902
+They look into **negative sampling** and noise-contrastive-estimations; analyze [[tsne]] and [[umap]] in this context. Sounds interesting!
+
 Identity Crisis: Memorization and Generalization Under Extreme Overparameterization 
 Chiyuan Zhang, Samy Bengio, Moritz Hardt, Michael C. Mozer, Yoram Singer
 https://openreview.net/forum?id=B1l6y0VFPr

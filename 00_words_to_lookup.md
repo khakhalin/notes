@@ -23,10 +23,17 @@ lots of useful practical bits and pieces: the shell, debugging, metaprogramming 
 
 # Algos and top priorities
 
+* Understand `with` in Python again. Why is it so common in DL code?
+* refresh AUC
+* read at least some super-basic tSNE and UMAP - what's the difference
+* Does cross-entropy in DL work with softmax predictions, or probabilities? I think probabilities, but clarify.
 * Softmax approximations: https://ruder.io/word-embeddings-softmax/index.html
 * [[Xie2020noisy_student]] - finish this one first and foremost
 * How to do bayesian 01 guesser? How does process 001 if current history is 0? How to combine n-grams of diff length? Derive, and also google / check on the web.
 * When to use BatchNormalization() in a network? Why don't we use it always? Or should we use it always? What's the logic here?
+* Node.js
+* React
+* MongoDB
 * Mean, variance for Normal, Uniform, Poisson, binomial, write Gaussian pdf formula
 * Sampling techniques and common designs (e.g. A/B).
 * Common conjugate priors (Bayesian stats).

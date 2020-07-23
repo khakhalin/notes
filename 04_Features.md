@@ -3,11 +3,11 @@
 #features
 
 Subtopics:
-* [[clustering]]
+* [[clustering]] - subj
 * [[bib_fairness]] - on practical choice and interpretation of features
 * [[smoothing]] - as a type of feature transformation
 
-Dim Reduction
+**Dim Reduction**
 On dim reduction proper, see below.
 On working with very high dimensions, see:
 * [[curse_dim]] - Dimensionality curse

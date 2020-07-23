@@ -56,6 +56,8 @@ What if there are no (or little) of node features? (_Some speculations here:_)
 
 We can try to train it in unsupervised mode, as we did before ([[graph_embedding]]), reconstructing something about the graph (edges? node features?). We can also use supervised training, if there's something task-specific that we want to learn to do (node label prediction?)
 
+> Philosophically, this "unsupervised" mode is of course "supervised", or "self-supervised", as we have the labels (presence of edges; node classes) or target values (node properties) to learn. Just these labels / values come from the same dataset, not from some external data, as we repeatedly hide it from the model, and use the rest of the graph to "guess them". Same as for image augmentation, for example. It's kinda unsupervised, but with the math of supervised learning.
+
 **Loss function**: if $y_v$ are labels, we would just try to predict tem from node embeddings:
 
 $\displaystyle L = \sum_{v ∈ V} y_v \log \big( σ(z_v^⊤ θ) \big) + (1-y_v) \log\big( 1- σ(z_v^⊤ θ)\big)$ . A classic cross-entropy loss; 
