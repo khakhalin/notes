@@ -35,6 +35,7 @@ lots of useful practical bits and pieces: the shell, debugging, metaprogramming 
 * Node.js
 * React
 * MongoDB
+* [[julia]] - a 2020 review paper about the language
 * Mean, variance for Normal, Uniform, Poisson, binomial, write Gaussian pdf formula
 * Sampling techniques and common designs (e.g. A/B).
 * Common conjugate priors (Bayesian stats).

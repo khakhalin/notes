@@ -17,7 +17,7 @@ The probability here may be calculated using a sofmax: $P(v|z_u) = \exp(z_u^\int
 The problem with the expression above is that we have to loop through too many nodes in the denominator here (normalization term). We cannot afford it, so we need to approximate it. Solution: **negative sampling**, aka **Noise-Contrastive Estimation** (NCE; Goldberg 2014; see [[word2vec]]):
 
 $\displaystyle \log\frac{\exp(z_u^\intercal z_v)}{Σ_i \exp(z_u^\intercal z_i)} \approx \log(σ(z_u \cdot z_v)) - \sum_{i \in S} \log(σ(z_u \cdot z_i))$ 
-here σ is a sigmoid function, and S is sampled from all nodes in some representative way. We normalize against a negative sample, which gives us linear complexity. How to sample? Typically, proportional to a node degree; sample sizes k~5-20. The sigmoids are come from an idea of iterative tree-like probabilistic descent, first introduced by [[hierarchical_softmax]], escept this procedure is more efficient.
+here σ is a sigmoid function, and S is sampled from all nodes in some representative way. We normalize against a negative sample, which gives us linear complexity. How to sample? Typically, proportional to a node degree; sample sizes k~5-20. The sigmoids seem to come from an idea of iterative tree-like probabilistic descent, first introduced by [[hierarchical_softmax]], escept this procedure is more efficient.
 
 It is also important to bound z_u, or trying to maximize dot-products, z vectors will try grow to inf, and we don't want it.
 
@@ -44,6 +44,9 @@ What to do next?
 
 # Refs
 
-Main publication:
+Original publication:
 Grover, A., & Leskovec, J. (2016, August). node2vec: Scalable feature learning for networks. In Proceedings of the 22nd ACM SIGKDD international conference on Knowledge discovery and data mining (pp. 855-864). (3k citations)
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5108654/
+
+An attempt to make sampling more efficient (4-10 times faster) by using prior knowledge about netwok degree statistics (power law):
+https://github.com/NilsFrahm/Node2vec

@@ -25,9 +25,17 @@ https://sci-hub.se/https://doi.org/10.1016/j.cub.2020.01.033
 * https://arxiv.org/abs/2003.03461
 * https://www.goodai.com/implementation-of-generative-teaching-networks-for-pytorch/
 
+Fun:
+Rekdal, O. B. (2014). Academic urban legends. Social Studies of Science, 44(4), 638-654.
+https://journals.sagepub.com/doi/full/10.1177/0306312714535679
+
 # Intros and top choices
 
 Peyré, G., & PSL, É. N. S. Mathematics of Neural Networks.
+
+Ideas for Improving the Field of Machine Learning: Summarizing Discussion from the NeurIPS 2019 Retrospectives Workshop
+Shagun Sodhani, Mayoore S. Jaiswal, Lauren Baker, Koustuv Sinha, Carl Shneider, Peter Henderson, Joel Lehman, Ryan Lowe
+https://arxiv.org/abs/2007.10546
 
 Tishby, N., Pereira, F. C., & Bialek, W. (2000). The information bottleneck method. arXiv preprint physics/0004057.
 https://arxiv.org/pdf/physics/0004057.pdf
@@ -36,6 +44,11 @@ https://arxiv.org/pdf/physics/0004057.pdf
 Saxe, A. M., Bansal, Y., Dapello, J., Advani, M., Kolchinsky, A., Tracey, B. D., & Cox, D. D. (2019). On the information bottleneck theory of deep learning. Journal of Statistical Mechanics: Theory and Experiment, 2019(12), 124020.
 https://iopscience.iop.org/article/10.1088/1742-5468/ab3985
 Seems to have struck a nerve (>100 citations in just one month!). And not that hard on math.
+
+Poisoning machine learning models is easier than it seems
+Paper: https://openreview.net/forum?id=BJeGA6VtPS
+Blog: https://portswigger.net/daily-swig/trojannet-a-simple-yet-effective-attack-on-machine-learning-models
+Discussion: https://www.reddit.com/r/MachineLearning/comments/hxnee0/research_poisoning_deep_learning_models_is_easier/
 
 Xie, Q., Luong, M. T., Hovy, E., & Le, Q. V. (2020). Self-training with noisy student improves imagenet classification. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 10687-10698).
 https://arxiv.org/abs/1911.04252
