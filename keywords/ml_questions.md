@@ -2,6 +2,11 @@
 
 #lifehack #interview
 
+Apparently another collection of questions?:
+* https://www.stratascratch.com/
+
+Some recent list:
+
 1. Know what a p-value is and its limitations in decisions.
 2. Linear regression and its assumptions.
 3. When to use different statistical distributions.

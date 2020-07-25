@@ -77,16 +77,23 @@ finally:
     del a
 ```
 
-### With
+# With
 
-An alternative to `try - except - finally`.	 Relies on the fact that many objects are shipped with methods `__enter__` and `__exit__`: one to create an object, set it up, and return the instance; the other one to gracefully stop and close the object. In practice, I most often see it used with files, and tensorflow objects.
+An alternative to `try - except - finally`.	 Relies on the fact that many objects are shipped with methods `__enter__` and `__exit__`: one to create an object, set it up, and return the instance; the other one to gracefully clean up after the sensitive operation is performed. `__exit__` typically (or always?) doesn't delete the object, so the object can be referenced after the "with construction" is over. Even if the "with" part itself is empty, by that time three methods would have been executed: init, enter, and exit, in this order.
 
+In practice, I most often see it used with files, and deep learning objects (TF and Pytorch).
+
+Typical use case:
 ```python
-with LEG() as a:
-    a.move()
+with Thing() as t:
+    t.do_something()
 ```
 
-Refs: [2006 intro](https://effbot.org/zone/python-with-statement.htm), [official description with examples](https://docs.python.org/3/reference/compound_stmts.html), [another one](https://www.python.org/dev/peps/pep-0343/)
+Refs:
+* 2006 intro: https://effbot.org/zone/python-with-statement.htm
+* official description with examples: https://docs.python.org/3/reference/compound_stmts.html
+* another official description one: https://www.python.org/dev/peps/pep-0343/ 
+* implementing a class to support `with` statement: https://preshing.com/20110920/the-python-with-statement-by-example/
 
 # OOP in Python
 
