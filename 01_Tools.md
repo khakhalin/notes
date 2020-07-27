@@ -22,6 +22,7 @@ Project management and alike:
 ML projects, general advice:
 * [[ml_lore]] - a collection of rules of thumb about everything Deep Learning (which defaults to pick etc.)
 * [[Breck2017testing]] - a rubric for ML project readiness
+* [[julia]] - about the language
 
 Other #lifehack(s):
 * [[zettelkasten]] - how to properly create and support this knowledge base

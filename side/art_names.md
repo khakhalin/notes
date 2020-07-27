@@ -5,6 +5,7 @@ Just a list of names (of artists) that are always inspirational. Something to fe
 #art #side
 
 Older
+* Duccio Buoninsegna - transition from Icons to renaissance 
 * Peter Brook - The Pennine Painter
 * Mstislav Dobuzhinsky - obviously
 * Maurice Wade - precisionism of dark (almost black) shadows, and reflections
@@ -46,6 +47,8 @@ Icons
 * Lyuba Yatskiv
 * Ulyana Tomkevych
 * Jerzy Nowosielski
+
+* Manuel Panselinos - Macedonia, 13-14c
 
 Sources
 * St Anne from the Faras cathedral in Sudan - Nubians invented Anime (the eyes!)

@@ -30,6 +30,7 @@ lots of useful practical bits and pieces: the shell, debugging, metaprogramming 
 * Softmax approximations: https://ruder.io/word-embeddings-softmax/index.html
 * [[Xie2020noisy_student]] - finish this one first and foremost
 * Weisfeiler-Lehman Isomorphism Test (see also: [[graphsage]])
+* Density-based clustering, aka HDBSCAN: https://towardsdatascience.com/a-gentle-introduction-to-hdbscan-and-density-based-clustering-5fd79329c1e8
 * How to do bayesian 01 guesser? How does process 001 if current history is 0? How to combine n-grams of diff length? Derive, and also google / check on the web.
 * When to use BatchNormalization() in a network? Why don't we use it always? Or should we use it always? What's the logic here?
 * Node.js
