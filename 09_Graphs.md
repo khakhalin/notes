@@ -4,11 +4,12 @@
 
 Topics:
 * [[graph_intro]] - Intro to graphs
-* [[graph_properties]] - Characterize networks
+* [[graph_properties]] - How to characterize graphs and networks
 * [[graph_generate]] - Generative models for graphs
     * [[erdos_graph]] - basis
     * [[small_world]]  - SW model
     * [[kronecker_graph]] - Fractal model for graph generation
+    * [[generative_graphRNNs]] - generating graphs with DL RNNs
 * [[algos_graph]] - Classic algorithms on graphs
 * [[la_net]] - Linear algebra on graphs
 * [[graph_embedding]] - Learning graph representations, random walks

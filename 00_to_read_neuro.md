@@ -11,6 +11,9 @@ Hasson, U., Nastase, S. A., & Goldstein, A. (2020). Direct Fit to Nature: An Evo
 https://www.cell.com/neuron/pdf/S0896-6273(19)31044-X.pdf
 An opinion (perspective) on how we could, and should, use deep models to understand psychology and neuroscience, as they are not that different than the results of evolution, after all.
 
+Haber, A., & Schneidman, E. (2020). Learning the architectural features that predict functional similarity of neural networks. bioRxiv.
+https://www.biorxiv.org/content/10.1101/2020.04.27.057752v1
+
 # General, top, and fun
 
 Raman, D. V., Rotondo, A. P., & O’Leary, T. (2019). Fundamental bounds on learning performance in neural circuits. Proceedings of the National Academy of Sciences, 116(21), 10537-10546.

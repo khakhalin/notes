@@ -3,7 +3,7 @@
 #dl #graph
 
 Parents: [[09_Graphs]] / [[graph_embedding]] / [[deep_graphs]]
-Related: [[cnn]], [[deep_graph_generation]]
+Related: [[cnn]], [[generative_graphRNNs]]
 
 Let's generalize the simple idea from [[deep_graphs]] to a case of
 1. more general aggregation function
@@ -56,3 +56,6 @@ https://arxiv.org/pdf/1710.10903.pdf
 Multi-head attention on graphs
 
 Ying 2018 - PinSage - learning image classification from sparce bipartite graph of these images placed in different thematic collections by Pinterest users
+
+The very last part of this course conspect:
+https://snap-stanford.github.io/cs224w-notes/machine-learning-with-networks/graph-neural-networks

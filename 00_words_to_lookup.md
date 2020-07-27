@@ -23,6 +23,7 @@ lots of useful practical bits and pieces: the shell, debugging, metaprogramming 
 
 # Algos and top priorities
 
+* go back to lecture 7, watch slides about anonymized walks, find the publication, add a summary here
 * refresh AUC
 * https://github.com/iamtrask/Grokking-Deep-Learning - is it true that it builds pytorch-like system from scratch? Check.
 * read at least some super-basic tSNE and UMAP - what's the difference
