@@ -44,7 +44,7 @@ There are three types of behaviors:
 
 Who does what (first archetypes, then alphabetically):
 * **Second main phase**: und, aber; denn, doch, oder, sondern
-* **Subjunction**: da, dass, weil, wenn, obwohl; als, bevor, bis, damit, ehe, falls, indem, nachdem, seit, seitdem, sodass, solange, sooft, während, wohingegen
+* **Subjunction**: da, dass, weil, wenn, ob, obwohl; als, bevor, bis, damit, ehe, falls, indem, nachdem, seit, seitdem, sodass, solange, sooft, während, wohingegen
 * **Verb first**: dann, trotzdem, also; allerdings, andererseits, anschließend, dabei, dadurch, dafür, dagegen, damit, danach, darauf, darum, davor, dazu, deshalb, deswegen, einerseits, ferner, folglich, genauso, immerhin, inzwischen, jedoch, schließlich, seitdem, später, vorher, weder..noch, zuvor, zwar
 
 Ref:

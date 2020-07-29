@@ -5,6 +5,11 @@ Richards, B. A., Lillicrap, T. P., Beaudoin, P., Bengio, Y., Bogacz, R., Christe
 
 #review #deepneuro #bib #credit
 
+Full list of authors: 
+Blake A. Richards, Timothy P. Lillicrap, Philippe Beaudoin, Yoshua Bengio, Rafal
+Bogacz, Amelia Christensen, Claudia Clopath, Rui Ponte Costa, Archy de Berker, Surya Ganguli, Colleen J. Gillon, Danijar Hafner, Adam Kepecs, Nikolaus Kriegeskorte, Peter Latham, Grace W. Lindsay, Ken Miller, Richard Naud, Christopher C. Pack, Panayiota Poirazi, Pieter Roelfsema, João Sacramento, Andrew
+Saxe, Benjamin Scellier, Anna Schapiro, Walter Senn, Greg Wayne, Daniel Yamins, Friedemann Zenke, Joel Zylberberg, Denis Therien, Konrad P.Kording
+
 That impactful opinion piece with 20 or something coolest comp neuroscientists. Overall, a great review to cite every time you claim that "bottom-up then compare" is a more productive approach for reverse engineering complex systems than going "top-down".
 
 Success stories for "few neurons recordings": CPGs, VOR, motion in the retina. With many neurons, this doesn't work, but maybe ANNs will help.
@@ -22,7 +27,7 @@ In the blue box: a summary of backprop, and ~10 links to various potential solut
 
 How to reverse-engineer objective functions for the brain? Sometimes from common sense (e.g. predictive coding = optimize description length). Box with more examples: log-probability of action sequences scaled by the reward they have produced; increase of mutual information with the environment ("empowerment" - apparently a term!) Also a quick plug for "learning how to learn". Ultimately, we need behavior / ethology to guess the objective functions (*they mention brain-machine interfaces, but virtual environments Engert-style would actually be kinda more in spirit*)
 
-How to use this approach? Create models that solve the task; make predictions; compare with the brain (*my paper totes fits the bill*). Link plasticity rules to representations, and the other way around (ref 77: Lim2005).
+How to use this approach? Create models that solve the task; make predictions; compare with the brain. Link plasticity rules to representations, and the other way around (ref 77: Lim2005).
 
 Interesting point: most past comp neuro work was done on brain dynamics, and this new proposal doesn't quite interact with that past work. 
 

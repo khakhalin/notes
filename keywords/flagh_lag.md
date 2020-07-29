@@ -12,6 +12,9 @@ The reaction time to a simple presence of light is about 150 ms, of which ~50 ms
 
 # Refs
 
+Demo:
+https://michaelbach.de/ot/mot-flashLag/
+
 See also: https://en.wikipedia.org/wiki/Cutaneous_rabbit_illusion
 (Similar sequential prediction, but for tactile stimuli)
 

@@ -180,7 +180,7 @@ Gonçalves .. Macke 2019
 About how to use deep learning to guess neuronal parameters to fit the actual activity of the network (?) They seem to be looking at actual V(t) though.
 
 Yaoda Xu, Maryam Vaziri-Pashkam (2020) Limited correspondence in visual representation between the human brain and convolutional neural networks
-https://www.biorxiv.org/content/10.1101/2020.03.12.989376v1
+https://www.biorxiv.org/content/10.1101/2020.03.12.989376v1 
 Essentially, some critique of deepneuro!
 
 Richards, B. A., Xia, F., Santoro, A., Husse, J., Woodin, M. A., Josselyn, S. A., & Frankland, P. W. (2014). Patterns across multiple memories are identified over time. Nature neuroscience, 17(7), 981.

@@ -6,6 +6,7 @@ Just a list of names (of artists) that are always inspirational. Something to fe
 
 Older
 * Duccio Buoninsegna - transition from Icons to renaissance 
+* Odilon Redon - fav French symbolist
 * Peter Brook - The Pennine Painter
 * Mstislav Dobuzhinsky - obviously
 * Maurice Wade - precisionism of dark (almost black) shadows, and reflections
