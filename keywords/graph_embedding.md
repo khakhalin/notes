@@ -4,7 +4,7 @@
 
 Parent: [[09_Graphs]]
 See also: [[embedding]], [[deep_graphs]]
-Children: [[node2vec]], [[knowledge_graph]]
+Children: [[node2vec]], [[transE]] (knowledge graph)
 
 
 A reminder on possible tasks on graphs:

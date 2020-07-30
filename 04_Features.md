@@ -3,7 +3,7 @@
 #features
 
 Subtopics:
-* [[clustering]] - subj
+* [[clustering]] - Methods in data clustering
 * [[bib_fairness]] - on practical choice and interpretation of features
 * [[smoothing]] - as a type of feature transformation
 

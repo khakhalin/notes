@@ -2,7 +2,7 @@
 
 #vae #self-supervised #bib
 
-Parents: [[08_Self_Supervised]]
+Parents: [[08_Self_Supervised]], [[15_generate]]
 Related: [[gan]]
 
 **Autoencoders**: Encoder → latent space (aka code) → Decoder → loss function.

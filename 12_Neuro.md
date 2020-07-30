@@ -3,7 +3,11 @@
 #neuro #behav
 
 # Topical Bibliographies
-* [[bib_tracking]] - papers about auto-tracking many animals at once, then doing ML on this set
-* [[bib_reconstruction]] - papers about reconstructing connectivity from spiking
-* [[bib_xen_behav]] - papers on collision avoidance, tecta, hindbrains, OMR etc.
+* [[[bib_behavior]] - Animal behavior
+    * [[bib_neurostochastic]] - Stochasticity and randomness in neuroscience
+    * [[bib_tracking]] - On ML of behavioral data
+    * [[bib_xen]] - Xenopus-specific: collision avoidance, tecta, hindbrains, OMR etc.
+* [[bib_neuro_evo]] - Evolution of nervous system
+    * [[bib_one_neuron]] - Computation in one neuron
+* [[bib_reconstruction]] - On  reconstructing connectivity from spiking
 

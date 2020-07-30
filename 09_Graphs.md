@@ -4,20 +4,26 @@
 
 Topics:
 * [[graph_intro]] - Intro to graphs
-* [[graph_properties]] - How to characterize graphs and networks
-* [[graph_generate]] - Generative models for graphs
-    * [[erdos_graph]] - basis
-    * [[small_world]]  - SW model
-    * [[kronecker_graph]] - Fractal model for graph generation
-    * [[generative_graphRNNs]] - generating graphs with DL RNNs
+    * [[graph_th]] - Random notes in graph theory
 * [[algos_graph]] - Classic algorithms on graphs
 * [[la_net]] - Linear algebra on graphs
+    * Spectral techniques - [youtube](https://www.youtube.com/watch?v=0eNQnc0eOB4&list=PL1OaWjIc3zJ4xhom40qFY5jkZfyO5EDOZ&index=5) #todo
+* [[graph_properties]] - How to characterize graphs and networks
+    * Centrality measures #todo _create a summary page_
+        * [[pagerank]] - Pagerank and link analysis
+    * motifs - Motif analysis #todo
+* [[graph_generate]] - Generative models for graphs
+    * [[erdos_graph]] - basis
+    * [[small_world]]  - SW models
+    * [[kronecker_graph]] - Fractal model for graph generation
+    * [[generative_graphRNNs]] - generating graphs with DL RNNs
 * [[graph_embedding]] - Learning graph representations, random walks
+    * Label Propagation - [youtube](https://www.youtube.com/watch?v=8szDxEU9u8g&list=PL1OaWjIc3zJ4xhom40qFY5jkZfyO5EDOZ&index=7) #todo
     * [[node2vec]] - fancier use of random walks for graph embedding
-    * [[knowledge_graph]] - TransE method
+    * [[transE]] - Knowledge Graph method
     * [[deep_graphs]] - Deep Learning on graphs
         * [[graphsage]] - a particular implementation of DL for graphs
-* [[graph_th]] - Assorted wild topics in graph theory
+* [[graph_spread]] - Cascading processes on graphs #todo
 
 Papers:
 * [[Bacciu2019gentlegraph]] - Intro to Graph NNs
@@ -31,7 +37,7 @@ https://arxiv.org/pdf/1709.05584.pdf
 Kipf, T. N., & Welling, M. (2016). Semi-supervised classification with graph convolutional networks. arXiv preprint arXiv:1609.02907.
 Graph convolutional networks (analogous to SAGE, but from a different group of people).
 
-[[Li2017graph]] -  Gated graph sequence neural networks (started, but never finished)
+[[Li2017graph]] -  Gated graph sequence neural networks (I started conspecting it didn't finish yet)
 
 https://medium.com/dair-ai/an-illustrated-guide-to-graph-neural-networks-d5564a551783
 

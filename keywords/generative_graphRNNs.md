@@ -5,16 +5,6 @@
 Parents: [[09_Graphs]] / [[graph_generate]] ; [[07_RNNs]]
 Related:  [[deep_graphs]], [[graphsage]]
 
-Video markup:
-* 1:25 - lecture proper begins, review of last week
-* 4:35 - defining the task, setting the goals
-        * 10:44 - why generating graphs is hard
-* 14:56 - setting the problem in terms of sampling and distributions
-* 30:30 - GraphRNNs
-* 54:30 - putting things together, lots of answering questions, then tractability
-* 1:12:11 - application to generating candidate drug molecules
-* 1:18 - over
-
 ## Setting the problem
 
 We want to be an **opposite of a graph convolution network** (GCC, or [[graphsage]]): we want to use RNNs to go from a network representation to a graph. We'll use RNNs for that.
@@ -124,6 +114,8 @@ Let's use a good node ordering, and by "good" we mean **BFS search** ordering. T
 >* What would be the best (even if approximate / imperfect / probabilistic) way to scale this approach up to distributed, parallel processing?
 
 In practice, this model may also be embed into a reinforcement learning system, or into a GAN system, to rate its outputs based on some external properties of this graph.
+
+Good test: generating grids. Generating grids is relatively hard for a network like that, and mistakes are clearly visible.
 
 # Refs
 

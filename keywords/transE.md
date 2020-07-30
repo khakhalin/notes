@@ -1,4 +1,4 @@
-# Knowledge graphs - semantic embedding
+# TransE, Knowledge graphs, semantic embedding
 
 #graph #embedding #semantic
 
@@ -6,7 +6,6 @@ Parents: [[09_Graphs]] / [[graph_embedding]]
 Siblings: [[node2vec]]
 See also: [[word2vec]], [[embedding]]
 
-## TransE
 
 **TransE**: an alternative approach that doesn't actually rely on random walks. Ref: Borders 2013.
 
