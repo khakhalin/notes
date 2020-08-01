@@ -2,6 +2,14 @@
 
 #neuro #perception #bib
 
+# Scrap notes
+
+* Yanni/Laurel illusion - Grover swearing - Green Needle / Brainstorm
+* The Cat illusion (a friend of 12 13 14 / ABC)
+* Lots of alternative names (also depending on which aspect of the story you integrate, and on what you studied prior haha): context sensitivity, priming, illusory conjunction, selective attention, gestalt, cross-modal integration etc.
+
+# Refs / ToRead
+
 Adelson, E. H. (2000). 24 Lightness Perception and Lightness Illusions.
 http://persci.mit.edu/pub_pdfs/gazzan.pdf
 A very good richly illustrated review on illusions of tone perception created by shapes that are perceived as "photos" of 3D shapes with shadows. Summarizes  his (Edward Adelson) work on how the brain can essentially reconstruct 2 maps from one image: reflectance map (material) and illuminance map (shadows).

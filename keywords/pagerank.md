@@ -71,11 +71,28 @@ The entire construction above may be represented as a magic "Google matrix" $\ma
 
 **How to calculate Pagerank in practice?** The adjacency matrix A is sparse, so it can exist in memory, but the "Google matrix" $\mathcal{M}$ is no longer sparse, and has N² dimensions that are impractical. So go back to a sparse matrix M with no dead-ends (zeroes for dead-ends), and add a scalar manually. And to deal with leaking dead-ends, just renormalize R at every step, which is equivalent to insta-teleportation.
 
+Just in case, the algorithm once again:
+1. Set $r=\vec{1}/N$
+2. $\displaystyle \forall j: r' = 0+β\sum_{i→j}\frac{r_i}{d_i}$. That is, if no edges lead to j and $\{i: i→j\}=\varnothing$, this $r_j = 0$.
+3. $\displaystyle \forall j: r' = r' + \frac{1-S}{N}$ where $S=\sum_j r'_j$. 
+4. If $\sum_j |r_j' - r_j|<ε$, break the loop.
+5. Else: $r = r'$, and loop back to point 2 (next iteration).
+
 1:12:24
 
-### Random walk with restarts and personalized PageRank
+## Personalized PageRank and Random walk with restarts
 
-...
+**Recommender systems** often work with data that looks like a bipartite graph (something like user - product). So we want to implement **collaborative filtering** [[collab_filtering]] to find nodes (users , products) that are related. Number of common neighbors is important (should count towards similarity), but number of non-common neighbors should count against similarity. So it gives us a set of intuitions:
+* The more common friends 2 nodes have, the closer they are
+* The more different friends 2 nodes have, the further they are
+* If there is no direct connections, but you can reach each other with several hops, they are still somewhat related, but the fewer hops, the better.
+
+And random walks on graphs satisfy this intuition!
+
+* **Personalized Page-Rank**: like normal page-rank, but for walks that start in only a subset of nodes (aka **query nodes**; thematically filtered). 
+* **Random walk with restarts**: In the most extreme case we always restart in the same node. In this case it may be easier to explicitly simulate random walks, rather than work with probabilities (via power iteration). Helps to quickly create thematic recommending systems.
+
+> What's the complexity of random walk with restart? For a single node, it's roughly constant, as we can decide apriori the depth of each random walk, and the number of walks. During the walk, we will have to decide where to go from each node, which is equivalent to randomly sampling from a list stored in a hashtable (a list of edges), and even this may be further optimized by duplicating some edges if necessary, giving all random samples the same length (as they did in [[word2vec]] for negative sampling - just a performance hack).
 
 # Refs
 
@@ -85,7 +102,7 @@ https://snap-stanford.github.io/cs224w-notes/network-methods/pagerank
 Youtube lecture:
 https://www.youtube.com/watch?v=_4rPZVOLzCs&list=PL1OaWjIc3zJ4xhom40qFY5jkZfyO5EDOZ&index=10
 
-### Original papers:
+## Original papers
 
 Broder, A., Kumar, R., Maghoul, F., Raghavan, P., Rajagopalan, S., Stata, R., ... & Wiener, J. (2000). Graph structure in the web. Computer networks, 33(1-6), 309-320.
 4k citations. Published by Altavista people, based on 1999 internet structure.
