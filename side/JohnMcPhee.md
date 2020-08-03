@@ -2,7 +2,7 @@
 
 #lifehack
 
-Related: [[zettelkasten]]
+Related: [[zettelkasten]], [[writing]]
 
 John McPhee uses a esoteric oldschool macros-based editor "Kedit" somebody customized uniquely for him. He starts with a structure, which is often represented graphically. Once the structure is clear, he starts producing the notes, encoding on each note where it belongs. At any moment, he can make the machine combine all these notes into a narrative according to this pre-defined structure. And then supposedly he can fine-tune them. It's like working with cards and shuffling them into piles.
 

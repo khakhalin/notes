@@ -55,6 +55,8 @@ lots of useful practical bits and pieces: the shell, debugging, metaprogramming 
 * Why autoencoders use KL and not L2 as loss? What's the logic of when KL is used? Older papers, like [[Hinton2006dim]] used cross-entropy. Why?
 * https://en.wikipedia.org/wiki/Universal_approximation_theorem
 * churn prediction problem
+* https://en.wikipedia.org/wiki/List_of_algorithms - at least read through them haha :)
+* Geometric algorithms: https://www.geeksforgeeks.org/geometric-algorithms/
 * Bash
 * Wald’s sequential analysis
 * Bayesian extensions of the stochastic blockmodel

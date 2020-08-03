@@ -4,6 +4,7 @@
 
 Related:
 * [[JohnMcPhee]] - on his writing system, which is not dissimilar to Zettelkasten
+* [[writing]] - on writing well
 
 # How One German Scholar Was So Freakishly Productive
 

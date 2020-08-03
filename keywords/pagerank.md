@@ -17,15 +17,11 @@ Any directed graph can be expressed as a sort of a superposition of these two ty
 
 To keep it easier, when people talk about **strongly connected components**, they refer to largest possible components connecting every pair of mutually connected nodes. So a SCC is always a single one, that becomes a single meta-node during condensation, and this node is final (cannot be merged with any other node). This way, the statement above may be rephrased as: **every graph is a DAG on its SSCs**.
 
-12:50
-
 (Broder 2000): analysis of internet structure (as it was in 1999) using this DAG/SCC paradigm. 2e8 nodes (back then); how to analyze it? SSC (that ∋ v) = out(v) ∩ in(v) = out(v, G) ∩ out(v, G'), where G' is a flipped graph (with the direction of all edges flipped). 
 
 > See Kosaraju-Sharir algorithm, to run it efficiently.
 
 What Broder et. al discovered (using a state-of-the art machine that was less powerful that a laptop today) is that if you start from random nodes, and do a BFS, you either end very early (~100 nodes), or you get almost the entire web. The graph is only plottable in log-y scale, and it grows faster than exponentially, and then suddently switches to a maxed-out plato. A **Giant Connected Component**. (In their case, saturated out(v) contained ~50% of the nodes, and so did saturated in(v), with their intersection - the giant strongly connected component proper - containing ~30% of all nodes). They called this structure a "**Bowtie with tendrils**" - there's a dense knot in the middle (the giant components), a fan-in (of pages with links that aren't referenced), a fan-out (of pages that are referenced, but don't contain links), and then some weird random tentacles and tendrils growing off it, as well as some disconnected components.
-
-22:40
 
 ## Pagerank
 
@@ -35,15 +31,11 @@ Their formulation: the importance (rank) of a page is evenly split betwee, and i
 
 $\displaystyle r_j = \sum_{i→j} \frac{r_i}{d_i}$
 
-31:00
-
 Can we solve it? Yes, probably, as it's essentially a matrix equation $\textbf{R} = \textbf{AD}^{-1}\textbf{R}$ (with a modified adjacency matrix that has 1s scaled down by $d_i$-s for existing edges). Except it's better not to it in a brute-force straightforward way (Gaussian elimination), as it won't scale to really large matrices. And btw, we'll also require ΣR =1 (normalized, in a statistical sense).
 
 > I mean, as usual, if R is a column-vector, and A is used as an operator to be multiplied by R on the right, as above, then A is flipped compared to a "normal" graph matrix, in the sense of a_ji encoding the i→j edge. If you want a "classic", adjacency matrix, you'll have to flip it: R = MR, where M = (D⁻¹A)ᵀ.
 
 **Random walk interpretation**: if there are random walks on this graph, $r_i$ will encode the probability of the process being at node $i$ over time (or, if we have lots of concurrent walks, it will reflect the expected number of random walkers staying at node $i$ at every moment of time), once the stationary distribution of these probabilities is reached.
-
-40:40
 
 It also means that pagerank = **principal eigenvector** of M = (D⁻¹A)ᵀ. And principal eigenvectors can be easily found via **power iteration** (exactly same as in PCA):
 
@@ -57,7 +49,7 @@ But does the solution even exist? **Will R=MR converge** to something reasonable
 
 And the same situation will happen in cycles (aka "Spider trap" problem) that will serve as similar "final endpoints" (just a cycle instead of a loop).
 
-How to solve it? Make everything leak just a little bit by adding "random teleportation". With probability 1-β (typically ~0.1, aka $β=0.9$), a random walker disappears and gets "teleported" to a random node in the web. Or if you think in terms of flows, $(1-β)r_i$ of flow is consumed from every point, and a constant flow of $(1-β)/N$ is also injected injected in every point (where N is the number of nodes).
+**How to solve it?** Make everything leak just a little bit by adding "random teleportation". With probability 1-β (typically ~0.1, aka $β=0.9$), a random walker disappears and gets "teleported" to a random node in the web. Or if you think in terms of flows, $(1-β)r_i$ of flow is consumed from every point, and a constant flow of $(1-β)/N$ is also injected injected in every point (where N is the number of nodes).
 
 In a matrix form, it is equivalent to scaling all elements by β, but also adding a scalar:
 
@@ -67,18 +59,19 @@ The entire construction above may be represented as a magic "Google matrix" $\ma
 
 > BTW, apparently map-reduce architecture was originally invented to run pageranks.
 
-1:01:30
+**Flows interpretation**: arguably, the most intuitively relateable (and incidentally, one that is easier to generalize to special cases discussed below). Imagine that all random walks are happening at the same time, with lots of particles on the graph. At any moment, some notes will have more particles on them (nodes with higher ranks, aka probabilities), while some nodes will have only few particles. Some edges will transport more partices, and some edges will transport fewer of them. We can think of it as some fluid flowing through the network. Each node would split its in-flow over its out-flow edges, and edges leading from nodes with higher rank will support higher flows. With this intuition, "teleportation" is equivalent to every node having a small "sink" through which an 1-β share of its content leaks out. Dead-end nodes have large (all-consuming) sinks in them. Everything that gets into the sinks is pumped on top of this net, and is sprinkled equally to every node.
 
-**How to calculate Pagerank in practice?** The adjacency matrix A is sparse, so it can exist in memory, but the "Google matrix" $\mathcal{M}$ is no longer sparse, and has N² dimensions that are impractical. So go back to a sparse matrix M with no dead-ends (zeroes for dead-ends), and add a scalar manually. And to deal with leaking dead-ends, just renormalize R at every step, which is equivalent to insta-teleportation.
+To make the intuition even more visceral: imagine a sand castle on a beach, with little pits in the sand, connected with dug-out "channels". The same amount of water slowly trickles into each and every pit from above, and also a share of water is constantly consumed by the sand, but still, water can run from one pit to another. If a pit has lots of in-flows, it will have more water in it, once this dynamic situation comes to an equilibrium.
 
-Just in case, the algorithm once again:
+**How to calculate Pagerank in practice?** The adjacency matrix A is sparse, so it can exist in memory, but the "Google matrix" $\mathcal{M}$ is no longer sparse, and has N×N dimensions. The only reason to create this monstrous $\mathcal{M}$ is to get access to proves and guarantees from linear algebra, but it is absolutely impractical computationally. So instead, we will work with a sparse matrix M, with no dead-ends (zeroes for dead-ends), and then add a scalar manually. And to deal with leaking dead-ends, we'll just renormalize R at every step, which is equivalent to insta-teleportation.
+
+Full algorithm:
+
 1. Set $r=\vec{1}/N$
 2. $\displaystyle \forall j: r' = 0+β\sum_{i→j}\frac{r_i}{d_i}$. That is, if no edges lead to j and $\{i: i→j\}=\varnothing$, this $r_j = 0$.
 3. $\displaystyle \forall j: r' = r' + \frac{1-S}{N}$ where $S=\sum_j r'_j$. 
 4. If $\sum_j |r_j' - r_j|<ε$, break the loop.
 5. Else: $r = r'$, and loop back to point 2 (next iteration).
-
-1:12:24
 
 ## Personalized PageRank and Random walk with restarts
 

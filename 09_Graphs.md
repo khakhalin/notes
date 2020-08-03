@@ -23,7 +23,7 @@ Topics:
     * [[transE]] - Knowledge Graph method
     * [[deep_graphs]] - Deep Learning on graphs
         * [[graphsage]] - a particular implementation of DL for graphs
-* [[graph_spread]] - Cascading processes on graphs #todo
+* [[graph_spread]] - Cascading processes on graphs
 
 Papers:
 * [[Bacciu2019gentlegraph]] - Intro to Graph NNs
