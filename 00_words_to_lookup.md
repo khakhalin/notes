@@ -23,8 +23,9 @@ lots of useful practical bits and pieces: the shell, debugging, metaprogramming 
 
 # Algos and top priorities
 
-* go back to lecture 7, watch slides about anonymized walks, find the publication, add a summary here
+* super-toy model for graphs: if we can directly multiply by a laplasian (because the graph is so small). Realize! Drop to Kaggle.
 * refresh AUC
+* ising model - at least what is it?
 * https://github.com/iamtrask/Grokking-Deep-Learning - is it true that it builds pytorch-like system from scratch? Check.
 * read at least some super-basic tSNE and UMAP - what's the difference
 * Does cross-entropy in DL work with softmax predictions, or probabilities? I think probabilities, but clarify.
