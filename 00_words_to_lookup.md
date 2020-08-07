@@ -23,7 +23,10 @@ lots of useful practical bits and pieces: the shell, debugging, metaprogramming 
 
 # Algos and top priorities
 
+* https://en.wikipedia.org/wiki/Intraclass_correlation
+* what is github.io and how it works? What can it do? Is it a good way to host blogs?
 * super-toy model for graphs: if we can directly multiply by a laplasian (because the graph is so small). Realize! Drop to Kaggle.
+* flip a tree (with honest suffering)
 * refresh AUC
 * ising model - at least what is it?
 * https://github.com/iamtrask/Grokking-Deep-Learning - is it true that it builds pytorch-like system from scratch? Check.

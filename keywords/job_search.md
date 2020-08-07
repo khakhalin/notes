@@ -27,3 +27,6 @@ General:
 Resumes and cover letters:
 * https://www.askamanager.org/2017/05/if-youre-not-getting-interviews-heres-how-to-fix-your-resume-and-cover-letter.html
 * Some advice for academics specifically: https://www.insidehighered.com/blogs/gradhacker/intro-resumes-cv-minded-academics
+
+Advice on coding interviews:
+* https://www.reddit.com/r/ProgrammerHumor/comments/i49h96/jobs_requirements/g0ikzmr/

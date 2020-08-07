@@ -23,7 +23,9 @@ Topics:
     * [[transE]] - Knowledge Graph method
     * [[deep_graphs]] - Deep Learning on graphs
         * [[graphsage]] - a particular implementation of DL for graphs
-* [[graph_spread]] - Cascading processes on graphs
+* Processes on graphs
+    * [[graph_spread]] - Decision-based models
+    * [[pandemics]] - Probabilistic models 
 
 Papers:
 * [[Bacciu2019gentlegraph]] - Intro to Graph NNs

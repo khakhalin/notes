@@ -22,12 +22,12 @@ https://www.youtube.com/watch?v=vqRWMDv0r78
 * Always separate: ab an auf aus bei ein los mit nach her hin vor weg zu zurück
 * Go both ways: durch hinter über um unter
 
-**Schwache Substantive** (they get -n or -en in non-Nominative cases)
+**Schwache Substantive** (they get -n or -en in all non-Nominative cases)
 Allmost all are masculine:
 * Types of people (nationalities, ages): Däne, Franzose, Grieche, Bulgare, Ungar, Junge
 * Masculine animals on -e: Affe, Löwe
-* Religion-relatd types of people ending on -t or -d: Atheist, Christ, Protestant
-* Präsident, Prinz
+* Religion-related types of people ending on -t or -d: Atheist, Christ, Protestant
+* Präsident, Prinz, Kollege, Praktikant
 * Professons on -ge: Archäologe, Ethnologe, Psychologe …
 * Bär, Bauer, Held, Mensch, Philosoph
 But there are also a few weird special cases:

@@ -56,6 +56,7 @@ Sources
 * Mudlarking - lots of pretty sorted objects from the mud
 
 Contemporary
+* Maxim Sukharev - neopagan geometric icon-like thingies: https://www.deviantart.com/sukharev/gallery
 * Ian McQue - obviously
 * Fred Ingrams - obviously
 * Pascale Rentsch - abstract expressionist landscapes: reeds, flowers, shrubs
