@@ -26,7 +26,7 @@ Topics:
 * Processes on graphs
     * [[graph_cascades]] - Decision-based models and cascades
     * [[sir]] - Pandemic-like models on graphs (SIR, SIS etc.)
-        * [[influence_maximization]]
+        * [[influence_maximization]] - greedy hill climbing, sketches method
 
 Reviews and intros:
 * [[Bacciu2019gentlegraph]] - Intro to Graph NNs

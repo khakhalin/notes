@@ -4,6 +4,8 @@
 
 See also: 
 * [[job_search]] - kind of the opposite perspective
+* [[system_interview]]
+* [[behav_interview]]
 
 Erik Bernhardsson 
 How to hire smarter than the market: a toy model

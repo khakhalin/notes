@@ -5,7 +5,7 @@
 Parents: [[09_Graphs]]
 See also: [[graph_cascades]] graph_spread
 
-**Epidemic-like spreading**: lack of decision-making (unlike in XXX); processes are probabilistic. There is also a tree (a branching process). Formalism: each node "meets" d new people, and with probability q infects each of them.
+**Epidemic-like spreading processes**: no explicit decision-making (unlike in [[graph_cascades]]); processes are probabilistic. But there is still a tree (a branching process). Formalism: each node "meets" d new people, and with probability q infects each of them.
 
 For which (d,p) will the pandemic run forever? 
 
