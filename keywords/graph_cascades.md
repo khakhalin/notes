@@ -1,9 +1,9 @@
 # Decision-based models
 
-#graphs #complexity
+#graph #complexity
 
 Parents: [[09_Graphs]]
-Related: percolation
+Related: percolation, [[sir]]
 
 **Cascading processes**: those where something propagates on a graph, creating cascades of node-level events. Examples: epidemics, diffusion of innovations, cascading failures in databases, spread of information, rumors, memes and viral marketing, fake news. In any of these scenarios, the propagation creates (or may be described as) a **propagation tree**, or a **cascade**. 
 

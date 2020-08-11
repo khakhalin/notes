@@ -1,9 +1,9 @@
-# Probabilistic processes on graphs
+# SIR, SIS, and other probabilistic processes on graphs
 
 #graph #chaos
 
 Parents: [[09_Graphs]]
-See also:
+See also: [[graph_cascades]] graph_spread
 
 **Epidemic-like spreading**: lack of decision-making (unlike in XXX); processes are probabilistic. There is also a tree (a branching process). Formalism: each node "meets" d new people, and with probability q infects each of them.
 
@@ -44,13 +44,13 @@ One way to solve it analytically is to assume **perfect mixing** (essentially - 
 
 $\displaystyle \begin{cases} I' = bSI - δI \\ S' = -βSI \\ R'=δI\end{cases}$
 
-> I'm writing the equations out of order, as the equation for I' is easy to relate to, and the other two are a direct consequences of the first one.
+> I'm writing the equations out of order, as the equation for I' is easy to relate to, and the other two are a direct consequences of the first one. But the correct order would be SIR of course.
 
 Nice smooth solutions with S flowing through I to R with some dynamics (one swipe through the entire population).
 
 ## SIS
 
-Another model: **SIS** - where you get succeptible again.
+Another model: **SIS** - where you get susceptible again.
 
 $\displaystyle \begin{cases} I' = bSI - δI \\ S' = -βSI + δI \end{cases}$
 
@@ -74,17 +74,17 @@ http://people.cs.vt.edu/~ramakris/papers/news-rumor-epi-snakdd13.pdf
 
 **SEIZ** model (with immunity) is also good for modeling fake news, in which case E is exposed, and Z (immune) can be interpreted as "skeptics". Except for fake news it may be better described as kinda "competing transitions" to two final states, I and Z. Like two infections that compete with each other (somewhat reminiscent of decision-based models: XXX). Then S may transition to either I or Z, but also to E (unstable state) that can fall to I later.
 
-> My intuition would be to make the transition tree symmetric on the I/Z axis, and assume that E eventually falls to either I (conspiracy theorist) or Z (rational), but for them empirically a forever-uncertain E is probably not different from Z, so they only consider conversion from E to I, but not from E to Z.
+> My intuition would be to make the transition tree symmetric on the I/Z axis, and assume that E eventually falls to either I (conspiracy theorist) or Z (rational). But for them empirically a forever-uncertain E is probably not different from Z, so they only consider conversion from E to I, but not from E to Z. Their diagram of transitions is almost symmetric, but not quite: with this exception.
 
-You can then solve ODE equations every time, and fit the dynamics to actual data, thus estimating the parameters. You can also compare different models in terms of their fit (e.g. in this case SEIZ fits the real data much better than a simple SIS).
+One can then solve ODE equations every time, and fit the dynamics to actual data, thus estimating the parameters. One can also compare different models in terms of their fit. In this case, for example, a SEIZ curve fits real data much better than a SIS, curve; probably just because the SEIZ system is more expressive.
 
 # Backstrom 2006
 
 Backstrom, L., Huttenlocher, D., Kleinberg, J., & Lan, X. (2006, August). Group formation in large social networks: membership, growth, and evolution. In Proceedings of the 12th ACM SIGKDD international conference on Knowledge discovery and data mining (pp. 44-54).
 https://www.cs.cornell.edu/home/kleinber/kdd06-comm.pdf
-An influencial study (2k citations) about joining groups (on livejournal):
+An influencial study (2k citations) about joining groups (on LiveJournal):
 
-A more flexible approach to modeling: try to combine decision-based and probabilistic models, and derive a dependency between the probability of adoption, and the number of friends that adopted an innovation. p(k) is probably monotonously increasing, but the shape may be weird (S-shape, for a bistable, decision-like situation), or maybe even non-monotonous (if you are getting annoyed when all your friends convert, so you don't convert just out of a principle lol).
+A more flexible approach to modeling: try to combine decision-based and probabilistic models, and derive a dependency between the probability of adoption, and the number of friends that adopted an innovation. p(k) is probably monotonously increasing, but the shape may be weird (S-shape, for a bistable, decision-like situation), or maybe even non-monotonous (if you are getting annoyed when all your friends convert, so you don't convert just out of a principle lol). The paper doesn't have all these pretty pictures though; it's mostly a descriptive analysis of what was happening with LJ.
 
 # Romero 2011
 
@@ -94,7 +94,9 @@ http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.298.4938&rep=rep1&type=
 
 Data from 2009-2011, 3B tweets, 60M users. Calculated the average "exposure curve" for top 500 hashtags (looking at hashtag virality). The curve grows really fast, then peaks and kinda platoes, with very slow decay.
 
-Introduced a simple, almost visual measure of **curve persistence** = the area under the curve, divided by just time ∙ peak. High persistence = low decay. Show that curves for different thematic hashtags have different average shapes: idioms and music decay fast (low persistence), while politics and sports linger. But music has higher peak, compared to, say, tech and movies.
+Introduced a simple, almost visual measure of **curve persistence** = the area under the curve, divided by time ∙ peak (like a rectangle drawn around the curve). High persistence = low decay. Show that curves for different thematic hashtags have different average shapes: idioms and music decay fast (low persistence), while politics and sports linger. Music has a higher peak, compared to, say, tech and movies.
+
+So it's mostly a paper about how different topics have different cascade dynamics, not about the math of it.
 
 # Refs
 

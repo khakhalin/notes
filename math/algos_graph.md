@@ -43,7 +43,7 @@ Here's an illustration. Imagine a graph with edges `(1,3)(2,3)(1,2)`. A good top
 
 > How to find a good node to start? Unfortunately, it seems that the only way to guarantee it with a DFS-algorithm only, is by starting with a yet different node every time you haven't covered the entire graph when starting from the current node. Until you find a good node to start. That is, assuming that you know that the graph is connected, and so ordering is possible. Which is of course not ideal, as it is super-slow, and doesn't work if a graph is not fully connected.
 
-> I am not quite sure it is true though, so this is something to be checked.
+> I am not quite sure it is true though, so this is something to be checked. #todo
 
 An alternative to DFS is a **Kahn's algorithm**. First of all, notice that a DAG has to have at least one node with in-degree 0. (Proof: no cycles ⇒ all paths are finite ⇒ ∃ max path ⇒ starting node of this path has in-degree 0, or one could have extended the path at this end □). The algorithm ([ref](https://www.geeksforgeeks.org/topological-sorting-indegree-based-solution/)):
 1. Calculate in-degree of all nodes. Create an empthy queue of "nodes to visit". Create an empty list of "visited nodes".

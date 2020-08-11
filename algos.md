@@ -1,10 +1,11 @@
 # Algorithms - General
 #algo #bib
 
-Subsets:
+Subtopics:
 * [[algos_graph]] - everything graphs
 * [[algos_trees]] - everything trees
-* [[sorting]]
+* [[sorting]] algorithms
+* [[np-complete]] - P, NP, and NP-complete
 
 Popular data structures:
 * [[hash]] - hashmaps, hashtables, and hashing functions

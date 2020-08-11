@@ -8,6 +8,10 @@ Stanard, T., Flach, J. M., Smith, M. R., & Warren, R. (2012). Learning to avoid 
 http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.918.1282&rep=rep1&type=pdf
 Seem to compare different types of logic (angle, derivative of it), comparing it to human behavior in a test paradigm. Come up with a linear model that reasonably explains the data?
 
+# Schooling
+
+* [[Rosenthal2015schooling]] - a cool study of behavioral contagion in schooling fish
+
 # OMR
 Xie, J., Jusuf, P. R., Bui, B. V., & Goodbourn, P. T. (2019). Experience-dependent development of visual sensitivity in larval zebrafish. Scientific Reports, 9(1), 1-11.
 https://www.nature.com/articles/s41598-019-54958-6

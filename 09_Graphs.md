@@ -24,13 +24,18 @@ Topics:
     * [[deep_graphs]] - Deep Learning on graphs
         * [[graphsage]] - a particular implementation of DL for graphs
 * Processes on graphs
-    * [[graph_spread]] - Decision-based models
-    * [[pandemics]] - Probabilistic models 
+    * [[graph_cascades]] - Decision-based models and cascades
+    * [[sir]] - Pandemic-like models on graphs (SIR, SIS etc.)
+        * [[influence_maximization]]
 
-Papers:
+Reviews and intros:
 * [[Bacciu2019gentlegraph]] - Intro to Graph NNs
+* [[Porter2019nonlinearity]] - Dynamics on graphs, including games on graphs, oscillators and what not
 
-# ML on Graphs
+Other papers:
+* ?
+
+# To-Read: ML on Graphs
 
 Review:
 Hamilton, W. L., Ying, R., & Leskovec, J. (2017). Representation learning on graphs: Methods and applications. arXiv preprint arXiv:1709.05584.

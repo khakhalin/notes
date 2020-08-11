@@ -4,7 +4,7 @@
 
 See also:
 * [[bib_neurostochastic]]  - about randomness, variability, exploration
-* [[bib_xen]] - everything Xenopus
+* [[bib_xen]] - everything Xenopus and fish
 * [[bib_video]] - about video tracking
 
 # Refs

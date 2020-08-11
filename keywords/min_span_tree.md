@@ -3,7 +3,7 @@
 #algo #graph #trees
 
 Parents: [[algos]] / [[algos_graph]]
-Related: [[algos_trees]]
+Related: [[algos_trees]], union-find
 
 **MST**: for an undirected weighted graph, a spanning tree (connected subgraph with no cycles) that also happenes to have a minimal sum of weights across all possible spanning trees. (May not be the ony tree with this sum, but at least there's no better one).
 
@@ -40,6 +40,6 @@ Note that if V is at least somewhat proportional to V squared, then total comple
 
 ## Kruskal's algorithm
 
-Include one edge at a time, in the order of w_ij, but don't bother about keeping the tree connected until it's ready. Time: O(E log E), space: O(E). To accelerate edge sorting, use priority queue. To make sure that no cycles are added, use "union find" (each connected component maintains its identity via upwards-linked tree terminating at a root that serves as a component id. If two vertices have different terminal roots, they belong to different components. And linking components is also easy). Is typically slower than Prim's. 
+Include one edge at a time, in the order of w_ij, but don't bother about keeping the tree connected until it's ready. Time: O(E log E), space: O(E). To accelerate edge sorting, use priority queue. To make sure that no cycles are added, use [[union-find]] (each connected component maintains its identity via upwards-linked tree terminating at a root that serves as a component id. If two vertices have different terminal roots, they belong to different components. And linking components is also easy). Is typically slower than Prim's. 
 
-Curious fact: an almost-linear O(E + ...) solution for this task exists (Chazelle 1997), but it is so complcated that cannot be used in practice.
+Curious fact: an almost-linear O(E + ...) solution for this task exists (Chazelle 1997), but it is so complicated that it cannot be used in practice.

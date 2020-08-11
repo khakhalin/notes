@@ -103,7 +103,7 @@ lots of useful practical bits and pieces: the shell, debugging, metaprogramming 
 * Scan [this helpful list](https://www.freecodecamp.org/news/coding-interviews-for-dummies-5e048933b82b/); digest into unit-items if needed
 * Rotate array in-place with juggling
 * treap
-* what is NP: definition ([this youtube again?](https://www.youtube.com/watch?v=YX40hbAHx3s))
+* what is P, NP, and NP-complete: definition ([this youtube again?](https://www.youtube.com/watch?v=YX40hbAHx3s))
 * Bloom filter (refs: [1](https://dominikschmidt.xyz/bloom-filter/))
 * Make sure [this list from geekforgeeks](https://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/) is exhausted
 * Make sure [this other list](https://www.geeksforgeeks.org/find-subarray-with-given-sum-in-array-of-integers/) from geekforgeeks is exhausted

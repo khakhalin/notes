@@ -1,6 +1,9 @@
 # Catastrophic forgetting
 
-#memory #ml #pruning #distillation
+#memory #ml #pruning #distillation #bib
+
+Parents: [[06_DL]]
+Related: [[transfer]], memory
 
 Aka **catastrophic interference**. A tendency of AN to abruptly and completely "forget" new information upon learning new information. First discovered in about 1990. A dilemma between flexibility and ability to generalize, and sensitivity to perturbation.
 
@@ -18,7 +21,7 @@ Main cause is probably an overlap of hidden representations. Learning both A and
 
 # To Read
 
-#todo #bib
+#todo
 
 Kirkpatrick, J., Pascanu, R., Rabinowitz, N., Veness, J., Desjardins, G., Rusu, A. A., ... & Hassabis, D. (2017). Overcoming catastrophic forgetting in neural networks. Proceedings of the national academy of sciences, 114(13), 3521-3526.
 
