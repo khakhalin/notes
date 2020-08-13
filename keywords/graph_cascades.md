@@ -1,6 +1,6 @@
 # Decision-based models
 
-#graph #complexity
+#graphs #complexity
 
 Parents: [[09_Graphs]]
 Related: percolation, [[sir]]

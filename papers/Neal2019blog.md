@@ -1,5 +1,7 @@
 # On the Bias-Variance Tradeoff: Textbooks Need an Update
+
 #blog #variance
+
 https://www.bradyneal.com/bias-variance-tradeoff-textbooks-update
 
 A simple-language explanation to accompany 2 papers from 2019/2020 (to be read :)

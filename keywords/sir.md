@@ -1,6 +1,6 @@
 # SIR, SIS, and other probabilistic processes on graphs
 
-#graph #chaos
+#graphs #chaos
 
 Parents: [[09_Graphs]]
 See also: [[graph_cascades]] graph_spread

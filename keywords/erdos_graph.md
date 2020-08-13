@@ -1,6 +1,6 @@
 # Erdős–Rényi model
 
-#graph
+#graphs
 
 Parent: [[09_Graphs]] / [[graph_generate]]
 Related [[small_world]]

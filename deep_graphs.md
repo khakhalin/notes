@@ -1,6 +1,6 @@
 # Deep learning on graphs
 
-#dl #graph
+#dl #graphs
 
 Parents: [[06_DL]], [[09_Graphs]]
 Related: [[graph_embedding]] (shallow encoders), [[cnn]], [[transformers]]

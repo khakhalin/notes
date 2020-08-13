@@ -1,6 +1,6 @@
 # Graph representation learning
 
-#graph #embedding
+#graphs #embedding
 
 Parent: [[09_Graphs]]
 See also: [[embedding]], [[deep_graphs]]

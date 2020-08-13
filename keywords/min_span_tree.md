@@ -1,6 +1,6 @@
 # Minimum Spanning Tree, aka Prim algo
 
-#algo #graph #trees
+#algo #graphs #trees
 
 Parents: [[algos]] / [[algos_graph]]
 Related: [[algos_trees]], union-find

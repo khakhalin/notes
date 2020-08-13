@@ -16,3 +16,6 @@ No, it doesn't. Making online medical students interact on a forum didn't improv
 Interesting white paper on best practices in online peer-learning:
 https://educationtechnologysolutions.com/2018/03/using-education-technology-facilitate-online-peer-learning/
 Interesting idea about reflective interviews: asking another student about what they find good and hard about the course, and how to better deal with it.
+
+An example (tiny video, a bit childish at the very end) of how NOT to participate, as it won't count:
+https://www.youtube.com/watch?v=OvRPBCg8A2g

@@ -1,6 +1,6 @@
 # Generating graphs and networks
 
-#graph #networks
+#graphs #networks
 
 Parent: [[09_Graphs]]
 Siblings: [[graph_properties]] (prev)

@@ -43,6 +43,9 @@ Best search site:
 𝇑𝇖𝇙𝇐𝇜 ([u](https://unicodes.smpc.io/%F0%9D%87%9C))
 𝌿𝌘𝌦 ([u](https://unicodes.smpc.io/%F0%9D%8C%A6), [ref](https://en.wikipedia.org/wiki/Taixuanjing), [see also](https://en.wikipedia.org/wiki/Bagua)) ☱☵
 Pictograms: [u1](https://unicodes.smpc.io/%F0%9F%8C%80)🌱🍒, [u2](https://unicodes.smpc.io/%F0%9F%A4%90)
+
+https://emojipedia.org/nature/
+💎🏆⭐🧠📯💡📚🪓⛏️🛡️🧲⚙️⚔️🗡️🥇🎲
  
  ನೀ ಲಿ ಟಳಲಉಒ ನಒನಕೋ
  ವರ್ಣಮಾಲೆ 

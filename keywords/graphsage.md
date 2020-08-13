@@ -1,6 +1,6 @@
 # Graph Sage
 
-#dl #graph
+#dl #graphs
 
 Parents: [[09_Graphs]] / [[graph_embedding]] / [[deep_graphs]]
 Related: [[cnn]], [[generative_graphRNNs]]

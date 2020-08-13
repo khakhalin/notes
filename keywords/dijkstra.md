@@ -1,6 +1,6 @@
 # Dijkstra's Shortest Path First algorithm
 
-#algo #graph
+#algo #graphs
 
 Parent: [[algos_graph]]
 Related: 

@@ -1,6 +1,6 @@
 # Pagerank and link analysis
 
-#graph #centrality
+#graphs #centrality
 
 Parents: [[09_Graphs]] / centrality
 Related: Katz centrality, Kosaraju-Sharir, PCA, eigenvectors, spectral techniques on graphs

@@ -1,6 +1,6 @@
 # Graphs and Graphical Methods
 
-#bib #graph #networks
+#bib #graphs #networks
 
 Topics:
 * [[graph_intro]] - Intro to graphs
@@ -32,8 +32,8 @@ Reviews and intros:
 * [[Bacciu2019gentlegraph]] - Intro to Graph NNs
 * [[Porter2019nonlinearity]] - Dynamics on graphs, including games on graphs, oscillators and what not
 
-Other papers:
-* ?
+Misc papers:
+* [[Bojanek2020cyclic]] - using triplet motifs to classify activity on graphs
 
 # To-Read: ML on Graphs
 
@@ -42,9 +42,10 @@ Hamilton, W. L., Ying, R., & Leskovec, J. (2017). Representation learning on gra
 https://arxiv.org/pdf/1709.05584.pdf
 
 Kipf, T. N., & Welling, M. (2016). Semi-supervised classification with graph convolutional networks. arXiv preprint arXiv:1609.02907.
-Graph convolutional networks (analogous to SAGE, but from a different group of people).
+Graph convolutional networks (analogous to SAGE, but from a different group of people). 4.5k citations, so super-influential.
+[https://arxiv.org/pdf/1609.02907.pdf](https://arxiv.org/pdf/1609.02907.pdf)
 
-[[Li2017graph]] -  Gated graph sequence neural networks (I started conspecting it didn't finish yet)
+[[Li2017graph]] -  Gated graph sequence neural networks (I started summarizing it, but haven't finished yet)
 
 https://medium.com/dair-ai/an-illustrated-guide-to-graph-neural-networks-d5564a551783
 

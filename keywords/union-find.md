@@ -1,6 +1,6 @@
 # Union-find, aka Disjoint-Set
 
-#graph #algo
+#graphs #algo
 
 To find each all connected components in a graph. 
 

@@ -1,6 +1,6 @@
 # TransE, Knowledge graphs, semantic embedding
 
-#graph #embedding #semantic
+#graphs #embedding #semantic
 
 Parents: [[09_Graphs]] / [[graph_embedding]]
 Siblings: [[node2vec]]

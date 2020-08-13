@@ -3,7 +3,7 @@
 Bacciu, D., Errica, F., Micheli, A., & Podda, M. (2019). A Gentle Introduction to Deep Learning for Graphs. arXiv preprint arXiv:1912.12693.
 https://arxiv.org/abs/1912.12693
 
-#graph #dl #review
+#graphs #dl #review
 
 Parents: [[09_Graphs]], [[graph_embedding]], [[deep_graphs]]
 See also: [[07_RNNs]], [[algos_graph]], [[echo_state]]

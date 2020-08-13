@@ -5,7 +5,7 @@ https://www.biorxiv.org/content/10.1101/777219v1.article-info
 
 Updated version tbc (plos?)
 
-#networks #neuro #spiking #motifs #criticality #synchrony #graph
+#networks #neuro #spiking #motifs #criticality #synchrony #graphs
 
 Related: [[graph_properties]]
 

@@ -1,6 +1,6 @@
 # Reservoir computing
 
-#echo #rnn #graph #bib
+#echo #rnn #graphs #bib
 
 Parents: [[07_RNNs]]
 See also: [[criticality]], [[bib_stdp]], [[cellular_automata]]
