@@ -21,14 +21,19 @@ https://missing.csail.mit.edu/
 lots of useful practical bits and pieces: the shell, debugging, metaprogramming and what not. Also has [lectures on youtube](https://www.youtube.com/playlist?list=PLyzOVJj3bHQuloKGG59rS43e29ro7I57J).
 (the link is also in [[01_Tools]] / Resources, so fee free to delete it from here later)
 
+Working on: [[motifs]] (not really motifs yet) #todo
+
 # Algos and top priorities
 
+* Refresh graph laplacians [[09_Graphs]]
+* Finish those graph lectures about laplacians and such
 * https://en.wikipedia.org/wiki/Intraclass_correlation
 * what is github.io and how it works? What can it do? Is it a good way to host blogs?
 * super-toy model for graphs: if we can directly multiply by a laplasian (because the graph is so small). Realize! Drop to Kaggle.
 * flip a tree (with honest suffering)
 * refresh AUC
 * ising model - at least what is it?
+* torch_geometric - what is it? What's the status of it?
 * https://github.com/iamtrask/Grokking-Deep-Learning - is it true that it builds pytorch-like system from scratch? Check.
 * read at least some super-basic tSNE and UMAP - what's the difference
 * Does cross-entropy in DL work with softmax predictions, or probabilities? I think probabilities, but clarify.

@@ -5,6 +5,11 @@
 Parents: [[09_Graphs]]
 See also: [[graph_cascades]] graph_spread
 
+Papers:
+* [[Jin2003twitter]] - SEIZ model
+* [[Backstrom2006lj]] - shows that simpler model fit actual Livejournal-based curve worse
+* [[Romero2011twitter]] - analysis of hashtag virality; differences between topics / hashtag types
+
 **Epidemic-like spreading processes**: no explicit decision-making (unlike in [[graph_cascades]]); processes are probabilistic. But there is still a tree (a branching process). Formalism: each node "meets" d new people, and with probability q infects each of them.
 
 For which (d,p) will the pandemic run forever? 
@@ -65,38 +70,6 @@ For **actual graphs**, a threshold for an epidemic can be defined in terms of β
 > Would be fun to see the math.
 
 Does the original rate of infection (I_0) matter? Essentially, no (because of the exponential dynamics); it's either or, we transition from (1,0) being either stable, or unstable node. _"Exactly on the threshold" is probably a non-converging unstable solution, where P t→∞ just doesn't converge, right?_
-
-# Jin 2013
-
-Jin, F., Dougherty, E., Saraf, P., Cao, Y., & Ramakrishnan, N. (2013, August). Epidemiological modeling of news and rumors on twitter. In Proceedings of the 7th workshop on social network mining and analysis (pp. 1-9).
-http://people.cs.vt.edu/~ramakris/papers/news-rumor-epi-snakdd13.pdf
-(~200 citations, so not bad, but not a seminal paper)
-
-**SEIZ** model (with immunity) is also good for modeling fake news, in which case E is exposed, and Z (immune) can be interpreted as "skeptics". Except for fake news it may be better described as kinda "competing transitions" to two final states, I and Z. Like two infections that compete with each other (somewhat reminiscent of decision-based models: XXX). Then S may transition to either I or Z, but also to E (unstable state) that can fall to I later.
-
-> My intuition would be to make the transition tree symmetric on the I/Z axis, and assume that E eventually falls to either I (conspiracy theorist) or Z (rational). But for them empirically a forever-uncertain E is probably not different from Z, so they only consider conversion from E to I, but not from E to Z. Their diagram of transitions is almost symmetric, but not quite: with this exception.
-
-One can then solve ODE equations every time, and fit the dynamics to actual data, thus estimating the parameters. One can also compare different models in terms of their fit. In this case, for example, a SEIZ curve fits real data much better than a SIS, curve; probably just because the SEIZ system is more expressive.
-
-# Backstrom 2006
-
-Backstrom, L., Huttenlocher, D., Kleinberg, J., & Lan, X. (2006, August). Group formation in large social networks: membership, growth, and evolution. In Proceedings of the 12th ACM SIGKDD international conference on Knowledge discovery and data mining (pp. 44-54).
-https://www.cs.cornell.edu/home/kleinber/kdd06-comm.pdf
-An influencial study (2k citations) about joining groups (on LiveJournal):
-
-A more flexible approach to modeling: try to combine decision-based and probabilistic models, and derive a dependency between the probability of adoption, and the number of friends that adopted an innovation. p(k) is probably monotonously increasing, but the shape may be weird (S-shape, for a bistable, decision-like situation), or maybe even non-monotonous (if you are getting annoyed when all your friends convert, so you don't convert just out of a principle lol). The paper doesn't have all these pretty pictures though; it's mostly a descriptive analysis of what was happening with LJ.
-
-# Romero 2011
-
-Romero, D. M., Meeder, B., & Kleinberg, J. (2011, March). Differences in the mechanics of information diffusion across topics: idioms, political hashtags, and complex contagion on twitter. In Proceedings of the 20th international conference on World wide web (pp. 695-704).
-http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.298.4938&rep=rep1&type=pdf
-(~1600 citations)
-
-Data from 2009-2011, 3B tweets, 60M users. Calculated the average "exposure curve" for top 500 hashtags (looking at hashtag virality). The curve grows really fast, then peaks and kinda platoes, with very slow decay.
-
-Introduced a simple, almost visual measure of **curve persistence** = the area under the curve, divided by time ∙ peak (like a rectangle drawn around the curve). High persistence = low decay. Show that curves for different thematic hashtags have different average shapes: idioms and music decay fast (low persistence), while politics and sports linger. Music has a higher peak, compared to, say, tech and movies.
-
-So it's mostly a paper about how different topics have different cascade dynamics, not about the math of it.
 
 # Refs
 

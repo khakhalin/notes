@@ -10,7 +10,6 @@ Subtopics and papers:
     * [[Bojanek2020cyclic]] - triplet motifs in oriented graphs
 
 
-
 **Four main ways** to provide a large-scale characteristic of a graph:
 * Degree distribution P(k)
 * Something about path lengths h

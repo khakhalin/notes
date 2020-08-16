@@ -5,7 +5,10 @@
 See also: [[remote_conferences]]
 
 https://eh.bard.edu/teaching/
-A cool collection of links fro Bard EH.
+A collection of links from Bard EH.
+
+Specific ideas
+* Biosem has to have both pre- and post- assignment, but probably no in-process (keep it honest to avoid spam)
 
 perusall - allegedly, a program that helps to do remote (online) close reading with a class effectively.
 
