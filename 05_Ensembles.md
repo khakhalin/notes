@@ -1,5 +1,7 @@
 # Ensemble methods
 
+#ensemble
+
 Ensembles are about combining (or gradually refining) lots of poor predictions (aka **weak learners**) into a very good prediction (aka "Wisdom of Crowds": popularized by a 2004 [book](https://en.wikipedia.org/wiki/The_Wisdom_of_Crowds) by Surowiecki).
 
 # Bagging

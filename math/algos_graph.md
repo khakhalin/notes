@@ -61,4 +61,4 @@ A **Strongly Connected Component** (SCC for the purposes of this section) of a d
 
 **Condensation**: represent each SCC with a single "super-node". Any graph can be presented as a DAG of nodes and "supernodes", standing for SCCs.
 
-To find strongly connected components, use the [[Kosaraju-Sharir]] algorithm (linear in both N_V and N_E).
+To find strongly connected components, use the [[kosaraju-sharir]] algorithm (linear in both N_V and N_E).

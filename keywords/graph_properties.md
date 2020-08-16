@@ -40,7 +40,7 @@ Not very well defined for undirected graphs. (It becomes more of a motif thing, 
 
 **Average clustering coefficient** for the entire network: just the average of clustering coeff for all nodes. Typically, very high in social networks.
 
-**Graph connectedness**: the relative size of the **largest connected component** (aka **giant component**). s = N(giant component)/N . For undirected graphs, found with BFS, labeling nodes as you go. For directed graphs, it's typically about largests **strongly connected component**, which can be found using Kosaraju-Sharir algorithm [[algos_graph]].
+**Graph connectedness**: the relative size of the **largest connected component** (aka **giant component**). s = N(giant component)/N . For undirected graphs, found with BFS, labeling nodes as you go. For directed graphs, it's typically about largests **strongly connected component**, which can be found using Kosaraju-Sharir algorithm [[kosaraju-sharir]].
 
 For very large, and not fully connected networks, it may also make sense to build a histogram of component sizes. There will be a giant component, most probably, but it may be interesting how quickly tiny components taper off.
 
