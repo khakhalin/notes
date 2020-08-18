@@ -2,6 +2,9 @@
 
 #bib #neuro #synfire
 
+Parent: [[12_Neuro]]
+Related: [[echo_state]]
+
 Names to look for:
 * Stephen Grossberg (Boston University Cognitive & Neural Systems)
 

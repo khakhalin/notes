@@ -2,13 +2,13 @@
 
 #criticality #rnn #neuro #bib
 
-Parents:
-Related: [[echo_state]]
+Parents: [[12_Neuro]]
+Related: [[echo_state]], [[chaos]]
 
 # Papers
 
-* [[Moretti2013criticality]]
-* [[Bojanek2020cyclic]] - among other things, measured asynchrony (did they measure criticality expliticly though?)
+* [[Moretti2013criticality]] - it's stretched (not precise) in networks
+* [[Bojanek2020cyclic]] - among other things, show that synchrony is bad, while asynchrony is good.
 
 # To Read
 
@@ -18,6 +18,9 @@ https://www.quantamagazine.org/brains-may-teeter-near-their-tipping-point-201806
 25 years of criticality in neuroscience — established results, open controversies, novel concepts J Wilting, V Priesemann
 [https://www.sciencedirect.com/science/article/pii/S0959438819300248]
 Very short, so a must read.
+
+Rajan, K., Abbott, L. F., & Sompolinsky, H. (2010). Stimulus-dependent suppression of chaos in recurrent neural networks. Physical Review E, 82(1), 011903.
+https://journals.aps.org/pre/abstract/10.1103/PhysRevE.82.011903
 
 Maass, W., Natschläger, T., & Markram, H. (2002). Real-time computing without stable states: A new framework for neural computation based on perturbations. Neural computation,14 (11), 2531-2560.
 https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.183.2874&rep=rep1&type=pdf

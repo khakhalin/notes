@@ -3,9 +3,9 @@
 #neuro #bib
 
 **Bibliography collections:**
+* [[criticality]] - a whole bunch of key papers, including reviews, there. Do it!
 * [[bib_reconstruction]] - On reconstructing biological connectivity from spike-trains and alike
-* [[bib_stdp]]
-* [[criticality]]
+* [[stdp]]
 
 Hasson, U., Nastase, S. A., & Goldstein, A. (2020). Direct Fit to Nature: An Evolutionary Perspective on Biological and Artificial Neural Networks. Neuron, 105(3), 416-434.
 https://www.cell.com/neuron/pdf/S0896-6273(19)31044-X.pdf
@@ -154,6 +154,7 @@ Classical backprop uses same weights there and back; aka "weight symmetry". They
 Code: https://github.com/neuroailab/neural-alignment
 
 # RL in the brain
+
 #rl
 
 Dabney, W., Kurth-Nelson, Z., Uchida, N., Starkweather, C. K., Hassabis, D., Munos, R., & Botvinick, M. (2020). A distributional code for value in dopamine-based reinforcement learning. Nature, 1-5.
@@ -168,6 +169,7 @@ https://www.nature.com/articles/s41593-018-0147-8
 Fremaux N, Sprekeler H, Gerstner W. Reinforcement learning using a continuous time actor-critic framework with spiking neurons. PLoS computational biology. 2013;9(4):e1003024.
 
 # DL models of brains
+
 #deepneuro
 
 Deep Neural Networks as Scientific Models (2020). Radoslaw M. Cichy, Daniel Kaiser. Trends in Cognitive Sciences.

@@ -10,4 +10,6 @@
 * [[bib_neuro_evo]] - Evolution of nervous system
     * [[bib_one_neuron]] - Computation in one neuron
 * [[bib_reconstruction]] - On  reconstructing connectivity from spiking
+* [[echo_state]]
+    * [[stdp]]
 

@@ -80,3 +80,12 @@ There are lots of built-in functions; too many to mention, including math, trigo
 
 ## Control structures
 Apparently SQL (especially larger systems, like **SQLServer**, or **Transact-SQL** from Microsoft) also has its own system of control structures, with IF, ELSE, BEGIN TRY, BEGIN CATCH, WHILE, and what not.
+
+# Refs
+
+Tutorial and practice sites:
+* Most popular tutorial: https://www.w3schools.com/sql/
+* Basic intro tutorial with quizzes: https://sqlzoo.net/
+* PostgreSQL Exercises: https://pgexercises.com/
+* Allegedly some other tutorial site (looks sketchy tho): https://www.sql-ex.ru/learn_exercises.php
+* Some other site: https://www.stratascratch.com/

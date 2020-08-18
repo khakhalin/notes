@@ -2,6 +2,8 @@
 
 #algo #networks
 
+Parent: [[09_Graphs]]
+
 Famous algorithms:
 * [[dijkstra]] - Dijsktra's shortest path algorithm (from source to all nodes)
 * [[a-star]] - A* : an improvement upon Dijsktra's
@@ -13,7 +15,6 @@ See also:
 * [[graph_intro]] - basic introduction to graphs
 * [[la_net]] - linear algebra about graphs
 * [[graph_th]] - graph theory (more of gropu theory kind)
-* [[09_Graphs]] - ANNs for graphs
 
 # Basic graph exploration
 

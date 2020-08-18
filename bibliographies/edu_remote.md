@@ -4,11 +4,17 @@
 
 See also: [[remote_conferences]]
 
-https://eh.bard.edu/teaching/
-A collection of links from Bard EH.
+**Specific ideas:**
+* Biosem has to have both pre- and post- assignments, but probably no in-process (keep it honest to avoid spam)
+* Think whether I should collect pre-questions via forms
 
-Specific ideas
-* Biosem has to have both pre- and post- assignment, but probably no in-process (keep it honest to avoid spam)
+**Reminders:**
+* Have a meaningful Zoom handle (First + Last name), or you won't get an attendance point.
+
+
+
+https://en.wikipedia.org/wiki/Old_Stockholm_telephone_tower#/media/File:Telefontornet_1890.jpg
+https://i.pinimg.com/originals/58/b9/84/58b984ed112898f55c479e5a2ed77af7.jpg
 
 perusall - allegedly, a program that helps to do remote (online) close reading with a class effectively.
 
@@ -22,3 +28,6 @@ Interesting idea about reflective interviews: asking another student about what 
 
 An example (tiny video, a bit childish at the very end) of how NOT to participate, as it won't count:
 https://www.youtube.com/watch?v=OvRPBCg8A2g
+
+A collection of links from Bard EH:
+https://eh.bard.edu/teaching/

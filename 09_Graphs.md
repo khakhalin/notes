@@ -26,7 +26,8 @@ Topics:
 * Processes on graphs
     * [[graph_cascades]] - Decision-based models and cascades
     * [[sir]] - Pandemic-like models on graphs (SIR, SIS etc.)
-        * [[influence_maximization]] - greedy hill climbing, sketches method
+    * [[influence_maximization]] - greedy hill climbing, sketches method
+    * [[outbreak_detection]] - where to place sensors to monitor the network
 
 Reviews and intros:
 * [[Bacciu2019gentlegraph]] - Intro to Graph NNs
@@ -36,6 +37,10 @@ Misc papers:
 * [[Bojanek2020cyclic]] - using triplet motifs to classify activity on graphs
 
 # To-Read: ML on Graphs
+
+Billings, J. C. W., Hu, M., Lerda, G., Medvedev, A. N., Mottes, F., Onicas, A., ... & Petri, G. (2019). Simplex2Vec embeddings for community detection in simplicial complexes. arXiv preprint arXiv:1906.09068.
+https://arxiv.org/pdf/1906.09068.pdf
+Recommended by Irina.
 
 Review:
 Hamilton, W. L., Ying, R., & Leskovec, J. (2017). Representation learning on graphs: Methods and applications. arXiv preprint arXiv:1709.05584.
