@@ -310,25 +310,6 @@ Murakami, M., Shteingart, H., Loewenstein, Y., & Mainen, Z. F. (2016). Distinct 
 Findling, C., Skvortsova, V., Dromnelle, R., Palminteri, S., & Wyart, V. (2019). Computational noise in reward-guided learning drives behavioral variability in volatile environments. Nature neuroscience, 22(12), 2066-2077.
 https://www.biorxiv.org/content/biorxiv/early/2018/10/11/439885.full.pdf
 
-# Free energy
-
-#freeenergy
-
-Gershman, S. J. (2019). What does the free energy principle tell Us about the brain?. arXiv preprint arXiv:1901.07945.
-https://arxiv.org/abs/1901.07945
-
-The Markov blankets of life: autonomy, active inference and the free energy principle
-Michael Kirchhoff, Thomas Parr, Ensor Palacios, Karl Friston and Julian Kiverstein
-Published:17 January 2018
-https://royalsocietypublishing.org/doi/full/10.1098/rsif.2017.0792
-
-Friston, K. (2010). The free-energy principle: a unified brain theory?. Nature reviews neuroscience, 11(2), 127.
-3k references! So people do find it useful after all?
-
-https://www.frontiersin.org/articles/10.3389/fnsys.2019.00042/full 
-The Dialectics of Free Energy Minimization Evert A. Boonstra and Heleen A. Slagter
-Seems to be a review explaining the free energy minimization principle for an organism. It's not math though; looks almost like philosophy?
-
 # CogSci and Development
 
 Mandler, J. M. (1988). How to build a baby: On the development of an accessible representational system. Cognitive development, 3(2), 113-136. [link](https://s3.amazonaws.com/academia.edu.documents/48154476/How_to_build_a_baby_On_the_development_o20160818-28052-ns7nel.pdf?response-content-disposition=inline%3B%20filename%3DHow_to_build_a_baby_On_the_development_o.pdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWOWYYGZ2Y53UL3A%2F20200223%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200223T181627Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=11b1618e368d462df1af3b595c4c4c0775001e9a19e536a709c9b6f6d93ca8b1)

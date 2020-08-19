@@ -1,7 +1,9 @@
 # Courses, books, links
+
 #book
 
-# Online resources
+**General:**
+
 * http://www.arxiv-sanity.com/ - AI search for arxiv
 
 * Practical intro to ML projects: https://github.com/chiphuyen/machine-learning-systems-design
@@ -80,6 +82,7 @@ Job-search specific materials:
 * [Coding interviews for dummies](https://www.freecodecamp.org/news/coding-interviews-for-dummies-5e048933b82b/), including curious links to [pramp](https://www.pramp.com/)
 
 # Online courses
+
 * [Google Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course/) - a really good introduction for complete noobs 
 * [Theory of computation](https://www.youtube.com/playlist?list=PL601FC994BDD963E4) - Youtube
 * [Dynamical systems](https://www.youtube.com/playlist?list=PL8erL0pXF3JZqdlYIfTTyibOqSqwzRdVV) - Youtube course by Robert Ghrist 
@@ -93,7 +96,6 @@ Job-search specific materials:
 
 # Link aggregators
 
-* [How to prepare for Google interview](https://www.linkedin.com/pulse/average-googler-four-weeks-study-plan-milad-naseri/?trk=v-feed), by Milad Naseri. Nice list of books, practical advice. 
 * [A very nice annotated list of book recommendations](https://towardsdatascience.com/beyond-the-mooc-a-bookworms-guide-to-data-science-e87271cb0572) for data science
 * [Machine learning for humans, 80/20 reading list](https://medium.com/machine-learning-for-humans/ai-reading-list-c4753afd97a) - claims to be curated. Sections on ML, Deep, RL, and then various general readings about the meaning of it all.
 * [Scientific visualization with matplotlib](https://github.com/rougier/scientific-visualization-book) - an open-source book project in the works that hadn't been released yet, but the previews look lovely
@@ -108,18 +110,20 @@ Job-search specific materials:
 
 * ConvNetJS in-browser DL by Karpathy: https://cs.stanford.edu/people/karpathy/convnetjs/
 
-# Temp teaching links
-Three books:
+# Teaching links
+
+Teaching coding:
 * Think Python: https://greenteapress.com/wp/think-python-2e/
 * Think Complexity: http://greenteapress.com/complexity2/thinkcomplexity2.pdf
 * Modeling and simulation in Python: https://greenteapress.com/wp/modsimpy/
-
 On agent-based modeling, from "The Nature of Code" by Daniel Shiffman:
 * [Chapter 4, on particle systems](https://natureofcode.com/book/chapter-4-particle-systems/)
 * [Chapter 6, on autotonomous agents](https://natureofcode.com/book/chapter-6-autonomous-agents/) (he uses steering vehicles as an example)
-
-Other materials:
+Other related materials:
 * An introduction into the logic (not formulas or programming, but the ideas) of agent-based modeing (a short chapter by Nigel Gilbert): http://epubs.surrey.ac.uk/1580/1/fulltext.pdf
 * [Good exploration of logistic map and chaos](https://geoffboeing.com/2015/03/chaos-theory-logistic-map/)
 * [A collection of Jupyter models on topics of complexity](https://github.com/hsayama/PyCX)
 * Examples of good student projects from Downey's course: [1](https://github.com/kdy304g/ComplexLizards-CA/blob/master/reports/final_report.md), [2](https://github.com/jzerez/swarm_classification/blob/master/reports/Final_Report.md)
+
+A collection of open peer-reviewed textbooks on all possible topics:
+https://openstax.org/subjects

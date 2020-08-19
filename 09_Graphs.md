@@ -115,6 +115,10 @@ da Fontoura Costa, L. (2018). What is a Complex Network?(CDT-2).
 [ResearchGate link](https://www.researchgate.net/profile/Luciano_Da_F_Costa/publication/324312765_What_is_a_Complex_Network_CDT-2/links/5aca49ba4585151e80a91abd/What-is-a-Complex-Network-CDT-2.pdf)
 Hmm. A very short illustrated mini-review, and the topic is good, but is it a good paper? Check.
 
+Mackevicius, E. L., Bahle, A. H., Williams, A. H., Gu, S., Denisenko, N. I., Goldman, M. S., & Fee, M. S. (2019). Unsupervised discovery of temporal sequences in high-dimensional datasets, with applications to neuroscience. Elife, 8, e38471.
+https://elifesciences.org/articles/38471
+Reconstructing graph from neural activity, using something that resembles graph convolution networks?
+
 # Processes on networks
 
 Watts, D. J., & Strogatz, S. H. (1998). Collective dynamics of ‘small-world’networks. nature, 393(6684), 440.
