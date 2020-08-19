@@ -13,6 +13,8 @@ See also: [[edu_remote]]
 
 ### Random notes
 
+Make sure enrolled in 2 different courses
+
 Zoom only keeps meeting reports for a month, so download participation logs weekly.
 
 # Topics

@@ -13,9 +13,6 @@ https://medium.com/bits-and-behavior/im-a-professor-d732ba26c522
 Lyx publishing system (a less painful alternative to latex):
 https://www.lyx.org/
 
-A nice simple demo for exploring various L-systems (fractals)
-https://anvaka.github.io/lsystem/
-
 On properly teaching math (famous Russian essay)
 https://www.uni-muenster.de/Physik.TP/~munsteg/arnold.html
 

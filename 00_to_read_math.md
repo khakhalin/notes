@@ -37,6 +37,10 @@ Ideas for Improving the Field of Machine Learning: Summarizing Discussion from t
 Shagun Sodhani, Mayoore S. Jaiswal, Lauren Baker, Koustuv Sinha, Carl Shneider, Peter Henderson, Joel Lehman, Ryan Lowe
 https://arxiv.org/abs/2007.10546
 
+Ramsauer, H., Schäfl, B., Lehner, J., Seidl, P., Widrich, M., Gruber, L., ... & Kreil, D. (2020). Hopfield Networks is All You Need. arXiv preprint arXiv:2008.02217.
+https://arxiv.org/pdf/2008.02217.pdf
+https://www.youtube.com/watch?v=nv6oFDp6rNQ
+
 Tishby, N., Pereira, F. C., & Bialek, W. (2000). The information bottleneck method. arXiv preprint physics/0004057.
 https://arxiv.org/pdf/physics/0004057.pdf
 2k citations.
@@ -297,7 +301,13 @@ https://arxiv.org/abs/1702.08608
 (This is actually about [[bib_fairness]])
 
 # Tickets, distillation, transfer
+
 #ticket
+
+**Surgery** - in the appendix section of this paper (how to optimize something that takes forever to train)
+Berner, C., Brockman, G., Chan, B., Cheung, V., Dębiak, P., Dennison, C., ... & Józefowicz, R. (2019). Dota 2 with large scale deep reinforcement learning._arXiv preprint arXiv:1912.06680_.
+https://arxiv.org/abs/1912.06680
+OpenAI
 
 Frankle, J., & Carbin, M. (2018). The lottery ticket hypothesis: Finding sparse, trainable neural networks. arXiv preprint arXiv:1803.03635.
 https://arxiv.org/abs/1803.03635
@@ -564,6 +574,7 @@ Two papers describing a similar idea: Just going from 3d-person to first-person 
 I wonder what are the implications for graphical networks. Arguably, RNNs and sliding attention-based convolutional networks are already like 1st-person for texts. But what about graphs? Does it mean that graph-crawlers can be better than holistic processors?
 
 ## RNNs, Attention
+
 #attention
 
 Kitaev, N., Kaiser, Ł., & Levskaya, A. (2020). Reformer: The Efficient Transformer. arXiv preprint arXiv:2001.04451.
@@ -613,6 +624,7 @@ https://arxiv.org/abs/1911.05507
 Deepmind
 
 # AEs, GANs, Generation
+
 #gan
 
 A Review on Generative Adversarial Networks: Algorithms, Theory, and Applications. Jie Gui, Zhenan Sun, Yonggang Wen, Dacheng Tao, Jieping Ye. 20 Jan 2020
@@ -694,7 +706,7 @@ https://arxiv.org/abs/2002.08791
 Also a tweeprint: https://twitter.com/andrewgwils/status/1230669857840123906
 Something interesting about generalization and priors; I didn't quite understand it, so return to the tweetprint after reading the paper. They seem to be talking to people in the narrow field even while tweetprinting, unfortunately :)
 
-# Alternative network designs
+# Alternative designs
 
 **Helmholtz Machines**
 

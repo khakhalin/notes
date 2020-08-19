@@ -25,9 +25,9 @@ Working on: [[motifs]] (not really motifs yet) #todo
 
 # Algos and top priorities
 
-* Refresh graph laplacians [[09_Graphs]]
+* linear LR warmup - what is it? (Something related to training giant models)
 * Finish those graph lectures about laplacians and such
-* https://en.wikipedia.org/wiki/Intraclass_correlation
+* What do graph laplacians really mean?
 * what is github.io and how it works? What can it do? Is it a good way to host blogs?
 * super-toy model for graphs: if we can directly multiply by a laplasian (because the graph is so small). Realize! Drop to Kaggle.
 * flip a tree (with honest suffering)

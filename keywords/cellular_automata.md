@@ -2,6 +2,7 @@
 
 #cellular #dynamic #chaos
 
+Parent: [[complexity]]
 See also: [[bib_neurostochastic]], [[randomness]]
 
 **Wolfram code** for 1d automata (most often used with neighborhood of 3). As 3 bits → 1 bit, there are 2^3 = 8 combinations that come as in. Two outputs are possible, so the total space of rules is 2^8 = 256. If you write all outputs out as a binary sequence, the rule becomes a binary number. For example, "Rule 30" is cool (chaotic-looking). Wolfram wrote numbers backwards, so leading bit corresponds to 111, and trailing to 000, but from the last to the first you go in standard binary order.
