@@ -27,18 +27,24 @@ Working on: [[motifs]] (not really motifs yet) #todo
 
 * linear LR warmup - what is it? (Something related to training giant models)
 * Finish those graph lectures about laplacians and such
+* Thompson sampling - bayesian exploration / exploitation solution, related to AB testing?
 * What do graph laplacians really mean?
 * what is github.io and how it works? What can it do? Is it a good way to host blogs?
-* super-toy model for graphs: if we can directly multiply by a laplasian (because the graph is so small). Realize! Drop to Kaggle.
+* super-toy model for graphs: if we can directly multiply by a laplasian (because the graph is so small). Realize! Drop to Kaggle
+* read at least some super-basic tSNE and UMAP - what's the difference
+* Finish boosting and trees - based on [this informal poll](https://www.reddit.com/r/datascience/comments/icsul3/any_employed_data_scientists_willing_to_share_an/), boosting, trees, and SVMs are really widely used in practice (except for a niche subtype of people who only do deep learning), so (I guess) most likely they will be asked
+    * Adabost - refresh
+    * Gradient Boost
+    * Random Forest - also reimplement
+    * SVM - also reimplement?
 * flip a tree (with honest suffering)
 * refresh AUC
 * ising model - at least what is it?
 * torch_geometric - what is it? What's the status of it?
 * https://github.com/iamtrask/Grokking-Deep-Learning - is it true that it builds pytorch-like system from scratch? Check.
-* read at least some super-basic tSNE and UMAP - what's the difference
 * Does cross-entropy in DL work with softmax predictions, or probabilities? I think probabilities, but clarify.
 * Softmax approximations: https://ruder.io/word-embeddings-softmax/index.html
-* [[Xie2020noisy_student]] - finish this one first and foremost
+* [[Xie2020noisy_student]] - finish this one
 * Weisfeiler-Lehman Isomorphism Test (see also: [[graphsage]])
 * Density-based clustering, aka HDBSCAN: https://towardsdatascience.com/a-gentle-introduction-to-hdbscan-and-density-based-clustering-5fd79329c1e8
 * How to do bayesian 01 guesser? How does process 001 if current history is 0? How to combine n-grams of diff length? Derive, and also google / check on the web.

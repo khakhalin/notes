@@ -11,8 +11,9 @@ Plan:
     * What if both 2 and 4? 6 and 8 get one vote, 5 gets 2 votes. At this point a new player kicks in: inhibition. Let's say it's tuned to always get 3 neurons active, and we have 7 "votes" right now. If we remove 4 at random, sometimes we'll get horizontal, sometimes vertical, and sometimes we'll remain undecided and everything will repeat until we get a stable bar. (Because we can see that a bar is stable). We got hesitation! But also ambiguity. How does it help?
     * Here's how: imagine 2, 4, and 8. This time it's much more likely that we'll recognize it as a vertical bar. We can tolerate noise now!
 * So if a system like that is in the brain, how can we expect connections to look like? Recurrent connections. And behold - hippocampus!
+* And how activity would look like? As there's a loop, and something that feels like recurrent "udpates" of a certain "state" (like, snapshots of activity, where each previous snapshot affects the next one), we would probably expect the system to fire periodically, in a rhythm. And indeed, in the hippocampus, we have a strong **theta rhythm** (at XXX Hz). _Some basic properties of it maybe? Does it get modulated by attention or something?_
 * But aren't recurrent connections dangerous? Yep, they are, and it is a most common focus for epilepsy.
-* Is hippocampus really about memory? Oh yep!:
+* But so, is hippocampus really about memory? Oh yep, no doubt!:
     * LTP was discovered there
     * What happenes if you cut it out
         * Korsakoff syndrome
