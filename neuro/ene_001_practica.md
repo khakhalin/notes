@@ -4,8 +4,10 @@
 
 **How to use Piazza**
 * Unregister Joshua and show from the beginning how it looks when someone is registered. 
-* Post stuff, add a pic, ask a question, receive responses
-* How to change email preferences.
+* Sorting using tags, finding the most recent post
+* Post follow-ups, add a pic, ask a question, receive responses
+* Posting new questions
+* How to change email preferences
 
 **How to read a paper**
 * First, give a home assignment to figure out a structure of a paper

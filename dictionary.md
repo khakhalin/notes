@@ -170,7 +170,7 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 
 **Singular Value Decomposition** (math): See: [[svd]]
 
-**SMOTE** (stats): Synthetic Minority Oversampling Technique. A simple approach to oversampling (supplementing) under-represented categories by creating fake points (in pD of variables describing each case), that are linearlly shifted from under-represented points to one of its closest neighbors. [wiki](https://en.wikipedia.org/wiki/Oversampling_and_undersampling_in_data_analysis) 
+**SMOTE** (stats): Synthetic Minority Oversampling Technique. A simple approach to oversampling (supplementing) under-represented categories by creating fake points (in pD of variables describing each case), that are linearly shifted from under-represented points to one of its closest neighbors. [wiki](https://en.wikipedia.org/wiki/Oversampling_and_undersampling_in_data_analysis) 
 
 **Snowflake** (dev): cloud SQL data warehouse; mostly interesting as a contender for older / larger players. SQL, Java Script in queries; possibility of in-database ML. Emphasis on virtualization for deep cloning, allowing virtual queries on big data. Refs: [1](https://towardsdatascience.com/why-you-need-to-know-snowflake-as-a-data-scientist-d4e5a87c2f3d), [2](https://towardsdatascience.com/machine-learning-in-snowflake-fdcff3bdc1a7).
 

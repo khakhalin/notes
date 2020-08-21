@@ -1,11 +1,11 @@
-# ML interview questions
+# ML / Data Science interview
 
 #lifehack #interview
 
-Apparently another collection of questions?:
+Other collections of questions:
 * https://www.stratascratch.com/
 
-Some recent list:
+## List of questions
 
 1. Know what a p-value is and its limitations in decisions.
 2. Linear regression and its assumptions.

@@ -2,20 +2,26 @@
 
 See also: [[edu_remote]]
 
-## Organizational Ideas
+# Todo
 
-* Late policy has to be more strict than in normal times, not less ([reddit](https://www.reddit.com/r/Professors/comments/i8ml4t/what_are_your_late_policies_this_semester/)). Explain the reasons. It's even harder to stay on track, harder to find motivation.
+* Read how to be a bat
+
+# Organizational Ideas
+
+* **Attendance and late policy** has to be more strict than in normal times, not less ([reddit](https://www.reddit.com/r/Professors/comments/i8ml4t/what_are_your_late_policies_this_semester/)). Explain the reasons. It's even harder to stay on track, harder to find motivation.
+    * 5 min for Zoom meetings. 
+    * 80% participation threshold
 * Put a clause that **everything may change** (as we never tried this format before), just it will never retroactive. Any change in grading only applies on behavior after the change was implemented.
 * Remind on the **importance of taking notes** - _especially_ as the materials seems to stay with you (recorded lectures, notes), making it so tempting to just read. If you just read, you retain almost nothing (at least in the long-term, even in just a year for now). At the very least, take notes.
 * Make sure to very explicitly explain in the syllabus **why peer-learning is a thing** (as it almost certainly seems ridiculous to them). Why interacting on Piazza is important, and not just busywork, and why we'll be trying to do breakout rooms on Zoom.
 * A corollary: while it's cool that these days we can watch lectures on our phones, ideally, we shouldn't, as it's harder to take notes that way. Try not to. **Use a normal computer**, especially for Zoom meetings, but best - for lectures as well. (Unless you use some elaborate setup where you take notes in a notebook, while having the phone with a lecture somehow well secured etc.) In a pinch, when something happened and you cannot be at your working place, you can of course use phone to listen to a lecture, or even connect to Zoom... But for most sessions, try to study from a decent studying place, with access to your notes, to Google, textbooks, etc. Try to create a good working habit.
 * When recording lectures, **pause for questions**, maybe also showing a standard pic on the screen? In the middle of a presentation? Some sort of a symbol?
     * Upon first presentation, tell this little story about a new age book that had a separate sign "meditate here", that I found somewhat obnoxious. Yet here it kinda makes sense. It may be corny, yes, but try to embrace it, and hopefully it will work (even though nothing replaces a real classroom of course).
-* Initiate meta-discussions on Piazza (how is the course going?) early on.
+* **Regularly Initiate meta-discussions on Piazza** (how is the course going?). Early on. Make it a habit. Use "Meta" channel.
 * Have one weekly post with all related assignments, nicely collected. Clarity! Clear predictable deadlines.
 * Invite Silas, Molly, Addie, Sam, Maia, for short talks about different topics? Pre-recorded, not realtime?
 
-## Random notes for myself
+# Random reminders for myself
 
 * Make sure everyone are enrolled in both halves of the course
 * Make sure everyone has zoom properly configured (with emails)

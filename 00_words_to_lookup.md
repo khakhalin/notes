@@ -11,9 +11,6 @@ Videos
 Google crash course, about ML production:
 https://developers.google.com/machine-learning/crash-course/production-ml-systems
 
-What is a Computation Graph and Who Cares?
-https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-network-methods/lectures/12194418
-
 Kick-start videos: https://www.youtube.com/playlist?list=PLllx_3tLoo4csmLveWHpjcRTXVMCcvvmc
 
 **The missing semester of CS education**
@@ -21,7 +18,9 @@ https://missing.csail.mit.edu/
 lots of useful practical bits and pieces: the shell, debugging, metaprogramming and what not. Also has [lectures on youtube](https://www.youtube.com/playlist?list=PLyzOVJj3bHQuloKGG59rS43e29ro7I57J).
 (the link is also in [[01_Tools]] / Resources, so fee free to delete it from here later)
 
-Working on: [[motifs]] (not really motifs yet) #todo
+Working on: 
+* [[motifs]] (not really motifs yet - listen to the lecture) #todo
+* https://github.com/khangich/machine-learning-interview - disassemble
 
 # Algos and top priorities
 
@@ -31,17 +30,34 @@ Working on: [[motifs]] (not really motifs yet) #todo
 * What do graph laplacians really mean?
 * what is github.io and how it works? What can it do? Is it a good way to host blogs?
 * super-toy model for graphs: if we can directly multiply by a laplasian (because the graph is so small). Realize! Drop to Kaggle
-* read at least some super-basic tSNE and UMAP - what's the difference
-* Finish boosting and trees - based on [this informal poll](https://www.reddit.com/r/datascience/comments/icsul3/any_employed_data_scientists_willing_to_share_an/), boosting, trees, and SVMs are really widely used in practice (except for a niche subtype of people who only do deep learning), so (I guess) most likely they will be asked
+* Do all graph exercesises from the red book
+* [[umap]]
+* [[tsne]] and how it's different from UMAP
+* Refresh and finish boosting and trees - based on [this informal poll](https://www.reddit.com/r/datascience/comments/icsul3/any_employed_data_scientists_willing_to_share_an/), boosting, trees, and SVMs are really widely used in practice (except for a niche subtype of people who only do deep learning), so (I guess) most likely they will be asked
     * Adabost - refresh
     * Gradient Boost
     * Random Forest - also reimplement
     * SVM - also reimplement?
 * flip a tree (with honest suffering)
+* What is a Computation Graph and Who Cares?
+https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-network-methods/lectures/12194418
+* Timsort - reimplement
+* radix sort
+* Finish dangit git
+* What's the best answer to "how to run linear regression"?
+* Same for logistic regression
+* LRU cash (Leetcode quest)
+* Practice SQL on Hackersrank
+* Systems interivew - do a minimal set (at least fill the dictionary with stubs)
+* Watch some basic systems interview videos
 * refresh AUC
+* Bellman-Ford
+* Refresh combinatorics formulas
 * ising model - at least what is it?
 * torch_geometric - what is it? What's the status of it?
 * https://github.com/iamtrask/Grokking-Deep-Learning - is it true that it builds pytorch-like system from scratch? Check.
+* Implement Dijkstra
+* Implement "Fix a binary tree"
 * Does cross-entropy in DL work with softmax predictions, or probabilities? I think probabilities, but clarify.
 * Softmax approximations: https://ruder.io/word-embeddings-softmax/index.html
 * [[Xie2020noisy_student]] - finish this one
@@ -53,9 +69,12 @@ Working on: [[motifs]] (not really motifs yet) #todo
 * React
 * MongoDB
 * [[julia]] - a 2020 review paper about the language
+* manual bagging and bumping on XOR
+* Manual bagging for a bad diagonal case (flag with quadrants)
 * Mean, variance for Normal, Uniform, Poisson, binomial, write Gaussian pdf formula
 * Sampling techniques and common designs (e.g. A/B).
-* Common conjugate priors (Bayesian stats).
+* Common conjugate priors (Bayesian stats)
+* Theory of designing unit tests
 * How to prove that both entropy and gini coeff max when all $p_i$ are the same and = 1/n?
 * write backprop on a piece of paper
 * https://calculatedcontent.com/2020/02/16/weightwatcher-empirical-quality-metrics-for-deep-neural-networks/
@@ -80,8 +99,6 @@ Working on: [[motifs]] (not really motifs yet) #todo
 * Visual guide to Evolution strategies: http://blog.otoro.net/2017/10/29/visual-evolution-strategies/ Must, because visual and nice!! See [[gen_alg]]
 * Python decorators
 * Regular expressions [[regex]], including in Python
-* [[umap]]
-* [[tsne]] and how it's different from UMAP
 * https://blog.reverberate.org/2020/05/29/hoares-rebuttal-bubble-sorts-comeback.html
 * finish Google production thing
 * How to color a graph in 4 colors?
@@ -94,8 +111,6 @@ Working on: [[motifs]] (not really motifs yet) #todo
 * splay tree
 * read / watch kickstarter competition advice (on their site)
 * in a sequence, if any k elements sum to target - code from scratch quickly
-* Timsort - reimplement
-* radix sort
 * All graph exercises from here (they are excellent!): https://algs4.cs.princeton.edu/41graph/
     * Bridge: an edge that disconnects the graph if removed. Using DFS, find a way to check if E is a bridge in O(V+E)
     * Articulation point: same, but for a vertex (disconnects the graph if removed). Find an O(V+E) way to check if V is an articulation point.
@@ -134,6 +149,7 @@ Working on: [[motifs]] (not really motifs yet) #todo
 * minimum cut (on graphs), with related topics
 * Operations Research - the type of DS they do for logistics. Flip through a book?
 * https://en.wikipedia.org/wiki/S-expression
+* Go through [[ml_questions]], see what is missing
 
 # Python tools
 
