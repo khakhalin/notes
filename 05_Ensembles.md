@@ -50,31 +50,37 @@ A way to find better models by randomly moving in model space, avoiding local mi
 
 It's important to keep all models in  the comparison group similar in their complexity (for trees, same number of terminal nodes).
 
-# Boosting
+# Boosting (AdaBoost)
 
 Boosting uses simplest decision trees possible:  for every coordinate we make a single split into 2 categories, aka **decision stumps**. But with every next series of trees, we increase the weights for those elements that weren't classified correctly by the previous generation of classifiers. (At the beginning of the process, for the very first tree, we start with equal weights). These weights may either be explicitly included in the error calculation, or be used as probabilities for each data point to appear in next training subset (mathematically, the results are the same). At the end, predictions are made by **weighted majority rule**: the average across all trees, weighted by the **accuracy of individual trees**, followed by argmax.
 
 The most popular, archetypical approach: **AdaBoost**, aka **Adaptive Boosting**. For a binary discrete case:
-1. Start with all points x_i having identical weights {W}. ∑w_i = 1, so w_i = 1/n.
-2. For each available coordinate, find the best split (aka stump), with smallest total error E = ∑w_i ϵ_i, where ϵ_i = 1∙(h(x_i)==y_i).
-3. Across all coordinates, find a split with minimal [[gini]] index (one that achives best separation of classes). For all loops after the 1st (once the weights are different), either use **weighted gini index**, or randomly resample points with draw probability P ∝ w (draw with repetition, keeping the total number of points considered at each split constant).
-4. Calculate the weight of this stump as α = ½ log((1−E)/E) , where E again is the error. This formula →+∞ for E→0 (perfect split), →-∞ for E→1 (perfectly erroneous split), and ~0 for splits that perform near chance level, when E=1-E, and so α≈log(1). In practice, to avoid ∞, a tiny ε is added to both numerator and denominator of the fraction under the log().
-5. Increase weights of misclassified samples: w_i ← w_i ∙ exp(α); decrease weights of correctly classified samples by multiplying them by exp(−α); then normalize all weights to ∑w = 1.
-6. Go to step 2.
-7. Once everything is classified, rejects trees with accuracy less than 50%. _Not all descriptions mention that._
-8. Produce an average of tree outputs, weighted by α .
+1. **Start with** all points x_i having **identical weights** {W}. As $∑w_i$ = 1, we start with w_i = 1/n.
+2. **For each coordinate, find the best split** (aka **stump**), with smallest total error $E = ∑w_i ϵ_i$, where $ϵ_i = 1\cdot(h(x_i)==y_i)$. Here $h(x)$ is the predictor function for this split.
+3. Now **across all coordinates**, find a split with minimal [[gini]] index (one that achieves best separation of classes). For all loops after the 1st (once the weights are different), either use **weighted gini index**, or randomly resample points with draw probability P ∝ w (draw with repetition, keeping the total number of points at each split constant).
+4. Calculate the **weight of this stump** as $α = ½ \log((1−E)/E)$ , where E again is the error. This formula →+∞ for E→0 (perfect split), →-∞ for E→1 (perfectly erroneous split), and ~0 for splits that perform near chance level, when E=1-E, and so α≈log(1). In practice, to avoid ∞, a tiny ε is added to both numerator and denominator of the fraction under the log().
+7. Reject trees with accuracy less than 50%. _Not all descriptions mention that._
+9. **Produce an average of tree outputs, weighted by α**. In the end, this will be our final classifier.
+10. If all points are classified correctly (or if some pre-agreed threshold accuracy is reached, in case of early termination), consider the task completed. This weighted average from the previous step is our model.
+11. But if we are not happy yet, **increase weights of misclassified samples**: $w_i ← w_i \exp(α)$; decrease weights of correctly classified samples by multiplying them by exp(−α); then normalize all weights again to $∑w = 1$. Then go to step 2 and generate a new split for our collection.
 
 > Is it true that in practice randomly resampling points is better than using a weighted formula? Nobody says it openly, but if it weren't the case, why would people repeat this whole resampling story in each tutorial?
 
-Because each split is a single plane (line), || to all other variables, the decision border looks like a combination of these planes (lines). But all of them are ⊥ or || to each other, just shifted; there are no curves or non-right angles there. The final decision border will look kinda like a square crystalline maze, like a crystal of bysmuth or salt.
+Because each split is performed along a single variable (axis), it is || to all other variables. Because of that, the final weighted decision border looks like a combination of these planes (lines). But all of them are ⊥ or || to each other, just shifted; there are no curves or non-right angles there. So the final decision border looks kinda like a crystalline maze; like a crystal of bysmuth or salt.
 
 For multi-class classification, either create lots of binary classifiers (each class against all others), or encode each class as a superposition of several binary "features" that may be present or absent (say, bunnies are cute and jumpy, cats are cute but not jumpy; crickets are jumpy but not cute etc.), then use AdaBoost to identify the presence of each of these features separately ([ref](https://engineering.purdue.edu/kak/Tutorials/AdaBoost.pdf)).
 
-In many ways, AdaBoost goes against the conventional wisdom for classification: it doesn't try to build a good classifier (but instead uses a lot of crappy ones); it does not try to identify important variables, or isolate important features using dimentionality reduction (instead, it thrives in this high-D multi-variable space).
+In many ways, AdaBoost goes against the conventional wisdom for classification: it doesn't try to build a good classifier, but instead uses a lot of crappy ones. It does not try to identify important variables, or isolate important features using dimensionality reduction, but instead, it thrives in this high-D multi-variable space.
 
 It is also possible to use boosting with custom loss functions: for example, one can put more weight in false-positives compared to false-negatives, or ther other way around.
 
-**Refs:** [Akash Desarda](https://towardsdatascience.com/understanding-adaboost-2f94f22d5bfe); [wiki](https://en.wikipedia.org/wiki/AdaBoost); [Tommi Jaakkola](http://people.csail.mit.edu/dsontag/courses/ml12/slides/lecture13.pdf) lecture note; [Explaining AdaBoost](http://rob.schapire.net/papers/explaining-adaboost.pdf) by Robert Schapire; [YouTube video by StatQuest](https://www.youtube.com/watch?v=LsK-xG1cLYA) (good); [Slides by Avinash Kak, Purdue](https://engineering.purdue.edu/kak/Tutorials/AdaBoost.pdf) (very good).
+Refs:
+* [Akash Desarda](https://towardsdatascience.com/understanding-adaboost-2f94f22d5bfe)
+* https://en.wikipedia.org/wiki/AdaBoost
+* [Tommi Jaakkola](http://people.csail.mit.edu/dsontag/courses/ml12/slides/lecture13.pdf) lecture note;
+* [Explaining AdaBoost](http://rob.schapire.net/papers/explaining-adaboost.pdf) by Robert Schapire;
+* [YouTube video by StatQuest](https://www.youtube.com/watch?v=LsK-xG1cLYA) (good)
+* [Slides by Avinash Kak, Purdue](https://engineering.purdue.edu/kak/Tutorials/AdaBoost.pdf) (good).
 
 # Gradient Boosting
 
@@ -98,7 +104,7 @@ The initial (0th) optimization step is to calculate the mean of all data (for L2
 
 As GBM is a greedy algorithm, and is prone to overfitting, and so requires **hyperparameter tuning** of the maximal number of stages M, and learning rate η. GBM can also be **regularized**: for example, stochastic GBM would only consider a part of the data for each decision tree (kinda like in bagging).
 
-**References:**
+Refs:
 * [How to explain gradient boosting](https://explained.ai/gradient-boosting/index.html), Parr, Howard. Very good description!
 * [Custom loss functions for Gradient Boosting](https://towardsdatascience.com/custom-loss-functions-for-gradient-boosting-f79c1b40466d), Prince Grover, 2018
 * Friedman, J. H. (2001). Greedy function approximation: a gradient boosting machine. Annals of statistics, 1189-1232. - Mathy paper with 10k citations explaining everything about gradient boosting. https://statweb.stanford.edu/~jhf/ftp/trebst.pdf
@@ -107,14 +113,16 @@ As GBM is a greedy algorithm, and is prone to overfitting, and so requires **hyp
     * [Gentle Introduction to the Gradient Boosting Algorithm](https://machinelearningmastery.com/gentle-introduction-gradient-boosting-algorithm-machine-learning/)
     * [Understanding Gradient Boosting Machines](https://towardsdatascience.com/understanding-gradient-boosting-machines-9be756fe76ab)
 
-## Bagging/Boosting comparison
+## Bagging vs Boosting comparison
 
 * Bagging tends to decrease variance, but not necessarily bias. Boosting tends to reduce both variance and bias.
 * Conversely, Bagging does not overfit, while Boosting can overfit easily, by slicing space very thin around every point.
 * Except for the very last step, bagging can happen in parallel, while boosting is by definition sequential, and so not easily parallelizable.
 * Compared to many other methods, both bagging and boosting are very fast.
 
-Refs: [1](https://quantdare.com/what-is-the-difference-between-bagging-and-boosting/), [2](https://towardsdatascience.com/understanding-adaboost-2f94f22d5bfe)
+Refs:
+* https://quantdare.com/what-is-the-difference-between-bagging-and-boosting/
+* https://towardsdatascience.com/understanding-adaboost-2f94f22d5bfe
 
 # Random forest
 
@@ -128,3 +136,8 @@ Random forests are great for ranging features in terms of their usefulness, as o
 
 A similar approach: **Extra Trees** of **Extremely Randomized Trees**, where for each tree the first split is made at random (random feature, random point), then the rest of a tree is allowed to be optimized. Sometimes performs better than a standard RF, sometimes not.
 
+# Refs
+
+What's better, Gradient Boosted Trees, or Random Forests?
+http://fastml.com/what-is-better-gradient-boosted-trees-or-random-forest/
+Apparently they are so close in performance that it's hard to tell which one is better. Usually boils down to parameter choice and tuning. But maybe in some cases GBTs are just a tiny little bit better.

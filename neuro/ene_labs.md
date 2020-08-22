@@ -1,51 +1,36 @@
 # Virtual and remote labs
 
-## From Carlos
-
-Source: https://docs.google.com/document/d/1-bCC6IfhNvrqzwAp8yqFSfsdqL3n5oThZ2lXYrgBnhg/edit
-
 Free Neuroscience Textbooks and Online Tutorials 
 (Compiled by Carlos Aizenman, Brown University, Dept. of Neuroscience)
 
-Simulators:
+## Simulators
 
-Electrophysiology of the Neuron: eotnprogram.org
-
+Electrophysiology of the Neuron: http://eotnprogram.org
 A re-write of a program and book put out by John Huguenard and David McCormick. Very flexible and can simulate real neurons as you can add a ton of different channels, can be used for passive properties too. Has some built in lessons (book can be downloaded for free) or you can design your own. Students have to download onto their computers, doesn’t work well on Windows 10 tablets.
 
 MetaNeuron: http://www.metaneuron.org
-
 I use this for my class to simulate AP properties, recovery from inactivation and to teach how to build IV curves. Downloadable and works well, but not a huge amount of features. Great for a large class as it always works.
 
-Neuromembrane: neuromembrane.ualberta.ca
-
+Neuromembrane: http://neuromembrane.ualberta.ca 
 More feature rich than MetaNeuron, shows activation and inactivation gates. Access online, but can crash if too many people are accessing at once (like a large class). Lots of adjustable parameters and neat animation (but play it at 4x speed - it gets repetitive after a while).
 
 NGS: http://www.nernstgoldman.physiology.arizona.edu
-
 Awesome online Nernst Goldman Simulator. Change conductances, ion concentrations and temperature. Runs as a Flash app on a browser, or as a downloadable Flash app, so Flash needs to be enabled. Now only officially available as an iOS app.
+
 This is an alternative calculator, but not as polished: https://www.physiologyweb.com/calculators/ghk_equation_calculator.html
 
-
-
-
-
-Neuronify: http://ovilab.net/neuronify/
-
+💎💡 🧪 Neuronify: http://ovilab.net/neuronify/
 This is a great neural circuits simulator, just drag and drop neurons, add synapses and spiking properties and create all sorts of circuits. Also can add sensors, like a light sensor using computer’s camera so you can look at RF, ON/OFF surround, etc. Works on a computer or using an app on an iPad. Really nicely done.
-
 
 NeuroWiki: https://neurowiki.case.edu/wiki/Simulations
 
-Amazing Javascript simulations of various cells, and circuits, and other properties by Hillel Chiel as part of a neurophysiology course at Case Western: https://neurowiki.case.edu/
+⚗️📊📉📈 Amazing Javascript simulations of various cells, and circuits, and other properties by Hillel Chiel as part of a neurophysiology course at Case Western: https://neurowiki.case.edu/
 
 Neurosim 5: https://www.st-andrews.ac.uk/~wjh/neurosim/modules.html
-
 Fully fleshed simulation for teaching, runs in windows but can be run via a server and accessed via the web, so could be integrated into Canvas or other class environments.  Not free, but not expensive.
 
 Virtual Neurons: http://www.brainu.org/lesson/virtual-neurons
-
-Simpler neural circuit simulator, designed for pre-college students, but I still use it in my undergrad class as you can still get the basics of neural circuits and it is easy to use. 
+Simpler neural circuit simulator, designed for pre-college students, but I still use it in my undergrad class as you can still get the basics of neural circuits and it is easy to use. Flash 💀
 
 Physiogy Experiments: Monash University - https://ilearn.med.monash.edu.au/physiology/experiments.html
 
@@ -53,10 +38,7 @@ Great neuron simulators, particularly for systems neuro: nice visual recording s
 
 vLab from Amrita University in India: http://vlab.amrita.edu/?sub=3&brch=212
 and http://vlab.amrita.edu/?sub=3&brch=43
-
 This is a really well implemented online neurophysiology curriculum, complete with a simulator and pre-made labs. They can be accessed as a guest for free, but cannot be customized for your class.
-
-
 
 Neurons In Action: http://neuronsinaction.com/home/main
 
@@ -92,13 +74,11 @@ Neurobytes are physically connectable neurons that allow you to build controllab
 
 
 Braitenberg Vehicles Simulation: http://www.harmendeweerd.nl/braitenberg-vehicles/
-
 Online simulation of a Breitenberg vehicle arena, customizable. Excellent for modelling behavior in simple automata.
 
 Boids: Flocking simulation:  http://www.harmendeweerd.nl/boids/
 
 Spikeling: Arduino based spiking neuron model, can be connected into a network, etc. 
-
 https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.2006760&type=printable
 
 HHMI Biointeractive: Leech neurophysiology simulation. Cute, but not super in depth, good for HS classes.
@@ -209,3 +189,7 @@ Scientifica: Ephys company that has some useful how-to’s in their blogs:
 https://www.scientifica.uk.com/learning-zone
 https://www.scientifica.uk.com/neurowire-blog
 
+# Refs
+
+Main (99%) source - this collection by Carlos Aizenman:
+Source: https://docs.google.com/document/d/1-bCC6IfhNvrqzwAp8yqFSfsdqL3n5oThZ2lXYrgBnhg/edit

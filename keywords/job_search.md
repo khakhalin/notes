@@ -13,6 +13,7 @@ Related pages:
 
 How to prep:
 * https://github.com/khangich/machine-learning-interview
+* https://github.com/Feynman687/Interviews/blob/master/StatML.md
 
 Advice:
 * [[Huyen2019book]] - advice on ML interviews

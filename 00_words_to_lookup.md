@@ -4,6 +4,8 @@ Key tags:
 * #halfthere - for projects that are close to completion.
 * #todo - for follow-ups that need to be done
 
+See also: [[job_search]] - lots of questions and more links & opinions about what to learn
+
 Videos
 * Conway, the free will theorem: https://www.youtube.com/watch?v=ftIllWczf5w
 * Laplace operator: https://www.youtube.com/watch?v=oEq9ROl9Umk
@@ -15,7 +17,7 @@ Kick-start videos: https://www.youtube.com/playlist?list=PLllx_3tLoo4csmLveWHpjc
 
 **The missing semester of CS education**
 https://missing.csail.mit.edu/
-lots of useful practical bits and pieces: the shell, debugging, metaprogramming and what not. Also has [lectures on youtube](https://www.youtube.com/playlist?list=PLyzOVJj3bHQuloKGG59rS43e29ro7I57J).
+lots of useful practical bits and pieces: shell, debugging, data wrangling, metaprogramming and what not. Also has [lectures on youtube](https://www.youtube.com/playlist?list=PLyzOVJj3bHQuloKGG59rS43e29ro7I57J).
 (the link is also in [[01_Tools]] / Resources, so fee free to delete it from here later)
 
 Working on: 
@@ -24,34 +26,49 @@ Working on:
 
 # Algos and top priorities
 
+* [[umap]]
+* [[tsne]] and how it's different from UMAP
 * linear LR warmup - what is it? (Something related to training giant models)
-* Finish those graph lectures about laplacians and such
+* Finish early graph lectures by Leskowec
 * Thompson sampling - bayesian exploration / exploitation solution, related to AB testing?
 * What do graph laplacians really mean?
+* Define entropy
 * what is github.io and how it works? What can it do? Is it a good way to host blogs?
 * super-toy model for graphs: if we can directly multiply by a laplasian (because the graph is so small). Realize! Drop to Kaggle
 * Do all graph exercesises from the red book
-* [[umap]]
-* [[tsne]] and how it's different from UMAP
+* How to debug in Python, beyond print()? What are the best practices here?
+* Decision tree classification - for some reason doesn't have a separate entry here yet! https://en.wikipedia.org/wiki/Decision_tree_learning
+* Split bagging / boosting and friends into separate entries
 * Refresh and finish boosting and trees - based on [this informal poll](https://www.reddit.com/r/datascience/comments/icsul3/any_employed_data_scientists_willing_to_share_an/), boosting, trees, and SVMs are really widely used in practice (except for a niche subtype of people who only do deep learning), so (I guess) most likely they will be asked
     * Adabost - refresh
-    * Gradient Boost
+    * Gradient Boost - finish
+        * XGBoost, and how to parallelize it (one of the most popular interview topics, apparently!)
     * Random Forest - also reimplement
-    * SVM - also reimplement?
+    * SVM - also reimplement? Code implementation is sometimes on interviews.
+    * CART / Regression trees
+* Maximum Likelihood (MLE) vs Maximum apriori (MAP)
+* Generative vs Discriminative models
+* Loss functions for logistic regression
+* Is batch norm a type of regularization? (Actual interview question)
 * flip a tree (with honest suffering)
+* BayesNet - what is it?
 * What is a Computation Graph and Who Cares?
 https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-network-methods/lectures/12194418
+* reservoir sampling
+* ICA: how does it work, and in what cases it's better than PCA
 * Timsort - reimplement
 * radix sort
 * Finish dangit git
 * What's the best answer to "how to run linear regression"?
 * Same for logistic regression
 * LRU cash (Leetcode quest)
+* Difference in decision boundaries for all algorihtms (Tree vs Logistic vs Linear Reg vs SVMs vs Naive Bayes)
 * Practice SQL on Hackersrank
 * Systems interivew - do a minimal set (at least fill the dictionary with stubs)
 * Watch some basic systems interview videos
 * refresh AUC
 * Bellman-Ford
+* Leetcode-style question: serialize deserialize a tree
 * Refresh combinatorics formulas
 * ising model - at least what is it?
 * torch_geometric - what is it? What's the status of it?
@@ -65,8 +82,6 @@ https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-networ
 * Density-based clustering, aka HDBSCAN: https://towardsdatascience.com/a-gentle-introduction-to-hdbscan-and-density-based-clustering-5fd79329c1e8
 * How to do bayesian 01 guesser? How does process 001 if current history is 0? How to combine n-grams of diff length? Derive, and also google / check on the web.
 * When to use BatchNormalization() in a network? Why don't we use it always? Or should we use it always? What's the logic here?
-* Node.js
-* React
 * MongoDB
 * [[julia]] - a 2020 review paper about the language
 * manual bagging and bumping on XOR
@@ -270,6 +285,19 @@ Every solution depends on parameters of scale: amount of data, n users, requests
 * How to use sequential (as opposed to random) reads and write on HD to speed up your processes
 * Paxos - what is it?
 * Virtual machines and containers
+
+* Allegedly, a list of important techical skills for a SWE on a job market. First, figure out what could it mean to "learn them". How to learn them, and what does it mean, to know them?
+    * Front-end: 
+        * Node.js
+        * React
+        * Angular
+    * Devops and tooling:
+        * Docker
+        * Kubernetes
+        * service mesh problems
+        * AWS/Azure
+        * GCP via Coursera and hands-on qwiklabs?
+    * Other: Ruby on Rails (simple, but now apparently considered dated?)
 
 # Classic ML and related math
 

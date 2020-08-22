@@ -2,6 +2,16 @@
 
 **Introduce "Practica"** that are like lectures, but outside of a normal sequence. Currently planned:
 
+**Syllabus**
+* What it is and how to use it (using ours as an example)
+* Motivation behind syllabi
+* Goals of the course
+* Why grades exist (and how it is reflected in this syllabus in particular)
+* How participation will be graded (and there will be a required participation for this class!!)
+* That we'll be using Piazza (described in a different video)
+* Attendance and Zoom (including having names AND emails set up)
+* The B→A situation at the end of class
+
 **How to use Piazza**
 * Unregister Joshua and show from the beginning how it looks when someone is registered. 
 * Sorting using tags, finding the most recent post

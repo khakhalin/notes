@@ -19,6 +19,7 @@ See also: [[anaconda]], [[pandas]], [[tensorflow]]
 * We can do chain comparisons: `1 <= x < 3`, which is equivalent to `1<=x and x<3`.
 
 # Sets
+
 **Sets:** another hashed structure with O(1) for testing `i in a`. [ref](https://docs.python.org/3/library/stdtypes.html#set-types-set-frozenset)
 
 * Create: `set()` or a comprehension `{a for a in whatever}`, but not `{}` (this makes a dict).
@@ -30,6 +31,7 @@ See also: [[anaconda]], [[pandas]], [[tensorflow]]
 * `a = list(set(a))` - a neat way to do unique(). Doesn't preserve the original order though.
 
 # List comprehensions
+
 * Nested comprehensions: same syntax as in writing nested loops (even tho it looks unformulaic), e.g. `[j for i in range(5) for j in range(i)]
 * You can use ternary operator in LC: `[1 if i==0 else 0 for i in a]`. But if you want to sometimes return nothing, move `if` to the end: then you don't have to write `else`: `[x for x in y if a]`.
 
@@ -41,6 +43,7 @@ See also: [[anaconda]], [[pandas]], [[tensorflow]]
     * Examples: `10.3f` - 10 wide with three digits after point. `010d` - 10-wide and filled with zeros. `<+20,d` - left-aligned, 20 chars wide, with comma separating thousands, and a mandatory sign upfront (+ or - depending on the sign of the value). `=>20d` - 20-wide, right-aligned, and with equality signs used instead of spaces.
 
 # Gotchas
+
 * Objects (including empty lists `[]`) should never be used as **default arguments** for functions, as they are evaluated only once per program (during object definition), not when methods are called! Insetad use `x=None`, then `if x is None: x=[]`. It sounds super-cumbersome, but that's just how it is. ([ref](https://docs.python-guide.org/writing/gotchas/))
 * Similarly `[{}]*3` will actually create 3 references to the SAME dict.  To create an array of empty dicts or arrays or something else, use a list comprehension.
 * As strings are immutable, slicing a string creates a copy, and thus is O(N) rather than O(1). [ref](https://www.byte-by-byte.com/strings/)
@@ -48,6 +51,7 @@ See also: [[anaconda]], [[pandas]], [[tensorflow]]
 * In Python, logic operators (and, or) are **short-circuit**, which means that `(True or None.field)` will return True, even though on its own `None.field` is obviously a mistake (Nones don't have fields.)
 * **Slices** don't throw index out of bounds exceptions, but evaluate to `[]` if they are out of bounds. so for `a=[0]`, `a[1]`would give an "index out of range" mistake, but `a[1:]` gives an empty list.
 * Remember that `copy()` is a shallow copy, so for complex nested structures it may not be enough.
+* If `__contains__` method isn't implemented for a class, but `__getitem__` (getting an element by its numerical position) is implemented, `in` operator triggers iteration through the class with elementwise comparisons. It means that depending on the class `in` may have very different complexity. The main practical gotha if of course doing `in` a list (which is slow) instead of a set or a dict (that are fast).
 
 **Refs:**
 * Tips from Chip Huyen: https://github.com/chiphuyen/python-is-cool
@@ -89,7 +93,7 @@ with Thing() as t:
     t.do_something()
 ```
 
-Refs:
+**Refs:**
 * 2006 intro: https://effbot.org/zone/python-with-statement.htm
 * official description with examples: https://docs.python.org/3/reference/compound_stmts.html
 * another official description one: https://www.python.org/dev/peps/pep-0343/ 
@@ -108,6 +112,7 @@ There's an agrument that composition (having a hierarchy of types of classes) is
 **Decorators**: a type of a function that acts as a meta-function: takes another function as an argument, writes a helper function around it, and returns this outer helper function. May for example be used to wrap a closure around a function, to sorta "automate memoization": ([ref](https://www.python-course.eu/python3_memoization.php)). According to Google style code, while they may be helpful, they aren't exactly recommended, as they may complicate things.
 
 # Style habits
+
 * Import entire modules or packages, not classes or functions, to retain `module.class.method()` structure, and prevent name collisions.
 * Lines shouldn't be longer than 80 chars (Google style guide)
 * `.py` files are not scripts, so even executables	 should  be written inside a main function: `def main():`. The benefit of this construction is that this `.py` won't be auto-executed on import. And to make them collable script-like from the command line, add this inside:
@@ -117,7 +122,8 @@ if __name__ == '__main__':
 ```
 * Smuggle code from Jupyter to classes as soon as possible (Jupyter only for protopying, reporting, and use case)
 
-# Naming variables
+## Naming variables
+
 * Python-specific:
     * Variables: **snake_case** underscore for variables and functions
     * Constants: ALLCAPS
@@ -133,3 +139,61 @@ if __name__ == '__main__':
 Refs:
 * https://hackernoon.com/the-art-of-naming-variables-52f44de00aad
 * [Google style guide](https://github.com/google/styleguide), including that [for Python in particular](https://google.github.io/styleguide/pyguide.html)
+
+# List of special methods for pythonic objects
+
+**General:**
+* `__new__`:
+* `__init__`: create an object
+* `__del__`
+* `__enter__`: create a risky temp object and return the instance, works with `with`
+* `__exit__`: clean-up after `with`
+* `__str__`: turn into a nice string, works with `print`. Human-oriented.
+* `__repr__`: is supposed to return a python command (string) that, if evaluated, reconstructs the original object. A serialization of sorts. If `str` isn't defined, `print` defaults to it as well. In formatted strings, is triggered by `%r` command.
+* `__format__`
+* `__bytes__`
+
+**Collection-like behaviors:** (all these shoudl still have `__` around them; I just got lazy and decided not to write them. But actually they are there!)
+* `len`: length
+* `next`
+* `iter`
+* `reversed`
+* `getitem (self, position)`: works with `[]`, slices, iteration, `in`
+* `setitem`
+* `delitem`
+* `contains`: if there's a fast way to check for the presence of an element (otherwise defaults to iteration)
+
+**Conversion to numbers:**
+* `abs`: absolute value or something like it?
+* `bool`: if someone decides to run `if A` on our object.
+* `int`
+* `float`
+* `hash`
+* `index`
+* `complex`
+
+**Math-like behaviors:**
+* `add (self, other)`: for `+`
+* `mul (self, other)`: for  multiplying. Note that `other` may belong to a different type if you so desire (for example, for vectors, we may want to multiply by a scalar, but not use `*` for any sort of vector multiplication).
+* `rmul (self, other)`:
+* HERE I GAVE UP TEMPORARILY #halfthere
+* `eq`, `ne`, `lt`, `le`, `gt`, `ge`: for all =, ≠, <, ≤, >, ≥ operations. If only some of these are given, Python tries to improvise (say, combine le from eq and lt), or gt from eq and lt.
+
+**Callables**
+* `call`
+
+**Attribute management:**
+* `getattr`
+* `getattribute`
+* `setattr`
+* `delattr`
+* `dir`
+* `get`
+* `set`
+* `delete`
+
+# General Refs
+
+Downey, A. (2012). Think Python. " O'Reilly Media, Inc.".
+
+Programming in Python: Fluent Python,  Luciano Ramalho.
