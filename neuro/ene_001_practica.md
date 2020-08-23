@@ -6,10 +6,11 @@
 * What it is and how to use it (using ours as an example)
 * Motivation behind syllabi
 * Goals of the course
-* Why grades exist (and how it is reflected in this syllabus in particular)
-* How participation will be graded (and there will be a required participation for this class!!)
+* What office hours are (and that it's a bit unclear to me how to implement them remotely. But I'll be working on it!)
 * That we'll be using Piazza (described in a different video)
 * Attendance and Zoom (including having names AND emails set up)
+* Why grades exist (and how it is reflected in this syllabus in particular)
+* How participation will be graded (and there will be a required participation for this class!!)
 * The B→A situation at the end of class
 
 **How to use Piazza**

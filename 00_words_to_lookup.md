@@ -26,15 +26,18 @@ Working on:
 
 # Algos and top priorities
 
+* super-toy model for graphs: if we can directly multiply by a laplasian (because the graph is so small). Realize! Drop to Kaggle
 * [[umap]]
 * [[tsne]] and how it's different from UMAP
 * linear LR warmup - what is it? (Something related to training giant models)
 * Finish early graph lectures by Leskowec
 * Thompson sampling - bayesian exploration / exploitation solution, related to AB testing?
 * What do graph laplacians really mean?
-* Define entropy
+* Define entropy. Prove that entropy is max for uniform distribution. Are there any other intuitive way to introduce it?
+* What is a Computation Graph and Who Cares?
+https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-network-methods/lectures/12194418
+* reservoir sampling
 * what is github.io and how it works? What can it do? Is it a good way to host blogs?
-* super-toy model for graphs: if we can directly multiply by a laplasian (because the graph is so small). Realize! Drop to Kaggle
 * Do all graph exercesises from the red book
 * How to debug in Python, beyond print()? What are the best practices here?
 * Decision tree classification - for some reason doesn't have a separate entry here yet! https://en.wikipedia.org/wiki/Decision_tree_learning
@@ -52,9 +55,6 @@ Working on:
 * Is batch norm a type of regularization? (Actual interview question)
 * flip a tree (with honest suffering)
 * BayesNet - what is it?
-* What is a Computation Graph and Who Cares?
-https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-network-methods/lectures/12194418
-* reservoir sampling
 * ICA: how does it work, and in what cases it's better than PCA
 * Timsort - reimplement
 * radix sort

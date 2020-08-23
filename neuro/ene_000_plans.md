@@ -32,6 +32,9 @@ See also: [[edu_remote]]
 That being random is super-hard (that simulation):
 https://www.expunctis.com/2019/03/07/Not-so-random.html
 
+On peripheral nervous system - how lie detectors and polygraph are all a lie.
+Potentially look at this article (haven't read it yet, but it's recent): https://theintercept.com/2020/08/12/blueleaks-law-enforcement-police-lie-detection/
+
 When discussing parallel processing and how we are used to be slow, which makes parallel processing inevitable: an even more extreme example is flash lag (predictive processing of smooth motion):
 https://en.wikipedia.org/wiki/Flash_lag_illusion
 See: [[flagh_lag]]
