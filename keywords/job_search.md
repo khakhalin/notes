@@ -35,3 +35,11 @@ Advice:
 Refs:
 * https://www.askamanager.org/2017/05/if-youre-not-getting-interviews-heres-how-to-fix-your-resume-and-cover-letter.html
 * Some advice for academics specifically: https://www.insidehighered.com/blogs/gradhacker/intro-resumes-cv-minded-academics
+
+# Advice for former academics
+
+Main point: break the stereotype of a "non-doer" that many people have about academia. Ways to do it, before the first job:
+
+* Accent on practical technologists that academics almost never know: AWS, Docker, other cloud solutions
+* Remote industry collaborations, internships of sort, to place on the CV?
+* Kaggle: no need to win, but show that can do stuff that works

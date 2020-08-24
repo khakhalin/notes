@@ -215,6 +215,10 @@ Something on capsule networks better reproducing vision?
 Masse, N. Y., Yang, G. R., Song, H. F., Wang, X. J., & Freedman, D. J. (2019). Circuit mechanisms for the maintenance and manipulation of information in working memory. Nature neuroscience, 1.
 https://www.biorxiv.org/content/biorxiv/early/2018/05/21/305714.full.pdf
 
+González, O. C., Sokolov, Y., Krishnan, G. P., Delanois, J. E., & Bazhenov, M. (2020). Can sleep protect memories from catastrophic forgetting?. Elife, 9, e51005.
+https://elifesciences.org/articles/51005
+Model in which they show that sleep-reply can help to disentangle memories in a recurrent network, improving memory recall.
+
 Dentate gyrus circuits for encoding, retrieval and discrimination of episodic memories. 2020. Thomas Hainmueller & Marlene Bartos. Nature Neuroscience. Review. May be interesting!
 https://www.nature.com/articles/s41583-019-0260-z?WT.mc_id=TWT_NatRevNeurosci
 It appears that they didn't pre-print it though, so paywalled, at least for now.

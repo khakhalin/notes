@@ -14,6 +14,8 @@ See also: [[edu_remote]]
 
 # Organizational Ideas
 
+* Mention in the syllabus that Google Hangouts are an alternative to Zoom when ZOom is out (piazza info). Email is an alternative to Piazza.
+* If I disappear from Zoom during a session, try to keep the discussion going for a few minutes in a hope that I would reconnect. (When the power spikes in the village, it takes my equipment ca. 5 minutes to reconnect to the internet).
 * **Attendance and late policy** has to be more strict than in normal times, not less ([reddit](https://www.reddit.com/r/Professors/comments/i8ml4t/what_are_your_late_policies_this_semester/)). Explain the reasons. It's even harder to stay on track, harder to find motivation.
     * 5 min for Zoom meetings. 
     * 80% participation threshold

@@ -26,24 +26,13 @@ Working on:
 
 # Algos and top priorities
 
-* Check one paper by Christian
 * super-toy model for graphs: if we can directly multiply by a laplasian (because the graph is so small). Realize! Drop to Kaggle
+* log regression - perfect the interview-like response
+* Define entropy. Prove that entropy is max for uniform distribution. Are there any other intuitive way to introduce it?
 * [[umap]]
 * [[tsne]] and how it's different from UMAP
-* Skan this: https://yangshun.github.io/tech-interview-handbook/introduction
-* linear LR warmup - what is it? (Something related to training giant models)
-* Finish early graph lectures by Leskowec
-* Thompson sampling - bayesian exploration / exploitation solution, related to AB testing?
-* What do graph laplacians really mean?
-* Define entropy. Prove that entropy is max for uniform distribution. Are there any other intuitive way to introduce it?
-* What is a Computation Graph and Who Cares?
-https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-network-methods/lectures/12194418
-* reservoir sampling
-* what is github.io and how it works? What can it do? Is it a good way to host blogs?
-* Do all graph exercesises from the red book
-* How to debug in Python, beyond print()? What are the best practices here?
-* Decision tree classification - for some reason doesn't have a separate entry here yet! https://en.wikipedia.org/wiki/Decision_tree_learning
 * Split bagging / boosting and friends into separate entries
+* Decision tree classification - for some reason doesn't have a separate entry here yet! https://en.wikipedia.org/wiki/Decision_tree_learning
 * Refresh and finish boosting and trees - based on [this informal poll](https://www.reddit.com/r/datascience/comments/icsul3/any_employed_data_scientists_willing_to_share_an/), boosting, trees, and SVMs are really widely used in practice (except for a niche subtype of people who only do deep learning), so (I guess) most likely they will be asked
     * Adabost - refresh
     * Gradient Boost - finish
@@ -51,6 +40,19 @@ https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-networ
     * Random Forest - also reimplement
     * SVM - also reimplement? Code implementation is sometimes on interviews.
     * CART / Regression trees
+* Skan this: https://yangshun.github.io/tech-interview-handbook/introduction
+* LCF notation for graphs: https://mathworld.wolfram.com/LCFNotation.html
+* Also what's happening here?: https://www.christophermanning.org/projects/building-cubic-hamiltonian-graphs-from-lcf-notation
+* linear LR warmup - what is it? (Something related to training giant models)
+* Finish early graph lectures by Leskowec
+* Thompson sampling - bayesian exploration / exploitation solution, related to AB testing?
+* What do graph laplacians really mean?
+* What is a Computation Graph and Who Cares?
+https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-network-methods/lectures/12194418
+* reservoir sampling
+* what is github.io and how it works? What can it do? Is it a good way to host blogs?
+* Do all graph exercesises from the red book
+* How to debug in Python, beyond print()? What are the best practices here?
 * Maximum Likelihood (MLE) vs Maximum apriori (MAP)
 * Generative vs Discriminative models
 * Loss functions for logistic regression

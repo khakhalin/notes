@@ -1,3 +1,3 @@
-# MtG
+# MtG magic
 
 https://edhrec.com/
