@@ -1,9 +1,22 @@
 # Virtual and remote labs
 
-Free Neuroscience Textbooks and Online Tutorials 
+## Ideas for labs:
+* Auditory thresholds
+* Sound localization
+* Tone optimization lab. Create two generators, ask them to find a position of the 2nd that lies between half-tone and almost-fourth, with best sound. See the histogram.
+
+## JOVE videos
+
+* Crayfish: https://www.jove.com/v/2319/physiological-recordings-high-low-output-nmjs-on-crayfish-leg
+* Adaptive locomotion: https://www.jove.com/v/2629/studying-the-neural-basis-of-adaptive-locomotor-behavior-in-insects
+* Retina: https://www.jove.com/v/3625/simultaneous-recording-calcium-signals-from-identified-neurons
+* Voltage sensors and STG: https://www.jove.com/v/2567/optical-imaging-neurons-crab-stomatogastric-ganglion-with-voltage
+
+## Neuroscience links from Carlos
+
 (Compiled by Carlos Aizenman, Brown University, Dept. of Neuroscience)
 
-## Simulators
+### Simulators
 
 Electrophysiology of the Neuron: http://eotnprogram.org
 A re-write of a program and book put out by John Huguenard and David McCormick. Very flexible and can simulate real neurons as you can add a ton of different channels, can be used for passive properties too. Has some built in lessons (book can be downloaded for free) or you can design your own. Students have to download onto their computers, doesn’t work well on Windows 10 tablets.

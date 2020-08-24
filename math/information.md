@@ -37,7 +37,7 @@ Refs:
 # KL divergence
 
 **Kullback–Leibler Divergence** between 2 probability distributions P and Q: 
-$D(P||Q) = -∑p\cdot\lg(q/p)$ . 
+$D(P||Q) = -∑p\cdot\log(q/p)$ . 
 (And yes, they really use this funny symbol || everywhere.)
 
 Note that:

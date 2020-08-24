@@ -26,9 +26,11 @@ Working on:
 
 # Algos and top priorities
 
+* Check one paper by Christian
 * super-toy model for graphs: if we can directly multiply by a laplasian (because the graph is so small). Realize! Drop to Kaggle
 * [[umap]]
 * [[tsne]] and how it's different from UMAP
+* Skan this: https://yangshun.github.io/tech-interview-handbook/introduction
 * linear LR warmup - what is it? (Something related to training giant models)
 * Finish early graph lectures by Leskowec
 * Thompson sampling - bayesian exploration / exploitation solution, related to AB testing?

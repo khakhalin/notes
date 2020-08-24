@@ -1,0 +1,3 @@
+# MtG
+
+https://edhrec.com/

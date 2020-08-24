@@ -1,17 +1,25 @@
-# Plans for the neuro course
+# Plans for the Neuro course
 
 See also: [[edu_remote]]
 
 # Todo
 
+* pain
+* existential stuff - distribute
+* go through the labs
+    * We need the "hot test" lab for the first week **urgently**!
+* How to even teach labs over zoom? Do we do something, then run through it, then reconnect?
 * Read how to be a bat
+* Can the host join Zoom breakout rooms?
 
 # Organizational Ideas
 
 * **Attendance and late policy** has to be more strict than in normal times, not less ([reddit](https://www.reddit.com/r/Professors/comments/i8ml4t/what_are_your_late_policies_this_semester/)). Explain the reasons. It's even harder to stay on track, harder to find motivation.
     * 5 min for Zoom meetings. 
     * 80% participation threshold
+* That one can expect about 10 hours of study
 * Put a clause that **everything may change** (as we never tried this format before), just it will never retroactive. Any change in grading only applies on behavior after the change was implemented.
+* JoVE videos for labs?
 * Remind on the **importance of taking notes** - _especially_ as the materials seems to stay with you (recorded lectures, notes), making it so tempting to just read. If you just read, you retain almost nothing (at least in the long-term, even in just a year for now). At the very least, take notes.
 * Make sure to very explicitly explain in the syllabus **why peer-learning is a thing** (as it almost certainly seems ridiculous to them). Why interacting on Piazza is important, and not just busywork, and why we'll be trying to do breakout rooms on Zoom.
 * A corollary: while it's cool that these days we can watch lectures on our phones, ideally, we shouldn't, as it's harder to take notes that way. Try not to. **Use a normal computer**, especially for Zoom meetings, but best - for lectures as well. (Unless you use some elaborate setup where you take notes in a notebook, while having the phone with a lecture somehow well secured etc.) In a pinch, when something happened and you cannot be at your working place, you can of course use phone to listen to a lecture, or even connect to Zoom... But for most sessions, try to study from a decent studying place, with access to your notes, to Google, textbooks, etc. Try to create a good working habit.
