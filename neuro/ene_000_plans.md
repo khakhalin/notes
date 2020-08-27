@@ -19,6 +19,8 @@ Wednesday:
     * We need the "hot test" lab for the first week **urgently**!
 * How to even teach labs over zoom? Do we do something, then run through it, then reconnect?
 * Read how to be a bat
+* Add HM to memory
+* Move CPG hierarchy for motor into motor, and add what I used to draw on the board
 * Can the host join Zoom breakout rooms?
 
 # Organizational Ideas
