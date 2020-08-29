@@ -29,4 +29,11 @@ Interesting **questions**:
 
 It's better to live on graphs rather than in xy space, as the landscape is very fragmented, especially in urban areas (subway, reflections from buildings etc).
 
-Timing is important. If the same user goes back and forth between 2 nodes with ~1s interval, probably they don't move, but rather the service zones overlap. Industry slang: "Air Adjacency" - there exist some geographic area from which both nodes are reachable.
+**Timing** is important. If the same user goes back and forth between 2 nodes with ~1s interval, probably they don't move, but rather the service zones overlap. Industry slang: "Air Adjacency" - there exist some geographic area from which both nodes are reachable. Like an **edge** on a graph. From there, we can go to **cliques** - groups of nodes that form a fully connected subgraph.
+
+Technically this graph is oriented, as transitions between nodes A→B may be very different from B→A, especially in urban areas (subway tunnels, car tunnels). Moreover, people may be forced from one node to another just because their use of the network changes	(say, a person makes a call, and is downgraded to a simpler protocol on a different node, just because it has more capacity).
+
+# Refs
+
+Geolocalization app
+https://www.cellmapper.net/apps

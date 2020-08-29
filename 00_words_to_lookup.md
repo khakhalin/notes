@@ -31,6 +31,9 @@ Working on:
 * Define entropy. Prove that entropy is max for uniform distribution. Are there any other intuitive way to introduce it?
 * [[umap]]
 * [[tsne]] and how it's different from UMAP
+* On batch normalization and contrastive learning (apparently with some vague neuro hints): https://untitled-ai.github.io/understanding-self-supervised-contrastive-learning.html
+* Thompson sampling - bayesian exploration / exploitation solution, related to AB testing? https://en.wikipedia.org/wiki/Thompson_sampling
+* Is it true that "predictive modeling by max kuhn" has pseudocode for all methods?
 * Split bagging / boosting and friends into separate entries
 * Decision tree classification - for some reason doesn't have a separate entry here yet! https://en.wikipedia.org/wiki/Decision_tree_learning
 * Refresh and finish boosting and trees - based on [this informal poll](https://www.reddit.com/r/datascience/comments/icsul3/any_employed_data_scientists_willing_to_share_an/), boosting, trees, and SVMs are really widely used in practice (except for a niche subtype of people who only do deep learning), so (I guess) most likely they will be asked
@@ -40,12 +43,15 @@ Working on:
     * Random Forest - also reimplement
     * SVM - also reimplement? Code implementation is sometimes on interviews.
     * CART / Regression trees
+* On hopfield networks: https://ml-jku.github.io/hopfield-layers/
+* Self-training with noisy student (short): https://www.youtube.com/watch?v=q7PjrmGNx5A
+* Geometric deep learning: https://www.youtube.com/watch?v=8kTxTX0eBRA
 * Skan this: https://yangshun.github.io/tech-interview-handbook/introduction
 * LCF notation for graphs: https://mathworld.wolfram.com/LCFNotation.html
 * Also what's happening here?: https://www.christophermanning.org/projects/building-cubic-hamiltonian-graphs-from-lcf-notation
 * linear LR warmup - what is it? (Something related to training giant models)
+* Understand the very basic of this definition: https://en.wikipedia.org/wiki/Conjugate_prior
 * Finish early graph lectures by Leskowec
-* Thompson sampling - bayesian exploration / exploitation solution, related to AB testing?
 * What do graph laplacians really mean?
 * What is a Computation Graph and Who Cares?
 https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-network-methods/lectures/12194418

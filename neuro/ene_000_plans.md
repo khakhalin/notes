@@ -5,18 +5,20 @@ See also: [[edu_remote]]
 # Todo
 
 Wednesday: 
-* Finish syllabus
-* add a sequence of slides for every class in the 0th lecture
 * Intro lecture
 * Syllabus lecture
 * Piazza demo
 * Welcome form
 
 * pain in the AP lecture (as one of three special cases)
+* CPG - palfrey - add
 * coconut in 1st topic as a reading
-* existential stuff - distribute
 * go through the labs
     * We need the "hot test" lab for the first week **urgently**!
+    * Brain Hack book - flip and pick
+* Redistribute topics in the syllabus.
+* existential stuff - distribute
+* Put the actions where the words are and add a real-world example for every topic. Brain death and what not. Make it more citizen science. For the first time ever, you have time to talk about it (theoretically).
 * How to even teach labs over zoom? Do we do something, then run through it, then reconnect?
 * Read how to be a bat
 * Add HM to memory
