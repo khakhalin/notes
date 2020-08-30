@@ -31,6 +31,7 @@ Working on:
 * Define entropy. Prove that entropy is max for uniform distribution. Are there any other intuitive way to introduce it?
 * [[umap]]
 * [[tsne]] and how it's different from UMAP
+* Case studies for ML from [[Huyen2019book]]: https://github.com/chiphuyen/machine-learning-systems-design/blob/master/content/case-studies.md
 * On batch normalization and contrastive learning (apparently with some vague neuro hints): https://untitled-ai.github.io/understanding-self-supervised-contrastive-learning.html
 * Thompson sampling - bayesian exploration / exploitation solution, related to AB testing? https://en.wikipedia.org/wiki/Thompson_sampling
 * Is it true that "predictive modeling by max kuhn" has pseudocode for all methods?

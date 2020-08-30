@@ -38,7 +38,7 @@ An even better approach: **AUC** = **Area under the ROC (Receiver Operating Char
 
 Interestingly, AUC = P(score of a true example > score of a wrong example). _I wonder if proving this is hard?_ #todo But at least for two extreme cases this statement can be "felt" inuitively: for perfect classification (where score is sorted, with all class 0 points having lower scores that all class 1 points) AUC=1, as for very low thresholds only FPR changes (all TP are classified correctly, but not all TN), and then at some point it reverses (all TN are classified incorrectly, but not all TP), so AUC makes a sharp bend through the top left corner of the square. And for random scoring (where, for a large N, class 0 and class 1 are about uniformly distributed), AUC draws a diagonal.
 
-**Confusion matrix**: a good diagnostic tool for multi-class classification. Take all true classes, and tally into which classes they are misclassified. Identify the issues. _Is it better to do it on the validation set?_ It's better to zero the diagonal, as most cases will be classified correctly, but we're interested in the errors!
+**Confusion matrix**: a good diagnostic tool for multiclass classification. Take all true classes, and tally into which classes they are misclassified. Identify the issues. _Is it better to do it on the validation set?_ It's better to zero the diagonal, as most cases will be classified correctly, but we're interested in the errors!
 
 Canonical system of names for **Validation and Testing**:
 * **Training dataset** - obviously
