@@ -4,6 +4,7 @@ See also: [[edu_remote]]
 
 # Todo
 
+* Integrate creativity theme (from existential) into the course: https://piazza.com/class/k5wsvihi6ya3bb?cid=31 into both readings and the lecture
 * pain in the AP lecture (as one of three special cases)
 * CPG - palfrey - add
 * go through the labs

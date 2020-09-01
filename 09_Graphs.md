@@ -84,6 +84,9 @@ Graph rewriting (related to generative approaches?)
 https://en.wikipedia.org/wiki/Graph_rewriting
 https://en.wikipedia.org/wiki/Clean_(programming_language)
 
+Representation Learning on Graphs with Jumping Knowledge Networks
+https://arxiv.org/abs/1806.01261
+
 # Network Science
 
 Clune, J., Mouret, J. B., & Lipson, H. (2013). The evolutionary origins of modularity. Proceedings of the Royal Society b: Biological sciences, 280(1755), 20122863.

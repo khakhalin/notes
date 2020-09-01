@@ -33,6 +33,7 @@ Working on:
 * [[tsne]] and how it's different from UMAP
 * Case studies for ML from [[Huyen2019book]]: https://github.com/chiphuyen/machine-learning-systems-design/blob/master/content/case-studies.md
 * On batch normalization and contrastive learning (apparently with some vague neuro hints): https://untitled-ai.github.io/understanding-self-supervised-contrastive-learning.html
+* Is it true that layers leading to batchnorm should have bias=false? Why? (Karpathy [said so](https://twitter.com/karpathy/status/1299921324333170689) on twitter)
 * Thompson sampling - bayesian exploration / exploitation solution, related to AB testing? https://en.wikipedia.org/wiki/Thompson_sampling
 * Is it true that "predictive modeling by max kuhn" has pseudocode for all methods?
 * Split bagging / boosting and friends into separate entries
@@ -78,7 +79,8 @@ https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-networ
 * Systems interivew - do a minimal set (at least fill the dictionary with stubs)
 * Watch some basic systems interview videos
 * refresh AUC
-* Bellman-Ford
+* Bellman-Ford algorithm (pairwise distances between all nodes in a graph)
+        * https://en.wikipedia.org/wiki/Johnson%27s_algorithm
 * Leetcode-style question: serialize deserialize a tree
 * Refresh combinatorics formulas
 * ising model - at least what is it?
