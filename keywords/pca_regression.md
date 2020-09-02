@@ -3,7 +3,7 @@
 #stats
 
 Parents: [[02_Regression]]
-See also: pca
+See also: [[pca]]
 
 1. Standardaze columns of X.
 2. Calculate **PCA** of X: Z=XV, where columns of Z are orthonormal.

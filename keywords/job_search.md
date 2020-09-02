@@ -19,6 +19,9 @@ Advice:
 * [[Huyen2019book]] - advice on ML interviews
 * [[ml_questions]] - a long list of sample questions for DS / ML interviews
 
+Other refs:
+* https://www.springboard.com/blog/machine-learning-interview-questions/
+
 # Coding and whiteboarding interviews
 
 * Famous Stanford course on passing whiteboards interviews: https://web.stanford.edu/class/cs9/

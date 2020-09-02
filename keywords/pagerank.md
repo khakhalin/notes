@@ -37,17 +37,17 @@ Can we solve it? Yes, probably, as it's essentially a matrix equation $\textbf{R
 
 **Random walk interpretation**: if there are random walks on this graph, $r_i$ will encode the probability of the process being at node $i$ over time (or, if we have lots of concurrent walks, it will reflect the expected number of random walkers staying at node $i$ at every moment of time), once the stationary distribution of these probabilities is reached.
 
-It also means that pagerank = **principal eigenvector** of M = (D⁻¹A)ᵀ. And principal eigenvectors can be easily found via **power iteration** (exactly same as in PCA):
+It also means that pagerank = **principal eigenvector** of M = (D⁻¹A)ᵀ. And principal eigenvectors can be easily found via **power iteration** (exactly same as in [[pca]]):
 
 * Init: $r^{(0)} = \vec{1}/N$ 
 * Iterate: $r^{(t+1)} = Mr^{(t)}$
 * Stop when $Δr < ε$ (typically in L1 norm)
 
-But does the solution even exist? **Will R=MR converge** to something reasonable? In this naive form, **no**, because there are nodes with no way out, so r will get trapped there, and completely leak out of the connected component. The "dead end" problem.
+But does the solution even exist? **Will R=MR converge** to something reasonable? In this naive form, probably **no**, because there are nodes with no way out, so r will get trapped there, and completely leak out of the connected component. The "dead end" problem.
 
-> For the matrix, the behavior is not defined as you cannot delete 0 by d_out. If you keep all these rows as 0, they'll just disappear completely; if you put a 1 on the diagonal, to reflect that random walkers stay there forever, they will stay there forever, with different (but uninteresting) r_i values.
+For an arbitrary matrix A, the behavior is not defined as you cannot do D⁻¹ if some d_out=0. The matching rows of A are also all 0, so at first glance it feels like we should just agree what is 0/0, but actually there's no good straightforward solution here. If you keep all these rows as 0, everything that gets into this node will get multiplied by 0, and thus disappear completely, "leaking out" of the system. If you put a 1 on the diagonal, to reflect that random walkers stay there forever, they will indeed stay there forever, with different (but probably uninteresting) r_i values.
 
-And the same situation will happen in cycles (aka "Spider trap" problem) that will serve as similar "final endpoints" (just a cycle instead of a loop).
+And actually, a very similar situation will happen in cycles (aka "Spider trap" problem) that will serve as similar "final endpoints" (just a cycle instead of a loop).
 
 **How to solve it?** Make everything leak just a little bit by adding "random teleportation". With probability 1-β (typically ~0.1, aka $β=0.9$), a random walker disappears and gets "teleported" to a random node in the web. Or if you think in terms of flows, $(1-β)r_i$ of flow is consumed from every point, and a constant flow of $(1-β)/N$ is also injected injected in every point (where N is the number of nodes).
 

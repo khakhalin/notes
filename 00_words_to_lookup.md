@@ -20,6 +20,9 @@ https://missing.csail.mit.edu/
 lots of useful practical bits and pieces: shell, debugging, data wrangling, metaprogramming and what not. Also has [lectures on youtube](https://www.youtube.com/playlist?list=PLyzOVJj3bHQuloKGG59rS43e29ro7I57J).
 (the link is also in [[01_Tools]] / Resources, so fee free to delete it from here later)
 
+Neuro collection:
+* http://www.neuromatchacademy.org/syllabus/
+
 Working on: 
 * [[motifs]] (not really motifs yet - listen to the lecture) #todo
 * https://github.com/khangich/machine-learning-interview - disassemble
@@ -27,10 +30,14 @@ Working on:
 # Algos and top priorities
 
 * super-toy model for graphs: if we can directly multiply by a laplasian (because the graph is so small). Realize! Drop to Kaggle
+* https://en.wikipedia.org/wiki/Decision_tree_pruning
+* Generative vs discriminative models: https://stackoverflow.com/questions/879432/what-is-the-difference-between-a-generative-and-a-discriminative-algorithm
 * log regression - perfect the interview-like response
 * Define entropy. Prove that entropy is max for uniform distribution. Are there any other intuitive way to introduce it?
 * [[umap]]
 * [[tsne]] and how it's different from UMAP
+* json: https://www.w3schools.com/js/js_json_datatypes.asp
+* simple data pipeline: https://towardsdatascience.com/10-minutes-to-building-a-machine-learning-pipeline-with-apache-airflow-53cd09268977?gi=fb094bc58b8f
 * Case studies for ML from [[Huyen2019book]]: https://github.com/chiphuyen/machine-learning-systems-design/blob/master/content/case-studies.md
 * On batch normalization and contrastive learning (apparently with some vague neuro hints): https://untitled-ai.github.io/understanding-self-supervised-contrastive-learning.html
 * Is it true that layers leading to batchnorm should have bias=false? Why? (Karpathy [said so](https://twitter.com/karpathy/status/1299921324333170689) on twitter)
