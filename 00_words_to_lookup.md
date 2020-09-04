@@ -24,6 +24,7 @@ Neuro collection:
 * http://www.neuromatchacademy.org/syllabus/
 
 Working on: 
+* Interesting kaggle competitin: https://www.kaggle.com/c/lish-moa/data
 * [[motifs]] (not really motifs yet - listen to the lecture) #todo
 * https://github.com/khangich/machine-learning-interview - disassemble
 
@@ -33,7 +34,6 @@ Working on:
 * https://en.wikipedia.org/wiki/Decision_tree_pruning
 * Generative vs discriminative models: https://stackoverflow.com/questions/879432/what-is-the-difference-between-a-generative-and-a-discriminative-algorithm
 * log regression - perfect the interview-like response
-* Define entropy. Prove that entropy is max for uniform distribution. Are there any other intuitive way to introduce it?
 * [[umap]]
 * [[tsne]] and how it's different from UMAP
 * json: https://www.w3schools.com/js/js_json_datatypes.asp

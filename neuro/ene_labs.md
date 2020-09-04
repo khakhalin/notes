@@ -24,7 +24,15 @@ A re-write of a program and book put out by John Huguenard and David McCormick. 
 MetaNeuron: http://www.metaneuron.org
 I use this for my class to simulate AP properties, recovery from inactivation and to teach how to build IV curves. Downloadable and works well, but not a huge amount of features. Great for a large class as it always works.
 
-Neuromembrane: http://neuromembrane.ualberta.ca 
+💎📊 Physiogy Experiments: Monash University - https://ilearn.med.monash.edu.au/physiology/experiments.html
+Great neuron simulators, particularly for systems neuro: nice visual recording simulation - change contrast, orientation and create downloadable data. Auditory tuning and somatosensory. 
+
+Action potential one: https://ilearn.med.monash.edu.au/physiology/action-potentials/index.html
+* What is the threshold current for this fake neuron
+* How does the AP amplitude change as you increase the current
+* What changes then?
+
+💎💡 🧪 Neuromembrane: http://neuromembrane.ualberta.ca 
 More feature rich than MetaNeuron, shows activation and inactivation gates. Access online, but can crash if too many people are accessing at once (like a large class). Lots of adjustable parameters and neat animation (but play it at 4x speed - it gets repetitive after a while).
 
 NGS: http://www.nernstgoldman.physiology.arizona.edu
@@ -39,35 +47,28 @@ NeuroWiki: https://neurowiki.case.edu/wiki/Simulations
 
 ⚗️📊📉📈 Amazing Javascript simulations of various cells, and circuits, and other properties by Hillel Chiel as part of a neurophysiology course at Case Western: https://neurowiki.case.edu/
 
+Another online simulation: http://nerve.bsd.uchicago.edu/
+
 Neurosim 5: https://www.st-andrews.ac.uk/~wjh/neurosim/modules.html
 Fully fleshed simulation for teaching, runs in windows but can be run via a server and accessed via the web, so could be integrated into Canvas or other class environments.  Not free, but not expensive.
 
 Virtual Neurons: http://www.brainu.org/lesson/virtual-neurons
 Simpler neural circuit simulator, designed for pre-college students, but I still use it in my undergrad class as you can still get the basics of neural circuits and it is easy to use. Flash 💀
 
-Physiogy Experiments: Monash University - https://ilearn.med.monash.edu.au/physiology/experiments.html
-
-Great neuron simulators, particularly for systems neuro: nice visual recording simulation - change contrast, orientation and create downloadable data. Auditory tuning and somatosensory. 
-
 vLab from Amrita University in India: http://vlab.amrita.edu/?sub=3&brch=212
 and http://vlab.amrita.edu/?sub=3&brch=43
 This is a really well implemented online neurophysiology curriculum, complete with a simulator and pre-made labs. They can be accessed as a guest for free, but cannot be customized for your class.
 
 Neurons In Action: http://neuronsinaction.com/home/main
-
 Not free. Commercially available as a set of tutorials built on NEURON environment but with accessible user interface. Some are pretty good, but they are not free, and interface is a bit clunky and non-intuitive. Good for a graduate or undergrad course. They’ll send you a free copy if you tell them you might use it for a class. Probably won’t run for long, not maintained by publisher.
 
 Emergent: https://grey.colorado.edu/emergent/index.php/Main_Page
-
 Neural network simulator with a GUI. Fairly advanced but can be made accessible to students with a little up-front teaching, at least one undergrad course here uses it effectively. 
 
 Xolotl: https://xolotl.readthedocs.io/en/master/
-
 xolotl is a fast single-compartment and multi-compartment simulator written in C++ with a MATLAB interface. Downside is that it needs Matlab, which is not free.
 
-
 NEURON: https://www.neuron.yale.edu/neuron/what_is_neuron
-
 Powerful neuronal model builder, can use own programming language, GUI, Python or Matlab to interface with it. Here are some useful NEURON tools:
 
 NetPyNe: http://www.netpyne.org
@@ -78,8 +79,6 @@ Tutorial from Oberlin: http://www2.oberlin.edu/octet/HowTo/NEURON/index.html
 
 T2N: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5737656/
 Matlab interface
-
-
 
 Neurotinker: http://www.neurotinker.com
 
@@ -103,7 +102,7 @@ https://mdcune.psych.ucla.edu/modules/swimmy
 HH-Sim: https://www.cs.cmu.edu/~dst/HHsim/
 Matlab Based HH simulator, but can be downloaded. Has nice exercises, can manipulate channel gates.
 
-Databases for Creating Virtual Labs
+### Databases for Creating Virtual Labs
 
 Allen Brain Atlas: A TON of neural data of all types: https://portal.brain-map.org
 
