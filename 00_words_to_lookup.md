@@ -30,8 +30,12 @@ Working on:
 
 # Algos and top priorities
 
+* generate maze without recursion (with a queue)
+* quickly look through the book "Fluent Python", decide on how to best deal with it
+* reimplement qsort and merge sort
 * super-toy model for graphs: if we can directly multiply by a laplasian (because the graph is so small). Realize! Drop to Kaggle
 * https://en.wikipedia.org/wiki/Decision_tree_pruning
+* Timsort - reimplement
 * Generative vs discriminative models: https://stackoverflow.com/questions/879432/what-is-the-difference-between-a-generative-and-a-discriminative-algorithm
 * log regression - perfect the interview-like response
 * [[umap]]
@@ -66,7 +70,7 @@ Working on:
 https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-network-methods/lectures/12194418
 * reservoir sampling
 * what is github.io and how it works? What can it do? Is it a good way to host blogs?
-* Do all graph exercesises from the red book
+* Do all graph exercises from the red book
 * How to debug in Python, beyond print()? What are the best practices here?
 * Maximum Likelihood (MLE) vs Maximum apriori (MAP)
 * Generative vs Discriminative models
@@ -75,11 +79,12 @@ https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-networ
 * flip a tree (with honest suffering)
 * BayesNet - what is it?
 * ICA: how does it work, and in what cases it's better than PCA
-* Timsort - reimplement
 * radix sort
 * Finish dangit git
 * What's the best answer to "how to run linear regression"?
 * Same for logistic regression
+* Refresh hash tables (theory and implementation)
+* Refresh (maybe reimplement) red-black trees
 * LRU cash (Leetcode quest)
 * Difference in decision boundaries for all algorihtms (Tree vs Logistic vs Linear Reg vs SVMs vs Naive Bayes)
 * Practice SQL on Hackersrank
@@ -387,7 +392,7 @@ Every solution depends on parameters of scale: amount of data, n users, requests
 * self-supervised boosting
 * Wavenet - that famous convolution network that generates audio on-the-fly
 
-# ESL progress
+# ESL
 
 Current position: p290
 
@@ -404,3 +409,8 @@ Parked parts of ESL that need to be revisited:
 * Hamiltonians and how dynamical systems invoke them
 * Perron–Frobenius theorem - something related to centralities and or network graph eigenvectors
 * kuramoto oscillations
+
+# Refs
+
+Lists of topics used by other people:
+* https://github.com/amitness/learning

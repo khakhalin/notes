@@ -5,6 +5,11 @@
 * Sound localization
 * Tone optimization lab. Create two generators, ask them to find a position of the 2nd that lies between half-tone and almost-fourth, with best sound. See the histogram.
 
+Zooniverse labs
+* Nest cams: https://www.zooniverse.org/projects/spotteron/nestcams
+* Mice in a cage: https://www.zooniverse.org/projects/r-dot-bains/rodent-little-brother-secret-lives-of-mice
+* Pelicans in Utah: https://www.zooniverse.org/projects/jaimibutler/pelicams
+
 ## JOVE videos
 
 * Crayfish: https://www.jove.com/v/2319/physiological-recordings-high-low-output-nmjs-on-crayfish-leg
