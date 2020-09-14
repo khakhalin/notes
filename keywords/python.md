@@ -101,9 +101,11 @@ with Thing() as t:
 
 # OOP in Python
 
-**Inheritance** and **mixins** are fine. Use `super().method` or `super(className, self)` to invoke methods of a parent class. These two notations above are technically synonymous, so `super()` is preferred, as it's simpler. Note that it's not `self.super()`, bu just `super()`, as it's not strictly speaking a method of a class. https://realpython.com/python-super/
+**Inheritance** and **mixins** are fine: just make the class inherit to several classes, like `class Child(Parent1, Mixin1)` etc.
 
-There's an agrument that composition (having a hierarchy of types of classes) is eaiser to maintain than class inheritance. Ref: https://realpython.com/inheritance-composition-python/
+Use `super().method` or `super(className, self).method` to invoke methods of a parent class. These two notations above are technically synonymous, so `super()` is preferred, as it's simpler. Note that it's not `self.super()`, bu just `super()`, as it's not a method of a class. https://realpython.com/python-super/
+
+There's an argument that composition (having a hierarchy of types of classes) is easier to maintain than class inheritance. Ref: https://realpython.com/inheritance-composition-python/
 
 **Non-local variables**: when defining function within a function, we can make local variables of the outer function become sorta "global" for the inner function, which may be handy. If you only plan to read from this variable, just refer to it as if it's global. If you plan to update it, write `nonlocal var_name` inside the inner function, as if declaring it. After that it won't be masked. 
 
@@ -153,7 +155,7 @@ Refs:
 * `__format__`
 * `__bytes__`
 
-**Collection-like behaviors:** (all these shoudl still have `__` around them; I just got lazy and decided not to write them. But actually they are there!)
+**Collection-like behaviors:** (all these should still have `__` around them; I just got lazy and decided not to write them. But actually they are there!)
 * `len`: length
 * `next`
 * `iter`

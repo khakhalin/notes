@@ -101,8 +101,10 @@ Model of the cortex.
 
 # Single-neuron calculations
 
-Hidden Computational Power Found in the Arms of Neurons. Jordana Cepelewicz. Jan 14 2020.
-https://www.quantamagazine.org/neural-dendrites-reveal-their-computational-power-20200114/
+David, Beniaguev, Segev Idan, and London Michael. "Single Cortical Neurons as Deep Artificial Neural Networks." bioRxiv (2019): 613141. https://www.biorxiv.org/content/10.1101/613141v1.full.pdf
+
+Jones, I. S., & Kording, K. P. (2020). Can Single Neurons Solve MNIST? The Computational Power of Biological Dendritic Trees. arXiv preprint arXiv:2009.01269.
+https://arxiv.org/abs/2009.01269
 
 Abraham, W. C., Jones, O. D., & Glanzman, D. L. (2019). Is plasticity of synapses the mechanism of long-term memory storage?. NPJ science of learning, 4(1), 1-10.
 https://www.ncbi.nlm.nih.gov/pubmed/31285847
@@ -112,8 +114,6 @@ Dendritic action potentials and computation in human layer 2/3 cortical neurons
 Albert Gidon1, Timothy Adam Zolnik1, Pawel Fidzinski2,3, Felix Bolduan4, Athanasia Papoutsi5, Panayiota Poirazi5, Martin Holtkamp2, Imre Vida3,4, Matthew Evan Larkum. Science  03 Jan 2020:
 https://science.sciencemag.org/content/367/6473/83
 Apparently show that individual cortical piramidal neurons can do XOR.
-
-David, Beniaguev, Segev Idan, and London Michael. "Single Cortical Neurons as Deep Artificial Neural Networks." bioRxiv (2019): 613141. https://www.biorxiv.org/content/10.1101/613141v1.full.pdf
 
 Unifying Long-Term Plasticity Rules for Excitatory Synapses by Modeling Dendrites of Cortical Pyramidal Neurons
 C Ebner, C Clopath, P Jedlicka, H Cuntz - Cell Reports, 2019

@@ -30,14 +30,15 @@ Working on:
 
 # Algos and top priorities
 
-* generate maze without recursion (with a queue)
-* quickly look through the book "Fluent Python", decide on how to best deal with it
+* quickly flip through the "Fluent Python" book, decide what to do with it
 * reimplement qsort and merge sort
-* super-toy model for graphs: if we can directly multiply by a laplasian (because the graph is so small). Realize! Drop to Kaggle
+* super-toy model for graphs: if we can directly multiply by a Laplacian (because the graph is so small). Realize! Drop to Kaggle
 * https://en.wikipedia.org/wiki/Decision_tree_pruning
 * Timsort - reimplement
+* try mySQL Linkedin as a way to refresh
 * Generative vs discriminative models: https://stackoverflow.com/questions/879432/what-is-the-difference-between-a-generative-and-a-discriminative-algorithm
 * log regression - perfect the interview-like response
+* ripser - a package, what is it?
 * [[umap]]
 * [[tsne]] and how it's different from UMAP
 * json: https://www.w3schools.com/js/js_json_datatypes.asp
@@ -45,6 +46,7 @@ Working on:
 * Case studies for ML from [[Huyen2019book]]: https://github.com/chiphuyen/machine-learning-systems-design/blob/master/content/case-studies.md
 * On batch normalization and contrastive learning (apparently with some vague neuro hints): https://untitled-ai.github.io/understanding-self-supervised-contrastive-learning.html
 * Is it true that layers leading to batchnorm should have bias=false? Why? (Karpathy [said so](https://twitter.com/karpathy/status/1299921324333170689) on twitter)
+* https://en.wikipedia.org/wiki/Wasserstein_metric
 * Thompson sampling - bayesian exploration / exploitation solution, related to AB testing? https://en.wikipedia.org/wiki/Thompson_sampling
 * Is it true that "predictive modeling by max kuhn" has pseudocode for all methods?
 * Split bagging / boosting and friends into separate entries
@@ -69,6 +71,16 @@ Working on:
 * What is a Computation Graph and Who Cares?
 https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-network-methods/lectures/12194418
 * reservoir sampling
+* Bayesian linear regression
+* Gibbs sampling
+* Metropolis-Hastings
+* hierarchical Dirichlet processes
+* kernel PCA
+* CMAC
+* Fisher vectors
+* EM algorithms (for various distributions)
+* fuzzy logic
+* conjugate gradients 
 * what is github.io and how it works? What can it do? Is it a good way to host blogs?
 * Do all graph exercises from the red book
 * How to debug in Python, beyond print()? What are the best practices here?
@@ -129,6 +141,7 @@ https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-networ
 * Why autoencoders use KL and not L2 as loss? What's the logic of when KL is used? Older papers, like [[Hinton2006dim]] used cross-entropy. Why?
 * https://en.wikipedia.org/wiki/Universal_approximation_theorem
 * churn prediction problem
+* https://en.wikipedia.org/wiki/Takens%27s_theorem
 * https://en.wikipedia.org/wiki/List_of_algorithms - at least read through them haha :)
 * Geometric algorithms: https://www.geeksforgeeks.org/geometric-algorithms/
 * Bash

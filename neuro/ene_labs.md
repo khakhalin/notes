@@ -5,10 +5,16 @@
 * Sound localization
 * Tone optimization lab. Create two generators, ask them to find a position of the 2nd that lies between half-tone and almost-fourth, with best sound. See the histogram.
 
+## Citizen science
+
 Zooniverse labs
 * Nest cams: https://www.zooniverse.org/projects/spotteron/nestcams
 * Mice in a cage: https://www.zooniverse.org/projects/r-dot-bains/rodent-little-brother-secret-lives-of-mice
 * Pelicans in Utah: https://www.zooniverse.org/projects/jaimibutler/pelicams
+
+Eyewire: https://eyewire.org/
+
+A follow-up (fancier, but also more challenging) - https://flywire.ai/
 
 ## JOVE videos
 
@@ -17,7 +23,7 @@ Zooniverse labs
 * Retina: https://www.jove.com/v/3625/simultaneous-recording-calcium-signals-from-identified-neurons
 * Voltage sensors and STG: https://www.jove.com/v/2567/optical-imaging-neurons-crab-stomatogastric-ganglion-with-voltage
 
-## Neuroscience links from Carlos
+## Neuroscience links
 
 (Compiled by Carlos Aizenman, Brown University, Dept. of Neuroscience)
 
