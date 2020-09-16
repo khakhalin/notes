@@ -20,7 +20,7 @@
 * Find a paper when you know the title. 
     * Namely: paper XXX
 * The concept of a paywall, and who pays for publishing papers
-* Alternatives forms of a paper.
+* Alternative forms of a paper.
 * Pre-prints (find a paper with a pre-print). What they are and what they mean.
 * Find random stuff. 
     * Contribute some weird questions? or pre-think some weird questions?

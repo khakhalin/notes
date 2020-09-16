@@ -6,7 +6,7 @@
 * **Selection sort** (repeatedly find min element) is O(N^2) as it does the full triangle thing (loop in a loop) through the array. May be the fastest for up to a dosen of elements (depending on the overhead)
 * **QuickSort** has O(n log n) on average, but still goes to O(n^2) for the worst case. 
 * **Mergesort** is O(n log n) even for the worst case, but takes more space: O(n) instead of O(1) as most types of sort.
-* **Heapsort** is mathematically the best (also O(n log n) for time, and O(1) for space), but heap is a slow data structure, making it slower than quicksort in practice. (See [[priority_queue]])
+* **Heapsort** is mathematically the best (also O(n log n) for time, and O(1) for space), but heap is a slow data structure, making it slower than quicksort in practice. See [[priority_queue]] for implementation.
 * Neither of these cool guys work well on nearly-sorted data though. For nearly-sorted, the best is **Insertion sort**: move through an array, and for each element, swim it up (via pairwise swaps with the upwards neighbor) while necessary. For one out-of-place element, it will only do ~n/3 swaps on average, and n in the worst case (n/3 as that's what the integral gives if you calculate the average expected length between 2 random points on a range	).
 * **Timsort**: #todo Similar to MergeSort, but first collects runs (ordered sequences), then buffs them up with insertion sort if they are too small, then merges them. Default sorting algorithm in Python. Best complexity performance overall (guaranteed O(n log n) even for worst case + O(n) for best case (which is not true for most textbook sorts), and O(n) for space!) https://en.wikipedia.org/wiki/Timsort
 

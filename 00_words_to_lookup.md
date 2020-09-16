@@ -32,6 +32,7 @@ Working on:
 
 * quickly flip through the "Fluent Python" book, decide what to do with it
 * reimplement qsort and merge sort
+* implement heapsort (sorting via priority queue)
 * super-toy model for graphs: if we can directly multiply by a Laplacian (because the graph is so small). Realize! Drop to Kaggle
 * https://en.wikipedia.org/wiki/Decision_tree_pruning
 * Timsort - reimplement
