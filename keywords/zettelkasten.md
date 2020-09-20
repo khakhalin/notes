@@ -33,7 +33,7 @@ It seems that he also mostly filed cards within a tree. So every card was "guara
 
 It seems that while his system was ingenious, Luhmann was also constrained by the physicality of cards that could only get that much info on them. So if he kept having thoughts, he would have to create a linked list of cards. We however can just add stuff to the same file.
 
-This note, for example, would have been represented by several linearly linked notes in his system. But in Zettlr, it's easier to just keep writing, until you need to branch (and actually, maybe, even for some time after that, until the branch becomes too long).
+This note, for example, would have been represented by several linearly linked notes in his system. But in **Zettlr**, it's easier to just keep writing, until you need to branch (and actually, maybe, even for some time after that, until the branch becomes too long).
 
 * From another [blog polst by Phil Houtz](https://writingcooperative.com/zettelkasten-its-like-gtd-for-writing-and-here-s-why-you-should-consider-it-7dddf02be394): Actually, as it turns out, **Luhmann had tags** as well. For keywords and key themes, he used special cards that listed cards related to this keyword.
 
@@ -57,6 +57,7 @@ A funny quotation: "If you wish to educate a partner in communication, it will b
 > Still unclear, from this short article, how he wrote after all. Did he start with an outline, and then followed it, going on tangents through the links?
 
 ## More info on how Luhmann wrote
+
 https://mindyourwriting.wordpress.com/2015/09/10/how-famous-researchers-work-niklas-luhmann/
 
 It seems that, when it was time for him to write the book, he would just start creating an outline, linking it to cards. He spent most of his time on that: linking cards, and maybe improving cards themselves, and not working with any kind of "final text". And then he would just produce a text; and he woudn't revise it.

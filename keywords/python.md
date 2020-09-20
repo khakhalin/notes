@@ -3,7 +3,7 @@
 #tools #coding
 
 Path: [[01_Tools]]
-See also: [[anaconda]], [[pandas]], [[tensorflow]]
+See also: [[anaconda]], [[pandas]], [[tensorflow]], [[numpy]]
 
 # Random tips
 

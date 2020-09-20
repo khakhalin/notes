@@ -5,6 +5,9 @@
 * Sound localization
 * Tone optimization lab. Create two generators, ask them to find a position of the 2nd that lies between half-tone and almost-fourth, with best sound. See the histogram.
 
+Reaction times
+* https://www.explorelearning.com/index.cfm?method=cResource.dspView&ResourceID=43 (unfortunately only works for 5 minutes, or one has to register, in which case it works for 30 days. I'll probably have to code it from scratch)
+
 ## Citizen science
 
 Zooniverse labs

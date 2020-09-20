@@ -30,9 +30,13 @@ Working on:
 
 # Algos and top priorities
 
+* finish heapsort, optimize, add to other sorts, make compete
+* level-order traversal tree
+* how logistic regression works (including code) - prep to answer the q
+* "code a simple FF neural network" - in np vielleicht?
+* how is hashmap (dicts) implemented in Python, behind the scenes?
 * quickly flip through the "Fluent Python" book, decide what to do with it
 * reimplement qsort and merge sort
-* implement heapsort (sorting via priority queue)
 * super-toy model for graphs: if we can directly multiply by a Laplacian (because the graph is so small). Realize! Drop to Kaggle
 * https://en.wikipedia.org/wiki/Decision_tree_pruning
 * Timsort - reimplement

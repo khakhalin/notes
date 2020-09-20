@@ -5,6 +5,9 @@
 * Vasmer, [Standard search](https://starling.rinet.ru/cgi-bin/query.cgi?root=%2fusr%2flocal%2fshare%2fstarling%2fmorpho&morpho=1&basename=morpho\vasmer\vasmer) 
 * [PIE etymology](https://starling.rinet.ru/cgi-bin/query.cgi?basename=\data\ie\piet&root=config&morpho=0) on this same site.
 
+A map with translations of a word in key EU languages:
+https://ukdataexplorer.com/european-translator/?word=tail
+
 ### Remotely relevant links
 
 Russian public kadaster: https://pkk.rosreestr.ru/

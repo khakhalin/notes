@@ -2,6 +2,9 @@
 
 #tools
 
+Parent: [[python]]
+See also: [[numpy]]
+
 **Basics and IO**
 * Creation: `DataFrame` (curious capitalization)
 * `[[something]]` simply means "a list of lists". It's a type thing, not a separate synax.
