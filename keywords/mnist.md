@@ -2,6 +2,9 @@
 
 #tools
 
+Related:
+* [[communicating_networks]] - can we evolve mnist?
+
 A famous database. Included as a standard dataset in both scikit-learn, and tensorflow. Comes already split into training and testing sets (60000 and 10000 examples, respectively). It seems that to keep everything comparable, it is not common to change testing split for this set.
 
 # Links and Ideas

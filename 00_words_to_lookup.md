@@ -32,15 +32,18 @@ Working on:
 
 * finish heapsort, optimize, add to other sorts, make compete
 * level-order traversal tree
+* Design a parking lot: https://www.youtube.com/watch?v=DSGsa0pu8-k
 * how logistic regression works (including code) - prep to answer the q
 * "code a simple FF neural network" - in np vielleicht?
 * how is hashmap (dicts) implemented in Python, behind the scenes?
 * quickly flip through the "Fluent Python" book, decide what to do with it
 * reimplement qsort and merge sort
+* finish scalability lecture: https://www.youtube.com/watch?v=-W9F__D3oY4
 * super-toy model for graphs: if we can directly multiply by a Laplacian (because the graph is so small). Realize! Drop to Kaggle
 * https://en.wikipedia.org/wiki/Decision_tree_pruning
 * Timsort - reimplement
 * try mySQL Linkedin as a way to refresh
+* http://www.deeplearningbook.org/contents/regularization.html
 * Generative vs discriminative models: https://stackoverflow.com/questions/879432/what-is-the-difference-between-a-generative-and-a-discriminative-algorithm
 * log regression - perfect the interview-like response
 * ripser - a package, what is it?
@@ -121,7 +124,7 @@ https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-networ
 * Softmax approximations: https://ruder.io/word-embeddings-softmax/index.html
 * [[Xie2020noisy_student]] - finish this one
 * Weisfeiler-Lehman Isomorphism Test (see also: [[graphsage]])
-* Density-based clustering, aka HDBSCAN: https://towardsdatascience.com/a-gentle-introduction-to-hdbscan-and-density-based-clustering-5fd79329c1e8
+* Density-based clustering, aka HDBSCAN: https://towardsdatascience.com/a-gentle-introduction-to-hdbscan-and-density-based-clustering-5fd79329c1e8 (the idea is to project the points in a low-D space, but try to preserve local densities of points)
 * How to do bayesian 01 guesser? How does process 001 if current history is 0? How to combine n-grams of diff length? Derive, and also google / check on the web.
 * When to use BatchNormalization() in a network? Why don't we use it always? Or should we use it always? What's the logic here?
 * MongoDB
@@ -165,7 +168,6 @@ https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-networ
 * check out "Competitive programming" textbook
 * sieve of eratosphenes
 * Code a fast 	spanning tree of a graph (using bfs or dfs)
-* finish scalability lecture, and watch any other one, from systems design
 * splay tree
 * read / watch kickstarter competition advice (on their site)
 * in a sequence, if any k elements sum to target - code from scratch quickly

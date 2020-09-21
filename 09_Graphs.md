@@ -226,3 +226,8 @@ On how only some architectures can understand only some structures, and whether 
 
 Graphvis online:
 https://dreampuf.github.io/GraphvizOnline/
+
+Famous cs224:
+http://web.stanford.edu/class/cs224w/
+Sberloga's summaries on notion:
+https://www.notion.so/Sberloga-with-Graphs-12fafe3224e1483eb435a16aa990e1a1

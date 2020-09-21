@@ -119,9 +119,9 @@ Good test: generating grids. Generating grids is relatively hard for a network l
 
 # Refs
 
-Main publication:
-You, J., Ying, R., Ren, X., Hamilton, W. L., & Leskovec, J. (2018). Graphrnn: Generating realistic graphs with deep auto-regressive models. arXiv preprint arXiv:1802.08773.
+Main publication (not yet processed here):
+You, J., Ying, R., Ren, X., Hamilton, W. L., & Leskovec, J. (2018). GraphRNN: Generating realistic graphs with deep auto-regressive models. arXiv preprint arXiv:1802.08773.
 https://cs.stanford.edu/people/jure/pubs/graphrnn-icml18.pdf
 
-Lecture conspects:
+Lecture summary:
 https://snap-stanford.github.io/cs224w-notes/machine-learning-with-networks/graph-generative-models

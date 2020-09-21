@@ -20,8 +20,16 @@
 Two posts about **BERT** by Jesse Vig:
 * https://towardsdatascience.com/openai-gpt-2-understanding-language-generation-through-visualization-8252f683b2f8
 * https://towardsdatascience.com/deconstructing-bert-part-2-visualizing-the-inner-workings-of-attention-60a16d86b5c1
-BERT itself (a combo of linear and graphical embedding?)
+
+BERT paper itself (a combo of linear and graphical embedding?)
 https://arxiv.org/pdf/1810.04805.pdf
+
+Attacking Bert: Weight Poisoning Attacks on Pre-trained Models
+Kurita, K., Michel, P., & Neubig, G. (2020). Weight poisoning attacks on pre-trained models. arXiv preprint arXiv:2004.06660.
+https://arxiv.org/abs/2004.06660
+https://github.com/huggingface/awesome-papers/discussions/8
+https://colab.research.google.com/drive/1BzdevUCFUSs_8z_rIP47VyKAlvfK1cCB?usp=sharing
+https://github.com/QData/TextAttack
 
 McCoy, R. T., Pavlick, E., & Linzen, T. (2019). Right for the Wrong Reasons: Diagnosing Syntactic Heuristics in Natural Language Inference. arXiv preprint arXiv:1902.01007.
 https://www.aclweb.org/anthology/P19-1334/

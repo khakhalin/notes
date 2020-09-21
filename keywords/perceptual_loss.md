@@ -2,6 +2,7 @@
 
 #image #loss
 
+Parent: [[bib_image]]
 Related:
 * [[bib_generate]]
 * [[style_transfer]]

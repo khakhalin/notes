@@ -19,6 +19,8 @@ For models: 43 different models, including transformers, RNN, embeddings (GloVe)
 **Tuning is not necessary**: The most interesting claim though is that most of this activation matching doesn't come from model turning, but from its large-scale architecture, as it is present already in untrained models (with random weight), and it does not change much after training. (They call it "prediction", but what they mean is "prediction of neural data", or activation). 
 
 This last statement is apparently similar to their other paper about vision, where they also show that in terms of ML activations of image-processing networks matching biology, it is the architecture that is important, and not the tuning:
+
 * Geiger, F., Schrimpf, M., Marques, T., & DiCarlo, J. (2020). Wiring Up Vision: Minimizing Supervised Synaptic Updates Needed to Produce a Primate Ventral Stream. bioRxiv.
+Protoid: Geiger2020ventralstream
 
 They used **huggingface** transformer library.

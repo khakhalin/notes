@@ -31,7 +31,15 @@ May be relevant to decision making, even tho it's not collision detection per se
 McKeown, C. R., & Cline, H. T. (2019). Nutrient restriction causes reversible G2 arrest in Xenopus neural progenitors. Development, 146(20), dev178871.
 Without food, tadpoles enter developmental stasis: reduced neural proliferation. Everything resumes once food becomes available. Describe the molecular biology of it, what receptors are involved etc.
 
-# ZF specific
+# Zebrafish
+
+Avitan, L., Pujic, Z., Mölter, J., McCullough, M., Zhu, S., Sun, B., ... & Goodhill, G. J. (2020). Behavioral signatures of a developing neural code. Current Biology, 30(17), 3352-3363.
+https://pubmed.ncbi.nlm.nih.gov/32710821/
+
+Lagogiannis, K., Diana, G., & Meyer, M. P. (2020). Learning steers the ontogeny of an efficient hunting sequence in zebrafish larvae. bioRxiv, 2019-12.
+https://elifesciences.org/articles/55119
+💎 If learning is involved, should be a good paper to read and cite, if I ever get to updating my preprint.
+
 Pursuit and Evasion Strategies in Zebrafish: Mathematical Modeling and Behavioral Experiments
 AP Soto - 2019. PhD Dissertation.
 https://escholarship.org/content/qt6f06r1f3/qt6f06r1f3.pdf

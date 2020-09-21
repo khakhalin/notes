@@ -1,6 +1,6 @@
 # Deoldify: auto-colorizing old photos
 
-#self-supervised #society #gi #art
+#self-supervised #society #gi #art #image
 
 https://github.com/jantic/DeOldify
 

@@ -4,6 +4,8 @@
 
 **The idea:** Force networks communicate with eath other. For example, one network generates a stimulus, it is noisified, then another network decodes it. You reinforce them (both?) if communication is successful.
 
+Related: [[mnist]]
+
 # Refs
 
 Ryan Murdock, "Cooperative Communication Networks", 2020.

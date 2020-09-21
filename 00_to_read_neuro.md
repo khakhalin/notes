@@ -2,7 +2,7 @@
 
 #neuro #bib
 
-**Bibliography collections:**
+**Bibliographies:**
 * [[criticality]] - a whole bunch of key papers, including reviews, there. Do it!
 * [[bib_reconstruction]] - On reconstructing biological connectivity from spike-trains and alike
 * [[stdp]]
@@ -229,6 +229,10 @@ About Hopfield limit. It seems they use an architecture in which large groups ne
 There's also a [tweetprint](https://twitter.com/TPVogels/status/1215572496570896384).
 
 # Bottom-up validation
+
+Geiger, F., Schrimpf, M., Marques, T., & DiCarlo, J. (2020). Wiring Up Vision: Minimizing Supervised Synaptic Updates Needed to Produce a Primate Ventral Stream. bioRxiv.
+https://www.biorxiv.org/content/10.1101/2020.06.08.140111v1
+Protoid: Geiger2020ventralstream
 
 Misra, D. (2019). Mish: A Self Regularized Non-Monotonic Neural Activation Function. arXiv preprint arXiv:1908.08681.
 https://arxiv.org/abs/1908.08681

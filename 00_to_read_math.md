@@ -31,6 +31,22 @@ https://journals.sagepub.com/doi/full/10.1177/0306312714535679
 
 # Intros and top choices
 
+Reflections on Innateness in Machine Learning
+Thomas G. Dietterich. Mar 6, 2018.
+https://medium.com/@tdietterich/reflections-on-innateness-in-machine-learning-4eebefa3e1af
+Another must-do short read.
+
+The Unreasonable Effectiveness of Recurrent Neural Networks
+http://karpathy.github.io/2015/05/21/rnn-effectiveness/
+
+Meta:
+* https://arxiv.org/abs/2009.06489 Hooker, S. (2020). The Hardware Lottery. arXiv preprint arXiv:2009.06489.
+* https://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf
+Sculley, D., Holt, G., Golovin, D., Davydov, E., Phillips, T., Ebner, D., ... & Dennison, D. (2015). Hidden technical debt in machine learning systems. In Advances in neural information processing systems (pp. 2503-2511).
+
+Bahri, Y., Kadmon, J., Pennington, J., Schoenholz, S. S., Sohl-Dickstein, J., & Ganguli, S. (2020). Statistical mechanics of deep learning. Annual Review of Condensed Matter Physics.
+https://www.annualreviews.org/doi/pdf/10.1146/annurev-conmatphys-031119-050745
+
 Peyré, G., & PSL, É. N. S. Mathematics of Neural Networks.
 
 Ideas for Improving the Field of Machine Learning: Summarizing Discussion from the NeurIPS 2019 Retrospectives Workshop
@@ -45,6 +61,9 @@ Tishby, N., Pereira, F. C., & Bialek, W. (2000). The information bottleneck meth
 https://arxiv.org/pdf/physics/0004057.pdf
 2k citations.
 
+Thompson, N. C., Greenewald, K., Lee, K., & Manso, G. F. (2020). The Computational Limits of Deep Learning. arXiv preprint arXiv:2007.05558.
+https://arxiv.org/pdf/2007.05558.pdf
+
 Saxe, A. M., Bansal, Y., Dapello, J., Advani, M., Kolchinsky, A., Tracey, B. D., & Cox, D. D. (2019). On the information bottleneck theory of deep learning. Journal of Statistical Mechanics: Theory and Experiment, 2019(12), 124020.
 https://iopscience.iop.org/article/10.1088/1742-5468/ab3985
 Seems to have struck a nerve (>100 citations in just one month!). And not that hard on math.
@@ -58,17 +77,6 @@ Xie, Q., Luong, M. T., Hovy, E., & Le, Q. V. (2020). Self-training with noisy st
 https://arxiv.org/abs/1911.04252
 Google. Something weird semi-supervised learning with noisy teachers and distillation. Essentially, it seems that a badly labeled large dataset is better than a well-labeled small dataset, so it's better to train one model on a small dataset, then have it label a huge dataset (even tho many labels will be wrong), and then use this large dataset to train the next model. Or something like that. Weird.
 Stub: [[Xie2020noisy_student]]
-
-Reflections on Innateness in Machine Learning
-Thomas G. Dietterich. Mar 6, 2018.
-https://medium.com/@tdietterich/reflections-on-innateness-in-machine-learning-4eebefa3e1af
-Another must-do short read.
-
-The Unreasonable Effectiveness of Recurrent Neural Networks
-http://karpathy.github.io/2015/05/21/rnn-effectiveness/
-
-Bahri, Y., Kadmon, J., Pennington, J., Schoenholz, S. S., Sohl-Dickstein, J., & Ganguli, S. (2020). Statistical mechanics of deep learning. Annual Review of Condensed Matter Physics.
-https://www.annualreviews.org/doi/pdf/10.1146/annurev-conmatphys-031119-050745
 
 Poggio, T., Banburski, A., & Liao, Q. (2020). Theoretical issues in deep networks. Proceedings of the National Academy of Sciences.	
 https://www.pnas.org/content/pnas/early/2020/06/08/1907369117.full.pdf
@@ -94,7 +102,10 @@ Google brain. Identity mapping: just train the output to be exactly like the inp
 Olah, C., Satyanarayan, A., Johnson, I., Carter, S., Schubert, L., Ye, K., & Mordvintsev, A. (2018). The building blocks of interpretability. Distill, 3(3), e10.
 https://distill.pub/2018/building-blocks/
 Google. About reverse-tracking through a visual network via optimizing inputs?
-Should be placed here: [[Olah2018interpretability]]
+Should be placed here: Olah2018interpretability
+
+Mu, J., & Andreas, J. (2020). Compositional Explanations of Neurons. arXiv preprint arXiv:2006.14032.
+https://arxiv.org/pdf/2006.14032.pdf
 
 Liao, Q., Miranda, B., Rosasco, L., Banburski, A., Liang, R., Hidary, J., & Poggio, T. (2019). Generalization Puzzles in Deep Networks.
 https://openreview.net/pdf?id=BkelnhNFwB
@@ -304,6 +315,9 @@ https://arxiv.org/abs/1702.08608
 
 #ticket
 
+The Lottery Ticket Hypothesis: A Survey. Robert Tjarko Lange. 2020. - A blog post that is like a review of literature
+https://roberttlange.github.io/posts/2020/06/lottery-ticket-hypothesis/
+
 **Surgery** - in the appendix section of this paper (how to optimize something that takes forever to train)
 Berner, C., Brockman, G., Chan, B., Cheung, V., Dębiak, P., Dennison, C., ... & Józefowicz, R. (2019). Dota 2 with large scale deep reinforcement learning._arXiv preprint arXiv:1912.06680_.
 https://arxiv.org/abs/1912.06680
@@ -390,6 +404,10 @@ Wang, T., Zhu, J. Y., Torralba, A., & Efros, A. A. (2018). Dataset Distillation.
 https://arxiv.org/pdf/1811.10959.pdf
 Facebook AI. 10 images give 94% accuracy on MNIST. Images however are completely not-letter like (weird noisy fields), so in spirit it's closer to hacking (data poisoning, adversarial examples, except positive ones) than to interpretation.
 
+Geirhos, R., Jacobsen, J. H., Michaelis, C., Zemel, R., Brendel, W., Bethge, M., & Wichmann, F. A. (2020). Shortcut Learning in Deep Neural Networks. arXiv preprint arXiv:2004.07780.
+https://arxiv.org/abs/2004.07780
+
+
 Generative Teaching Networks: Accelerating Neural Architecture Search by Learning to Generate Synthetic Training Data.
 Felipe Petroski Such, Aditya Rawal, Joel Lehman, Kenneth O. Stanley, Jeff Clune
 https://arxiv.org/abs/1912.07768
@@ -425,6 +443,9 @@ https://arxiv.org/pdf/1312.5663.pdf
 # Architectures and Arch search
 
 #archsearch
+
+Bashivan, P., Richards, B., & Rish, I. (2020). Adversarial Feature Desensitization. arXiv preprint arXiv:2006.04621.
+https://arxiv.org/abs/2006.04621
 
 Ha, D., Dai, A., & Le, Q. V. (2016). Hypernetworks. arXiv preprint arXiv:1609.09106.
 https://arxiv.org/pdf/1609.09106.pdf
@@ -695,6 +716,10 @@ A Sober Look at Bayesian Neural Networks. January 17, 2020
 by Carles Gelada and Jacob Buckman
 https://jacobbuckman.com/2020-01-17-a-sober-look-at-bayesian-neural-networks/
 A response to Wilson 2020 above! :) Best type of scientific exchange! Also a blog post, also with math.
+
+Nalisnick, E., Matsukawa, A., Teh, Y. W., & Lakshminarayanan, B. (2019). Detecting out-of-distribution inputs to deep generative models using a test for typicality. arXiv preprint arXiv:1906.02994, 5.
+https://arxiv.org/abs/1906.02994
+Argue that KNN-like approach in very high-D is impossible to use, as average data does not look like real data, so we should frame questions in a different way; something they call "typicality" (typical data is very different from average data)
 
 Fort, S., Hu, H., & Lakshminarayanan, B. (2019). Deep Ensembles: A Loss Landscape Perspective. arXiv preprint arXiv:1912.02757. 
 https://arxiv.org/pdf/1912.02757.pdf

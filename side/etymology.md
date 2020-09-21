@@ -8,7 +8,10 @@
 A map with translations of a word in key EU languages:
 https://ukdataexplorer.com/european-translator/?word=tail
 
-### Remotely relevant links
+A map with old photos:
+https://pastvu.com/p/754272
+
+# Remotely relevant links
 
 Russian public kadaster: https://pkk.rosreestr.ru/
 Реестр: https://egrp365.ru/reestr?egrp=50:33:0030577
