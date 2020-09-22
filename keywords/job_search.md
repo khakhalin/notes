@@ -30,10 +30,21 @@ Other refs:
 * [How to prepare for Google interview](https://www.linkedin.com/pulse/average-googler-four-weeks-study-plan-milad-naseri/?trk=v-feed), by Milad Naseri. Nice list of books, practical advice. 
 * https://www.reddit.com/r/ProgrammerHumor/comments/i49h96/jobs_requirements/g0ikzmr/ - interesting stories and advice
 
-# Resumes and cover letters
+**General advice:**
+* Always ask **clarification** questions! Google (at least) intentionally designs questions to be **vague**, with some core assumptions undisclosed, so you need to ask. They are trying to model real life, where you always perform research to better understand the problem before attempting to solve it.
+* Before coding, create a comment block with  """ and write a **simple-language algo sketch** in it (not even pseudocode). Pick at least one **example** (test case), and **trace** it through the algorithm. As if explaining, teaching the algorithm to the interviewer.
+* If you need to interpret the task creatively  (say, what to return in weird edge cases?) - make sure to **talk it through**. Maybe outline several options, and even sketch it down in writing?
+* **Always try 2-3 solutions**, don’t just settle on one. Write it down, but then explore other options, to see how your first idea compares to them.
+* Many places like to gradually make the task more complex as they go. They may also ask you to refactor the code at some point.
+* Practice to physically write code on a white board.
+* When working online, in an environment that can run the code, ask the interviewer if they would prefer you to run the code, or if they want you to trace it and troubleshoot it verbally first.
 
-* A good trick is to pretend you’re explaining to a friend why you’re excited about the job and think you’d be great at it. You probably wouldn’t stiffly recite your work history; you’d probably talk about what you’re good at and how you’d approach the work. ([source](https://www.askamanager.org/2017/06/how-to-write-a-cover-letter-that-will-help-you-get-an-interview.html))
+# Cover letter
+
+* A good trick is to pretend you’re explaining to a friend why you’re excited about the job and think you’d be great at it. You probably wouldn’t just stiffly recite your work history; you’d probably talk about what you’re particularly good at and how you’d apply it to the work at this new place. ([source](https://www.askamanager.org/2017/06/how-to-write-a-cover-letter-that-will-help-you-get-an-interview.html))
 * If you’re overqualified for the position, make a point of acknowledging it and explaining why you’re interested in the job anyway. If you’re currently living across the country from where the position is located but have plans to move there soon, mention that. If all your experience is in a different industry but you’re actively working to transition into this one, explain that and talk about why. (ibid)
+
+# Resume
 
 Refs:
 * https://www.askamanager.org/2017/05/if-youre-not-getting-interviews-heres-how-to-fix-your-resume-and-cover-letter.html

@@ -7,6 +7,9 @@ See also:
 * [[system_interview]]
 * [[behav_interview]]
 
+Materials:
+* [[Bock2015workrules]] - a book about Google corporate culture
+
 Erik Bernhardsson 
 How to hire smarter than the market: a toy model
 https://erikbern.com/2020/01/13/how-to-hire-smarter-than-the-market-a-toy-model.html

@@ -31,6 +31,11 @@ https://journals.sagepub.com/doi/full/10.1177/0306312714535679
 
 # Intros and top choices
 
+Software 2.0
+https://medium.com/@karpathy/software-2-0-a64152b37c35
+
+https://arxiv.org/abs/2009.06489 Hooker, S. (2020). The Hardware Lottery. arXiv preprint arXiv:2009.06489.
+
 Reflections on Innateness in Machine Learning
 Thomas G. Dietterich. Mar 6, 2018.
 https://medium.com/@tdietterich/reflections-on-innateness-in-machine-learning-4eebefa3e1af
@@ -39,9 +44,7 @@ Another must-do short read.
 The Unreasonable Effectiveness of Recurrent Neural Networks
 http://karpathy.github.io/2015/05/21/rnn-effectiveness/
 
-Meta:
-* https://arxiv.org/abs/2009.06489 Hooker, S. (2020). The Hardware Lottery. arXiv preprint arXiv:2009.06489.
-* https://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf
+https://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf
 Sculley, D., Holt, G., Golovin, D., Davydov, E., Phillips, T., Ebner, D., ... & Dennison, D. (2015). Hidden technical debt in machine learning systems. In Advances in neural information processing systems (pp. 2503-2511).
 
 Bahri, Y., Kadmon, J., Pennington, J., Schoenholz, S. S., Sohl-Dickstein, J., & Ganguli, S. (2020). Statistical mechanics of deep learning. Annual Review of Condensed Matter Physics.
