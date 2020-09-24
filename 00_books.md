@@ -2,9 +2,14 @@
 
 #book
 
-**General:**
+Books I'm currently reading:
+* [[Bock2015workrules]]
+
+**General links:**
 
 * http://www.arxiv-sanity.com/ - AI search for arxiv
+
+**Stuff to look through:** #todo
 
 * Practical intro to ML projects: https://github.com/chiphuyen/machine-learning-systems-design
 * Good collection of short tutorials (both ML and snippets of Python code) by Chris Albon: https://chrisalbon.com/
