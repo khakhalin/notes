@@ -26,9 +26,17 @@ https://www.nature.com/articles/s41583-020-0277-3
 
 # Topology and development
 
+Hassan, B. A., & Hiesinger, P. R. (2015). Beyond molecular codes: simple rules to wire complex brains. Cell, 163(2), 285-291.
+https://www.cell.com/cell/fulltext/S0092-8674(15)01193-9
+Developmental biology bordering fractals and graphs (maybe? not sure, but judging from the pics) - a nice review-like paper (perspective); worth a priority read :)
+
 Relating network connectivity to dynamics: opportunities and challenges for theoretical neuroscience Carina Curto, Katherine Morrison
 https://www.sciencedirect.com/science/article/pii/S0959438819300443 
 Review. Exactly what it should be (networks, motifs, dynamics)
+
+Feldman, D. P., & Crutchfield, J. P. (1998). Measures of statistical complexity: Why?. Physics Letters-Section A, 238(4), 244-252.
+http://www.disca.upv.es/pabmitor/FILES/Complexity/971111_GEN_4.pdf
+On Crutchfield complexity measure (that peaks for meaningful networks)
 
 Morrison, A., Aertsen, A., and Diesmann, M. (2007). Spike-timing dependent plasticity in balanced random networks. Neural Computation, 19:1437–1467.
 

@@ -3,7 +3,11 @@
 Lillicrap, T. P., & Kording, K. P. (2019). What does it mean to understand a neural network?. arXiv preprint arXiv:1907.06374.
 https://arxiv.org/abs/1907.06374
 
-#opinion #meaning #complexity
+#opinion #complexity #interpretability
+
+Parents: developmental neuro, [[interpretability]]
+See also: kolmogorov complexity, crutchfield complexity, [[curriculum]] learning
+
 
 Imagine an ANN doing something cool. We can code it, describe it (vectors of params), or look at its elementary operations. But we usually cannot grasp "how" it works.
 
@@ -30,6 +34,7 @@ Example from neuroscience: people feel that they "understand the brain" if they 
 "Instead of asking how the brain works we should, arguably, ask how it learns to work."
 
 ### Some curious refs from this paper:
+
 History is full of seemingly impossible things that ended up being possible (4):
 Michael Dickinson. Solving the mystery of insect flight. Scientific American, 284(6):48–57, 2001.
 

@@ -27,11 +27,14 @@ Working on:
 * Interesting kaggle competitin: https://www.kaggle.com/c/lish-moa/data
 * [[motifs]] (not really motifs yet - listen to the lecture) #todo
 * https://github.com/khangich/machine-learning-interview - disassemble
+* https://thebookofshaders.com/
 
 # Algos and top priorities
 
+* revisit ways to calculate ranks from pairwise comparisons
 * finish heapsort, optimize, add to other sorts, make compete
 * level-order traversal tree
+* [[multi_armed_bandit]] in the context of clinical trials: what are some actual strategies?
 * Design a parking lot: https://www.youtube.com/watch?v=DSGsa0pu8-k
 * how logistic regression works (including code) - prep to answer the q
 * "code a simple FF neural network" - in np vielleicht?

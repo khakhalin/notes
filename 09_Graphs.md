@@ -38,13 +38,13 @@ Misc papers:
 
 # To-Read: ML on Graphs
 
-Billings, J. C. W., Hu, M., Lerda, G., Medvedev, A. N., Mottes, F., Onicas, A., ... & Petri, G. (2019). Simplex2Vec embeddings for community detection in simplicial complexes. arXiv preprint arXiv:1906.09068.
-https://arxiv.org/pdf/1906.09068.pdf
-Recommended by Irina.
-
 Review:
 Hamilton, W. L., Ying, R., & Leskovec, J. (2017). Representation learning on graphs: Methods and applications. arXiv preprint arXiv:1709.05584.
 https://arxiv.org/pdf/1709.05584.pdf
+
+https://medium.com/dair-ai/an-illustrated-guide-to-graph-neural-networks-d5564a551783
+
+https://thegradient.pub/transformers-are-graph-neural-networks/
 
 Kipf, T. N., & Welling, M. (2016). Semi-supervised classification with graph convolutional networks. arXiv preprint arXiv:1609.02907.
 Graph convolutional networks (analogous to SAGE, but from a different group of people). 4.5k citations, so super-influential.
@@ -52,12 +52,14 @@ Graph convolutional networks (analogous to SAGE, but from a different group of p
 
 [[Li2017graph]] -  Gated graph sequence neural networks (I started summarizing it, but haven't finished yet)
 
-https://medium.com/dair-ai/an-illustrated-guide-to-graph-neural-networks-d5564a551783
-
 Benchmarking Graph Neural Networks (2020). Vijay Prakash Dwivedi Chaitanya K. Joshi Thomas Laurent Yoshua Bengio Xavier Bresson
 https://arxiv.org/pdf/2003.00982.pdf
 Looking for which patterns seem to hold for successful graph neural networks. A review.
 
+Billings, J. C. W., Hu, M., Lerda, G., Medvedev, A. N., Mottes, F., Onicas, A., ... & Petri, G. (2019). Simplex2Vec embeddings for community detection in simplicial complexes. arXiv preprint arXiv:1906.09068.
+https://arxiv.org/pdf/1906.09068.pdf
+Recommended by Irina. #algtop
+	
 Battaglia, P. W., Hamrick, J. B., Bapst, V., Sanchez-Gonzalez, A., Zambaldi, V., Malinowski, M., ... & Gulcehre, C. (2018). Relational inductive biases, deep learning, and graph networks. arXiv preprint arXiv:1806.01261.
 https://arxiv.org/abs/1806.01261
 Was described as practical and particularly well-written.

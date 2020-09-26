@@ -33,6 +33,7 @@ Also:
 * How to Solve It: A New Aspect of Mathematical Method, by Polya
 
 **Systems**
+* Designing Data-Intensive Applications, Martin Kleppmann
 * Operating System Concepts, Silberschatz
 * Computer Networking: A Top-Down Approach, by Kuroze (7th ed)
 * Introduction to Information Retrieval, Manning
