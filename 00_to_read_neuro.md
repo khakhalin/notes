@@ -30,6 +30,8 @@ Hassan, B. A., & Hiesinger, P. R. (2015). Beyond molecular codes: simple rules t
 https://www.cell.com/cell/fulltext/S0092-8674(15)01193-9
 Developmental biology bordering fractals and graphs (maybe? not sure, but judging from the pics) - a nice review-like paper (perspective); worth a priority read :)
 
+Zador, A. M. (2019). A critique of pure learning and what artificial neural networks can learn from animal brains. Nature communications, 10(1), 1-7.
+
 Relating network connectivity to dynamics: opportunities and challenges for theoretical neuroscience Carina Curto, Katherine Morrison
 https://www.sciencedirect.com/science/article/pii/S0959438819300443 
 Review. Exactly what it should be (networks, motifs, dynamics)
