@@ -16,7 +16,7 @@ Topics to look up:
 * Mechanisms:
     * [[stdp]] - Spike-time-dependent plasticity
     * [[intrinsic_plasticity]] - subj :)
-    * [[bib_one_neuron]] - Computation in one neuron
+    * [[bib_one_neuron]] - computation in one neuron, dendritic processing
 
 
 

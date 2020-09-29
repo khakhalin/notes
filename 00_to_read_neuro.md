@@ -124,6 +124,7 @@ Dendritic action potentials and computation in human layer 2/3 cortical neurons
 Albert Gidon1, Timothy Adam Zolnik1, Pawel Fidzinski2,3, Felix Bolduan4, Athanasia Papoutsi5, Panayiota Poirazi5, Martin Holtkamp2, Imre Vida3,4, Matthew Evan Larkum. Science  03 Jan 2020:
 https://science.sciencemag.org/content/367/6473/83
 Apparently show that individual cortical piramidal neurons can do XOR.
+#dendritic
 
 Unifying Long-Term Plasticity Rules for Excitatory Synapses by Modeling Dendrites of Cortical Pyramidal Neurons
 C Ebner, C Clopath, P Jedlicka, H Cuntz - Cell Reports, 2019

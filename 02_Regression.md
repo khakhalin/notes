@@ -2,21 +2,18 @@
 
 **Linear model**: h(x) = (estimation for y) = $∑θ_j x_j$ = xᵀθ, or in matrix form: h = Xθ ~ y. We assume that xᵀ is a row-vector length p+1, with x_0 = 1 (intercept), followed by n "normal" variables on which we regress. The equation above defines a hyperplane in ℝ^p.
 
-# Subtopics
+Subtopics:
 
-**Constrained models**
-
-Reliable approaches:
-* [[ridge_regression]] - class. Aka **L2**, aka **shrinkage**, aka Tikhonov
-* [[lasso]] - aka **L1** regression. Also **Elastic Net** (a combo of L1 and L2)
-
-Trickier approaches:
-* [[aic]] - Akaike Information Criterion and Best-Subset Regression
-* [[stepwise_regression]] - a bit dangerious, but fast? Also least angle regression
-* [[pca_regression]] - pca regression and partial least squares
-
-See also:
-* [[ransac]] - bootstrapping-like regression estimator based on inliners voting
+**Types of constrained models**
+* Reliable approaches:
+    * [[ridge_regression]] - class. Aka **L2**, aka **shrinkage**, aka Tikhonov
+    * [[lasso]] - aka **L1** regression. Also **Elastic Net** (a combo of L1 and L2)
+* Trickier approaches:
+    * [[aic]] - Akaike Information Criterion and Best-Subset Regression
+    * [[stepwise_regression]] - a bit dangerious, but fast? Also least angle regression
+    * [[pca_regression]] - pca regression and partial least squares
+* See also:
+    * [[ransac]] - bootstrapping-like regression estimator based on inliners voting
 
 # L2 loss
 
@@ -33,6 +30,10 @@ Minimum: dJ/dθ = 0, ⇒ Xᵀ(Xθ-y) = 0 (if we write the derivative above in ma
 > Also, as Unicode makes diacritics a hassle, I try to use θ for parameter estimates, and β for true values. x_j is typically a column (one coordinate) of X, to match a corresponding θ_j. Subscripts are shortened (xi instead of x_i) where it looks ok. Cdot (∙) may mean both normal "single-number" product and inner product; ⟨x,y⟩ always means inner product. 
 
 Interpretation: if y ~ h = Xθ, then h is in the column-space of X, which forms a subspace of R^N (N data points, p+1 dimensions, assuming x0≡1). To find θ, we project y to col-space using a projection matrix, which obviously minimizes residual (unexplained) variance, by making it orthogonal to col-space.
+
+refs:
+
+https://www.expunctis.com/2019/01/27/Loss-functions.html
 
 # Philosophy of prediction
 Returning to bias-variance tradeoff, we consider x and y as random variables, with a joint distribution P(x,y). Now try to build a predictor f(x) that approximates y. The squared error loss: L = (y-f)² = ∬ (y-f)² P(x,y) dx dy. We can split P(x,y) into P(x)∙P(y|x), and integrate by y first (inside), then by x outside. Then to minimize total L, we can bind f(x) to matching y point-wise: f(x) = E(y|X=x), as it would minimize inner integral. Which would essentially give us the **nearest neighbor** method (see the very beginning of [[03_Classification]]). An alternative to point-wise matching would be a global smooth model, like linear regression. It makes regression and 1NN two opposite extremes of what can be done with the data. Other stuff (like **additive models** where f = ∑ f_j(x)) are kinda in-between.

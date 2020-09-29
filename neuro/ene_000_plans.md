@@ -4,36 +4,22 @@ See also: [[edu_remote]]
 
 # Todo
 
-* Add a second large me in OBS, to flip during some experiments (like, eating with head on guitar)
-* Make OBS record in mov, check if Resolve can read it
+* Make sure dreams and sleep phases are included (with memory?)
 * Integrate creativity theme (from existential) into the course: https://piazza.com/class/k5wsvihi6ya3bb?cid=31 into both readings and the lecture
-* go through the labs
-    * Brain Hack book - flip and pick
 * Redistribute topics in the syllabus.
 * existential stuff - distribute
 * Put the actions where the words are and add a real-world example for every topic. Brain death and what not. Make it more citizen science. For the first time ever, you have time to talk about it (theoretically).
-* How to even teach labs over zoom? Do we do something, then run through it, then reconnect?
 * Read how to be a bat
-* When basal ganglia: fainting goats
+* When basal ganglia: add fainting goats
 * Add HM to memory
-* Move CPG hierarchy for motor into motor, and add what I used to draw on the board
-* Can the host join Zoom breakout rooms?
 
 * In some lecture, tell this little story about a new age book that had a separate sign "meditate here", that I found somewhat obnoxious. Yet here it kinda makes sense. It may be corny, yes, but try to embrace it, and hopefully it will work (even though nothing replaces a real classroom of course).
 
 # Organizational Ideas
 
 * **Regularly Initiate meta-discussions on Piazza** (how is the course going?). Early on. Make it a habit. Use "Meta" channel.
-* Have one weekly post with all related assignments, nicely collected. Clarity! Clear predictable deadlines.
 * Separate into required (lectures + existential) and advanced (major-level).
 * Invite Silas, Molly, Addie, Sam, Maia, for short talks about different topics? Pre-recorded, not realtime?
-
-# Random reminders for myself
-
-* What to do for break-up during "Join Zoom"
-* Make sure everyone are enrolled in both halves of the course
-* Make sure everyone has zoom properly configured (with emails)
-* Zoom only keeps meeting reports for a month, so download participation logs weekly.
 
 # Topics and links
 
