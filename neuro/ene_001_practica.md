@@ -1,6 +1,16 @@
 # Practica lectures
 
-**Introduce "Practica"** that are like lectures, but outside of a normal sequence. Currently planned:
+**Introduce "Practica"** that are like lectures, but outside of a normal sequence.
+
+## Assorted practical skills
+
+* The concept of inbox zero (esp important with notifications and such)
+* Auto-sorting in gmail
+* Google Keep and the practice of keeping todo lists
+* How to take notes (including Zettlr, pausing and stopping).
+* How to use Excel
+
+## Standalone practica
 
 **Syllabus**
 * **Attendance and late policy** has to be more strict than in normal times, not less ([reddit](https://www.reddit.com/r/Professors/comments/i8ml4t/what_are_your_late_policies_this_semester/)). Explain the reasons. It's even harder to stay on track, harder to find motivation.
@@ -35,7 +45,4 @@
 * How to see what papers cited this paper
 * Best way to find info on a niche topic
 
-* How to take notes (including Zettlr, pausing and stopping).
-* How to use Excel
-* A tiny intro video for every lab
 * Neurotree (? add something - Neurotree alone isn't enough)

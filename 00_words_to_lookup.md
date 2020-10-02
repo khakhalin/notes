@@ -31,13 +31,19 @@ Working on:
 
 # Algos and top priorities
 
+* logistic regression!!
+    * https://www.expunctis.com/2019/01/27/Loss-functions.html
+    * https://rpubs.com/wgervais/667244
+* log regression from scratch
+* random forest - reread
+* two sorted linked lists, combined into 1 sorted linked list
 * revisit ways to calculate ranks from pairwise comparisons
 * finish heapsort, optimize, add to other sorts, make compete
 * level-order traversal tree
 * [[multi_armed_bandit]] in the context of clinical trials: what are some actual strategies?
 * Design a parking lot: https://www.youtube.com/watch?v=DSGsa0pu8-k
-* how logistic regression works (including code) - prep to answer the q
 * "code a simple FF neural network" - in np vielleicht?
+* given a binary tree, output all left elements, then bottom, then right, no repetitions
 * how is hashmap (dicts) implemented in Python, behind the scenes?
 * quickly flip through the "Fluent Python" book, decide what to do with it
 * reimplement qsort and merge sort

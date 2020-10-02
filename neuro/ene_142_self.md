@@ -1,6 +1,6 @@
 # Self
 
-.
+* When discussing decision-making, add a gif of a double-pendulum, as a counter-example (for rationality), or potential unpredictability.
 
 # Refs and notes
 
