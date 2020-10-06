@@ -223,6 +223,9 @@ Something on capsule networks better reproducing vision?
 
 # Memory storage
 
+Goode, T. D., Tanaka, K. Z., Sahay, A., & McHugh, T. J. (2020). An Integrated Index: Engrams, Place Cells, and Hippocampal Memory. Neuron.
+https://www.cell.com/neuron/fulltext/S0896-6273(20)30528-6
+
 Masse, N. Y., Yang, G. R., Song, H. F., Wang, X. J., & Freedman, D. J. (2019). Circuit mechanisms for the maintenance and manipulation of information in working memory. Nature neuroscience, 1.
 https://www.biorxiv.org/content/biorxiv/early/2018/05/21/305714.full.pdf
 

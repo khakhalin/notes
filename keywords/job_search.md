@@ -57,3 +57,7 @@ Main point: break the stereotype of a "non-doer" that many people have about aca
 * Accent on practical technologists that academics almost never know: AWS, Docker, other cloud solutions
 * Remote industry collaborations, internships of sort, to place on the CV?
 * Kaggle: no need to win, but show that can do stuff that works
+
+# General references
+
+* https://builtin.com/ - alternative (local) job boards. For example: https://www.builtinboston.com/

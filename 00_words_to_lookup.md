@@ -24,22 +24,25 @@ Neuro collection:
 * http://www.neuromatchacademy.org/syllabus/
 
 Working on: 
-* Interesting kaggle competitin: https://www.kaggle.com/c/lish-moa/data
 * [[motifs]] (not really motifs yet - listen to the lecture) #todo
 * https://github.com/khangich/machine-learning-interview - disassemble
 * https://thebookofshaders.com/
 
 # Algos and top priorities
 
+* Read this backwards (and file elsewhere): https://e2eml.school/blog.html
 * logistic regression!!
     * https://www.expunctis.com/2019/01/27/Loss-functions.html
     * https://rpubs.com/wgervais/667244
 * log regression from scratch
 * random forest - reread
 * two sorted linked lists, combined into 1 sorted linked list
-* revisit ways to calculate ranks from pairwise comparisons
+* revisit ways to calculate ranks from pairwise comparisons, code
 * finish heapsort, optimize, add to other sorts, make compete
+* list border elements of a tree counter-clock-wise
+* The math of transformers: https://www.reddit.com/r/MachineLearning/comments/j5jg1l/d_confused_mathematician_looking_for_clarity_on/
 * level-order traversal tree
+* autoregressive loss - what is it?
 * [[multi_armed_bandit]] in the context of clinical trials: what are some actual strategies?
 * Design a parking lot: https://www.youtube.com/watch?v=DSGsa0pu8-k
 * "code a simple FF neural network" - in np vielleicht?

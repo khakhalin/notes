@@ -770,6 +770,11 @@ Sinz, F. H., Pitkow, X., Reimer, J., Bethge, M., & Tolias, A. S. (2019). Enginee
 http://xaqlab.com/wp-content/uploads/2019/09/LessArtificialIntelligence.pdf
 Review / Opinion piece on differences between intelligence as it operates in biological brains, and what modern AI offers. Very neuro-style, but it's more about AI than about neuro, so I file it here.
 
+What is an agent?
+http://anna.harutyunyan.net/wp-content/uploads/2020/09/What_is_an_agent.pdf
+Short essay by Anna Harutyunyan: https://scholar.google.com/citations?hl=en&user=Pon8OksAAAAJ&view_op=list_works&sortby=pubdate
+about self, environment, boundary, mind/matter boundary
+
 van Rooij, I., Wright, C. D., Kwisthout, J., & Wareham, T. (2018). Rational analysis, intractability, and the prospects of ‘as if’-explanations. Synthese, 195(2), 491-510.
 On how humans (and thus AI) could handle intractable problems.
 Also these 2 blog posts that summarize and comment on this research: [one](https://experiencemachines.wordpress.com/2019/11/13/five-ways-the-mind-does-not-solve-computationally-intractable-problems-and-one-way-it-does/), and [two](https://irisvanrooijcogsci.com/2020/01/01/sampling-cannot-make-hard-work-light/)
