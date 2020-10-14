@@ -36,6 +36,10 @@ Without food, tadpoles enter developmental stasis: reduced neural proliferation.
 Avitan, L., Pujic, Z., Mölter, J., McCullough, M., Zhu, S., Sun, B., ... & Goodhill, G. J. (2020). Behavioral signatures of a developing neural code. Current Biology, 30(17), 3352-3363.
 https://pubmed.ncbi.nlm.nih.gov/32710821/
 
+Retinotectal circuitry of larval zebrafish is adapted to detection and pursuit of prey
+2020, … Baier.
+https://elifesciences.org/articles/58596
+
 Lagogiannis, K., Diana, G., & Meyer, M. P. (2020). Learning steers the ontogeny of an efficient hunting sequence in zebrafish larvae. bioRxiv, 2019-12.
 https://elifesciences.org/articles/55119
 💎 If learning is involved, should be a good paper to read and cite, if I ever get to updating my preprint.

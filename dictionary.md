@@ -158,6 +158,8 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 
 # R
 
+**RCT** (stats): Randomized Controlled Trial(s) - basically, what most scientists mean by an "experiment". Diff treatment groups, assigned randomly. Gold standard (everything else is epistemologically inferior)
+
 **Redshift** (dev): MPP postgreSQL-based data warehouse from Amazon (AWS).
 
 **REST** (dev): Representational State Transfer. Predefined set of stateless operations (stateless means that all session info is tracked by the client, not the server). HTTP is the archetypical RESTful system.

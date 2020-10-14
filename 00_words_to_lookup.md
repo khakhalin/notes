@@ -4,11 +4,10 @@ Key tags:
 * #halfthere - for projects that are close to completion.
 * #todo - for follow-ups that need to be done
 
-See also: [[job_search]] - lots of questions and more links & opinions about what to learn
-
-Videos
-* Conway, the free will theorem: https://www.youtube.com/watch?v=ftIllWczf5w
-* Laplace operator: https://www.youtube.com/watch?v=oEq9ROl9Umk
+Other lists to look through:
+* https://machinelearningmastery.com/start-here/
+* https://e2eml.school/blog.html
+* [[job_search]] - lots of questions and more links & opinions about what to learn
 
 Google crash course, about ML production:
 https://developers.google.com/machine-learning/crash-course/production-ml-systems
@@ -30,11 +29,12 @@ Working on:
 
 # Algos and top priorities
 
-* Read this backwards (and file elsewhere): https://e2eml.school/blog.html
 * logistic regression!!
     * https://www.expunctis.com/2019/01/27/Loss-functions.html
     * https://rpubs.com/wgervais/667244
 * log regression from scratch
+* given a sequence and a vocab, find shortest subsec that contains all vocab elements
+* swish activation, aka [[silu]] (apparently works real fast)
 * random forest - reread
 * two sorted linked lists, combined into 1 sorted linked list
 * revisit ways to calculate ranks from pairwise comparisons, code
@@ -51,6 +51,8 @@ Working on:
 * quickly flip through the "Fluent Python" book, decide what to do with it
 * reimplement qsort and merge sort
 * finish scalability lecture: https://www.youtube.com/watch?v=-W9F__D3oY4
+* Conway, the free will theorem: https://www.youtube.com/watch?v=ftIllWczf5w
+* Laplace operator: https://www.youtube.com/watch?v=oEq9ROl9Umk
 * super-toy model for graphs: if we can directly multiply by a Laplacian (because the graph is so small). Realize! Drop to Kaggle
 * https://en.wikipedia.org/wiki/Decision_tree_pruning
 * Timsort - reimplement

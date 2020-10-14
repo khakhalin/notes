@@ -103,3 +103,8 @@ P(🚗|🚪🐐🔀) = ???
 
 
 $\displaystyle 🤔\left(🚗←📺(\{🚗,🐐,🐐\}👉\{🚪\})\right) = \frac{1}{N(🚪)}\sum_{🚪\in 📺} 🤔 (🚗 ←🚪)$
+
+
+
+
+$\displaystyle \Large{x^{x^x}}$ is either $\Large{(x^x)^x}$ or $\displaystyle \Large{x^{(x^x)}}$
