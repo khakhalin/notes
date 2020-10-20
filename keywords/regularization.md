@@ -16,7 +16,7 @@ Overall, regularization is more important, and particularly efficient, when data
 
 # On the difference between L1 and L2
 
-**L2 regularization**: use a modified loss = Loss(Data|Model) + λ∑ω² where ω are model weights, and λ is a hyperparameter known as **Regularization rate**. High values of λ push {ω} towards normal distribution, while low λ make the distributin of {ω} closer to uniform. Discourages sparseness of {ω}, as having many small weights becomes better than having a few solid ones. So, in a way, L2 regularization is pro-democracy, and anti-parsimony. As λ is increased, weights are pressed down asymptotically.
+**L2 regularization**: use a modified loss = Loss(Data|Model) + λ∑ω² where ω are model weights, and λ is a hyperparameter known as **Regularization rate**. High values of λ push {ω} towards normal distribution, while low λ make the distribution of {ω} closer to uniform. Discourages sparseness of {ω}, as having many small weights becomes better than having a few solid ones. So, in a way, L2 regularization is pro-democracy, and anti-parsimony. As λ is increased, weights are pressed down asymptotically.
 
 Alternative: **L1 regularization**, aka **Lasso** (least absolute shrinking). Loss = Loss(Data|Model) +  λ∑abs(ω) . Aggressive shrinkage of small ω; encourages parsimony; discourages "leakage of features". As λ is increased, weights, one by one, suddenly drop dead from something to zero.
 

@@ -13,6 +13,7 @@ Seem to compare different types of logic (angle, derivative of it), comparing it
 * [[Rosenthal2015schooling]] - a cool study of behavioral contagion in schooling fish
 
 # OMR
+
 Xie, J., Jusuf, P. R., Bui, B. V., & Goodbourn, P. T. (2019). Experience-dependent development of visual sensitivity in larval zebrafish. Scientific Reports, 9(1), 1-11.
 https://www.nature.com/articles/s41598-019-54958-6
 Compare spatial frequency tuning between naive and visually experienced larvae. See an improvement with experience.
@@ -22,6 +23,7 @@ https://www.sciencedirect.com/science/article/pii/S221112471931201X
 Used reverse-correlation with bran recordings (from ZF larvae) to exactly pinpoint the stimulus detected by OMR circuits. As it turns out, it's a dark edge moving forward. Show funny image-like visualizations of "Behavioral-Triggered Averages" that feel a bit too complicated / counteritunitive to easily interpret. I originally thought these were the reverse-engineered stimuli, but they aren't, actually.
 
 # M-cell
+
 Koyama, M., Minale, F., Shum, J., Nishimura, N., Schaffer, C. B., & Fetcho, J. R. (2016). A circuit motif in the zebrafish hindbrain for a two alternative behavioral choice to turn left or right. Elife, 5, e16808.
 https://elifesciences.org/articles/16808
 May be relevant to decision making, even tho it's not collision detection per se.
@@ -37,7 +39,7 @@ Avitan, L., Pujic, Z., Mölter, J., McCullough, M., Zhu, S., Sun, B., ... & Good
 https://pubmed.ncbi.nlm.nih.gov/32710821/
 
 Retinotectal circuitry of larval zebrafish is adapted to detection and pursuit of prey
-2020, … Baier.
+2020, Förster ... Baier.
 https://elifesciences.org/articles/58596
 
 Lagogiannis, K., Diana, G., & Meyer, M. P. (2020). Learning steers the ontogeny of an efficient hunting sequence in zebrafish larvae. bioRxiv, 2019-12.

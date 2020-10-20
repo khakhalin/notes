@@ -2,7 +2,8 @@
 
 #loss #dl
 
-Parents: [[06_DL]]
+Parents: [[06_DL]], [[02_Regression]]
+Related: [[regularization]]
 
 Subtopics
 * [[perceptual_loss]]
@@ -26,7 +27,13 @@ Motivation: essentially, average log-likelihood. Assume that the predictions of 
 
 # Huber Loss
 
-**Huber loss**: a compromise between MSE loss that is tolerant to small noise (behaves nicely around 0, as x² ≪ x for small x), but is super-sensitive to outliers, and linear loss that is the other way around. Essentially, just a parabola with arms that smoothly transition to linear at some point, and continue like that. Formula: L = 1/2∙x² for x<d, but (abs(x)-d/2)∙d for x>d. ([wiki ref](https://en.wikipedia.org/wiki/Huber_loss))
+**Huber loss**: a compromise between MSE loss that is tolerant to small noise (behaves nicely around 0, as x² ≪ x for small x), but is super-sensitive to outliers, and linear loss that is the other way around. Essentially, just a parabola with two linear arms smoothly grafted to it, to keep growth for large x linear. Smooth in terms of f(x) and f'(x).
+
+Formula: L = 1/2∙x² for x<d, but (abs(x)-d/2)∙d for x>d. 
+
+$\displaystyle L = \begin{cases} \frac{1}{2} x^2 & \text{for} & x<d \\ d(|x|-d/2) & \text{for} & x>d \end{cases}$
+
+Ref: https://en.wikipedia.org/wiki/Huber_loss
 
 # Refs
 

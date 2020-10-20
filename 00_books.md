@@ -72,11 +72,11 @@ Also:
 
 Coding problems
 * https://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/
+* https://projecteuler.net/archives
 * https://leetcode.com/
 * https://www.byte-by-byte.com/google-interview/
 * https://codingbat.com/java
 * https://codegolf.stackexchange.com/
-* https://projecteuler.net/archives
 
 Job-search specific materials:
 * Cracking the code interview (book)

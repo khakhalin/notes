@@ -32,12 +32,16 @@ Other refs:
 
 **General advice:**
 * Always ask **clarification** questions! Google (at least) intentionally designs questions to be **vague**, with some core assumptions undisclosed, so you need to ask. They are trying to model real life, where you always perform research to better understand the problem before attempting to solve it.
-* Before coding, create a comment block with  """ and write a **simple-language algo sketch** in it (not even pseudocode). Pick at least one **example** (test case), and **trace** it through the algorithm. As if explaining, teaching the algorithm to the interviewer.
+* Before coding (if coding in a shared online system), create a comment block with  """ and write a **simple-language algo sketch** in it (not even pseudocode necessarily). Then pick at least one **example** (test case; maybe 2), and **trace** it through the algorithm. As if explaining, teaching the algorithm to the interviewer.
 * If you need to interpret the task creatively  (say, what to return in weird edge cases?) - make sure to **talk it through**. Maybe outline several options, and even sketch it down in writing?
 * **Always try 2-3 solutions**, don’t just settle on one. Write it down, but then explore other options, to see how your first idea compares to them.
-* Many places like to gradually make the task more complex as they go. They may also ask you to refactor the code at some point.
+* **Verbalize your half-thoughts** in full sentences, as if explaining it to someone. Even hunches that are tempting, but that you decide to abandon immediately, a better to be cast into full sentences. Speak slowly, don't try to catch up with your thinking. It's actually more important to show your thinking than to solve the problem in the best possible way.
+* Many places like to gradually make the task more complex as they go. They may also ask you to refactor the code at some point. That's normal and good.
 * Practice to physically write code on a white board.
 * When working online, in an environment that can run the code, ask the interviewer if they would prefer you to run the code, or if they want you to trace it and troubleshoot it verbally first.
+
+More refs:
+* https://blog.interviewing.io/ive-conducted-over-600-technical-interviews-on-interviewing-io-here-are-5-common-problem-areas-ive-seen/
 
 # Cover letter
 
