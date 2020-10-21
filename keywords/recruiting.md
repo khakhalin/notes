@@ -10,6 +10,11 @@ See also:
 Materials:
 * [[Bock2015workrules]] - a book about Google corporate culture
 
+Related:
+* [[id20201020160912]] - Why CS recruiting market is broken, by Aline Lerner 2020
+
+# Refs and links
+
 Erik Bernhardsson 
 How to hire smarter than the market: a toy model
 https://erikbern.com/2020/01/13/how-to-hire-smarter-than-the-market-a-toy-model.html
