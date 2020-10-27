@@ -3,7 +3,7 @@
 #tools #coding
 
 Path: [[01_Tools]]
-See also: [[anaconda]], [[pandas]], [[tensorflow]], [[numpy]]
+Subtopics: [[anaconda]], [[pandas]], [[tensorflow]], [[numpy]], [[python_dates]]
 
 # Random tips
 
@@ -44,14 +44,14 @@ See also: [[anaconda]], [[pandas]], [[tensorflow]], [[numpy]]
 
 # Gotchas
 
-* Objects (including empty lists `[]`) should never be used as **default arguments** for functions, as they are evaluated only once per program (during object definition), not when methods are called! Insetad use `x=None`, then `if x is None: x=[]`. It sounds super-cumbersome, but that's just how it is. ([ref](https://docs.python-guide.org/writing/gotchas/))
+* Objects (including empty lists `[]`) should never be used as **default arguments** for functions, as they are evaluated and instantiated only once per program (during object definition), not when methods are called! Instead use `x=None`, then `if x is None: x=[]`. It sounds cumbersome, but that's just how it is. ([ref](https://docs.python-guide.org/writing/gotchas/))
 * Similarly `[{}]*3` will actually create 3 references to the SAME dict.  To create an array of empty dicts or arrays or something else, use a list comprehension.
 * As strings are immutable, slicing a string creates a copy, and thus is O(N) rather than O(1). [ref](https://www.byte-by-byte.com/strings/)
 * Crazy fact: a built-in `round()` (not the one from math / numpy) rounds both 1.5 and 2.5 to 2 (always **rounds edge cases towards even numbers**). Apparently that's to fight the bias of floating number representation ([ref](https://realpython.com/python-rounding/)).
 * In Python, logic operators (and, or) are **short-circuit**, which means that `(True or None.field)` will return True, even though on its own `None.field` is obviously a mistake (Nones don't have fields.)
 * **Slices** don't throw index out of bounds exceptions, but evaluate to `[]` if they are out of bounds. so for `a=[0]`, `a[1]`would give an "index out of range" mistake, but `a[1:]` gives an empty list.
 * Remember that `copy()` is a shallow copy, so for complex nested structures it may not be enough.
-* If `__contains__` method isn't implemented for a class, but `__getitem__` (getting an element by its numerical position) is implemented, `in` operator triggers iteration through the class with elementwise comparisons. It means that depending on the class `in` may have very different complexity. The main practical gotha if of course doing `in` a list (which is slow) instead of a set or a dict (that are fast).
+* If `__contains__` method isn't implemented for a class, but `__getitem__` (getting an element by its numerical position) is implemented, `in` operator triggers iteration through the class with elementwise comparisons. It means that depending on the class `in` may have very different complexity. The main practical gotcha if of course doing `in` with a list (which is O(N) slow) instead of a set or a dict (that are O(1) fast).
 
 **Refs:**
 * Tips from Chip Huyen: https://github.com/chiphuyen/python-is-cool

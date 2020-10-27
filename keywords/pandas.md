@@ -13,7 +13,7 @@ See also: [[numpy]]
 * Write: `df.to_csv('name.csv', index=False)`
 
 **Columns**
-* To get colum names, `df.columns`.
+* To get column names, `df.columns`.
 * Rename all columns, just overwrite it with a different vector.
 * Rename  only some columns: `df = df.rename({'a': 'X', 'b': 'Y'}, axis=1)`
 * Delete some columns: `df = df.drop(['a','b'], axis=1)`
@@ -35,6 +35,15 @@ A problem while writing to a frame, selecting by both column and row.
 * Also Good: reference both by position:`df.iloc[1,0]`. Row goes first. 
 * Read, but not write: `df.x[1]`, which is equivalent to `df['x'][1]`.
 * Read but not write: Both `df.x.iloc[1]` and `df.iloc[1].x`. Documentation states that whether any given slice would work or not is "officially unpredictable", so chaining shoud never be used.
+
+**Merging and Joining**
+* Concatenation: `df.concat(objs)` where objs is a list of dataframes. Parameters:
+    * `axis`: default 0 (horizontal stacking), but may be something else
+    * `join`: default value of `outer` (for union of matching indices), but can be changed to `inner` (for intersection). Makes sense for `axis=1` (when columns are merged): with `outer` missing values are padded with NaNs, while with `inner` incomplete rows are eliminated.
+    * `keys`: generated hierarchical keys. Expects a list of names, to become the first level of these keys.
+* A wrapper for adding homogeneous rows: `f = f.append(f2)`
+    * If indices are meaningful, use this notation, and it will check that they don't duplicate. If indices are essentially just row numbers, add `ignore_index=True` to make it more relaxed. And maybe also `sort=False`, to keep things simple and fast.
+* Full-featured in-memory join: `pd.merge`. See the description here: https://pandas.pydata.org/pandas-docs/stable/user_guide/merging.html
 
 **Strings**
 * For basic string operations, like cut first chars: `df['x'].str[1:]`

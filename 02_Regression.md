@@ -1,19 +1,27 @@
-# Linear Regression
-
-**Linear model**: h(x) = (estimation for y) = $∑θ_j x_j$ = xᵀθ, or in matrix form: h = Xθ ~ y. We assume that xᵀ is a row-vector length p+1, with x_0 = 1 (intercept), followed by n "normal" variables on which we regress. The equation above defines a hyperplane in ℝ^p.
+# Regression
 
 Subtopics:
 
-**Types of constrained models**
-* Reliable approaches:
-    * [[ridge_regression]] - class. Aka **L2**, aka **shrinkage**, aka Tikhonov
-    * [[lasso]] - aka **L1** regression. Also **Elastic Net** (a combo of L1 and L2)
-* Trickier approaches:
-    * [[aic]] - Akaike Information Criterion and Best-Subset Regression
-    * [[stepwise_regression]] - a bit dangerious, but fast? Also least angle regression
-    * [[pca_regression]] - pca regression and partial least squares
-* See also:
-    * [[ransac]] - bootstrapping-like regression estimator based on inliners voting
+* [[linear_regression]] - the core concept :)
+    * [[gram-schmidt]] - close form elimination
+    * [[optimizers]] - related
+
+**Constrained models**
+    * Reliable approaches:
+        * [[ridge_regression]] - class. Aka **L2 regularization**, aka **shrinkage**, aka Tikhonov
+        * [[lasso]] - aka **L1 regularization**. Also covers **Elastic Net** (a combo of L1 and L2)
+    * Trickier approaches:
+        * [[aic]] - Akaike Information Criterion and Best-Subset Regression
+        * [[stepwise_regression]] - a bit dangerious, but fast. Also covers least angle regression
+        * [[pca_regression]] - pca regression and partial least squares
+    * See also:
+        * [[ransac]] - bootstrapping-like regression estimator based on inliners voting
+
+# Notation
+
+To sum up **notation choices** (roughly matching ESL): one data point is a row-vector of coordinates, so all points in a dataset make up a tall slim matrix (a column of row- vectors). The values of y are also a column. Next, as one data-point is a row, parameters θ have to be a column, so that dim(y) = N×1 = dim(Xθ). When writing it all, a part that is a bit confusing is that X (matrix) of N×k is multiplied by θ from the right (Xθ), but individual points x may have to be written as xᵀθ to show that they are row-vectors (by default x would have been a column-vector).
+
+Also, as Unicode makes diacritics a hassle, I try to use θ for parameter estimates, and β for true values. x_j is typically a column (one coordinate) of X, to match a corresponding θ_j. Subscripts are shortened (xi instead of x_i) where it looks ok. Cdot (∙) may mean both normal "single-number" product and inner product, while ⟨x,y⟩ always means inner product. 
 
 # L2 loss
 
@@ -25,15 +33,10 @@ We can minimize this loss by differentiating by θ (partial derivative for each 
 = 2(h-y)∙x_j (by formula-definition of h).
 Minimum: dJ/dθ = 0, ⇒ Xᵀ(Xθ-y) = 0 (if we write the derivative above in matrix notation). Here X is a matrix in which each _row_ is an input vector, and y is a column-vector of target outputs. If XᵀX is nonsignular, we can open the brackets, send y to the right, muliply from the left on inverse, get: θ = (XᵀX)⁻¹Xᵀy.
 
-> To sum up **notation choices** (roughly matching ESL): one data point is a row-vector of coordinates, so all points in a dataset make up a tall slim matrix (a column of row- vectors). The values of y are also a column. Next, as one data-point is a row, parameters θ have to be a column, so that dim(y) = N×1 = dim(Xθ). When writing it all, a part that is a bit confusing is that X (matrix) of N×k is multiplied by θ from the right (Xθ), but individual points x may have to be written as xᵀθ to show that they are row-vectors (by default x would have been a column-vector).
-
-> Also, as Unicode makes diacritics a hassle, I try to use θ for parameter estimates, and β for true values. x_j is typically a column (one coordinate) of X, to match a corresponding θ_j. Subscripts are shortened (xi instead of x_i) where it looks ok. Cdot (∙) may mean both normal "single-number" product and inner product; ⟨x,y⟩ always means inner product. 
-
 Interpretation: if y ~ h = Xθ, then h is in the column-space of X, which forms a subspace of R^N (N data points, p+1 dimensions, assuming x0≡1). To find θ, we project y to col-space using a projection matrix, which obviously minimizes residual (unexplained) variance, by making it orthogonal to col-space.
 
 refs:
-
-https://www.expunctis.com/2019/01/27/Loss-functions.html
+* https://www.expunctis.com/2019/01/27/Loss-functions.html
 
 # Philosophy of prediction
 Returning to bias-variance tradeoff, we consider x and y as random variables, with a joint distribution P(x,y). Now try to build a predictor f(x) that approximates y. The squared error loss: L = (y-f)² = ∬ (y-f)² P(x,y) dx dy. We can split P(x,y) into P(x)∙P(y|x), and integrate by y first (inside), then by x outside. Then to minimize total L, we can bind f(x) to matching y point-wise: f(x) = E(y|X=x), as it would minimize inner integral. Which would essentially give us the **nearest neighbor** method (see the very beginning of [[03_Classification]]). An alternative to point-wise matching would be a global smooth model, like linear regression. It makes regression and 1NN two opposite extremes of what can be done with the data. Other stuff (like **additive models** where f = ∑ f_j(x)) are kinda in-between.
@@ -58,39 +61,6 @@ Or we can choose some smooth f(x), and then optimize it using kernels in RSS cal
 **Max Likelihood** (aka MLE): In some way, can be considered an alternative to L2 (MSE) loss. For a data sample y_i, the log-prob of observing it is equal to: L(θ) = ∑ log P(y_i | θ), summed by i (all points). We can try to find θ that maximizes ∏P, and thus ∑logP. But it is only different from L2 if errors are assumed to be non-normal; for normally distributed errors P(y|x,θ)=𝒩(h,σ²) where h = Xβ if you go through MLE calculations, you'll arrive at same equlations as for L2 loss.
 
 > ESL has a formula 2.35 for it, but without derivation. I think they may have found a derivative by θ, set it to zero, then integrate the right side by x, but I'm not sure.
-
-# The linear algebra behind
-
-Intepretations for h = Xθ:
-* For a univariate x, we have a classic projection of a vector y (a column of observations) onto x (a column of input values): y ~ h = xθ = x ∙ xᵀy / xᵀx (by definition of projection). 
-* If each x_i is a vector, with several coordinates, but these coordinates come from an orthogonal experiment design, we can just project to each dimension separately, and the result will be the sum of these projections. That's because once you dot-product y=∑θ_i x_i with x_j, all terms but one would die. Which means that essentially we can pretend that multiple linear regression is just a bunch of univariate regressions. It also matches the general formula, as in this case the matrix XᵀX is diagonal. 
-* If however columns of X are correlated (not orthogonal), we have to do repetitive elimination ( aka **Gram-Schmidt**) that leads to a full form projection matrix. See below.
-
-Or we can perform a **gradient descent**: θ ← θ + α(h-y)x, with some learning rate α. As our L2 loss is a convex quadratic function, it has only one minimum, and so it always converges. 
-
-# Gram-Smidt
-
-> #todo: this description doesn't make sense currently. It's supposed to summarize ESL p54, but I cannot understand it upon re-reading it. Rewrite!
-
-GS is a computationally solid approach to calculating θ, that works better than inverse matrices. The idea: break y into x and everything else, as if the basis was orthonormal, then update si iteratively.
-
-Algorithm (without normalization):
-1. Set xi (the current best guess for x) to x0
-2. Replace xi with its projection to the complement of all previously considered coordinates: qi = xi - ∑proj(xi→qj) = xi - ∑qj∙⟨xi,qj⟩/⟨qj,qj⟩ where j=0 to i-1. Remember all scalar products from this formula as cji = ⟨xi,qj⟩.
-3. Find the best projection of y onto qi: γi = ⟨y,qi⟩
-4. Shift current x from xi to x_i+1. Go to step 2.
-
-This produces a split of X into X = QR where Q with dimensions (N × p+1) is column-orthogonal, and R with dim of (p+1 × p+1) that is upper triangular, with elements cji=⟨xi,qj⟩/⟨qj,qj⟩ (in case or not-normalized basis, 1s on the diagonal). And we get a set of estimates {γ_i} that represent y in the basis Q.
-
-Now as X = QR, our Xθ = y becomes QRθ = y, but we also just found y = Qγ, so Rθ = γ. It gives θ = R⁻¹γ. 
-
-> What I still not quite understand here is why R remains, meaning that we still have to calculate an inverse for it. Could not we somehow manage to tuck it into the calculation as well, to get θ directly? And if not, how do we calculate the inverse in practice? (How to make it computationally effective)? Park for now.
-
-Refs: ESL p54, [some lecture](http://homepages.ulb.ac.be/~majansen/teaching/STAT-F-408/slides01multipleregression_4.pdf)
-
-In a general case, coordinates of X may be dependent, or be very close to it. In this case, XᵀX from the general formula is singular, and doesn't have an inverse, meaning that θ is not uniquely defined. If we use orthogonalization, and two columns of X are highly correlated (say, x1~x2), then x1 will get a normal score, but on the next step we'll have to face a vector that is pure noise: q = x2-proj(x1→x2) ~ x2-x2 = 0. Then both qᵀy and qᵀq will be very small, and θ_2 = qᵀy/qᵀq will be unstable. Estimate for variance: var(θ_2) = σ²/qᵀq. Practical consequences for variable selection (dangers of collinearity): **conjunctive dim reduction**, **ridge regression** (why not just zero this θ if it's so bad?) etc.
-
-If Y is multivariate as well, but all errors in Y are independent, we just have several independent linear regressions. If errors in Y are correlated, the very definition of RSS is changed (to encorporate the covariance matrix), but we don't go deep into it here. Refs: ESL p56
 
 # Bias-Variance Tradeoff
 

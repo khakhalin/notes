@@ -29,13 +29,23 @@ Working on:
 
 # Algos and top priorities
 
+* finish numpy cheat sheet
+* finish "the real reason square"
+* do SQL exercises
+* try mySQL Linkedin as a way to refresh
+* refresh database scalability
+* simple data pipeline: https://towardsdatascience.com/10-minutes-to-building-a-machine-learning-pipeline-with-apache-airflow-53cd09268977?gi=fb094bc58b8f
+* Case studies for ML from [[Huyen2019book]]: https://github.com/chiphuyen/machine-learning-systems-design/blob/master/content/case-studies.md
 * logistic regression!!
     * https://www.expunctis.com/2019/01/27/Loss-functions.html
     * https://rpubs.com/wgervais/667244
+* Answer conceptual questions for [[linear_regression]]
 * log regression from scratch
 * given a sequence and a vocab, find shortest subsec that contains all vocab elements
 * swish activation, aka [[silu]] (apparently works real fast)
 * random forest - reread
+* tableau - at least the very basic idea
+* perlin noise: https://en.wikipedia.org/wiki/Perlin_noise
 * two sorted linked lists, combined into 1 sorted linked list
 * revisit ways to calculate ranks from pairwise comparisons, code
 * finish heapsort, optimize, add to other sorts, make compete
@@ -56,16 +66,12 @@ Working on:
 * super-toy model for graphs: if we can directly multiply by a Laplacian (because the graph is so small). Realize! Drop to Kaggle
 * https://en.wikipedia.org/wiki/Decision_tree_pruning
 * Timsort - reimplement
-* try mySQL Linkedin as a way to refresh
 * http://www.deeplearningbook.org/contents/regularization.html
 * Generative vs discriminative models: https://stackoverflow.com/questions/879432/what-is-the-difference-between-a-generative-and-a-discriminative-algorithm
-* log regression - perfect the interview-like response
 * ripser - a package, what is it?
 * [[umap]]
 * [[tsne]] and how it's different from UMAP
 * json: https://www.w3schools.com/js/js_json_datatypes.asp
-* simple data pipeline: https://towardsdatascience.com/10-minutes-to-building-a-machine-learning-pipeline-with-apache-airflow-53cd09268977?gi=fb094bc58b8f
-* Case studies for ML from [[Huyen2019book]]: https://github.com/chiphuyen/machine-learning-systems-design/blob/master/content/case-studies.md
 * On batch normalization and contrastive learning (apparently with some vague neuro hints): https://untitled-ai.github.io/understanding-self-supervised-contrastive-learning.html
 * Is it true that layers leading to batchnorm should have bias=false? Why? (Karpathy [said so](https://twitter.com/karpathy/status/1299921324333170689) on twitter)
 * https://en.wikipedia.org/wiki/Wasserstein_metric
