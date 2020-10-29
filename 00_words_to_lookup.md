@@ -29,16 +29,17 @@ Working on:
 
 # Algos and top priorities
 
-* finish numpy cheat sheet
-* finish "the real reason square"
-* do SQL exercises
-* try mySQL Linkedin as a way to refresh
-* refresh database scalability
-* simple data pipeline: https://towardsdatascience.com/10-minutes-to-building-a-machine-learning-pipeline-with-apache-airflow-53cd09268977?gi=fb094bc58b8f
-* Case studies for ML from [[Huyen2019book]]: https://github.com/chiphuyen/machine-learning-systems-design/blob/master/content/case-studies.md
-* logistic regression!!
+* in [[pandas]], finish joins, then describe summary-tabling
+* finish "the real reason we have L2"
+* reread SQL
+* refresh logistic regression, documenting these pieces:
     * https://www.expunctis.com/2019/01/27/Loss-functions.html
     * https://rpubs.com/wgervais/667244
+* do SQL exercises
+* try mySQL Linkedin as a way to refresh
+* refresh database scalability (???????)
+* simple data pipeline: https://towardsdatascience.com/10-minutes-to-building-a-machine-learning-pipeline-with-apache-airflow-53cd09268977?gi=fb094bc58b8f
+* Case studies for ML from [[Huyen2019book]]: https://github.com/chiphuyen/machine-learning-systems-design/blob/master/content/case-studies.md
 * Answer conceptual questions for [[linear_regression]]
 * log regression from scratch
 * given a sequence and a vocab, find shortest subsec that contains all vocab elements

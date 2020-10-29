@@ -18,3 +18,5 @@ https://www.biorxiv.org/content/10.1101/2020.05.12.077776v1?ct=
 * [https://towardsdatascience.com/how-exactly-umap-works-13e3040e1668](<https://towardsdatascience.com/how-exactly-umap-works-13e3040e1668>)
 * [https://towardsdatascience.com/how-to-program-umap-from-scratch-e6eff67f55fe](<https://towardsdatascience.com/how-to-program-umap-from-scratch-e6eff67f55fe>)
 * Category theory behind UMAP: https://johncarlosbaez.wordpress.com/2020/02/10/the-category-theory-behind-umap/
+
+Pretty simulation / interactive explanation: https://tiga1231.github.io/umap-tour/
