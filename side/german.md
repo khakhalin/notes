@@ -2,11 +2,8 @@
 
 #side #language
 
-Dictionary:
-https://www.linguee.com/
-
-Etymological dictionary:
-https://www.dwds.de/wb/billig
+* Best En-Ge Dict: https://www.linguee.com/
+* Etymological dictionary: https://www.dwds.de/wb/billig
 
 A review of German grammar:
 http://www.dartmouth.edu/~deutsch/Grammatik/Grammatik.html

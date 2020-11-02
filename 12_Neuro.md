@@ -6,7 +6,7 @@ Topics to look up:
 * Oja rule: a popular extension of the Hebb's rule? https://en.wikipedia.org/wiki/Oja%27s_rule
 
 # Topical Bibliographies
-* [[[bib_behavior]] - Animal behavior
+* [[bib_behavior]] - Animal behavior
     * [[bib_neurostochastic]] - Stochasticity and randomness in neuroscience
     * [[bib_tracking]] - On ML of behavioral data
     * [[bib_xen]] - Xenopus-specific: collision avoidance, tecta, hindbrains, OMR etc.

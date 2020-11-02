@@ -69,3 +69,4 @@ Main point: break the stereotype of a "non-doer" that many people have about aca
 # General references
 
 * https://builtin.com/ - alternative (local) job boards. For example: https://www.builtinboston.com/
+* https://phaseai.com/jobs/

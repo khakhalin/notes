@@ -70,4 +70,4 @@ The pluses and minuses of rebase (compared to Merge):
 * pull requests?
 
 ## References
-* Funny short cheatsheet "Dangit": http://dangitgit.com/
+* Funny short cheatsheet "Dangit" (without swears) or this one with: https://ohshitgit.com/

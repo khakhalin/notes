@@ -90,6 +90,7 @@ Job-search specific materials:
 # Online courses
 
 * [Google Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course/) - a really good introduction for complete noobs 
+* [Some other intro to data science](https://www.youtube.com/playlist?list=PLMrJAkhIeNNQV7wi9r7Kut8liLFMWQOXn) - with Steve Brunton
 * [Theory of computation](https://www.youtube.com/playlist?list=PL601FC994BDD963E4) - Youtube
 * [Dynamical systems](https://www.youtube.com/playlist?list=PL8erL0pXF3JZqdlYIfTTyibOqSqwzRdVV) - Youtube course by Robert Ghrist 
 * [Entropy, Information theory, and self-organization](https://www.youtube.com/playlist?list=PLOfPLLxr5gsVLSlmzcMnsFANb-uWkArby), by Joseph Lizier

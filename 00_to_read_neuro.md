@@ -139,6 +139,9 @@ Bellec, G., Scherr, F., Subramoney, A., Hajek, E., Salaj, D., Legenstein, R., & 
 https://www.biorxiv.org/content/10.1101/738385v3
 Something like backpropagation in spiking networks.
 
+Lawrence, C., Sztyler, T., & Niepert, M. (2020). Explaining Neural Matrix Factorization with Gradient Rollback. arXiv preprint arXiv:2010.05516.
+https://arxiv.org/abs/2010.05516a
+
 Payeur, A., Guerguiev, J., Zenke, F., Richards, B., & Naud, R. (2020). Burst-dependent synaptic plasticity can coordinate learning in hierarchical circuits. bioRxiv.
 https://www.biorxiv.org/content/10.1101/2020.03.30.015511v1
 

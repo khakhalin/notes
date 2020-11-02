@@ -5,12 +5,14 @@
 Parent: [[python]]
 See also: [[numpy]]
 
-**Basics and IO**
+## Basics and IO
 * Creation: `DataFrame` (curious capitalization)
 * `[[something]]` simply means "a list of lists". It's a type thing, not a separate synax.
 * To look into it: `df.head()`
 * Read: `pd.read_csv('name.txt', sep='\t')`
 * Write: `df.to_csv('name.csv', index=False)`
+
+## Addressing
 
 **Columns**
 * To get column names, `df.columns`.
@@ -19,7 +21,7 @@ See also: [[numpy]]
 * Delete some columns: `df = df.drop(['a','b'], axis=1)`
 
 **Indexing**
-* Select columns by label: `df['x']`. Alternative spelling: `df.x`. Returns a series. To cast into a numpy object, add `.values` at the end (right like that, without parentheses).
+* Select columns by label: `df['x']`. Returns a series. To cast into a numpy object, add `.values` at the end (right like that, without parentheses). An alternative spelling `df.x` works in most cases, except if the name of the column is special (⚠️Gotcha: for example, `first` and `last` are reserved words, so if you have a column named "first", then `d['first']` would work well, but `d.first` won't)
 * Select rows by label: `df.loc[1]`. Works for both df (returns a row-series), and for column-series (returns a single value).
 * To cast a single value from a row-series into just a value, use `.values[0]` at the end.
 * Out-of-range integers are forgiven (ignored) on reading, but cause an error if you try to write
@@ -36,6 +38,24 @@ A problem while writing to a frame, selecting by both column and row.
 * Read, but not write: `df.x[1]`, which is equivalent to `df['x'][1]`.
 * Read but not write: Both `df.x.iloc[1]` and `df.iloc[1].x`. Documentation states that whether any given slice would work or not is "officially unpredictable", so chaining shoud never be used.
 
+## Data transformations
+
+**Strings**
+* For basic string operations, like cut first chars: `df['x'].str[1:]`
+* Other operations, all follow a paradigm of `df['x'].str.lower()`. They only work on a series, not on a dataframe. It also means that `df.x` won't work in this case, as it doesn't return a series. 
+* To create a new column by combining other columns, use a normal `+` notation for strings, like `d['a'] = d['b'] + d['c']`. f-strings don't seem to work here though.
+* `split` splits every string into an array of substrings, same as for normal Python.
+* There's a support of regular expressions (see [[regex]]) in `str`, such as `extract` (extracting part of a string that matches the pattern), `findall` (only leaving entries that match the pattern).
+
+**Numbers**
+* Cast to type: `.astype(int)`
+
+Refs:
+* https://www.tutorialspoint.com/python_pandas/python_pandas_working_with_text_data.htm
+* https://pandas.pydata.org/pandas-docs/stable/user_guide/text.html
+
+## Database-like-operations
+
 **Merging and Joining**
 * Concatenation: `df.concat(objs)` where objs is a list of dataframes. Parameters:
     * `axis`: default 0 (horizontal stacking), but may be something else
@@ -45,13 +65,5 @@ A problem while writing to a frame, selecting by both column and row.
     * If indices are meaningful, use this notation, and it will check that they don't duplicate. If indices are essentially just row numbers, add `ignore_index=True` to make it more relaxed. And maybe also `sort=False`, to keep things simple and fast.
 * Full-featured in-memory join: `pd.merge`. See the description here: https://pandas.pydata.org/pandas-docs/stable/user_guide/merging.html
 
-**Strings**
-* For basic string operations, like cut first chars: `df['x'].str[1:]`
-* Other operations, all follow a paradigm of `df['x'].str.lower()`:
-https://www.tutorialspoint.com/python_pandas/python_pandas_working_with_text_data.htm
-
-**Numbers**
-* Cast to type: `.astype(int)`
-
-**Summarize**
-* First group, then apply aggregation. `dfs = df.groupby('g').agg({'a': [min, np.mean]})` Aggregation is coded as a dictionary, and more than one function can be applied to every column. Functions are passed as arrays of functions. Column names in summary dataframe become a **multiindex** (when column index is a tuple).
+**Summarizing**
+First group, then apply aggregation. `dfs = df.groupby('g').agg({'a': [min, np.mean]})` Aggregation is coded as a dictionary, and more than one function can be applied to every column. Functions are passed as arrays of functions (!!!). If a column in the original dataframe is summarized in more than one way (say, if you calculate Column names in summary dataframe become a **multiindex** (when column index is a tuple).

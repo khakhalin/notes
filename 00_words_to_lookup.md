@@ -29,7 +29,7 @@ Working on:
 
 # Algos and top priorities
 
-* in [[pandas]], finish joins, then describe summary-tabling
+* in [[pandas]], finish joins
 * finish "the real reason we have L2"
 * reread SQL
 * refresh logistic regression, documenting these pieces:
@@ -37,16 +37,21 @@ Working on:
     * https://rpubs.com/wgervais/667244
 * do SQL exercises
 * try mySQL Linkedin as a way to refresh
+* Rethinking attention with performers: https://www.youtube.com/watch?v=xJrKIPwVwGM
 * refresh database scalability (???????)
 * simple data pipeline: https://towardsdatascience.com/10-minutes-to-building-a-machine-learning-pipeline-with-apache-airflow-53cd09268977?gi=fb094bc58b8f
 * Case studies for ML from [[Huyen2019book]]: https://github.com/chiphuyen/machine-learning-systems-design/blob/master/content/case-studies.md
 * Answer conceptual questions for [[linear_regression]]
 * log regression from scratch
+* Features permutation - why it is bad? https://blog.ceshine.net/post/please-stop-permuting-features/
 * given a sequence and a vocab, find shortest subsec that contains all vocab elements
 * swish activation, aka [[silu]] (apparently works real fast)
 * random forest - reread
 * tableau - at least the very basic idea
+* installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
 * perlin noise: https://en.wikipedia.org/wiki/Perlin_noise
+* STDM: https://searchnetworking.techtarget.com/definition/STDM
+* CDISC: https://en.wikipedia.org/wiki/Clinical_Data_Interchange_Standards_Consortium
 * two sorted linked lists, combined into 1 sorted linked list
 * revisit ways to calculate ranks from pairwise comparisons, code
 * finish heapsort, optimize, add to other sorts, make compete
@@ -72,6 +77,7 @@ Working on:
 * ripser - a package, what is it?
 * [[umap]]
 * [[tsne]] and how it's different from UMAP
+* clusterogram: https://www.r-statistics.com/2010/06/clustergram-visualization-and-diagnostics-for-cluster-analysis-r-code/
 * json: https://www.w3schools.com/js/js_json_datatypes.asp
 * On batch normalization and contrastive learning (apparently with some vague neuro hints): https://untitled-ai.github.io/understanding-self-supervised-contrastive-learning.html
 * Is it true that layers leading to batchnorm should have bias=false? Why? (Karpathy [said so](https://twitter.com/karpathy/status/1299921324333170689) on twitter)
@@ -333,6 +339,9 @@ Every solution depends on parameters of scale: amount of data, n users, requests
 
 **Practicality - web**
 * Javascript React - how does it even look like?
+    * Interesting projects:
+        * http://orgo.stolarsky.com/
+        * https://www.christophermanning.org/projects/building-cubic-hamiltonian-graphs-from-lcf-notation
 * Bloom filters and count-min sketch
 * Design patterns (OOP)
 * Cashing in DBs

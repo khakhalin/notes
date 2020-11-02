@@ -1,6 +1,6 @@
 # Tools, coding, project management
 
-#tools
+#tools #lifehack
 
 #todo: Command Line crash course
 https://learnpythonthehardway.org/book/appendixa.html
@@ -10,21 +10,19 @@ Major subtopics:
 * [[database]]
 
 Cheatsheets, tips, notes:
-* [[python]] - everything Python (but not numpy or pandas that have their own )
-* [[pandas]] - Pandas obviously :)
+* [[python]] - with separate notes for [[numpy]], [[pandas]], and some more
 * [[tensorflow]] - subj
 * [[git]] - GIT cheat sheet
 * [[sql]] - SQL cheat sheet
 
-Project management and alike:
-* [[scrum]]
-
-ML projects, general advice:
+Running ML projects:
 * [[ml_lore]] - a collection of rules of thumb about everything Deep Learning (which defaults to pick etc.)
 * [[Breck2017testing]] - a rubric for ML project readiness
+* [[data_cleaning]]
 * [[julia]] - about the language
 
-Other #lifehack(s):
+Project management and lifehacks:
+* [[scrum]]
 * [[zettelkasten]] - how to properly create and support this knowledge base
 * [How to do citations with Zettlr](https://docs.zettlr.com/en/academic/citations/) - #todo, this must be nice! 
 
@@ -46,14 +44,6 @@ Instead:
     * at one level of abstraction (like, it shouldn't combine high-level processing of an object, and low-level processing of its parts; it should be dealt with by a hierarchy of functions, not raw code in one function)
     * have few arguments (ideally, 0-2)
     * avoid flags (`also_do_this=True`); consider writing 2 functions instead
-
-# Numpy
-* For linear algebra, to start flipping vectors and use them as matrices, use `np.atleast_2d` - it turns vectors, and even scalars, into low-ranked 2D arrays. I think, rows for vectors.
-
-# Matplotlib
-* Brief intro from Brad Solomon: https://realpython.com/python-matplotlib-guide/
-* Cheatsheet: [https://github.com/rougier/matplotlib-cheatsheet](<https://github.com/rougier/matplotlib-cheatsheet>)
-* Notes from Brandon Rohrer: https://e2eml.school/blog.html#133
 
 # ML Project Structure
 #management

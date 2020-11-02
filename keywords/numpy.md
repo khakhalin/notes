@@ -3,7 +3,7 @@
 #tools
 
 Parent: [[python]]
-See also: [[pandas]], [[tensorflow]]
+See also: [[pandas]], [[tensorflow]], [[matplotlib]]
 
 # Syntax innovations
 
@@ -38,7 +38,8 @@ The stacking rule above leads to an interesting behavior. `hstack` of two 1D arr
     
 **Expanding dimensions:**
 * Option 1: `np.expand_dims(a, axis=0)` - inserts a new axis at position (0 here)
-* Option 2: `a[np.newaxis, ...]` - same result. To insert in places other than leftest and rightest, can also do explicit `a[:,np.newaxis,:]` instead of ellipsis.
+* Option 2: `a[np.newaxis, ...]` - same result. To insert in places other than leftest or rightest position, can also do explicit `a[:,np.newaxis,:]` instead of ellipsis.
+* Option 3: `np.atleast_2d()` - it turns vectors, and even scalars, into degenerate 2D arrays. ⚠️Gotcha: turns 1D arrays into a row-vectors, not column-vectors, even though row-ness is axis==1.
 * Note that **slicing** with fixed coordinates on at least some of the axes reduces dimensions (so `a[:,1]` from a 2D array is a 1D array), but slicing with `:` doesn't (so `a[:,1:2]` from a 2D array gives a 2D result, even though the values themselves are the same in these two expressions).
 * `np.split(arr, n, axis=0)` - returns a list of arrays achieved after splitting the input array along its axis (axis0 by default) in equal lengths (like automated slicing of sorts). The result has the same ndim as the original array (e.g. even if you slice a 2D array by row, you still get 1×n arrays)
 
@@ -55,7 +56,7 @@ The stacking rule above leads to an interesting behavior. `hstack` of two 1D arr
     * `np.random.rand` wants the dimensions be the 1st and the 2nd positional arguments (cannot take a tuple)
     * `np.random.normal` treats 1st ad 2nd arguments as μ and σ, and if you provide a tuple it's assumes it's a vector of μs. `np.random.randit` is similar in spirit (except first 2 arguments are low and high, setting the range of numbers it returns).
     * Moreover, the name for the dimension argument is different for core np and np.random: the core ones call it `shape=(2,2)`, while randoms call it `size=(2,2)`. (Despite the fact that the resulting array has a property `shape` of course, and not size, as all numpy arrays do)
-* For 3D arrays, `print()` loops through axis0, and then plots axes1-2 "as if they were" 0 and 1 (as 2D matrices). Somehow I assumed that it would loop through axis2, trying to preserve 0 and 1 as "true" 0 and 1. But no.
+* For 3D arrays, `print()` loops through axis0, and then plots axes1-2 "as if they were" 0 and 1 (as 2D matrices). Somehow I assumed that it would loop through axis2, trying to preserve 0 and 1 as "true" 0 and 1. But no. So essentially it "rotates" (rolls axes) while printing, making it useless fr D>2.
 * By default, both `ones` and `zeros` create floats (but it may be changed with `, dtype=int`). An alternative way to create a matrix of all ints: use `np.full((shape),value)`
 
 # Refs

@@ -751,6 +751,11 @@ Original paper by Hinton, 1k citations.
 Artificial Intelligence, Values and Alignment. Iason Gabriel. 2020
 https://deepmind.com/research/publications/Artificial-Intelligence-Values-and-Alignment
 
+Griffiths, T. L. (2020). Understanding Human Intelligence through Human Limitations. Trends in Cognitive Sciences.
+https://arxiv.org/ftp/arxiv/papers/2009/2009.14050.pdf
+
+Shanahan, M., Crosby, M., Beyret, B., & Cheke, L. (2020). Artificial Intelligence and the Common Sense of Animals. Trends in Cognitive Sciences.
+
 Arjovsky, M., Bottou, L., Gulrajani, I., & Lopez-Paz, D. (2019). Invariant risk minimization. arXiv preprint arXiv:1907.02893.
 https://arxiv.org/abs/1907.02893
 On how to make ML models less racist (some mathematical way to eliminate spurious correlations)
