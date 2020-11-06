@@ -754,6 +754,9 @@ https://deepmind.com/research/publications/Artificial-Intelligence-Values-and-Al
 Griffiths, T. L. (2020). Understanding Human Intelligence through Human Limitations. Trends in Cognitive Sciences.
 https://arxiv.org/ftp/arxiv/papers/2009/2009.14050.pdf
 
+Universe, Life, Consciousness. Andrei Linde
+https://static1.squarespace.com/static/54d103efe4b0f90e6ca101cd/t/54f9cb08e4b0a50e0977f4d8/1425656584247/universe-life-consciousness.pdf
+
 Shanahan, M., Crosby, M., Beyret, B., & Cheke, L. (2020). Artificial Intelligence and the Common Sense of Animals. Trends in Cognitive Sciences.
 
 Arjovsky, M., Bottou, L., Gulrajani, I., & Lopez-Paz, D. (2019). Invariant risk minimization. arXiv preprint arXiv:1907.02893.

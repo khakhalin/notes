@@ -30,13 +30,17 @@ Working on:
 # Algos and top priorities
 
 * in [[pandas]], finish joins
+* wait, is softmax based on mean and sigma, or is it just a difference? Is it the same formula ultimately, or are there two different softmaxes?  https://twitter.com/chrisalbon/status/1323293801398509568
+    * Some people seem to argue it should be called softargmax and there's a difference? Summarize here.
 * finish "the real reason we have L2"
-* reread SQL
 * refresh logistic regression, documenting these pieces:
     * https://www.expunctis.com/2019/01/27/Loss-functions.html
     * https://rpubs.com/wgervais/667244
+* reread SQL
 * do SQL exercises
 * try mySQL Linkedin as a way to refresh
+* real quick refresh trees and boosting methods
+* do the MX test
 * Rethinking attention with performers: https://www.youtube.com/watch?v=xJrKIPwVwGM
 * refresh database scalability (???????)
 * simple data pipeline: https://towardsdatascience.com/10-minutes-to-building-a-machine-learning-pipeline-with-apache-airflow-53cd09268977?gi=fb094bc58b8f

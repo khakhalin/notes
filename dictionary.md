@@ -164,6 +164,8 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 
 **REST** (dev): Representational State Transfer. Predefined set of stateless operations (stateless means that all session info is tracked by the client, not the server). HTTP is the archetypical RESTful system.
 
+**RSS** (stats): Residual Sum of Squares. See [[l2]], [[02_Regression]], [[bias-variance]]
+
 # S
 
 **Scala** (dev): functional programming language, improved Java. Compiles to Java bytecode. Looks vaguely like a mix of Java and Pascal, but inspired by Python: more features, shorter code, but without compromising the integrity. No semicolons; different ways to define variables, functions; declare types; can define control structures. Less verbose, runs faster, supports parallelism better.

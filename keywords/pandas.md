@@ -6,6 +6,7 @@ Parent: [[python]]
 See also: [[numpy]]
 
 ## Basics and IO
+
 * Creation: `DataFrame` (curious capitalization)
 * `[[something]]` simply means "a list of lists". It's a type thing, not a separate synax.
 * To look into it: `df.head()`
@@ -54,9 +55,8 @@ Refs:
 * https://www.tutorialspoint.com/python_pandas/python_pandas_working_with_text_data.htm
 * https://pandas.pydata.org/pandas-docs/stable/user_guide/text.html
 
-## Database-like-operations
+## Joining and merging
 
-**Merging and Joining**
 * Concatenation: `df.concat(objs)` where objs is a list of dataframes. Parameters:
     * `axis`: default 0 (horizontal stacking), but may be something else
     * `join`: default value of `outer` (for union of matching indices), but can be changed to `inner` (for intersection). Makes sense for `axis=1` (when columns are merged): with `outer` missing values are padded with NaNs, while with `inner` incomplete rows are eliminated.
@@ -65,5 +65,18 @@ Refs:
     * If indices are meaningful, use this notation, and it will check that they don't duplicate. If indices are essentially just row numbers, add `ignore_index=True` to make it more relaxed. And maybe also `sort=False`, to keep things simple and fast.
 * Full-featured in-memory join: `pd.merge`. See the description here: https://pandas.pydata.org/pandas-docs/stable/user_guide/merging.html
 
-**Summarizing**
-First group, then apply aggregation. `dfs = df.groupby('g').agg({'a': [min, np.mean]})` Aggregation is coded as a dictionary, and more than one function can be applied to every column. Functions are passed as arrays of functions (!!!). If a column in the original dataframe is summarized in more than one way (say, if you calculate Column names in summary dataframe become a **multiindex** (when column index is a tuple).
+## Grouping and Aggregation
+
+First group, then apply aggregation. `dfs = df.groupby('g').agg({'a': [min, np.mean]})`
+
+Aggregation is coded as a dictionary, and more than one function can be applied to every column. Functions are passed as an array of functions (!!!). If a column in the original dataframe is summarized in more than one way (say, if you calculate Column names in summary dataframe become a **multiindex** (when column index is a tuple).
+
+Grouping columns (those that appear in the summary dataframe not because they were summarized, but because they were grouped by) also become a multiindex. It means that they aren't normal columns, and cannot be referenced directly. To turn into a "normal" data frame, do `dfs = dfs.reset_index()`.
+
+## Misc
+
+To print a really long data frame, do this:
+```python
+with pd.option_context('display.max_rows', 1400):
+    print(dfs)
+```
