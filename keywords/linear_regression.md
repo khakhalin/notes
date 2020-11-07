@@ -3,7 +3,7 @@
 Parents: [[02_Regression]], [[linalg]]
 Related: [[l2]], [[gram-schmidt]], [[loess]]
 
-**Linear model**: h(x) = (estimation for y) = $∑θ_j x_j$ = xᵀθ, or in matrix form: h = Xθ ~ y. We assume that xᵀ is a row-vector length p+1, with x_0 = 1 (intercept), followed by n "normal" variables on which we regress. The equation above defines a hyperplane in ℝ^p.
+**Linear model**: y ~ h(x) = $∑θ_j x_j$ = xθ, or in matrix form: h = Xθ ~ y. We assume that θ is a column-vector of coefficient, and each row of X is a vector x length p+1, with x_0 = 1 (intercept), followed by n "normal" coordinates for this point. The equation above defines a hyperplane in ℝ^p.
 
 # L2 formula for LR
 
@@ -18,13 +18,13 @@ Interpretation: if y ~ h = Xθ, then h is in the column-space of X, which forms 
 
 # Same in linear algebra terms
 
-Intepretations for h = Xθ:
+Intepretations for h = Xθ: For a univariate x (and no intercept!), we have a classic projection of a vector y (a column of observations) onto x (a column of input values): y is assumed to be equal to xθ+ε, where ε are some errors ⟂ to x. So: h = xθ = x ∙ xᵀy / xᵀx (by definition of projection). 
 
-For univariate x, we have a classic projection of a vector y (a column of observations) onto x (a column of input values): y is assumed to be equal to xθ+ε, where ε are some errors ⟂ to x. So: h = xθ = x ∙ xᵀy / xᵀx (by definition of projection). 
+In a multivariate case, each x_i is a vector with several coordinates. If these coordinates come from a fully **orthogonal experiment design** (all variables x_j are ⟂ to each other), we can just project to each dimension separately, and the result will be the sum of these projections. That's possible because once you dot-product y with x_j, all terms but one would die: $y \cdot x_j = \sum_i y_i x_{ji} = \sum_i \sum_k θ_k x_{ki} x_{ji}$, as all x_j form a basis. Which means that essentially we can pretend that multiple linear regression is just a bunch of univariate regressions, performed consecutively.
 
-In a multivariate case, each x_i is a vector with several coordinates. If these coordinates come from a fully **orthogonal experiment design** (all variables x_j are ⟂ to each other), we can just project to each dimension separately, and the result will be the sum of these projections. That's possible because once you dot-product y with x_j, all terms but one would die: $y \cdot x_j = \sum_i y_i x_{ji} = \sum_i \sum_k θ_k x_{ki} x_{ji}$, as all x_j form a basis. Which means that essentially we can pretend that multiple linear regression is just a bunch of univariate regressions, performed consecutively. It also matches the general formula above: h = XXᵀy/XᵀX, as in this case the matrix XᵀX is diagonal. 
+If columns of X are correlated (not orthogonal), we have to build a full-form projection matrix:  h = X ∙ Xᵀy/XᵀX = X ∙ (Xᵀy) ∙ (XᵀX)⁻¹ . This closed form is horrible computationally, so a better choice is to do repetitive elimination (aka [[gram-schmidt]]) that also leads to a full form projection matrix. Or we can perform a **gradient descent**: θ ← θ + α(h-y)x, with some learning rate α. As our L2 loss is a convex quadratic function, it has only one minimum, and so it always converges. 
 
-If however columns of X are correlated (not orthogonal), we have to do repetitive elimination (aka [[gram-schmidt]]) that leads to a full form projection matrix. Or we can perform a **gradient descent**: θ ← θ + α(h-y)x, with some learning rate α. As our L2 loss is a convex quadratic function, it has only one minimum, and so it always converges. 
+Note that a "classic" one-variable linear regression, as we know it from math, is actually a 2D linear regression, as we are looking not in the space of y = kx, but in the space of y = kx + b. So we have to either replace a n-long vector x with a n×2 dimensional matrix X = $[1 1 \cdots 1 ; x]'$ , or perform something like "tiny elimination" by finding b explicitly, as mean(y), then unbiasing both x and y (removing means from them), and doing 1D projection on these unbiased vectors.
 
 # Questions to test understanding
 
@@ -42,4 +42,5 @@ Bayesian approach? If we have a cloud and an erroneously observed point of both 
 
 # Refs
 
-...
+Linear algebra and statistics behind linear regression (good clear chapter):
+https://www.stat.cmu.edu/~cshalizi/mreg/15/lectures/13/lecture-13.pdf
