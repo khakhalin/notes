@@ -102,11 +102,18 @@ Job-search specific materials:
 * [End-to-end machine learning](https://end-to-end-machine-learning.teachable.com) - sorta like a course from Brandon Rohrer
 * https://github.com/hsayama/PyCX - a set of notebooks on complexity (looks like weekly labs?)
 
+Useful pure math for naive people
+* https://mathigon.org/
+
 # Link aggregators
 
 * [A very nice annotated list of book recommendations](https://towardsdatascience.com/beyond-the-mooc-a-bookworms-guide-to-data-science-e87271cb0572) for data science
 * [Machine learning for humans, 80/20 reading list](https://medium.com/machine-learning-for-humans/ai-reading-list-c4753afd97a) - claims to be curated. Sections on ML, Deep, RL, and then various general readings about the meaning of it all.
 * [Scientific visualization with matplotlib](https://github.com/rougier/scientific-visualization-book) - an open-source book project in the works that hadn't been released yet, but the previews look lovely
+
+# Youtube channels
+
+* https://www.youtube.com/c/exploreexplain - on data visualization
 
 # Computational Neuro
 
@@ -114,7 +121,7 @@ Job-search specific materials:
 * https://baicsworkshop.github.io/resources.html - AI-cognitive science bridge
 * https://lcnwww.epfl.ch/gerstner/NeuronalDynamics-MOOCall.html - Comp Neuro course by Wulfram Gerstner
 
-# Demos
+# Interactive demos
 
 * ConvNetJS in-browser DL by Karpathy: https://cs.stanford.edu/people/karpathy/convnetjs/
 

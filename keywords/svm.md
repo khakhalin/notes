@@ -1,11 +1,11 @@
-# SVM - Support Vector Machines
+# SVM - Support Vector Machine
 
 #classification
 
 Parent: [[03_Classification]]
 Related: ...
 
-General idea: widest street approach: find a line, so that if you have a band around the line, it separates the positive from the negative examples as best as possible. If the line is described with a normal vector ω ⊥ line, whether a point x is far from the line can be described as ⟨x , ω⟩. If b is a good threshold value for this product (if we get b when x lies right smack on the separating line), we have xᵀω + b ≥ 0. To find the best line, let's try to find ω and b, so that for positive samples we would get xᵀω+b>1 (not just >0), and for negative samples, xᵀω+b<-1. 
+**General idea:** widest street approach: find a line, so that if you have a band around the line, it separates the positive from the negative examples as best as possible. If the line is described with a normal vector ω ⊥ line, whether a point x is far from the line can be described as ⟨x , ω⟩. If b is a good threshold value for this product (if we get b when x lies right smack on the separating line), we have xᵀω + b ≥ 0. To find the best line, let's try to find ω and b, so that for positive samples we would get xᵀω+b>1 (not just >0), and for negative samples, xᵀω+b<-1. 
 
 We have already seen linear separators f(x) = xᵀθ = 0 before. The hyperplane (line in 2D) it defines is ⊥ to θ, and f(x) is proportinal to distance from x to the plane.
 

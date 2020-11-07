@@ -29,24 +29,24 @@ Working on:
 
 # Algos and top priorities
 
-* in [[pandas]], finish joins
-* wait, is softmax based on mean and sigma, or is it just a difference? Is it the same formula ultimately, or are there two different softmaxes?  https://twitter.com/chrisalbon/status/1323293801398509568
-    * Some people seem to argue it should be called softargmax and there's a difference? Summarize here.
+* real quick refresh trees and boosting methods
 * finish "the real reason we have L2"
 * refresh logistic regression, documenting these pieces:
     * https://www.expunctis.com/2019/01/27/Loss-functions.html
     * https://rpubs.com/wgervais/667244
+* Answer conceptual questions for [[linear_regression]]
+* log regression from scratch
+* in [[pandas]], finish joins
 * reread SQL
 * do SQL exercises
 * try mySQL Linkedin as a way to refresh
-* real quick refresh trees and boosting methods
 * do the MX test
+* wait, is softmax based on mean and sigma, or is it just a difference? Is it the same formula ultimately, or are there two different softmaxes?  https://twitter.com/chrisalbon/status/1323293801398509568
+    * Some people seem to argue it should be called softargmax and there's a difference? Summarize here.
 * Rethinking attention with performers: https://www.youtube.com/watch?v=xJrKIPwVwGM
 * refresh database scalability (???????)
 * simple data pipeline: https://towardsdatascience.com/10-minutes-to-building-a-machine-learning-pipeline-with-apache-airflow-53cd09268977?gi=fb094bc58b8f
 * Case studies for ML from [[Huyen2019book]]: https://github.com/chiphuyen/machine-learning-systems-design/blob/master/content/case-studies.md
-* Answer conceptual questions for [[linear_regression]]
-* log regression from scratch
 * Features permutation - why it is bad? https://blog.ceshine.net/post/please-stop-permuting-features/
 * given a sequence and a vocab, find shortest subsec that contains all vocab elements
 * swish activation, aka [[silu]] (apparently works real fast)
@@ -91,11 +91,10 @@ Working on:
 * Split bagging / boosting and friends into separate entries
 * Decision tree classification - for some reason doesn't have a separate entry here yet! https://en.wikipedia.org/wiki/Decision_tree_learning
 * Refresh and finish boosting and trees - based on [this informal poll](https://www.reddit.com/r/datascience/comments/icsul3/any_employed_data_scientists_willing_to_share_an/), boosting, trees, and SVMs are really widely used in practice (except for a niche subtype of people who only do deep learning), so (I guess) most likely they will be asked
-    * Adabost - refresh
-    * Gradient Boost - finish
+    * [[gbm]] Gradient Boost - finish!!!
         * XGBoost, and how to parallelize it (one of the most popular interview topics, apparently!)
-    * Random Forest - also reimplement
-    * SVM - also reimplement? Code implementation is sometimes on interviews.
+    * [[random_forest]] -  reimplement
+    * [[svm]] - also reimplement? Code implementation is sometimes on interviews.
     * CART / Regression trees
 * On hopfield networks: https://ml-jku.github.io/hopfield-layers/
 * Self-training with noisy student (short): https://www.youtube.com/watch?v=q7PjrmGNx5A

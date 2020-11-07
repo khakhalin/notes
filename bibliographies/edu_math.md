@@ -4,6 +4,15 @@
 
 Sketches for how to teach kids non-school math?
 
+# Resources
+
+Amazing interactive math textbook!:
+https://mathigon.org/step/polyhedra/pentagons
+which is a part of https://mathigon.org/course/polyhedra/polygons
+which is a part of https://mathigon.org/
+
+# Ideas
+
 **General plan**:
 Symbolic logic → Statements with ∀, ∃ → Elementary set theory
 Graphs
