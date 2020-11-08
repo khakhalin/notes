@@ -18,7 +18,7 @@ $\displaystyle F = 2\frac{precision \cdot recall}{precision+recall} = (\text{mea
 
 Note that while recall is strictly a measure of the model (class imbalance doesn't affect it), precision is not (it goes down as the share of TP decreases, as most positives become FP). Which means that F1 score also is not, strictly speaking, a measure of the quality of the model, but rather, a score for the performance of a given model on a given dataset.
 
-* An even better approach: [[ROC]] (and related measure of AUC)
+* An better approach: [[ROC]] (and the related measure of AUC)
 * Another option: [[youdens-j]] (also includes )
 
 # Confusion matrix

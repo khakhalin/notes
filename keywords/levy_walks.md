@@ -10,7 +10,7 @@ Fruitflies, sharks, and albratrosses all use **Levy walk** as random exploration
 
 When the target is large and slow (like, a collection of food), Levy walks are somehow probabilistically the optimal strategy of finding it (Bartumeus 2003)
 
-### Refs
+# Refs
 
 Levy walk simulation:
 https://www.complexity-explorables.org/explorables/anomalous-itinerary/

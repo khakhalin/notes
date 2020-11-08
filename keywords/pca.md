@@ -18,9 +18,10 @@ Further, as Qᵀ rotates ZΛ towards X (as in X=ZΛQᵀ), the rows of Qᵀ are t
 Why projecting to these ellipsoid-aligned axes **maximizes the variance along this projection**? (Which is in fact the most commonly used definition of PCA that I just haven't mentioned yet). Let's look for the first axis, maximizing the variance of projection on this axis. Consider all unitary vectors w (unitary ⇒ wᵀw =1), and find one that captures highest variance. A vector of projections of X (dimensions N×p) on w (p×1) is Xw (N×1). The variance of this projection is (Xw)ᵀ(Xw) / N = wᵀXᵀXw ∙ 1/N = wᵀCw. We want to maximize wᵀCw with a constraint of wᵀw=1, which is achieved via Lagrange multiplier λ and unconstrained optimization for wᵀCw - λ(wᵀw-1). Differentiate by w (by each coordinate separately, but then written in a vector form), set it to be equal to zero-vector (one vector equation = a system of scalar equations): 2Cw - 2λw = 0. From that we see that Cw = λw, and so w that maximizes variance of projectsions of X on it, happens to be an einvector of C. From this example with one vector, using a greedy procedure, we can build the entire basis, kinda by induction. Refs: [cmu](https://www.stat.cmu.edu/~cshalizi/uADA/12/lectures/ch18.pdf)
 
 **How to calculate PCA in practice?** Iteratively:
+
 1. Use **power iteration** to find eigenvector e_i matching the largest eigenvalue λ_i ( see [[pagerank]] for details )
-2. * Project everything to the space ⟂ to e_i
-3. * Repeat
+2. Project everything to the space ⟂ to e_i
+3. Repeat
 
 # Rotations
 

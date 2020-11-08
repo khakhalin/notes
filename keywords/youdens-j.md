@@ -3,7 +3,7 @@
 #stats #classification
 
 Parent: [[03_Classification]]
-See also: F-score, ROC, confusion matrix
+See also: [[confusion]], [[ROC]]
 
 J = sensitivity + specificity − 1  ; J ∈ 0 .. 1
 

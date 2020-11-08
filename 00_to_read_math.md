@@ -281,6 +281,9 @@ https://arxiv.org/abs/1810.00393
 Poggio, T., Liao, Q., & Banburski, A. (2020). Complexity control by gradient descent in deep networks. Nature communications, 11(1), 1-5.
 https://www.nature.com/articles/s41467-020-14663-9
 
+Hestness, J., Narang, S., Ardalani, N., Diamos, G., Jun, H., Kianinejad, H., ... & Zhou, Y. (2017). Deep learning scaling is predictable, empirically. arXiv preprint arXiv:1712.00409.
+https://arxiv.org/pdf/1712.00409.pdf
+
 # Interpretability
 
 https://distill.pub/2020/circuits/early-vision/

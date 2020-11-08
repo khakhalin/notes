@@ -30,10 +30,10 @@ Working on:
 # Algos and top priorities
 
 * refresh logistic regression, documenting this: https://rpubs.com/wgervais/667244
+    * And also this: https://ai.stackexchange.com/questions/3852/is-logistic-regression-more-free-from-the-conditional-independence-assumption-th
 * Answer conceptual questions for [[linear_regression]]
 * log regression from scratch
 * in [[pandas]], finish joins
-* reread [[SQL]]
 * do SQL exercises
 * try mySQL Linkedin as a way to refresh
 * do the MX test
@@ -45,6 +45,8 @@ Working on:
 * Case studies for ML from [[Huyen2019book]]: https://github.com/chiphuyen/machine-learning-systems-design/blob/master/content/case-studies.md
 * Features permutation - why it is bad? https://blog.ceshine.net/post/please-stop-permuting-features/
 * given a sequence and a vocab, find shortest subsec that contains all vocab elements
+* rmsprop: https://towardsdatascience.com/understanding-rmsprop-faster-neural-network-learning-62e116fcf29a
+* Refresh and improve [[lstm ]] and [[gru]]: http://dprogrammer.org/rnn-lstm-gru
 * swish activation, aka [[silu]] (apparently works real fast)
 * random forest - reread
 * tableau - at least the very basic idea
