@@ -9,9 +9,11 @@ Partly random decision making; extension of **Markov Chains**. Imagine a Markov 
 
 Essentially, it is equivalent to adding a bunch of additional states $s_i a_k$ for every base state $s_i$, according to the number of actions that can be taken from state $s_i$. A transition from $s_i$ to $s_i a_k$ is not probabilistic, but algorithmic, while transitions from $s_i a_k$ to all available $s_j$ are probabilistic. The transition probabilities are parameters of the system and are not updated, but the decision-making process (aka **policy**) is updated. 
 
-There are several ways to update policies. In the most common one, for each state we keep a prediction of how "good" it is, called its **value**.  We start with equal values, and then at each step propagate these values with injecting rewards, so that $V_i = \sum_j P_{iπj}(γV_j + R_{iπj})$ where $P_{iπj}$ is the probability of transition from i to j given policy π (that is, assuming that we take the current best action a while at s_i), and $R_{iπj}$ is a similar reward assuming policy π.
+There are several ways to update policies. In the most common one, for each state we keep a prediction of how "good" it is, called its **value**.  We start with equal values, and then at each step propagate these values backwards, while injecting rewards, so that $V_i = \sum_j P_{iπj}(γV_j + R_{iπj})$ where $P_{iπj}$ is the probability of transition from i to j given policy π (that is, assuming that we take the current best action a while at s_i), and $R_{iπj}$ is a reward assuming policy π.
 
-> Essentially it looks like a network centrality calculation, or a stable flow calculation, or an eigenvalue calculation.
+> Tbh it looks a bit like a network centrality calculation, or a stable flow calculation, or an eigenvalue calculation.
+
+> Did I get it right that the reward propagates _backwards_? And so it can be injected at the end, and gradually shape the entire network?
 
 But also, at each step, the policy π is updated, by picking the action that leads to the best current $V_j$ of all available: for each i we do $π_i = \argmax_a(\sum_j P_{iaj}(γV_j + R_{iaj}))$, where P_iaj and R_iaj are transition probabilities and rewards assuming each of the possible actions. And you do both updates again and again, until convergence, which maximizes the γ-discounted sum of V on a most probable path.
 

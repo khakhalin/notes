@@ -4,6 +4,8 @@
 
 https://www.bradyneal.com/bias-variance-tradeoff-textbooks-update
 
+See: [[bias-variance]]
+
 A simple-language explanation to accompany 2 papers from 2019/2020 (to be read :)
 
 Classic U-shaped (or rather √-shaped) error(complexity) plot works for many methods, such KNN and kernel regression with varied kernel size. However not all measures of "modell complexity" lead to it: for DL, an increase in network width drives error down monotonously. 

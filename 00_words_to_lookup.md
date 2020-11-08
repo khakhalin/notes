@@ -29,15 +29,11 @@ Working on:
 
 # Algos and top priorities
 
-* real quick refresh trees and boosting methods
-* finish "the real reason we have L2"
-* refresh logistic regression, documenting these pieces:
-    * https://www.expunctis.com/2019/01/27/Loss-functions.html
-    * https://rpubs.com/wgervais/667244
+* refresh logistic regression, documenting this: https://rpubs.com/wgervais/667244
 * Answer conceptual questions for [[linear_regression]]
 * log regression from scratch
 * in [[pandas]], finish joins
-* reread SQL
+* reread [[SQL]]
 * do SQL exercises
 * try mySQL Linkedin as a way to refresh
 * do the MX test
