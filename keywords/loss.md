@@ -6,24 +6,15 @@ Parents: [[06_DL]], [[02_Regression]]
 Related: [[regularization]]
 
 Subtopics
+* [[l2]]
+* [[logreg]] and log-loss, which is in fact [[cross-entropy]]
+* [[01loss]] - indicator loss
 * [[perceptual_loss]]
 * Hinge loss - used in [[svm]]
  
 # MSE, ara L2, aka Eucledian
 
-Obvious choice for continuous output: **Eucleadian distance** (aka **Mean Squared Error**, or **MSE**). 
-
-See [[02_Regression]]
-
-# Cross-entropy
-
-For classification: **Cross-Entropy Loss**. The ground-truth is one-hot encoded vector; the prediction is a vector of probabilities. Definition: $H(p,q) = -∑ p_i \cdot \log(q_i)$ where p_i are probabilities of different classes in the training set, and q_i are probabilities predicted by the model.
-
-See: [[03_Classification]]
-
-Motivation: essentially, average log-likelihood. Assume that the predictions of the model follow a true correct distribution, with model-probabilities q_i encoding true probabilities P(x_i). Then what it the probability of observing n_i cases of x_i? Assuming that test cases are independent, P = ∏P(each observation) = $∏q_i ^ {n_i}$. If we lg it (to replace products with sums), we get the total log-likelihood: L = ∑ n_i ∙ lg(q_i) . If we average it by dividing by the total number of test cases, and denote p_i = n_i / N (actual frequency in the training set = our presumed actual probability), we get loss = ∑ p_i ∙ lg(q_i) =-H(p,q) . And then you are trying to minimize this value by making the model make predictions q_i such as the observed values (from P) are "minimally strange".
-
-> Is cross-entropy theoretically-best loss function for classification tasks, or can custom losses be better?
+Obvious choice for continuous output: **Eucleadian distance**, aka **Mean Squared Error**, aka  **MSE**. See: [[l2]].
 
 # Huber Loss
 

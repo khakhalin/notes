@@ -14,6 +14,7 @@ Cheatsheets, tips, notes:
 * [[tensorflow]] - subj
 * [[git]] - GIT cheat sheet
 * [[sql]] - SQL cheat sheet
+* [[latex]] - tiny notes in LaTeX
 
 Running ML projects:
 * [[ml_lore]] - a collection of rules of thumb about everything Deep Learning (which defaults to pick etc.)
@@ -22,7 +23,7 @@ Running ML projects:
 * [[julia]] - about the language
 
 Project management and lifehacks:
-* [[scrum]]
+* [[scrum]] - the methodology
 * [[zettelkasten]] - how to properly create and support this knowledge base
 * [How to do citations with Zettlr](https://docs.zettlr.com/en/academic/citations/) - #todo, this must be nice! 
 
