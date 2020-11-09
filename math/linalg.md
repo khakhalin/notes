@@ -2,11 +2,13 @@
 
 #math #linalg #bib
 
-Subtopics:
+Related: [[calc4]]
+
+Subsections:
 * [[la_net]] - Linear algebra for graphs
 * [[la_sig]] - Linalg for signal processing
 
-Articles: [[dual_basis]], [[svd]]
+Subtopics: [[dual_basis]], [[svd]]
 
 # Intro
 
@@ -36,11 +38,11 @@ _Th:_ A composition of affine, is also affine. Also obvious.
 Example: **Second difference matrix**: a multiplication of two different matrices $D_{n-1}D_n$ . The shape of this matrix is obvious from matrix multiplication. Consider chain rule for h=f(g(x)) , where everything is multivariable. Then $dh_i/dx_j =  \sum_k dh/dy_k (g(x)) \, dg_k/dx_j$ , which totally looks like a vector equation. Or rather a matrix, as this is true for every coordinate i . A matrix of all possible derivatives of elements of f, taken along each of the dimensions (coordinates) of g, is multiplied by a matrix of all possible coordinates of g, taken over dimensions of x. Dh() = Df(g()) Dg().
 
 If h() yields a scalar, then a vector of dh/dy is just the gradient ∇h, in which case we get:
-∇h = (∇f^T ∇g)^T = ∇g^T ∇f.
+$∇h = (∇f^T ∇g)^T = ∇g^T ∇f$.
 
 If g() is affine Ax+b, then ∇g = Aᵀ, and so ∇h = Aᵀ ∇f(). (vlms p185)
 
-> You may ask, how come ∇(Ax) = Aᵀ, and not just A? That's because to use derivatives in a vector space, we have to assume a certain **Layout convention** ([wiki](https://en.wikipedia.org/wiki/Matrix_calculus#Layout_conventions)): namely, what happens if y and x are vectors, and you're considering ∂y/∂x. For consistency, a derivative of scalar by a vector (like, gradient), and a derivative of vector by a scalar (like, speed) should have opposite orientations (if one is a row, the other one should be a column). Or you won't be able to work with vector fields (as one way or another, you need to get a matrix once you differentiate vector by a vector). If you want gradient of a scalar be a usual vector (column), it's called _denominator layout_, or _Hessian formulation_. But then derivative of a vector by a scalar has to be transposed compared to the vector, which feels super-wrong (speed and acceleration would have different shape!). If on the other hand you want the derivative of a vector have the same shape as the vector itself, then it's called _numerator layout_, or _Jacobian formulation_. Then gradient has to be a flipped vector (row-vector), making ∇ᵀ a normal vector (column-vector). As a consequence, it gives ∇(Ax) = Aᵀ. And if your create a matrix of derivatives of y over x looks like $d_{ij} = \frac{\partial y_i}{\partial x_j}$, then ∂/∂x(Ax) = Aᵀ. VLMS book obviously uses this layout (ref: wiki)
+> Note: VLMS book explicitly defines gradient as a column-vector (p 36), so when they multiply a gradient by a vector, they have to flip the gradient. My understanding is that it is a non-standard **layout convention** (see [[calc4]]). That's why above ∇(Ax) = Aᵀ, and not just A, as in most books. #todo : fix the 2 paragraphs above into a "normal" convention.
 
 # QR factorization
 

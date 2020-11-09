@@ -34,9 +34,10 @@ Working on:
 * Answer conceptual questions for [[linear_regression]]
 * log regression from scratch
 * in [[pandas]], finish joins
+* This text about Pandas: https://github.com/chiphuyen/just-pandas-things/blob/master/just-pandas-things.ipynb
 * do SQL exercises
 * try mySQL Linkedin as a way to refresh
-* do the MX test
+* variational inference (and how is it different from sampling)
 * wait, is softmax based on mean and sigma, or is it just a difference? Is it the same formula ultimately, or are there two different softmaxes?  https://twitter.com/chrisalbon/status/1323293801398509568
     * Some people seem to argue it should be called softargmax and there's a difference? Summarize here.
 * Rethinking attention with performers: https://www.youtube.com/watch?v=xJrKIPwVwGM

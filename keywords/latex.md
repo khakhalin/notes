@@ -8,6 +8,7 @@ Parent: [[01_Tools]]
 
 Special fonts $\mathcal{R} \mathfrak{R} \mathbb{R}$:`\mathcal{R} \mathfrak{R} \mathbb{R}`
 Tilde $\sim$: `\sim` (while `\tilde` is used to make $\tilde a$).
+Transpose sign: `\top` ($\top$), just send it to superscript ($a^\top$).
 
 Spacing: `\quad`
 
@@ -23,3 +24,8 @@ The hierarchy of sizes (in points). Oddly, it seems that `\big` does not belong 
 \LARGE              17.28   17.28   20.74
 \huge               20.74   20.74   24.88
 \Huge               24.88   24.88   24.88```
+
+# Refs
+
+Overleaf documentation is very good:
+https://it.overleaf.com/learn/latex/Mathematical_expressions
