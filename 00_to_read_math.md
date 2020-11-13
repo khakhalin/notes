@@ -34,8 +34,6 @@ https://journals.sagepub.com/doi/full/10.1177/0306312714535679
 Software 2.0
 https://medium.com/@karpathy/software-2-0-a64152b37c35
 
-https://arxiv.org/abs/2009.06489 Hooker, S. (2020). The Hardware Lottery. arXiv preprint arXiv:2009.06489.
-
 Reflections on Innateness in Machine Learning
 Thomas G. Dietterich. Mar 6, 2018.
 https://medium.com/@tdietterich/reflections-on-innateness-in-machine-learning-4eebefa3e1af

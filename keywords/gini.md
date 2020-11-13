@@ -18,6 +18,7 @@ It seems that for **weighted Gini index** the formula is the same, just pi for e
 Gini coefficient is not a monotonous function of entropy, as ∑p(1-p) is obviously different from -∑p log(p). However, both Gini and Entropy dive to 0 for uniform sequences (one class only), and max when all p are equal… So from this point of view, they are similar.
 
 # References
+
 * Wiki: https://en.wikipedia.org/wiki/Decision_tree_learning#Gini_impurity
 * Example calculation: https://jamesmccaffrey.wordpress.com/2018/09/06/calculating-gini-impurity-example/
 * Comparison with entropy: https://towardsdatascience.com/gini-index-vs-information-entropy-7a7e4fed3fcb

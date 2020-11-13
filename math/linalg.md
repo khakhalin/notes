@@ -42,7 +42,7 @@ $∇h = (∇f^T ∇g)^T = ∇g^T ∇f$.
 
 If g() is affine Ax+b, then ∇g = Aᵀ, and so ∇h = Aᵀ ∇f(). (vlms p185)
 
-> Note: VLMS book explicitly defines gradient as a column-vector (p 36), so when they multiply a gradient by a vector, they have to flip the gradient. My understanding is that it is a non-standard **layout convention** (see [[calc4]]). That's why above ∇(Ax) = Aᵀ, and not just A, as in most books. #todo : fix the 2 paragraphs above into a "normal" convention.
+> Note: VLMS book explicitly defines gradient as a column-vector (p 36), so when they multiply a gradient by a vector, they have to flip the gradient. My understanding is that it is an unfortunate  **layout convention** (see [[calc4]]). That's why above ∇(Ax) = Aᵀ, and not just A, as in other books. #todo : fix the 2 paragraphs above into a "normal" convention.
 
 # QR factorization
 
