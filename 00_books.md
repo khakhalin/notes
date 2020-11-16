@@ -42,7 +42,7 @@ Also:
 * How to think like a computer scientist by Allen B. Downey: ([site](https://greenteapress.com/wp/think-python-2e/)) - best intro to Python ever
 * Problem solving with data structures in Python ([full text online](https://runestone.academy/runestone/books/published/pythonds/index.html))
 * Competitive Programmer's Handbook by Antti Laaksonen: [pdf](https://cses.fi/book/book.pdf) (C++) - great idea, but the descriptions of algorithms are not clear, while implementations seem a bit itiosynchratic. Worth revisiting tho.
-* Programming in Python: Fluent Python, by Luciano Ramalho (no online version)
+* Programming in Python: **Fluent Python**, by Luciano Ramalho (no online version)
 * On Programming Well, by Robert C. Martin (no online version)
 
 **Math**
@@ -69,6 +69,7 @@ Also:
 * Bayesian Statistics: Statistical Rethinking, by Richard McElreath
 * Artificial Intelligence: A Modern Approach, by Russel and Norvig. ([site](http://aima.cs.berkeley.edu/), but no online)
 * [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/index.html) by Michael Nielsen
+* Probability and Stochastic Processes: With a View Toward Applications by Leo Breiman
 
 Coding problems
 * https://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/
@@ -120,6 +121,7 @@ Useful pure math for naive people
 * http://neural-reckoning.org/comp-neuro-resources.html - a collection of links from Dan Goodman
 * https://baicsworkshop.github.io/resources.html - AI-cognitive science bridge
 * https://lcnwww.epfl.ch/gerstner/NeuronalDynamics-MOOCall.html - Comp Neuro course by Wulfram Gerstner
+* https://github.com/ebatty/MathToolsforNeuroscience - a course by Ella Batty (Harvard)
 
 # Interactive demos
 

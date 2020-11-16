@@ -1,5 +1,7 @@
 # Vision
 
+Split into two: cortex then non-cortical area
+
 Restructure the "brain areas" in the following way:
 * first tell the canonical progression, and describe it as such. Maybe copy a slide from ML papers, even.
 * Add a slide about cortical amplification (when discussing projections to V1).
@@ -8,12 +10,14 @@ Restructure the "brain areas" in the following way:
 * Add visual illusions, including "we cannot really use color to see shapes"- immediately after talking about color blobs
 * But then explicitly discuss other areas.
 * Starting with pupillary reflexes
-* Then  pulvinar.
+* Then circadian rhythms
+* Then  pulvinar
 * Then fusiform cortex.
-* Maybe mention dyslexia?
-* Superior Colliculus and Blindsight. Also low framerate stuff.
+    * And btw, is this innate? Yes, and no, which is a great example of how brains are. Based on monkey studies, our interest in faces is innate (we foveate to them and study them instinctively), but the face area forms (and works) properly only if we have this opportunity in early childhood.
+    * Maybe mention dyslexia?
+* Superior Colliculus and Blindsight. Also low frame-rate stuff.
 * Sexual areas?
-* Finish with parallel processing. Especially noticeable in case of motion. The nature of being human.
+* Finish with the idea of massive parallel processing. Especially noticeable in case of motion. The nature of being human.
 
 
 Things to add:
@@ -26,3 +30,10 @@ Potential question for GoogleScholar searching:
 
 A very interesting collection of texts:
 http://vision.mit.edu/
+
+Arcaro, M. J., Schade, P. F., Vincent, J. L., Ponce, C. R., & Livingstone, M. S. (2017). Seeing faces is necessary for face-domain formation. Nature neuroscience, 20(10), 1404.
+https://www.nature.com/articles/nn.4635
+
+Fusiform in congenitally blind:
+* Hölig, C., Föcker, J., Best, A., Röder, B., & Büchel, C. (2014). Crossmodal plasticity in the fusiform gyrus of late blind individuals during voice recognition. Neuroimage, 103, 374-382.
+* Hertrich, I., Dietrich, S., Moos, A., Trouvain, J., & Ackermann, H. (2009). Enhanced speech perception capabilities in a blind listener are associated with activation of fusiform gyrus and primary visual cortex. Neurocase, 15(2), 163-170.

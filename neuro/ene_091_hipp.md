@@ -20,4 +20,12 @@ Plan:
         * Henry Molaison
 * Now, imagine a mouse in a tunnel, running around, and recognizing places. How will the activity look like? Every cue will trigger the entire pattern, and most neurons will belong to only one distinct pattern (or recognition will be unstable), so if you connect to a random neuron, you can expect it to be activated in a certain spot of the maze, regardless of how the rat arrive there, whether it saw it, or smelled it, or touched it, etc. And indeed - place fields!
 * Huge thing.
-* Then from there mention grid cells, but without an explanation.
+* Then from there mention grid cells, but without real explanation.
+
+# Refs
+
+Nobel lecture on place cells:
+https://www.nobelprize.org/uploads/2018/06/okeefe-lecture.pdf
+
+Nobel lecture on grid cells:
+https://www.nobelprize.org/uploads/2018/06/edvard-moser-lecture.pdf
