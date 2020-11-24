@@ -2,7 +2,7 @@
 
 #graphs #centrality
 
-Parents: [[09_Graphs]] / centrality
+Parents: [[09_Graphs]] / [[centrality]]
 Related: Katz centrality, [[kosaraju-sharir]], PCA, eigenvectors, spectral techniques on graphs
 
 ## Bowtie with tendrils

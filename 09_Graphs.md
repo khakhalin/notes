@@ -2,32 +2,37 @@
 
 #bib #graphs #networks
 
-Topics:
+**Basics**
 * [[graph_intro]] - Intro to graphs
-    * [[graph_th]] - Random notes in graph theory
+* [[graph_th]] - Random notes in graph theory
 * [[algos_graph]] - Classic algorithms on graphs
 * [[la_net]] - Linear algebra on graphs
     * Spectral techniques - [youtube](https://www.youtube.com/watch?v=0eNQnc0eOB4&list=PL1OaWjIc3zJ4xhom40qFY5jkZfyO5EDOZ&index=5) #todo
 * [[graph_properties]] - How to characterize graphs and networks
-    * Centrality measures #todo _create a summary page_
-        * [[pagerank]] - Pagerank and link analysis
-    * motifs - Motif analysis #todo
+* [[centrality]]
+    * [[pagerank]] - Pagerank and link analysis
+* [[motifs]] - Motif analysis #todo
+
+**Generative models for graphs**
 * [[graph_generate]] - Generative models for graphs
     * [[erdos_graph]] - basis
     * [[small_world]]  - SW models
     * [[kronecker_graph]] - Fractal model for graph generation
     * [[generative_graphRNNs]] - generating graphs with DL RNNs
+
+**Graph embeddings**
 * [[graph_embedding]] - Learning graph representations, random walks
-    * Label Propagation - [youtube](https://www.youtube.com/watch?v=8szDxEU9u8g&list=PL1OaWjIc3zJ4xhom40qFY5jkZfyO5EDOZ&index=7) #todo
-    * [[node2vec]] - fancier use of random walks for graph embedding
-    * [[transE]] - Knowledge Graph method
-    * [[deep_graphs]] - Deep Learning on graphs
-        * [[graphsage]] - a particular implementation of DL for graphs
-* Processes on graphs
-    * [[graph_cascades]] - Decision-based models and cascades
-    * [[sir]] - Pandemic-like models on graphs (SIR, SIS etc.)
-    * [[influence_maximization]] - greedy hill climbing, sketches method
-    * [[outbreak_detection]] - where to place sensors to monitor the network
+* Label Propagation - [youtube](https://www.youtube.com/watch?v=8szDxEU9u8g&list=PL1OaWjIc3zJ4xhom40qFY5jkZfyO5EDOZ&index=7) #todo
+* [[node2vec]] - fancier use of random walks for graph embedding
+* [[transE]] - Knowledge Graph method
+* [[deep_graphs]] - Deep Learning on graphs
+    * [[graphsage]] - a particular implementation of DL for graphs
+
+**Processes on graphs**
+* [[graph_cascades]] - Decision-based models and cascades
+* [[sir]] - Pandemic-like models on graphs (SIR, SIS etc.)
+* [[influence_maximization]] - greedy hill climbing, sketches method
+* [[outbreak_detection]] - where to place sensors to monitor the network
 
 Reviews and intros:
 * [[Bacciu2019gentlegraph]] - Intro to Graph NNs
@@ -90,6 +95,9 @@ Representation Learning on Graphs with Jumping Knowledge Networks
 https://arxiv.org/abs/1806.01261
 
 # Network Science
+
+Rosvall, M., & Bergstrom, C. T. (2008). Maps of random walks on complex networks reveal community structure. Proceedings of the National Academy of Sciences, 105(4), 1118-1123.
+https://www.pnas.org/content/pnas/105/4/1118.full.pdf
 
 Clune, J., Mouret, J. B., & Lipson, H. (2013). The evolutionary origins of modularity. Proceedings of the Royal Society b: Biological sciences, 280(1755), 20122863.
 https://royalsocietypublishing.org/doi/pdf/10.1098/rspb.2012.2863

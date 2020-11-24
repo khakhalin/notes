@@ -31,8 +31,9 @@ https://www.cell.com/cell/fulltext/S0092-8674(15)01193-9
 Developmental biology bordering fractals and graphs (maybe? not sure, but judging from the pics) - a nice review-like paper (perspective); worth a priority read :)
 
 Zador, A. M. (2019). A critique of pure learning and what artificial neural networks can learn from animal brains. Nature communications, 10(1), 1-7.
+https://core.ac.uk/download/pdf/227723588.pdf
 
-Relating network connectivity to dynamics: opportunities and challenges for theoretical neuroscience Carina Curto, Katherine Morrison
+Curto, C., & Morrison, K. (2019). Relating network connectivity to dynamics: opportunities and challenges for theoretical neuroscience. Current opinion in neurobiology, 58, 11-20.
 https://www.sciencedirect.com/science/article/pii/S0959438819300443 
 Review. Exactly what it should be (networks, motifs, dynamics)
 

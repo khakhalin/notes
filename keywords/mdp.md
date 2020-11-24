@@ -2,8 +2,8 @@
 
 #rl #monte-carlo
 
-Parent: [[13_MC]]
-See also: [[11_RL]], [[q-learning]]
+Parents: [[13_MC]]
+See also: [[11_RL]], [[q-learning]], [[09_Graphs]]
 
 Partly random decision making; extension of **Markov Chains**. Imagine a Markov Chain with states; we are currently in state $s_i$, and states $\{s_j\}$ are available to be moved to. Then the decider takes one of the **actions** $a_k$. The system then moves to one of the states s_j randomly, but the probability of doing so p_ij depends on the action a that was taken. Once the transition to state $s_j$ happened, the decider is rewarded with a certain **reward** R_ij that is also a parameter.
 

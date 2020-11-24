@@ -1,5 +1,7 @@
 # Complexity
 
+#complexity #automata #bib
+
 Sub-bibliographies:
 * [[bib_neurostochastic]]
 * [[bib_behavior]]

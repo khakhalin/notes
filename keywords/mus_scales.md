@@ -4,6 +4,19 @@
 
 Parent: [[music]]
 
+**Draft outline in Russian:**
+1. Есть западная гармония, простая математика
+2. Базис её - в мозговедении
+3. Но выбор обертонов для гаммы - непрост, и неуниверсален (just intonation etc.)
+4. Более того, мы его не придерживаемся, променяли на свободу модуляции (equal temperment)
+5. Другие культуры держатся за натуральный звукоряд
+6. Но более того, есть эстетики "романтических", нестабильных интервалов (макамы, русская народная терция)
+7. Есть культуры для которых возможность параллельной диатонической модуляции оказалась ещё более важна, и они используют целотоновую гамму (грузия)
+8. Более того, нейро- делает гармоничным звуки на основе их состава; не все звуки имеют натуральный спектр (гамелан, William Sethares)
+9. И если кажется что это экзотика, напомнить что в западной музыке октавы шире чем 2:1, потому что рояльные струны нелинейны (Railsback curve)
+10. Более того, есть традиции в которых ценится даже не нестабильность, а напряжение (istrian scale, bosniak ganga, Krk)
+11. Наконец, бывает музыка и вовсе без гармонии / мелодии, но тем не менее музыка вполне, с богатыми традициями (e.g. Ewe drumming)
+
 # Xenomusic
 
 http://sethares.engr.wisc.edu/mp3s/sympathetic.html
@@ -12,14 +25,15 @@ It was a prediction based on certain assumptions about our sound perceptions, lo
 It turns out that they very  much exist, and we'll consider two examples now. (Gamelan, Saradzhev)
 
 ## Octaves stretch
+
 After Gamelan; like: you think they are weird, but you are not? Stay tuned. Actually our music is also crooked. Western octaves are not obvious, at least in the piano. They aren't exactly 2:1
 Explain why. Non-linearity of strings that makes upper harmonics higher than they should be theoretically. Especially for bass strings. 6:3 is most commonly used (6th partial of one string, matching it with 3d partial of another string). An alternative (2:4) is slightly narrower; is used in Russia. The reason for an octave choice: minimization and equalization of beating between overtones (similar rationale as for equal temperament, only in the realm of overtones).
 
-https://www.youtube.com/watch?v=tyW45RCHp_8
-
 Alternative explanation: maybe without beating (stretching) two notes blend too perfectly and become "flat" and indiscernible. So in fact if you ask many people to tune two tones in an "ideal octave", or ask people to judge how "good" the octaves are, US people (at least) prefer the octaves to be a bit wide. It is not clear whether it is cultural (learned), or kind of biological (natural for the brain).
 
-% A discussion of real piano tuners: 
+* https://www.youtube.com/watch?v=tyW45RCHp_8
+* https://en.wikipedia.org/wiki/Piano_acoustics#The_Railsback_curve
+* A discussion with real piano tuners: 
 http://www.pianoworld.com/forum/ubbthreads.php/topics/1196106/Tunelab%206:3%20octaves.html
 
 ## Oriental scales
@@ -45,3 +59,7 @@ Here we'll consider one interesting example.
 # Toolbox
 
 Generator: http://plasticity.szynalski.com/tone-generator.htm 
+
+# Refs
+
+Bruno Nettl wrote about "functional music" - aka participatory, as opposed to "art music" that may be arbitrarily conceptual. Many people apparently consider this term outdated today. See for example: Nettl, B. (2010). Nettl's Elephant. University of Illinois Press.

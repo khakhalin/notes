@@ -1,6 +1,6 @@
 # Cellular Automata
 
-#cellular #dynamic #chaos
+#automata #dynamic #chaos
 
 Parent: [[complexity]]
 See also: [[bib_neurostochastic]], [[randomness]]

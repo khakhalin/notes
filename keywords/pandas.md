@@ -10,7 +10,7 @@ See also: [[numpy]]
 * What's the recommended way to filter only some rows from a dataframe, based on their values? Most SQL-like? Are we supposed to use logical indexing, or are there methods that are recommended, either coz they are faster, or more user-transparent?
 * There's still some controversy with creating filtered dataframes using `query` (see below). I found a way to make it work correctly, and without warnings, but I still don't understand why the warnings appeared in the first place, and how adding `.copy()` happened to fix it.
 
-# Basics and IO
+# Creation and IO
 
 * Creation: `DataFrame` (curious capitalization)
 * `[[something]]` simply means "a list of lists". It's a type thing, not a separate synax.
@@ -24,7 +24,7 @@ See also: [[numpy]]
 * To get column names, `df.columns`.
 * Rename all columns, just overwrite it with a different vector.
 * Rename  only some columns: `df = df.rename({'a': 'X', 'b': 'Y'}, axis=1)`
-* Delete some columns: `df = df.drop(['a','b'], axis=1)`
+* Delete some columns: `df = df.drop(['a','b'], axis=1)` or `df.drop(columns=['a'])`.
 
 **Indexing**
 * Select columns by label: `df['x']`. Returns a series. To cast into a numpy object, add `.values` at the end (right like that, without parentheses). An alternative spelling `df.x` works in most cases, except if the name of the column is special (⚠️Gotcha: for example, `first` and `last` are reserved words, so if you have a column named "first", then `d['first']` would work well, but `d.first` won't)
@@ -62,6 +62,11 @@ Refs:
 **Numbers**
 * Cast to type: `.astype(int)`
 
+**Dates and times**
+* Documentation (not too well organized; hard to find stuff): https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html
+* Most useful methods are called on a datastamp series using a prefix (similar to how it works for strings): for example `df.x.dt.dayofyear`.
+* To create as series of datastamps from a reasonable column of strings, use `df.x = pd.to_datetime(df.x)`.
+
 **Applying functions to every element**
 If transforming only one column: **map**: `df.x = df.x.map(@function)`. For one-liners, works well with lambda notation. 
 
@@ -82,20 +87,23 @@ There's also`df.apply(@fun, axis=1)`, and it appears that with it one can write 
 
 Full-featured in-memory join: `pd.merge`. Archetypeical use:
 ```python
-res = pd.merge(df_left, df_right, 
-                  how='right', 
-                  on=['key1', 'key2']
-                  )
+res = df_left.merge(df_right[['key1', 'key2', 'col3']], 
+               	     how='right', 
+                    on=['key1', 'key2'],
+                    suffixes=[None, "_y"]
+                   )
 ```
-Comments:
-* We can also do `df_left2 = df_left.merge(df_right, ...)` instead of a symmetrical form.
+### Comments
+* We can also do `df_left2 = pd.merge(df_left, df_right, ...)`.
 * `how` is one of the following: `inner` (default), `outer`, `left`, `right`.
 * If keys are named differently in left and right dataframes, use `left_on='keyleft', right_on='keyright'`. If merging on more than one column, use a list (same as for `on`).
-* If some columns are duplicated, inherits both, but modifies names. This can be changed by providing `suffixes` argument. By default, adds `_x` and `_y` for left and right respectively.
+* If some columns are duplicated, inherits both, but modifies names. This can be changed by providing `suffixes` argument (a list). By default, adds `_x` and `_y` for left and right respectively. If you want one set of columns to retain old names, pass `None` as one of the elements of this list.
 * If some rows are not unique, behavior can be modified with `validate` parameter.
-* A diagnostic column may be created with `indicator=True` parameter. This creates a new column `_merge` with values of `left_only`, `right_only`, or `both`. This can be used in conjunction with `.query` and `.drop` to create exclusive joins (e.g. all records from left that aren't found in right).
+* A diagnostic column may be created with `indicator=True` parameter. This creates a new column `_merge` with values of `left_only`, `right_only`, or `both`. 
+* This can also be used in conjunction with `.query` and `.drop` to create exclusive joins; e.g. do a join, then only leave records from the left that weren't found in right).
 * Instead of merging on an arbitrary column, we can also merge on index, which is controlled with `left_index=True` argument (and similar for the right). _Is it faster? Is it better?_
 * To join only some columns, join with an incomplete dataframe (make df_left not a full dataframe, but select the columns you need using standard `df[['x','y']]` notation).
+* To remove duplicates, do `.drop_duplicates()`
 
 For **merging multiple dataframes** at once, set indices properly, and then do `pd.concat()` with a list of dataframes, and `join=inner` (or something else) argument. See documentation for details. This looks neater, and may be faster, than consecutive merges.
 

@@ -7,9 +7,15 @@ Restructure the "brain areas" in the following way:
 * Add a slide about cortical amplification (when discussing projections to V1).
     * Discuss why fovea is amplified
     * It's a good point to mention "upside-down image on the retina" - that it's a nonsensical claim
-* Add visual illusions, including "we cannot really use color to see shapes"- immediately after talking about color blobs
-* But then explicitly discuss other areas.
+* Immediately after talking about color blobs, add visual illusion:
+    * blurring down - can I do it realtime in GIIMP?
+    * we cannot really use color to see shapes - reading. Add an illustration that wild colors actually help, not hurt (grayish are only worse)
+    * Watercolor illusion - example of "coloring an object"
+
+**Lecture 2**
+* Explicitly discuss other areas.
 * Starting with pupillary reflexes
+    * Show imperfection of this connection (and mention that it's not the same as recurrent laringial nerve (double-check the name!!), which is more famous. But a similar story.)
 * Then circadian rhythms
 * Then  pulvinar
 * Then fusiform cortex.

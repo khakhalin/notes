@@ -15,7 +15,7 @@ https://developers.google.com/machine-learning/crash-course/production-ml-system
 Kick-start videos: https://www.youtube.com/playlist?list=PLllx_3tLoo4csmLveWHpjcRTXVMCcvvmc
 
 **The missing semester of CS education**
-https://missing.csail.mit.edu/
+https://missing.csail.mit.edu/ ⚠️
 lots of useful practical bits and pieces: shell, debugging, data wrangling, metaprogramming and what not. Also has [lectures on youtube](https://www.youtube.com/playlist?list=PLyzOVJj3bHQuloKGG59rS43e29ro7I57J).
 (the link is also in [[01_Tools]] / Resources, so fee free to delete it from here later)
 
@@ -29,12 +29,17 @@ Working on:
 
 # Algos and top priorities
 
+* docker - what and how
+* installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
+* finish google course
 * refresh logistic regression, documenting this: https://rpubs.com/wgervais/667244
     * And also this: https://ai.stackexchange.com/questions/3852/is-logistic-regression-more-free-from-the-conditional-independence-assumption-th
 * Answer conceptual questions for [[linear_regression]]
-* log regression from scratch
-* in [[pandas]], finish joins
 * This text about Pandas: https://github.com/chiphuyen/just-pandas-things/blob/master/just-pandas-things.ipynb
+* log regression from scratch
+* how to run AdaBoost in scipy
+* how to save the results of AdaBoost in scipy
+* how do people actually save and load a trained model in tensorflow
 * do SQL exercises
 * try mySQL Linkedin as a way to refresh
 * variational inference (and how is it different from sampling)
@@ -50,8 +55,8 @@ Working on:
 * Refresh and improve [[lstm ]] and [[gru]]: http://dprogrammer.org/rnn-lstm-gru
 * swish activation, aka [[silu]] (apparently works real fast)
 * random forest - reread
+* normalizing flow - a way to learn arbitrary distributions ([tweet](https://twitter.com/MilesCranmer/status/1331085677581262848))
 * tableau - at least the very basic idea
-* installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
 * perlin noise: https://en.wikipedia.org/wiki/Perlin_noise
 * STDM: https://searchnetworking.techtarget.com/definition/STDM
 * CDISC: https://en.wikipedia.org/wiki/Clinical_Data_Interchange_Standards_Consortium
@@ -59,7 +64,7 @@ Working on:
 * revisit ways to calculate ranks from pairwise comparisons, code
 * finish heapsort, optimize, add to other sorts, make compete
 * list border elements of a tree counter-clock-wise
-* The math of transformers: https://www.reddit.com/r/MachineLearning/comments/j5jg1l/d_confused_mathematician_looking_for_clarity_on/
+* The the math of transformers: [reddit link](https://www.reddit.com/r/MachineLearning/comments/j5jg1l/d_confused_mathematician_looking_for_clarity_on/)
 * level-order traversal tree
 * autoregressive loss - what is it?
 * [[multi_armed_bandit]] in the context of clinical trials: what are some actual strategies?

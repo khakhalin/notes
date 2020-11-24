@@ -69,6 +69,14 @@ Saxe, A. M., Bansal, Y., Dapello, J., Advani, M., Kolchinsky, A., Tracey, B. D.,
 https://iopscience.iop.org/article/10.1088/1742-5468/ab3985
 Seems to have struck a nerve (>100 citations in just one month!). And not that hard on math.
 
+Mordvintsev, A., Randazzo, E., Niklasson, E., & Levin, M. (2020). Growing Neural Cellular Automata. Distill, 5(2), e23.
+https://distill.pub/2020/growing-ca/
+Google. A paper and a sim, two in one!
+
+Gilpin, W. (2019). Cellular automata as convolutional neural networks. Physical Review E, 100(3), 032402.
+https://arxiv.org/pdf/1809.02942.pdf
+#automata
+
 Poisoning machine learning models is easier than it seems
 Paper: https://openreview.net/forum?id=BJeGA6VtPS
 Blog: https://portswigger.net/daily-swig/trojannet-a-simple-yet-effective-attack-on-machine-learning-models
@@ -120,10 +128,6 @@ https://arxiv.org/pdf/1512.03385.pdf
 Mishkin, D., & Matas, J. (2015). All you need is a good init. arXiv preprint arXiv:1511.06422.
 https://arxiv.org/pdf/1511.06422.pdf
 Related to [[He2015init]]?
-
-Mordvintsev, A., Randazzo, E., Niklasson, E., & Levin, M. (2020). Growing Neural Cellular Automata. Distill, 5(2), e23.
-https://distill.pub/2020/growing-ca/
-Google. A paper and a sim, two in one!
 
 A list of most influential DL papers of past decade, with pics and summaries!
 https://leogao.dev/2019/12/31/The-Decade-of-Deep-Learning/

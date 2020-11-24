@@ -107,4 +107,4 @@ $\displaystyle 🤔\left(🚗←📺(\{🚗,🐐,🐐\}👉\{🚪\})\right) = \f
 
 
 
-$\displaystyle \Large{x^{x^x}}$ is either $\Large{(x^x)^x}$ or $\displaystyle \Large{x^{(x^x)}}$
+$\displaystyle \Large{x^{x^x}}$ is either $\Large{(x^x)^x}$ or $\displaystyle \Large{x^{(x^x)}}$󠁧󠁿

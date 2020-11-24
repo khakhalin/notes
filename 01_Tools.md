@@ -84,3 +84,5 @@ Refs:
 
 * The missing semester of CS education: https://missing.csail.mit.edu/
 Lots of useful practical bits and pieces: the shell, debugging, metaprogramming and what not. Also has [lectures on youtube](https://www.youtube.com/playlist?list=PLyzOVJj3bHQuloKGG59rS43e29ro7I57J).
+
+Capture screen animation to a gif, client-side: https://gifcap.dev/
