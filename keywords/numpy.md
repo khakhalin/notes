@@ -7,8 +7,8 @@ See also: [[pandas]], [[tensorflow]], [[matplotlib]]
 
 # Syntax innovations
 
-* `a @ b` is the same as `np.matmult(a,b)`
 * **Ellipsis**: a short for a sequence of `:,:`..., so `a[...,1]`, for a 3D variable a, means the same as `a[:,:,1]`
+* `a @ b` is the same as `np.matmult(a,b)`
 
 # Array manipulation
 

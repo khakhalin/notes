@@ -5,12 +5,17 @@
 Parent: [[05_Ensembles]]
 Related: [[bagging]], [[boosting]]
 
-The idea: construct many full trees, by bagging (partial data), but also by providing to every tree a random subset of features (aka **feature bagging**; typically √p features out of p total, or something like max(5, p/3), ref: [wiki](https://en.wikipedia.org/wiki/Random_forest#From_bagging_to_random_forests)). This is an improvement upon bagging, as it makes trees less correlated, more diverse. In this approach, trees are always built to maximal depth, which makes them quite overfitted, but it's OK, as there are many of them.
+The idea: construct many full trees, by bagging (generating partial data with subsetting, aka **sample with replacement**), but also by only considering a random subset of features at every split, aka **feature bagging**, aka **Random subspace method**. Typically, we use √p features out of p total, or something like max(5, p/3) (according to Wikipedia). This is an improvement upon bagging, as it makes trees less correlated, and way more diverse. In this approach, trees are always built to maximal depth, which makes every individual tree quite overfit, but it's OK, as there are many of them. All trees have an equal weight in the final classification.
 
-> Not sure if the sequence in which different values are used for splits is also randomized for each tree, or allowed to be optimal. I'd expect that both approaches could be possible, depending on dimensionality? Is it true?
+Random forests are also great for ranging features in terms of their usefulness, as one can look into average performance of trees that use a certain feature (or use it at one of the early splits perhaps?), and compare them to the average performance of all trees in a forest (aka **Feature Importance**). Scikit-Learn, for example, computes these scores automatically.
 
-All trees usually have an equal vote in the final classification.
+# Varieties and extensions
 
-Random forests are great for ranging features in terms of their usefulness, as one can see at the average performance of trees that include a certain feature, and compare it to the average performance of all trees in a forest (aka **Feature Importance**). Scikit-Learn, for example, computes these scores automatically.
+**Extra Trees** or **Extremely Randomized Trees**: same as RF, but for each tree the first split is made at random (random feature, random point), then the rest of a tree is allowed to be optimized. Sometimes performs better than a standard RF, sometimes not.
 
-A similar approach: **Extra Trees** of **Extremely Randomized Trees**, where for each tree the first split is made at random (random feature, random point), then the rest of a tree is allowed to be optimized. Sometimes performs better than a standard RF, sometimes not.
+**Unsupervised RF**: according to Wikipedia (3 references), one can generate fake data with roughly same statistics as the real data (aka reference distribution), then use RF to find real data in a cloud of fake data. Can help to find clusters, statistical anomalies etc. Can also be used to calculate **random forest dissimilarity** between two sets of data (??? #todo)
+
+# Refs
+
+* History of the method: https://en.wikipedia.org/wiki/Random_forest
+* 

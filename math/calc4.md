@@ -6,17 +6,19 @@ See also: [[linalg]]
 
 # Differentiating
 
-Differentiating **a scalar by a vector** is called a **gradient**: $∇y = \frac{∂f}{∂\vec x} = [… \frac{∂f}{∂x_j} …]$. Note that if x-vector is a column, then the gradient is a row, and the other way around.
+Differentiating **a scalar by a vector** is funny: while vectors are typically columns (column-vectors), a derivative of a scalar over a vector is a row-vector: $\frac{∂f}{∂ \textbf{x}} = [… \frac{∂f}{∂x_j} …]$. This is because to use derivatives in a vector space, we have to assume a certain **Layout convention**: namely, what happens if both Y and X are vectors, and you're considering ∂Y/∂X. For consistency, a derivative of a scalar by a vector, and a derivative of a vector by a scalar should have opposite orientations (if one is a row, the other one has to be a column). If you don't stick to this, you won't be able to work with vector fields (as one way or another, you need to get a matrix if you differentiate vector by a vector).
 
-That's because to use derivatives in a vector space, we have to assume a certain **Layout convention**: namely, what happens if both y and x are vectors, and you're considering ∂y/∂x. For consistency, a derivative of scalar by a vector (like, gradient), and a derivative of vector by a scalar (like, speed) should have opposite orientations (if one is a row, the other one should be a column). Or you won't be able to work with vector fields (as one way or another, you need to get a matrix once you differentiate vector by a vector).
+* Typically, people want a derivative of a vector by a scalar (like, a speed) to be a normal vector (so that position, speed, acceleration etc. all had the same dimensions). This sane, and obviously more popular, approach is called **numerator layout**, or _Jacobian formulation_. The payback for this however is that ∂scalar/∂vector is row vector, and may have to be flipped to become useful (see "gradient") below.
+* If you want ∂scalar/∂vector be a normal vector (column) right away, it's called **denominator layout**, or _Hessian formulation_. It may make some ML formulas look easier (you can write gradient descent as θ = θ + α ∂θ/∂x), but it breaks physics, as a derivative of a vector by a scalar has to be transposed (speed and acceleration now have different shape, and Euler integration looks like x = x + mvᵀ).
 
-* If you want gradient of a scalar be a usual vector (column), it's called **denominator layout**, or _Hessian formulation_. It makes some ML formulas easier (you can write gradient descent as θ = θ + α∇θ). But then derivative of a vector by a scalar has to be transposed compared to the vector, which breaks physics (speed and acceleration now have different shape, so Euler integration of trajectories looks like x = x + mvᵀ!). Also, ∇(Ax) = Aᵀ (see below).
-* If on the other hand if you want the derivative of a vector have the same shape as the vector itself, it's called **numerator layout**, or _Jacobian formulation_. It preserves mechanics formula, but gradient has to be a flipped vector (from a row-vector to a column vector), so gradient descent would use a ∇ᵀ operator. But ∇(Ax) = A (see below).
-* The third option is to give up on ∂vector/∂vector altogether, and pretend that both derivatives produce column vectors. But it makes matrix calculus impossible.
+In practice, people rarely use $\frac{∂f}{∂\textbf{x}}$ directly, and rely on the **gradient** ∇ instead. A gradient is like a derivative by x, but is defined in a way that always produces "proper vectors". So even in the numerator layout, ∇y is a "normal" column vector, as the gradient is defined as $∇y = \left(\frac{∂f}{∂\vec x}\right)^\top$. (In the denominator layout ∇y is just a derivative, without a transpose). 
 
-Next, as a generalization of this case, differentiating a **vector by a vector** has to now produce a matrix. Say, if both x and y are normal vectors (column-vectors), it would be consistent to define ∂y/∂x as a matrix D with elements  $\displaystyle d_{ij} = \frac{\partial y_i}{\partial x_j}$. Each component of vector y (column-vector) creates a new row (so its influence is still columnar), while vector x works in a "flipped way", creating elements within each row. Again, that's a consistent "numerator layout".
+> Note that not all sources make this distinction. For example, as of Nov 2020, Wikipedia uses words "gradient" and ∂y/∂X as synonyms (for both layouts) on the "Matrix_calculus" page, but explicitly defines gradient as a flipped derivative at the "Gradient" page.
 
-In this layout, ∇(Ax) = A. Proof: $\displaystyle [∇(\textbf{Ax})]_{ij} = \frac{∂(\textbf{Ax})_i}{∂x_j} = \frac{\sum a_{ik}x_k}{x_j} = a_{ij}$. (Note that not all books follow this layout; VMLS for example insists that ∇Ax = Aᵀ).
+Next, as a generalization of this case, differentiating a **vector by a vector** has to now produce a matrix. Say, if both x and y are normal vectors (column-vectors), it would be consistent to define ∂y/∂x as a matrix D with elements  $\displaystyle d_{ij} = \frac{\partial y_i}{\partial x_j}$. Each component of vector y (column-vector) creates a new row (so its influence is still columnar, which means that a derivative by a scalar is a column-vector), while vector x works in a "flipped way", creating elements within each row (so a derivative of a scalar is a row-vector). Again, that's a consistent "numerator layout".
+
+Incidentally, it means that ∇(Ax) = Aᵀ regardless of the notation system. In the numerator layout:
+$\displaystyle [∇(\textbf{Ax})]_{ij} = \left( \frac{∂(\textbf{Ax})}{∂\textbf{x}} \right)^\top = \left[ \frac{∂(\textbf{Ax})_i}{∂x_j} \right]^\top = \frac{∂(\textbf{Ax})_j}{∂x_i} = \frac{\sum a_{jk}x_k}{x_i} = a_{ji}$. In the denominator layout, the transpose operator in 2nd and 3d stages disappears, but the derivative is defined as the 4th operator, so the end result is the same!
 
 Now, how to differentiate **a scalar by a matrix**? We can generalize the idea of differentiating by a vector, which also produces a vector, as we differentiate by each component independently, except that the resulting vector is flipped. So let's do the same thing for the matrix: differentiate by each element, and flip the result: $\displaystyle \left. \frac{∂y}{d\textbf{X}}\right|_{ij} = \frac{∂y}{∂x_{ji}}$.
 
@@ -29,8 +31,9 @@ https://en.wikipedia.org/wiki/Matrix_calculus#Identities
 
 # Refs
 
-https://en.wikipedia.org/wiki/Matrix_calculus#Layout_conventions
+* https://en.wikipedia.org/wiki/Matrix_calculus#Layout_conventions
+* https://en.wikipedia.org/wiki/Gradient
+* https://atmos.washington.edu/~dennis/MatrixCalculus.pdf
 
-https://en.wikipedia.org/wiki/Gradient
-
-https://atmos.washington.edu/~dennis/MatrixCalculus.pdf
+Controversial takes and arguments over whether a gradient produces a vector or not:
+* https://www.physicsforums.com/threads/how-is-the-gradient-covariant.944255/

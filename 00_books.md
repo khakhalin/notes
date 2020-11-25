@@ -79,6 +79,9 @@ Coding problems
 * https://codingbat.com/java
 * https://codegolf.stackexchange.com/
 
+Data science problems (like leetcode, but for DS):
+* https://www.confetti.ai/curriculum
+
 Job-search specific materials:
 * Cracking the code interview (book)
 * [[Huyen2019book]] - a short book on data science / ML job interviewing
