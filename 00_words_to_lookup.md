@@ -27,8 +27,14 @@ Working on:
 * https://github.com/khangich/machine-learning-interview - disassemble
 * https://thebookofshaders.com/
 
+* Find article RNN benchmarking
+* Find article liquid state machine chaos prediction
+* Decide between echo state and liquid computing
+
 # Algos and top priorities
 
+* numpy broadcasting - what are the rules again? Does it not broadcast from a 2D to 1D array?* 
+* refresh and document those statements about null-space, left, right, and what not
 * docker - what and how
 * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
 * finish google course
@@ -149,7 +155,6 @@ https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-networ
         * https://en.wikipedia.org/wiki/Johnson%27s_algorithm
 * Leetcode-style question: serialize deserialize a tree
 * Refresh combinatorics formulas
-* ising model - at least what is it?
 * torch_geometric - what is it? What's the status of it?
 * https://github.com/iamtrask/Grokking-Deep-Learning - is it true that it builds pytorch-like system from scratch? Check.
 * Implement Dijkstra

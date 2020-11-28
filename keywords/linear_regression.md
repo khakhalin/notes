@@ -28,17 +28,17 @@ Or we can perform a **gradient descent**: θ ← θ + α(h-y)x, with some learni
 
 Note that a "classic" one-variable linear regression, as we know it from math, is actually a 2D linear regression, as we are looking not in the space of y = kx, but in the space of y = kx + b. So we have to either replace a n-long vector x with a n×2 dimensional matrix X = $[1 1 \cdots 1 ; x]'$ , or perform something like "tiny elimination" by finding b explicitly, as mean(y), then unbiasing both x and y (removing means from them), and doing 1D projection on these unbiased vectors.
 
-# Questions to test understanding
-
-How come PCA (on a noisy cloud) looks better than LR? Wouldn't the PCA-line be a better predictor Y~X at least for X≫mean?
+# Conceptual questions
 
 How come Y~X and X~Y have different slopes? Presumably, if we have incomplete data, sometimes with a missing X and sometimes with a missing Y, and want to impute, we would use 2 different slopes for imputing X and Y. Is it true? And if yes, then how is it possible? (I mean, it's counter-intuitive, isn't it?)
 
-> It feels like this one can be naively modeled. Get a cloud of points, damage some values, use different strategies to recover, calculate the total loss?
+How come [[pca]] (on a noisy cloud) looks better than LR? Wouldn't the PCA-line be a better predictor Y~X at least for X≫mean? Consider this logic: the PCA line is the longer axis of the Gaussian ellipsoid that best describes the distribution. Knowing x for sure is like taking a slice of this ellipsoid, which will also be a Gaussian. But the center of this Gaussian will be on the on the PCA axis, not on the regression axis? Sure, the model is different here (x=z+ε, y=z+ε), but isn't this approach more logical, if we have a cloud of points, and then for some more points one coordinate is known, but the other one is missing? Why does everyone use linear regression then?
 
-A common explanation for the above situation is that X is known perfecly, while Y is unknown, and that's why we only do (Δy)². But what if X is also not known perfectly, just with a lower error? Like, both are imperfect, but X has a better accuracy. Would it mean that we'd have to use something roughly in-between a LR and a PCA?
+> My only assumption here is that PCA is really a better approach in this case, and people are just lazy. Regression is good if you control the experiment, _set_ the x, and then observe the Y. If x is not observed noisily, but is set manually, then y=x+ε is warranted. But if we just observe a cloud of points, it would be logical to assume  that both x and y are observed with an error, and so a PCA regression would work better. No?
 
-> Would it actually mean reaching from a point to a line with an ellipsoid, creating a slanted line? Not orthogonal, but not vertical as well? Intuitively that's how an "in-between" would look like, but is it mathematically sound?
+Now, back to the linear regression situation. A common explanation for why we have the "(y~x) ≠ (x~y)" situation is that in "y~x" scenario, X is known perfectly, and $Y = X + ε$. That's why we only do (Δy)². But what if X is also observed with an error, just with a lower error? Like, both are imperfect, but X has a better accuracy. Would it mean that we'd have to use something roughly in-between a LR and a PCA?
+
+> It appears so, as it would mean reaching from a point to the "fit line" with an ellipsoid (as opposed to a circle for PCA, or straight line for linear regression), creating a slanted line. Not an orthogonal drop (PCA), but not a vertical line (regression) as well. Intuitively that's how an "in-between" would look like, but how to formalize it mathematically?
 
 Bayesian approach? If we have a cloud and an erroneously observed point of both X and Y, what would be our best guess about its "true" position?
 

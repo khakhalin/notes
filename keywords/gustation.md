@@ -2,6 +2,8 @@
 
 #sensory #neuro
 
+Parents: [[neuromyths]]
+
 # Receptors
 
 **Salt**: Na is detected by ENaC, which is Na-specific, and doesn't respond to other ions, or to negative ions. So Na salts are salty. For example, MSG is monoSodium glutamate, and yep, it's also salty, not just umami. Even tho it doesn't have Cl-.
