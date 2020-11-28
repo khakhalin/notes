@@ -5,8 +5,7 @@ https://thegradient.pub/gpt2-and-the-nature-of-intelligence/
 
 #language #opinion #meaning #gi
 
-Related:
-* [[10_Text]]
+Related: [[10_Text]]
 
 An opinion piece on OpenAI's gpt2 model.
 

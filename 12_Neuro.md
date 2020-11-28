@@ -2,6 +2,9 @@
 
 #neuro #behav
 
+Links to process:
+* http://www.neuromatchacademy.org/syllabus/
+
 Topics to look up:
 * Oja rule: a popular extension of the Hebb's rule? https://en.wikipedia.org/wiki/Oja%27s_rule
 

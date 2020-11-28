@@ -8,6 +8,8 @@ Well, I thought that maybe it's because they are uniquely evolvable or something
 
 Basically, it's some type of co-evolution with plants + horizontal gene transfer.
 
-Refs:
-* https://www.molecularecologist.com/2020/01/beetle-diversity-driven/
-* McKenna, D. D., Shin, S., Ahrens, D., Balke, M., Beza-Beza, C., Clarke, D. J., ... & Liu, S. (2019). The evolution and genomic basis of beetle diversity. Proceedings of the National Academy of Sciences, 116(49), 24729-24737.
+# Refs
+
+https://www.molecularecologist.com/2020/01/beetle-diversity-driven/
+
+McKenna, D. D., Shin, S., Ahrens, D., Balke, M., Beza-Beza, C., Clarke, D. J., ... & Liu, S. (2019). The evolution and genomic basis of beetle diversity. Proceedings of the National Academy of Sciences, 116(49), 24729-24737.

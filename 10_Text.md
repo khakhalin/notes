@@ -2,7 +2,7 @@
 
 #text #bib
 
-**Related methods and concepts:**
+**Methods and concepts:**
 * [[ngram]] - N-grams: low-level feature for text analysis, beyond single words. "Bags" of several (2-3) words.
 * [[tfidf]] - **Text Frequency - Inverse Document Frequency**. A basic approach to ranking documents by their relevance for a given keyword.
 * [[perplexity]] - main measure of language model quality, as well as a good practical objective function during training.

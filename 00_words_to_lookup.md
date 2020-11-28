@@ -5,6 +5,7 @@ Key tags:
 * #todo - for follow-ups that need to be done
 
 Other lists to look through:
+* https://www.confetti.ai/
 * https://machinelearningmastery.com/start-here/
 * https://e2eml.school/blog.html
 * [[job_search]] - lots of questions and more links & opinions about what to learn
@@ -17,10 +18,7 @@ Kick-start videos: https://www.youtube.com/playlist?list=PLllx_3tLoo4csmLveWHpjc
 **The missing semester of CS education**
 https://missing.csail.mit.edu/ ⚠️
 lots of useful practical bits and pieces: shell, debugging, data wrangling, metaprogramming and what not. Also has [lectures on youtube](https://www.youtube.com/playlist?list=PLyzOVJj3bHQuloKGG59rS43e29ro7I57J).
-(the link is also in [[01_Tools]] / Resources, so fee free to delete it from here later)
-
-Neuro collection:
-* http://www.neuromatchacademy.org/syllabus/
+(the link is also in [[01_Tools]] / Resources, so delete it from here later)
 
 Working on: 
 * [[motifs]] (not really motifs yet - listen to the lecture) #todo
@@ -34,20 +32,21 @@ Working on:
 # Algos and top priorities
 
 * numpy broadcasting - what are the rules again? Does it not broadcast from a 2D to 1D array?* 
-* refresh and document those statements about null-space, left, right, and what not
 * docker - what and how
 * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
+* This text about Pandas: https://github.com/chiphuyen/just-pandas-things/blob/master/just-pandas-things.ipynb
 * finish google course
 * refresh logistic regression, documenting this: https://rpubs.com/wgervais/667244
     * And also this: https://ai.stackexchange.com/questions/3852/is-logistic-regression-more-free-from-the-conditional-independence-assumption-th
-* Answer conceptual questions for [[linear_regression]]
-* This text about Pandas: https://github.com/chiphuyen/just-pandas-things/blob/master/just-pandas-things.ipynb
+* AWS - do some tutorials
 * log regression from scratch
+* refresh and document those statements about null-space, left, right, and what not
 * how to run AdaBoost in scipy
 * how to save the results of AdaBoost in scipy
 * how do people actually save and load a trained model in tensorflow
 * do SQL exercises
 * try mySQL Linkedin as a way to refresh
+* What is the best answer for "how to run logistic regression"?
 * variational inference (and how is it different from sampling)
 * wait, is softmax based on mean and sigma, or is it just a difference? Is it the same formula ultimately, or are there two different softmaxes?  https://twitter.com/chrisalbon/status/1323293801398509568
     * Some people seem to argue it should be called softargmax and there's a difference? Summarize here.
@@ -134,15 +133,12 @@ https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-networ
 * How to debug in Python, beyond print()? What are the best practices here?
 * Maximum Likelihood (MLE) vs Maximum apriori (MAP)
 * Generative vs Discriminative models
-* Loss functions for logistic regression
-* Is batch norm a type of regularization? (Actual interview question)
+* Can batch norm be considered a type of regularization? (Actual interview question)
 * flip a tree (with honest suffering)
 * BayesNet - what is it?
 * ICA: how does it work, and in what cases it's better than PCA
 * radix sort
 * Finish dangit git
-* What's the best answer to "how to run linear regression"?
-* Same for logistic regression
 * Refresh hash tables (theory and implementation)
 * Refresh (maybe reimplement) red-black trees
 * LRU cash (Leetcode quest)
@@ -265,6 +261,34 @@ https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-networ
 
 See also: [[system_design]]
 
+Go through 2-3 youtube lectures in the queue that describe some of the existing solutions:
+* Scalability lecture: https://www.youtube.com/watch?v=-W9F__D3oY4
+(I'm at 24 m right now)
+* Scaling Etsy: https://www.youtube.com/watch?v=eenrfm50mXw
+* Docker and Kubernetes: https://www.youtube.com/watch?v=u8dW8DrcSmo
+* How to design Twitter: https://www.youtube.com/watch?v=KmAyPUv9gOY
+* Ruby on rails - what is it, how it works, and why so popular?
+* Hadoop vs Spark video: https://hackr.io/blog/hadoop-vs-spark
+* Kubernetes and Docker video (30 min): https://www.youtube.com/watch?v=u8dW8DrcSmo
+* JSON - how does it work, why everybody love it, and is it the present or the future? ([wiki](https://en.wikipedia.org/wiki/JSON))
+* YAML - some standard for keeping stuff that's like XML or JSON, but human-readable. Apparently much hated, as it breaks at edge cases.
+* Avro
+* Parquet (data storage format)
+	* data warehouse technologies
+* difference between columnar and row-oriented data stores
+* star schema
+* difference between dimension and fact tables
+* OLAP ([wiki](https://en.wikipedia.org/wiki/Online_analytical_processing))
+
+* https://www.hiredintech.com/app - a whole intro mini-course on systems design?
+* https://www.byte-by-byte.com/3-ways-to-ace-your-system-design-interview/
+* Go through the list of terms and write down a definition for each of them
+* https://github.com/donnemartin/system-design-primer
+    * https://github.com/donnemartin/system-design-primer#index-of-system-design-topics
+* https://github.com/checkcheckzz/system-design-interview
+
+Every solution depends on parameters of scale: amount of data, n users, requests per seconds, expected response time, read/write ratio.
+
 List from Google
 * Processes, threads, concurrency
 * locks, mutexes, semaphores, monitors
@@ -302,34 +326,6 @@ List from Google
 * Spark
 * Flink
 * postgreSQL
-
-Go through 2-3 youtube lectures in the queue that describe some of the existing solutions:
-* Scalability lecture: https://www.youtube.com/watch?v=-W9F__D3oY4
-(I'm at 24 m right now)
-* Scaling Etsy: https://www.youtube.com/watch?v=eenrfm50mXw
-* Docker and Kubernetes: https://www.youtube.com/watch?v=u8dW8DrcSmo
-* How to design Twitter: https://www.youtube.com/watch?v=KmAyPUv9gOY
-* Ruby on rails - what is it, how it works, and why so popular?
-* Hadoop vs Spark video: https://hackr.io/blog/hadoop-vs-spark
-* Kubernetes and Docker video (30 min): https://www.youtube.com/watch?v=u8dW8DrcSmo
-* JSON - how does it work, why everybody love it, and is it the present or the future? ([wiki](https://en.wikipedia.org/wiki/JSON))
-* YAML - some standard for keeping stuff that's like XML or JSON, but human-readable. Apparently much hated, as it breaks at edge cases.
-* Avro
-* Parquet (data storage format)
-	* data warehouse technologies
-* difference between columnar and row-oriented data stores
-* star schema
-* difference between dimension and fact tables
-* OLAP ([wiki](https://en.wikipedia.org/wiki/Online_analytical_processing))
-
-* https://www.hiredintech.com/app - a whole intro mini-course on systems design?
-* https://www.byte-by-byte.com/3-ways-to-ace-your-system-design-interview/
-* Go through the list of terms and write down a definition for each of them
-* https://github.com/donnemartin/system-design-primer
-    * https://github.com/donnemartin/system-design-primer#index-of-system-design-topics
-* https://github.com/checkcheckzz/system-design-interview
-
-Every solution depends on parameters of scale: amount of data, n users, requests per seconds, expected respont time, read/write ratio.
 
 **Concepts**
 * FAIR data principles and support FAIRification of legacy data

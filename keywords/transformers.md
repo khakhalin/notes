@@ -3,15 +3,22 @@
 #attention #text #dl
 
 Parents: [[10_Text]]
+
 Papers:
 * [[Vaswani2017attention]] - original main paper
 
 # Unprocessed bibliography:
 
 Peter Clark, Oyvind Tafjord, Kyle Richardson. (2020) Transformers as Soft Reasoners over Language https://arxiv.org/abs/2002.05867
-Show how, once learned on texts, transformers can solve sillogisms (infer T/F of a statement, given a set of statements.)
+Show how, once learned on texts, transformers can solve syllogisms (infer T/F of a statement, given a set of statements.)
+
+Merity, S. (2019). Single Headed Attention RNN: Stop Thinking With Your Head. arXiv preprint arXiv:1911.11423. https://arxiv.org/abs/1911.11423 - the main idea is that transformers are overrated
+
+Brown, T. B., Mann, B., Ryder, N., Subbiah, M., Kaplan, J., Dhariwal, P., ... & Agarwal, S. (2020). Language models are few-shot learners. arXiv preprint arXiv:2005.14165.
+https://arxiv.org/abs/2005.14165 - gpt3 paper
 
 # Open questions I still have
+
 * How many words do they process at once? What's the size of the bag? And why cannot I find this information in the original paper?
 * Why position encoding is so weird
 * Why residual connections are a good idea
@@ -98,28 +105,40 @@ For machine translation, they actually don't just apply the model, but use a thi
 
 # Practical examples
 
-* GPT - first version by OpenAI
+* GPT (Generative Pretrained Transformer) - first version by OpenAI
 * Bert (2018, Google)
 * GPT-2 (2019, OpenAI)
+* GPT-3 (2020, OpenAI)
 
 # Criticism
-There are claims that transformers are overrated, and same results may be achieved with simple architectures, and much lower computer:
-* Merity, S. (2019). Single Headed Attention RNN: Stop Thinking With Your Head. arXiv preprint arXiv:1911.11423. [link](https://arxiv.org/abs/1911.11423)
+
+There are claims that transformers are overrated, and same results may be achieved with simple architectures, and much lower computer (See S. Merity 2019)
 
 # References
-* [[Vaswani2017attention]]  - the original Transformers paper, titled "Attention is all you need". Doesn't actually describe the motivation, nor how they came up with this, nor how it works, nor the philosophy of it. ([Direct pdf](https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf))
-* For **word tokens → 512-vector embeddings**, "ref 24": Using the Output Embedding to Improve Language Models, 2017, Ofir Press, Lior Wolf. ([direct pdf](https://arxiv.org/abs/1608.05859))
-* For how their **positions encoding** iks as good as learned position encoding, "ref 8":  Jonas Gehring, Michael Auli, David Grangier, Denis Yarats, and Yann N. Dauphin. Convolutional sequence to sequence learning. arXiv preprint arXiv:1705.03122v2, 2017.
-* For **beam search**, "ref 31": Yonghui Wu, Mike Schuster, Zhifeng Chen, Quoc V Le, Mohammad Norouzi, Wolfgang Macherey, Maxim Krikun, Yuan Cao, Qin Gao, Klaus Macherey, et al. Google’s neural machine
+
+### Original papers:
+
+[[Vaswani2017attention]]  - the original Transformers paper, titled "Attention is all you need". Doesn't actually describe the motivation, nor how they came up with this, nor how it works, nor the philosophy of it. ([Direct pdf](https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf))
+
+Brown, T. B., Mann, B., Ryder, N., Subbiah, M., Kaplan, J., Dhariwal, P., ... & Agarwal, S. (2020). Language models are few-shot learners. arXiv preprint arXiv:2005.14165.
+https://arxiv.org/abs/2005.14165 - gpt3 paper
+
+### Individual methods and elements
+
+For **word tokens → 512-vector embeddings**, "ref 24": Using the Output Embedding to Improve Language Models, 2017, Ofir Press, Lior Wolf. ([direct pdf](https://arxiv.org/abs/1608.05859))
+
+For how their **positions encoding** iks as good as learned position encoding, "ref 8":  Jonas Gehring, Michael Auli, David Grangier, Denis Yarats, and Yann N. Dauphin. Convolutional sequence to sequence learning. arXiv preprint arXiv:1705.03122v2, 2017.
+
+For **beam search**, "ref 31": Yonghui Wu, Mike Schuster, Zhifeng Chen, Quoc V Le, Mohammad Norouzi, Wolfgang Macherey, Maxim Krikun, Yuan Cao, Qin Gao, Klaus Macherey, et al. Google’s neural machine
 translation system: Bridging the gap between human and machine translation. arXiv preprint
 arXiv:1609.08144, 2016. 
 
-**Comments, reviews, explanations:**
+### Comments, reviews, explanations:
+
+* [[Marcus2019gpt2]] - on GPT2 and limitations of (its) intelligence
+
 * Re-implementation of the original paper, in Python: http://nlp.seas.harvard.edu/2018/04/03/attention.html
 * http://jalammar.github.io/illustrated-transformer/ - a very nice diagrammatic explanation from Jay Alammar
 * https://towardsdatascience.com/openai-gpt-2-understanding-language-generation-through-visualization-8252f683b2f8
 * https://towardsdatascience.com/deconstructing-bert-part-2-visualizing-the-inner-workings-of-attention-60a16d86b5c1
 * [http://jalammar.github.io/illustrated-gpt2/](<http://jalammar.github.io/illustrated-gpt2/>)
-
-
-

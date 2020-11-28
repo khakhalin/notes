@@ -1,4 +1,5 @@
 # Randomly wired networks for image recognition
+
 Xie, S., Kirillov, A., Girshick, R., & He, K. (2019). Exploring randomly wired neural networks for image recognition. In Proceedings of the IEEE International Conference on Computer Vision (pp. 1284-1293).
 https://arxiv.org/pdf/1904.01569v2.pdf
 Facebook AI research
