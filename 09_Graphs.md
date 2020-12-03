@@ -1,13 +1,15 @@
-# Graphs and Graphical Methods
+# Graphs, Networks, and Graphical Methods
 
 #bib #graphs #networks
 
-**Basics**
+**Basic graph techniques**
 * [[graph_intro]] - Intro to graphs
 * [[graph_th]] - Random notes in graph theory
 * [[algos_graph]] - Classic algorithms on graphs
 * [[la_net]] - Linear algebra on graphs
     * Spectral techniques - [youtube](https://www.youtube.com/watch?v=0eNQnc0eOB4&list=PL1OaWjIc3zJ4xhom40qFY5jkZfyO5EDOZ&index=5) #todo
+
+**Network science**
 * [[graph_properties]] - How to characterize graphs and networks
 * [[centrality]]
     * [[pagerank]] - Pagerank and link analysis
@@ -38,10 +40,13 @@ Reviews and intros:
 * [[Bacciu2019gentlegraph]] - Intro to Graph NNs
 * [[Porter2019nonlinearity]] - Dynamics on graphs, including games on graphs, oscillators and what not
 
-Misc papers:
-* [[Bojanek2020cyclic]] - using triplet motifs to classify activity on graphs
+Other papers:
+* [[Bojanek2020cyclic]] - using triplet motifs to classify (neural) activity on graphs
 
 # To-Read: ML on Graphs
+
+A collection of hot papers from Nov 2020:
+https://www.reddit.com/r/MachineLearning/comments/j6wzut/r_latest_developments_in_graph_neural_networks_a/
 
 Review:
 Hamilton, W. L., Ying, R., & Leskovec, J. (2017). Representation learning on graphs: Methods and applications. arXiv preprint arXiv:1709.05584.
@@ -106,6 +111,10 @@ https://royalsocietypublishing.org/doi/pdf/10.1098/rspb.2012.2863
 Go through publications of D. Krioukov (Northeastern):
 https://web.northeastern.edu/dima/pub/
 He has some publications (older, down the page) on percolation on networks.
+
+Tiago P. Peixoto
+https://scholar.google.com/citations?user=gQJ0a7YAAAAJ&hl=en&oi=ao
+Among other things, works on 
 
 Video: The physics of brain network architecture, function, and control
 Lecture by Danielle Bassett

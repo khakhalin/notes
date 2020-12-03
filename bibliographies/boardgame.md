@@ -20,6 +20,9 @@ https://arxiv.org/pdf/1902.00506.pdf
 Bhatt, A., Lee, S., de Mesentier Silva, F., Watson, C. W., Togelius, J., & Hoover, A. K. (2018, August). Exploring the hearthstone deck space. In Proceedings of the 13th International Conference on the Foundations of Digital Games (pp. 1-10).
 https://dl.acm.org/doi/pdf/10.1145/3235765.3235791
 
+Vieira, R., Tavares, A. R., & Chaimowicz, L. Drafting in Collectible Card Games via Reinforcement Learning.
+https://www.sbgames.org/proceedings2020/ComputacaoFull/209690.pdf
+
 de Mesentier Silva, F., Canaan, R., Lee, S., Fontaine, M. C., Togelius, J., & Hoover, A. K. (2019, August). Evolving the hearthstone meta. In 2019 IEEE Conference on Games (CoG) (pp. 1-8). IEEE.
 https://arxiv.org/pdf/1907.01623.pdf
 

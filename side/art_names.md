@@ -40,7 +40,7 @@ Older
 * Paolo Anesi - another simialr 18 century Italian. How (adorable) kitsch looked like in 18 century!
 * Jaime Heiden - naked trees with skies as a backdrop
 * Karin Larsson - Svedish interior designer from early 20c that basically invented Ikea and 60s, but better
-* Hilma af Klint - inventor of abstract art (before Kandinsky. But Hildegard von Bingen is also cool)
+* Hilma af Klint - inventor of (spiritual) abstract art (before Kandinsky! But Hildegard von Bingen is also cool)
 
 Icons
 * Natalya Rusetska

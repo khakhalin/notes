@@ -94,13 +94,14 @@ Job-search specific materials:
 # Online courses
 
 * [Google Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course/) - a really good introduction for complete noobs 
+* Lectures by Sebastian Raschka: https://www.youtube.com/c/SebastianRaschka/videos
 * [Some other intro to data science](https://www.youtube.com/playlist?list=PLMrJAkhIeNNQV7wi9r7Kut8liLFMWQOXn) - with Steve Brunton
 * [Theory of computation](https://www.youtube.com/playlist?list=PL601FC994BDD963E4) - Youtube
 * [Dynamical systems](https://www.youtube.com/playlist?list=PL8erL0pXF3JZqdlYIfTTyibOqSqwzRdVV) - Youtube course by Robert Ghrist 
 * [Entropy, Information theory, and self-organization](https://www.youtube.com/playlist?list=PLOfPLLxr5gsVLSlmzcMnsFANb-uWkArby), by Joseph Lizier
 * [Stanford, linear dynamical systems](http://stanford.edu/class/ee363/lectures.html) (Stephen Boyd) - includes stochastic control, Kalman filter, Lyapunov theory
 * [Linear algebra by Gilbert Strang](https://www.youtube.com/playlist?list=PLE7DDD91010BC51F8) - Youtube from MIT. Everybody loves it, as it achieves a beautiful balance between staying extremely practical, concise, but at the same time giving many proofs (or "almost proofs", extreme-physics style, like for good cases, with simplifying assumptions etc). MIT also has [notes for each lecture](https://ocw.mit.edu/courses/mathematics/18-06sc-linear-algebra-fall-2011/syllabus/) (not in one pdf, but easy to find).
-* [Matrix methods in data science](https://www.youtube.com/watch?v=Cx5Z-OslNWE&list=PLUl4u3cNGP63oMNUHXqIUcrkS2PivhN3k) (also Gilbert Strang)- YouTube from MIT. May be good for refreshing things.
+* [Matrix methods in data science](https://www.youtube.com/watch?v=Cx5Z-OslNWE&list=PLUl4u3cNGP63oMNUHXqIUcrkS2PivhN3k) (also Gilbert Strang)- YouTube from MIT. May be good for refreshing things.	
 * Good collection of short tutorials (both ML and snippets of Python code) by Chris Albon: https://chrisalbon.com/
 * [Maximum Entropy Network Ensembles](http://www.maths.qmul.ac.uk/~gbianconi/LTCCModule) - a series of lectures
 * [End-to-end machine learning](https://end-to-end-machine-learning.teachable.com) - sorta like a course from Brandon Rohrer

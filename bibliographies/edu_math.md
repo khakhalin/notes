@@ -41,3 +41,9 @@ Trigonometry links:
 # Refs
 
 [Hungarian approach to math education](https://blogs.ams.org/matheducation/2015/01/10/the-hungarian-approach-and-how-it-fits-the-american-educational-landscape/) - problem based, team-ased, creative problems, emphasize several possible ways to solve the same problem
+
+Complexity explorables
+https://www.complexity-explorables.org/
+
+Explorables by **Nicky Case**: has fewer demos, but much better explanations:
+https://explorabl.es/

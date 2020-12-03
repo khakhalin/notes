@@ -29,16 +29,44 @@ Working on:
 * Find article liquid state machine chaos prediction
 * Decide between echo state and liquid computing
 
+Dump:
+* https://www.expunctis.com/2019/01/27/Loss-functions.html
+* https://rpubs.com/wgervais/667244
+* https://github.com/chiphuyen/just-pandas-things/blob/master/just-pandas-things.ipynb
+* https://www.youtube.com/watch?v=gXbThCXjZFM&list=PLMrJAkhIeNNQV7wi9r7Kut8liLFMWQOXn&index=21
+* https://arxiv.org/pdf/2009.06489.pdf
+* https://gema-parreno-piqueras.medium.com/real-world-games-look-like-spinning-tops-b77411a54b57
+* https://arxiv.org/pdf/2004.09468.pdf
+* https://www.youtube.com/watch?v=sQFxbQ7ade0
+* https://www.euclidea.xyz/en/game/packs/Epsilon/level/LineAlongPoints
+* https://www.youtube.com/watch?v=i5tUMd__tC0
+* https://www.youtube.com/c/YannicKilcher
+* https://aeon.co/essays/the-rise-and-fall-of-the-oxford-school-of-fantasy-literature
+* https://en.wikipedia.org/wiki/Bradley%E2%80%93Terry_model
+* https://www.researchgate.net/profile/Jasmin_Saric/publication/224890616_Literature_mining_for_the_biologist_from_information_retrieval_to_biological_discovery/links/00b7d51e65b75b50cf000000/Literature-mining-for-the-biologist-from-information-retrieval-to-biological-discovery.pdf
+* https://journals.sagepub.com/doi/pdf/10.1177/1536867X0200200405
+* https://arxiv.org/abs/1801.01253#
+* https://devavrat.mit.edu/wp-content/uploads/2017/10/Rank-Centrality-Ranking-from-pair-wise-comparisons.pdf
+* https://www.builtinboston.com/
+* https://www.youtube.com/channel/UC8fqt_PDhDDszL5Zi8EauqA/videos?view=0&sort=p&flow=grid
+* https://www.youtube.com/watch?v=0--5AxiZefg
+* https://thebookofshaders.com/	
+* https://www.youtube.com/watch?v=DG7YTlGnCEo
+* http://web.stanford.edu/class/cs224w/
+
+
 # Algos and top priorities
 
 * numpy broadcasting - what are the rules again? Does it not broadcast from a 2D to 1D array?* 
 * docker - what and how
 * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
+* Do missing semester
 * This text about Pandas: https://github.com/chiphuyen/just-pandas-things/blob/master/just-pandas-things.ipynb
 * finish google course
 * refresh logistic regression, documenting this: https://rpubs.com/wgervais/667244
     * And also this: https://ai.stackexchange.com/questions/3852/is-logistic-regression-more-free-from-the-conditional-independence-assumption-th
 * AWS - do some tutorials
+* work through confetti tutorials and exams, like https://www.confetti.ai/exams/14/start
 * log regression from scratch
 * refresh and document those statements about null-space, left, right, and what not
 * how to run AdaBoost in scipy
