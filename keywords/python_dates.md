@@ -5,7 +5,6 @@
 Parents: [[python]]
 Related: [[pandas]]
 
-
 Two main libraries: **time** and **datetime** with different syntax.
 
 Main functions:

@@ -48,12 +48,17 @@ Dump:
 * https://arxiv.org/abs/1801.01253#
 * https://devavrat.mit.edu/wp-content/uploads/2017/10/Rank-Centrality-Ranking-from-pair-wise-comparisons.pdf
 * https://www.builtinboston.com/
-* https://www.youtube.com/channel/UC8fqt_PDhDDszL5Zi8EauqA/videos?view=0&sort=p&flow=grid
 * https://www.youtube.com/watch?v=0--5AxiZefg
 * https://thebookofshaders.com/	
 * https://www.youtube.com/watch?v=DG7YTlGnCEo
 * http://web.stanford.edu/class/cs224w/
 
+https://www.partselect.com/Models/LER6620PT1/#Videos
+https://www.ebay.com/itm/Dryer-Heating-Element-for-Whirlpool-Kenmore-PS334313/391295950637?hash=item5b1b0e5f2d:g:9RYAAOSwOS1ZxfJW
+
+* https://en.wikipedia.org/wiki/Yarsanism#Worship
+* https://www.bbc.com/news/world-middle-east-50378946
+* زرده (دالاهو)
 
 # Algos and top priorities
 

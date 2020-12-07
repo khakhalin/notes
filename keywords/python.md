@@ -4,7 +4,7 @@
 
 Path: [[01_Tools]]
 Subtopics: 
-* Tools: [[anaconda]]
+* Tools: [[anaconda]], [[jupyter]]
 * Libraries: [[pandas]], [[tensorflow]], [[numpy]], [[matplotlib]], [[python_dates]]
 
 # Random tips

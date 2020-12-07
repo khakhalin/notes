@@ -36,7 +36,9 @@ See also: [[numpy]]
 
 For **conditional data retrieval** we have a choice between: 
 * **logical indexing** `df.loc[d.x>0]` Can take list comprehensions as an argument (instead of a series); can be written to; but slower, and harder to read.
+* Another form of logical indexing: `df.x.eq(0)` (or things like `ne`, `le` etc.)
 * **queries**: `df.query('x>0')`, where `x` is a name of a column. Easier for a human to read; works slightly faster, but cannot be written to. To reference a normal variable `a` in a query, use `@a` inside the query string.
+* To find the first row index that satisfies a criterion, follow with `.idxmax()` - it returns the location of the maximum (like `np.argmax()`), and in this case truth is the maximum.
 
 Conditional indexing supports functions, as long as they take and return Pandas series, or something compatible, like a Numpy array). Both conditional forms support elementwise Boolean operators, like `&` and `|`.
 
