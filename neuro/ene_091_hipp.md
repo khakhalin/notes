@@ -1,6 +1,10 @@
-# Hippocampus
+# Memory, dreams, hippocampus
 
-Plan:
+### Todo
+
+* Add dreams very explicitly! That's one of the biggest connections for people
+
+### Plan
 
 * How can memory work? How can we build memory from Hebbian plasticity?
 * Let's start with recognition. We need to reconstruct some sort of "whole" from a cue

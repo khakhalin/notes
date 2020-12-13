@@ -64,13 +64,20 @@ https://www.ebay.com/itm/Dryer-Heating-Element-for-Whirlpool-Kenmore-PS334313/39
 
 * numpy broadcasting - what are the rules again? Does it not broadcast from a 2D to 1D array?* 
 * docker - what and how
-* installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
+    * Flask docker file (allegedly 80% of what one needs for a typical deployment)
+    * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
 * Do missing semester
 * This text about Pandas: https://github.com/chiphuyen/just-pandas-things/blob/master/just-pandas-things.ipynb
 * finish google course
+* check how tableau works, to claim it
 * refresh logistic regression, documenting this: https://rpubs.com/wgervais/667244
     * And also this: https://ai.stackexchange.com/questions/3852/is-logistic-regression-more-free-from-the-conditional-independence-assumption-th
 * AWS - do some tutorials
+* Stack
+    * react
+    * nodejs
+    * typescript
+    * Apache beam / spark
 * work through confetti tutorials and exams, like https://www.confetti.ai/exams/14/start
 * log regression from scratch
 * refresh and document those statements about null-space, left, right, and what not
@@ -94,7 +101,6 @@ https://www.ebay.com/itm/Dryer-Heating-Element-for-Whirlpool-Kenmore-PS334313/39
 * swish activation, aka [[silu]] (apparently works real fast)
 * random forest - reread
 * normalizing flow - a way to learn arbitrary distributions ([tweet](https://twitter.com/MilesCranmer/status/1331085677581262848))
-* tableau - at least the very basic idea
 * perlin noise: https://en.wikipedia.org/wiki/Perlin_noise
 * STDM: https://searchnetworking.techtarget.com/definition/STDM
 * CDISC: https://en.wikipedia.org/wiki/Clinical_Data_Interchange_Standards_Consortium
@@ -179,7 +185,6 @@ https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-networ
 * Practice SQL on Hackersrank
 * Systems interivew - do a minimal set (at least fill the dictionary with stubs)
 * Watch some basic systems interview videos
-* refresh AUC
 * Bellman-Ford algorithm (pairwise distances between all nodes in a graph)
         * https://en.wikipedia.org/wiki/Johnson%27s_algorithm
 * Leetcode-style question: serialize deserialize a tree

@@ -69,6 +69,10 @@ Saxe, A. M., Bansal, Y., Dapello, J., Advani, M., Kolchinsky, A., Tracey, B. D.,
 https://iopscience.iop.org/article/10.1088/1742-5468/ab3985
 Seems to have struck a nerve (>100 citations in just one month!). And not that hard on math.
 
+Every Model Learned by Gradient Descent Is Approximately a Kernel Machine
+Pedro Domingos 2020
+https://arxiv.org/abs/2012.00152
+
 Mordvintsev, A., Randazzo, E., Niklasson, E., & Levin, M. (2020). Growing Neural Cellular Automata. Distill, 5(2), e23.
 https://distill.pub/2020/growing-ca/
 Google. A paper and a sim, two in one!

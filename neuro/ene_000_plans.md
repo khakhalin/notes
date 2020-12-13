@@ -18,13 +18,11 @@ See also: [[edu_remote]]
 # Organizational Ideas
 
 * **Regularly Initiate meta-discussions on Piazza** (how is the course going?). Early on. Make it a habit. Use "Meta" channel.
+* Memes, not haikus. Make them make memes.
 * Separate into required (lectures + existential) and advanced (major-level).
 * Invite Silas, Molly, Addie, Sam, Maia, for short talks about different topics? Pre-recorded, not realtime?
 
 # Topics and links
-
-That being random is super-hard (that simulation):
-https://www.expunctis.com/2019/03/07/Not-so-random.html
 
 On peripheral nervous system - how lie detectors and polygraph are all a lie.
 Potentially look at this article (haven't read it yet, but it's recent): https://theintercept.com/2020/08/12/blueleaks-law-enforcement-police-lie-detection/

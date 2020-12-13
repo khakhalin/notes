@@ -17,3 +17,5 @@ That copepod (?) with eyes like scopes
 * Thoen, H. H., How, M. J., Chiou, T. H., & Marshall, J. (2014). A different form of color vision in mantis shrimp. Science, 343(6169), 411-413.
 
 **Chlamisus laticollis** is a small beetle shaped like poop (frass). This funny barrel-like shape makes it harder for it to mate (from the pure geometry point of view), but it manages.
+
+**Dendrogaster tobasuii** - a parasitic crustacean (gross) of starfish, that looks totally fractal. A fractal tree that is three, maybe even four iterations deep.
