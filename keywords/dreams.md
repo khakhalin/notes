@@ -2,6 +2,9 @@
 
 #neuro #psych #bib #dreams
 
+Parent: [[12_Neuro]]
+See also: [[sleep]]
+
 # Bibliography
 
 Spanò, G., Pizzamiglio, G., McCormick, C., Clark, I. A., De Felice, S., Miller, T. D., ... & Maguire, E. A. (2020). Dreaming with hippocampal damage. Elife, 9, e56211.

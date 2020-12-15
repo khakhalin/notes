@@ -38,16 +38,19 @@ There are **3 broad approaches to model smoothing**:
 * Constrained basis functions and dictionaries
 
 ### Roughness penalty
+
 Use basic RSS (Residual Sum of Squares) with an explicit penalty: L = RSS(f) + λJ(f), where J grows as f() becomes too rough. For example, defining J as λ∫(f'')²dx leads to **cubic smoothing splines** as an optimal solution. Roughness penalty can be interpreted in a Bayesian way, as a log-prior.
 
 ### Kernel methods
+
 Explicitly specify local neighborhoods, and a type of a function to fit it locally. The neighborhood is defined by the kernel function K(x0,x) that acts as weights for x around x0. For example, Gaussian Kernel: K = 1/λ exp( - |x-x0|² / 2λ). [[normal]]]
 
-The simplest way to use kernels K is to calculate a weighted average of y using these kernels (aka **Nadaraya–Watson kernel regression**): f(x0) = ∑ K(x0,x_i)∙y_i / ∑ K(x0,x_i). #kernel
+The simplest way to use kernels K is to calculate a weighted average of y using these kernels (aka **Nadaraya–Watson kernel regression**): $f(x_0) = ∑ (y_i K(x_0,x_i)) / ∑ K(x_0,x_i)$. #kernel
 
 Or we can choose some smooth f(x), and then optimize it, while using kernels in loss ([[l2]]) calculations: RSS(x) = $\sum_i K(x, x_i)\cdot(y_i-f(x_i))^2$ , where ∑ runs through all data points (x_i, y_i). If we assume $f(x_i) = θ_0 + θ(x_i-x)$, with it's own θ for every x, we get **local linear regression** (aka [[loess]]). KNNs (see [[03_Classification]]) can also be considered a subtype of a kernal method, just with a weird discontinuous stepwise kernel.
 
 ### Basis functions
+
 This type includes linear and polynomial regressions, but the idea is that you pick a basis of functions in R^n, and project into it: $f = \sum_i θ_i h_i(x)$. Examples: **polynomial splines**; **radial basis functions** [[RBF]] with K(μ, x) defined around several centroids μ that can itself be optimized. Gaussian kernels are still popular. Feed-forward **Deep Learning** actually also belongs here, it just that its basis functions are defined by the network design (the space of functions that can be achieved with this particular network depth, activation functions etc).
 
 ## Variance of parameter estimations
@@ -69,6 +72,3 @@ It can be proven through direct matrix substitution into the general formula for
 In practice, it means that there are estimators with lower variance, but they are necessarily biased. Which leads to a practical, actionable program: we can introduce some deliberate bias in order to reduce variance. For example, if we decide to set (aka "shrink") any particular θ_i to 0, we inevitably get a biased estimate, but it can help with variance.
 
 Refs: ESL p51, [wiki](https://en.wikipedia.org/wiki/Gauss%E2%80%93Markov_theorem)
-
-See also:
-* [[curse_dim]] - Curse Dimensionality, which can be considered a special (and very unpleasant) case of Bias-Variance trade-off

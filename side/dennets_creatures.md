@@ -1,6 +1,9 @@
 # Dennet's 4 creatures
 
-#behav #meaning
+#behav #meaning #evolution
+
+Parents: [[bib_behavior]]
+Other possible keywords: mind
 
 Tower of Generate-and-Test, by Dennet (1995)
 
