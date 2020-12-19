@@ -8,11 +8,11 @@ Related: [[echo_state]], [[chaos]]
 # Papers
 
 * [[Moretti2013criticality]] - it's stretched (not precise) in networks
-* [[Bojanek2020cyclic]] - among other things, show that synchrony is bad, while asynchrony is good.
+* [[Bojanek2020cyclic]] - among other things, that synchrony is bad, while asynchrony is good.
 
 # To Read
 
-Popular account, harvest all links:
+Popular review of the topic; harvest all links:
 https://www.quantamagazine.org/brains-may-teeter-near-their-tipping-point-20180614/
 
 25 years of criticality in neuroscience — established results, open controversies, novel concepts J Wilting, V Priesemann

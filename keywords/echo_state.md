@@ -27,7 +27,12 @@ Jaeger, H. (2007). Echo state network._scholarpedia_,_2_(9), 2330.
 
 Rodan, A., & Tino, P. (2010). Minimum complexity echo state network._IEEE transactions on neural networks_,_22_(1), 131-144.
 
+Popular account: 
+ https://www.quantamagazine.org/machine-learnings-amazing-ability-to-predict-chaos-20180418/ 
+
 Lukoševičius, M. (2012). A practical guide to applying echo state networks. In_Neural networks: Tricks of the trade_(pp. 659-686). Springer, Berlin, Heidelberg.
+
+Maass, W., & Markram, H. (2004). On the computational power of circuits of spiking neurons. Journal of computer and system sciences, 69(4), 593-616.
 
 Sussillo, D. and Abbott, L. F. (2009). Generating Coherent Patterns of Activity from Chaotic Neural Networks. Neuron, 63(4):544–557.
 https://www.sciencedirect.com/science/article/pii/S0896627309005479
@@ -56,5 +61,9 @@ Spiking network simulator that is apparently so optimized that it runs very fast
 Sussillo, D., & Abbott, L. F. (2012). Transferring learning from external to internal weights in echo-state networks with sparse connectivity._PLoS One_,_7_(5).
 
 Lukoševičius, M., & Uselis, A. (2019, September). Efficient Cross-Validation of Echo State Networks. In_International Conference on Artificial Neural Networks_(pp. 121-133). Springer, Cham.
+
+Maass, W., Natschläger, T., & Markram, H. (2002). Real-time computing without stable states: A new framework for neural computation based on perturbations. Neural computation, 14(11), 2531-2560.
+
+Maass, W., Natschläger, T., & Markram, H. (2004). Computational models for generic cortical microcircuits. Computational neuroscience: A comprehensive approach, 18, 575-605.
 
 # Refs
