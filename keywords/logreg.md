@@ -3,7 +3,7 @@
 #classification
 
 Parent: [[03_Classification]], [[02_Regression]]
-See also: [[linear_regression]], [[linear_separation]], [[softmax]], [[lda]], [[svm]], [[loss]]
+See also: [[linear_regression]], [[linear_separation]], [[softmax]], [[lda]], [[svm]], [[loss]], [[ranking]]
 
 
 By Bayes theorem, our best guess about $P(g|x)$, the probability of point x belonging to a class g, would be $\displaystyle P(g|x) = \frac{f(x)p_g}{\sum_h f(x)p_h}$ , where p_g is prior probability of belonging to this class, and the sum goes through all possible classes. Not only it looks a more like a probability, but actually leads to the math behind logistic regression.

@@ -18,7 +18,7 @@ Graphs are everywhere. However applying DL to them is challenging:
 
 But RNNs kinda inherit to graphs in spirit, and a bunch of guarantees have been achieved. A recurrent structure essentially **climbs** through the graph, and computs the **embedding**. (And that's where cycles become a problem). Earliest models from ~2009. From back then, two main approaches: recurrent and FF (typically, convolutional).
 
-Introduce a bunchof terminology, including **labels** (vectors) for both nodes and edges. Their default graph is directed (good!). **Topological ordering**: only if a graph is acyclic. **Ordered** graphs have all edges adjacent to every node sorted (ordered); **positional** graphs have every node have some named "valences" of sorts, and edges "connect" to them. Node **neighborhood**: all nodes that have edges pointing from them AT this node (like a flow basin).
+Introduce a bunch of terminology, including **labels** (vectors) for both nodes and edges. Their default graph is directed (_i like that_!). **Topological ordering**: only if a graph is acyclic. **Ordered** graphs have all edges adjacent to every node sorted (ordered); **positional** graphs have every node have some named "valences" of sorts, and edges "connect" to them. Node **neighborhood**: all nodes that have edges pointing from them AT this node (like a flow basin).
 
 Ultimately we want to describe the role of each node within a graph as a vector (aka **representation**, or **state**). These representations shouldn't depend on the order in which nodes were considered.
 
@@ -29,7 +29,7 @@ They propose three names for three branches of models:
 
 How to beat graph problems, starting with **variable size**? Work locally, from the node level. Another benefit is that it turns into something like a convnet, as parameters for learning node properties can be reused across all nodes. But even then the combinatorial problem stands, as for a typical (unordered) graph there's no way to allocate "roles" among the nodes in the neighborhood; how to even encode them? All functions that deal with with combining info from neighboring nodes should be **permutation invariant** (e.g. mean, sum, product). There's a theorem that shows that any possible permutation invariant function can be represented as $Ψ(Z) = ϕ(Σ_z ψ(z))$ where {z} are the neighborhood, and ϕ and ψ are certain continuous functions.
 
-What about **cycles**? It means that a calculation of node states is technically infinite, so in practice it has to be made **iterative**, and it has to **converge**. (Or, in some models, instead of an interation, they use layers of a FF network, which is slightly different, but similar in spirit).
+What about **cycles**? It means that a calculation of node states is technically infinite, so in practice it has to be made **iterative**, and it has to **converge**. (Or, in some models, instead of an iteration, they use layers of a FF network, which is slightly different technically, but similar in spirit).
 
 To represent the entire graph (ascend from node-level to graph-level) we need **context diffusion**. A combination of **message dispatching** (using the node state and edge info to calculate the influence on nodes nearby) and **state update**.
 

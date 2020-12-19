@@ -46,7 +46,6 @@ Dump:
 * https://www.researchgate.net/profile/Jasmin_Saric/publication/224890616_Literature_mining_for_the_biologist_from_information_retrieval_to_biological_discovery/links/00b7d51e65b75b50cf000000/Literature-mining-for-the-biologist-from-information-retrieval-to-biological-discovery.pdf
 * https://journals.sagepub.com/doi/pdf/10.1177/1536867X0200200405
 * https://arxiv.org/abs/1801.01253#
-* https://devavrat.mit.edu/wp-content/uploads/2017/10/Rank-Centrality-Ranking-from-pair-wise-comparisons.pdf
 * https://www.builtinboston.com/
 * https://www.youtube.com/watch?v=0--5AxiZefg
 * https://thebookofshaders.com/	
@@ -63,6 +62,7 @@ https://www.ebay.com/itm/Dryer-Heating-Element-for-Whirlpool-Kenmore-PS334313/39
 # Algos and top priorities
 
 * numpy broadcasting - what are the rules again? Does it not broadcast from a 2D to 1D array?* 
+* Granger causality (do I have notes about it somewhere?)
 * docker - what and how
     * Flask docker file (allegedly 80% of what one needs for a typical deployment)
     * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
@@ -105,7 +105,6 @@ https://www.ebay.com/itm/Dryer-Heating-Element-for-Whirlpool-Kenmore-PS334313/39
 * STDM: https://searchnetworking.techtarget.com/definition/STDM
 * CDISC: https://en.wikipedia.org/wiki/Clinical_Data_Interchange_Standards_Consortium
 * two sorted linked lists, combined into 1 sorted linked list
-* revisit ways to calculate ranks from pairwise comparisons, code
 * finish heapsort, optimize, add to other sorts, make compete
 * list border elements of a tree counter-clock-wise
 * The the math of transformers: [reddit link](https://www.reddit.com/r/MachineLearning/comments/j5jg1l/d_confused_mathematician_looking_for_clarity_on/)
@@ -424,7 +423,7 @@ List from Google
 
 * Actually do gradual boosting (from a library) for some synthetic dataset; visualize
 * Laplacian short video: https://www.youtube.com/watch?v=oEq9ROl9Umk
-* that way to create ranking from asymmetric preferences via graphs
+* that way to create ranking from asymmetric preferences via graphs [[ranking]]
 * Laplacian operator (create a new page for basic vector calc) [1h youtube](https://www.youtube.com/watch?v=oEq9ROl9Umk), [wiki](https://en.wikipedia.org/wiki/Laplace_operator)
 * dual bases: why is this term a thing? How does it help? Describe here: [[linalg]]
 * How come stochastic gradient descent provides regularization? Why adding bagging to GBM, for example, can be considered a case of regularization? [[05_Ensembles]].
