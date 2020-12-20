@@ -6,6 +6,7 @@
 * [[embedding]]
 * [[vae]] - autoencoders
 * [[gan]] - GANs :)
+* noisy-student #todo
 
 **Related:**
 * [[triplet_loss]] - aka contrastive loss or contrastive learning, aka **negative sampling** (which also seems to be a more popular term)

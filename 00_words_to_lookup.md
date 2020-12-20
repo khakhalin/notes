@@ -61,6 +61,10 @@ https://www.ebay.com/itm/Dryer-Heating-Element-for-Whirlpool-Kenmore-PS334313/39
 
 # Algos and top priorities
 
+* Find that paper with benchmarks for RNN
+* spectral properties of graphs, spectral radius
+* https://en.wikipedia.org/wiki/Moore%E2%80%93Penrose_inverse
+* Lyapunov exponent - how to estimate? (For chaotic systems) [[lyapunov-exp]]
 * numpy broadcasting - what are the rules again? Does it not broadcast from a 2D to 1D array?* 
 * Granger causality (do I have notes about it somewhere?)
 * docker - what and how

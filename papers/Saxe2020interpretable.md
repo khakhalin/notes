@@ -20,3 +20,7 @@ If needed, we can do interactions as well (pairwise products of some components?
 For each of the sub-models, Ryan uses an interesting architecture of 4 dense layers, first with ReLu, and then three with **softplus** (see [[activation_functions]]). The ReLU layer allows for fitting jagged, piecemal functions, as ReLUs turn on and off (something that's called **ReLU breakpoints**, that Ryan illustrates). And then after each section is defined, softplus learns smooth, warm, continuous non-linearities.
 
 Nice code that is worth reproducing!
+
+# Refs
+
+Agarwal, R., Frosst, N., Zhang, X., Caruana, R., & Hinton, G. E. (2020). Neural additive models: Interpretable machine learning with neural nets. arXiv preprint arXiv:2004.13912.

@@ -5,32 +5,90 @@
 Parents: [[07_RNNs]]
 See also: [[criticality]], [[bib_stdp]], [[cellular_automata]]
 
-# Echo-State Networks
-
-#todo
-
-# Liquid State Machines
-
-Similar to ESN, but on spiking neurons? #todo
-
 # Papers
 
-* [[Jaeger2004harness]] - Harnessing Nonlinearity - first description? (CHECK!) #halfthere
+* [[Jaeger2004harness]] - First description of echo-state
+* [[Carroll2019structure]] - Playing with minimalistic structure (all weights +1, 0, or −1)
+
+# Summary
+
+* **Echo-State Networks**: introduced by Jaeger
+* **Liquid State Machines**: a version by Markram; a spiking network (?)
+
+Apparently one really cool thing about ESN is that they are highly parallelizable - check how it is done, and is it really better than "normal" networks?
+
+Interesting statements from scholarpedia:
+* Regularization for the final layer (L2) helps
+* A fully connect reservoir works equally well and sparse connectivity only helps with computational complexity (but without references; just claims that "many authors report"). Also, obviously, if weights are allowed to be closer to 0, then fully connected isn't really quite "fully connected".
+
+# Ideas
+
+* When quantifying networks, can we use richness of echos as a proxy for actual performance, to avoid training? Or is training fast enough?
+
+Subprojects
+* Use local unsupervised learning to de-correlate the network. STDP-style? Hoping that the network will become less symmetric?
+* Use local logic to deliberately make the network less symmetric? (is the same as STPD? Basically, if two nodes are too similar, we want to make them dissimilar… Sketch a plasticity rule that would achieve that.)
+* Pruning experiments for this type of networks? Two options for pruning here - in the output layer (which could also allow ensembling on the same reservoir), and in the reservoir itself (which could curiously interact with network properties). Use some sort of backprop-like calculation, find least useful nodes and rewire them?
+* Genetic algorithm?
+* Greedy algorithm? (Adding connections one by one)?
+* Can we find the most asymmetric network algorithmically? Starting from tiny graphs?
+* Now, everything that was asked above, can actually be asked BOTH about sparse connectivity, and negative weights. For a given sparse network, is there a best distribution of positive and negative weights? Can we converge on it, or find a distribution algorithmically, similar to graph coloring algorithms and whatnot?	
+* Is brain-style inhibition much worse than "distributed inhibition" (50% of negative weights)? If we do fixed some-to-some inhibition (a mix of feed-forward and feed-back; get average activity of random M neurons, project to another random M?), will it be similar? Just how fragmented does it have to be?
+* Another potential bonus of compartmentalizing inhibition is that we can keep it fixed, and only change the excitatory network, which may enable simpler analyses (unweighted graphs).
 
 # To-read
 
-Paassen, B., & Schulz, A. (2020). Reservoir memory machines. arXiv preprint arXiv:2003.04793.
-https://arxiv.org/abs/2003.04793
-https://gitlab.ub.uni-bielefeld.de/bpaassen/reservoir-memory-machines
-
-Jaeger, H. (2007). Echo state network._scholarpedia_,_2_(9), 2330.
-
-Rodan, A., & Tino, P. (2010). Minimum complexity echo state network._IEEE transactions on neural networks_,_22_(1), 131-144.
-
-Popular account: 
- https://www.quantamagazine.org/machine-learnings-amazing-ability-to-predict-chaos-20180418/ 
+Tanaka, G., Yamane, T., Héroux, J. B., Nakane, R., Kanazawa, N., Takeda, S., ... & Hirose, A. (2019). Recent advances in physical reservoir computing: a review. Neural Networks.
+https://www.sciencedirect.com/science/article/pii/S0893608019300784
+High priority #todo
 
 Lukoševičius, M. (2012). A practical guide to applying echo state networks. In_Neural networks: Tricks of the trade_(pp. 659-686). Springer, Berlin, Heidelberg.
+
+Rodan, A., & Tino, P. (2010). Minimum complexity echo state network. IEEE transactions on neural networks, 22 (1), 131-144.
+
+Reducing network size and improving prediction stability of reservoir computing (2020)
+https://arxiv.org/pdf/2003.03178.pdf
+
+Do Reservoir Computers Work Best at the Edge of Chaos?
+https://arxiv.org/pdf/2012.01409.pdf
+
+Path Length Statistics in Reservoir Computers
+https://www.researchgate.net/profile/T_Carroll/publication/343653866_Path_Length_Statistics_in_Reservoir_Computers/links/5f3680c8458515b7291f35ec/Path-Length-Statistics-in-Reservoir-Computers.pdf
+
+Manjunath, G. (2020). Memory-Loss is Fundamental for Stability and Distinguishes the Echo State Property Threshold in Reservoir Computing & Beyond._arXiv preprint arXiv:2001.00766_.
+[https://arxiv.org/pdf/2001.00766.pdf](https://arxiv.org/pdf/2001.00766.pdf)
+Looks very relevant!!
+
+Rodan, A. (2012). Architectural designs of Echo State Network (Doctoral dissertation, University of Birmingham). PhD thesis
+https://etheses.bham.ac.uk/id/eprint/3610/1/Alrodan12PhD.pdf
+He totally considered fixed weights here, and shows that it doesn't hurt. Calls it Simple Cycle Reservoir (SCR). Looks at simple architectures.
+
+Mutual Information and the Edge of Chaos in Reservoir Computers
+https://arxiv.org/pdf/1906.03186.pdf
+
+Dimension of Reservoir Computers
+https://arxiv.org/pdf/1912.06472.pdf
+
+Schiller U.D. and Steil J. J. (2005) Analyzing the weight dynamics of recurrent learning algorithms. Neurocomputing, 63C:5-23
+Backpropagation decorrelation. Apparently, also show that if you try to teach the entire RNN, most changes happen in the output layer anyways.
+
+Maass, W., Natschläger, T., & Markram, H. (2002). Real-time computing without stable states: A new framework for neural computation based on perturbations. Neural computation, 14(11), 2531-2560.
+Original publication on liquid state machines.
+
+Maass, W., Natschläger, T., & Markram, H. (2004). Computational models for generic cortical microcircuits. Computational neuroscience: A comprehensive approach, 18, 575-605.
+
+On Explaining the Surprising Success of Reservoir Computing
+Forecaster of Chaos?
+https://arxiv.org/pdf/2008.06530.pdf
+
+Using reservoir computers to distinguish chaotic signals
+https://arxiv.org/pdf/1810.04574.pdf
+
+Testing Dynamical System Variables for Reconstruction
+https://arxiv.org/pdf/1808.08897.pdf
+
+Popular account: 
+https://www.quantamagazine.org/machine-learnings-amazing-ability-to-predict-chaos-20180418/ 
 
 Maass, W., & Markram, H. (2004). On the computational power of circuits of spiking neurons. Journal of computer and system sciences, 69(4), 593-616.
 
@@ -40,13 +98,11 @@ https://www.sciencedirect.com/science/article/pii/S0896627309005479
 Sussillo, D., & Barak, O. (2013). Opening the black box: low-dimensional dynamics in high-dimensional recurrent neural networks. Neural computation, 25(3), 626-649.
 https://www.mitpressjournals.org/doi/full/10.1162/NECO_a_00409
 
-Manjunath, G. (2020). Memory-Loss is Fundamental for Stability and Distinguishes the Echo State Property Threshold in Reservoir Computing & Beyond._arXiv preprint arXiv:2001.00766_.
-[https://arxiv.org/pdf/2001.00766.pdf](https://arxiv.org/pdf/2001.00766.pdf)
-Looks very relevant!!
+Predicting slow and fast neuronal dynamics with machine learning (2019)
+https://www.researchgate.net/profile/Rosangela_Follmann/publication/337359853_Predicting_slow_and_fast_neuronal_dynamics_with_machine_learning/links/5dd72523299bf10c5a26c2bc/Predicting-slow-and-fast-neuronal-dynamics-with-machine-learning.pdf
 
-Tanaka, G., Yamane, T., Héroux, J. B., Nakane, R., Kanazawa, N., Takeda, S., ... & Hirose, A. (2019). Recent advances in physical reservoir computing: a review. Neural Networks.
-https://www.sciencedirect.com/science/article/pii/S0893608019300784
-High priority #todo
+Predicting bursting in a complete graph of mixed population through reservoir computing (2020)
+https://journals.aps.org/prresearch/pdf/10.1103/PhysRevResearch.2.033338
 
 Pogodin, R., Corneil, D., Seeholzer, A., Heng, J., & Gerstner, W. (2019). Working memory facilitates reward-modulated Hebbian learning in recurrent neural networks. arXiv preprint arXiv:1910.10559. 
 https://arxiv.org/pdf/1910.10559.pdf 
@@ -62,8 +118,19 @@ Sussillo, D., & Abbott, L. F. (2012). Transferring learning from external to int
 
 Lukoševičius, M., & Uselis, A. (2019, September). Efficient Cross-Validation of Echo State Networks. In_International Conference on Artificial Neural Networks_(pp. 121-133). Springer, Cham.
 
-Maass, W., Natschläger, T., & Markram, H. (2002). Real-time computing without stable states: A new framework for neural computation based on perturbations. Neural computation, 14(11), 2531-2560.
+Bürger, J., Goudarzi, A., Stefanovic, D., and Teuscher, C. (2015, July) Hierarchical composition of memristive networks for real-time computing. In Nanoscale Architectures (NANOARCH), 2015 IEEE/ACM International Symposium on (pp. 33-38)
+Allegedly a link between reservoir computing and neuromorphic computing (I'm sure not the only one, but cited by Jaeger)
 
-Maass, W., Natschläger, T., & Markram, H. (2004). Computational models for generic cortical microcircuits. Computational neuroscience: A comprehensive approach, 18, 575-605.
+Paassen, B., & Schulz, A. (2020). Reservoir memory machines. arXiv preprint arXiv:2003.04793.
+https://arxiv.org/abs/2003.04793
+https://gitlab.ub.uni-bielefeld.de/bpaassen/reservoir-memory-machines
+Seems like a hybrid of trainable turing machines and reservoir computing? But not really reservoir computing.
 
 # Refs
+
+People:
+* tl carroll: https://scholar.google.ru/citations?user=3MJYhIMAAAAJ
+* Herbert Jaeger: https://scholar.google.ru/citations?user=0uztVbMAAAAJ
+
+Jaeger, H. (2007). Echo state network. scholarpedia, 2 (9), 2330.
+http://www.scholarpedia.org/article/Echo_state_network
