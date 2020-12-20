@@ -6,7 +6,7 @@ https://arxiv.org/pdf/1903.12487.pdf
 #echo
 
 Parents: [[09_Graphs]], [[07_RNNs]] / [[echo_state]]
-Related: [[chaos]]
+Related: [[chaos]], [[Carroll2020chaos]] (next paper)
 
 Consider a reservoir of 100 neurons with weights in {0, 1}, then start flipping some of +1 edges to −1, thus altering the network. Networks were random, except that they made sure they were strongly connected (there's a path between any 2 nodes). No loops (diagonal edges).
 
@@ -36,7 +36,9 @@ Set 9800/10000 = 98% of edges to 1 (the rest are 0). Then flip anything between 
 
 When they look at the number of symmetries, the more symmetric the network (the higher the number of symmetries), the higher is the testing error for the best signal it generates (a straight line in log-log coordinates). This is true for both types of nodes, and several types of signals, even though actual shapes and values are slightly different.
 
-Flipping edges reduced symmetries (even if a graph is symmetric, a +edge and a −edge are no longer interchangeable), and after lots of flips (~100) symmetries disappear. Similarly, flips increased the rank of the echo matrix Ω. Which may be another way to explain why rando-flipped networks are better in approximating signals. The training error steadily went down; the testing error went down, then increased once again, then again went down. They are saying that maybe there's a range of flips (~30-40% of edges) where "the reservoir is not stable" (more sensitive to small changes in the input signal). They don't explore it beyond that though, and don't explain why it would be the case.
+Flipping edges reduced symmetries (even if a graph is symmetric, a +edge and a −edge are no longer interchangeable), and after lots of flips (~100) symmetries disappear. Similarly, flips increased the rank of the echo matrix Ω. Which may be another way to explain why rando-flipped networks are better in approximating signals. The training error steadily went down; the testing error went down, then increased once again, then again went down. They are saying that maybe there's a range of flips (~30-40% of edges) where "the reservoir is not stable" (more sensitive to small changes in the input signal).
+
+> They don't explore it here beyond that, and don't explain why it would be the case, but see next paper [[Carroll2020chaos]] show that actually working at the edge of chaos decreases computational capacity, as the system becomes unstable, and chaotically diverges.
 
 > They also show that linear nodes don't work, but that's obvious, isn't it? I'm not sure why they spent a whole page on it.
 

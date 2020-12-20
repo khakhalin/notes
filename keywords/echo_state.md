@@ -3,12 +3,13 @@
 #echo #rnn #graphs #bib
 
 Parents: [[07_RNNs]]
-See also: [[criticality]], [[bib_stdp]], [[cellular_automata]]
+See also: [[criticality]], [[stdp]], [[cellular_automata]]
 
 # Papers
 
 * [[Jaeger2004harness]] - First description of echo-state
 * [[Carroll2019structure]] - Playing with minimalistic structure (all weights +1, 0, or −1)
+* [[Carroll2020chaos]] - is chaos good for ESN? No (it's good to be close to it, but not in it)
 
 # Summary
 
@@ -25,35 +26,57 @@ Interesting statements from scholarpedia:
 
 * When quantifying networks, can we use richness of echos as a proxy for actual performance, to avoid training? Or is training fast enough?
 
+OK, we work with sparse matrices with edges from {0, 1, −1}. That's a given.
+
 Subprojects
-* Use local unsupervised learning to de-correlate the network. STDP-style? Hoping that the network will become less symmetric?
+* Genetic algorithm? (for a no-symmetries sparse matrix) Followed by graph analysis.
+    * We need cool methods to quantify non-weighted, but oriented graphs. Like Ricci curvature.
+* Greedy algorithm? (Adding connections one by one)? Can we find the most asymmetric network algorithmically? Starting from tiny graphs?
+* Note that everything that was ask here can actually be asked BOTH about sparse connectivity, and negative weights. For a given sparse network, is there a best distribution of positive and negative weights? Can we converge on it, or find a distribution algorithmically, similar to graph coloring algorithms and whatnot?
+
 * Use local logic to deliberately make the network less symmetric? (is the same as STPD? Basically, if two nodes are too similar, we want to make them dissimilar… Sketch a plasticity rule that would achieve that.)
 * Pruning experiments for this type of networks? Two options for pruning here - in the output layer (which could also allow ensembling on the same reservoir), and in the reservoir itself (which could curiously interact with network properties). Use some sort of backprop-like calculation, find least useful nodes and rewire them?
-* Genetic algorithm?
-* Greedy algorithm? (Adding connections one by one)?
-* Can we find the most asymmetric network algorithmically? Starting from tiny graphs?
-* Now, everything that was asked above, can actually be asked BOTH about sparse connectivity, and negative weights. For a given sparse network, is there a best distribution of positive and negative weights? Can we converge on it, or find a distribution algorithmically, similar to graph coloring algorithms and whatnot?	
+* Use local unsupervised learning to de-correlate the network. STDP-style? Hoping that the network will become less symmetric?
+    * A possible biology-inspired scenario: if 2 inputs come in synchrony, prune one of them. But if a unit has no outputs, connect at random. Or better yet, always rewire (degree-preserving pruning). (This is not STDP though; it's something inspired by it, but not quite it). Could it work as yet another stochastic optimization algorithm?
+    * In principle, classic STDP seems to be about gathering, strengthening evidence, which is more how the last layer works (the last layer can work on stdp alone, huh), not how decorrelation works. Decorrelation should punish neurons that corroborate too much, not reward them with connections. As, apparently, being chaotic isn't that great for an echo-state-network, maybe "classic STDP" is sorta the voice of reason, and it is the synaptic competition + local inhibition that eventually decorrelates the network?
+    * If we do that, and if we keep all weights at 1 (or −1), we'll have to track the "worth" of each potential input, and once an input drops below a certain amount of "worth", randomly rewire it.
+* Role of intrinsic plasticity? Does it make things better or worse?
 * Is brain-style inhibition much worse than "distributed inhibition" (50% of negative weights)? If we do fixed some-to-some inhibition (a mix of feed-forward and feed-back; get average activity of random M neurons, project to another random M?), will it be similar? Just how fragmented does it have to be?
 * Another potential bonus of compartmentalizing inhibition is that we can keep it fixed, and only change the excitatory network, which may enable simpler analyses (unweighted graphs).
+* Non-monotonous activation function, like sin, so that 2 inputs produce inhibition? As an excitatory substitute to real inhibition?
+* As a mix between this last idea and the idea of unsupervised weight flipping, we can rephrase it as advanced intrinsic plasticity of neurons (unsupervised).
 
 # To-read
 
+Carroll, T. L. (2020). Do Reservoir Computers Work Best at the Edge of Chaos?. arXiv preprint arXiv:2012.01409.
+https://arxiv.org/pdf/2012.01409.pdf
+[[Carroll2020chaos]]
+
+Carroll, T. L. (2020). Dimension of reservoir computers. Chaos: An Interdisciplinary Journal of Nonlinear Science, 30(1), 013102.
+https://arxiv.org/pdf/1912.06472.pdf
+Attempts to actually measure the dimensionality of signals in a ESN.
+
 Tanaka, G., Yamane, T., Héroux, J. B., Nakane, R., Kanazawa, N., Takeda, S., ... & Hirose, A. (2019). Recent advances in physical reservoir computing: a review. Neural Networks.
 https://www.sciencedirect.com/science/article/pii/S0893608019300784
-High priority #todo
+High priority
 
-Lukoševičius, M. (2012). A practical guide to applying echo state networks. In_Neural networks: Tricks of the trade_(pp. 659-686). Springer, Berlin, Heidelberg.
+Carroll, T. L. (2020). Path length statistics in reservoir computers. Chaos: An Interdisciplinary Journal of Nonlinear Science, 30(8), 083130.
+https://www.researchgate.net/profile/T_Carroll/publication/343653866_Path_Length_Statistics_in_Reservoir_Computers/links/5f3680c8458515b7291f35ec/Path-Length-Statistics-in-Reservoir-Computers.pdf
 
 Rodan, A., & Tino, P. (2010). Minimum complexity echo state network. IEEE transactions on neural networks, 22 (1), 131-144.
 
-Reducing network size and improving prediction stability of reservoir computing (2020)
+Lukoševičius, M. (2012). A practical guide to applying echo state networks. In_Neural networks: Tricks of the trade_(pp. 659-686). Springer, Berlin, Heidelberg.
+
+Wang, X., Jin, Y., & Hao, K. (2019). Evolving Local Plasticity Rules for Synergistic Learning in Echo State Networks. IEEE Transactions on Neural Networks and Learning Systems, 31(4), 1363-1374.
+(no free text online)
+It seems that they are really trying to evolve some biologically-inspired rules, inspired by Hebbian plasticity and synaptic interference.
+
+Lymburn, T., Khor, A., Stemler, T., Corrêa, D. C., Small, M., & Jüngling, T. (2019). Consistency in echo-state networks. Chaos: An Interdisciplinary Journal of Nonlinear Science, 29(2), 023118.
+https://arxiv.org/pdf/1901.07729.pdf
+Also try to drive a network towards better performance.
+
+Haluszczynski, A., Aumeier, J., Herteux, J., & Räth, C. (2020). Reducing network size and improving prediction stability of reservoir computing. Chaos: An Interdisciplinary Journal of Nonlinear Science, 30(6), 063136.
 https://arxiv.org/pdf/2003.03178.pdf
-
-Do Reservoir Computers Work Best at the Edge of Chaos?
-https://arxiv.org/pdf/2012.01409.pdf
-
-Path Length Statistics in Reservoir Computers
-https://www.researchgate.net/profile/T_Carroll/publication/343653866_Path_Length_Statistics_in_Reservoir_Computers/links/5f3680c8458515b7291f35ec/Path-Length-Statistics-in-Reservoir-Computers.pdf
 
 Manjunath, G. (2020). Memory-Loss is Fundamental for Stability and Distinguishes the Echo State Property Threshold in Reservoir Computing & Beyond._arXiv preprint arXiv:2001.00766_.
 [https://arxiv.org/pdf/2001.00766.pdf](https://arxiv.org/pdf/2001.00766.pdf)
@@ -63,11 +86,15 @@ Rodan, A. (2012). Architectural designs of Echo State Network (Doctoral disserta
 https://etheses.bham.ac.uk/id/eprint/3610/1/Alrodan12PhD.pdf
 He totally considered fixed weights here, and shows that it doesn't hurt. Calls it Simple Cycle Reservoir (SCR). Looks at simple architectures.
 
+Cui, H., Liu, X., & Li, L. (2012). The architecture of dynamic reservoir in the echo state network. Chaos: An Interdisciplinary Journal of Nonlinear Science, 22(3), 033127.
+(No obvious access online. But I'm not very hopeful about this one: it seems that they just tried small-world and sale-free networks, and described how ESN worked in them)
+
 Mutual Information and the Edge of Chaos in Reservoir Computers
 https://arxiv.org/pdf/1906.03186.pdf
 
-Dimension of Reservoir Computers
-https://arxiv.org/pdf/1912.06472.pdf
+Ceni, A., Ashwin, P., Livi, L., & Postlethwaite, C. (2020). The Echo Index and multistability in input-driven recurrent neural networks. arXiv preprint arXiv:2001.07694.
+https://arxiv.org/pdf/2001.07694.pdf
+How to measure "Echo index" (the quality of a reservoir). Also, show that the echo index is input-dependent.
 
 Schiller U.D. and Steil J. J. (2005) Analyzing the weight dynamics of recurrent learning algorithms. Neurocomputing, 63C:5-23
 Backpropagation decorrelation. Apparently, also show that if you try to teach the entire RNN, most changes happen in the output layer anyways.
