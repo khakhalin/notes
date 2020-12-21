@@ -3,7 +3,7 @@
 #dl #graphs
 
 Parents: [[09_Graphs]] / [[graph_embedding]] / [[deep_graphs]]
-Related: [[cnn]], [[generative_graphRNNs]]
+Related: [[convnet]], [[generative_graphRNNs]]
 
 Let's generalize the simple idea from [[deep_graphs]] to a case of
 1. more general aggregation function

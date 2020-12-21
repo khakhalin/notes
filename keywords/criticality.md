@@ -12,6 +12,8 @@ Related: [[echo_state]], [[chaos]]
 
 # To Read
 
+Ma, Z., Turrigiano, G. G., Wessel, R., & Hengen, K. B. (2019). Cortical Circuit Dynamics Are Homeostatically Tuned to Criticality In Vivo. Neuron.
+
 Popular review of the topic; harvest all links:
 https://www.quantamagazine.org/brains-may-teeter-near-their-tipping-point-20180614/
 

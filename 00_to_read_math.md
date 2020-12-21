@@ -321,7 +321,7 @@ Features visualization.
 
 Doshi-Velez, F., & Kim, B. (2017). Towards a rigorous science of interpretable machine learning. arXiv preprint arXiv:1702.08608.
 https://arxiv.org/abs/1702.08608
-(This is actually about [[bib_fairness]])
+(This is actually about [[fairness]])
 
 # Tickets, distillation, transfer
 

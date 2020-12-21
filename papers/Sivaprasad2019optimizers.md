@@ -1,4 +1,4 @@
-# Sivaprasad 2019: Benchmarking and hyperparameters
+# Hyperparameters and benchmarking of optimizers
 
 Originally had a different title:
 Sivaprasad, P. T., Mai, F., Vogels, T., Jaggi, M., & Fleuret, F. (2019). On the Tunability of Optimizers in Deep Learning. arXiv preprint arXiv:1910.11758.

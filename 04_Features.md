@@ -5,7 +5,7 @@
 Subtopics:
 * [[linear_separation]] - classification and coordinate systems
 * [[clustering]] - Methods in data clustering
-* [[bib_fairness]] - on practical choice and interpretation of features
+* [[fairness]] - on practical choice and interpretation of features
 * [[smoothing]] - as a type of feature transformation
 
 **Dim Reduction**

@@ -1,11 +1,15 @@
-# CNN : Convolutional Neural Network : convnet
+# CNN, Convolutional Neural Network, convnets
 
 #dl #convnet
 
 Parent: [[06_DL]]
 See also: [[pooling]]
 
-To read:
+Papers:
+* [[Bai2018sequence]] - convnets consistently outperfm RNNs in temporal sequence modeling
+
+# To read
+
 * http://cs231n.github.io/convolutional-networks/ - nice concise introduction to CNNs
 * https://cs.nyu.edu/~fergus/papers/zeilerECCV2014.pdf - Visualizing and Understanding Convolutional Networks. 2014. Zeiler
 * Everything convolution: https://towardsdatascience.com/a-comprehensive-introduction-to-different-types-of-convolutions-in-deep-learning-669281e58215

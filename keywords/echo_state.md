@@ -167,6 +167,13 @@ https://arxiv.org/abs/2003.04793
 https://gitlab.ub.uni-bielefeld.de/bpaassen/reservoir-memory-machines
 Seems like a hybrid of trainable turing machines and reservoir computing? But not really reservoir computing.
 
+# To-revisit and describe
+
+Murray, J. M. (2019). Local online learning in recurrent networks with random feedback. eLife, 8, e43299.
+[Murray 2019] x>Win>echo>Wou>y, dh/dt = -h/tau stable solution for each element, tanh() activation. Minimizes square distance, applies gradient descent. Then tries to make biologically plausible: drops non-local term (refuses to optimize activity of other nodes that feed _from_ this node by changing inputs _to_ this node). And instead of reverting weights of Wout, uses random weights to communicate the error back. With this, weight change is proportinal to an accumulated product of pre- to the (derivative of) post-activity for eacn synapse (eligibility traces!). If only Wout are trained - learning is worse. If only Wrec - completely unsuccessful (not surprising as they use random error instead of flipped Wout). Use "ready-set-go" (interval matching) as a test. Then stiches an architecture of cortex-basalganglia-thalamus, to learn "behavioral syllabi" for a longer behavior.
+
+
+
 # Refs
 
 People:

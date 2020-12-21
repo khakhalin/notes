@@ -7,7 +7,18 @@ Subtopics:
 * [[gru]] - Gated Recurrent Unit (kinda a simplified version of LSTM)
 * [[echo_state]] - Echo-State Networks
 
+Papers:
+* ?
+
+Benchmarking of RNNs:
+* [[Bai2018sequence]] - a review of sequence modeling benchmarking
+* [[Breuel2015benchmark]] - on hyperparameters (LSTM RNNs are sensitive to learning rate, but not batch)
+
 # Bibliography
+
+Cooijmans, T., Ballas, N., Laurent, C., Gülçehre, Ç., & Courville, A. (2016). Recurrent batch normalization. arXiv preprint arXiv:1603.09025.
+https://arxiv.org/pdf/1603.09025.pdf
+Describe how to do batch-norm in RNNs. Is it like inhibition, essentially? ~300 citations (good)
 
 Attention and Augmented Recurrent Neural Networks: https://distill.pub/2016/augmented-rnns/
 

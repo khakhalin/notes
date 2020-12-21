@@ -3,6 +3,7 @@
 #attention #text #dl
 
 Parents: [[10_Text]]
+Related: [[convnet]]
 
 Papers:
 * [[Vaswani2017attention]] - original main paper
@@ -30,7 +31,7 @@ https://arxiv.org/abs/2005.14165 - gpt3 paper
 
 An alternative to RNNs (summary ref: [1](https://towardsdatascience.com/transformers-141e32e69591)). Text is inherently a stream of signals (words), organized in time, so it makes sense that it should be analyzed by **RNNs**. The problem is that text has long-ish connections (say, objects are elliptically passed from one sentence to another), and RNNs have problems with that (forget, or rather, don't even learn). Then **LSTM** was invented, which improves things, but not enough, as the context still tends to decay exponentially. Also, hard to parallelize, as inputs need to be processed word-by-word. Then they came up with **attention**, by assigning every word a certain "hidden state", and passing it to the entire line (_??? I really not sure how it works_), but still it didn't help enough. The lack of parallelization was the main bottleneck.
 
-But convolutional networks that process info in chunks are highly parallelizable! And the information depth is lower (instead of going through all N elements, activation from the furthest element climbs up the hirarchy through just log N layers). **Transformers** (developed by Google Research and Google Brain) combine the idea CNNs with attention.
+But convolutional networks that process info in chunks are highly parallelizable! And the information depth is lower (instead of going through all N elements, activation from the furthest element climbs up the hirarchy through just log N layers). **Transformers** (developed by Google Research and Google Brain) combine the idea CNNs [[convnet]] with attention.
 
 # Structure
 

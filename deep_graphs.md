@@ -3,7 +3,7 @@
 #dl #graphs
 
 Parents: [[06_DL]], [[09_Graphs]]
-Related: [[graph_embedding]] (shallow encoders), [[cnn]], [[transformers]]
+Related: [[graph_embedding]] (shallow encoders), [[convnet]], [[transformers]]
 
 Children:
 * [[graphsage]] - the next iteration of this idea
