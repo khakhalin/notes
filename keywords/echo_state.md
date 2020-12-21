@@ -18,9 +18,9 @@ See also: [[criticality]], [[stdp]], [[cellular_automata]]
 
 Apparently one really cool thing about ESN is that they are highly parallelizable - check how it is done, and is it really better than "normal" networks?
 
-Interesting statements from scholarpedia:
-* Regularization for the final layer (L2) helps
-* A fully connect reservoir works equally well and sparse connectivity only helps with computational complexity (but without references; just claims that "many authors report"). Also, obviously, if weights are allowed to be closer to 0, then fully connected isn't really quite "fully connected".
+Interesting general statements:
+* Regularization for the final layer (L2) helps (scholarpedia)
+* Also according to scholarpedia, sparsity is overrated (nb: true only if edges are weighted!). A fully connect reservoir works quite well; if edges are weighted, sparse connectivity only helps with computational complexity. (but without references; just claims that "many authors report"). Also, obviously, if weights are allowed to be closer to 0, then fully connected isn't really quite "fully connected".
 
 # Ideas
 
@@ -46,11 +46,19 @@ Subprojects
 * Non-monotonous activation function, like sin, so that 2 inputs produce inhibition? As an excitatory substitute to real inhibition?
 * As a mix between this last idea and the idea of unsupervised weight flipping, we can rephrase it as advanced intrinsic plasticity of neurons (unsupervised).
 
+**Draft abstract**
+
+Reservoir models, such as echo state networks, have shown unique efficiency in chaotic time series classification and prediction. In these models, the reservoir is represented as a set of  nodes connected into an oriented graph. In classic echo state networks, the graph serving as a computational reservoir is randomized, but intuitively, certain types of non-random graphs could offer better performance. In this paper, we use genetic algorithms and local unsupervised edge rewiring to construct quasi-random graphs that can serve as effective echo state reservoirs. We use these echo networks to predict chaotic time series, and apply classic network and computational topology measures, such as Ricci curvature, to describe the properties of computationally effective reservoirs. Taken together, our work offers practical steps towards the design of efficient reservoir models.
+
+**Open questions**
+* How do we pick what nodes to feed input signal to? Is it also a part of optimization? In the symmetries paper, they did +1 −1 to every single node. Is it good? Is it optimal?
+* How to calculate symmetries of a graph fast in practice? See [[graph_symmetry]] for packages.
+
 # To-read
 
 Carroll, T. L. (2020). Do Reservoir Computers Work Best at the Edge of Chaos?. arXiv preprint arXiv:2012.01409.
 https://arxiv.org/pdf/2012.01409.pdf
-[[Carroll2020chaos]]
+Started here: [[Carroll2020chaos]]
 
 Carroll, T. L. (2020). Dimension of reservoir computers. Chaos: An Interdisciplinary Journal of Nonlinear Science, 30(1), 013102.
 https://arxiv.org/pdf/1912.06472.pdf
@@ -67,9 +75,15 @@ Rodan, A., & Tino, P. (2010). Minimum complexity echo state network. IEEE transa
 
 Lukoševičius, M. (2012). A practical guide to applying echo state networks. In_Neural networks: Tricks of the trade_(pp. 659-686). Springer, Berlin, Heidelberg.
 
+Ferreira, A. A., & Ludermir, T. B. (2009, June). Genetic algorithm for reservoir computing optimization. In 2009 International Joint Conference on Neural Networks (pp. 811-815). IEEE.
+
+Zhong, S., Xie, X., Lin, L., & Wang, F. (2017). Genetic algorithm optimized double-reservoir echo state network for multi-regime time series prediction. Neurocomputing, 238, 191-204.
+
 Wang, X., Jin, Y., & Hao, K. (2019). Evolving Local Plasticity Rules for Synergistic Learning in Echo State Networks. IEEE Transactions on Neural Networks and Learning Systems, 31(4), 1363-1374.
 (no free text online)
 It seems that they are really trying to evolve some biologically-inspired rules, inspired by Hebbian plasticity and synaptic interference.
+
+Huang, R., Li, Z., & Cao, B. (2020). A Soft Sensor Approach Based on an Echo State Network Optimized by Improved Genetic Algorithm. Sensors, 20(17), 5000.
 
 Lymburn, T., Khor, A., Stemler, T., Corrêa, D. C., Small, M., & Jüngling, T. (2019). Consistency in echo-state networks. Chaos: An Interdisciplinary Journal of Nonlinear Science, 29(2), 023118.
 https://arxiv.org/pdf/1901.07729.pdf

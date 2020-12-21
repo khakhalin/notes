@@ -5,7 +5,7 @@
 Some random notes on group theory.
 
 See also:
-* [[graph_th]] - Graph theory
+* [[graph_symmetry]]
 
 **Dihedral group**: symmetries of a regular polygon. Denoted Dih_n or D_2n. Has a size of 2n (n rotations + the same number of flipped rotations). ab denotes rotation b followed by rotation a. https://en.wikipedia.org/wiki/Dihedral_group
 

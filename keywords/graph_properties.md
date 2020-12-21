@@ -3,12 +3,12 @@
 #graphs
 
 Parent: [[09_Graphs]]
-See also: [[graph_intro]], [[graph_generate]], [[algos_graph]], [[graph_th]]
+See also: [[graph_intro]], [[graph_generate]], [[algos_graph]]
 
 Subtopics and papers:
+* [[graph_symmetry]] - symmetrical and asymmetrical graphs
 * Clustering coeff
     * [[Bojanek2020cyclic]] - triplet motifs in oriented graphs
-
 
 **Four main ways** to provide a large-scale characteristic of a graph:
 * Degree distribution P(k)

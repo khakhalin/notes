@@ -1,7 +1,7 @@
 # Graphs Intro
 
 Parents: [[09_Graphs]]
-See also: [[graph_properties]], [[graph_th]], [[algos_graph]], [[la_net]]
+See also: [[graph_properties]], [[algos_graph]], [[la_net]]
 
 **Motivation**: everything is complex systems (agents), and information (exchange of it between some… nodes?), so graphs and networks are everywhere. Knowledge itself is best to be represented as a graph (relations of items, elements). Human society is a graph, and our brains are a graph, and everything is a graph :) Universal language.
 

@@ -24,9 +24,9 @@ Lorentz system for a signal ([[lorenz]]). For training, discarded first 2000 poi
 
 Everything done in Matlab.
 
-### Main analysis (connectivity)
+## Main analysis (connectivity)
 
-Looked into **symmetries** of the network, as apparently there's a fast algorithm for that (Stein 2013).
+Looked into **symmetries** of the network, as apparently there's a fast algorithm for that (Stein 2013, but also [[graph_symmetry]]). It's hard to figure out what they did exactly though, as they don't provide enough details to reproduce the calculations. (Do they even test ordered or unordered graphs? It sounds from the text that it should be on real, ordered graphs, but it's not quite clear...)
 
 Analytically show that symmetries are bad, as they make the network poorer (symmetrical parts may just copy each other). **Cluster synchronization**. Even if symmetric subnetworks are not exactly identical, it would lead to rows of data in the echo library (they call it Ω) that are similar to each other, which is bad. They then just looked at the rank of covariate matrix ΩᵀΩ, which is equal to the number of uncorrelated vectors in Ω, except that they used approximate rank (the number of eigenvalues above a certain threshold).
 
@@ -52,7 +52,7 @@ Finally, they show that having about 50% of weights negative (they call it "flip
 
 > And they totally didn't explore how to distribute weight signs in a sparse network. They just show that 50% is optimal, on average, but are some distributions better than others? Probably, right?
 
-### Random notes
+## Random notes
 
 Starts with a brief review of applications, and weird analog systems that can be used as a physical substrate for reservoir computing (photonics and what not).
 
@@ -61,10 +61,16 @@ Starts with a brief review of applications, and weird analog systems that can be
 Pseudo-inverse:
 https://en.wikipedia.org/wiki/Moore%E2%80%93Penrose_inverse
 
+The project they cite as a fast algorithm for detecting all symmetries of a graph.
+Technically the citation is:
+W. Stein, SAGE: Software for Algebra and Geometry Experimentation (http://www.sagemath.org/sage/,
+http://sage.scipy.org/, 2013).
+But this paper doesn't exist. The software is updated regularly, so can be cited with any year. There's also a paper with a similar name, but it's more of a release note, and it's from 2005.
 Stein, W., & Joyner, D. (2005). Sage: System for algebra and geometry experimentation. Acm Sigsam Bulletin, 39(2), 61-64.
 https://www.sagemath.org/files/sage_stein2005.pdf
 http://www.sagemath.org/sage/
 http://sage.scipy.org/
+See [[graph_symmetry]] for some more practical details of how to actually find graph symmetries.
 
 For most original definitions, they cite this:
 H. Jaeger, Technical report GMD-Forschungszentrum Informationstechnik (2002).
