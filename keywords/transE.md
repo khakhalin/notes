@@ -4,7 +4,7 @@
 
 Parents: [[09_Graphs]] / [[graph_embedding]]
 Siblings: [[node2vec]]
-See also: [[word2vec]], [[embedding]]
+See also: [[word2vec]], [[embedding]], [[neg_sampling]]
 
 
 **TransE**: an alternative approach that doesn't actually rely on random walks. Ref: Borders 2013.
@@ -17,7 +17,7 @@ We have a bunch of objects (for example, books, authors, genres, usually referre
 
 We initialize entities e_i as a uniform distribution. Translation vectors are init as uiform, then normalized (so uniform on a sphere).
 
-Then we use contrastive loss (aka triplett loss [[triplet_loss]]): at each step we move 2 related items closer to their "target positions" (based on the meaningful translation l), and 2 unrelated (randomly sampled) items further apart. The gradient is given by the formula:
+Then we use contrastive loss (see [[neg_sampling]]): at each step we move 2 related items closer to their "target positions" (based on the meaningful translation l), and 2 unrelated (randomly sampled) items further apart. The gradient is given by the formula:
 
 $\displaystyle \sum \nabla\big[ γ+d(h+l, t)-d(h'+l, t') \big]$ where (h,l, t)is a positive sample, (h', l, t') is a negative sample, and d is a distance between the target point h+l and the actual point t (**dissimilarity measure**: in practice either L1 or L2 norm). We perform SGD on both entites and translations. Every now and then (after each minibatch of triplets) we also normalize all entity vectors e ← e/||e||.
 

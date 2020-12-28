@@ -3,16 +3,16 @@
 #text #embedding
 
 Parent: [[10_Text]]
-See also: [[node2vec]], [[triplet_loss]], [[softmax]]
+See also: [[node2vec]], [[softmax]], [[neg_sampling]]
 
 Developed by Google; works with "bags of words". A representation learning, where we train 2 layers, - a linear (no activation!) dense layer followed by a softmax, - to use the dense layer later for the latent-space projection. The thing we train it on is to predict the word nearby (one of the words nearby picked at random). Not necessarily the "nearest" word, but one somewhat close within the sentence.
 
 In practice, Word2vec uses a few tricks to make this learning work:
 * For a given window (target word ± width), words are skipped with probability proportional to their frequency (aka **skip-gram**). Articles in English, for example, will be skipped, as they are very frequent.
 * To get more efficient, when predicting a word based on the context, instead of normal [[softmax]] (that would require comparison of all probabilities for all possible words) they use **softmax approximation**. It is similar to [[hierarchical_softmax]] (that reduces the number of terms in the sum in the determinant from the total number of words W to ~$\log_2 W$), but their approach is more efficient, and is called:..
-* **Negative sampling**. In order not to update all words that were predicted incorrectly (which would have been computationallly prohibitive), pick a few (2-10?) wrong words at random, and only update them. Say, 5 random words that we have NOT met in this sentence (or rather, within this word window).
+* **Negative sampling** ([[neg_sampling]]). In order not to update all words that were predicted incorrectly (which would have been computationallly prohibitive), pick a few (2-10?) wrong words at random, and only update them. Say, 5 random words that we have NOT met in this sentence (or rather, within this word window).
 
-> The paper is annoying in this regard, as it introduces hierarchical softmax, and also introduces it with some really annoying notation, but then does not use it. It is just something they tried earlier, and something that kinda informed their search for a "better solution", but, as Yannic Kilcher puts it, "it is a distraction". As it is not actuallyuse.
+> The paper is annoying in this regard, as it introduces hierarchical softmax, and also introduces it with some really annoying notation, but then does not use it. It is just something they tried earlier, and something that kinda informed their search for a "better solution", but, as Yannic Kilcher puts it, "it is a distraction". As it is not actually used.
 
 In practice, **negative sampling** works with softmax factorization that kinda similar to that of [[hierarchical_sofmax]], but considers a log of factorized P(x|z), and this turns turns the product of factors into a sum of log-factors. We then try to maximize this sum:
 

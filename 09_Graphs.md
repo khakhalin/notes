@@ -2,12 +2,13 @@
 
 #bib #graphs #networks
 
-**Basic graph techniques**
-* [[graph_intro]] - Intro to graphs
-* [[graph_th]] - Random notes in graph theory
+**Graph techniques**
+* [[graph_intro]] - Basic intro to graphs
+* [[graph_th]] - Random notes on graph theory
 * [[algos_graph]] - Classic algorithms on graphs
 * [[la_net]] - Linear algebra on graphs
     * Spectral techniques - [youtube](https://www.youtube.com/watch?v=0eNQnc0eOB4&list=PL1OaWjIc3zJ4xhom40qFY5jkZfyO5EDOZ&index=5) #todo
+* [[algebraic_topology]] - basis for [[umap]], cliques etc.
 
 **Network science**
 * [[graph_properties]] - How to characterize graphs and networks
@@ -40,7 +41,7 @@ Reviews and intros:
 * [[Bacciu2019gentlegraph]] - Intro to Graph NNs
 * [[Porter2019nonlinearity]] - Dynamics on graphs, including games on graphs, oscillators and what not
 
-Other papers:
+Other related papers:
 * [[Bojanek2020cyclic]] - using triplet motifs to classify (neural) activity on graphs
 
 # To-Read: ML on Graphs

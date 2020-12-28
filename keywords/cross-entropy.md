@@ -6,7 +6,9 @@ Related: [[logreg]], [[gini]]
 
 **Cross-Entropy Loss** is the most useful loss for classification tasks.
 
-Definition: cross-entropy of distribution q relative to distribution p, $H(p,q) = E_p(\log q) = -∑ p_j \cdot \log(q_j)$, where p_j is a probability of an event j (class, value) in the observed set, and q_i are probabilities predicted by the model.
+**Definition**: cross-entropy of a distribution q relative to distribution p,
+$H(p,q) = E_p(\log q) = -∑ p_j \cdot \log(q_j)$, 
+where p_j is a probability of an event j (class, value) in the observed set, and q_i are probabilities predicted by the model.
 
 **Information Theory interpretation:** the expected message length when transmitting data from a (wrong) distribution P, using a code optimized for Q. So, Q is assumed, but P is happening.
 

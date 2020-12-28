@@ -1,11 +1,12 @@
 # ADAM
 
-#dl #tools
+#dl #tools #optimizers
 
 Related: 
 * Parent: [[06_DL]]
 * [[Ruder2016descent]] - an overview of different gradient descent methods
 * [[Sivaprasad2019optimizers]] - claims that ADAM usually outperforms other optimizers.
+
 
 ADAM comes from **Adaptive Moment estimation**. First introduced in this paper with 43k citations: Kingma, D. P., & Ba, J. (2014). Adam: A method for stochastic optimization. arXiv preprint arXiv:1412.6980.
 

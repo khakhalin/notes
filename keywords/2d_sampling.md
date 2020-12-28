@@ -1,4 +1,4 @@
-# 2D sampling algorithms
+# 2D spatial sampling algorithms
 
 #algo
 

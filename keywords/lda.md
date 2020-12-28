@@ -2,7 +2,7 @@
 
 #classification
 
-Parents: [[03_Classification]]
+Parents: [[03_Classification]], [[04_Features]]
 Related: [[logreg]], [[svm]]
 
 As we'll see later, LDA can be considered an alternative to logistic regression. We assume that each class density is a multivariate Gaussian:

@@ -12,4 +12,6 @@ Say, you can drive $max(0,D_+ + (M-D_-))$ down, where M is some characterist dis
 
 > In the paper, they apparently use some other tricks as well. 
 
-Paper: FaceNet: A Unified Embedding for Face Recognition and Clustering Florian Schroff, Dmitry Kalenichenko, James Philbin
+# Ref
+
+FaceNet: A Unified Embedding for Face Recognition and Clustering Florian Schroff, Dmitry Kalenichenko, James Philbin
