@@ -1,6 +1,6 @@
 # Artificial Neural Networks Accurately Predict Language Processing in the Brain
 
-Martin Schrimpf,  Idan A Blank, Greta Tuckute, Carina Kauf, Eghbal A Hosseini, NANCY G KANWISHER, Joshua B. Tenenbaum, Evelina Fedorenko
+Martin Schrimpf,  Idan A Blank, Greta Tuckute, Carina Kauf, Eghbal A Hosseini, Nancy G Kanwisher, Joshua B. Tenenbaum, Evelina Fedorenko
 https://www.biorxiv.org/content/10.1101/2020.06.26.174482v1
 
 Twitterstorm:
@@ -9,6 +9,7 @@ https://twitter.com/martin_schrimpf/status/1276832601240731649
 #neuro #language
 
 Related: [[transformers]], [[10_Text]]
+
 
 **TLDR**: Modern language models (such as transformers) are activated roughtly similarly to human brains, in terms of activation dynamics; and it all comes from the architecture (recurrence, convergence, divergence), not from actual tuning of weights.
 

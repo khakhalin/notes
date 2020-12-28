@@ -1,11 +1,8 @@
 # To-read: Neuro
 
-#neuro #bib
+#neuro #bib #todo
 
-**Bibliographies:**
-* [[criticality]] - a whole bunch of key papers, including reviews, there. Do it!
-* [[bib_reconstruction]] - On reconstructing biological connectivity from spike-trains and alike
-* [[stdp]]
+Se also: [[12_Neuro]] - for an official hub title page bibliography
 
 Hasson, U., Nastase, S. A., & Goldstein, A. (2020). Direct Fit to Nature: An Evolutionary Perspective on Biological and Artificial Neural Networks. Neuron, 105(3), 416-434.
 https://www.cell.com/neuron/pdf/S0896-6273(19)31044-X.pdf

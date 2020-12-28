@@ -3,7 +3,7 @@
 #attention #text #dl
 
 Parents: [[10_Text]]
-Related: [[convnet]]
+Related: [[convnet]], [[residual]]
 
 Papers:
 * [[Vaswani2017attention]] - original main paper
@@ -22,7 +22,7 @@ https://arxiv.org/abs/2005.14165 - gpt3 paper
 
 * How many words do they process at once? What's the size of the bag? And why cannot I find this information in the original paper?
 * Why position encoding is so weird
-* Why residual connections are a good idea
+* Why residual connections are a good idea ([[residual]])
 * Why decoders are so weird, with this KV from one sourse, and Q from another?
 * Why this masking of self-attention layers in decoders is ever a good idea?
 * How come we ended up with this really weird architecture, and how have we convinced ourselves that it is beautiful and optimal in any sense? Is it really optimal in some way, as our concepts of simplicity and symmetry are wrong, or is it an example of ad-hoc "evolution of human thought", as wild and random as Darwinian evolution?

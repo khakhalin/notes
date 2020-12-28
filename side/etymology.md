@@ -8,6 +8,12 @@
 A map with translations of a word in key EU languages:
 https://ukdataexplorer.com/european-translator/?word=tail
 
+Multilingual dictionary (indirect links):
+https://glosbe.com/
+
+Lots of dictionaries for small languages: 
+https://www.lexilogos.com/english/index.htm
+
 A map with old photos:
 https://pastvu.com/p/754272
 
@@ -15,3 +21,18 @@ https://pastvu.com/p/754272
 
 Russian public kadaster: https://pkk.rosreestr.ru/
 Реестр: https://egrp365.ru/reestr?egrp=50:33:0030577
+
+🐶
+🐱
+🐭
+🐰
+🐻
+🐮
+🐷
+🐸
+🐺
+🦊
+🐦
+🐟
+🦋
+🐝

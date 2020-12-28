@@ -2,8 +2,9 @@
 
 #tools #systems #bib #interview
 
-See also:
-* [[job_search]]
+Subtopics and see-also:
+
+* [[job_search]] - collections of links, questions, and strategic tips
 * [[database]]
 * [[nosql]]
 

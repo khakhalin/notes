@@ -10,6 +10,7 @@ See also:
 * [[Sivaprasad2019optimizers]], [[Ruder2016descent]], [[adam]] - other overview of optimizers
 * [[mnist]] - our fav benchmark
 
+
 A list of diverse tasks to benchmark optimizers: MNIST, Fashion MNIST, CIFAR-10 (image recognition), SVHN, ImageNet, character-level prediction with Tolstoy's "War and Peace". And then also, for most of these datasets, 3-4 different architectures / tasks that can be troubleshoot on it: like log-reg, VAE, ConvNet, VGG (Very Deep Conv Network) etc.
 
 # Refs
