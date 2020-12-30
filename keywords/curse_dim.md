@@ -3,9 +3,11 @@
 #dim #clustering #features
 
 Parents: [[04_Features]], [[02_Regression]]
-See also:
+Related:
 * [[typical_sample]] - an alternative to average sample for cursed datasets
+* [[metric]] - on distances and metrics
 * High-dim clustering methods: [[umap]], [[tsne]]
+
 
 In high-dim, volume grows so fast with linear dimensions (r^K for K different dimensions) that most of volume lies in the thin shell, not around the center.
 
@@ -20,10 +22,6 @@ Gaussian distributions are bubbles with all mass in the narrow shell (see [[typi
 Two randomly picked vectors from the same very-high-D distribution are usually perpendicular to each other.
 
 Solution: dimensionality reduction (see [[04_Features]])
-
-# Distances in very-high-dim
-
-For high dimensions (say, word counts in a document) simple Eucledian distance doesn't work that well, as it becomes impossible to compare long documents to short documents. One way would be to normalize vectors before calculating Eucledian distance, but there's an easier way: use **cosine similarity** (see [[04_Features]]). It sorta auto-normalizes lengths, is easier to calculate, and ordering of proximity is the same as for normalized Eucledian.
 
 **Specifics of working with very high dimensions:**
 (Genomic data in this case)

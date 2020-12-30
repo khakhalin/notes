@@ -6,6 +6,19 @@ Parents: [[04_Features]], [[algebraic_topology]]
 Related: [[curse_dim]], [[tsne]], [[neg_sampling]]
 
 
+Things I still don't understand ( #todo ):
+* Practical advice on picking k
+* Conceptually, it seems that I got the algorithm wrong, so now I don't get the meaning of the `local_connectivity` parameter (default = 1). I thought that every lonely point is forced to be connected to `n_neighbors` points, but apparently no? Apparently it's this other value, which is =1? How does this work?
+* Is it reproducible? How to use it in pipelines if it is not reproducible?
+* Any advice on which metrics to use, when they are not precomputed? (it can do like 20 different ones)
+* What is this `set_op_mix_ratio` parameter that combines "local estimations" into a "global"? What does it mean, and why would this be useful?
+* This thing about parametric and non-parametric embedding
+* Is there a trick to organizing elements within each cluster, or is it impossible / useless? As one possible rephrasing: if you do UMAP on a full set, then UMAP on a cluster, will the representation of this cluster in the "big picture" similar to its local analysis? In any sense? Or are they absolutely incomparably different?
+* How does the supervised UMAP work? (Apparently it's totally possible	)
+
+
+# Intro
+
 **Simplicial complexes**: a way to replace continuous geometry (hard) with simple combinatorial algebra; a much more formulaic way to describe structures, which yields power! (See [[algebraic_topology]])
 
 **Čech cohomology** or **Čech complex** - a way to represent a bunch of sets with a siimplicial complex. If you have a bunch of sets, represent each with a node. Connect 2 nodes if they intersect (crucially, not necessarily on a node; if they intersect anywhere in the space); connect 3 nodes with a face if all 3 sets have an intersection etc. How can it help us to represent the data? Surround each data point with a neighborhood area, then look at which neighborhoods had intersected. This operation would turn the dataset into a simplicial complex (but not necessarily connected at this point).
@@ -22,9 +35,11 @@ Then we use **fuzzy distances** and **fuzzy sets**. Two intuitions here; first, 
 
 **Actual embedding**: draw a graph, calculate same thing on it, then optimize the position of points to reduce the cross-entropy ([[cross-entropy]]) between the probabilities of edges existence inferred from the original high-dim data $h_e$, and from this new embedding graph $l$: $L = \sum_e \big( h \log(\frac{h}{l}) + (1-h)\log(\frac{1-h}{1-l}) \big)$.
 
-> I don't understand this, as this formula seems more similar to [[kl]] divergence, rather than cross-entropy! I've checked the paper. Is it really cross-entropy? Or do they somehow use the term loosely?
+> I don't understand this, as this formula seems more similar to [[kl]] divergence, rather than cross-entropy! I've checked the paper. Is it really cross-entropy? Or do they somehow use the term loosely? #todo
 
 Except that to avoid sampling through all possible edges (most of which don't exist anyways!), we use the **negative sampling** trick, similar to how word2vec does it ([[neg_sampling]]). And we use Stochastic Gradient Descent to optimize this L (see [[06_DL]]).
+
+To make the picture look nicer, also contains parameters `min_dist` and `spread` that regularize the cloud of points on the plane (default values of 0.1 and 1, and measured on the same scale).
 
 # Practical consequences 
 
@@ -67,3 +82,7 @@ Related Wiki pages:
 * https://en.wikipedia.org/wiki/%C4%8Cech_complex
 * https://en.wikipedia.org/wiki/Vietoris%E2%80%93Rips_complex
 * https://en.wikipedia.org/wiki/Nerve_of_a_covering
+
+The Dong paper about fast neighborhood comparison:
+Dong, W., Moses, C., & Li, K. (2011, March). Efficient k-nearest neighbor graph construction for generic similarity measures. In_Proceedings of the 20th international conference on World wide web_(pp. 577-586).
+https://www.cs.princeton.edu/cass/papers/www11.pdf
