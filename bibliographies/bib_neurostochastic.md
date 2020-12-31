@@ -1,4 +1,4 @@
-# Neuro and behavioral stochasticity
+# Neuro and behavioral stochasticity, variability, personality
 
 #neuro #bib #freewill #behav #variance
 
@@ -15,7 +15,12 @@ Papers:
 * [[Fraenkel1961woodlice]] - about how random motion is a good strategy
 * [[Mitchell2002shell_games]] - about exploration / exploitation in small animals (similar to Levy walks described below)
 
-# Refs
+# Stochastic behaviors
 
 https://jeb.biologists.org/content/218/9/1433
 Portugues, R., Haesemeyer, M., Blum, M. L., & Engert, F. (2015). Whole-field visual motion drives swimming in larval zebrafish via a stochastic process. Journal of Experimental Biology, 218(9), 1433-1443.
+
+# Individual variability
+
+Jones, B. M., Rao, V. D., Gernat, T., Jagla, T., Cash-Ahmed, A. C., Rubin, B. E., ... & Middendorf, M. (2020). Individual differences in honey bee behavior enabled by plasticity in brain gene regulatory networks. Elife, 9, e62850.
+https://elifesciences.org/articles/62850
