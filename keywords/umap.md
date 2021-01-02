@@ -16,7 +16,6 @@ Things I still don't understand ( #todo ):
 * Is there a trick to organizing elements within each cluster, or is it impossible / useless? As one possible rephrasing: if you do UMAP on a full set, then UMAP on a cluster, will the representation of this cluster in the "big picture" similar to its local analysis? In any sense? Or are they absolutely incomparably different?
 * How does the supervised UMAP work? (Apparently it's totally possible	)
 
-
 # Intro
 
 **Simplicial complexes**: a way to replace continuous geometry (hard) with simple combinatorial algebra; a much more formulaic way to describe structures, which yields power! (See [[algebraic_topology]])
@@ -37,13 +36,19 @@ Then we use **fuzzy distances** and **fuzzy sets**. Two intuitions here; first, 
 
 > I don't understand this, as this formula seems more similar to [[kl]] divergence, rather than cross-entropy! I've checked the paper. Is it really cross-entropy? Or do they somehow use the term loosely? #todo
 
-Except that to avoid sampling through all possible edges (most of which don't exist anyways!), we use the **negative sampling** trick, similar to how word2vec does it ([[neg_sampling]]). And we use Stochastic Gradient Descent to optimize this L (see [[06_DL]]).
+Except that to avoid sampling through all possible edges (most of which don't exist anyways!), we use the **negative sampling** trick, similar to how word2vec does it ([[neg_sampling]]). And we use Stochastic Gradient Descent to optimize this L (see [[06_DL]]). Becaues of that (and because of using a random starting point), there is **no guarantee of replicability**. You can make the results fixed, given the data, by fixing the random generator seed (param `random_state`), but adding an extra point to the data would change everything once again.
 
-To make the picture look nicer, also contains parameters `min_dist` and `spread` that regularize the cloud of points on the plane (default values of 0.1 and 1, and measured on the same scale).
+# Parameters and their meaning
 
-# Practical consequences 
+`n_neighbors`: small values (~5 or 10) create tiny clusters and wispy threads. Large values (>50) create more of a gradient cloud with no clusters. But even then, as it's not truly global, there's no guarantee that all global extremes of the distribution will be place logically, and also, that they won't be split into several "representations" in different parts of the cloud.
 
-* Stochastic, random starting point, followed by SGD. No guarantee of replicability.
+`min_dist`: literally, mean distance between projecting points (from 0 to 1; default of 0.1). Not sure what the units are, but with it too small, some points overlap, while with it too large (>0.25?) some points are so repelled from each other that clouds become airy and start to overlap with each other, ruining all local structure.
+
+`spread`: somehow (not sure) regularizes the cloud of points on the plane. Default value of 1, and gives a reference for the `min_dist` parameter (they operate on the same scale).
+
+`n_components`: unlike tSNE ([[tsne]]), scales well to high-dimension cases. A value of 1 is also possible, and produces a somewhat reasonable path through the manifold.
+
+`metric`: which metric to use (unless we're using `precomputed`). Supports quite a few (see [[metric]] for definitions). One can also write custom metrics (as long as they support numba). See "umap params" ref for sample code.
 
 # My musings
 
@@ -61,6 +66,9 @@ Now, for tightly place points, it means that the organization of points inside a
 https://umap-learn.readthedocs.io/en/latest/how_umap_works.html
 Very readable non-mathy explanation of how UMAP works.
 2018, Leland McInnes
+
+Parameters:
+https://umap-learn.readthedocs.io/en/latest/parameters.html
 
 Pretty interactive simulation, with use case of UMAP on the ImageNet dataset:
 https://tiga1231.github.io/umap-tour/

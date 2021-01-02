@@ -7,7 +7,7 @@
 * [[graph_th]] - Random notes on graph theory
 * [[algos_graph]] - Classic algorithms on graphs
 * [[la_net]] - Linear algebra on graphs
-    * Spectral techniques - [youtube](https://www.youtube.com/watch?v=0eNQnc0eOB4&list=PL1OaWjIc3zJ4xhom40qFY5jkZfyO5EDOZ&index=5) #todo
+* [[graph_spectra]] -  Spectral Techniques #todo
 * [[algebraic_topology]] - basis for [[umap]], cliques etc.
 
 **Network science**

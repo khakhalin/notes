@@ -59,24 +59,24 @@ https://www.ebay.com/itm/Dryer-Heating-Element-for-Whirlpool-Kenmore-PS334313/39
 * https://www.bbc.com/news/world-middle-east-50378946
 * زرده (دالاهو)
 
-# Algos and top priorities
+# Top priorities
 
-* Find that paper with benchmarks for RNN
 * spectral properties of graphs, spectral radius
+* finish google training
 * https://en.wikipedia.org/wiki/Moore%E2%80%93Penrose_inverse
 * Lyapunov exponent - how to estimate? (For chaotic systems) [[lyapunov-exp]]
-* numpy broadcasting - what are the rules again? Does it not broadcast from a 2D to 1D array?* 
-* Granger causality (do I have notes about it somewhere?)
+* numpy broadcasting - what are the rules again? Does it not broadcast from a 2D to 1D array?
 * docker - what and how
     * Flask docker file (allegedly 80% of what one needs for a typical deployment)
     * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
-* Do missing semester
+* Do missing semester of CS education
 * This text about Pandas: https://github.com/chiphuyen/just-pandas-things/blob/master/just-pandas-things.ipynb
 * finish google course
 * check how tableau works, to claim it
 * refresh logistic regression, documenting this: https://rpubs.com/wgervais/667244
     * And also this: https://ai.stackexchange.com/questions/3852/is-logistic-regression-more-free-from-the-conditional-independence-assumption-th
 * AWS - do some tutorials
+* Granger causality (do I have notes about it somewhere?)
 * Stack
     * react
     * nodejs
@@ -84,6 +84,8 @@ https://www.ebay.com/itm/Dryer-Heating-Element-for-Whirlpool-Kenmore-PS334313/39
     * Apache beam / spark
 * work through confetti tutorials and exams, like https://www.confetti.ai/exams/14/start
 * log regression from scratch
+* Finish manifold learning list at [[04_Features]]
+* spectral clustering
 * refresh and document those statements about null-space, left, right, and what not
 * how to run AdaBoost in scipy
 * how to save the results of AdaBoost in scipy
