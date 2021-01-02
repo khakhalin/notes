@@ -13,10 +13,11 @@ See also: [[criticality]], [[stdp]], [[cellular_automata]]
 
 # Summary
 
+Two very closely related terms / methods:
 * **Echo-State Networks**: introduced by Jaeger
 * **Liquid State Machines**: a version by Markram; a spiking network (?)
 
-Apparently one really cool thing about ESN is that they are highly parallelizable - check how it is done, and is it really better than "normal" networks?
+One really cool thing about ESN is that they are highly parallelizable - check how it is done, and is it really better than "normal" networks?
 
 Interesting general statements:
 * Regularization for the final layer (L2) helps (scholarpedia)

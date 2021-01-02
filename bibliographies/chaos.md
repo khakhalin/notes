@@ -9,3 +9,6 @@ Common chaotic models:
 * [[lorenz]]
 * [[henon-map]]
 * [[mackey-glass]]
+
+Concepts:
+* [[lyapunov-exp]] - Lyapunov exponent

@@ -1,9 +1,11 @@
 # Fractals
 
-Parent: [[complexity]]
-See also: [[kronecker_graph]]
+#complexity #chaos
 
-STUB
+Parent: [[complexity]], [[chaos]]
+See also: [[kronecker_graph]], [[lyapunov-exp]]
+
+#STUB
 
 # Links
 
