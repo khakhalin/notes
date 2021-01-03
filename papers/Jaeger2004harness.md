@@ -10,7 +10,6 @@ https://science.sciencemag.org/content/sci/suppl/2004/04/01/304.5667.78.DC1/Jaeg
 Parents: [[07_RNNs]] / [[echo_state]]
 See also: [[complexity]], [[chaos]], [[mackey-glass]]
 
-
 # Basics
 
 Original communication about reservoir computing (aka **Echo State Network**). 2000+ citations.

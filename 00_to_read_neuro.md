@@ -2,7 +2,10 @@
 
 #neuro #bib #todo
 
-Se also: [[12_Neuro]] - for an official hub title page bibliography
+Se also: [[12_Neuro]] - for an official hub title page bibliography	
+
+Perez-Nieves, N., Leung, V. C., Dragotti, P. L., & Goodman, D. F. (2020). Neural heterogeneity promotes robust learning. bioRxiv.
+https://www.biorxiv.org/content/10.1101/2020.12.18.423468v1
 
 Hasson, U., Nastase, S. A., & Goldstein, A. (2020). Direct Fit to Nature: An Evolutionary Perspective on Biological and Artificial Neural Networks. Neuron, 105(3), 416-434.
 https://www.cell.com/neuron/pdf/S0896-6273(19)31044-X.pdf
