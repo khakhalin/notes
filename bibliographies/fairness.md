@@ -2,8 +2,14 @@
 
 #bib #meaning #fairness #interpretability
 
-See also:
-* [[ethics]]
+Parents: [[system_design]]
+See also: [[ethics]], [[interpretability]]
+
+A nice example with bananas from Google lecture. When we say "bananas", we typically mean "yellow bananas", while if they are not yellow (variety, unripe, overripe), we would say that. This have several implications. One, we may decide not to include this color as a feature, then have problems. Another, if as this feature is often presumed, is it underreported, so we may not be able to learn from naive text mining that most bananas are yellow, as the color is only mentioned when they are not yellow. Third, we may assume that non-yellow bananas are more alike to each other than they actually are (aka out-group homogeneity bias; say, if there are ripe green variety bananas out there).
+
+If some values are missing, it may also be a sign of data collection bias, which can lead to meaningful consequences.
+
+Main way of **evaluating for bias**: calculating precision and recall ([[confusion]]) separately for different groups. If the model fails some groups, it is problematic.
 
 # Names
 
@@ -121,3 +127,8 @@ https://arxiv.org/pdf/2005.00724.pdf
 
 Chouldechova, A., & Roth, A. (2018). The frontiers of fairness in machine learning. arXiv preprint arXiv:1810.08810.
 https://arxiv.org/abs/1810.08810
+
+# General resources
+
+Google lecture on fairness
+https://developers.google.com/machine-learning/crash-course/fairness/video-lecture

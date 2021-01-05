@@ -2,7 +2,7 @@
 
 #db #bib #systems
 
-Parents: [[database]], [[01_Tools]]
+Parents: [[database]], [[01_Tools]], [[system_design]]
 Related: [[data_wh]]
 
 A general word for non-relational databases: not tabular-based, good for realtime big data. May work with documents, key-values, wide-columns, graphs. Have lower guarantees on consistency (stale reads: updates don't update immediately), which can lead to data loss. **Very efficient, but not flexible**.

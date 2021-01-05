@@ -2,7 +2,7 @@
 
 #lifehack
 
-Parent: [[06_DL]]
+Parent: [[06_DL]], [[01_Tools]]
 Related: [[Breck2017testing]], [[tensorflow]], [[hyperparameters]], [[Huyen2019book]]
 
 **Deep learning maxims**: ([ref](https://pcc.cs.byu.edu/2017/10/02/practical-advice-for-building-deep-neural-networks/)):

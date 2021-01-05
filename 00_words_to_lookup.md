@@ -10,9 +10,6 @@ Other lists to look through:
 * https://e2eml.school/blog.html
 * [[job_search]] - lots of questions and more links & opinions about what to learn
 
-Google crash course, about ML production:
-https://developers.google.com/machine-learning/crash-course/production-ml-systems
-
 Kick-start videos: https://www.youtube.com/playlist?list=PLllx_3tLoo4csmLveWHpjcRTXVMCcvvmc
 
 **The missing semester of CS education**
@@ -24,10 +21,6 @@ Working on:
 * [[motifs]] (not really motifs yet - listen to the lecture) #todo
 * https://github.com/khangich/machine-learning-interview - disassemble
 * https://thebookofshaders.com/
-
-* Find article RNN benchmarking
-* Find article liquid state machine chaos prediction
-* Decide between echo state and liquid computing
 
 Dump:
 * https://www.expunctis.com/2019/01/27/Loss-functions.html
@@ -63,15 +56,26 @@ https://www.ebay.com/itm/Dryer-Heating-Element-for-Whirlpool-Kenmore-PS334313/39
 
 * spectral properties of graphs, spectral radius
 * finish google training
+    * https://developers.google.com/machine-learning/crash-course/fairness/programming-exercise
+    * (programming exercise, followed by 3 real-world examples)
 * https://en.wikipedia.org/wiki/Moore%E2%80%93Penrose_inverse
-* Lyapunov exponent - how to estimate? (For chaotic systems) [[lyapunov-exp]]
 * numpy broadcasting - what are the rules again? Does it not broadcast from a 2D to 1D array?
 * docker - what and how
     * Flask docker file (allegedly 80% of what one needs for a typical deployment)
     * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
 * Do missing semester of CS education
 * This text about Pandas: https://github.com/chiphuyen/just-pandas-things/blob/master/just-pandas-things.ipynb
-* finish google course
+* json: https://www.w3schools.com/js/js_json_datatypes.asp
+    * YAML - some standard for keeping stuff that's like XML or JSON, but human-readable. Apparently much hated, as it breaks at edge cases.
+* Scalability lecture: https://www.youtube.com/watch?v=-W9F__D3oY4
+(I'm at 24 m right now)
+* Scaling Etsy: https://www.youtube.com/watch?v=eenrfm50mXw
+* Docker and Kubernetes: https://www.youtube.com/watch?v=u8dW8DrcSmo
+* How to design Twitter: https://www.youtube.com/watch?v=KmAyPUv9gOY
+* How do transformers work again?
+* What's the deal with this new vision transformer from Facebook (published in 2020). Supposedly they surpassed convnets. Why? What does it mean for us?
+    * https://ai.facebook.com/blog/data-efficient-image-transformers-a-promising-new-technique-for-image-classification/
+    * Distillation through attention?
 * check how tableau works, to claim it
 * refresh logistic regression, documenting this: https://rpubs.com/wgervais/667244
     * And also this: https://ai.stackexchange.com/questions/3852/is-logistic-regression-more-free-from-the-conditional-independence-assumption-th
@@ -111,7 +115,7 @@ https://www.ebay.com/itm/Dryer-Heating-Element-for-Whirlpool-Kenmore-PS334313/39
 * STDM: https://searchnetworking.techtarget.com/definition/STDM
 * CDISC: https://en.wikipedia.org/wiki/Clinical_Data_Interchange_Standards_Consortium
 * two sorted linked lists, combined into 1 sorted linked list
-* finish heapsort, optimize, add to other sorts, make compete
+* finish heapsort, optimize, add to other sorts, compare methods
 * list border elements of a tree counter-clock-wise
 * The the math of transformers: [reddit link](https://www.reddit.com/r/MachineLearning/comments/j5jg1l/d_confused_mathematician_looking_for_clarity_on/)
 * level-order traversal tree
@@ -123,19 +127,15 @@ https://www.ebay.com/itm/Dryer-Heating-Element-for-Whirlpool-Kenmore-PS334313/39
 * how is hashmap (dicts) implemented in Python, behind the scenes?
 * quickly flip through the "Fluent Python" book, decide what to do with it
 * reimplement qsort and merge sort
-* finish scalability lecture: https://www.youtube.com/watch?v=-W9F__D3oY4
 * Conway, the free will theorem: https://www.youtube.com/watch?v=ftIllWczf5w
 * Laplace operator: https://www.youtube.com/watch?v=oEq9ROl9Umk
-* super-toy model for graphs: if we can directly multiply by a Laplacian (because the graph is so small). Realize! Drop to Kaggle
+* super-toy model for graphs: if we can directly multiply by a Laplacian (because the graph is so small). Try it?
 * https://en.wikipedia.org/wiki/Decision_tree_pruning
 * Timsort - reimplement
 * http://www.deeplearningbook.org/contents/regularization.html
 * Generative vs discriminative models: https://stackoverflow.com/questions/879432/what-is-the-difference-between-a-generative-and-a-discriminative-algorithm
 * ripser - a package, what is it?
-* [[umap]]
-* [[tsne]] and how it's different from UMAP
 * clusterogram: https://www.r-statistics.com/2010/06/clustergram-visualization-and-diagnostics-for-cluster-analysis-r-code/
-* json: https://www.w3schools.com/js/js_json_datatypes.asp
 * On batch normalization and contrastive learning (apparently with some vague neuro hints): https://untitled-ai.github.io/understanding-self-supervised-contrastive-learning.html
 * Is it true that layers leading to batchnorm should have bias=false? Why? (Karpathy [said so](https://twitter.com/karpathy/status/1299921324333170689) on twitter)
 * https://en.wikipedia.org/wiki/Wasserstein_metric
@@ -144,7 +144,7 @@ https://www.ebay.com/itm/Dryer-Heating-Element-for-Whirlpool-Kenmore-PS334313/39
 * Split bagging / boosting and friends into separate entries
 * Decision tree classification - for some reason doesn't have a separate entry here yet! https://en.wikipedia.org/wiki/Decision_tree_learning
 * Refresh and finish boosting and trees - based on [this informal poll](https://www.reddit.com/r/datascience/comments/icsul3/any_employed_data_scientists_willing_to_share_an/), boosting, trees, and SVMs are really widely used in practice (except for a niche subtype of people who only do deep learning), so (I guess) most likely they will be asked
-    * [[gbm]] Gradient Boost - finish!!!
+    * [[gbm]] Gradient Boost - finish!
         * XGBoost, and how to parallelize it (one of the most popular interview topics, apparently!)
     * [[random_forest]] -  reimplement
     * [[svm]] - also reimplement? Code implementation is sometimes on interviews.
@@ -305,16 +305,9 @@ https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-networ
 See also: [[system_design]]
 
 Go through 2-3 youtube lectures in the queue that describe some of the existing solutions:
-* Scalability lecture: https://www.youtube.com/watch?v=-W9F__D3oY4
-(I'm at 24 m right now)
-* Scaling Etsy: https://www.youtube.com/watch?v=eenrfm50mXw
-* Docker and Kubernetes: https://www.youtube.com/watch?v=u8dW8DrcSmo
-* How to design Twitter: https://www.youtube.com/watch?v=KmAyPUv9gOY
 * Ruby on rails - what is it, how it works, and why so popular?
 * Hadoop vs Spark video: https://hackr.io/blog/hadoop-vs-spark
 * Kubernetes and Docker video (30 min): https://www.youtube.com/watch?v=u8dW8DrcSmo
-* JSON - how does it work, why everybody love it, and is it the present or the future? ([wiki](https://en.wikipedia.org/wiki/JSON))
-* YAML - some standard for keeping stuff that's like XML or JSON, but human-readable. Apparently much hated, as it breaks at edge cases.
 * Avro
 * Parquet (data storage format)
 	* data warehouse technologies

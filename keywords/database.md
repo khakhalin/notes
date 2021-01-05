@@ -2,11 +2,12 @@
 
 #tools #bib #db
 
-Parents: [[01_Tools]], [[system_design]], [[dictionary]] - many names are still sitting there
+Parents: [[01_Tools]], [[system_design]]
 
 See also:
 * [[data_wh]] - Data Warehouse
-* [[nosql]]
+* [[nosql]] - an alternative to tables
+* [[dictionary]] - many names are still sitting there
 
 # Principles and guarantees
 
