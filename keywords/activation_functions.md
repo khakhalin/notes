@@ -19,7 +19,7 @@ See also (special types of units):
 
 ## Softplus
 
-$\log(\exp(x)+1)$, looks almost exactly like a ReLU, but with a smooth curve around 0 (from about −0.5 to 0.5). Smoother
+$\log(\exp(x)+1)$, looks very similar to ReLU, but with a smooth curve around 0 (from about −0.5 to 0.5). Smoother, differentiable, doesn't produce 0 gradient exactly at 0, which are all good features.
 
 ## Tanh
 

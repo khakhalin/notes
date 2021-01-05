@@ -315,7 +315,7 @@ Other collections of questions:
 * When are two vectors x and y orthonormal? (x.T * y = 0 and both have unit norm)
 * What is an orthogonal matrix? Why is computationally preferred? (a square matrix whose rows are mutually orthonormal and columns are mutually orthonormal.)
 * What is eigendecomposition, eigenvectors and eigenvalues?
-* How to find eigen values of a matrix?
+* How to find eigenvalues of a matrix?
 * Write the eigendecomposition formula for a matrix. If the matrix is real symmetric, how will this change?
 * Is the eigendecomposition guaranteed to be unique? If not, then how do we represent it?
 * What are positive definite, negative definite, positive semi definite and negative semi definite matrices?

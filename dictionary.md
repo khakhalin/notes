@@ -108,6 +108,8 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 
 **loess** (stats): Locally Estimated Scatterplot Smoothing, aka Savitzky-Golay filter. See [[smoothing]]
 
+**log-sum-exp** (math): a handy smooth differentiable approximation for a max function: $\text{lse}(x)=\log \sum_i e^{x_i}$ . Immediately related to softplus (see [[activation_functions]]), which is lse(0, t). [ref](https://nhigham.com/2021/01/05/what-is-the-log-sum-exp-function/)
+
 # M
 
 **MAE** (ml): Mean Average Error, aka L1 loss.
