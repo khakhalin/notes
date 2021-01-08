@@ -1,8 +1,8 @@
-# Job searches
+# Job search
 
 #management #lifehack #interview
 
-A collection of advice on job searching and interviewing.
+A collection of materials on job searching and interviewing, from the point of view of the candidate.
 
 Related pages:
 * [[system_interview]] - system design interviews
@@ -66,7 +66,11 @@ Main point: break the stereotype of a "non-doer" that many people have about aca
 * Remote industry collaborations, internships of sort, to place on the CV?
 * Kaggle: no need to win, but show that can do stuff that works
 
-# General references
+# Job boards
 
 * https://builtin.com/ - alternative (local) job boards. For example: https://www.builtinboston.com/
 * https://phaseai.com/jobs/
+* Robotics jobs:
+    * https://svrobo.org/robojobs/
+    * https://docs.google.com/spreadsheets/d/1_TqzBDyWsZjVA0evmg6dHzfqEVrE_j_Agib7Y-_Gni0/edit#gid=0
+    * https://airtable.com/shr9TkiHzMUcArhww

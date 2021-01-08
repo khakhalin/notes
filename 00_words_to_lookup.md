@@ -18,8 +18,6 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 (the link is also in [[01_Tools]] / Resources, so delete it from here later)
 
 Working on: 
-* [[motifs]] (not really motifs yet - listen to the lecture) #todo
-* https://github.com/khangich/machine-learning-interview - disassemble
 * https://thebookofshaders.com/
 
 Dump:
@@ -58,6 +56,7 @@ https://www.ebay.com/itm/Dryer-Heating-Element-for-Whirlpool-Kenmore-PS334313/39
 * finish google training
     * https://developers.google.com/machine-learning/crash-course/fairness/programming-exercise
     * (programming exercise, followed by 3 real-world examples)
+* read Neural Heterogeneity (see [[00_to_read_neuro]])
 * https://en.wikipedia.org/wiki/Moore%E2%80%93Penrose_inverse
 * numpy broadcasting - what are the rules again? Does it not broadcast from a 2D to 1D array?
 * docker - what and how
@@ -65,6 +64,8 @@ https://www.ebay.com/itm/Dryer-Heating-Element-for-Whirlpool-Kenmore-PS334313/39
     * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
 * Do missing semester of CS education
 * This text about Pandas: https://github.com/chiphuyen/just-pandas-things/blob/master/just-pandas-things.ipynb
+* [[motifs]] (not really motifs yet - listen to the lecture) #todo
+* https://github.com/khangich/machine-learning-interview - disassemble
 * json: https://www.w3schools.com/js/js_json_datatypes.asp
     * YAML - some standard for keeping stuff that's like XML or JSON, but human-readable. Apparently much hated, as it breaks at edge cases.
 * Scalability lecture: https://www.youtube.com/watch?v=-W9F__D3oY4
@@ -72,7 +73,8 @@ https://www.ebay.com/itm/Dryer-Heating-Element-for-Whirlpool-Kenmore-PS334313/39
 * Scaling Etsy: https://www.youtube.com/watch?v=eenrfm50mXw
 * Docker and Kubernetes: https://www.youtube.com/watch?v=u8dW8DrcSmo
 * How to design Twitter: https://www.youtube.com/watch?v=KmAyPUv9gOY
-* How do transformers work again?
+* How do transformers work again? - check attention at http://d2l.ai/index.html
+* Recurrent networks at http://d2l.ai/index.html
 * What's the deal with this new vision transformer from Facebook (published in 2020). Supposedly they surpassed convnets. Why? What does it mean for us?
     * https://ai.facebook.com/blog/data-efficient-image-transformers-a-promising-new-technique-for-image-classification/
     * Distillation through attention?

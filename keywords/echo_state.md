@@ -9,7 +9,7 @@ See also: [[criticality]], [[stdp]], [[cellular_automata]]
 
 * [[Jaeger2004harness]] - First description of echo-state
 * [[Carroll2019structure]] - Playing with minimalistic structure (all weights +1, 0, or −1)
-* [[Carroll2020chaos]] - is chaos good for ESN? No (it's good to be close to it, but not in it)
+* [[Carroll2020chaos]] - is chaos good for ESN? Not always (but apparently "yes" for ODE ESN)
 
 # Summary
 

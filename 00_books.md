@@ -62,7 +62,6 @@ Also:
 * ESL (The Elements of Statistical Learning) by Hastie, Tibshirani, Friedman. ([pdf](https://web.stanford.edu/~hastie/ElemStatLearn/)) A more encyclopaedic version of ISLR: extensive, no code, and with most proofs and derivations "left to the reader" ([ref](https://www.quora.com/How-do-I-learn-the-book-Elements-of-Statistical-Learning-What-books-materials-would-help-beef-up-my-foundations-so-that-I-will-be-able-to-comprehend-the-book-easily)). Great book to revisit and integrate the material you already know.
 * Speech and Language Processing by D. Jurafsky & JH Martin ([draft pdf](https://web.stanford.edu/~jurafsky/slp3/))
 * Pattern recognition and ML by Christopher Bishop ([pdf](https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/)) - Has a more Bayesian perspective. [This set of notebooks](https://github.com/ctgk/PRML) implements this book, chapter by chapter.
-* [Dive into Deep Learning](http://d2l.ai/) - an interactive introduction to deep learning, based on NumPy, apparently!
 * Foundations of ML by M. Mohri et al ([pdf](https://cs.nyu.edu/~mohri/mlbook/)) - more mathy?
 * ML book by K.P. Murphy - ([site](https://www.cs.ubc.ca/~murphyk/MLbook/), but no full pdf)
 * Morgan, S. L., & Winship, C. (2015). Counterfactuals and causal inference (pdfs are googlable)
@@ -94,6 +93,7 @@ Job-search specific materials:
 # Online courses
 
 * [Google Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course/) - a really good introduction for complete noobs 
+* "Dive into Deep Learning": http://d2l.ai/index.html 🔥
 * Lectures by Sebastian Raschka: https://www.youtube.com/c/SebastianRaschka/videos
 * [Some other intro to data science](https://www.youtube.com/playlist?list=PLMrJAkhIeNNQV7wi9r7Kut8liLFMWQOXn) - with Steve Brunton
 * [Theory of computation](https://www.youtube.com/playlist?list=PL601FC994BDD963E4) - Youtube

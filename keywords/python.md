@@ -119,12 +119,12 @@ There's an argument that composition (having a hierarchy of types of classes) is
 
 * Import entire modules or packages, not classes or functions, to retain `module.class.method()` structure, and prevent name collisions.
 * Lines shouldn't be longer than 80 chars (Google style guide)
-* `.py` files are not scripts, so even executables	 should  be written inside a main function: `def main():`. The benefit of this construction is that this `.py` won't be auto-executed on import. And to make them collable script-like from the command line, add this inside:
+* `.py` files are not scripts, so even executables	 should  be written inside a main function: `def main():`. The benefit of this construction is that this `.py` won't be auto-executed on import. And to make them callable script-like from the command line, add this inside:
 ```python
 if __name__ == '__main__':
     main()
 ```
-* Smuggle code from Jupyter to classes as soon as possible (Jupyter only for protopying, reporting, and use case)
+* Smuggle code from Jupyter to classes as soon as possible (Jupyter only for prototyping, reporting, and use case)
 
 ## Naming variables
 
