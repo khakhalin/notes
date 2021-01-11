@@ -26,6 +26,12 @@ https://www.nature.com/articles/s41583-020-0277-3
 
 # Topology and development
 
+Lazar, A., Pipa, G., & Triesch, J. (2006, April). The combination of STDP and intrinsic plasticity yields complex dynamics in recurrent spiking networks. In ESANN (pp. 647-652).
+
+Curto, C., & Morrison, K. (2019). Relating network connectivity to dynamics: opportunities and challenges for theoretical neuroscience. Current opinion in neurobiology, 58, 11-20.
+https://www.sciencedirect.com/science/article/pii/S0959438819300443 
+Review. Exactly what it should be (networks, motifs, dynamics)
+
 Hassan, B. A., & Hiesinger, P. R. (2015). Beyond molecular codes: simple rules to wire complex brains. Cell, 163(2), 285-291.
 https://www.cell.com/cell/fulltext/S0092-8674(15)01193-9
 Developmental biology bordering fractals and graphs (maybe? not sure, but judging from the pics) - a nice review-like paper (perspective); worth a priority read :)
@@ -33,17 +39,7 @@ Developmental biology bordering fractals and graphs (maybe? not sure, but judgin
 Zador, A. M. (2019). A critique of pure learning and what artificial neural networks can learn from animal brains. Nature communications, 10(1), 1-7.
 https://core.ac.uk/download/pdf/227723588.pdf
 
-Curto, C., & Morrison, K. (2019). Relating network connectivity to dynamics: opportunities and challenges for theoretical neuroscience. Current opinion in neurobiology, 58, 11-20.
-https://www.sciencedirect.com/science/article/pii/S0959438819300443 
-Review. Exactly what it should be (networks, motifs, dynamics)
-
-Feldman, D. P., & Crutchfield, J. P. (1998). Measures of statistical complexity: Why?. Physics Letters-Section A, 238(4), 244-252.
-http://www.disca.upv.es/pabmitor/FILES/Complexity/971111_GEN_4.pdf
-On Crutchfield complexity measure (that peaks for meaningful networks)
-
 Morrison, A., Aertsen, A., and Diesmann, M. (2007). Spike-timing dependent plasticity in balanced random networks. Neural Computation, 19:1437–1467.
-
-Lazar, A., Pipa, G., & Triesch, J. (2006, April). The combination of STDP and intrinsic plasticity yields complex dynamics in recurrent spiking networks. In ESANN (pp. 647-652).
 
 Ozturk, I., & Halliday, D. M. (2016, December). Mapping spatio-temporally encoded patterns by reward-modulated STDP in Spiking neurons. In Computational Intelligence (SSCI), 2016 IEEE Symposium Series on (pp. 1-8). IEEE.
 
@@ -78,9 +74,11 @@ https://scholar.google.com/citations?user=Q2aFVoYAAAAJ&hl=en&oi=sra
 
 # Synfire chains, Sequences
 
-Zheng, P. and Triesch, J. (2014). Robust development of synfire chains
+🔥 Zheng, P., & Triesch, J. (2014). Robust development of synfire chains from multiple plasticity mechanisms. Frontiers in computational neuroscience, 8, 66.
+https://www.frontiersin.org/articles/10.3389/fncom.2014.00066/full
 
-Abbott, L. F., DePasquale, B., and Memmesheimer, R. M. (2016). Building functional networks of spiking model neurons. Nature Neuroscience, 19(3):350–355.
+🔥 Abbott, L. F., DePasquale, B., and Memmesheimer, R. M. (2016). Building functional networks of spiking model neurons. Nature Neuroscience, 19(3):350–355.
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4928643/
 Sounds like may be a neat review or opinion piece.
 
 Gilra, A. and Gerstner, W. (2017). Predicting non-linear dynamics by stable local learning in a recurrent spiking neural network. Elife, 6(e28295):1–38.

@@ -65,6 +65,10 @@ Carroll, T. L. (2020). Dimension of reservoir computers. Chaos: An Interdiscipli
 https://arxiv.org/pdf/1912.06472.pdf
 Attempts to actually measure the dimensionality of signals in a ESN.
 
+Feldman, D. P., & Crutchfield, J. P. (1998). Measures of statistical complexity: Why?. Physics Letters-Section A, 238(4), 244-252.
+http://www.disca.upv.es/pabmitor/FILES/Complexity/971111_GEN_4.pdf
+On Crutchfield complexity measure (that peaks for meaningful networks)
+
 Tanaka, G., Yamane, T., Héroux, J. B., Nakane, R., Kanazawa, N., Takeda, S., ... & Hirose, A. (2019). Recent advances in physical reservoir computing: a review. Neural Networks.
 https://www.sciencedirect.com/science/article/pii/S0893608019300784
 High priority

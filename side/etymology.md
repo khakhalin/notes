@@ -21,18 +21,4 @@ https://pastvu.com/p/754272
 
 Russian public kadaster: https://pkk.rosreestr.ru/
 Реестр: https://egrp365.ru/reestr?egrp=50:33:0030577
-
-🐶
-🐱
-🐭
-🐰
-🐻
-🐮
-🐷
-🐸
-🐺
-🦊
-🐦
-🐟
-🦋
-🐝
+Free pics from Smithsonian: https://www.si.edu/openaccess

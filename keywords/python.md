@@ -3,9 +3,8 @@
 #tools #coding
 
 Path: [[01_Tools]]
-Subtopics: 
-* Tools: [[anaconda]], [[jupyter]]
-* Libraries: [[pandas]], [[tensorflow]], [[numpy]], [[matplotlib]], [[python_dates]]
+See also: [[anaconda]], [[jupyter]]
+Libraries: [[pandas]], [[tensorflow]], [[numpy]], [[matplotlib]], [[python_dates]]
 
 # Random tips
 
