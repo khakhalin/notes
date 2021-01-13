@@ -8,6 +8,11 @@
 * The Cat illusion (a friend of 12 13 14 / ABC)
 * Lots of alternative names (also depending on which aspect of the story you integrate, and on what you studied prior haha): context sensitivity, priming, illusory conjunction, selective attention, gestalt, cross-modal integration etc.
 
+# Examples
+
+That crazy illusion with rotating circles that shrink, move, etc.:
+https://twitter.com/jagarikin/status/1331409504953540613
+
 # Refs / ToRead
 
 Adelson, E. H. (2000). 24 Lightness Perception and Lightness Illusions.

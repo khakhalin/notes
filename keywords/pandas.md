@@ -20,13 +20,13 @@ See also: [[numpy]]
 
 # Addressing
 
-**Columns**
+#### Columns
 * Get column names: `df.columns`.
 * Rename all columns, just overwrite it with a different vector.
 * Rename  only some columns: `df = df.rename({'a': 'X', 'b': 'Y'}, axis=1)`
 * Delete some columns: `df = df.drop(['a','b'], axis=1)` or `df.drop(columns=['a'])`.
 
-**Indexing**
+#### Indexing
 * Select columns by label: `df['x']`. Returns a series. To cast into a numpy object, add `.values` at the end (right like that, without parentheses). An alternative spelling `df.x` works in most cases, except if the name of the column is special (⚠️Gotcha: for example, `first` and `last` are reserved words, so if you have a column named "first", then `d['first']` would work well, but `d.first` won't)
     * Two common useful patterns here is to slam `.unique()` at the end if you want only unique values, and `.tolist()` if you need a standard Pythonic list.
 * Select rows by label: `df.loc[1]`. Works for both df (returns a row-series), and for column-series (returns a single value).
@@ -34,11 +34,13 @@ See also: [[numpy]]
 * Out-of-range integers are forgiven (ignored) on reading, but cause an error if you try to write
 * **Iterating through rows**: either `for i in range(df.shape[0]): df.loc[i]`, or `for key,val in df.iterrows()`  (in both cases we get row-series). To slice into slivery dataframes, one could use `df.loc[[i]]`, but usefulness of that is unclear.
 
+#### Conditionals
 For **conditional data retrieval** we have a choice between: 
 * **logical indexing** `df.loc[d.x>0]` Can take list comprehensions as an argument (instead of a series); can be written to; but slower, and harder to read.
 * Another form of logical indexing: `df.x.eq(0)` (or things like `ne`, `le` etc.)
 * **queries**: `df.query('x>0')`, where `x` is a name of a column. Easier for a human to read; works slightly faster, but cannot be written to. To reference a normal variable `a` in a query, use `@a` inside the query string.
 * To find the first row index that satisfies a criterion, follow with `.idxmax()` - it returns the location of the maximum (like `np.argmax()`), and in this case truth is the maximum.
+* To find `None`-like objects (or their absence), use `	.notnull()`, and its opposite `.isnull()`. It seems that `isna()` and `notna()` also work, and are exact synonyms (I think?).
 
 Conditional indexing supports functions, as long as they take and return Pandas series, or something compatible, like a Numpy array). Both conditional forms support elementwise Boolean operators, like `&` and `|`.
 

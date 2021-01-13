@@ -39,12 +39,11 @@ Developmental biology bordering fractals and graphs (maybe? not sure, but judgin
 Zador, A. M. (2019). A critique of pure learning and what artificial neural networks can learn from animal brains. Nature communications, 10(1), 1-7.
 https://core.ac.uk/download/pdf/227723588.pdf
 
-Morrison, A., Aertsen, A., and Diesmann, M. (2007). Spike-timing dependent plasticity in balanced random networks. Neural Computation, 19:1437–1467.
+Morrison, A., Aertsen, A., and Diesmann, M. (2007). Spike-timing dependent plasticity in balanced random networks. Neural Computation, 19:1437–1467. 💡
 
-Ozturk, I., & Halliday, D. M. (2016, December). Mapping spatio-temporally encoded patterns by reward-modulated STDP in Spiking neurons. In Computational Intelligence (SSCI), 2016 IEEE Symposium Series on (pp. 1-8). IEEE.
+Ozturk, I., & Halliday, D. M. (2016, December). Mapping spatio-temporally encoded patterns by reward-modulated STDP in Spiking neurons. In Computational Intelligence (SSCI), 2016 IEEE Symposium Series on (pp. 1-8). IEEE. 💡
 
-Hoerzer, G. M., Legenstein, R., & Maass, W. (2014). Emergence of complex computational structures from chaotic neural networks through reward-modulated Hebbian learning. Cerebral cortex, 24 (3), 677-690.
-#todo
+Hoerzer, G. M., Legenstein, R., & Maass, W. (2014). Emergence of complex computational structures from chaotic neural networks through reward-modulated Hebbian learning. Cerebral cortex, 24 (3), 677-690. 💡
 
 Gilson, M., Burkitt, A., & van Hemmen, J. L. (2010). STDP in recurrent neuronal networks. Spike-timing dependent plasticity, 271.
 

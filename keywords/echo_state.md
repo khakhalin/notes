@@ -55,6 +55,11 @@ Reservoir models, such as echo state networks, have shown unique efficiency in c
 * How do we pick what nodes to feed input signal to? Is it also a part of optimization? In the symmetries paper, they did +1 −1 to every single node. Is it good? Is it optimal?
 * How to calculate symmetries of a graph fast in practice? See [[graph_symmetry]] for packages.
 
+# To-revisit and describe
+
+Murray, J. M. (2019). Local online learning in recurrent networks with random feedback. eLife, 8, e43299.
+[Murray 2019] x>Win>echo>Wou>y, dh/dt = -h/tau stable solution for each element, tanh() activation. Minimizes square distance, applies gradient descent. Then tries to make biologically plausible: drops non-local term (refuses to optimize activity of other nodes that feed _from_ this node by changing inputs _to_ this node). And instead of reverting weights of Wout, uses random weights to communicate the error back. With this, weight change is proportinal to an accumulated product of pre- to the (derivative of) post-activity for eacn synapse (eligibility traces!). If only Wout are trained - learning is worse. If only Wrec - completely unsuccessful (not surprising as they use random error instead of flipped Wout). Use "ready-set-go" (interval matching) as a test. Then stiches an architecture of cortex-basalganglia-thalamus, to learn "behavioral syllabi" for a longer behavior.
+
 # To-read
 
 Carroll, T. L. (2020). Do Reservoir Computers Work Best at the Edge of Chaos?. arXiv preprint arXiv:2012.01409.
@@ -64,6 +69,11 @@ Started here: [[Carroll2020chaos]]
 Carroll, T. L. (2020). Dimension of reservoir computers. Chaos: An Interdisciplinary Journal of Nonlinear Science, 30(1), 013102.
 https://arxiv.org/pdf/1912.06472.pdf
 Attempts to actually measure the dimensionality of signals in a ESN.
+
+Ozturk, M. C., Xu, D., & Príncipe, J. C. (2007). Analysis and design of echo state networks. Neural computation, 19(1), 111-138.
+http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.877.6880&rep=rep1&type=pdf
+
+Scardapane, S., & Uncini, A. (2017). Semi-supervised echo state networks for audio classification. Cognitive Computation, 9(1), 125-135.
 
 Feldman, D. P., & Crutchfield, J. P. (1998). Measures of statistical complexity: Why?. Physics Letters-Section A, 238(4), 244-252.
 http://www.disca.upv.es/pabmitor/FILES/Complexity/971111_GEN_4.pdf
@@ -172,14 +182,10 @@ https://arxiv.org/abs/2003.04793
 https://gitlab.ub.uni-bielefeld.de/bpaassen/reservoir-memory-machines
 Seems like a hybrid of trainable turing machines and reservoir computing? But not really reservoir computing.
 
-# To-revisit and describe
+Holzmann, G. (2007). Echo state networks in audio processing. Internet Publication.
+http://grh.mur.at/sites/default/files/ESNinAudioProcessing.pdf
 
-Murray, J. M. (2019). Local online learning in recurrent networks with random feedback. eLife, 8, e43299.
-[Murray 2019] x>Win>echo>Wou>y, dh/dt = -h/tau stable solution for each element, tanh() activation. Minimizes square distance, applies gradient descent. Then tries to make biologically plausible: drops non-local term (refuses to optimize activity of other nodes that feed _from_ this node by changing inputs _to_ this node). And instead of reverting weights of Wout, uses random weights to communicate the error back. With this, weight change is proportinal to an accumulated product of pre- to the (derivative of) post-activity for eacn synapse (eligibility traces!). If only Wout are trained - learning is worse. If only Wrec - completely unsuccessful (not surprising as they use random error instead of flipped Wout). Use "ready-set-go" (interval matching) as a test. Then stiches an architecture of cortex-basalganglia-thalamus, to learn "behavioral syllabi" for a longer behavior.
-
-
-
-# Refs
+# General Refs
 
 People:
 * tl carroll: https://scholar.google.ru/citations?user=3MJYhIMAAAAJ
