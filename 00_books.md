@@ -2,15 +2,14 @@
 
 #book
 
-Books I'm currently reading:
+Currently reading:
 * [[Bock2015workrules]]
+* https://thebookofshaders.com/04/
 
 **General links:**
-
 * http://www.arxiv-sanity.com/ - AI search for arxiv
 
-**Stuff to look through:** #todo
-
+**Stuff to look through, and place:**
 * Practical intro to ML projects: https://github.com/chiphuyen/machine-learning-systems-design
 * Good collection of short tutorials (both ML and snippets of Python code) by Chris Albon: https://chrisalbon.com/
 * Matrix calculus for deep learning: https://explained.ai/matrix-calculus/index.html
@@ -80,6 +79,9 @@ Coding problems
 
 Data science problems (like leetcode, but for DS):
 * https://www.confetti.ai/curriculum
+
+Fun
+* https://thebookofshaders.com/
 
 Job-search specific materials:
 * Cracking the code interview (book)
