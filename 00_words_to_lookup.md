@@ -43,30 +43,33 @@ Dump:
 
 # Top priorities
 
+* How sites talk to mysql now?
+* docker - what and how
+    * Flask docker file (allegedly 80% of what one needs for a typical deployment)
+    * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
+* Scalability lecture: https://www.youtube.com/watch?v=-W9F__D3oY4
+(I'm at 24m right now)
 * spectral properties of graphs, spectral radius
+* Scaling Etsy: https://www.youtube.com/watch?v=eenrfm50mXw
+* Docker and Kubernetes: https://www.youtube.com/watch?v=u8dW8DrcSmo
+* How to design Twitter: https://www.youtube.com/watch?v=KmAyPUv9gOY
+* numpy broadcasting - what are the rules again? Does it not broadcast from a 2D to 1D array?
+* document lambda calculus in [[python]]
+* Start missing semester of CS education
+    * Unit tests - how to properly in python?
+* do linear regression: keras, tf, naive genetic
 * finish google training
     * https://developers.google.com/machine-learning/crash-course/fairness/programming-exercise
     * (programming exercise, followed by 3 real-world examples)
 * read Neural Heterogeneity (see [[00_to_read_neuro]])
 * https://en.wikipedia.org/wiki/Moore%E2%80%93Penrose_inverse
-* numpy broadcasting - what are the rules again? Does it not broadcast from a 2D to 1D array?
-* document lambda calculus in [[python]]
 * https://github.com/chiphuyen/just-pandas-things/blob/master/just-pandas-things.ipynb
-* docker - what and how
-    * Flask docker file (allegedly 80% of what one needs for a typical deployment)
-    * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
-* Do missing semester of CS education
 * This text about Pandas: https://github.com/chiphuyen/just-pandas-things/blob/master/just-pandas-things.ipynb
 * https://www.expunctis.com/2019/01/27/Loss-functions.html
 * [[motifs]] (not really motifs yet - listen to the lecture) #todo
 * https://github.com/khangich/machine-learning-interview - disassemble
 * json: https://www.w3schools.com/js/js_json_datatypes.asp
     * YAML - some standard for keeping stuff that's like XML or JSON, but human-readable. Apparently much hated, as it breaks at edge cases.
-* Scalability lecture: https://www.youtube.com/watch?v=-W9F__D3oY4
-(I'm at 24m right now)
-* Scaling Etsy: https://www.youtube.com/watch?v=eenrfm50mXw
-* Docker and Kubernetes: https://www.youtube.com/watch?v=u8dW8DrcSmo
-* How to design Twitter: https://www.youtube.com/watch?v=KmAyPUv9gOY
 * Check out some intro to AWS, like maybe this one?: https://aws.amazon.com/about-aws/whats-new/2014/01/14/new-introduction-to-aws-instructional-videos-and-labs/
 * How do transformers work again? - check attention at http://d2l.ai/index.html
 * Recurrent networks at http://d2l.ai/index.html

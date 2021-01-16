@@ -2,10 +2,10 @@
 
 #regression #dsp #smoothing
 
-Parents: [[02_Regression]], dsp (digital signal processing), kernel methods
-Related: splines
+Parents: [[02_Regression]], [[smoothing]], dsp (digital signal processing)
+Related: [[kernels]]
 
-**LOESS** stands for **Locally Estimated Scatterplot Smoothing**, and it is the most common way of smoothing time series. But essentially it is local linear regression. Is also sometimes called the "Savitzky–Golay filter", after a famous dsp implementation from 1964.
+**LOESS** stands for **Locally Estimated Scatterplot Smoothing**, and it is the most common way of smoothing time series. But essentially it is local linear regression. Is also sometimes called the **Savitzky–Golay filter**", after a famous dsp implementation from 1964.
 
 The general idea: let's assume that our approximating function h behaves kinda linearly near every point x_i, so that $h(x) ≈ θ_0 + θ(x-x_0)$. But then instead of assuming that θ is the same across the entire space, we will believe  that each x_0 has its own θ, that is valid in the vicinity of x_0. We will define this vicinity using a kernel (making the importance of fitting each (x,y) pair fall off if they are further away from x_0), and we'll also make this kernel have a finite size, so that we wouldn't have to include every possible point in each calculation. But note: x_0 is not a learning point (not one of the points in the dataset we're working with, it's the point where we want to calculate the estimator!)
 
@@ -19,8 +19,6 @@ The most popular kernels include:
 * **Gaussian** (but not for loess)
 * **Epanechnikov** kernel: $K(u) = \frac{3}{4}(1-u^2)$ for $|u|<1$, and 0 otherwise.
 * **Tri-cubic**: $K(u) = (1-|u|^3)^3$ for $|u|<1$, and 0 otherwise. It looks kinda like a fat hat; almost like a smoothed transition between 3 linear functions: growing, plateau, and symmetrically decreasing.
-
-
 
 # Refs
 
@@ -40,3 +38,6 @@ Wiki; not too helpful (kinda hard to read):
 https://en.wikipedia.org/wiki/Local_regression
 
 https://en.wikipedia.org/wiki/Savitzky%E2%80%93Golay_filter
+
+A pdf of a nice lecture:
+http://pj.freefaculty.org/guides/stat/Regression-Nonlinear/Nonparametric-Loess-Splines/Nonparametric-1-lecture.pdf

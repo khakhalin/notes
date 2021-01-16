@@ -7,6 +7,8 @@
 * [[linear_regression]] - the core concept :)
     * [[gram-schmidt]] - close form elimination
     * [[optimizers]] - related
+* [[smoothing]] - roughness penalty and basis functions
+        * [[kernels]] - kernel methods
 * [[bias-variance]] - Bias-Variance Trade-off
 
 **Constrained models**
@@ -30,28 +32,7 @@ Also, as Unicode makes diacritics a hassle, I try to use θ for parameter estima
 
 Let's consider x and y as random variables, with a joint distribution P(x,y). Now try to build a predictor f(x) that approximates y. The squared error loss is: L = (y-f)² = ∬ (y-f)² P(x,y) dx dy. We can split P(x,y) into P(x)∙P(y|x), and integrate first by y  (inner integral), then by x (outer integral). Then to minimize total L, we can bind f(x) to match y point-wise: f(x) = E(y|X=x), as it would minimize inner integral. Which would essentially give us the **nearest neighbor** method (see the very beginning of [[03_Classification]]). An alternative to point-wise matching would be a global smooth model, like linear regression. It makes regression and 1NN two opposite extremes of what can be done with the data. Other stuff (like **additive models** where f = ∑ f_j(x)) are kinda in-between.
 
-In spirit, all models are about setting local and global constraints on the behavior of the predictor (such as **behavior in the neighborhood**, which is "const" for KNN, "linear" for local linear embedding etc.), and the **granularity** of these  neighborhoods. Some methods (kernels, trees) make this granularity parameter explicit, some don't. And high dimensionality is a problem for all methods, regardless of how they work. (See [[curse_dim]])
-
-There are **3 broad approaches to model smoothing**:
-* Roughness penalty
-* Explicitly local methods (kernel methods, aka local regression)
-* Constrained basis functions and dictionaries
-
-### Roughness penalty
-
-Use basic RSS (Residual Sum of Squares) with an explicit penalty: L = RSS(f) + λJ(f), where J grows as f() becomes too rough. For example, defining J as λ∫(f'')²dx leads to **cubic smoothing splines** as an optimal solution. Roughness penalty can be interpreted in a Bayesian way, as a log-prior.
-
-### Kernel methods
-
-Explicitly specify local neighborhoods, and a type of a function to fit it locally. The neighborhood is defined by the kernel function K(x0,x) that acts as weights for x around x0. For example, Gaussian Kernel: K = 1/λ exp( - |x-x0|² / 2λ). [[normal]]]
-
-The simplest way to use kernels K is to calculate a weighted average of y using these kernels (aka **Nadaraya–Watson kernel regression**): $f(x_0) = ∑ (y_i K(x_0,x_i)) / ∑ K(x_0,x_i)$. #kernel
-
-Or we can choose some smooth f(x), and then optimize it, while using kernels in loss ([[l2]]) calculations: RSS(x) = $\sum_i K(x, x_i)\cdot(y_i-f(x_i))^2$ , where ∑ runs through all data points (x_i, y_i). If we assume $f(x_i) = θ_0 + θ(x_i-x)$, with it's own θ for every x, we get **local linear regression** (aka [[loess]]). KNNs (see [[03_Classification]]) can also be considered a subtype of a kernal method, just with a weird discontinuous stepwise kernel.
-
-### Basis functions
-
-This type includes linear and polynomial regressions, but the idea is that you pick a basis of functions in R^n, and project into it: $f = \sum_i θ_i h_i(x)$. Examples: **polynomial splines**; **radial basis functions** [[RBF]] with K(μ, x) defined around several centroids μ that can itself be optimized. Gaussian kernels are still popular. Feed-forward **Deep Learning** actually also belongs here, it just that its basis functions are defined by the network design (the space of functions that can be achieved with this particular network depth, activation functions etc).
+In spirit, all models are about setting local and global constraints on the behavior of the predictor (such as **behavior in the neighborhood**, which is "const" for KNN, "linear" for local linear embedding etc.), and the **granularity** of these  neighborhoods. Some methods ([[kernels]], decision trees, like [[boosting]]) make this granularity parameter explicit, some don't. And high dimensionality is a problem for all methods, regardless of how they work. (See [[curse_dim]])
 
 ## Variance of parameter estimations
 

@@ -3,7 +3,8 @@
 #classification
 
 Parent: [[03_Classification]]
-Related: [[logreg]]
+Related: [[logreg]], [[kernels]]
+
 
 **General idea:** widest street approach: find a line, so that if you have a band around the line, it separates the positive from the negative examples as best as possible. If the line is described with a normal vector ω ⊥ line, whether a point x is far from the line can be described as ⟨x , ω⟩. If b is a good threshold value for this product (if we get b when x lies right smack on the separating line), we have xᵀω + b ≥ 0. To find the best line, let's try to find ω and b, so that for positive samples we would get xᵀω+b>1 (not just >0), and for negative samples, xᵀω+b<-1. 
 
@@ -23,7 +24,8 @@ Optimize θ, to achieve $\min ||\tilde θ||$, provided that $y_i ⟨x_i , θ⟩ 
 
 > At this point (ESL p133) I give up for now. It seems that math around p134 is not how SVMs are actually implemented anyways, so it can probably wait. I'll rivisit this once I read the actual SVM chapter.
 
-SVMs are very popular with **Kernel tricks**, such as radial basis kernel [[RBF]], as it produces simple yet expressive models ([ref](https://towardsdatascience.com/support-vector-machines-svm-c9ef22815589)).
+SVMs are very popular with **Kernel tricks**, such as radial basis kernel [[RBF]], as it produces simple yet expressive models. See [[kernels]].
 
 # Refs
+
 [A reasonable post abut SVM, by Ajay Yadav](https://towardsdatascience.com/support-vector-machines-svm-c9ef22815589)

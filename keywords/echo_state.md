@@ -3,7 +3,7 @@
 #echo #rnn #graphs #bib
 
 Parents: [[07_RNNs]]
-See also: [[criticality]], [[stdp]], [[cellular_automata]]
+See also: [[criticality]], [[stdp]], [[cellular_automata]], [[synfire]], [[graph_symmetry]]
 
 # Papers
 
@@ -23,42 +23,28 @@ Interesting general statements:
 * Regularization for the final layer (L2) helps (scholarpedia)
 * Also according to scholarpedia, sparsity is overrated (nb: true only if edges are weighted!). A fully connect reservoir works quite well; if edges are weighted, sparse connectivity only helps with computational complexity. (but without references; just claims that "many authors report"). Also, obviously, if weights are allowed to be closer to 0, then fully connected isn't really quite "fully connected".
 
-# Ideas
+**Why echo-state networks work?** Supposedly they … FINISH HERE
 
-* When quantifying networks, can we use richness of echos as a proxy for actual performance, to avoid training? Or is training fast enough?
+> Interesting parallel with random feed-forward networks: [[Harris2020randomness]]. Random smooth kernels, like doing a kernel trick.
 
-OK, we work with sparse matrices with edges from {0, 1, −1}. That's a given.
+# Questions
 
-Subprojects
-* Genetic algorithm? (for a no-symmetries sparse matrix) Followed by graph analysis.
-    * We need cool methods to quantify non-weighted, but oriented graphs. Like Ricci curvature.
-* Greedy algorithm? (Adding connections one by one)? Can we find the most asymmetric network algorithmically? Starting from tiny graphs?
-* Note that everything that was ask here can actually be asked BOTH about sparse connectivity, and negative weights. For a given sparse network, is there a best distribution of positive and negative weights? Can we converge on it, or find a distribution algorithmically, similar to graph coloring algorithms and whatnot?
-
-* Use local logic to deliberately make the network less symmetric? (is the same as STPD? Basically, if two nodes are too similar, we want to make them dissimilar… Sketch a plasticity rule that would achieve that.)
-* Pruning experiments for this type of networks? Two options for pruning here - in the output layer (which could also allow ensembling on the same reservoir), and in the reservoir itself (which could curiously interact with network properties). Use some sort of backprop-like calculation, find least useful nodes and rewire them?
+* When quantifying networks, can we use richness of echos as a proxy for actual performance, to avoid testing the performance?
+* Can one use local logic to deliberately make the network less symmetric? (is the same as STPD? Basically, if two nodes are too similar, we want to make them dissimilar… Sketch a plasticity rule that would achieve that.)
+* How does pruning work on echo networks? Two options for pruning here - in the output layer (which could also allow ensembling on the same reservoir), and in the reservoir itself (which could curiously interact with network properties). Use some sort of backprop-like calculation, find least useful nodes and rewire them?
 * Use local unsupervised learning to de-correlate the network. STDP-style? Hoping that the network will become less symmetric?
     * A possible biology-inspired scenario: if 2 inputs come in synchrony, prune one of them. But if a unit has no outputs, connect at random. Or better yet, always rewire (degree-preserving pruning). (This is not STDP though; it's something inspired by it, but not quite it). Could it work as yet another stochastic optimization algorithm?
     * In principle, classic STDP seems to be about gathering, strengthening evidence, which is more how the last layer works (the last layer can work on stdp alone, huh), not how decorrelation works. Decorrelation should punish neurons that corroborate too much, not reward them with connections. As, apparently, being chaotic isn't that great for an echo-state-network, maybe "classic STDP" is sorta the voice of reason, and it is the synaptic competition + local inhibition that eventually decorrelates the network?
     * If we do that, and if we keep all weights at 1 (or −1), we'll have to track the "worth" of each potential input, and once an input drops below a certain amount of "worth", randomly rewire it.
-* Role of intrinsic plasticity? Does it make things better or worse?
+* Role of intrinsic plasticity? Does it make things better or worse? - compare to that Goodman 2020 paper?
 * Is brain-style inhibition much worse than "distributed inhibition" (50% of negative weights)? If we do fixed some-to-some inhibition (a mix of feed-forward and feed-back; get average activity of random M neurons, project to another random M?), will it be similar? Just how fragmented does it have to be?
-* Another potential bonus of compartmentalizing inhibition is that we can keep it fixed, and only change the excitatory network, which may enable simpler analyses (unweighted graphs).
+* Another potential bonus of compartmentalizing inhibition is that one can keep it fixed, and only change the excitatory network, which may enable simpler analyses (unweighted graphs).
 * Non-monotonous activation function, like sin, so that 2 inputs produce inhibition? As an excitatory substitute to real inhibition?
 * As a mix between this last idea and the idea of unsupervised weight flipping, we can rephrase it as advanced intrinsic plasticity of neurons (unsupervised).
 
-**Draft abstract**
-
-Reservoir models, such as echo state networks, have shown unique efficiency in chaotic time series classification and prediction. In these models, the reservoir is represented as a set of  nodes connected into an oriented graph. In classic echo state networks, the graph serving as a computational reservoir is randomized, but intuitively, certain types of non-random graphs could offer better performance. In this paper, we use genetic algorithms and local unsupervised edge rewiring to construct quasi-random graphs that can serve as effective echo state reservoirs. We use these echo networks to predict chaotic time series, and apply classic network and computational topology measures, such as Ricci curvature, to describe the properties of computationally effective reservoirs. Taken together, our work offers practical steps towards the design of efficient reservoir models.
-
-**Open questions**
-* How do we pick what nodes to feed input signal to? Is it also a part of optimization? In the symmetries paper, they did +1 −1 to every single node. Is it good? Is it optimal?
-* How to calculate symmetries of a graph fast in practice? See [[graph_symmetry]] for packages.
-
 # To-revisit and describe
 
-Murray, J. M. (2019). Local online learning in recurrent networks with random feedback. eLife, 8, e43299.
-[Murray 2019] x>Win>echo>Wou>y, dh/dt = -h/tau stable solution for each element, tanh() activation. Minimizes square distance, applies gradient descent. Then tries to make biologically plausible: drops non-local term (refuses to optimize activity of other nodes that feed _from_ this node by changing inputs _to_ this node). And instead of reverting weights of Wout, uses random weights to communicate the error back. With this, weight change is proportinal to an accumulated product of pre- to the (derivative of) post-activity for eacn synapse (eligibility traces!). If only Wout are trained - learning is worse. If only Wrec - completely unsuccessful (not surprising as they use random error instead of flipped Wout). Use "ready-set-go" (interval matching) as a test. Then stiches an architecture of cortex-basalganglia-thalamus, to learn "behavioral syllabi" for a longer behavior.
+Murray, J. M. (2019). Local online learning in recurrent networks with random feedback. eLife, 8, e43299. x>Win>echo>Wou>y, dh/dt = -h/tau stable solution for each element, tanh() activation. Minimizes square distance, applies gradient descent. Then tries to make biologically plausible: drops non-local term (refuses to optimize activity of other nodes that feed _from_ this node by changing inputs _to_ this node). And instead of reverting weights of Wout, uses random weights to communicate the error back. With this, weight change is proportinal to an accumulated product of pre- to the (derivative of) post-activity for eacn synapse (eligibility traces!). If only Wout are trained - learning is worse. If only Wrec - completely unsuccessful (not surprising as they use random error instead of flipped Wout). Use "ready-set-go" (interval matching) as a test. Then stiches an architecture of cortex-basalganglia-thalamus, to learn "behavioral syllabi" for a longer behavior.
 
 # To-read
 
@@ -188,7 +174,7 @@ http://grh.mur.at/sites/default/files/ESNinAudioProcessing.pdf
 # General Refs
 
 People:
-* tl carroll: https://scholar.google.ru/citations?user=3MJYhIMAAAAJ
+* T. L. Carroll: https://scholar.google.ru/citations?user=3MJYhIMAAAAJ
 * Herbert Jaeger: https://scholar.google.ru/citations?user=0uztVbMAAAAJ
 
 Jaeger, H. (2007). Echo state network. scholarpedia, 2 (9), 2330.
