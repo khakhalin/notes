@@ -3,7 +3,7 @@
 #tools
 
 Parent: [[python]]
-See also: [[numpy]]
+See also: [[numpy]], [[py_dates]]
 
 # Open questions
 
@@ -72,6 +72,7 @@ Refs:
 * Documentation (not too well organized; hard to find stuff): https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html
 * Most useful methods are called on a datastamp series using a prefix (similar to how it works for strings): for example `df.x.dt.dayofyear` (note the absence of brackets; it's really like that). Other useful ones (beyond obvious `hour`, `day` etc.): `date()` and `time()` (these two return a new timestamp, not a number, and so have brackets!); `weekofyear`, `dayofweek` (zero-indexed starting Monday), `is_month_end` (subj) etc.
 * To create as series of datastamps from a reasonable column of strings, use `df.x = pd.to_datetime(df.x)`.
+* See also: [[py_dates]] for Pythonic work with dates in general
 
 **Applying functions to every element**
 If transforming only one column: **map**: `df.x = df.x.map(@function)`. For one-liners, works well with lambda notation. There's also`df.apply(@fun, axis=1)`, and it appears that with it one can write a function that is applied to every row of a dataframe, but I'm not quite sure.

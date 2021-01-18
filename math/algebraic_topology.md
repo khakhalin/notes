@@ -21,3 +21,6 @@ Subtopics:
 
 Brief intro in Umap context:
 https://umap-learn.readthedocs.io/en/latest/how_umap_works.html
+
+Lecture series on topological analysis of data:
+https://www.youtube.com/playlist?list=PLnLAqsCN_2kezhtU-2rXsILY-qAejTcwB

@@ -1,10 +1,11 @@
 # Python
 
-#tools #coding
+#tools #coding #oop
 
 Path: [[01_Tools]]
-See also: [[anaconda]], [[jupyter]]
-Libraries: [[pandas]], [[tensorflow]], [[numpy]], [[matplotlib]], [[python_dates]]
+Related: .
+Subtopics: [[anaconda]], [[jupyter]], [[oop]]
+Libraries: [[pandas]], [[tensorflow]], [[numpy]], [[matplotlib]], [[py_dates]]
 
 # Random tips
 
@@ -100,7 +101,7 @@ with Thing() as t:
 * another official description one: https://www.python.org/dev/peps/pep-0343/ 
 * implementing a class to support `with` statement: https://preshing.com/20110920/the-python-with-statement-by-example/
 
-# OOP in Python
+# OOP in Python ([[oop]])
 
 **Inheritance** and **mixins** are fine: just make the class inherit to several classes, like `class Child(Parent1, Mixin1)` etc.
 
@@ -114,7 +115,7 @@ There's an argument that composition (having a hierarchy of types of classes) is
 
 **Decorators**: a type of a function that acts as a meta-function: takes another function as an argument, writes a helper function around it, and returns this outer helper function. May for example be used to wrap a closure around a function, to sorta "automate memoization": ([ref](https://www.python-course.eu/python3_memoization.php)). According to Google style code, while they may be helpful, they aren't exactly recommended, as they may complicate things.
 
-# Style habits
+# Misc style habits
 
 * Import entire modules or packages, not classes or functions, to retain `module.class.method()` structure, and prevent name collisions.
 * Lines shouldn't be longer than 80 chars (Google style guide)
@@ -125,7 +126,7 @@ if __name__ == '__main__':
 ```
 * Smuggle code from Jupyter to classes as soon as possible (Jupyter only for prototyping, reporting, and use case)
 
-## Naming variables
+## Naming
 
 * Python-specific:
     * Variables: **snake_case** underscore for variables and functions

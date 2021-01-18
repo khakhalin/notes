@@ -36,8 +36,6 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 
 **Dataiku**: some sort of visual programming language platform for data science?
 
-**Design Patterns** (prog): A famous programming paradigm, and a name of a book by Peter Norwig, about typical ways to engineer interactions between classes and objects in object-oriented programming. About 23 or so archetypical solutions and interfaces that Java/C++ programmers learn by heart. [wiki](https://en.wikipedia.org/wiki/Software_design_pattern)
-
 **Docker** (db): Cloud computing service that provides a pratform with OS-level virtualization: an isolated user space (called a **container**) that looks like a dedicated computer to programs running on it. Containers can talk to each other via defined channels. But unlike virtual machines, there's only one OS, so is less resource-hungry.
 
 **Document store** (db): instead of rows, returns XML documents or something similar. [wiki](https://en.wikipedia.org/wiki/Document-oriented_database)

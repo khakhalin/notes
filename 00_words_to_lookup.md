@@ -43,6 +43,10 @@ Dump:
 
 # Top priorities
 
+* install Pcharm
+* Read about Factory pattern
+* Read about setters and getters
+* Learn conventions of unit testing in Python
 * How sites talk to mysql now?
 * docker - what and how
     * Flask docker file (allegedly 80% of what one needs for a typical deployment)
