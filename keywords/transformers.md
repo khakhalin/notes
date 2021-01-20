@@ -10,6 +10,10 @@ Papers:
 
 # Unprocessed bibliography:
 
+Interfaces for Explaining Transformer Language Models
+https://jalammar.github.io/explaining-transformers/
+(explainability, neuron activation)
+
 Peter Clark, Oyvind Tafjord, Kyle Richardson. (2020) Transformers as Soft Reasoners over Language https://arxiv.org/abs/2002.05867
 Show how, once learned on texts, transformers can solve syllogisms (infer T/F of a statement, given a set of statements.)
 

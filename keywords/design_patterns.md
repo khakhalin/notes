@@ -5,9 +5,11 @@
 Parents: [[oop]]
 See also: [[solid]]
 
-A famous programming paradigm, and a name of a famous book (1994) by Peter Norwig, about optimized, standardized ways to design interactions between classes and objects in object-oriented programming. About 23 or so archetypical solutions and interfaces that software engineers learn by heart. Also aids with refactoring (minimizes, structures, and ideally - eliminates it). Also facilitates interactions between developers (a common vocab).
+A famous programming paradigm, and a name of a famous book (1994), about optimized, standardized ways to design interactions between classes and objects in object-oriented programming. About 23 or so (some sites say, 26) archetypical solutions and interfaces that software engineers learn by heart. Also aids with refactoring (minimizes, structures, and ideally - eliminates it). Also facilitates interactions between developers (a common vocab).
 
-Of these ~23, some are obscure, but some are really important. The short list:
+Are split into 3 categories: **Creational** (about how to init classes), **Structural** (about how to organize class composition), and **Behavioral** (about communication between classes).
+
+Of these patters, some are obscure, but some are really important. The short list:
 * Factory
 * Builder
 * Prototype
@@ -24,10 +26,20 @@ Of these ~23, some are obscure, but some are really important. The short list:
 
 # Factory
 
-
+Instead of a sophisticated object capable of all possible alternative behaviors, create a bunch of sister classes (probably all inheriting to an abstract class?), and a separate "Factory" class to be called instead of a constructor, when a new object is needed. And then let this "Factory" (object creator) create whatever subtype of an object that you need. Like, instead of `npc = new Npc`, do `npc = Demon()` (where `class Demon(npc):`etc.) Or maybe even`npc = new_npc('demon')`, having`new_npc` check what the request was, and create a matching `Demon` object. And then you can totally do `Npc.walk()`, and instead of having one method that can walk and knows whether it's a Demon or not, you'll either actually call for `Demon.walk()` method, or some other `.walk` for another tpe of npc, inheriting to `Npc`.
 
 Footnotes:
+* https://en.wikipedia.org/wiki/Factory_method_pattern
 * https://refactoring.guru/design-patterns/factory-method
+* https://realpython.com/factory-method-python/
+
+# Decorator
+
+
+
+# Singleton
+
+There's only one instance of this class. Should contain some protections against a creation of another copy.
 
 # Refs
 

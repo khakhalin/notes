@@ -13,6 +13,9 @@
 
 # To read:
 
+Chiang, C. H., & Lee, H. Y. (2020). Pre-Training a Language Model Without Human Language. arXiv preprint arXiv:2012.11995.
+https://arxiv.org/pdf/2012.11995.pdf
+
 * https://ruder.io/unsupervised-cross-lingual-learning/index.html
 * https://ruder.io/state-of-transfer-learning-in-nlp/index.html
 * https://www.aclweb.org/anthology/P19-1334/ 
