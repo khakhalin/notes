@@ -2,7 +2,7 @@
 
 #behav #meaning #evolution
 
-Parents: [[bib_behavior]]
+Parents: [[behavior]]
 Other possible keywords: mind
 
 Tower of Generate-and-Test, by Dennet (1995)

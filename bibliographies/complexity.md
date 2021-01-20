@@ -3,8 +3,8 @@
 #complexity #automata #bib
 
 Sub-bibliographies:
-* [[bib_neurostochastic]]
-* [[bib_behavior]]
+* [[neurostochastic]]
+* [[behavior]]
 
 Children:
 * [[randomness]] - specifically, philosophy of randomness

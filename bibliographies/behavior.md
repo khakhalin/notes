@@ -3,9 +3,10 @@
 #bib #behav
 
 See also:
-* [[bib_neurostochastic]]  - about randomness, variability, exploration
-* [[bib_xen]] - everything Xenopus and fish
-* [[bib_video]] - about video tracking
+* [[neurostochastic]]  - about randomness, variability, exploration
+* [[xen]] - everything Xenopus and fish
+* [[video]] - about video tracking
+* [[free_will]] - on more philosophical and methodological aspects of it
 
 # Refs
 

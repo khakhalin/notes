@@ -2,7 +2,7 @@
 
 #behav #exploration #randomness
 
-Parents: [[bib_behavior]] / [[bib_neurostochastic]]
+Parents: [[behavior]] / [[neurostochastic]]
 Related: [[Mitchell2002shell_games]]
 
 _Theory goes here_

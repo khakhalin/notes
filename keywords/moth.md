@@ -2,7 +2,7 @@
 
 #neuro #bio #sensory #behav #chaos #randomness #freewill
 
-Parent: [[bib_neurostochastic]]
+Parent: [[neurostochastic]], [[free_will]]
 
 Roeder KD. (1975) Neural factors and evitability in insect behavior. J Exp Zool.
 Sometimes it's better to be unpredictable when you are avoiding a predator, as then the predator can not guess where you would go. Noctuid moths have special super-noisy neurons that unpredictably change their flying patterns when the moth is hit by an ultrasound beam.

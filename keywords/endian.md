@@ -1,5 +1,9 @@
 # Endian-ness
 
+#metal
+
+Parent: [[metal]]
+
 Aka endianness. How numbers (aka "words") are stored in memory. Two options:
 * big-endian (BE): the most significant digit goes first (smaller memory address)
 * little-endian (LE): the opposite way (from smallest bit to largest)

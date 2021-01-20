@@ -1,7 +1,11 @@
 # Tracking and analyzing animal behav
-A collection of references to papers that track animals, and then analyze their behavior. (Not sure they deserve individual cards at this points, so going for a summary)
+
+Everything on track animals, andbehavior analysis.
 
 #behav #neuro #bib
+
+See also: [[video]], [[xen]], [[behavior]]
+
 
 Shemesh, Y., Sztainberg, Y., Forkosh, O., Shlapobersky, T., Chen, A., & Schneidman, E. (2013). High-order social interactions in groups of mice. Elife, 2, e00759.
 https://elifesciences.org/articles/00759

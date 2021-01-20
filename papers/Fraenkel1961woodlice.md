@@ -4,7 +4,7 @@ Fraenkel, G. S., & Gunn, D. L. (1961). The orientation of animals: kineses, taxe
 
 #behav
 
-Parents: [[bib_behavior]] / [[bib_neurostochastic]]
+Parents: [[behavior]] / [[neurostochastic]]
 Future terms: swarming
 
 Woodlice apparently just move randomly with speed ∝ dryness and light. So they stop moving once it's damp and dark. Spectacularly simple, and spectacularly effective!

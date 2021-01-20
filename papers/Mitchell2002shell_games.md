@@ -2,7 +2,7 @@
 
 #behav #game #exploration
 
-Parents: [[bib_neurostochastic]]
+Parents: [[neurostochastic]]
 Related: [[levy_walks]]
 
 Mitchell, W. A., & Lima, S. L. (2002). Predator‐prey shell games: large‐scale movement and its implications for decision‐making by prey. Oikos, 99(2), 249-259.

@@ -2,11 +2,12 @@
 
 #tools #systems #bib #interview
 
-Subtopics and see-alsos:
+See also:
 * [[database]] - databases and alternatives to them
 * [[system_interview]] - collections of tips regarding system interviews
 * [[01_Tools]] - ML production tools may be there
-* [[fairness]]
+* [[fairness]] - an ethical aspect of system development
+* [[metal]] - everything hardware
 
 # Scaling
 
