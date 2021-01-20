@@ -190,7 +190,7 @@ Not exhaustive: if a term is explained in one of the thematic chapters, it is no
 
 # UVW
 
-**VAE** (dl): Variational Auto-Encoder. See [[08_Self_Supervised]]
+**VAE** (dl): Variational Auto-Encoder. See [[08_Unsupervised]]
 
 **VPS** (system): Virtual Private Server. Virtual Machine -style half-way between shared service and private server?
 

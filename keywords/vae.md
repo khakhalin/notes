@@ -1,8 +1,8 @@
 # Variational Auto-Encoder
 
-#vae #self-supervised #bib
+#bib #vae #self-supervised #unsupervised
 
-Parents: [[08_Self_Supervised]], [[15_generate]]
+Parents: [[08_Unsupervised]], [[15_generate]]
 Related: [[gan]]
 
 **Autoencoders**: Encoder → latent space (aka code) → Decoder → loss function.

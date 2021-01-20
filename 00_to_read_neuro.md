@@ -4,15 +4,12 @@
 
 Se also: [[12_Neuro]] - for an official hub title page bibliography	
 
-Learning from unexpected events in the neocortical microcircuit
-https://www.biorxiv.org/content/10.1101/2021.01.15.426915v1
-Tweetprint: https://twitter.com/colleenjgillon/status/1351557910439059457
-
 Perez-Nieves, N., Leung, V. C., Dragotti, P. L., & Goodman, D. F. (2020). Neural heterogeneity promotes robust learning. bioRxiv.
 https://www.biorxiv.org/content/10.1101/2020.12.18.423468v1
 
 Cornford, J., Kalajdzievski, D., Leite, M., Lamarquette, A., Kullmann, D. M., & Richards, B. A. (2020). Learning to live with Dale's principle: ANNs with separate excitatory and inhibitory units. bioRxiv.
 https://www.biorxiv.org/content/biorxiv/early/2020/11/03/2020.11.02.364968.full.pdf
+Brief summary: AAAAAAAAAAAAAAAAAAAAAAA
 
 Hasson, U., Nastase, S. A., & Goldstein, A. (2020). Direct Fit to Nature: An Evolutionary Perspective on Biological and Artificial Neural Networks. Neuron, 105(3), 416-434.
 https://www.cell.com/neuron/pdf/S0896-6273(19)31044-X.pdf

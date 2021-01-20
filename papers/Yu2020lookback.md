@@ -5,7 +5,7 @@ https://www.mdpi.com/2078-2489/11/7/345
 
 #embedding #self-supervised #transfer #graphs
 
-Related: [[09_Graphs]], [[transfer]], [[08_Self_Supervised]]
+Related: [[09_Graphs]], [[transfer]], [[08_Unsupervised]]
 
 Nicely abbreviate Few-Shot Learning as **FSL**. Few examples per class. Most current approaches use **meta-learning** (learn to learn, fancy architectures), and **transfer learning**. Claim that **Graph Networks** may have a benefit here, as the number of labels is by definition small (and Graph Networks can only do small - that's the problem with them).
 

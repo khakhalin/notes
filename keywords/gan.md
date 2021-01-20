@@ -2,7 +2,7 @@
 
 #bib #self-supervised #gan #adversarial
 
-Parents: [[08_Self_Supervised]]
+Parents: [[08_Unsupervised]]
 
 # To-Read
 

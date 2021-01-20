@@ -2,7 +2,7 @@
 
 #embedding #features
 
-Parents: [[08_Self_Supervised]], [[04_Features]]
+Parents: [[08_Unsupervised]], [[04_Features]]
 
 See also:
 * [[word2vec]]
