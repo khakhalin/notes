@@ -6,10 +6,11 @@
 https://learnpythonthehardway.org/book/appendixa.html
 
 Major subtopics:
-* [[system_design]]
-* [[database]]
+* [[system_design]] - system design, scalability
+* [[database]] - everything databases
+* [[oop]] - on good software engineering, patterns, testing etc.
 
-Cheatsheets, tips, notes:
+Tips and notes on individual tools:
 * [[python]] - with separate notes for [[numpy]], [[pandas]], and some more
 * [[tensorflow]] - subj
 * [[git]] - GIT cheat sheet
@@ -22,7 +23,7 @@ Running ML projects:
 * [[data_cleaning]]
 * [[julia]] - about the language
 
-Project management and lifehacks:
+Project management and knowledge management:
 * [[scrum]] - the methodology
 * [[zettelkasten]] - how to properly create and support this knowledge base
 * [How to do citations with Zettlr](https://docs.zettlr.com/en/academic/citations/) - #todo, this must be nice! 
@@ -37,14 +38,14 @@ Project management and lifehacks:
     6. Print statements everywhere (ruins of abandoned debugging)
  
 Instead:
-* Write unit tests, and start with tests (aka **test-driven development**; [ref](https://www.freecodecamp.org/news/an-introduction-to-testing-in-python/))
+* Write unit tests, and start with tests (aka test-driven development, see [[unit_test]])
 * Make small and frequent commits
-* Functions ([ref](https://drive.google.com/file/d/1TraVwRkbkCbHq-s_-NS69ZEbRNwH8XNh/view)):
+* Methods and functions:
     * should be small (~20 lines = 1 screen; better lesst than that), 
     * do one thing, 
     * at one level of abstraction (like, it shouldn't combine high-level processing of an object, and low-level processing of its parts; it should be dealt with by a hierarchy of functions, not raw code in one function)
     * have few arguments (ideally, 0-2)
-    * avoid flags (`also_do_this=True`); consider writing 2 functions instead
+    * avoid flags (`also_do_this=True`); consider writing 2 functions instead (_hmm? Is it true, and why? Not sure I necessarily understand how this is a help._)
 
 # ML Project Structure
 #management

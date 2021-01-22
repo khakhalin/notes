@@ -1,4 +1,4 @@
-# A rubric for ml production readiness
+# A rubric for ML production readiness
 
 Breck, E., Cai, S., Nielsen, E., Salib, M., & Sculley, D. (2017, December). The ml test score: A rubric for ml production readiness and technical debt reduction. In 2017 IEEE International Conference on Big Data (Big Data) (pp. 1123-1132). IEEE.
 
@@ -29,7 +29,7 @@ Tests for model development:
 
 Test for ML infrastructure:
 1. Training is reproducible (deterministic training is best. Seed random generators?)
-2. Unit test model: e.g. configuration files, single step of gradient descent, restore from checkpoint. Training to overfit may be included here.
+2. Unit test model: e.g. configuration files, single step of gradient descent, restore from checkpoint. Training to overfit may be included here. (See [[unit_test]])
 3. Test pipeline integration
 4. Automated quality test that terminates a model if it's obviously off (compared to the prev one?)
 5. There's a debug mode (that allows to run this model on a single example and reports all stages)

@@ -43,15 +43,17 @@ Dump:
 
 # Top priorities
 
-* predictive coding
+* model view controller - most important design pattern for web apps
 * Learn conventions of unit testing in Python
 * install Pcharm
+* predictive coding - definition?
 * How sites talk to mysql now?
 * docker - what and how
     * Flask docker file (allegedly 80% of what one needs for a typical deployment)
     * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
 * Scalability lecture: https://www.youtube.com/watch?v=-W9F__D3oY4
 (I'm at 24m right now)
+* How to do code reviews: https://google.github.io/eng-practices/review/reviewer/
 * spectral properties of graphs, spectral radius
 * Scaling Etsy: https://www.youtube.com/watch?v=eenrfm50mXw
 * Docker and Kubernetes: https://www.youtube.com/watch?v=u8dW8DrcSmo

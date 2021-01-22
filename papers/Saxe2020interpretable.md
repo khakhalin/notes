@@ -24,3 +24,4 @@ Nice code that is worth reproducing!
 # Refs
 
 Agarwal, R., Frosst, N., Zhang, X., Caruana, R., & Hinton, G. E. (2020). Neural additive models: Interpretable machine learning with neural nets. arXiv preprint arXiv:2004.13912.
+https://arxiv.org/pdf/2004.13912.pdf

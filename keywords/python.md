@@ -3,8 +3,8 @@
 #tools #coding #oop
 
 Path: [[01_Tools]]
-Related: .
-Subtopics: [[anaconda]], [[jupyter]], [[oop]]
+Related: [[oop]] (Pythonic implementation of OOP is all given there)
+Subtopics: [[anaconda]], [[jupyter]]
 Libraries: [[pandas]], [[tensorflow]], [[numpy]], [[matplotlib]], [[py_dates]]
 
 # Random tips
@@ -59,6 +59,10 @@ Libraries: [[pandas]], [[tensorflow]], [[numpy]], [[matplotlib]], [[py_dates]]
 * Tips from Chip Huyen: https://github.com/chiphuyen/python-is-cool
 * Nice [list of Python gotchas](https://www.toptal.com/python/top-10-mistakes-that-python-programmers-make) from Martin Chilikian
 
+# Functions
+
+**Non-local variables**: when defining function within a function, we can make local variables of the outer function become sorta "global" for the inner function, which may be handy. If you only plan to read from this variable, just refer to it as if it's global. If you plan to update it, write `nonlocal var_name` inside the inner function, as if declaring it. After that it won't be masked. 
+
 # Errors
 
 To **raise an error** do: `raise KeyError('Error Message')`, except instead of a `KeyError` there are lots of "Base error types" to try. Some useful examples include:
@@ -101,21 +105,7 @@ with Thing() as t:
 * another official description one: https://www.python.org/dev/peps/pep-0343/ 
 * implementing a class to support `with` statement: https://preshing.com/20110920/the-python-with-statement-by-example/
 
-# OOP in Python ([[oop]])
-
-**Inheritance** and **mixins** are fine: just make the class inherit to several classes, like `class Child(Parent1, Mixin1)` etc.
-
-Use `super().method` or `super(className, self).method` to invoke methods of a parent class. These two notations above are technically synonymous, so `super()` is preferred, as it's simpler. Note that it's not `self.super()`, bu just `super()`, as it's not a method of a class. https://realpython.com/python-super/
-
-There's an argument that composition (having a hierarchy of types of classes) is easier to maintain than class inheritance. Ref: https://realpython.com/inheritance-composition-python/
-
-**Non-local variables**: when defining function within a function, we can make local variables of the outer function become sorta "global" for the inner function, which may be handy. If you only plan to read from this variable, just refer to it as if it's global. If you plan to update it, write `nonlocal var_name` inside the inner function, as if declaring it. After that it won't be masked. 
-
-**Closures**: Writing a function that returns another function. One way to use it: to bind data to the function, as if it was hard-coded inside the function, as an alternative to either global variables, or passing data as an argument. Have a function that receives the data, whips out a function that uses this data, and then returns the function itself. Refs: [1](http://www.trytoprogram.com/python-programming/python-closures/), [2](https://www.programiz.com/python-programming/closure)
-
-**Decorators**: a type of a function that acts as a meta-function: takes another function as an argument, writes a helper function around it, and returns this outer helper function. May for example be used to wrap a closure around a function, to sorta "automate memoization": ([ref](https://www.python-course.eu/python3_memoization.php)). According to Google style code, while they may be helpful, they aren't exactly recommended, as they may complicate things.
-
-# Misc style habits
+# Style habits
 
 * Import entire modules or packages, not classes or functions, to retain `module.class.method()` structure, and prevent name collisions.
 * Lines shouldn't be longer than 80 chars (Google style guide)
@@ -143,58 +133,6 @@ if __name__ == '__main__':
 Refs:
 * https://hackernoon.com/the-art-of-naming-variables-52f44de00aad
 * [Google style guide](https://github.com/google/styleguide), including that [for Python in particular](https://google.github.io/styleguide/pyguide.html)
-
-# List of special methods for pythonic objects
-
-**General:**
-* `__new__`:
-* `__init__`: create an object
-* `__del__`
-* `__enter__`: create a risky temp object and return the instance, works with `with`
-* `__exit__`: clean-up after `with`
-* `__str__`: turn into a nice string, works with `print`. Human-oriented.
-* `__repr__`: is supposed to return a python command (string) that, if evaluated, reconstructs the original object. A serialization of sorts. If `str` isn't defined, `print` defaults to it as well. In formatted strings, is triggered by `%r` command.
-* `__format__`
-* `__bytes__`
-
-**Collection-like behaviors:** (all these should still have `__` around them; I just got lazy and decided not to write them. But actually they are there!)
-* `len`: length
-* `next`
-* `iter`
-* `reversed`
-* `getitem (self, position)`: works with `[]`, slices, iteration, `in`
-* `setitem`
-* `delitem`
-* `contains`: if there's a fast way to check for the presence of an element (otherwise defaults to iteration)
-
-**Conversion to numbers:**
-* `abs`: absolute value or something like it?
-* `bool`: if someone decides to run `if A` on our object.
-* `int`
-* `float`
-* `hash`
-* `index`
-* `complex`
-
-**Math-like behaviors:**
-* `add (self, other)`: for `+`
-* `mul (self, other)`: for  multiplying. Note that `other` may belong to a different type if you so desire (for example, for vectors, we may want to multiply by a scalar, but not use `*` for any sort of vector multiplication).
-* `rmul (self, other)`:
-* HERE I GAVE UP TEMPORARILY #halfthere
-* `eq`, `ne`, `lt`, `le`, `gt`, `ge`: for all =, ≠, <, ≤, >, ≥ operations. If only some of these are given, Python tries to improvise (say, combine le from eq and lt), or gt from eq and lt.
-
-**Callables**
-* `call`
-
-**Attribute management:**
-* `getattr`
-* `getattribute`
-* `setattr`
-* `delattr`
-* `dir`
-* `get`
-* `set`
-* `delete`
 
 # General Refs
 

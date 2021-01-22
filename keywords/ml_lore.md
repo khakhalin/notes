@@ -40,7 +40,7 @@ Related: [[Breck2017testing]], [[tensorflow]], [[hyperparameters]], [[Huyen2019b
 * Come up with a time budget in advance. Ideally, automate, as it takes ~day, so maybe use this time to do something else ([ref](https://medium.com/@staceysvetlichnaya/hyperparameter-search-with-iterative-sweeps-3799df1a4d45))
 * Analyze, visualize, take copious notes. Parallel coordinates with lines colored by end-result is a good way to grap the overall picture ([ref](https://medium.com/@staceysvetlichnaya/hyperparameter-search-with-iterative-sweeps-3799df1a4d45))
 
-**Unit tests for ML**:
+**Unit tests for ML** ([[unit_test]]):
 * Unit tests for ML: write a test that takes one step, and compared before and after, or at least check that it changed ([ref](https://medium.com/@keeper6928/how-to-unit-test-machine-learning-code-57cf6fd81765))
 * Assert that loss != 0 (ibid)
 * Test that params that need to be frozen at a particular stage of training actually don't change (ibid)

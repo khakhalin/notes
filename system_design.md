@@ -42,7 +42,7 @@ Two architectural decisions to make:
 
 ### Data dependencies
 
-Input features that used for training and eventual functioning of a model are somewhat analogous to code modules in classical programming, as they come with maintenance, need to be monitored, and tested. But creating "unit tests" for features may be hard. Things to consider:
+Input features that used for training and eventual functioning of a model are somewhat analogous to code modules in classical programming, as they come with maintenance, need to be monitored, and tested. But creating "unit tests" for features may be hard ([[unit_test]]). Things to consider:
 * **Reliability** (always present, calculatable in the same way). If not - need a backup plan.
 * **Versioning** - will the process computing this feature change over time? If yes (say, different formats), we need to enable versioning: store the version of the code that produced the feature, on top of the "value" of the feature, so that we could choose between several ways of processing it, without abandoning older, legacy data.
 * **Necessity** - some features just create technical debt and direct costs without meaningfully improving the model. Something reminiscent of [[regularization]].
