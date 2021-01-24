@@ -26,7 +26,11 @@ Of these patters, some are obscure, but some are really important. The short lis
 
 # Factory
 
-Instead of a sophisticated object capable of all possible alternative behaviors, create a bunch of sister classes (probably all inheriting to an abstract class, defining an interface), and a separate "Factory" class to be called instead of a constructor, every time when a new object is needed. And then let this "Factory" (object creator) create whatever subtype of an object that you need. 
+One sentence description: Define an interface for creating an object, but let subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses.
+
+Instead of making one sophisticated class capable of all several alternative behaviors, create a bunch of sister classes that share the same interface (probably all inheriting to an abstract class, to define this interface), but with potentially very different implementations of these methods. As now you cannot graciously init them via a standard init (each class has its own init, right?), you also need a separate "Factory" class to be called instead of a constructor, every time a new object is needed. This "Factory" class (object creator) will then create whatever subtype of an object that you need. 
+
+> Note: I have a strong suspicion that the RefactoringGuru presents an abstract factory as a factory, by drawing a line further in. Most C++ and JavaScript 
 
 A full proper realization of this pattern, for 2 alternate behaviors, includes 6 classes:
 1. Abstract product that defines the interface for products. Like `Npc`, with `Npc.move()` etc.
@@ -36,9 +40,7 @@ A full proper realization of this pattern, for 2 alternate behaviors, includes 6
 5. Concrete creator 1 `Creator_humans` that inherits to `Creator`, but creates `Human`.
 6. Concrete creator 2: same, but for demons.
 
-Now in a human village you can set a creator of humans, and in demon village do `creator = new Creator_demons`, but `john = creator.new_nps()` will always work, and `john.walk()` will always work, even tho in some villages john will be a demon, and in some - a human.
-
-In practice, at least in my experience, the name "Factory" seems to be used extremely loosely! Essentially, there are several low-key versions of this pattern, like passing a type of product as a parameter `a = make_new('demon')`, or as a class method `a = npc.demon()`. It's also not necessary that products of different behaviors would actually have different types; it's enough that the creation and "tune-up" of these customized products was automated and abstracted. But the version with heterogeneous products united by a common interface is the most "full" one. 
+Now in a human village you can set some "creator object", or even just "factory method" of your "environment" (village?) object as a creator of humans, while in a demon village you would set it as a creator of demons (like `creator = new Creator_demons`). And so in every village commands like `john = creator.new_nps()` will always work, and later `john.walk()` will also always work, even tho in some environments john will be a demon, and in others - a human.
 
 In general, it's recommended to go for this pattern if creation of objects is complicated enough, for this fancy assortment of classes to still be a net win, in terms of code complexity. As complexity grows, it may evolve into **Abstract Factory**, **Prototype**, or **Builder**.
 
@@ -48,20 +50,32 @@ Footnotes:
 * https://realpython.com/factory-method-python/
 * https://realpython.com/instance-class-and-static-methods-demystified/
 
+### Confused comments on Factories
+
+Here's what I don't understand. Is it necessary to create 2 concrete subclasses for an abstracted Factory interface? Can't there be just one class that decides which subclass to init? Or is considered a shameful half-measure that is not worthy of a real programmer?
+
+I imagine something like that, with 4 classes, instead of 6:
+1. Abstract product that defines the interface for products. Like `Npc`, with `Npc.move()` etc.
+2. Concrete product 1, say, `Human` that inherits to `Npc`, but has its own implementation of `move()`.
+3. Concrete product 2, like `Demon`, with same interface, but diff implementation of `move()`
+4. A creator that is called with `Creator.new_npc()`, and then decides whether to make a `new Human()`, or `new Demon()`, and returns the result.
+
+The client (some higher-level class) now gets an `npc`, and can do `npc.move()` on it, without really caring whether it's really a demon or a human.
+
+Some (but a  minority) of descriptions online actually kinda seem to describe this case (where product is abstracted but factory is concrete, and is just called in different ways to create different products), instead of a full case (where there are also many concrete factories, for every concrete product). Not sure what to make of it. See for example:
+* https://stackabuse.com/the-factory-method-design-pattern-in-python/
+
 # Abstract Factory
 
-Same as **Factory**, but returns objects of different types.
-
-> I'm not sure how whether these objects are supposed to adhere to the same interface; if not - then how to work with them, and if yes - then why was this interface story a part of a "Factory" description above. Can it be that RefactoringGuru site described essentially an abstract factory by mistake, while writing about a simple Factory? No idea, but parking for now.
+Same as **Factory**, but this type Factory is for sure abstracted (in the sense that you create a factory object that follows a factory interface, but that can actually be an object of one of several alternative concrete classes, depending on the context). And then instead of creating  just one object, ths factory can create many different objects, of different classes, united by some common property. Or  a collection, or a hierarchy. Say, not just an npc, but a matching house, and a matching outfit, and what not. The interactions between these objects (interfaces) are all standardized (by abstract classes), but the innards may be quite different.
 
 Footnotes:
+* https://javacurious.wordpress.com/2013/03/15/factory-method-vs-abstract-factory-again/
 * https://refactoring.guru/design-patterns/abstract-factory
 
 # Builder
 
-Also similar to **Factory**, but with step-by-step creation. 
-
-> If I got the spirit right, then both Keras and Matplotlib essentially follow a builder philosophy for their object creation, don't they?
+Also similar to **Factory**, but with step-by-step creation, and with different products, including of different types. One cool example is that the same sequence of commands (calls to methods, defined by an interface) can create a car, and a manual for this car. Just if you call this commands on the car itself, you build the car. If you call same commands on a manual, you get a description of how this card is being built. But it ensures that the description of the car exactly matches the car, as they would be passed same parameters (number of this, color of that, etc.)
 
 Footnotes: https://refactoring.guru/design-patterns/builder
 

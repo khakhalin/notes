@@ -122,3 +122,13 @@ Footnotes:
 * `get`
 * `set`
 * `delete`
+
+# File organization and importing
+
+Main idea: `import` seems to be thought of as just a bunch of code being literally included from a file here, at the point where `import` is called. So while with numpy and such, we call them in the beginning of the script, for class methods we can call it within the class declaration. And just have the class method written in a separate file.
+
+A related statement about **numpy**: it's OK (and actually proper) to have `import numpy as np` in the beginning of every source file. What _is_ bad is to do `from X import *`; this is also allowed at the module level, and even then, it shouldn't really be used with external modules. _I think I remember reading that * shouldn't be used at all, and even for your own modules you're supposed to list what you are importing; both because it's more transparent, and because it's less vulnerable._
+
+Footnotes:
+* https://stackoverflow.com/questions/47561840/python-how-can-i-separate-functions-of-class-into-multiple-files
+* https://stackoverflow.com/questions/28440036/when-importing-my-class-i-lose-access-to-functions-from-other-modules

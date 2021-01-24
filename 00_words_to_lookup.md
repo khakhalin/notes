@@ -34,7 +34,6 @@ Dump:
 * https://arxiv.org/abs/1801.01253#
 * https://www.builtinboston.com/
 * https://www.youtube.com/watch?v=0--5AxiZefg
-* https://thebookofshaders.com/	
 * https://www.youtube.com/watch?v=DG7YTlGnCEo
 * http://web.stanford.edu/class/cs224w/
 * https://en.wikipedia.org/wiki/Yarsanism#Worship
@@ -43,11 +42,13 @@ Dump:
 
 # Top priorities
 
+* Make data a class, so that data.lorenz()
 * model view controller - most important design pattern for web apps
 * Learn conventions of unit testing in Python
-* install Pcharm
+* With pycharm and Anaconda, do I now have Python installed twice? How does it work?
+* Briefly describe other patterns [[design_patterns]]
 * predictive coding - definition?
-* How sites talk to mysql now?
+* How react sites talk to mysql now?
 * docker - what and how
     * Flask docker file (allegedly 80% of what one needs for a typical deployment)
     * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
