@@ -44,6 +44,9 @@ Missing languages:
 * at least some Dagestani languages?
 * Azeri
 
+Cool map with all languages:
+https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Simplified_Languages_of_Europe_map.svg/1541px-Simplified_Languages_of_Europe_map.svg.png
+
 # Remotely relevant links
 
 Russian public kadaster: https://pkk.rosreestr.ru/

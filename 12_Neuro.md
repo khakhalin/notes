@@ -2,9 +2,6 @@
 
 #neuro #behav
 
-Links to process:
-* http://www.neuromatchacademy.org/syllabus/
-
 Topics to look up:
 * Oja rule: a popular extension of the Hebb's rule? https://en.wikipedia.org/wiki/Oja%27s_rule
 
@@ -25,5 +22,7 @@ See also: [[00_to_read_neuro]]
     * [[intrinsic_plasticity]] - subj
     * [[bib_one_neuron]] - computation in one neuron, dendritic processing
 
+# Refs
 
-
+Neuromach academy Computational Neuroscience syllabus:
+* http://www.neuromatchacademy.org/syllabus/

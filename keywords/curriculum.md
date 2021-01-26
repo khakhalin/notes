@@ -7,6 +7,7 @@ Related: Kolmogorov compexity
 Papers:
 * [[Baker2019autocurricula]] - Hide-and-seek RL from OpenAI
 * [[Lillicrap2019understand]] - What does it mean to understand a network?
+* [[Wu2021whencurricula]] - From the performance POV, curricula only make sense when training is very costly.
 
 # Random musings
 

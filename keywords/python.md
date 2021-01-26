@@ -37,6 +37,12 @@ Libraries: [[pandas]], [[tensorflow]], [[numpy]], [[matplotlib]], [[py_dates]]
 * Nested comprehensions: same syntax as in writing nested loops (even tho it looks unformulaic), e.g. `[j for i in range(5) for j in range(i)]
 * You can use ternary operator in LC: `[1 if i==0 else 0 for i in a]`. But if you want to sometimes return nothing, move `if` to the end: then you don't have to write `else`: `[x for x in y if a]`.
 
+# Zipping
+
+* `zip(a,b)` for two iterables `a` and `b` creates a lazy iterable of corresponding pairs, starting with `(a[0],b[0])`. Except it's lazy, so not fully calculated until it's called. You may either loop through it, or take a `list()` or `tuple()` of it so calculate it eagerly, or turn it into a `dict()`, in which cases it gets to contain `a[0]:b[0]` etc.
+* A reverse operation is also a zip: if `c=zip(a,b)`, then `tuple(zip(*c))` evaluates to `(a,b)`. 
+* Because tuples are sorted lexicographically, zipping objects with some numerical measure, sorting this list with `.sort`, then unzipping again, may be a decent way to sort objects.
+
 # Strings
 
 * **F-strings**: `f"Bla {x['a']:.2f}"` - this version (with `"`) supports dicts (because diff quotation marks), and formats the output (after `:`). Refs: [intro](http://zetcode.com/python/fstring/) , [specification](https://docs.python.org/3/library/string.html#format-specification-mini-language) (a mini-language of sorts!). Good examples of formats (only that part that goes after `:` but before closing `}`):
