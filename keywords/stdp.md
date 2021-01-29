@@ -3,8 +3,12 @@
 #bib #neuro #synfire
 
 Parent: [[12_Neuro]]
-Related: [[echo_state]]
+Related: [[echo_state]], [[synfire]]
 
+Papers:
+* [[Fiete2010stdp]] - stdp builds long sequences
+
+# To Read
 
 Names to look for:
 * Stephen Grossberg (Boston University Cognitive & Neural Systems)

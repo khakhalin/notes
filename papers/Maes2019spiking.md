@@ -7,7 +7,8 @@ https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007606
 
 #neuro #synfire #spiking
 
-See also: [[synfire]]
+Parents: [[network_neuro]]]
+See also: [[synfire]], [[echo_state]]
 
 A big problem with spiking networks is how to get from ms time scales to behaviors that take  seconds / minutes. (refs for motor tasks). Introduce sequential and stochastic dynamics as two main modes of operation (refs). Many ML-like approaches are not biologically plausible: either backprop in time, or non-local information.
 

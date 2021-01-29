@@ -1,6 +1,6 @@
 # Music scales
 
-#art0
+#art
 
 Parent: [[music]]
 

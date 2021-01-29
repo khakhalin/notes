@@ -18,3 +18,6 @@ Corollaries:
 
 Ferenc Huszár 2017.
 https://www.inference.vc/high-dimensional-gaussian-distributions-are-soap-bubble/
+
+Golowasch J, Goldman MS, Abbott LF, Marder E (2002) Failure of averaging in the construction of a conductance-based neuron model. J Neurophysiol 87:1129–1131 
+If one averages cell parameters, and plugs them in the model, the resultant "average cell" spikes entirely differently than original cells, as parameters are no longer coordinated. But does it mean by extension that comparing averages of underlying parameters across groups may not be the best way to detect effects of experiemental manipulations? See [[cpg]], [[intrinsic_plasticity]].

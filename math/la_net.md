@@ -1,6 +1,6 @@
 # Linear algebra and networks
 
-#net #linalg #bib #math
+#networks #linalg #bib #math
 
 Parents and siblings:
 * [[linalg]] - linear algebra

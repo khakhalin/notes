@@ -13,6 +13,10 @@ Wolfram defined 4 classes:
 3. Chaotic (60, 150)
 4. A large-scale chaotic (dynamic) interplay of periodic regions (62, 110)
 
+# Automata on graphs
+
+* [[Messe2018coactivation]] - trying to classify brain networks using SER (sussceptible-excited-refractory) model
+
 # Refs
 
 Cool simple visual intro

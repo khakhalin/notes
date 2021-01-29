@@ -3,7 +3,7 @@
 Antoine Allard,M. Ángeles Serrano. Published: February 3, 2020
 https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007584
 
-#net #neuro #connectome
+#networks #neuro #connectome
 
 To quantify brain connectomes from different species, they try to navigate them using greedy routing (visit the closest neighbor, in terms of distance). Then compare the ratio of successfull greedy paths to shortest paths. 
 

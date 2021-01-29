@@ -1,9 +1,10 @@
-# SIR, SIS, and other probabilistic processes on graphs
+# SIR, SIS, and pandemics processes on graphs
 
 #graphs #chaos
 
 Parents: [[09_Graphs]]
-See also: [[graph_cascades]] graph_spread
+See also: [[graph_cascades]] (same, but with decision-making), [[cellular_automata]]
+
 
 Papers:
 * [[Jin2003twitter]] - SEIZ model

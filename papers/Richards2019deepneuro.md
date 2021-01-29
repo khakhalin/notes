@@ -5,7 +5,7 @@ Richards, B. A., Lillicrap, T. P., Beaudoin, P., Bengio, Y., Bogacz, R., Christe
 
 #review #deepneuro #bib #credit
 
-Parents: [[12_Neuro]], [[06_DL]]
+Parents: [[deepneuro]]
 Related: [[credit]]
 
 Full list of authors: 

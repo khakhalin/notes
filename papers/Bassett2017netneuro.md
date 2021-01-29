@@ -4,6 +4,7 @@ Bassett, D. S., & Sporns, O. (2017). Network neuroscience. Nature neuroscience, 
 
 #neuro #networks #clique #review
 
+Parents: [[network_neuro]]
 See also: [[algebraic_topology]]
 
 The most famous review on this topic.

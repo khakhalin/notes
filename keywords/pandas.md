@@ -134,7 +134,7 @@ First group, then apply aggregation. `dfs = df.groupby('g').agg({'a': [min, np.m
 # Pivoting
 
 * To go from wide to long format: `pd.melt()`. Gets dataframe, a list of columns to preserve (as `id_vars`), and optionally, new names for var and value columns (as `var_name` and `value_name`). Also some flexibility around indices.
-* The opposite to melting seems to be `pd.pivot_table()`. There's also `pd.pivot()` _and as of now I'm now sure what the difference would be. Check at some point? #todo_
+* The opposite to melting seems to be `pd.pivot_table()`. There's also `pd.pivot()` _and as of now I'm now sure what the difference would be. Check at some point?__ #todo
 * There's also `wide_to_long` that is useful if the input table has columns with suffices (like "day1, day2, day3" or something like that). You provide it with these suffices, it automates the transformation.
 
 # Misc
