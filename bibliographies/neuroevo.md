@@ -1,6 +1,9 @@
-# Fun evolutionary topics
+# Comparative and evolutionary neuroscience
 
 #neuro #bib #fun
+
+Parent: [[12_Neuro]]
+See also: [[neurodevelopment]]
 
 Evolution of rapid nerve conduction. (2016). Castelfranco. Review.
 https://www.sciencedirect.com/science/article/pii/S0006899316300580

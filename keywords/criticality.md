@@ -7,8 +7,8 @@ Related: [[echo_state]], [[chaos]]
 
 # Papers
 
-* [[Moretti2013criticality]] - it's stretched (not precise) in networks
-* [[Bojanek2020cyclic]] - among other things, that synchrony is bad, while asynchrony is good.
+* [[Moretti2013criticality]] - criticality is approximate, stretched (not precise) in networks
+* [[Bojanek2020cyclic]] - among other things, shows that synchrony is bad, while asynchrony is good.
 
 # To Read
 

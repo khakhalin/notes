@@ -2,14 +2,18 @@
 
 #neuro #bib #todo
 
-Se also: [[12_Neuro]] - for an official hub title page bibliography	
+Se also: [[12_Neuro]] (the official hub age)
+
+Hassabis, D., Kumaran, D., Summerfield, C., & Botvinick, M. (2017). Neuroscience-inspired artificial intelligence. Neuron, 95(2), 245-258.
+https://www.sciencedirect.com/science/article/pii/S0896627317305093
+Quite popular.
 
 Perez-Nieves, N., Leung, V. C., Dragotti, P. L., & Goodman, D. F. (2020). Neural heterogeneity promotes robust learning. bioRxiv.
 https://www.biorxiv.org/content/10.1101/2020.12.18.423468v1
 
 Cornford, J., Kalajdzievski, D., Leite, M., Lamarquette, A., Kullmann, D. M., & Richards, B. A. (2020). Learning to live with Dale's principle: ANNs with separate excitatory and inhibitory units. bioRxiv.
 https://www.biorxiv.org/content/biorxiv/early/2020/11/03/2020.11.02.364968.full.pdf
-Brief summary: AAAAAAAAAAAAAAAAAAAAAAA
+Brief summary: 🔴 #todo see Twitter
 
 Hasson, U., Nastase, S. A., & Goldstein, A. (2020). Direct Fit to Nature: An Evolutionary Perspective on Biological and Artificial Neural Networks. Neuron, 105(3), 416-434.
 https://www.cell.com/neuron/pdf/S0896-6273(19)31044-X.pdf
@@ -30,18 +34,15 @@ https://www.nature.com/articles/s41583-020-0277-3
 
 # Topology and development
 
+Hassan, B. A., & Hiesinger, P. R. (2015). Beyond molecular codes: simple rules to wire complex brains. Cell, 163(2), 285-291.
+https://www.cell.com/cell/fulltext/S0092-8674(15)01193-9
+💎 Developmental biology bordering fractals and graphs (maybe? not sure, but judging from the pics) - a nice review-like paper (perspective); worth a priority read :)
+
 Lazar, A., Pipa, G., & Triesch, J. (2006, April). The combination of STDP and intrinsic plasticity yields complex dynamics in recurrent spiking networks. In ESANN (pp. 647-652).
 
 Curto, C., & Morrison, K. (2019). Relating network connectivity to dynamics: opportunities and challenges for theoretical neuroscience. Current opinion in neurobiology, 58, 11-20.
 https://www.sciencedirect.com/science/article/pii/S0959438819300443 
 Review. Exactly what it should be (networks, motifs, dynamics)
-
-Hassan, B. A., & Hiesinger, P. R. (2015). Beyond molecular codes: simple rules to wire complex brains. Cell, 163(2), 285-291.
-https://www.cell.com/cell/fulltext/S0092-8674(15)01193-9
-Developmental biology bordering fractals and graphs (maybe? not sure, but judging from the pics) - a nice review-like paper (perspective); worth a priority read :)
-
-Zador, A. M. (2019). A critique of pure learning and what artificial neural networks can learn from animal brains. Nature communications, 10(1), 1-7.
-https://core.ac.uk/download/pdf/227723588.pdf
 
 Morrison, A., Aertsen, A., and Diesmann, M. (2007). Spike-timing dependent plasticity in balanced random networks. Neural Computation, 19:1437–1467. 💡
 
@@ -136,6 +137,8 @@ Compartments, NMDA, all sorts of STDP stuff.
 # Credit assignment
 
 Bengio, Y., Lee, D. H., Bornschein, J., Mesnard, T., & Lin, Z. (2015). Towards biologically plausible deep learning. arXiv preprint arXiv:1502.04156.
+https://arxiv.org/pdf/1502.04156.pdf
+Mathy, then mnist
 
 Bellec, G., Scherr, F., Subramoney, A., Hajek, E., Salaj, D., Legenstein, R., & Maass, W. (2019). A solution to the learning dilemma for recurrent networks of spiking neurons. bioRxiv, 738385.
 https://www.biorxiv.org/content/10.1101/738385v3

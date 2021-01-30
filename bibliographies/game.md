@@ -1,9 +1,13 @@
 # Games, and Game Theory
 
-#bib
+#bib #game
 
-Children: [[boardgame]]
+Children:
+* [[multi_armed_bandit]] - classic abstract model of exploration / exploitation dilemma
+* [[levy_walks]] - spatial exploration
+* [[boardgame]] - algorithms and AI solutions for board games
 
+# Refs
 
 Czarnecki, W. M., Gidel, G., Tracey, B., Tuyls, K., Omidshafiei, S., Balduzzi, D., & Jaderberg, M. (2020). Real World Games Look Like Spinning Tops. arXiv preprint arXiv:2004.09468.
 https://arxiv.org/pdf/2004.09468.pdf

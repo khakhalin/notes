@@ -12,12 +12,14 @@ See also: [[00_to_read_neuro]]
     * [[neurostochastic]] - Stochasticity and randomness in neuroscience
     * [[tracking]] - On ML of behavioral data
     * [[xen]] - Xenopus-specific: collision avoidance, tecta, hindbrains, OMR etc.
-* [[bib_neuro_evo]] - Evolution of nervous system
+* [[neuroevo]] - Evolution of nervous system
+* [[neurodevelopment]] - Developmental neuroscience
+    * [[deepneuro]] - deep learning and neuro cross-pollinating each other
 * [[bib_reconstruction]] - On  reconstructing connectivity from activity
 * Complexity (also see [[complexity]])
     * [[echo_state]] - Echo state networks
-    * [[criticality]]
-    * [[network_neuro]] - network neuroscience
+    * [[network_neuro]] - Network neuroscience
+    * [[criticality]] - Mostly in neural activity
 * Mechanisms:
     * [[stdp]] - Spike-time-dependent plasticity
     * [[intrinsic_plasticity]] - subj

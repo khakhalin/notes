@@ -9,9 +9,6 @@ See also: [[network_neuro]], [[stdp]]
 
 #vet
 
-A Critique of Pure Learning: What Artificial Neural Networks can Learn from Animal Brains. Zador. 2019. (read it as a very early pre-print)
-Animals are so good in learning quickly because they are hardwired (at least tentatively) for the task. Computers are less smart than a mouse. Human logic isn't hard; it's simple tasks that we take for granted that are truly hard. A really nice explanation of why large (and presumably more powerful) networks fare much worse on small data. Propose a research program that may be phrased as "see convolutional networks? We need more pre-wired, constrained stuff like that".
-
 Gao P, Ganguli S. (2015) On simplicity and complexity in the brave new world of large-scale neuroscience Current Opinion in Neurobiology
 Very interesting review! What does it mean to "understand" how the brain works? We cannot even understand deep learning; lack ability to make predictions without simulations. They summarize their own research on "how many neurons from a set of N neurons you need to infer K-dim encoding, assuming a certain level of noise). Claim to prove and demonstrate that the number is small ~ K^2, or K^2/P if you have access to P independent behavioral states (?). Then summarize "evolvability": of all possible somethings (protein networks, proteins) that share a property only those can be realised that form clusters, as they are "evolvable", and robust to perturbations. Links to liquid state machines, and general properties of network encoding that is required for network functionality.
 
