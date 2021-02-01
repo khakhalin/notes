@@ -4,6 +4,8 @@ A collection of weird animals (and plants) that make you think "how come I've ne
 
 #side #bio
 
+See also: [[beetles]]
+
 That plant that looks like a blob
 Those giant unicellular plants
 That copepod (?) with eyes like scopes
