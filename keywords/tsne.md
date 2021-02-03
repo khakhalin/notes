@@ -23,10 +23,20 @@ General patterns of behaiov:
 
 There's nothing shameful about working with several projections (with different perplexities) at the same time, as each of them may capture some unique features of the original distribution (at different scales).
 
+# Limitations
+
+Doesn't scale well to really large data; cannot project to dim > 2 or 2; doesn't preserve large-scale data (_is UMAP different? why?_); cannot work with very-high-D data directly; it first needs to be projected to lower-D with something like PCA or an autoencoder (_why???_).
+
+Footnotes:
+* https://towardsdatascience.com/how-exactly-umap-works-13e3040e1668
+
 # Refs
 
 How to use t-SNE effectively
 https://distill.pub/2016/misread-tsne/
+
+Recommendations for better default parameters for t-SNE for Dmitry Kobak:
+https://github.com/scikit-learn/scikit-learn/issues/18018
 
 "The art of using tSNE for transcriptomics" from Nature:
 [https://www.nature.com/articles/s41467-019-13056-x](<https://www.nature.com/articles/s41467-019-13056-x>)

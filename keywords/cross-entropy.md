@@ -1,7 +1,7 @@
 # Cross-entropy
 
 Parents: [[information]], [[loss]], [[03_Classification]]
-Related: [[logreg]], [[gini]]
+Related: [[logreg]], [[gini]], [[kl]]
 
 
 **Cross-Entropy Loss** is the most useful loss for classification tasks.

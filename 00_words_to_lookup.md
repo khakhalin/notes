@@ -42,21 +42,28 @@ Dump:
 
 # Top priorities
 
+* document how to do unit testing in Python
+* spectral properties of graphs, spectral radius
+* timsort
 * model view controller - most important design pattern for web apps
-* Learn conventions of unit testing in Python
+* CICD
 * With pycharm and Anaconda, do I now have Python installed twice? How does it work?
 * Briefly describe other patterns [[design_patterns]]
-* predictive coding - definition?
+* predictive coding in the brain - definition?
 * How react sites talk to mysql now?
 * pull requests, and how this workflow works
     * https://www.netlify.com/blog/2020/03/31/how-to-scope-down-prs/
 * docker - what and how
     * Flask docker file (allegedly 80% of what one needs for a typical deployment)
     * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
+* How Python works inside:
+    * GIL
+    * Asyncio
+    * Multithreading
+    * Subinterpreters
 * Scalability lecture: https://www.youtube.com/watch?v=-W9F__D3oY4
 (I'm at 24m right now)
 * How to do code reviews: https://google.github.io/eng-practices/review/reviewer/
-* spectral properties of graphs, spectral radius
 * Scaling Etsy: https://www.youtube.com/watch?v=eenrfm50mXw
 * Docker and Kubernetes: https://www.youtube.com/watch?v=u8dW8DrcSmo
 * How to design Twitter: https://www.youtube.com/watch?v=KmAyPUv9gOY
@@ -64,6 +71,11 @@ Dump:
 * document lambda calculus in [[python]]
 * Start missing semester of CS education
     * Unit tests - how to properly in python?
+* Differences between HTTP2 and 1
+* Pub-sub architectures
+* Microservices
+* Kafka & Redis caching
+Few questions on Load balancers & Reverse proxies. Also continuing discussion on Nginx and Varnish.
 * do linear regression: keras, tf, naive genetic
 * finish google training
     * https://developers.google.com/machine-learning/crash-course/fairness/programming-exercise

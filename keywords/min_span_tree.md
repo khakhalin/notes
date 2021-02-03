@@ -1,4 +1,4 @@
-# Minimum Spanning Tree, aka Prim algo
+# Minimum Spanning Tree, aka Prim and Kruskal
 
 #algo #graphs #trees
 
@@ -36,7 +36,7 @@ In practice, for **Lazy Prim**:
 * Visit first node. Visiting implies: 1) marking it as "visited" (keep an array for that), and 2) enqueuing all edges leading from it in a min-queue, using edge weight as a key.
 * Now in a loop: 1) pop an edge; 2) if both points are visited, skip; 3) if not, visit the unvisited, and add the edge to the tree.
 
-Note that if V is at least somewhat proportional to V squared, then total complexity is O(V² log V)
+Note that if E is at least somewhat proportional to V squared, then total complexity is O(V² log V)
 
 ## Kruskal's algorithm
 

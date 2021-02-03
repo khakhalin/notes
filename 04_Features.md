@@ -19,8 +19,7 @@ Subtopics:
     * [[lda]] - Linear Discriminant Analysis - classification-driven
 * lle - Local Linear Embedding
 * [[mds]] - spectral embedding
-* Laplacian Eigenmaps
-    * https://www.cs.cmu.edu/~aarti/Class/10701/slides/Lecture21_1.pdf
+* [[eigenmaps]] - Laplacian Eigenmaps
 * [[isomap]] - first popular non-linear method: geodesic distances followed by mds
 * Diffusion Maps
     * https://en.wikipedia.org/wiki/Diffusion_map
