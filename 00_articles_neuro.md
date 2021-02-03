@@ -32,6 +32,9 @@ Timothy P. Lillicrap, Adam Santoro, Luke Marris, Colin J. Akerman & Geoffrey Hin
 https://www.nature.com/articles/s41583-020-0277-3
 (Opinion piece)
 
+Some general opinion on how to research in ML:
+https://distill.pub/2017/research-debt/
+
 # Topology and development
 
 Hassan, B. A., & Hiesinger, P. R. (2015). Beyond molecular codes: simple rules to wire complex brains. Cell, 163(2), 285-291.
@@ -349,6 +352,10 @@ Mandler, J. M. (1992). How to build a baby: II. Conceptual primitives. Psycholog
 http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.460.5280&rep=rep1&type=pdf
 
 # Other
+
+On whether complexity of organisms increases in the course of evolution. #evolution
+Krakauer, D., Bertschinger, N., Olbrich, E., Ay, N., & Flack, J. C. (2014). The information theory of individuality. arXiv preprint arXiv:1412.2447.
+Also this discussion: https://twitter.com/WiringTheBrain/status/1357004097665306629
 
 https://www.biorxiv.org/content/10.1101/2020.03.24.006775v1
 The mouse cortico-tectal projectome

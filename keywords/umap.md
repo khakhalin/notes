@@ -96,7 +96,7 @@ Footnotes:
 * Original paper: Becht, E., McInnes, L., Healy, J., Dutertre, C. A., Kwok, I. W., Ng, L. G., ... & Newell, E. W. (2019). Dimensionality reduction for visualizing single-cell data using UMAP. Nature biotechnology, 37(1), 38-44.
 * Critique: Initialization is critical for preserving global data structure in both t-SNE and UMAP. Kobak, Linderman. 2021. Nature Biotechnology
 
-# My musings
+# Musings
 
 A practical consequence to how the k neighbors is used, is that tightly placed points (cliques) will find these k neighbors for cheap (they are all close to each other), and so won't feel any pull or push from other points in the set. On the other hand, lonely points will reach out until they reach k neighbors, which means that points that will be "close" to them are likely to be pretty far from each other. At the embedding stage, it will tuck these "loners" in the middle of the picture, instead of repelling them on the periphery.
 
