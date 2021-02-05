@@ -4,7 +4,7 @@
 
 Se also: [[12_Neuro]] (the official hub age)
 
-Hassabis, D., Kumaran, D., Summerfield, C., & Botvinick, M. (2017). Neuroscience-inspired artificial intelligence. Neuron, 95(2), 245-258.
+🔥 Hassabis, D., Kumaran, D., Summerfield, C., & Botvinick, M. (2017). Neuroscience-inspired artificial intelligence. Neuron, 95(2), 245-258.
 https://www.sciencedirect.com/science/article/pii/S0896627317305093
 Quite popular.
 
@@ -24,18 +24,20 @@ https://www.biorxiv.org/content/10.1101/2020.04.27.057752v1
 
 # General, top, and fun
 
-Raman, D. V., Rotondo, A. P., & O’Leary, T. (2019). Fundamental bounds on learning performance in neural circuits. Proceedings of the National Academy of Sciences, 116(21), 10537-10546.
-https://www.pnas.org/content/116/21/10537.short
-
-Backpropagation and the brain
+🔥  Backpropagation and the brain
 Timothy P. Lillicrap, Adam Santoro, Luke Marris, Colin J. Akerman & Geoffrey Hinton (2020)
 https://www.nature.com/articles/s41583-020-0277-3
 (Opinion piece)
 
+Raman, D. V., Rotondo, A. P., & O’Leary, T. (2019). Fundamental bounds on learning performance in neural circuits. Proceedings of the National Academy of Sciences, 116(21), 10537-10546.
+https://www.pnas.org/content/116/21/10537.short
+
 Some general opinion on how to research in ML:
 https://distill.pub/2017/research-debt/
 
-# Topology and development
+# Topology and development 🟢 
+
+> Lots of papers related to [[echo]] and [[synfire]] here.
 
 Hassan, B. A., & Hiesinger, P. R. (2015). Beyond molecular codes: simple rules to wire complex brains. Cell, 163(2), 285-291.
 https://www.cell.com/cell/fulltext/S0092-8674(15)01193-9
@@ -57,13 +59,13 @@ Gilson, M., Burkitt, A., & van Hemmen, J. L. (2010). STDP in recurrent neuronal 
 
 Naudé, J., Cessac, B., Berry, H., & Delord, B. (2013). Effects of cellular homeostatic intrinsic plasticity on dynamical and computational properties of biological recurrent neural networks. Journal of Neuroscience, 33(38), 15032-15043.
 
-Gutig R, Aharonov R, Rotter S, Sompolinsky H. Learning input correlations through nonlinear temporally asymmetric Hebbian plasticity. The Journal of neuroscience: the official journal of the Society for Neuroscience. 2003;23(9):3697–714. Epub 2003/05/09.
-
-Morrison A, Diesmann M, Gerstner W. Phenomenological models of synaptic plasticity based on spike timing. Biol Cybern. 2008;98(6):459–78. Epub 2008/05/21.
-
 Gilson M, Burkitt AN, Grayden DB, Thomas DA, van Hemmen JL. Emergence of network structure due to spike-timing-dependent plasticity in recurrent neuronal networks III: Partially connected neurons driven by spontaneous activity. Biol Cybern. 2009;101(5–6):411–26.
 
 Hoerzer, G. M., Legenstein, R., & Maass, W. (2014). Emergence of Complex Computational Structures From Chaotic Neural Networks Through Reward-Modulated Hebbian Learning. Cerebral Cortex, 24, 677-690.
+
+Gutig R, Aharonov R, Rotter S, Sompolinsky H. Learning input correlations through nonlinear temporally asymmetric Hebbian plasticity. The Journal of neuroscience: the official journal of the Society for Neuroscience. 2003;23(9):3697–714. Epub 2003/05/09.
+
+Morrison A, Diesmann M, Gerstner W. Phenomenological models of synaptic plasticity based on spike timing. Biol Cybern. 2008;98(6):459–78. Epub 2008/05/21.
 
 Fauth, M., & Tetzlaff, C. (2016). Opposing effects of neuronal activity on structural plasticity. Frontiers in neuroanatomy, 10, 75.
 https://www.frontiersin.org/articles/10.3389/fnana.2016.00075/full
@@ -117,6 +119,8 @@ Model of the cortex.
 
 # Single-neuron calculations
 
+See [[one_neuron]]
+
 David, Beniaguev, Segev Idan, and London Michael. "Single Cortical Neurons as Deep Artificial Neural Networks." bioRxiv (2019): 613141. https://www.biorxiv.org/content/10.1101/613141v1.full.pdf
 
 Jones, I. S., & Kording, K. P. (2020). Can Single Neurons Solve MNIST? The Computational Power of Biological Dendritic Trees. arXiv preprint arXiv:2009.01269.
@@ -139,7 +143,7 @@ Compartments, NMDA, all sorts of STDP stuff.
 
 # Credit assignment
 
-Bengio, Y., Lee, D. H., Bornschein, J., Mesnard, T., & Lin, Z. (2015). Towards biologically plausible deep learning. arXiv preprint arXiv:1502.04156.
+🔥 Bengio, Y., Lee, D. H., Bornschein, J., Mesnard, T., & Lin, Z. (2015). Towards biologically plausible deep learning. arXiv preprint arXiv:1502.04156.
 https://arxiv.org/pdf/1502.04156.pdf
 Mathy, then mnist
 
@@ -194,23 +198,23 @@ Fremaux N, Sprekeler H, Gerstner W. Reinforcement learning using a continuous ti
 
 #deepneuro
 
-Deep Neural Networks as Scientific Models (2020). Radoslaw M. Cichy, Daniel Kaiser. Trends in Cognitive Sciences.
+🔥 Deep Neural Networks as Scientific Models (2020). Radoslaw M. Cichy, Daniel Kaiser. Trends in Cognitive Sciences.
 https://www.cell.com/trends/cognitive-sciences/fulltext/S1364-6613(19)30034-8
 Seem to suggest that for some types of tasks data it may be easier to model a process with a DL and interpret a DL, instead of directly interpreting the data?
+
+🔥 Yaoda Xu, Maryam Vaziri-Pashkam (2020) Limited correspondence in visual representation between the human brain and convolutional neural networks
+https://www.biorxiv.org/content/10.1101/2020.03.12.989376v1 
+Essentially, some critique of deepneuro!
 
 https://www.biorxiv.org/content/10.1101/838383v1
 Training deep neural density estimators to identify mechanistic models of neural dynamics
 Gonçalves .. Macke 2019
 About how to use deep learning to guess neuronal parameters to fit the actual activity of the network (?) They seem to be looking at actual V(t) though.
 
-Yaoda Xu, Maryam Vaziri-Pashkam (2020) Limited correspondence in visual representation between the human brain and convolutional neural networks
-https://www.biorxiv.org/content/10.1101/2020.03.12.989376v1 
-Essentially, some critique of deepneuro!
-
 Richards, B. A., Xia, F., Santoro, A., Husse, J., Woodin, M. A., Josselyn, S. A., & Frankland, P. W. (2014). Patterns across multiple memories are identified over time. Nature neuroscience, 17(7), 981.
 https://www.nature.com/articles/nn.3736
 
-Lillicrap, T. P., & Scott, S. H. (2013). Preference distributions of primary motor cortex neurons reflect control solutions optimized for limb biomechanics. Neuron, 77(1), 168-179.
+❓ Lillicrap, T. P., & Scott, S. H. (2013). Preference distributions of primary motor cortex neurons reflect control solutions optimized for limb biomechanics. Neuron, 77(1), 168-179.
 https://www.sciencedirect.com/science/article/pii/S0896627312009920
 
 Khaligh-Razavi, S. M., & Kriegeskorte, N. (2014). Deep supervised, but not unsupervised, models may explain IT cortical representation. PLoS computational biology, 10(11), e1003915.
@@ -220,11 +224,11 @@ Very well cited, this one.
 Kording, K. P., Kayser, C., Einhauser, W., & Konig, P. (2004). How are complex cell properties adapted to the statistics of natural stimuli?. Journal of neurophysiology, 91(1), 206-212.
 https://www.ncbi.nlm.nih.gov/m/pubmed/12904330/
 
-Sorscher, B., Mel, G., Ganguli, S., & Ocko, S. (2019). A unified theory for the origin of grid cells through the lens of pattern formation. In Advances in Neural Information Processing Systems (pp. 10003-10013).
+❓ Sorscher, B., Mel, G., Ganguli, S., & Ocko, S. (2019). A unified theory for the origin of grid cells through the lens of pattern formation. In Advances in Neural Information Processing Systems (pp. 10003-10013).
 https://papers.nips.cc/paper/9191-a-unified-theory-for-the-origin-of-grid-cells-through-the-lens-of-pattern-formation
 Supposedly, explains the development of grid cells, synthesizing two existing theories (recurrent with lateral inhibition and spontaneous development during navigation?)
 
-Michaels, J. A., Schaffelhofer, S., Agudelo-Toro, A., & Scherberger, H. (2019). A neural network model of flexible grasp movement generation. bioRxiv, 742189.
+❓ Michaels, J. A., Schaffelhofer, S., Agudelo-Toro, A., & Scherberger, H. (2019). A neural network model of flexible grasp movement generation. bioRxiv, 742189.
 https://www.biorxiv.org/content/10.1101/742189v1
 Modeled vision-controlled grasping (based on monkey data) as convolutional network (based on Alexnet, it seems) → RNN (fully connected) → bottlneck of 8 neurons → another RNN → another bottleneck → another RNN → output. They call these bottlenecks "sparsity", which is interesting. I wonder whether it is fair to call it brain-inspired. Is it something that works, as it forces the learning of representations, and then only claim that it is brain-inspired, to give it some conceptual validity? Or is there actual evidence in the brain that connections between motor systems are throttled like that? Something to explore. Also they mention some "feedback connections" that may be connections between RNN modules, but I'd need to read the methods section carefully to see what's happening there. One of the most important aspects of this paper for me may be the neuro-inspired analysis of model performance that they do, and the very attitude to validation that they have. I wonder if that's something that can be applied to spiking networks.
 
@@ -255,7 +259,7 @@ There's also a [tweetprint](https://twitter.com/TPVogels/status/1215572496570896
 
 # Bottom-up validation
 
-Geiger, F., Schrimpf, M., Marques, T., & DiCarlo, J. (2020). Wiring Up Vision: Minimizing Supervised Synaptic Updates Needed to Produce a Primate Ventral Stream. bioRxiv.
+🔥 Geiger, F., Schrimpf, M., Marques, T., & DiCarlo, J. (2020). Wiring Up Vision: Minimizing Supervised Synaptic Updates Needed to Produce a Primate Ventral Stream. bioRxiv.
 https://www.biorxiv.org/content/10.1101/2020.06.08.140111v1
 Protoid: Geiger2020ventralstream
 
@@ -267,8 +271,6 @@ May be a curious parallel to this recent finding in Neuro, about XOR computation
 
 Lappalainen, J., Herpich, J., & Tetzlaff, C. (2019). A theoretical framework to derive simple, firing-rate-dependent mathematical models of synaptic plasticity. Frontiers in computational neuroscience, 13, 26.
 https://www.frontiersin.org/articles/10.3389/fncom.2019.00026/full
-
-Raman, D. V., Rotondo, A. P., & O’Leary, T. (2019). Fundamental bounds on learning performance in neural circuits. Proceedings of the National Academy of Sciences, 116(21), 10537-10546.
 
 Lim, S. et al. Inferring learning rules from distributions of fring rates in cortical neurons. Nat. Neurosci. 18, 1804–1810 (2015).
 
@@ -300,11 +302,11 @@ Recurrent convolutional network  works better than a feed-forward convolutional 
 
 # Dynamics
 
-Maheswaranathan, N., Williams, A., Golub, M., Ganguli, S., & Sussillo, D. (2019). Universality and individuality in neural dynamics across large populations of recurrent networks. In_Advances in neural information processing systems_(pp. 15603-15615).
-
-Merel, J., Botvinick, M., & Wayne, G. (2019). Hierarchical motor control in mammals and machines. Nature Communications, 10(1), 1-12.
+🔥 Merel, J., Botvinick, M., & Wayne, G. (2019). Hierarchical motor control in mammals and machines. Nature Communications, 10(1), 1-12.
 https://www.nature.com/articles/s41467-019-13239-6
 Opinion? Seems short and general, so give it priority.
+
+Maheswaranathan, N., Williams, A., Golub, M., Ganguli, S., & Sussillo, D. (2019). Universality and individuality in neural dynamics across large populations of recurrent networks. In_Advances in neural information processing systems_(pp. 15603-15615).
 
 Recurrence is required to capture the representational dynamics of the human visual system
 Kleinman

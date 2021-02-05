@@ -2,12 +2,10 @@
 
 #neuro #cortex #unsupervised
 
-Temporary author list (not yet indexed at Scholar as of Jan 2021):
-
-View ORCID ProfileColleen J. Gillon, Jason E. Pina,  View ORCID ProfileJérôme A. Lecoq, Ruweida Ahmed, Yazan Billeh, Shiella Caldejon, Peter Groblewski, Tim M. Henley, India Kato, Eric Lee, Jennifer Luviano,  View ORCID ProfileKyla Mace, Chelsea Nayan, Thuyanh Nguyen, Kat North, Jed Perkins, Sam Seid, Matthew Valley, Ali Williford,  View ORCID ProfileYoshua Bengio,  View ORCID ProfileTimothy P. Lillicrap,  View ORCID ProfileBlake A. Richards,  View ORCID ProfileJoel Zylberberg
+Gillon, C.J., Pina, J.E., Lecoq, J.A., Ahmed, R., Billeh, Y., Caldejon, S., Groblewski, P., Henley, T.M., Lee, E., Luviano, J. and Mace, K., 2021. Learning from unexpected events in the neocortical microcircuit. bioRxiv.
 
 https://www.biorxiv.org/content/10.1101/2021.01.15.426915v1
-Tweetprint: https://twitter.com/colleenjgillon/status/1351557910439059457
+Tweetstorm: https://twitter.com/colleenjgillon/status/1351557910439059457
 
 Related: [[12_Neuro]], [[unsupervised]]
 

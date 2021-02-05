@@ -24,7 +24,7 @@ Random fact: Go has more than 10^(10^48) possible games :)
 
 A short summary of current attempts at understanding (with 2-3 refs for each) that mostly don't work:
 * Sensitivity of outputs to changes in the system
-* Adversarial stimuli (illusions)
+* Adversarial stimuli (illusions) [[illusions]]
 * Perturbation by removal of units
 
 > Then, I'd say, a good strategy would be to try "super-distillation": that is, finding a curriculum of a _very small number of stimuli_ that, when paired with a very high learning rate (and maybe an unusual evolution of this learning rate), would bring a network to a target state. Possible study plan: train a network. Reverse-engineer a sequence of stimuli that, when given to this network, with a very high learning rate, would bring it to a trained state as fast as possible. These stimuli won't be realistic obviously, but what would they be? We can try to go forward (from the same random state as the original network), or backwards (from trained to equal everything, subtracting info instead of adding it). If the process if starting state-dependent, we'd also have to check whether it teachers other networks similarly well (say, in case of distillation), and if not, we'll have to make sure it's not idiosyncratic to a network (how? not sure).

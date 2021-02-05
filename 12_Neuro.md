@@ -2,10 +2,10 @@
 
 #neuro #behav
 
-Topics to look up:
-* Oja rule: a popular extension of the Hebb's rule? https://en.wikipedia.org/wiki/Oja%27s_rule
+See [[00_to_read_neuro]] for the queue of papers to read.
 
-See also: [[00_to_read_neuro]]
+To look up:
+* Oja rule: a popular extension of the Hebb's rule? https://en.wikipedia.org/wiki/Oja%27s_rule
 
 # Topical Bibliographies
 * [[behavior]] - Animal behavior
@@ -23,7 +23,7 @@ See also: [[00_to_read_neuro]]
 * Mechanisms:
     * [[stdp]] - Spike-time-dependent plasticity
     * [[intrinsic_plasticity]] - subj
-    * [[bib_one_neuron]] - computation in one neuron, dendritic processing
+    * [[one_neuron]] - computation in one neuron, dendritic processing
 
 # Refs
 
