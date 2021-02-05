@@ -49,7 +49,9 @@ Dump:
 * dual-pivot quicksort
 * model view controller - most important design pattern for web apps
 * pseudoinverse (there's more than one!), and how numpy calculates them
-* CICD
+* react
+* redux
+* CICD (combined practices of continuous integration)
 * With pycharm and Anaconda, do I now have Python installed twice? How does it work?
 * Briefly describe other patterns [[design_patterns]]
 * predictive coding in the brain - definition?
@@ -60,6 +62,9 @@ Dump:
     * Flask docker file (allegedly 80% of what one needs for a typical deployment)
     * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
 * Scalability lecture: https://www.youtube.com/watch?v=-W9F__D3oY4
+* Docker and Kubernetes: https://www.youtube.com/watch?v=u8dW8DrcSmo
+* How to design Twitter: https://www.youtube.com/watch?v=KmAyPUv9gOY
+* Start missing semester of CS education
 (I'm at 24m right now)
 * How Python works inside:
     * GIL
@@ -69,12 +74,9 @@ Dump:
 * Neural turning machines: https://distill.pub/2016/augmented-rnns/
 * How to do code reviews: https://google.github.io/eng-practices/review/reviewer/
 * Scaling Etsy: https://www.youtube.com/watch?v=eenrfm50mXw
-* Docker and Kubernetes: https://www.youtube.com/watch?v=u8dW8DrcSmo
-* How to design Twitter: https://www.youtube.com/watch?v=KmAyPUv9gOY
 * numpy broadcasting - what are the rules again? Does it not broadcast from a 2D to 1D array?
 * document lambda calculus in [[python]]
-* Start missing semester of CS education
-    * Unit tests - how to properly in python?
+* MongoDB
 * Differences between HTTP2 and 1
 * Pub-sub architectures
 * Microservices

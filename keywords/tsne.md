@@ -17,7 +17,7 @@ https://distill.pub/2016/misread-tsne/
 
 # Logic
 
-tSNE defines distances between points, and also measures distances on a projection. Then defines a certain "probability of similarity" (something alike to connectedness, or "being a neighbor") that declines with distance (Gaussian kernel), and is normalized for every point. Finally, minimize the KL-divergence ([[kl]]) of these "probabilities of being a neighbor" between the original set, and in the projection, using gradient descent.
+tSNE defines distances between data points, and also measures distances on a projection. Then defines a certain "probability of similarity" (something alike to connectedness, or "being a neighbor") that declines with distance (Gaussian kernel), and is normalized for every point. Finally, minimize the KL-divergence ([[kl]]) of these "probabilities of being a neighbor" between the original set, and in the projection, using gradient descent.
 
 Single most important hyperparameter: **perplexity** (typically set "between 5 and 50") controlling the balance between global and local aspects of data, and can be thought of as a rough guess about the number of meaningful neighbors for every point. Best reconstruction of the original data is achieved somewhere in-between, so neither extreme would work. If perplexity is too small, you'll get lots of fragmented clusters, with no global picture; if it is too large, everything will be just mixed together into one cluster. Also, in general, perplexity may have to be increased slightly we get more data, even if the underlying structure of the data doesn't change (if we still sample from the same distribution).
 
@@ -39,9 +39,11 @@ A "web-consensus" list of limitations (although see below):
 * doesn't represent (preserve) large-scale organization of data well (see [[umap]] for some attempts to explain why)
 * cannot work with very-high-D data directly, needs to first be projected to lower-D with something like PCA or an autoencoder. (Supposedly, this one is no longer true if we don't use random init, and switch to a meaningful PCA-like init)
 
-Footnotes for limitations:
+Footnotes for a list of limitations:
 * https://towardsdatascience.com/how-exactly-umap-works-13e3040e1668
+* See also: [[umap]]
 
+#todo
 Footnotes for sources that argue with these limitations:
 * Böhm, J. N., Berens, P., & Kobak, D. (2020). A Unifying Perspective on Neighbor Embeddings along the Attraction-Repulsion Spectrum. arXiv preprint arXiv:2007.08902. https://arxiv.org/abs/2007.08902
 * Critique: Initialization is critical for preserving global data structure in both t-SNE and UMAP. Kobak, Linderman. 2021. Nature Biotechnology

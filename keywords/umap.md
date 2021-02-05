@@ -104,6 +104,12 @@ Now, for tightly place points, it means that the organization of points inside a
 
 # Refs
 
+#toread
+https://towardsdatascience.com/tsne-vs-umap-global-structure-4d8045acba17	
+
+#toread
+Böhm, J. N., Berens, P., & Kobak, D. (2020). A Unifying Perspective on Neighbor Embeddings along the Attraction-Repulsion Spectrum. arXiv preprint arXiv:2007.08902. https://arxiv.org/abs/2007.08902
+
 * [https://pair-code.github.io/understanding-umap/](<https://pair-code.github.io/understanding-umap/>)
 * [https://towardsdatascience.com/how-exactly-umap-works-13e3040e1668](<https://towardsdatascience.com/how-exactly-umap-works-13e3040e1668>)
 * [https://towardsdatascience.com/how-to-program-umap-from-scratch-e6eff67f55fe](<https://towardsdatascience.com/how-to-program-umap-from-scratch-e6eff67f55fe>)
@@ -112,15 +118,14 @@ Now, for tightly place points, it means that the organization of points inside a
 Oskolkov 2020:
 A really detailed well explained blog post that goes through a very detailed step-by-step comparison of both algorithms: https://towardsdatascience.com/how-exactly-umap-works-13e3040e1668
 
-
 https://umap-learn.readthedocs.io/en/latest/how_umap_works.html
-Very readable non-mathy explanation of how UMAP works.
+Very readable non-mathy explanation of the principles of UMAP from sklearn umap team.
 2018, Leland McInnes
 
 Parameters:
 https://umap-learn.readthedocs.io/en/latest/parameters.html
 
-Pretty interactive simulation, with use case of UMAP on the ImageNet dataset:
+Pretty, interactive simulation, with use case of UMAP on the ImageNet dataset:
 https://tiga1231.github.io/umap-tour/
 (by Mingwei Li, Carlos Scheidegger)
 Here they project from 150K-dim original dataset to 15 dimentions, and then interpret / visualize / rotate through these dimensions. Then they use UMAP to interpret unit activations in a deep image classifying network,

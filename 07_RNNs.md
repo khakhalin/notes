@@ -16,6 +16,8 @@ Benchmarking of RNNs:
 
 # Bibliography
 
+https://distill.pub/2019/memorization-in-rnns/
+
 Cooijmans, T., Ballas, N., Laurent, C., Gülçehre, Ç., & Courville, A. (2016). Recurrent batch normalization. arXiv preprint arXiv:1603.09025.
 https://arxiv.org/pdf/1603.09025.pdf
 Describe how to do batch-norm in RNNs. Is it like inhibition, essentially? ~300 citations (good)
