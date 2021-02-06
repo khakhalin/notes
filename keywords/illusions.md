@@ -1,14 +1,18 @@
 # Illusions
 
-#neuro #perception #bib
+#neuro #perception #bib #interpretability
 
-# Scrap notes
+Parents: [[12_Neuro]], [[interpretability]]
+Related: [[superstimulus]], adversarial attacks
+
+# Priming illusions
 
 * Yanni/Laurel illusion - Grover swearing - Green Needle / Brainstorm
 * The Cat illusion (a friend of 12 13 14 / ABC)
-* Lots of alternative names (also depending on which aspect of the story you integrate, and on what you studied prior haha): context sensitivity, priming, illusory conjunction, selective attention, gestalt, cross-modal integration etc.
 
-# Examples
+Lots of alternative names (also depending on which aspect of the story you integrate, and on what you studied prior haha): context sensitivity, priming, illusory conjunction, selective attention, gestalt, cross-modal integration etc.
+
+# Other examples
 
 That crazy illusion with rotating circles that shrink, move, etc.:
 https://twitter.com/jagarikin/status/1331409504953540613

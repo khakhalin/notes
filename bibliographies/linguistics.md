@@ -23,6 +23,8 @@ Some playlist of intro linguistics:
 * https://www.youtube.com/playlist?list=PLDDGPdw7e6Ah0e9VYg6ejkS4jRLKB2b2J - a series of short lectures khan academy-style
 * https://www.youtube.com/playlist?list=PL8dPuuaLjXtP5mp25nStsuDzk2blncJDW - crash course
 
+Interslavic: http://steen.free.fr/interslavic/nouns.html
+
 A huge (and unfinished) downloadable dictionary of Russian dialects:
 https://iling.spb.ru/dictionaries.html
 

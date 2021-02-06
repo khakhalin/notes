@@ -3,7 +3,7 @@
 #dynamic #chaos #randomness
 
 Parent: [[complexity]]
-See also : [[criticality]], [[randomness]], [[neurostochastic]], [[echo_state]], [[free_will]]
+See also : [[criticality]], [[randomness]], [[neurostochastic]], [[echo]], [[free_will]]
 
 Common chaotic models:
 * [[lorenz]]

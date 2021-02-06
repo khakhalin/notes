@@ -17,7 +17,7 @@ To look up:
     * [[deepneuro]] - deep learning and neuro cross-pollinating each other
 * [[bib_reconstruction]] - On  reconstructing connectivity from activity
 * Complexity (also see [[complexity]])
-    * [[echo_state]] - Echo state networks
+    * [[echo]] - Echo state networks
     * [[network_neuro]] - Network neuroscience
     * [[criticality]] - Mostly in neural activity
 * Mechanisms:

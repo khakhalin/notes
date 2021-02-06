@@ -7,6 +7,9 @@ See also: [[gru]], [[activation_functions]]
 
 Introduced in 1997 by Schmidhuber. Solves the issue of vanishing gradients for recurrent networks.
 
+Related:
+* [[Hassabis2017neuroai]] - among other things, describe LSTM in terms of neuro working memory
+
 # Formulas
 
 #todo

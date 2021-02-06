@@ -2,7 +2,7 @@
 
 #bib #self-supervised #gan #adversarial
 
-Parents: [[08_Unsupervised]]
+Parents: [[08_Unsupervised]], [[06_DL]]
 
 # To-Read
 
@@ -16,6 +16,9 @@ https://distill.pub/2019/gan-open-problems/
 
 Nalisnick, E., Matsukawa, A., Teh, Y. W., Gorur, D., & Lakshminarayanan, B. (2018). Do deep generative models know what they don't know?. arXiv preprint arXiv:1810.09136.
 https://arxiv.org/abs/1810.09136
+
+Review of the original GAN story (who was the first?) by Schmidthuber, 2019:
+https://arxiv.org/pdf/1906.04493.pdf
 
 # Notes
 

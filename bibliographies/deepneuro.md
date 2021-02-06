@@ -3,9 +3,16 @@
 #deepneuro #dl #neuro
 
 Parents: [[12_Neuro]], [[06_DL]]
-See also: [[network_neuro]], [[stdp]]
+Related: [[network_neuro]]
+
+Subplotics:
+* [[stdp]] - unsupervised rules in the brain
+* [[credit]] - credit assignment in the brain, and backprop in the brain
 
 # Papers
+
+Reviews
+* [[Hassabis2017neuroai]]- neuro-inspired AI; past and future; 3-4 refs for every topic
 
 #vet
 

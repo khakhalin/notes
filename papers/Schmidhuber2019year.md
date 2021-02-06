@@ -20,5 +20,5 @@ Related: Alexey Ivakhnenko apparently invented backprop in 1965, but is almost n
 
 Apparently he also proposed GANs in 1992 in some way, which led to a strange "long question" in 2016 [Neurips presentation by Ian Goodfellow](https://www.youtube.com/watch?v=HGYYEUSm-0Q&t=3779s). Except he called it "predictability minimization", and apparently Ian addresses it in his (original?) GAN paper.
 
-Schmidthuber also  wrote a review of that whole GAN history in 2019:
+Schmidthuber also  wrote a review of that whole [[gan]] history in 2019:
 https://arxiv.org/pdf/1906.04493.pdf

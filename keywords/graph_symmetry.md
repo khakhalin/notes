@@ -7,7 +7,7 @@ Related: [[groups]]
 
 
 Relevant papers:
-* [[Carroll2019structure]] - that good reservoirs for [[echo_state]] should be asymmetric
+* [[Carroll2019structure]] - that good reservoirs for [[echo]] should be asymmetric
 
 
 A graph is called **symmetric** if it has an **automorphism** (a self-**isomorphism**, or a permutation of vertices that preserves the graph).

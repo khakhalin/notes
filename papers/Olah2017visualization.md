@@ -5,10 +5,7 @@ https://distill.pub/2017/feature-visualization/
 
 #image #interpretability #diversity
 
-Related:
-* [[interpretability]] - hub parent
-* [[illusions]] - coz it's like illusions for ML
-* [[superstimulus]] - coz it's even closer to this concept
+Related: [[interpretability]], [[illusions]], [[superstimulus]]
 * Follow-up: [[Olah2018interpretability]]
 
 Really pretty and weird pictures in this one.

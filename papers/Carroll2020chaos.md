@@ -5,7 +5,7 @@ https://arxiv.org/pdf/2012.01409.pdf
 
 #chaos #echo #complexity #networks
 
-Parents: [[echo_state]], [[chaos]]
+Parents: [[echo]], [[chaos]]
 Related: [[Carroll2019structure]] (previous paper), [[criticality]]
 
 

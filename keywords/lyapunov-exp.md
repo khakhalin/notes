@@ -3,7 +3,7 @@
 #chaos
 
 Parent: [[chaos]]
-Related: [[fractal]], [[echo_state]]
+Related: [[fractal]], [[echo]]
 
 We take a **dynamic system** with chaotic instability, and consider two sets of initial conditions that differ by a very small value δ. Then we track how this difference evolves over time. If trajectories diverge, it will increase, and in fact it will (at least at first) diverge exponentially. That is:
 

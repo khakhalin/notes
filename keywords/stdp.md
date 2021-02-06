@@ -3,7 +3,7 @@
 #bib #neuro #synfire
 
 Parent: [[12_Neuro]]
-Related: [[echo_state]], [[synfire]]
+Related: [[echo]], [[synfire]], [[hopfield]] (continuous Hopfield networks in particular)
 
 Papers:
 * [[Fiete2010stdp]] - stdp builds long sequences
@@ -50,3 +50,6 @@ Shulz, D. E., & Feldman, D. E. (2013). Spike timing-dependent plasticity. Rubens
 Nice summary:
 http://www.yger.net/spike-timing/
 Quotation (links are not available, so would have to be reconstructed): According to bibcite key=Toyoizumi2007, Chechik2003, STDP could be seen as an attempt, by the neurons, to maximize the transmission of information and therefore the mutual information between inputs and outputs. For bibcite key=Bohte2005b, STDP is more a way to reduce the variability of the output knowing the input:  (with  being the entropy). We can cite other examples such as slow feature analysis bibcite key=Sprekeler2006, where STDP aims to decompose the signals into a basis of signals, slowly varying in time, or the predictive coding bibcite key=Rao2001 theory, where STDP is used to encode only time differences. 
+
+Main paper (almost like original, but a review, 3k citations):
+Bi, G. Q., & Poo, M. M. (1998). Synaptic modifications in cultured hippocampal neurons: dependence on spike timing, synaptic strength, and postsynaptic cell type. Journal of neuroscience, 18(24), 10464-10472.

@@ -3,7 +3,13 @@
 #echo #rnn #graphs #bib
 
 Parents: [[07_RNNs]]
-See also: [[criticality]], [[stdp]], [[cellular_automata]], [[graph_symmetry]], [[synfire]], [[sir]]
+See also: [[criticality]], [[cellular_automata]], [[graph_symmetry]]
+
+Related:
+* [[synfire]] - biological networks encoding temporal sequences
+* [[stdp]] - what shapes them probably
+* [[hopfield]] - continuous Hopfield networks as a model for network self-organization
+* [[sir]] - epidemiological models
 
 # Papers
 

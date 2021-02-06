@@ -24,7 +24,7 @@ It's equivalent to moving to a random basis. They model balancing in insects (**
 
 Smooth kernels filter out noise components.
 
-> Does not it sound a bit similar to what people say about [[echo_state]] networks?
+> Does not it sound a bit similar to what people say about [[echo]] networks?
 
 # Refs
 

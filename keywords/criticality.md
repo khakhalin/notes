@@ -3,7 +3,7 @@
 #criticality #rnn #neuro #bib
 
 Parents: [[12_Neuro]]
-Related: [[echo_state]], [[chaos]]
+Related: [[echo]], [[chaos]]
 
 # Papers
 

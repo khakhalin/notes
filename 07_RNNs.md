@@ -5,7 +5,7 @@
 Subtopics:
 * [[lstm]] - Long Short-Term Memory
 * [[gru]] - Gated Recurrent Unit (kinda a simplified version of LSTM)
-* [[echo_state]] - Echo-State Networks
+* [[echo]] - Echo-State Networks
 
 Papers:
 * ?

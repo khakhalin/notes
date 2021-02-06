@@ -4,10 +4,6 @@
 
 Se also: [[12_Neuro]] (the official hub age)
 
-🔥 Hassabis, D., Kumaran, D., Summerfield, C., & Botvinick, M. (2017). Neuroscience-inspired artificial intelligence. Neuron, 95(2), 245-258.
-https://www.sciencedirect.com/science/article/pii/S0896627317305093
-Quite popular.
-
 Perez-Nieves, N., Leung, V. C., Dragotti, P. L., & Goodman, D. F. (2020). Neural heterogeneity promotes robust learning. bioRxiv.
 https://www.biorxiv.org/content/10.1101/2020.12.18.423468v1
 
@@ -24,10 +20,8 @@ https://www.biorxiv.org/content/10.1101/2020.04.27.057752v1
 
 # General, top, and fun
 
-🔥  Backpropagation and the brain
-Timothy P. Lillicrap, Adam Santoro, Luke Marris, Colin J. Akerman & Geoffrey Hinton (2020)
-https://www.nature.com/articles/s41583-020-0277-3
-(Opinion piece)
+🔥  Backpropagation and the brain. Timothy P. Lillicrap, Adam Santoro, Luke Marris, Colin J. Akerman & Geoffrey Hinton (2020) https://www.nature.com/articles/s41583-020-0277-3
+(Opinion piece) See [[credit]].
 
 Raman, D. V., Rotondo, A. P., & O’Leary, T. (2019). Fundamental bounds on learning performance in neural circuits. Proceedings of the National Academy of Sciences, 116(21), 10537-10546.
 https://www.pnas.org/content/116/21/10537.short
@@ -145,7 +139,7 @@ Compartments, NMDA, all sorts of STDP stuff.
 
 🔥 Bengio, Y., Lee, D. H., Bornschein, J., Mesnard, T., & Lin, Z. (2015). Towards biologically plausible deep learning. arXiv preprint arXiv:1502.04156.
 https://arxiv.org/pdf/1502.04156.pdf
-Mathy, then mnist
+Mathy, then mnist. The link will migrate to [[credit]]
 
 Bellec, G., Scherr, F., Subramoney, A., Hajek, E., Salaj, D., Legenstein, R., & Maass, W. (2019). A solution to the learning dilemma for recurrent networks of spiking neurons. bioRxiv, 738385.
 https://www.biorxiv.org/content/10.1101/738385v3
@@ -346,6 +340,9 @@ Findling, C., Skvortsova, V., Dromnelle, R., Palminteri, S., & Wyart, V. (2019).
 https://www.biorxiv.org/content/biorxiv/early/2018/10/11/439885.full.pdf
 
 # CogSci and Development
+
+🔥 Chance, F. S., Aimone, J. B., Musuvathy, S. S., Smith, M. R., Vineyard, C. M., & Wang, F. (2020). Crossing the Cleft: Communication Challenges Between Neuroscience and Artificial Intelligence. Frontiers in Computational Neuroscience, 14, 39.
+https://www.frontiersin.org/articles/10.3389/fncom.2020.00039/full
 
 Mandler, J. M. (1988). How to build a baby: On the development of an accessible representational system. Cognitive development, 3(2), 113-136. [link](https://s3.amazonaws.com/academia.edu.documents/48154476/How_to_build_a_baby_On_the_development_o20160818-28052-ns7nel.pdf?response-content-disposition=inline%3B%20filename%3DHow_to_build_a_baby_On_the_development_o.pdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWOWYYGZ2Y53UL3A%2F20200223%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200223T181627Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=11b1618e368d462df1af3b595c4c4c0775001e9a19e536a709c9b6f6d93ca8b1)
 Quite popular (500 citations), strongly endorsed by Melanie Mitchell.
