@@ -9,11 +9,13 @@ Subtopics:
 * [[smoothing]] - as a type of feature transformation
 * [[clustering]] - methods in data clustering
 * [[fairness]] - on the practical choice and interpretation of features
+* [[embedding]] - embedding layers, doing dim reduction in DL
 
 **Dim Reduction and Manifold Learning**
 
 #todo: https://jakevdp.github.io/PythonDataScienceHandbook/05.10-manifold-learning.html
 
+A list of methods:
 * [[subspace_methods]] - linear; finding a projection to an optimal subspace
     * [[pca]] - Principle Component Analysis - the mother of all
     * [[lda]] - Linear Discriminant Analysis - classification-driven
@@ -31,7 +33,8 @@ Subtopics:
 
 Related concepts:
 * [[metric]] - different ways of calculating distances
-* [[curse_dim]] - Dimensionality curse
+* [[curse_dim]] - dimensionality curse
+* [[johnson-lindenstrauss]] - lemma about embedding in lower-D
 
 # Refs
 

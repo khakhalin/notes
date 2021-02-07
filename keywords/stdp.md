@@ -40,7 +40,7 @@ Porr, B., & Wörgötter, F. (2007). Learning with “relevance”: using a third
 
 Izhikevich, E. M. (2007). Solving the distal reward problem through linkage of STDP and dopamine signaling. Cerebral cortex, 17(10), 2443-2452.
 
-# Biology of it
+# Biology of STDP
 
 Shulz, D. E., & Feldman, D. E. (2013). Spike timing-dependent plasticity. Rubenstein JLR, Rakic P. Comprehensive developmental neuroscience: neural circuit development and function in the healthy and diseased brain. San Diego, CA: Elsevier, 155-81.
 (A chapter in a book. No good computational chapters, but lots of biology. Mostly in-vitro though.)

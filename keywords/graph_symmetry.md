@@ -9,7 +9,6 @@ Related: [[groups]]
 Relevant papers:
 * [[Carroll2019structure]] - that good reservoirs for [[echo]] should be asymmetric
 
-
 A graph is called **symmetric** if it has an **automorphism** (a self-**isomorphism**, or a permutation of vertices that preserves the graph).
 
 Finding symmetries of a graph is generally an **NP problem**, as it's literally a graph isomorphism problem. But some **heuristics** exist. For example, if nodes have different degrees, they cannot be twins. Following this logic consistently, one can greatly reduce the number of of nodes to tested for interchangeability.
@@ -25,7 +24,7 @@ The citation in [[Carroll2019structure]] (Sage 2013) is not a real publication, 
 * https://doc.sagemath.org/html/en/reference/graphs/sage/graphs/graph.html
 * https://doc.sagemath.org/html/en/reference/graphs/sage/graphs/digraph.html
 
-The tool used in (Ball 2018) is called `saucy`, and it just returns the symmetries. Seems promising:
+The tool used in (Ball 2018) is called **Saucy** or **Pysaucy**, and it just returns the symmetries. Seems promising:
 * https://github.com/KIT-IISM-EM/pysaucy2
 * https://kit-iism-em.github.io/pysaucy2/html/
 

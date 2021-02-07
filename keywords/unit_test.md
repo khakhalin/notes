@@ -1,17 +1,40 @@
 # Unit testing
 
-(with emphasis on Python and Data Science)
+(with emphasis on [[python]] and Data Science)
 
 #tools #coding #testing #oop
 
 Parents: [[oop]], [[01_Tools]]
 See also: [[python]], [[ml_lore]], [[design_patterns]]
 
-The idea is of course simple: test every little part of your code separately. An opposite of **integration testing**, where product is tested as a whole.
 
-Practically, in Python, you make a special class (name isn't critical) that inherits to `unittest.TestCase` (here `unittest` a package that needs to be imported). This class should contain methods with names starting with `test_`, that call the whatever you're testing with some parameters, and then do `self.assertEqual(a,b)` for the actual value, and the target value. These methods will be automatically run when this `.py` file is run.
+A simple idea: **test every little part of your code separately**, as opposed to **integration testing**, where product is tested as a whole.
 
-What's the benefit of using this library? Instead of one error mistake, with the full verbose exception traceback, you will now have a neat list with all fails shown and explained (which file, which line, with what exception).
+In Python, there are special packages : `pytest` (the most popular one), `unittest`, `nosetests`, `doctest`.
+
+What's the benefit of using these library? Instead of one error message, with the full verbose exception traceback, you will now have a neat list of all fails shown and explained (which file, which line, with what exception).
+
+## Practical implementation
+
+### Pytest package
+
+Create a file with whatever name (say, `test_fun1.py`). Import `pytest` and whateveer you're planning to test; then write a bunch of functions (free-standing, not a part of any class), named `test_blabla` (make it descriptive, not need to match anything). Inside, call your function, and do `assert call(x)==known_result`.
+
+Then in command line (terminal, not Python console), run `pytest test_fun1.py`, or, if all tests are collected in one folder (say, `tests`), run `pytest tests`. This would run all the tests in each of the files, and output the result (either a total sum of all tests that were run, or a list of errors that happened).
+
+Interesting practical asserts to call:
+```python
+assert isinstance(y, (np.ndarray, np.generic))
+assert expected == pytest.approx(x, rel=1e-3)
+assert np.allclose(xhat, x)
+```
+Here `np.allclose()` is a cool [[numpy]] function that tests of all elements in two array-like variables are close to each other, within a certain relative and/or absolute error (given by parameters with default values `rtol=1e-05, atol=1e-08,`)
+
+### Unittest package
+
+Make a special class (name isn't critical) that inherits to `unittest.TestCase` (where `unittest` is a package that needs to be imported). This class should contain methods with names starting with `test_`, that call the whatever you're testing with some parameters, and then do `self.assertEqual(a,b)` for the actual value, and the target value. These methods will be automatically run when this `.py` file is run.
+
+## Fancy techniques
 
 Unit testing deep into the code may be hard, as there's no context to work with. One may have to write some special code to mock, stub dependencies (aka **dependency injection**). For some reason this is also sometimes called **Inversion of control** (IoC).
 

@@ -122,20 +122,3 @@ Footnotes:
 * `get`
 * `set`
 * `delete`
-
-# File organization and importing
-
-Main idea: it seems that one can think of `import`as of just a bunch of code being literally included from a file, at the point where `import` is called. (With a caveat that it's only loaded once, so if you call it twice nothing happens, and if you change the imported file afterit  imported, also nothing happens). It means that with numpy and such, we call them in the beginning of the script, for the `np` prefix to become available as a public class, but for class methods we can call it within the class declaration. And just have class methods written in separate files, if we so desire.
-
-A corollary statement about **numpy**: it's OK (and actually proper) to have `import numpy as np` in the beginning of every source file.
-
-What _is_ bad however is to do `from X import *`; as a start, it is only allowed at the module level, and even then, it shouldn't really be used with external modules. _I think I remember reading that * shouldn't be used at all, and even for your own modules you're supposed to list what you are importing; both because it's more transparent, and because it's less vulnerable._
-
-How to **create a namespace** to compartmentalize some functions (like `utils.fun()`)? Two options: a **static class** and a **Python package**. The static class is self-explanatory: just create a `py` file, and define a class with many static functions, then import this class in the main init with `from .name import name`. For a package, create a folder `name`, with `__init__` and a bunch of files. Make this package init import every function from every file (like `from .fun import fun`), and in the parent package, do `from . import name`, or maybe `from . import name as meaningful_name` if you prefer. This import needs to be done in every Python file that uses this namespace, as if it were numpy.
-
-If you need to call one subpackage from another subpackage, it's a bit harder (as this `from .` is  a relative path import).
-
-Footnotes:
-* https://stackoverflow.com/questions/47561840/python-how-can-i-separate-functions-of-class-into-multiple-files
-* https://stackoverflow.com/questions/28440036/when-importing-my-class-i-lose-access-to-functions-from-other-modules
-* https://docs.python.org/3/reference/import.html

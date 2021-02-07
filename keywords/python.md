@@ -53,12 +53,14 @@ Libraries: [[pandas]], [[tensorflow]], [[numpy]], [[matplotlib]], [[py_dates]]
 # Gotchas
 
 * Objects (including empty lists `[]`) should never be used as **default arguments** for functions, as they are evaluated and instantiated only once per program (during object definition), not when methods are called! Instead use `x=None`, then `if x is None: x=[]`. It sounds cumbersome, but that's just how it is. ([ref](https://docs.python-guide.org/writing/gotchas/))
+* While it is possible to use `not a` instead of `len(a)==0` to check if an array is empty, as `[]` evaluates to False, this `if not a` is not a good idea for checking default parameters, even though `None` also evaluates to false. Because `0` also evaluates to false!! So always use `if a is None`.
 * Similarly `[{}]*3` will actually create 3 references to the SAME dict.  To create an array of empty dicts or arrays or something else, use a list comprehension.
 * As strings are immutable, slicing a string creates a copy, and thus is O(N) rather than O(1). [ref](https://www.byte-by-byte.com/strings/)
 * Crazy fact: a built-in `round()` (not the one from math / numpy) rounds both 1.5 and 2.5 to 2 (always **rounds edge cases towards even numbers**). Apparently that's to fight the bias of floating number representation ([ref](https://realpython.com/python-rounding/)).
 * In Python, logic operators (and, or) are **short-circuit**, which means that `(True or None.field)` will return True, even though on its own `None.field` is obviously a mistake (Nones don't have fields.)
 * **Slices** don't throw index out of bounds exceptions, but evaluate to `[]` if they are out of bounds. so for `a=[0]`, `a[1]`would give an "index out of range" mistake, but `a[1:]` gives an empty list.
 * Remember that `copy()` is a shallow copy, so for complex nested structures it may not be enough.
+* Lazy iterables  (such as those created by `map`and `zip`) empty as you go through them. So once you run a `list(a)` on a lazy iterator `a` it becomes empty.
 * If `__contains__` method isn't implemented for a class, but `__getitem__` (getting an element by its numerical position) is implemented, `in` operator triggers iteration through the class with elementwise comparisons. It means that depending on the class `in` may have very different complexity. The main practical gotcha if of course doing `in` with a list (which is O(N) slow) instead of a set or a dict (that are O(1) fast).
 
 **Refs:**
@@ -92,7 +94,6 @@ finally:
     # Clean-up part that is always executed
     del a
 ```
-
 # With
 
 An alternative to `try - except - finally`.	 Relies on the fact that many objects are shipped with methods `__enter__` and `__exit__`: one to create an object, set it up, and return the instance; the other one to gracefully clean up after the sensitive operation is performed. `__exit__` typically (or always?) doesn't delete the object, so the object can be referenced after the "with construction" is over. Even if the "with" part itself is empty, by that time three methods would have been executed: init, enter, and exit, in this order.
@@ -111,7 +112,7 @@ with Thing() as t:
 * another official description one: https://www.python.org/dev/peps/pep-0343/ 
 * implementing a class to support `with` statement: https://preshing.com/20110920/the-python-with-statement-by-example/
 
-# Style habits
+# Code Style
 
 * Import entire modules or packages, not classes or functions, to retain `module.class.method()` structure, and prevent name collisions.
 * Lines shouldn't be longer than 80 chars (Google style guide)
@@ -139,6 +140,36 @@ if __name__ == '__main__':
 Refs:
 * https://hackernoon.com/the-art-of-naming-variables-52f44de00aad
 * [Google style guide](https://github.com/google/styleguide), including that [for Python in particular](https://google.github.io/styleguide/pyguide.html)
+
+# File structure and importing
+
+Main idea: it seems that one can think of `import`as of just a bunch of code being literally included from a file, at the point where `import` is called. (With a caveat that it's only loaded once, so if you call it twice nothing happens, and if you change the imported file afterit  imported, also nothing happens). It means that with numpy and such, we call them in the beginning of the script, for the `np` prefix to become available as a public class, but for class methods we can call it within the class declaration. And just have class methods written in separate files, if we so desire.
+
+Note that it means that `import` technically runs each `py` file, so if it's written like a script (not like a bunch of declarations), it will get implemented. For modules and submodules, it runs `__init__.py` in a similar fashion.
+
+A corollary statement about **numpy**: it's OK (and actually proper) to have `import numpy as np` in the beginning of every source file.
+
+What IS bad however is to do `from X import *` (aka **Wild import**), as it imports everything from `X`, including all of its imports. Also, it only works at the module level.
+
+How to **create a namespace** to compartmentalize some functions (in a style of `utils.fun()`)? Two options: a **static class** and a **Python package**.
+* The static class is self-explanatory: just create a `py` file, and define a class with many static functions, then import this class in the main init with `from .name import name`.
+* For a package, create a folder `name`, with `__init__.py` and a bunch of files. Make this package's init contain imports of every function from each of the files (like, `from .fun import fun`), and so on. Then once you need to use package, elsewhere do `from . import name`, or maybe `from . import name as meaningful_name` if you prefer. This import needs to be done in every Python file that uses this functionality, the same way it happens for numpy, for example. This `from .` is relative import, but from the current folder.
+
+If you need to call one subpackage from another subpackage, it's a bit harder. There are three options here: good, and hacky.
+* The good one: `from ..sub2 import smth` or `from ..sub2.smth import somefun`
+* Sometimes this doesn't work however, giving an error "attempted relative import beyond top-level package". An alternative is to add the upper (`..`) folder in the path variable, by doing `import sys; sys.path.append('..')`
+
+Now, if you need to import the entire package (parent package) from one of subpackages (as it happens when you do unit testing [[unit_test]]), and you don't want to use the "sys" hack, just make sure the package you are in has an `__init__.py` file (it may even be empty). Then do simple `from package_name import smth`. Apparently, the logic is the following: if you don't do relative import (`from .smth`), it tries the current folder, and the system folders (in some sequence? not sure what gets priority), but also it goes up from the current folder until the first folder without `__init__.py`, and tries this folder as well. Because in normally organized projects it corresponds to the top level `src` folder. And that's where `package_name` (the top level package) sits in this case.
+
+> I am not 100% sure I got it right, and also it's quite possible that one can avoid the hacky hack described above by adding fake `__init__.py` to the subplackage folder as well. But that needs some testing.
+
+Footnotes:
+* https://stackoverflow.com/questions/47561840/python-how-can-i-separate-functions-of-class-into-multiple-files
+* https://stackoverflow.com/questions/28440036/when-importing-my-class-i-lose-access-to-functions-from-other-modules
+* https://stackoverflow.com/questions/25827160/importing-correctly-with-pytest
+(check out last answer, about intentionally including `__init__.py`)
+* https://docs.python.org/3/reference/import.html
+* https://github.com/chiphuyen/python-is-cool
 
 # General Refs
 
