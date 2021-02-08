@@ -60,12 +60,22 @@ Carroll, T. L. (2020). Do Reservoir Computers Work Best at the Edge of Chaos?. a
 https://arxiv.org/pdf/2012.01409.pdf
 Started here: [[Carroll2020chaos]]
 
+Ozturk, M. C., Xu, D., & Príncipe, J. C. (2007). Analysis and design of echo state networks. Neural computation, 19(1), 111-138.
+http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.877.6880&rep=rep1&type=pdf
+
 Carroll, T. L. (2020). Dimension of reservoir computers. Chaos: An Interdisciplinary Journal of Nonlinear Science, 30(1), 013102.
 https://arxiv.org/pdf/1912.06472.pdf
 Attempts to actually measure the dimensionality of signals in a ESN.
 
-Ozturk, M. C., Xu, D., & Príncipe, J. C. (2007). Analysis and design of echo state networks. Neural computation, 19(1), 111-138.
-http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.877.6880&rep=rep1&type=pdf
+Lukoševičius, M. (2012). A practical guide to applying echo state networks. In_Neural networks: Tricks of the trade_(pp. 659-686). Springer, Berlin, Heidelberg.
+
+Ferreira, A. A., & Ludermir, T. B. (2009, June). Genetic algorithm for reservoir computing optimization. In 2009 International Joint Conference on Neural Networks (pp. 811-815). IEEE.
+
+Zhong, S., Xie, X., Lin, L., & Wang, F. (2017). Genetic algorithm optimized double-reservoir echo state network for multi-regime time series prediction. Neurocomputing, 238, 191-204.
+
+Wang, X., Jin, Y., & Hao, K. (2019). Evolving Local Plasticity Rules for Synergistic Learning in Echo State Networks. IEEE Transactions on Neural Networks and Learning Systems, 31(4), 1363-1374.
+(no free text online)
+It seems that they are really trying to evolve some biologically-inspired rules, inspired by Hebbian plasticity and synaptic interference.
 
 Scardapane, S., & Uncini, A. (2017). Semi-supervised echo state networks for audio classification. Cognitive Computation, 9(1), 125-135.
 
@@ -81,16 +91,6 @@ Carroll, T. L. (2020). Path length statistics in reservoir computers. Chaos: An 
 https://www.researchgate.net/profile/T_Carroll/publication/343653866_Path_Length_Statistics_in_Reservoir_Computers/links/5f3680c8458515b7291f35ec/Path-Length-Statistics-in-Reservoir-Computers.pdf
 
 Rodan, A., & Tino, P. (2010). Minimum complexity echo state network. IEEE transactions on neural networks, 22 (1), 131-144.
-
-Lukoševičius, M. (2012). A practical guide to applying echo state networks. In_Neural networks: Tricks of the trade_(pp. 659-686). Springer, Berlin, Heidelberg.
-
-Ferreira, A. A., & Ludermir, T. B. (2009, June). Genetic algorithm for reservoir computing optimization. In 2009 International Joint Conference on Neural Networks (pp. 811-815). IEEE.
-
-Zhong, S., Xie, X., Lin, L., & Wang, F. (2017). Genetic algorithm optimized double-reservoir echo state network for multi-regime time series prediction. Neurocomputing, 238, 191-204.
-
-Wang, X., Jin, Y., & Hao, K. (2019). Evolving Local Plasticity Rules for Synergistic Learning in Echo State Networks. IEEE Transactions on Neural Networks and Learning Systems, 31(4), 1363-1374.
-(no free text online)
-It seems that they are really trying to evolve some biologically-inspired rules, inspired by Hebbian plasticity and synaptic interference.
 
 Huang, R., Li, Z., & Cao, B. (2020). A Soft Sensor Approach Based on an Echo State Network Optimized by Improved Genetic Algorithm. Sensors, 20(17), 5000.
 

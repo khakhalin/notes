@@ -529,6 +529,11 @@ Parked parts of ESL that need to be revisited:
 * Perron–Frobenius theorem - something related to centralities and or network graph eigenvectors
 * kuramoto oscillations
 
+# Business
+
+* Deconstruct this: https://boards.greenhouse.io/doordash/jobs/2173764
+* Customer satisfaction surface - how they look like, how they are delivered, how they feel from the data point of view
+
 # Refs
 
 Lists of topics used by other people:

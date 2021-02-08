@@ -14,7 +14,7 @@ Two main implementations: **Chaining** and **Probing**.
 
 **Linear probing**: Each cell contains a tuple (key,value). When writing, if a cell is occupied, go along the list towards next empty cell. During reading, go down comparing the keys. Pros: effectively uses space. Cons: tends to become increasingly slow as clusters develop, can run out of space. Possible solution: resize as necessary (but note that resizing also includes rehashing and rewriting all elements).
 
-Just pain deleting from a linear probing hash would be a problem, as it would leave an empty space, that would break search. Solutions: either mark deleted cells with a special "deleted" property (indicating that we can write to this cell, but shouldn't stop at it while searching), or shift all elements after it backwards by one, upon deletion.
+Just plain deleting from a linear probing hash would be a problem, as it would leave an empty space, that would break search. Solutions: either mark deleted cells with a special "deleted" property (indicating that we can write to this cell, but shouldn't stop at it while searching), or shift all elements after it backwards by one, upon deletion.
 
 **Quadratic probing**: An improvement upon linear probing, in which to resolve collision you don't go linearly by adding k to the base address, but jump by adding k² to it (k takes N starting at 0, until the collision is resolved). By having it scattered, it reduces clustering, and associated performance issues. ([Wiki ref](https://en.wikipedia.org/wiki/Quadratic_probing))
 
