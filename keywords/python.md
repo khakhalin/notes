@@ -3,9 +3,12 @@
 #tools #coding #oop
 
 Path: [[01_Tools]]
-Related: [[oop]] (Pythonic implementation of OOP is all given there)
-Subtopics: [[anaconda]], [[jupyter]]
-Libraries: [[pandas]], [[tensorflow]], [[numpy]], [[matplotlib]], [[py_dates]]
+
+Related and subtopics: 
+* [[oop]] - Pythonic implementation of OOP is all given there
+* [[unit_test]] - how to write unit tests correctly (in Python)
+* Libraries: [[pandas]], [[tensorflow]], [[numpy]], [[matplotlib]], [[py_dates]]
+* Tools: [[anaconda]], [[jupyter]]
 
 # Random tips
 
@@ -19,6 +22,7 @@ Libraries: [[pandas]], [[tensorflow]], [[numpy]], [[matplotlib]], [[py_dates]]
 * Sweetest way to **iterate through a dictionary**: `for key,val in d.items():`.
 * With big numbers, we can write `100_000`, and it's still a number :)
 * We can do chain comparisons: `1 <= x < 3`, which is equivalent to `1<=x and x<3`.
+* To check type: either `if isinstance(x, str):` or `if type(x) is str:`
 
 # Sets
 
@@ -114,6 +118,21 @@ with Thing() as t:
 
 # Code Style
 
+### Naming
+
+All of these advices are Python-specific:
+    * Variables: **snake_case** underscore for variables and functions
+    * Constants: ALLCAPS
+    * Objects: capitalized CamelCase
+    * Local methods: one leading-underscore (like `_add()`)
+* Arrays are plural, elements of an array are singular: `for fruit in fruits`
+* Methods: use verbs (set, get, move)
+* Booleans: is, has, can (is_cat, has_hamburger, can_eat)
+* Methods that return a boolean: check_is_cat()
+* Numbers: use a numerical prefix (n_cats, max_cats, min_cats, total_cats)
+* Transformations: to_dollars, to_uppercase
+
+
 * Import entire modules or packages, not classes or functions, to retain `module.class.method()` structure, and prevent name collisions.
 * Lines shouldn't be longer than 80 chars (Google style guide)
 * `.py` files are not scripts, so even executables	 should  be written inside a main function: `def main():`. The benefit of this construction is that this `.py` won't be auto-executed on import. And to make them callable script-like from the command line, add this inside:
@@ -123,23 +142,12 @@ if __name__ == '__main__':
 ```
 * Smuggle code from Jupyter to classes as soon as possible (Jupyter only for prototyping, reporting, and use case)
 
-## Naming
-
-* Python-specific:
-    * Variables: **snake_case** underscore for variables and functions
-    * Constants: ALLCAPS
-    * Objects: capitalized CamelCase
-    * Local methods: one leading-underscore (like `_add()`)
-* Arrays are plural, elements of an array are singular: for fruit in fruits
-* Methods: use verbs (set, get, move)
-* Booleans: is, has, can (is_cat, has_hamburger, can_eat)
-* Methods that return a boolean: check_is_cat()
-* Numbers: use a numerical prefix (n_cats, max_cats, min_cats, total_cats)
-* Transformations: to_dollars, to_uppercase
-
-Refs:
+Footnotes:
 * https://hackernoon.com/the-art-of-naming-variables-52f44de00aad
 * [Google style guide](https://github.com/google/styleguide), including that [for Python in particular](https://google.github.io/styleguide/pyguide.html)
+
+* Creating scikit-learn -like packages: https://scikit-learn.org/stable/developers/develop.html
+Some interesting info on exposing parameters, careful work with random generators (to ensure replicability) and related interfaces etc.
 
 # File structure and importing
 
