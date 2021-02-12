@@ -7,6 +7,7 @@
 Other thematic to-read lists:
 * [[11_RL]] - Reinforcement Learning
 * [[09_Graphs]] - Graph (aka Graphical) networks
+* [[complexity]] - complexity science
 
 # Tab-dumps
 
@@ -843,22 +844,8 @@ https://arxiv.org/abs/1901.10912.
 Paul Smolensky. Next-generation architectures bridge gap between neural and symbolic representations with neural symbols. Microsoft Research blog. December 12, 2019.
 https://www.microsoft.com/en-us/research/blog/next-generation-architectures-bridge-gap-between-neural-and-symbolic-representations-with-neural-symbols/
 
-# Complexity
-#complexity
-
-Corominas-Murtra, B., Seoane, L. F., & Solé, R. (2018). Zipf’s law, unbounded complexity and open-ended evolution. Journal of the Royal Society Interface, 15(149), 20180395.
-https://royalsocietypublishing.org/doi/pdf/10.1098/rsif.2018.0395
-General patterns of increase in complexity during evolution, using several natural and artificial examples (texts, proteins, logic circuits, and even combinations of Legos). Information and string complexity.
-
-Axelrod, R., & Hamilton, W. D. (1981). The evolution of cooperation. science, 211(4489), 1390-1396.
-41k citations. Also Henry's one single favorite paper ever :)
-
-Zenil, H., & Villarreal-Zapata, E. (2013). Asymptotic behavior and ratios of complexity in cellular automata. International Journal of Bifurcation and Chaos, 23(09), 1350159.
-https://arxiv.org/pdf/1304.2816.pdf
-Some measures of complexity (Shannon's block entropy and Kolmogorov) applied to 1D cellular automata. They try to make some general statements. Give a look.
-
-Cellular automata for music (a review from 2005, but seems fun)
-https://web2.qatar.cmu.edu/~gdicaro/15382/additional/generative-music-ca-review.pdf
+Santoro, A., Lampinen, A., Mathewson, K., Lillicrap, T., & Raposo, D. (2021). Symbolic Behaviour in Artificial Intelligence. arXiv preprint arXiv:2102.03406.
+https://arxiv.org/pdf/2102.03406.pdf
 
 # Math and Other
 

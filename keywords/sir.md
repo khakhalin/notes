@@ -3,8 +3,7 @@
 #graphs #chaos
 
 Parents: [[09_Graphs]]
-See also: [[graph_cascades]] (same, but with decision-making), [[cellular_automata]]
-
+See also: [[graph_cascades]], [[graph_automata]]
 
 Papers:
 * [[Jin2003twitter]] - SEIZ model

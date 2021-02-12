@@ -47,16 +47,23 @@ Dump:
 * spectral properties of graphs, spectral radius
 * numpy broadcasting - what are the rules again? Does it not broadcast from a 2D to 1D array?
 * How react sites talk to SQL now?
+* model view controller - most important design pattern for web apps
 * Reread SQL, locate the SQL training site, try it out	
 * do "go around the tree" 
 * tableau - read some more about
 * in-place mergesort (how?)
 * dual-pivot quicksort
-* model view controller - most important design pattern for web apps
+* https://en.wikipedia.org/wiki/S-expression
 * docker - what and how
     * Flask docker file (allegedly 80% of what one needs for a typical deployment)
     * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
 * pseudoinverse (there's more than one!), and how numpy calculates them
+* Scalability lecture: https://www.youtube.com/watch?v=-W9F__D3oY4 (I'm at 24m right now)
+* Docker and Kubernetes: https://www.youtube.com/watch?v=u8dW8DrcSmo
+* How to design Twitter: https://www.youtube.com/watch?v=KmAyPUv9gOY
+* Start missing semester of CS education
+* Scaling Etsy: https://www.youtube.com/watch?v=eenrfm50mXw
+* Read about this HTM thing that Numenta is doing: https://numenta.com/blog/2019/10/24/machine-learning-guide-to-htm
 * timsort
 * react
 * redux
@@ -66,10 +73,6 @@ Dump:
 * predictive coding in the brain - definition?
 * pull requests, and how this workflow works
     * https://www.netlify.com/blog/2020/03/31/how-to-scope-down-prs/
-* Scalability lecture: https://www.youtube.com/watch?v=-W9F__D3oY4 (I'm at 24m right now)
-* Docker and Kubernetes: https://www.youtube.com/watch?v=u8dW8DrcSmo
-* How to design Twitter: https://www.youtube.com/watch?v=KmAyPUv9gOY
-* Start missing semester of CS education
 * How Python works inside:
     * GIL
     * Asyncio
@@ -77,7 +80,6 @@ Dump:
     * Subinterpreters
 * Neural turning machines: https://distill.pub/2016/augmented-rnns/
 * How to do code reviews: https://google.github.io/eng-practices/review/reviewer/
-* Scaling Etsy: https://www.youtube.com/watch?v=eenrfm50mXw
 * document lambda calculus in [[python]]
 * MongoDB
 * Differences between HTTP2 and 1

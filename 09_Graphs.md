@@ -32,10 +32,12 @@
     * [[graphsage]] - a particular implementation of DL for graphs
 
 **Processes on graphs**
-* [[graph_cascades]] - Decision-based models and cascades
-* [[sir]] - Pandemic-like models on graphs (SIR, SIS etc.)
-* [[influence_maximization]] - greedy hill climbing, sketches method
+* [[sir]] - pandemic-like models on graphs (SIR, SIS etc.)
 * [[outbreak_detection]] - where to place sensors to monitor the network
+* [[influence_maximization]] - greedy hill climbing, sketches method
+* [[echo]] - echo-state networks
+* [[graph_automata]] - cellular automata on graphs
+* [[graph_cascades]] - decision-based models and cascades
 
 Reviews and intros:
 * [[Bacciu2019gentlegraph]] - Intro to Graph NNs
