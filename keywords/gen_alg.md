@@ -1,6 +1,6 @@
 # Genetic Algorithms
 
-#bib #evolution #gen_alg
+#bib #evo #gen_alg
 
 Parent: [[13_MC]]
 

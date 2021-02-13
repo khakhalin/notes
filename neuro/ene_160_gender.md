@@ -1,6 +1,6 @@
 # Sex and gender (including differences)
 
-#bib #evolution #bio #side
+#bib #evo #bio #side
 
 _A draft for a possible class_
 

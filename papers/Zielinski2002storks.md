@@ -3,7 +3,7 @@
 Zieliński, P. (2002). Brood reduction and parental infanticide—are the White Stork Ciconia ciconia and the Black Stork C. nigra exceptional?. Acta ornithologica, 37(2), 113-119.
 https://bioone.org/journals/Acta-Ornithologica/volume-37/issue-2/068.037.0207/Brood-Reduction-and-Parental-Infanticide--are-the-White-Stork/10.3161/068.037.0207.pdf
 
-#evolution #bio #fun (questionable fun, I have to agree...)
+#evo #bio #fun (questionable fun, I have to agree...)
 
 White Storks kill their babies (lots of videos on the internet), and black storks do as well. Most animals don't - this behavior is pretty rare, but it's very common in storks. Depending on the year, from 0% of nests to ~30%, with the average of about 10%, it seems (although high variability).
 

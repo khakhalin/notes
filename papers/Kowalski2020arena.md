@@ -3,7 +3,7 @@
 Kowalski, J., & Miernik, R. (2020). Evolutionary Approach to Collectible Card Game Arena Deckbuilding using Active Genes. arXiv preprint arXiv:2001.01326.
 https://arxiv.org/abs/2001.01326v2
 
-#game #evolution #gen_alg
+#game #evo #gen_alg
 
 Parents: [[gen_alg]], [[boardgame]]
 

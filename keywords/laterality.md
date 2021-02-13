@@ -1,6 +1,6 @@
 # Laterality
 
-#neuro #evolution #behav
+#neuro #evo #behav
 
 In humans, interesting facts (find refs when have time)
 * Laterality and dyslexia, autism

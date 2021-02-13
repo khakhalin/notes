@@ -42,6 +42,7 @@ Dump:
 
 # Top priorities
 
+* What's 'variational' in variational autoencoders? What are these "probabilisitic cells"? [[vae]]
 * "cohorts analysis" in conjunction with SQL - what does it mean?
     * https://medium.com/cheerz-engineering/simple-cohort-analysis-with-sql-4840e6bf31da
 * spectral properties of graphs, spectral radius

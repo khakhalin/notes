@@ -2,7 +2,7 @@
 
 #automata #dynamic #chaos
 
-Parent: [[complexity]]
+Parent: [[complexity]], [[00_articles_math]]
 See also: [[neurostochastic]], [[randomness]]
 
 Subtopics:

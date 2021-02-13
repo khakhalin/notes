@@ -42,9 +42,18 @@ Another must-do short read.
 
 The Unreasonable Effectiveness of Recurrent Neural Networks
 http://karpathy.github.io/2015/05/21/rnn-effectiveness/
-
+cons
 https://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf
 Sculley, D., Holt, G., Golovin, D., Davydov, E., Phillips, T., Ebner, D., ... & Dennison, D. (2015). Hidden technical debt in machine learning systems. In Advances in neural information processing systems (pp. 2503-2511).
+
+Zhang, C., Bengio, S., Hardt, M., Recht, B., & Vinyals, O. (2016). Understanding deep learning requires rethinking generalization. arXiv preprint arXiv:1611.03530.
+https://arxiv.org/pdf/1611.03530.pdf?from=timeline&isappinstalled=0
+(2k citations)
+
+Follow-ups and prequels:
+* Arpit, D., Jastrzębski, S., Ballas, N., Krueger, D., Bengio, E., Kanwal, M. S., ... & Lacoste-Julien, S. (2017, July). A closer look at memorization in deep networks. In International Conference on Machine Learning (pp. 233-242). PMLR. http://proceedings.mlr.press/v70/arpit17a/arpit17a.pdf
+* Zhang, C., Bengio, S., Hardt, M., Mozer, M. C., & Singer, Y. (2019). Identity crisis: Memorization and generalization under extreme overparameterization. arXiv preprint arXiv:1902.04698. https://arxiv.org/abs/1902.04698 Google brain. Identity mapping: just train the output to be exactly like the input, then study the logic of transfer to other inputs.
+* Choromanska, A., Henaff, M., Mathieu, M., Arous, G. B., & LeCun, Y. (2015, February). The loss surfaces of multilayer networks. In Artificial intelligence and statistics (pp. 192-204). PMLR.  http://proceedings.mlr.press/v38/choromanska15.pdf (1k citations)
 
 Bahri, Y., Kadmon, J., Pennington, J., Schoenholz, S. S., Sohl-Dickstein, J., & Ganguli, S. (2020). Statistical mechanics of deep learning. Annual Review of Condensed Matter Physics.
 https://www.annualreviews.org/doi/pdf/10.1146/annurev-conmatphys-031119-050745
@@ -106,12 +115,6 @@ A Unifying Perspective on Neighbor Embeddings along the Attraction-Repulsion Spe
 Jan Niklas Böhm, Philipp Berens, Dmitry Kobak. Jul 2020.
 https://arxiv.org/abs/2007.08902
 They look into **negative sampling** and noise-contrastive-estimations; analyze [[tsne]] and [[umap]] in this context. Sounds interesting!
-
-Identity Crisis: Memorization and Generalization Under Extreme Overparameterization 
-Chiyuan Zhang, Samy Bengio, Moritz Hardt, Michael C. Mozer, Yoram Singer
-https://openreview.net/forum?id=B1l6y0VFPr
-https://arxiv.org/abs/1902.04698
-Google brain. Identity mapping: just train the output to be exactly like the input, then study the logic of transfer to other inputs.
 
 Olah, C., Satyanarayan, A., Johnson, I., Carter, S., Schubert, L., Ye, K., & Mordvintsev, A. (2018). The building blocks of interpretability. Distill, 3(3), e10.
 https://distill.pub/2018/building-blocks/
@@ -760,7 +763,8 @@ http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.34.1800&rep=rep1&type=p
 Original paper by Hinton, 1k citations.
 
 # Meta, Meaning, CogSci
-#meaning
+
+#meaning. See also: [[mind]]
 
 Artificial Intelligence, Values and Alignment. Iason Gabriel. 2020
 https://deepmind.com/research/publications/Artificial-Intelligence-Values-and-Alignment

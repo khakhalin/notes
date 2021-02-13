@@ -1,9 +1,9 @@
 # Dennet's 4 creatures
 
-#behav #meaning #evolution
+#behav #meaning #evo
 
 Parents: [[behavior]]
-Other possible keywords: mind
+See also [[mind]] 
 
 Tower of Generate-and-Test, by Dennet (1995)
 

@@ -1,6 +1,6 @@
 # Beetles
 
-#side #evolution #bio
+#side #evo #bio
 
 See also: [[strange_animals]]
 

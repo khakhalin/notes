@@ -1,4 +1,6 @@
-# Consciousness
+# Mind and Consciousness
+
+("Mind" is just a much shorter and pleasant to type word than "Consciousness" :)
 
 #meaning #psych
 
