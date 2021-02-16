@@ -15,6 +15,10 @@ Hasson, U., Nastase, S. A., & Goldstein, A. (2020). Direct Fit to Nature: An Evo
 https://www.cell.com/neuron/pdf/S0896-6273(19)31044-X.pdf
 An opinion (perspective) on how we could, and should, use deep models to understand psychology and neuroscience, as they are not that different than the results of evolution, after all.
 
+On backprop in the brain:
+* https://blog.evjang.com/2021/02/backprop.html
+* https://psychology.stackexchange.com/questions/16269/is-back-prop-biologically-plausible
+
 Haber, A., & Schneidman, E. (2020). Learning the architectural features that predict functional similarity of neural networks. bioRxiv.
 https://www.biorxiv.org/content/10.1101/2020.04.27.057752v1
 

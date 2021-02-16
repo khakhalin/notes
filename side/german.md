@@ -12,6 +12,11 @@ The good song:
 https://www.youtube.com/watch?v=vqRWMDv0r78
 [And its text](https://genius.com/Kaptn-peng-and-die-tentakel-von-delphi-der-anfang-ist-nah-lyrics).
 
+# Dialekte
+
+* http://www.atlas-alltagssprache.de/runde-5/f16a-b/
+* https://www.dw.com/de/deutsch-lernen/dialektatlas/s-8150
+
 # Notes
 
 **Prepositions that separate or not**

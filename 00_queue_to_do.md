@@ -42,6 +42,8 @@ Dump:
 
 # Top priorities
 
+* [[Redis]]
+* Reread data warehouses
 * What's 'variational' in variational autoencoders? What are these "probabilisitic cells"? [[vae]]
 * "cohorts analysis" in conjunction with SQL - what does it mean?
     * https://medium.com/cheerz-engineering/simple-cohort-analysis-with-sql-4840e6bf31da
@@ -49,6 +51,13 @@ Dump:
 * numpy broadcasting - what are the rules again? Does it not broadcast from a 2D to 1D array?
 * How react sites talk to SQL now?
 * model view controller - most important design pattern for web apps
+* Regex (including in Python)
+    * https://medium.com/factory-mind/regex-cookbook-most-wanted-regex-aa721558c3c1
+    * https://medium.com/better-programming/introduction-to-regex-8c18abdd4f70
+    * https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285
+* Neural networks breakpoints (a visualization / troubleshooting method):
+    * https://discourse.numenta.org/t/the-breakpoints-of-a-neural-network/6775
+    * https://www.youtube.com/watch?v=QEWe-aRBUAs
 * Reread SQL, locate the SQL training site, try it out	
 * do "go around the tree" 
 * tableau - read some more about

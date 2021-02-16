@@ -62,7 +62,7 @@ See also:
 	
 **ERP** (business): Enterprize Resource Planning. Stuff like inventory, shipments, production, raw materials, capacity, etc. ([wiki](https://en.wikipedia.org/wiki/Enterprise_resource_planning))
 
-**ETL** (db): Extract Transform and Loading tool. See [[data_wh]]
+**ETL** (db): Extract Transform Load ([wiki](https://en.wikipedia.org/wiki/Extract,_transform,_load)). Either a process, or a tool. See [[data_wh]]
 
 **Feature store** (data) A practical concept for data project implementation: a collection of curated features that are automatically produced (updated) from new data, and can be tapped into by various projects. Paying it forward with feature engineering.
 
