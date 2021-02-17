@@ -45,12 +45,11 @@ Dump:
 * [[Redis]]
 * Reread data warehouses
 * What's 'variational' in variational autoencoders? What are these "probabilisitic cells"? [[vae]]
-* "cohorts analysis" in conjunction with SQL - what does it mean?
-    * https://medium.com/cheerz-engineering/simple-cohort-analysis-with-sql-4840e6bf31da
 * spectral properties of graphs, spectral radius
 * numpy broadcasting - what are the rules again? Does it not broadcast from a 2D to 1D array?
 * How react sites talk to SQL now?
 * model view controller - most important design pattern for web apps
+* PostgreSQL - how is it different from other SQLs?
 * Regex (including in Python)
     * https://medium.com/factory-mind/regex-cookbook-most-wanted-regex-aa721558c3c1
     * https://medium.com/better-programming/introduction-to-regex-8c18abdd4f70
@@ -67,7 +66,9 @@ Dump:
 * docker - what and how
     * Flask docker file (allegedly 80% of what one needs for a typical deployment)
     * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
-* pseudoinverse (there's more than one!), and how numpy calculates them
+* pseudoinverse (there's more than one!), and how numpy calculates them. [[pseudoinverse]]
+    * Moore-Penrose?
+    * https://stackoverflow.com/questions/13265299/the-difference-of-pseudo-inverse-between-scipy-and-numpy
 * Scalability lecture: https://www.youtube.com/watch?v=-W9F__D3oY4 (I'm at 24m right now)
 * Docker and Kubernetes: https://www.youtube.com/watch?v=u8dW8DrcSmo
 * How to design Twitter: https://www.youtube.com/watch?v=KmAyPUv9gOY

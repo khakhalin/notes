@@ -13,8 +13,9 @@ Related:
 
 # Papers
 
-* [[Jaeger2004harness]] - First description of echo-state
-* [[Carroll2019structure]] - Playing with minimalistic structure (all weights +1, 0, or −1)
+* [[Jaeger2004harness]] - first description of echo-state
+* [[Lukosevicius2012echo]] - practical advice
+* [[Carroll2019structure]] - playing with minimalistic structure (all weights +1, 0, or −1)
 * [[Carroll2020chaos]] - is chaos good for ESN? Not always (but apparently "yes" for ODE ESN)
 
 For echo-state networks in actual brains, see: [[synfire]] chains
@@ -22,31 +23,30 @@ For echo-state networks in actual brains, see: [[synfire]] chains
 # Summary
 
 Two very closely related terms / methods:
-* **Echo-State Networks**: introduced by Jaeger
-* **Liquid State Machines**: a version by Markram; a spiking network (?)
+* **Echo-State Networks**: introduced by Jaeger, a continuous state network.
+* **Liquid State Machines**: a version by Markram, a spiking network.
 
-One really cool thing about ESN is that they are highly parallelizable - check how it is done, and is it really better than "normal" networks?
+Highly parallelizable.
 
 Interesting general statements:
 * Regularization for the final layer (L2) helps (scholarpedia)
 * Also according to scholarpedia, sparsity is overrated (nb: true only if edges are weighted!). A fully connect reservoir works quite well; if edges are weighted, sparse connectivity only helps with computational complexity. (but without references; just claims that "many authors report"). Also, obviously, if weights are allowed to be closer to 0, then fully connected isn't really quite "fully connected".
 
-**Why echo-state networks work?** Supposedly they … FINISH HERE
-
-> Interesting parallel with random feed-forward networks: [[Harris2020randomness]]. Random smooth kernels, like doing a kernel trick.
+Interesting parallel with random feed-forward networks: [[Harris2020randomness]]. Random smooth kernels, like doing a kernel trick.
 
 # Questions
 
 * When quantifying networks, can we use richness of echos as a proxy for actual performance, to avoid testing the performance?
 * Can one use local logic to deliberately make the network less symmetric? (is the same as STPD? Basically, if two nodes are too similar, we want to make them dissimilar… Sketch a plasticity rule that would achieve that.)
 * How does pruning work on echo networks? Two options for pruning here - in the output layer (which could also allow ensembling on the same reservoir), and in the reservoir itself (which could curiously interact with network properties). Use some sort of backprop-like calculation, find least useful nodes and rewire them?
+* Role of intrinsic tuning?
+    * Would randomizing intrinsic tuning make things better? - compare to that Goodman 2020 paper?
+    * What about introducing intrinsic plasticity?
 * Use local unsupervised learning to de-correlate the network. STDP-style? Hoping that the network will become less symmetric?
     * A possible biology-inspired scenario: if 2 inputs come in synchrony, prune one of them. But if a unit has no outputs, connect at random. Or better yet, always rewire (degree-preserving pruning). (This is not STDP though; it's something inspired by it, but not quite it). Could it work as yet another stochastic optimization algorithm?
     * In principle, classic STDP seems to be about gathering, strengthening evidence, which is more how the last layer works (the last layer can work on stdp alone, huh), not how decorrelation works. Decorrelation should punish neurons that corroborate too much, not reward them with connections. As, apparently, being chaotic isn't that great for an echo-state-network, maybe "classic STDP" is sorta the voice of reason, and it is the synaptic competition + local inhibition that eventually decorrelates the network?
     * If we do that, and if we keep all weights at 1 (or −1), we'll have to track the "worth" of each potential input, and once an input drops below a certain amount of "worth", randomly rewire it.
-* Role of intrinsic plasticity? Does it make things better or worse? - compare to that Goodman 2020 paper?
 * Is brain-style inhibition much worse than "distributed inhibition" (50% of negative weights)? If we do fixed some-to-some inhibition (a mix of feed-forward and feed-back; get average activity of random M neurons, project to another random M?), will it be similar? Just how fragmented does it have to be?
-* Another potential bonus of compartmentalizing inhibition is that one can keep it fixed, and only change the excitatory network, which may enable simpler analyses (unweighted graphs).
 * Non-monotonous activation function, like sin, so that 2 inputs produce inhibition? As an excitatory substitute to real inhibition?
 * As a mix between this last idea and the idea of unsupervised weight flipping, we can rephrase it as advanced intrinsic plasticity of neurons (unsupervised).
 
@@ -56,9 +56,15 @@ Murray, J. M. (2019). Local online learning in recurrent networks with random fe
 
 # To-read
 
+Rodan, A., & Tino, P. (2010). Minimum complexity echo state network. IEEE transactions on neural networks, 22(1), 131-144.
+https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.739.7993&rep=rep1&type=pdf
+
 Carroll, T. L. (2020). Do Reservoir Computers Work Best at the Edge of Chaos?. arXiv preprint arXiv:2012.01409.
 https://arxiv.org/pdf/2012.01409.pdf
 Started here: [[Carroll2020chaos]]
+
+Tanaka, G., Yamane, T., Héroux, J. B., Nakane, R., Kanazawa, N., Takeda, S., ... & Hirose, A. (2019). Recent advances in physical reservoir computing: A review. Neural Networks, 115, 100-123.
+https://www.sciencedirect.com/science/article/pii/S0893608019300784
 
 Ozturk, M. C., Xu, D., & Príncipe, J. C. (2007). Analysis and design of echo state networks. Neural computation, 19(1), 111-138.
 http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.877.6880&rep=rep1&type=pdf
@@ -66,8 +72,6 @@ http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.877.6880&rep=rep1&type=
 Carroll, T. L. (2020). Dimension of reservoir computers. Chaos: An Interdisciplinary Journal of Nonlinear Science, 30(1), 013102.
 https://arxiv.org/pdf/1912.06472.pdf
 Attempts to actually measure the dimensionality of signals in a ESN.
-
-Lukoševičius, M. (2012). A practical guide to applying echo state networks. In_Neural networks: Tricks of the trade_(pp. 659-686). Springer, Berlin, Heidelberg.
 
 Ferreira, A. A., & Ludermir, T. B. (2009, June). Genetic algorithm for reservoir computing optimization. In 2009 International Joint Conference on Neural Networks (pp. 811-815). IEEE.
 
@@ -82,10 +86,6 @@ Scardapane, S., & Uncini, A. (2017). Semi-supervised echo state networks for aud
 Feldman, D. P., & Crutchfield, J. P. (1998). Measures of statistical complexity: Why?. Physics Letters-Section A, 238(4), 244-252.
 http://www.disca.upv.es/pabmitor/FILES/Complexity/971111_GEN_4.pdf
 On Crutchfield complexity measure (that peaks for meaningful networks)
-
-Tanaka, G., Yamane, T., Héroux, J. B., Nakane, R., Kanazawa, N., Takeda, S., ... & Hirose, A. (2019). Recent advances in physical reservoir computing: a review. Neural Networks.
-https://www.sciencedirect.com/science/article/pii/S0893608019300784
-High priority
 
 Carroll, T. L. (2020). Path length statistics in reservoir computers. Chaos: An Interdisciplinary Journal of Nonlinear Science, 30(8), 083130.
 https://www.researchgate.net/profile/T_Carroll/publication/343653866_Path_Length_Statistics_in_Reservoir_Computers/links/5f3680c8458515b7291f35ec/Path-Length-Statistics-in-Reservoir-Computers.pdf

@@ -1,5 +1,7 @@
 # Redis
 
+#db
+
 Parents: [[01_Tools]] / [[database]]
 
 

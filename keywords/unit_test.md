@@ -5,7 +5,7 @@
 #tools #coding #testing #oop
 
 Parents: [[oop]], [[01_Tools]]
-See also: [[python]], [[ml_lore]], [[design_patterns]]
+See also: [[python]], [[design_patterns]], [[ml_lore]] - some examples of unit tests for ML
 
 
 A simple idea: **test every little part of your code separately**, as opposed to **integration testing**, where product is tested as a whole.

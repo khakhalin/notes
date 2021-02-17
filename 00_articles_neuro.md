@@ -7,6 +7,10 @@ Se also: [[12_Neuro]] (the official hub age)
 Perez-Nieves, N., Leung, V. C., Dragotti, P. L., & Goodman, D. F. (2020). Neural heterogeneity promotes robust learning. bioRxiv.
 https://www.biorxiv.org/content/10.1101/2020.12.18.423468v1
 
+Predictive coding is an emergent property of input-driven RNNs trained to be energy efficient
+https://www.biorxiv.org/content/10.1101/2021.02.16.430904v1
+Tweetprint: https://twitter.com/TimKietzmann/status/1361673150828838913
+
 Cornford, J., Kalajdzievski, D., Leite, M., Lamarquette, A., Kullmann, D. M., & Richards, B. A. (2020). Learning to live with Dale's principle: ANNs with separate excitatory and inhibitory units. bioRxiv.
 https://www.biorxiv.org/content/biorxiv/early/2020/11/03/2020.11.02.364968.full.pdf
 Brief summary: 🔴 #todo see Twitter

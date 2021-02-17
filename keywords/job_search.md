@@ -48,10 +48,6 @@ More refs:
 * A good trick is to pretend you’re explaining to a friend why you’re excited about the job and think you’d be great at it. You probably wouldn’t just stiffly recite your work history; you’d probably talk about what you’re particularly good at and how you’d apply it to the work at this new place. ([source](https://www.askamanager.org/2017/06/how-to-write-a-cover-letter-that-will-help-you-get-an-interview.html))
 * If you’re overqualified for the position, make a point of acknowledging it and explaining why you’re interested in the job anyway. If you’re currently living across the country from where the position is located but have plans to move there soon, mention that. If all your experience is in a different industry but you’re actively working to transition into this one, explain that and talk about why. (ibid)
 
-Useful wording and nuggets:
-* A reasonable starting salary for a mid-level DS in NYC in 2021 is 120 (maybe as high as 140 least as an ask); maybe as low as 100 if it's a strategic choice for some strategic reasons. But not lower. 110 is a good starting number.
-* Python proficiency for a solid ex-academic: 7/10 or 8/10; or "confidently proficient, but lacking production quality professional experience".
-
 # Resume
 
 Useful links:
@@ -64,6 +60,10 @@ Break the stereotype of a "non-doer" that many people have about academia. Ways 
 * Accent on practical technologists that academics almost never know: AWS, Docker, other cloud solutions
 * Remote industry collaborations, internships of sort, to place on the CV? Make it the top line, above the academic job. Anything consulting is good.
 * Kaggle: no need to win, but show that can do stuff that works
+
+Useful wording and targets:
+* A reasonable starting salary for a mid-level DS in NYC in 2021 is 120 (maybe as high as 140 least as an ask); maybe as low as 100 if it's a strategic choice for some strategic reasons. 110 is a good starting number. In Germany, around 60, maybe down to 50 ([link](https://docs.google.com/spreadsheets/d/1cjwB_s4ya57auTjIw-OVjoR_3IDvLcELt9sK420fzbs/edit#gid=1485289967))
+* Python proficiency for a solid ex-academic: 7/10 or 8/10; or "confidently proficient, but lacking production quality professional experience".
 
 # Job boards
 

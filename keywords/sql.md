@@ -1,12 +1,12 @@
 # SQL
+
 #tools
 
+Parents: [[01_Tools]]
 See also: [[database]]
 
-**Some refs:**
-* [Good reference](https://www.w3schools.com/sql/default.asp)
-
 ## Generic query
+
 ```sql
 SELECT col1, MAX(col2) AS colname2
 FROM table1 AS t1
@@ -83,8 +83,7 @@ Apparently SQL (especially larger systems, like **SQLServer**, or **Transact-SQL
 
 # Refs
 
-Tutorial and practice sites:
-* Most popular tutorial: https://www.w3schools.com/sql/
+* Good reference / tutorial: https://www.w3schools.com/sql/default.asp
 * Basic intro tutorial with quizzes: https://sqlzoo.net/
 * PostgreSQL Exercises: https://pgexercises.com/
 * Allegedly some other tutorial site (looks sketchy tho): https://www.sql-ex.ru/learn_exercises.php

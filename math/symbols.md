@@ -6,6 +6,8 @@ Best Unicode search site:
 https://emojipedia.org/nature/
 ⚠️💎💡🔥❤️⭐🧠📯🏆📚🪓⛏️🛡️🧲⚙️⚔️🗡️🥇🎲🌱🍒🤯💥
 
+Latex codes that I always forget: \sim $\sim$ , \top $\top$ .
+
 ∙ −
 ≠ ≤	≥ ≪	≫ ≈ ≡ ≔ ∥ ∦ ± ⟂
 ∑ ∏ ∫ ∬
