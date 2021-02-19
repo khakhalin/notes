@@ -512,7 +512,6 @@ List from Google
 * How to tell the receptive field of a neuron in a deep network? Do they gradient descend on it?
 * Word2vec - how does it work? And does it come pretrained or what?
 * residual blocks - why are they even a good idea? What's the deal here? How can it possibly help?
-* Alexnet - some sort of efficient visual net that people use as a module. Is it pre-trained?
 * Maximum Mean Discrepancy trick
 * Replica trick and log-partition function (??)
 * Gumbel-max trick

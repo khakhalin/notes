@@ -4,6 +4,9 @@
 
 Se also: [[12_Neuro]] (the official hub age)
 
+Visualizing a joint future of neuroscience and neuromorphic engineering. 2020
+https://www.sciencedirect.com/science/article/pii/S089662732100009X?dgcid=coauthor
+
 Perez-Nieves, N., Leung, V. C., Dragotti, P. L., & Goodman, D. F. (2020). Neural heterogeneity promotes robust learning. bioRxiv.
 https://www.biorxiv.org/content/10.1101/2020.12.18.423468v1
 
@@ -13,7 +16,7 @@ Tweetprint: https://twitter.com/TimKietzmann/status/1361673150828838913
 
 Cornford, J., Kalajdzievski, D., Leite, M., Lamarquette, A., Kullmann, D. M., & Richards, B. A. (2020). Learning to live with Dale's principle: ANNs with separate excitatory and inhibitory units. bioRxiv.
 https://www.biorxiv.org/content/biorxiv/early/2020/11/03/2020.11.02.364968.full.pdf
-Brief summary: 🔴 #todo see Twitter
+Brief summary: 💡 #todo see Twitter
 
 Hasson, U., Nastase, S. A., & Goldstein, A. (2020). Direct Fit to Nature: An Evolutionary Perspective on Biological and Artificial Neural Networks. Neuron, 105(3), 416-434.
 https://www.cell.com/neuron/pdf/S0896-6273(19)31044-X.pdf
@@ -43,10 +46,9 @@ https://distill.pub/2017/research-debt/
 
 # Topology and development 🟢 
 
-> Lots of papers related to [[echo]] and [[synfire]] here.
+Related to: [[echo]], [[synfire]]
 
-Hassan, B. A., & Hiesinger, P. R. (2015). Beyond molecular codes: simple rules to wire complex brains. Cell, 163(2), 285-291.
-https://www.cell.com/cell/fulltext/S0092-8674(15)01193-9
+Hassan, B. A., & Hiesinger, P. R. (2015). Beyond molecular codes: simple rules to wire complex brains. Cell, 163(2), 285-291. https://www.cell.com/cell/fulltext/S0092-8674(15)01193-9
 💎 Developmental biology bordering fractals and graphs (maybe? not sure, but judging from the pics) - a nice review-like paper (perspective); worth a priority read :)
 
 Lazar, A., Pipa, G., & Triesch, J. (2006, April). The combination of STDP and intrinsic plasticity yields complex dynamics in recurrent spiking networks. In ESANN (pp. 647-652).
@@ -230,13 +232,13 @@ Very well cited, this one.
 Kording, K. P., Kayser, C., Einhauser, W., & Konig, P. (2004). How are complex cell properties adapted to the statistics of natural stimuli?. Journal of neurophysiology, 91(1), 206-212.
 https://www.ncbi.nlm.nih.gov/m/pubmed/12904330/
 
-❓ Sorscher, B., Mel, G., Ganguli, S., & Ocko, S. (2019). A unified theory for the origin of grid cells through the lens of pattern formation. In Advances in Neural Information Processing Systems (pp. 10003-10013).
+Sorscher, B., Mel, G., Ganguli, S., & Ocko, S. (2019). A unified theory for the origin of grid cells through the lens of pattern formation. In Advances in Neural Information Processing Systems (pp. 10003-10013).
 https://papers.nips.cc/paper/9191-a-unified-theory-for-the-origin-of-grid-cells-through-the-lens-of-pattern-formation
 Supposedly, explains the development of grid cells, synthesizing two existing theories (recurrent with lateral inhibition and spontaneous development during navigation?)
 
 ❓ Michaels, J. A., Schaffelhofer, S., Agudelo-Toro, A., & Scherberger, H. (2019). A neural network model of flexible grasp movement generation. bioRxiv, 742189.
 https://www.biorxiv.org/content/10.1101/742189v1
-Modeled vision-controlled grasping (based on monkey data) as convolutional network (based on Alexnet, it seems) → RNN (fully connected) → bottlneck of 8 neurons → another RNN → another bottleneck → another RNN → output. They call these bottlenecks "sparsity", which is interesting. I wonder whether it is fair to call it brain-inspired. Is it something that works, as it forces the learning of representations, and then only claim that it is brain-inspired, to give it some conceptual validity? Or is there actual evidence in the brain that connections between motor systems are throttled like that? Something to explore. Also they mention some "feedback connections" that may be connections between RNN modules, but I'd need to read the methods section carefully to see what's happening there. One of the most important aspects of this paper for me may be the neuro-inspired analysis of model performance that they do, and the very attitude to validation that they have. I wonder if that's something that can be applied to spiking networks.
+Modeled vision-controlled grasping (based on monkey data) as convolutional network (based on [[Alexnet]], it seems) → RNN (fully connected) → bottlneck of 8 neurons → another RNN → another bottleneck → another RNN → output. They call these bottlenecks "sparsity", which is interesting. I wonder whether it is fair to call it brain-inspired. Is it something that works, as it forces the learning of representations, and then only claim that it is brain-inspired, to give it some conceptual validity? Or is there actual evidence in the brain that connections between motor systems are throttled like that? Something to explore. Also they mention some "feedback connections" that may be connections between RNN modules, but I'd need to read the methods section carefully to see what's happening there. One of the most important aspects of this paper for me may be the neuro-inspired analysis of model performance that they do, and the very attitude to validation that they have. I wonder if that's something that can be applied to spiking networks.
 
 Doerig, A., Schmittwilken, L., Sayim, B., Manassi, M., & Herzog, M. H. (2019). Capsule Networks as Recurrent Models of Grouping and Segmentation. BioRxiv, 747394.
 https://www.biorxiv.org/content/10.1101/747394v2

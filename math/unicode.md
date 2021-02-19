@@ -1,4 +1,4 @@
-# Symbols
+# Unicode Symbols
 
 Best Unicode search site:
 [https://www.compart.com/en/unicode/](<https://www.compart.com/en/unicode/>)

@@ -7,7 +7,7 @@ Bracher, C., Heinz, S., & Vollgraf, R. (2016). Fashion DNA: merging content and 
 
 Seems mostly a data-driven paper.
 * Take product description (one-hot encoding of expert-based tags), transform (4-layer ReLu funnel with drop-out)
-* separately take product image, transform (8-layers convnet, AlexNet-based)
+* separately take product image, transform (8-layers convnet, AlexNet-based: [[alexnet]])
 * concat the two, 
 * transform the result (1 layer), get internal representations.
 * from them, predict purchases using a logistic regressor. Use actual purchases for backprop training.
