@@ -456,6 +456,12 @@ https://en.wikipedia.org/wiki/Sparse_dictionary_learning
 Makhzani, A., & Frey, B. (2013). K-sparse autoencoders. arXiv preprint arXiv:1312.5663.
 https://arxiv.org/pdf/1312.5663.pdf
 
+# Continual learning
+
+Beaulieu, S., Frati, L., Miconi, T., Lehman, J., Stanley, K. O., Clune, J., & Cheney, N. (2020). Learning to continually learn. arXiv preprint arXiv:2002.09571. https://arxiv.org/abs/2002.09571
+
+Javed, K., & White, M. (2019). Meta-learning representations for continual learning. arXiv preprint arXiv:1905.12588. https://arxiv.org/abs/1905.12588
+
 # Architectures and Arch search
 
 #archsearch
@@ -553,6 +559,10 @@ Limiting attention of agents helps them to learn to play (bottlenecking of sorts
 
 Introducing Dreamer: Scalable Reinforcement Learning Using World Models (2020)
 https://ai.googleblog.com/2020/03/introducing-dreamer-scalable.html
+
+Risi, S., & Togelius, J. (2020). Increasing generality in machine learning through procedural content generation. Nature Machine Intelligence, 2(8), 428-436.
+https://www.nature.com/articles/s42256-020-0208-z?proof=t
+GAN-like dynamics for developing more generalizable AI via RL: make AI procedurally develop game levels, then play them. File as both ai, game, RL, and procedural generation.
 
 Lázaro-Gredilla, M., Lin, D., Guntupalli, J. S., & George, D. (2018). Beyond imitation: Zero-shot task transfer on robots by learning concepts as cognitive programs. arXiv preprint arXiv:1812.02788.
 https://robotics.sciencemag.org/content/4/26/eaav3150.full?ijkey=9p/p9D23WW2Ek&keytype=ref&siteid=robotics
@@ -833,11 +843,10 @@ Cisek, P. (2019). Resynthesizing behavior through phylogenetic refinement. Atten
 https://link.springer.com/article/10.3758/s13414-019-01760-1
 On evolution of mamallian brain, and how you can draw a link between behavioral (computational?) complexity, and hierarchical organization of a vertebrate brain. Tries to ambitiously draw parallels between evolution, development, and behavior.
 
-# Symbolic and related
+# Symbolic
 
 Yoshua Bengio’s short reading list:
-* BabyAI: First Steps Towards Grounded Language Learning With a Human In the Loop, Chevalier-Boisvert et al.,
-2018: https://arxiv.org/abs/1810.08272v2.
+* BabyAI: First Steps Towards Grounded Language Learning With a Human In the Loop, Chevalier-Boisvert et al., 2018: https://arxiv.org/abs/1810.08272v2.
 * A Meta-Transfer Objective for Learning to Disentangle Causal Mechanisms, Bengio et al., 2019:
 https://arxiv.org/abs/1901.10912.
 * Learning Neural Causal Models from Unknown Interventions, Ke et al., 2019: https://arxiv.org/abs/1910.
@@ -851,11 +860,3 @@ https://www.microsoft.com/en-us/research/blog/next-generation-architectures-brid
 Santoro, A., Lampinen, A., Mathewson, K., Lillicrap, T., & Raposo, D. (2021). Symbolic Behaviour in Artificial Intelligence. arXiv preprint arXiv:2102.03406.
 https://arxiv.org/pdf/2102.03406.pdf
 
-# Math and Other
-
-Eta-trick (η-trick) to smooth out local minima in the minima landscape, and improve convergence. Reformulates a non-quadratic problem as a series of quadratic problems.
-https://francisbach.com/the-%CE%B7-trick-or-the-effectiveness-of-reweighted-least-squares/
-
-Xiaoying PuMatthew Kay (2020). A Probabilistic Grammar of Graphics.
-https://osf.io/dy8qv/
-What visuals are better for presenting different types of conditional probabilities (interactions between various variables), with an inspiring zoo-gallery of solutions.

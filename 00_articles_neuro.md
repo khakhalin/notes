@@ -44,7 +44,7 @@ https://www.pnas.org/content/116/21/10537.short
 Some general opinion on how to research in ML:
 https://distill.pub/2017/research-debt/
 
-# Topology and development 🟢 
+# Topology and development
 
 Related to: [[echo]], [[synfire]]
 
@@ -149,7 +149,7 @@ C Ebner, C Clopath, P Jedlicka, H Cuntz - Cell Reports, 2019
 https://www.sciencedirect.com/science/article/pii/S2211124719315591
 Compartments, NMDA, all sorts of STDP stuff.
 
-# Credit assignment
+# Bio-plausible DL
 
 🔥 Bengio, Y., Lee, D. H., Bornschein, J., Mesnard, T., & Lin, Z. (2015). Towards biologically plausible deep learning. arXiv preprint arXiv:1502.04156.
 https://arxiv.org/pdf/1502.04156.pdf
@@ -162,8 +162,12 @@ Something like backpropagation in spiking networks.
 Lawrence, C., Sztyler, T., & Niepert, M. (2020). Explaining Neural Matrix Factorization with Gradient Rollback. arXiv preprint arXiv:2010.05516.
 https://arxiv.org/abs/2010.05516a
 
-Payeur, A., Guerguiev, J., Zenke, F., Richards, B., & Naud, R. (2020). Burst-dependent synaptic plasticity can coordinate learning in hierarchical circuits. bioRxiv.
+🔥 Payeur, A., Guerguiev, J., Zenke, F., Richards, B., & Naud, R. (2020). Burst-dependent synaptic plasticity can coordinate learning in hierarchical circuits. bioRxiv.
 https://www.biorxiv.org/content/10.1101/2020.03.30.015511v1
+
+🟢 Lindsey, J., & Litwin-Kumar, A. (2020). Learning to Learn with Feedback and Local Plasticity. arXiv preprint arXiv:2006.09549.
+https://arxiv.org/abs/2006.09549
+Also related to "continuing learning"
 
 Aljadeff, J., D'amour, J., Field, R. E., Froemke, R. C., & Clopath, C. (2019). Cortical credit assignment by Hebbian, neuromodulatory and inhibitory plasticity. arXiv preprint arXiv:1911.00307.
 [https://arxiv.org/pdf/1911.00307.pdf](<https://arxiv.org/pdf/1911.00307.pdf>)
