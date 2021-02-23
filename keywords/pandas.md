@@ -7,7 +7,6 @@ See also: [[numpy]], [[py_dates]]
 
 # Open questions
 
-* What's the recommended way to filter only some rows from a dataframe, based on their values? Most SQL-like? Are we supposed to use logical indexing, or are there methods that are recommended, either coz they are faster, or more user-transparent?
 * There's still some controversy with creating filtered dataframes using `query` (see below). I found a way to make it work correctly, and without warnings, but I still don't understand why the warnings appeared in the first place, and how adding `.copy()` happened to fix it.
 
 # Creation and basic IO
@@ -34,15 +33,18 @@ See also: [[numpy]], [[py_dates]]
 * Out-of-range integers are forgiven (ignored) on reading, but cause an error if you try to write
 * **Iterating through rows**: either `for i in range(df.shape[0]): df.loc[i]`, or `for key,val in df.iterrows()`  (in both cases we get row-series). To slice into slivery dataframes, one could use `df.loc[[i]]`, but usefulness of that is unclear.
 
-#### Conditionals
+#### Conditionals and filtering
 For **conditional data retrieval** we have a choice between: 
 * **logical indexing** `df.loc[d.x>0]` Can take list comprehensions as an argument (instead of a series); can be written to; but slower, and harder to read.
 * Another form of logical indexing: `df.x.eq(0)` (or things like `ne`, `le` etc.)
 * **queries**: `df.query('x>0')`, where `x` is a name of a column. Easier for a human to read; works slightly faster, but cannot be written to. To reference a normal variable `a` in a query, use `@a` inside the query string.
 * To find the first row index that satisfies a criterion, follow with `.idxmax()` - it returns the location of the maximum (like `np.argmax()`), and in this case truth is the maximum.
 * To find `None`-like objects (or their absence), use `	.notnull()`, and its opposite `.isnull()`. It seems that `isna()` and `notna()` also work, and are exact synonyms (I think?).
+* To thin out a dataset, two options:
+    *  One: `df = df[df.x>0]`.
+    *  Another, `df = df.drop(df[df.x>0].index)`. This one seems bulkier, so not sure if it is ever preferred?
 
-Conditional indexing supports functions, as long as they take and return Pandas series, or something compatible, like a Numpy array). Both conditional forms support elementwise Boolean operators, like `&` and `|`.
+Conditional indexing supports functions, as long as they take and return Pandas series, or something compatible, like a Numpy array). Both conditional forms (local indexing and queries) support elementwise Boolean operators, like `&` and `|`.
 
 ⚠️ There's a strange pitfall associated with conditional data retrieval that I doesn't understand for now. `query` seems to create a new dataframe (fewer rows), but apparently (?) it acts as a copy, and not as a deepcopy. As a result, if you save the results in a "new" dataframe `df2 = df.query('x>0')`, and then set or transform values in  `df2` in any way, it causes a warning "A value is trying to be set on a copy of a slice from a DataFrame". Even though df2 gets updated, and df seems still intact (unchanged). Replacing a simple `query` with `df.query(...).copy()` seems to help (still works, but now also the warning is eliminated). _Yet I still don't understand that, and it bothers me._
 
@@ -51,9 +53,9 @@ A problem while writing to a frame, selecting by both column and row.
 * Good: reference both by label (index): `df.loc[1,'x']`
 * Also Good: reference both by position:`df.iloc[1,0]`. Row goes first. 
 * Read, but not write: `df.x[1]`, which is equivalent to `df['x'][1]`.
-* Read but not write: Both `df.x.iloc[1]` and `df.iloc[1].x`. Documentation states that whether any given slice would work or not is "officially unpredictable", so chaining should never be used.
+* Read but not write: Both `df.x.iloc[1]` and `df.iloc[1].x`. Documentation states that whether assigning values to any given slice would work or not is "officially unpredictable", so chained assignment should never be used.
 
-Refs:
+Footnotes:
 * https://stackoverflow.com/questions/29888341/a-value-is-trying-to-be-set-on-a-copy-of-a-slice-from-a-dataframe-warning-even-a
 
 # Data transformations

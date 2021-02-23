@@ -16,6 +16,7 @@ https://www.youtube.com/watch?v=vqRWMDv0r78
 
 * http://www.atlas-alltagssprache.de/runde-5/f16a-b/
 * https://www.dw.com/de/deutsch-lernen/dialektatlas/s-8150
+* Platt vocab: https://www.platt-wb.de/hoch-platt/?term=trinken
 
 # Notes
 

@@ -4,8 +4,10 @@
 
 Se also: [[12_Neuro]] (the official hub age)
 
-Visualizing a joint future of neuroscience and neuromorphic engineering. 2020
+🔥🔥 Zenke … Goodman. Visualizing a joint future of neuroscience and neuromorphic engineering. 2020
 https://www.sciencedirect.com/science/article/pii/S089662732100009X?dgcid=coauthor
+
+🟢 Suarez, L. E., Richards, B. A., Lajoie, G., & Misic, B. (2020). Learning function from structure in neuromorphic networks. bioRxiv. https://www.biorxiv.org/content/biorxiv/early/2020/11/11/2020.11.10.350876.full.pdf
 
 Perez-Nieves, N., Leung, V. C., Dragotti, P. L., & Goodman, D. F. (2020). Neural heterogeneity promotes robust learning. bioRxiv.
 https://www.biorxiv.org/content/10.1101/2020.12.18.423468v1
@@ -151,6 +153,8 @@ Compartments, NMDA, all sorts of STDP stuff.
 
 # Bio-plausible DL
 
+🟢 Guerguiev, J., Lillicrap, T. P., & Richards, B. A. (2017). Towards deep learning with segregated dendrites. ELife, 6, e22901. https://elifesciences.org/articles/22901.pdf
+
 🔥 Bengio, Y., Lee, D. H., Bornschein, J., Mesnard, T., & Lin, Z. (2015). Towards biologically plausible deep learning. arXiv preprint arXiv:1502.04156.
 https://arxiv.org/pdf/1502.04156.pdf
 Mathy, then mnist. The link will migrate to [[credit]]
@@ -191,9 +195,11 @@ https://arxiv.org/abs/2003.01513
 Classical backprop uses same weights there and back; aka "weight symmetry". They seem to claim that by making the rules only slightly non-local, they can solve stuff.
 Code: https://github.com/neuroailab/neural-alignment
 
-# RL in the brain
+# DL and RL in the brain
 
 #rl
+
+🟢 Richards, B. A., & Lillicrap, T. P. (2019). Dendritic solutions to the credit assignment problem. Current opinion in neurobiology, 54, 28-36. http://linclab.org/wp-content/uploads/2020/06/2019-Dendritic-Solutions-to-the-Credit-Assignment-Problem.pdf
 
 Dabney, W., Kurth-Nelson, Z., Uchida, N., Starkweather, C. K., Hassabis, D., Munos, R., & Botvinick, M. (2020). A distributional code for value in dopamine-based reinforcement learning. Nature, 1-5.
 https://www.nature.com/articles/s41586-019-1924-6
