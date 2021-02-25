@@ -10,6 +10,9 @@ Papers:
 
 # Unprocessed bibliography:
 
+Super-review: 🔥🔥
+Khan, S., Naseer, M., Hayat, M., Zamir, S. W., Khan, F. S., & Shah, M. (2021). Transformers in Vision: A Survey. arXiv preprint arXiv:2101.01169. https://arxiv.org/abs/2101.01169
+
 Interfaces for Explaining Transformer Language Models
 https://jalammar.github.io/explaining-transformers/
 (explainability, neuron activation)

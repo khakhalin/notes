@@ -4,6 +4,7 @@ He, K., Zhang, X., Ren, S., & Sun, J. (2015). Delving deep into rectifiers: Surp
 
 #dl #init #relu #image
 
+Parent: [[06_DL]] / [[init_dl]]
 See also:
 * [[Glorot2010init]] - a similar, but older approach to initialization
 

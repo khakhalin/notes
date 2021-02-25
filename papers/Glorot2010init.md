@@ -4,6 +4,7 @@ Glorot, X., & Bengio, Y. (2010, March). Understanding the difficulty of training
 
 #dl #init
 
+Parent: [[06_DL]] / [[init_dl]]
 See also:
 * [[He2015init]] - an improment upon this paper
 

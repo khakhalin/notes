@@ -3,6 +3,8 @@
 November 25, 2019, Ari Morcos, Yuandong Tian
 https://ai.facebook.com/blog/understanding-the-generalization-of-lottery-tickets-in-neural-networks
 
+Related: [[ticket]]
+
 #blog #ticket
 
 A summary of several of their papers.

@@ -40,13 +40,18 @@ For **conditional data retrieval** we have a choice between:
 * **queries**: `df.query('x>0')`, where `x` is a name of a column. Easier for a human to read; works slightly faster, but cannot be written to. To reference a normal variable `a` in a query, use `@a` inside the query string.
 * To find the first row index that satisfies a criterion, follow with `.idxmax()` - it returns the location of the maximum (like `np.argmax()`), and in this case truth is the maximum.
 * To find `None`-like objects (or their absence), use `	.notnull()`, and its opposite `.isnull()`. It seems that `isna()` and `notna()` also work, and are exact synonyms (I think?).
-* To thin out a dataset, two options:
-    *  One: `df = df[df.x>0]`.
-    *  Another, `df = df.drop(df[df.x>0].index)`. This one seems bulkier, so not sure if it is ever preferred?
+    * Note that while **queries** support stuff like `'x>0 | x<100'`, they don't support these na-related functions for some reason, unless you call with a certain flourish. So to filter out nans one has two options:
+        * A hack: `query('x == x')`. This works, because NAs aren't equal to themselves!!
+        * A proper fancy call:  `query('x.notna()', engine='pyton')`
 
-Conditional indexing supports functions, as long as they take and return Pandas series, or something compatible, like a Numpy array). Both conditional forms (local indexing and queries) support elementwise Boolean operators, like `&` and `|`.
+To thin out a dataset, several options:
+* One: `df = df[df.x>0]`.
+* Another, `df = df.drop(df[df.x>0].index)`. This one seems bulkier, so not sure if it is ever preferred?
+* Use a query (see above). `df = df.query('x>0')`
 
-⚠️ There's a strange pitfall associated with conditional data retrieval that I doesn't understand for now. `query` seems to create a new dataframe (fewer rows), but apparently (?) it acts as a copy, and not as a deepcopy. As a result, if you save the results in a "new" dataframe `df2 = df.query('x>0')`, and then set or transform values in  `df2` in any way, it causes a warning "A value is trying to be set on a copy of a slice from a DataFrame". Even though df2 gets updated, and df seems still intact (unchanged). Replacing a simple `query` with `df.query(...).copy()` seems to help (still works, but now also the warning is eliminated). _Yet I still don't understand that, and it bothers me._
+Conditional indexing supports functions, as long as they take and return Pandas series, or something compatible, like a Numpy array). For example, conditional forms (both local indexing and queries) support elementwise Boolean operators, like `&` and `|`.
+
+⚠️ There's a strange pitfall associated with conditional data retrieval that I doesn't understand for now. `query` seems to create a new dataframe (fewer rows), but apparently (?) it acts as a copy, and not as a deepcopy. As a result, if you save the results in a "new" dataframe `df2 = df.query('x>0')`, and then set or transform values in  `df2` in any way, it causes a warning "A value is trying to be set on a copy of a slice from a DataFrame". Even though df2 gets updated, and df seems still intact (unchanged). Replacing a simple `query` with `df.query(...).copy()` seems to help ( works, and the warning is eliminated). By extension, it should not be a problem if you do some transforms in the same dot-pipeline as querying, as it is this other transform that would create a copy. But if querying is the only thing you do, always finish with a `copy()` (_or at least that's my current understanding_).
 
 **Chained Assignment**
 A problem while writing to a frame, selecting by both column and row.
@@ -93,7 +98,8 @@ There's also `df.eval('C=A/B', inplace=True)` that is apparently much faster tha
     * `join`: default value of `outer` (for union of matching indices), but can be changed to `inner` (for intersection). Makes sense for `axis=1` (when columns are merged): with `outer` missing values are padded with NaNs, while with `inner` incomplete rows are eliminated.
     * `keys`: generated hierarchical keys. Expects a list of names, to become the first level of these keys.
 * A simplified wrapper for **adding homogeneous rows**: `f = f.append(f2)`. Takes either a one-row dataframe, or a dictionary. 
-    * If indices are meaningful, use this notation, and it will check that they don't duplicate. If indices are essentially just row numbers, add `ignore_index=True` to make it more relaxed. And maybe also `sort=False`, to keep things simple and fast.
+    * If indices are meaningful, use this notation, and it will check that they don't duplicate. If indices are essentially just row numbers, add `ignore_index=True` to make it more relaxed. And maybe also `sort=False`, to keep things simple and fast. Note that `ignore_index=True` seems to be necessary if we're supplying new rows as a dictionary (because by definition we don't have an index in this case?)
+    * Remember that while `append()` sounds pythonic, it's actually not an in-place method, so we need to do `df = df.append(blabla)`.
 
 An example of full-featured in-memory join: `pd.merge`. Archetypeical use:
         ```python
@@ -127,7 +133,7 @@ For **merging multiple dataframes** at once, set indices properly, and then do `
 
 First group, then apply aggregation. `dfs = df.groupby('g').agg({'a': [min, np.mean]})`
 
-**Aggregation** is coded as a dictionary, and more than one function can be applied to every column. Functions are passed as an array of functions (!!!). If a column in the original dataframe is summarized in more than one way (say, if you calculate Column names in summary dataframe become a **multiindex** (when column index is a tuple).
+**Aggregation** is coded as a dictionary, and more than one function can be applied to every column. Functions are passed as an array of functions (!!!), or function names (like `'count'`). If a column in the original dataframe is summarized in more than one way (say, if you calculate Column names in summary dataframe become a **multiindex** (when column index is a tuple).
 
 **Grouping** columns (those that appear in the summary dataframe not because they were summarized, but because they were grouped by) also become a multiindex. It means that they aren't normal columns, and cannot be referenced directly. To turn into a "normal" data frame, do `dfs = dfs.reset_index()`.
 

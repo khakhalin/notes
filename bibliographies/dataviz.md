@@ -21,6 +21,10 @@ https://blog.datawrapper.de/beautifulcolors/
 
 # Links
 
+A recent course on visualizing in R, with artsy really cool visuals:
+https://wilkelab.org/SDS375/syllabus.html
+Make sure to read it before teaching stats.
+
 Sankey diagram maker:
 http://sankeymatic.com/build/
 

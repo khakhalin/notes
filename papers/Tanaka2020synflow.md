@@ -5,6 +5,9 @@ Hidenori Tanaka, Daniel Kunin, Daniel L. K. Yamins, Surya Ganguli
 Pruning neural networks without any data by iteratively conserving synaptic flow
 https://arxiv.org/abs/2006.05467
 
+Parents: [[ticket]], [[init_dl]]
+Related:
+
 #pruning #init #ticket
 
 Coverage:
