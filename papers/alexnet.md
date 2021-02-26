@@ -36,6 +36,7 @@ Actually they also split these filter banks, so for example 2nd convolution wasn
 
 Comments:
 * Not sure how they got 55 from 224. My understanding is that if you have a width of w (that is, w/2 on both sides from your "central point"), and a stride of s, which results in k different "snapshots" being taken, then the total size of the original layer $n = (w-1)/2 + (1 + (k-1)s) + (w-1)/2 = w + (k-1)s$ . From this, we would have $k = 1 + (n-w)/s$. But 224-11 = 213, and it doesn't divide by 4. The only way to get 55 from 224 is to divide by 4 and subtract one. Not sure what's going on, but probably that's how they understand "padding=same". My formula is strictly speaking "padding=valid".
+    * 😂: apparently it's a pretty famous blunder by now, which is either a typo, or (more likely), a result of an undocumented zero-padding. Essentially, every new person studying convnets breaks their head over this little bit for a while, give up, only to learn later that it's a typo. See for example: https://cs231n.github.io/convolutional-networks/
 * There seems to be a disagreement between the text and the image, in terms of where exactly max-pool layers go.
 
 Reached accuracy of ~65%, which was SOTA for a year. (As of 2021 it's about 90%: https://paperswithcode.com/sota/image-classification-on-imagenet )
