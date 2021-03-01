@@ -17,6 +17,8 @@ See also (special types of units):
 
 ## LeakyReLU
 
+Has a slope α for x<0 as well (this α becomes a hyperparameter). Apparently works slightly better then ReLU. There's also a thing called **randomized Leaky ReLU** (where α is different in every neuron, is sampled from some distribution and then fixed) that apparently works again slightly better than a simple Leaky ReLU (but I have no idea why).
+
 ## Softplus
 
 $\log(\exp(x)+1)$, looks very similar to ReLU, but with a smooth curve around 0 (from about −0.5 to 0.5). Smoother, differentiable, doesn't produce 0 gradient exactly at 0, which are all good features.

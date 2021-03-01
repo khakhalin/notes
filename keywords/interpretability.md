@@ -8,9 +8,9 @@ See also: [[fairness]]
 
 # Papers:
 
-* [[Hinton2006dim]] - used a PCA-like plot to understand representation in a deepest layer of the autoencoder, but had to train a special 2-wide autoencoder to make it happen haha
-* [[Olah2017visualization]] - interpreting visual classificators
-* [[Saxe2020interpretable]] - a blog post about additive ANN models
+* [[Hinton2006dim]] - used a PCA-like plot to understand representation in a deepest layer of the autoencoder, by training a separate 2-wide autoencoder
+* [[Olah2017visualization]] - interpreting visual classifiers
+* [[Saxe2020interpretable]] - a blog post about additive ANN models (GAM)
 
 # Links to look through
 

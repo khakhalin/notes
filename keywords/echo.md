@@ -3,7 +3,7 @@
 #echo #rnn #graphs #bib
 
 Parents: [[07_RNNs]]
-See also: [[criticality]], [[cellular_automata]], [[graph_symmetry]]
+See also: [[criticality]], [[cellular_automata]], [[graph_symmetry]], [[intrinsic_plasticity]]
 
 Related:
 * [[synfire]] - biological networks encoding temporal sequences
@@ -13,12 +13,13 @@ Related:
 
 # Papers
 
+For echo-state-like networks in actual brains, see: [[synfire]] chains.
+
 * [[Jaeger2004harness]] - first description of echo-state
 * [[Lukosevicius2012echo]] - practical advice
 * [[Carroll2019structure]] - playing with minimalistic structure (all weights +1, 0, or −1)
 * [[Carroll2020chaos]] - is chaos good for ESN? Not always (but apparently "yes" for ODE ESN)
-
-For echo-state networks in actual brains, see: [[synfire]] chains
+* [[Murray2019local]] - Hebb  + eligibility trace + random feedback weights approximate backprop
 
 # Summary
 
@@ -36,7 +37,6 @@ Interesting parallel with random feed-forward networks: [[Harris2020randomness]]
 
 # Questions
 
-* When quantifying networks, can we use richness of echos as a proxy for actual performance, to avoid testing the performance?
 * Can one use local logic to deliberately make the network less symmetric? (is the same as STPD? Basically, if two nodes are too similar, we want to make them dissimilar… Sketch a plasticity rule that would achieve that.)
 * How does pruning work on echo networks? Two options for pruning here - in the output layer (which could also allow ensembling on the same reservoir), and in the reservoir itself (which could curiously interact with network properties). Use some sort of backprop-like calculation, find least useful nodes and rewire them?
 * Role of intrinsic tuning?
@@ -48,11 +48,7 @@ Interesting parallel with random feed-forward networks: [[Harris2020randomness]]
     * If we do that, and if we keep all weights at 1 (or −1), we'll have to track the "worth" of each potential input, and once an input drops below a certain amount of "worth", randomly rewire it.
 * Is brain-style inhibition much worse than "distributed inhibition" (50% of negative weights)? If we do fixed some-to-some inhibition (a mix of feed-forward and feed-back; get average activity of random M neurons, project to another random M?), will it be similar? Just how fragmented does it have to be?
 * Non-monotonous activation function, like sin, so that 2 inputs produce inhibition? As an excitatory substitute to real inhibition?
-* As a mix between this last idea and the idea of unsupervised weight flipping, we can rephrase it as advanced intrinsic plasticity of neurons (unsupervised).
-
-# To-revisit and describe
-
-Murray, J. M. (2019). Local online learning in recurrent networks with random feedback. eLife, 8, e43299. x>Win>echo>Wou>y, dh/dt = -h/tau stable solution for each element, tanh() activation. Minimizes square distance, applies gradient descent. Then tries to make biologically plausible: drops non-local term (refuses to optimize activity of other nodes that feed _from_ this node by changing inputs _to_ this node). And instead of reverting weights of Wout, uses random weights to communicate the error back. With this, weight change is proportinal to an accumulated product of pre- to the (derivative of) post-activity for eacn synapse (eligibility traces!). If only Wout are trained - learning is worse. If only Wrec - completely unsuccessful (not surprising as they use random error instead of flipped Wout). Use "ready-set-go" (interval matching) as a test. Then stiches an architecture of cortex-basalganglia-thalamus, to learn "behavioral syllabi" for a longer behavior.
+* As a mix between this last idea and the idea of unsupervised weight flipping, we can rephrase it as advanced intrinsic plasticity of neurons (unsupervised)?
 
 # To-read
 
@@ -69,6 +65,16 @@ https://www.sciencedirect.com/science/article/pii/S0893608019300784
 Ozturk, M. C., Xu, D., & Príncipe, J. C. (2007). Analysis and design of echo state networks. Neural computation, 19(1), 111-138.
 http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.877.6880&rep=rep1&type=pdf
 
+🔥 Improving reservoirs using intrinsic plasticity
+B. Schrauwen, Marion Wardermann, D. Verstraeten, Jochen J. Steil, D. Stroobandt
+
+A Developmental Approach to Structural Self-Organization in Reservoir Computing
+Jun Yin, Yan Meng, Yaochu Jin. 2012, IEEE Transactions on Autonomous Mental Development
+
+Online reservoir adaptation by intrinsic plasticity for backpropagation-decorrelation and echo state learning
+Jochen J. Steil
+2007, Neural Networks
+
 Carroll, T. L. (2020). Dimension of reservoir computers. Chaos: An Interdisciplinary Journal of Nonlinear Science, 30(1), 013102.
 https://arxiv.org/pdf/1912.06472.pdf
 Attempts to actually measure the dimensionality of signals in a ESN.
@@ -77,11 +83,29 @@ Ferreira, A. A., & Ludermir, T. B. (2009, June). Genetic algorithm for reservoir
 
 Zhong, S., Xie, X., Lin, L., & Wang, F. (2017). Genetic algorithm optimized double-reservoir echo state network for multi-regime time series prediction. Neurocomputing, 238, 191-204.
 
+Tallec, C., & Ollivier, Y. (2017). Unbiased online recurrent optimization. arXiv preprint arXiv:1702.05043. https://arxiv.org/pdf/1702.05043.pdf
+
+Mujika, A., Meier, F., & Steger, A. (2018). Approximating real-time recurrent learning with random kronecker factors. Advances in Neural Information Processing Systems, 31, 6594-6603.  https://papers.nips.cc/paper/2018/file/dba132f6ab6a3e3d17a8d59e82105f4c-Paper.pdf
+
+Decoupled echo state networks with lateral inhibition
+Yanbo Xue, Le Yang, S. Haykin
+2007, Neural Networks
+
 Wang, X., Jin, Y., & Hao, K. (2019). Evolving Local Plasticity Rules for Synergistic Learning in Echo State Networks. IEEE Transactions on Neural Networks and Learning Systems, 31(4), 1363-1374.
 (no free text online)
 It seems that they are really trying to evolve some biologically-inspired rules, inspired by Hebbian plasticity and synaptic interference.
 
-Scardapane, S., & Uncini, A. (2017). Semi-supervised echo state networks for audio classification. Cognitive Computation, 9(1), 125-135.
+Initialization and self-organized optimization of recurrent neural network connectivity.
+Joschka Boedecker, Oliver Obst, Norbert Michael Mayer, Minoru Asada
+2009, HFSP journal
+
+Optimization and applications of echo state networks with leaky- integrator neurons
+H. Jaeger, Mantas Lukosevicius, D. Popovici, U. Siewert
+2007, Neural Networks
+
+An experimental unification of reservoir computing methods
+David Verstraeten, Benjamin Schrauwen, Michiel D'Haene, Dirk Stroobandt
+2007, Neural Networks
 
 Feldman, D. P., & Crutchfield, J. P. (1998). Measures of statistical complexity: Why?. Physics Letters-Section A, 238(4), 244-252.
 http://www.disca.upv.es/pabmitor/FILES/Complexity/971111_GEN_4.pdf
@@ -90,7 +114,7 @@ On Crutchfield complexity measure (that peaks for meaningful networks)
 Carroll, T. L. (2020). Path length statistics in reservoir computers. Chaos: An Interdisciplinary Journal of Nonlinear Science, 30(8), 083130.
 https://www.researchgate.net/profile/T_Carroll/publication/343653866_Path_Length_Statistics_in_Reservoir_Computers/links/5f3680c8458515b7291f35ec/Path-Length-Statistics-in-Reservoir-Computers.pdf
 
-Rodan, A., & Tino, P. (2010). Minimum complexity echo state network. IEEE transactions on neural networks, 22 (1), 131-144.
+Scardapane, S., & Uncini, A. (2017). Semi-supervised echo state networks for audio classification. Cognitive Computation, 9(1), 125-135.
 
 Huang, R., Li, Z., & Cao, B. (2020). A Soft Sensor Approach Based on an Echo State Network Optimized by Improved Genetic Algorithm. Sensors, 20(17), 5000.
 

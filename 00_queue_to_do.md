@@ -42,20 +42,21 @@ Dump:
 
 # Top priorities
 
-* Reread 3 papers in the [[ticket]] note
+* Reread 3 papers linked in the [[ticket]] note
+* How to backprop through the maxpooling layer? Document it in [[pooling]]
 * Batch normalization [[batch_normalization]] - why and how?
-* What is lecun_normal in [[init_dl]]?
 * spectral properties of graphs, spectral radius
 * How react sites talk to SQL now?
 * docker - what and how
     * Flask docker file (allegedly 80% of what one needs for a typical deployment)
     * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
+* tableau - read more about. Is there a way to "learn it" just enough to report it? Any tests on it?
+* Django (alternative to Flask, slightly less popular)
+* FastAPI (another alternative to Flask, seems more trendy, and gaining on Flask?)
 * pseudoinverse (there's more than one!), and how numpy calculates them. [[pseudoinverse]]
     * Moore-Penrose?
     * https://stackoverflow.com/questions/13265299/the-difference-of-pseudo-inverse-between-scipy-and-numpy
 * Reread data warehouses
-* What's 'variational' in variational autoencoders? What are these "probabilisitic cells"? [[vae]]
-* tableau - read more about. Is there a way to "learn it" just enough to report it? Any tests on it?
 * Reread SQL, locate the SQL training site, try it out	
 * What methods are typically included in the idea of "knowing time series analysis"? Do I know them? If not, disassemble and put some terms into this stack.
 * numpy broadcasting - what are the rules again? Does it not broadcast from a 2D to 1D array?
@@ -69,6 +70,7 @@ Dump:
 * Neural networks breakpoints (a visualization / troubleshooting method):
     * https://discourse.numenta.org/t/the-breakpoints-of-a-neural-network/6775
     * https://www.youtube.com/watch?v=QEWe-aRBUAs
+* What is lecun_normal init in [[init_dl]]?
 * do "go around the tree" 
 * Chartio
 * Looker

@@ -10,7 +10,7 @@ Seminal paper describing how RNNs can generate representations; 12k citations. M
 * That in a deep network, deeper layers contain more abstract representation of the data
 * That one can pre-train layers in an unsupervised way, then fine-tune
 
-Basically they build a deep autoencoder (7 fully connected layers deep, going from 2000 to 30 units, then back), but are saying that it's hard to train (as it was pre- convolutional networks, and pre proper initializations, so their gradients vanished). So they pre-train weights connecting every two layers using a **Restricted Boltzmann Machine** (RBM). RBM is not a proper feedforward network, but instead you take 2 patterns of activation (they call them "images"), and calculate the **energy** of these two patterns, giving the parameters of the network:
+Basically they build a deep autoencoder (7 fully connected layers deep, going from 2000 to 30 units, then back), but are saying that it's hard to train (as it was pre- proper initializations, so their gradients vanished). So they pre-train weights connecting every two layers using a **Restricted Boltzmann Machine** (RBM). RBM is not a proper feedforward network, but instead you take 2 patterns of activation (they call them "images"), and calculate the **energy** of these two patterns, giving the parameters of the network:
 
 $\displaystyle E(x,y) = -\sum_{i}{b_i x_i} - \sum_{j}{b_j y_j} - \sum_{i,j}{x_i w_{ij} y_j}$
 
@@ -20,7 +20,7 @@ Then they train in a there-and-back-again fashion: pick training image as X; cal
 
 > Essentially, it seems like a sequence of weird symmetric one-layer-deep autoencoders, trained in a greedy way.
 
-Finally, as each sets of weights works both for encoding and for decoding, they can be used as proxies (initialization) not only for the endoding part of an autoencoder, but also for the reverse funnel. They used cross-entropy error $E = -\sum p_i \log q_i - \sum (1-p_i) \log (1-q_i)$ where p_i is i-th pixel intensity (in 0:1) and q_i is its reconstruction. And they also applied the same model to news articles of different topics, using top 2000 thematic words as a feature vector.
+Finally, as each sets of weights works both for encoding and for decoding, they can be used as proxies (initialization) not only for the encoding part of an autoencoder, but also for the reverse funnel. They used cross-entropy error $E = -\sum p_i \log q_i - \sum (1-p_i) \log (1-q_i)$ where p_i is i-th pixel intensity (in 0:1) and q_i is its reconstruction. And they also applied the same model to news articles of different topics, using top 2000 thematic words as a feature vector.
 
 But the most interesting (for the time) part of the paper seems that they compared the representation to PCA, and noticed two things. One, is that PCA gives a much worse reconstruction (coz it's linear?). And second, that you can visualize it if you make an extreme two-dimensional autoencoder, and the visualization shows much clearer separation between categories in the latent space.
 

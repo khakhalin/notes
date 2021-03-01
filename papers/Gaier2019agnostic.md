@@ -7,6 +7,8 @@ Google Brain
 Also a blog post:
 https://weightagnostic.github.io/
 
+Parent: [[archsearch]]
+
 #archsearch #pruning #halfthere
 
 Used evolution algorithms to find networks that perform well with **random weights**, using precocious animals (those that can do useful things right after being born) as a metaphor.

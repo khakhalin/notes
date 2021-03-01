@@ -9,6 +9,7 @@ To look up:
 
 # Topical Bibliographies
 * [[behavior]] - Animal behavior
+    * [[neuroethology]] - classic neuroethology papers
     * [[neurostochastic]] - Stochasticity and randomness in neuroscience
     * [[tracking]] - On ML of behavioral data
     * [[xen]] - Xenopus-specific: collision avoidance, tecta, hindbrains, OMR etc.

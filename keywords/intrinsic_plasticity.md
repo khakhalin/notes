@@ -7,6 +7,8 @@ Papers:
 
 # Bibliography
 
+Synergies Between Intrinsic and Synaptic Plasticity Mechanisms. Jochen Triesch. 2007, Neural Computation
+
 ## Consequences
 
 Roy, A., Osik, J. J., Meschede-Krasa, B., Alford, W., Leman, D. P., & Van Hooser, S. D. (2020). eLife 2020;9:e58509 DOI: 10.7554/eLife.58509

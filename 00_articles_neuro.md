@@ -46,6 +46,9 @@ https://www.pnas.org/content/116/21/10537.short
 Some general opinion on how to research in ML:
 https://distill.pub/2017/research-debt/
 
+Ramsauer, H., Schäfl, B., Lehner, J., Seidl, P., Widrich, M., Gruber, L., ... & Hochreiter, S. (2020). Hopfield networks is all you need. arXiv preprint arXiv:2008.02217. https://arxiv.org/abs/2008.02217
+See also this methodical guide through it (1 hour tho!): https://www.youtube.com/watch?v=nv6oFDp6rNQ
+
 # Topology and development
 
 Related to: [[echo]], [[synfire]]
@@ -318,6 +321,10 @@ Spoerer, C. J., Kietzmann, T. C., & Kriegeskorte, N. (2019). Recurrent networks 
 https://www.biorxiv.org/content/10.1101/677237v3.full
 Recurrent convolutional network  works better than a feed-forward convolutional network. It's slower, but better. Claim that it's similar to primate vision somehow.
 
+Kietzmann, T. C., McClure, P., & Kriegeskorte, N. (2018). Deep neural networks in computational neuroscience. bioRxiv, 133504.
+https://www.biorxiv.org/content/10.1101/133504v2.abstract
+Overview of how DL may be a model for the brain. Seems less convinsing than Kording or Richards tbh.
+
 # Dynamics
 
 🔥 Merel, J., Botvinick, M., & Wayne, G. (2019). Hierarchical motor control in mammals and machines. Nature Communications, 10(1), 1-12.
@@ -376,6 +383,9 @@ http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.460.5280&rep=rep1&type=
 
 # Other
 
+Piccinini, G., & Shagrir, O. (2014). Foundations of computational neuroscience. Current opinion in neurobiology, 25, 25-30.
+(available on academia and researchgate). More of an opinion piece, and philosophy rather than neuro. Discuss things like "What is information?", "What is computation?", does a stone perform computations (kinda?), and other fun stuff. Only 5 pages.
+
 On whether complexity of organisms increases in the course of evolution. #evolution
 Krakauer, D., Bertschinger, N., Olbrich, E., Ay, N., & Flack, J. C. (2014). The information theory of individuality. arXiv preprint arXiv:1412.2447.
 Also this discussion: https://twitter.com/WiringTheBrain/status/1357004097665306629
@@ -432,7 +442,4 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2605405/
 
 # ML of brain data
 
-Kietzmann, T. C., McClure, P., & Kriegeskorte, N. (2018). Deep neural networks in computational neuroscience. bioRxiv, 133504.
-https://www.biorxiv.org/content/10.1101/133504v2.abstract
-A review.
-
+.

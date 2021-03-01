@@ -19,10 +19,14 @@ Related and subtopics:
 * To get some (or rather, first) key from a dict: `next(iter(a.keys()))`
 * To split a long line one could use `\`, but it is advised to use implicit line joining instead, which happens if brackets were open and not closed. It's better to add "unnecessary" brackets than usie a backslash.
 * **Docstring**: First constant in a declaration, starts and ends with triple double quotes `"""`, accessible via `object.__doc__` property. Minimum: one sentence, capitalized, with a full stop at the end, explaining what this function does. Don't include the name, or usage. Any other comments - lower, after an empty line. For modules, similar, at the very beginning, before any declarations. Refs: [1](https://www.python.org/dev/peps/pep-0257/), [2](https://www.pythonforbeginners.com/basics/python-docstrings)
-* Sweetest way to **iterate through a dictionary**: `for key,val in d.items():`.
 * With big numbers, we can write `100_000`, and it's still a number :)
 * We can do chain comparisons: `1 <= x < 3`, which is equivalent to `1<=x and x<3`.
 * To check type: either `if isinstance(x, str):` or `if type(x) is str:`
+
+How to iterate properly:
+* Sweetest way to **iterate through a dictionary**: `for key,val in d.items():`.
+* With iterable, but also having a counter: `for i,val in enumerate(vals):`
+* A mix of two is possible: `for i,(key,val) in enumerate(d.items()):`
 
 # Sets
 

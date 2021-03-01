@@ -3,9 +3,10 @@
 Michael S. Ryoo, Google, 2019
 https://ai.googleblog.com/2019/10/video-architecture-search.html
 
-#archsearch #evo #video #blog #gen_alg
-
+Parent: [[archsearch]]
 See also: [[gen_alg]]
+
+#archsearch #evo #video #blog #gen_alg
 
 A mini-review of 3 papers from the same group.
 

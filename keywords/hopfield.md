@@ -9,5 +9,6 @@ Related: [[deepneuro]], [[ene_091_hipp]], [[stdp]]
 
 Apparently, solve [[credit]] assignmet problem using [[stdp]] somehow. #todo!
 
-* Scellier, B., & Bengio, Y. (2017). Equilibrium propagation: Bridging the gap between energy-based models and backpropagation. Frontiers in computational neuroscience, 11, 24.
-* J.C.R. Whittington, R. Bogacz. An approximation of the error backpropagation algorithm in a predictive coding network with local Hebbian synaptic plasticity. Neural Comput., 29 (2017), pp. 1229-1262
+Scellier, B., & Bengio, Y. (2017). Equilibrium propagation: Bridging the gap between energy-based models and backpropagation. Frontiers in computational neuroscience, 11, 24.
+
+J.C.R. Whittington, R. Bogacz. An approximation of the error backpropagation algorithm in a predictive coding network with local Hebbian synaptic plasticity. Neural Comput., 29 (2017), pp. 1229-1262

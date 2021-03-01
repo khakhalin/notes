@@ -11,6 +11,13 @@ Extreme version of this: **Global pooling** - entire tensor in one vector (equiv
 
 **Average pooling**: as clear from the name, just averages all the inputs. Good for downsampling.
 
+**How to backprop through a max-pooling layer?**
+
+* RNN is usually a "Recurrent Neural Network" (not recall?). Also it's not usually an alternative for a convnet, unless you're talking about sound specifically.
+* Why zero-padding around the image?
+* Having no trainable parameters is not necessarily bad, no? I'm actually not sure they are used less. The latest paper this chapter referenced is from 2016… - We can check inception and see!
+* Batch normalization - what is it and why is it used? (I'm not sure it is used any less honestly...)
+
 # Refs
 
 https://machinelearningmastery.com/pooling-layers-for-convolutional-neural-networks/

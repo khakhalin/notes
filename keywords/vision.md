@@ -13,9 +13,10 @@ Pure ML vision is kinda covered in [[bib_image]] and [[video]], so here we have 
 
 # ML as a model for Neuro
 
-Nayebi, A., Sagastuy-Brena, J., Bear, D. M., Kar, K., Kubilius, J., Ganguli, S., ... & Yamins, D. L. (2021). Goal-Driven Recurrent Neural Network Models of the Ventral Visual Stream. bioRxiv. https://www.biorxiv.org/content/biorxiv/early/2021/02/18/2021.02.17.431717.full.pdf
+Papers:
+* [[KhalighRazavi2014cortex]] - recordings from humans and monkeys match DL activation
 
-Khaligh-Razavi, S. M., & Kriegeskorte, N. (2014). Deep supervised, but not unsupervised, models may explain IT cortical representation. PLoS computational biology, 10(11), e1003915.
+Nayebi, A., Sagastuy-Brena, J., Bear, D. M., Kar, K., Kubilius, J., Ganguli, S., ... & Yamins, D. L. (2021). Goal-Driven Recurrent Neural Network Models of the Ventral Visual Stream. bioRxiv. https://www.biorxiv.org/content/biorxiv/early/2021/02/18/2021.02.17.431717.full.pdf
 
 Yamins, D. L., & DiCarlo, J. J. (2016). Using goal-driven deep learning models to understand sensory cortex. Nature neuroscience, 19(3), 356-365.
 

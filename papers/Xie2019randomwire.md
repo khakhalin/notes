@@ -4,6 +4,9 @@ Xie, S., Kirillov, A., Girshick, R., & He, K. (2019). Exploring randomly wired n
 https://arxiv.org/pdf/1904.01569v2.pdf
 Facebook AI research
 
+Parent: [[archsearch]]
+See also: [[echo]]
+
 #archsearch
 
 Instead of training a pre-design, they explore random connectivities. They succeed in finding connectivity patterns that have competitive accuracy on ImageNet recognition.
