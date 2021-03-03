@@ -3,7 +3,7 @@
 #regularization
 
 Parents: [[02_Regression]]
-See also: [[regularization]]
+Related: [[regularization]]
 
 Also known as **Shrinkage Methods**, closely related to **Tikhonov regularization**. Modern DL name: **L2 regularization** (see DL chapter).
 
@@ -17,9 +17,7 @@ This is especially important in case of **Multicollinearity**, when you're tryin
 
 > If using shrinkage methods, **always standardize your X!**
 
-Closed form: ${\displaystyle θ=(\mathbf {X} ^{\mathsf {T}}\mathbf {X} +\lambda \mathbf {I} )^{-1}\mathbf {X} ^{\mathsf {T}}\mathbf {y} }$
-
-> How to derive it? Is Lagrange multiplier the only way?
+Closed form: ${\displaystyle θ=(\mathbf {X} ^{\mathsf {T}}\mathbf {X} +\lambda \mathbf {I} )^{-1}\mathbf {X} ^{\mathsf {T}}\mathbf {y} }$ (see below for a derivation.)
 
 The name "**ridge**" comes from a visual example of what is describe above. Imagine that only a part of the solution is well defined, and the rest is close to the null-space of X. Then the "true solution" is a "generalized cylinder" made of the true solution (in those coordinates that make sense), which is nice, convex, and has one smooth minimum, and its arbitrary extension across all "irrelevant coordinates", as any vector from the null-space of X will be zeroed by the multiplication by X. Moreover, small changes in training data (right side of the Xθ=y equation) would wildly sway the solution along this "ridge". By adding regularization, we change a "ridge" into a "peak" (lines turn into parabolas), which stabilizes the solution against perturbations in both X and y.
 
@@ -32,6 +30,24 @@ Interestingly, if all x_i (columns, variables) are orthonormal, ridge regression
 **Tikhonov regularization**: a generalization of Ridge. In this case we minimize |Aθ-b|² + |Γθ|² where Γ is some matrix. If Г=identity matrix I multiplied by a coefficient λ, we have a sum of squared x_i, and so Ridge regression. 
 
 > ESL p67 also seems to suggest that ridge regression is somehow related to PCA, or can be understood in terms of first moving to the PCA space, then doing something, then projecting back, but the math is sketchy, and no good comments, so I'll park it for now.
+
+# Closed form derivation
+
+Deifne loss: $L = ||Y-Xθ|| + λ||θ||$, where θ is a parameter-vector (column).
+Rewriting norms as aᵀa, we get: $L = (Y-Xθ)^\top(Y-Xθ) + λθ^\topθ=$
+$=Y^\top Y - (Xθ)^\top Y - Y^\top(Xθ) + (Xθ)^\top(Xθ) + λθ^\topθ=$
+$=Y^\top Y - θ^\top X^\top Y - Y^\top X θ + θ^\top X^\top Xθ + λθ^\top θ$.
+
+To find optimum, take derivative by θ (see [[calc4]]), transpose everything (derivative is a row, but we want to work with columns), and set to 0. Or we can equivalently think of it as calculating a derivative by θᵀ.
+$∂L/∂θ = 0 - X^\top Y - (Y^\top X)^\top + 2X^\top Xθ + 2λθ=0$.
+
+(When calculating a derivative for $θ^\top X^\top Xθ$ we also use the fact that XᵀX is symmetric)
+Now open brackets, drop 2, redistribute: $X^\top Y = (X^\top X + λI)θ$.
+
+For a closed form, calculated inv of right bracket, multiply by XᵀY on the left.
+
+Footnotes:
+* Some comments here: https://stats.stackexchange.com/questions/69205/how-to-derive-the-ridge-regression-solution
 
 # Refs
 

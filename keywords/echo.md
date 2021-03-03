@@ -13,7 +13,7 @@ Related:
 
 # Papers
 
-For echo-state-like networks in actual brains, see: [[synfire]] chains.
+For all echo-like networks in actual brains, see: [[synfire]] chains.
 
 * [[Jaeger2004harness]] - first description of echo-state
 * [[Lukosevicius2012echo]] - practical advice
@@ -52,12 +52,15 @@ Interesting parallel with random feed-forward networks: [[Harris2020randomness]]
 
 # To-read
 
+Gallicchio, C., Mantas, L., & Simone, S. (2020). Frontiers in Reservoir Computing. In ESANN 2020 (pp. 559-566). BEL. https://www.esann.org/sites/default/files/proceedings/2020/ES2020-7.pdf
+
 Rodan, A., & Tino, P. (2010). Minimum complexity echo state network. IEEE transactions on neural networks, 22(1), 131-144.
 https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.739.7993&rep=rep1&type=pdf
 
 Carroll, T. L. (2020). Do Reservoir Computers Work Best at the Edge of Chaos?. arXiv preprint arXiv:2012.01409.
 https://arxiv.org/pdf/2012.01409.pdf
-Started here: [[Carroll2020chaos]]
+* Started here: [[Carroll2020chaos]]
+* See also: Carroll, T. L. (2019). Mutual information and the edge of chaos in reservoir computers. arXiv preprint arXiv:1906.03186. https://arxiv.org/pdf/1906.03186.pdf
 
 Tanaka, G., Yamane, T., Héroux, J. B., Nakane, R., Kanazawa, N., Takeda, S., ... & Hirose, A. (2019). Recent advances in physical reservoir computing: A review. Neural Networks, 115, 100-123.
 https://www.sciencedirect.com/science/article/pii/S0893608019300784
@@ -65,43 +68,55 @@ https://www.sciencedirect.com/science/article/pii/S0893608019300784
 Ozturk, M. C., Xu, D., & Príncipe, J. C. (2007). Analysis and design of echo state networks. Neural computation, 19(1), 111-138.
 http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.877.6880&rep=rep1&type=pdf
 
-🔥 Improving reservoirs using intrinsic plasticity
-B. Schrauwen, Marion Wardermann, D. Verstraeten, Jochen J. Steil, D. Stroobandt
+Initialization and self-organized optimization of recurrent neural network connectivity.
+Joschka Boedecker, Oliver Obst, Norbert Michael Mayer, Minoru Asada
+2009, HFSP journal
+
+Haluszczynski, A., Aumeier, J., Herteux, J., & Räth, C. (2020). Reducing network size and improving prediction stability of reservoir computing. Chaos: An Interdisciplinary Journal of Nonlinear Science, 30(6), 063136.
+https://arxiv.org/pdf/2003.03178.pdf
+
+Optimization and applications of echo state networks with leaky- integrator neurons
+H. Jaeger, Mantas Lukosevicius, D. Popovici, U. Siewert
+2007, Neural Networks
 
 A Developmental Approach to Structural Self-Organization in Reservoir Computing
 Jun Yin, Yan Meng, Yaochu Jin. 2012, IEEE Transactions on Autonomous Mental Development
 
-Online reservoir adaptation by intrinsic plasticity for backpropagation-decorrelation and echo state learning
-Jochen J. Steil
-2007, Neural Networks
+Ferreira, A. A., & Ludermir, T. B. (2009, June). Genetic algorithm for reservoir computing optimization. In 2009 International Joint Conference on Neural Networks (pp. 811-815). IEEE. (Available on ResearchGate)
 
-Carroll, T. L. (2020). Dimension of reservoir computers. Chaos: An Interdisciplinary Journal of Nonlinear Science, 30(1), 013102.
-https://arxiv.org/pdf/1912.06472.pdf
-Attempts to actually measure the dimensionality of signals in a ESN.
+Zhong, S., Xie, X., Lin, L., & Wang, F. (2017). Genetic algorithm optimized double-reservoir echo state network for multi-regime time series prediction. Neurocomputing, 238, 191-204. ([link](https://www.sciencedirect.com/science/article/pii/S0925231217301273?casa_token=2eoUio9k_tgAAAAA:8wf8Prlo0WAP21_-XantLVhVp5pcRKIcd0xsPfq0XdcirJEC3sL3uzmOmNKMc-tFEx3SjctkTg))
 
-Ferreira, A. A., & Ludermir, T. B. (2009, June). Genetic algorithm for reservoir computing optimization. In 2009 International Joint Conference on Neural Networks (pp. 811-815). IEEE.
-
-Zhong, S., Xie, X., Lin, L., & Wang, F. (2017). Genetic algorithm optimized double-reservoir echo state network for multi-regime time series prediction. Neurocomputing, 238, 191-204.
+Huang, R., Li, Z., & Cao, B. (2020). A Soft Sensor Approach Based on an Echo State Network Optimized by Improved Genetic Algorithm. Sensors, 20(17), 5000. (text saved locally)
 
 Tallec, C., & Ollivier, Y. (2017). Unbiased online recurrent optimization. arXiv preprint arXiv:1702.05043. https://arxiv.org/pdf/1702.05043.pdf
 
+Lukoševičius, M., & Uselis, A. (2019, September). Efficient Cross-Validation of Echo State Networks. In_International Conference on Artificial Neural Networks_(pp. 121-133). Springer, Cham. https://arxiv.org/pdf/2006.11282.pdf
+
+Schrauwen, B., Wardermann, M., Verstraeten, D., Steil, J. J., & Stroobandt, D. (2008). Improving reservoirs using intrinsic plasticity. Neurocomputing, 71(7-9), 1159-1171.
+http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.162.1362&rep=rep1&type=pdf
+* Also: Steil, J. J. (2007). Online reservoir adaptation by intrinsic plasticity for backpropagation–decorrelation and echo state learning. Neural networks, 20(3), 353-364. https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.87.6689&rep=rep1&type=pdf
+
+Carroll, T. L. (2020). Dimension of reservoir computers. Chaos: An Interdisciplinary Journal of Nonlinear Science, 30(1), 013102. https://arxiv.org/pdf/1912.06472.pdf
+Attempts to actually measure the dimensionality of signals in a ESN.
+
 Mujika, A., Meier, F., & Steger, A. (2018). Approximating real-time recurrent learning with random kronecker factors. Advances in Neural Information Processing Systems, 31, 6594-6603.  https://papers.nips.cc/paper/2018/file/dba132f6ab6a3e3d17a8d59e82105f4c-Paper.pdf
+
+Lukoševičius, M., Jaeger, H., & Schrauwen, B. (2012). Reservoir computing trends. KI-Künstliche Intelligenz, 26(4), 365-371. http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.709.514&rep=rep1&type=pdf
+
+Hart, A., Hook, J., & Dawes, J. (2020). Embedding and approximation theorems for echo state networks. Neural Networks, 128, 234-247. https://people.bath.ac.uk/jhpd20/publications/HartHookDawes_preprint_JAN2020.pdf
 
 Decoupled echo state networks with lateral inhibition
 Yanbo Xue, Le Yang, S. Haykin
 2007, Neural Networks
 
 Wang, X., Jin, Y., & Hao, K. (2019). Evolving Local Plasticity Rules for Synergistic Learning in Echo State Networks. IEEE Transactions on Neural Networks and Learning Systems, 31(4), 1363-1374.
-(no free text online)
+(no free text online, but saved pdf locally)
 It seems that they are really trying to evolve some biologically-inspired rules, inspired by Hebbian plasticity and synaptic interference.
 
-Initialization and self-organized optimization of recurrent neural network connectivity.
-Joschka Boedecker, Oliver Obst, Norbert Michael Mayer, Minoru Asada
-2009, HFSP journal
+Lukoševicius, M. (2012). Reservoir computing and self-organized neural hierarchies. Doctoral dissertation, Jacobs University, Bremen. https://d-nb.info/1035433168/34
 
-Optimization and applications of echo state networks with leaky- integrator neurons
-H. Jaeger, Mantas Lukosevicius, D. Popovici, U. Siewert
-2007, Neural Networks
+Lukoševicius, M. (2010). On self-organizing reservoirs and their hierarchies. Jacobs University Bremen, Technical Report (25). http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.721.4547&rep=rep1&type=pdf
+* Related? : Lukoševičius, M. (2012, September). Self-organized reservoirs and their hierarchies. In International Conference on Artificial Neural Networks (pp. 587-595). Springer, Berlin, Heidelberg. https://www.ai.rug.nl/minds/uploads/Self-organized_reservoir_hierarchies_ICANN12.pdf
 
 An experimental unification of reservoir computing methods
 David Verstraeten, Benjamin Schrauwen, Michiel D'Haene, Dirk Stroobandt
@@ -116,14 +131,9 @@ https://www.researchgate.net/profile/T_Carroll/publication/343653866_Path_Length
 
 Scardapane, S., & Uncini, A. (2017). Semi-supervised echo state networks for audio classification. Cognitive Computation, 9(1), 125-135.
 
-Huang, R., Li, Z., & Cao, B. (2020). A Soft Sensor Approach Based on an Echo State Network Optimized by Improved Genetic Algorithm. Sensors, 20(17), 5000.
-
 Lymburn, T., Khor, A., Stemler, T., Corrêa, D. C., Small, M., & Jüngling, T. (2019). Consistency in echo-state networks. Chaos: An Interdisciplinary Journal of Nonlinear Science, 29(2), 023118.
 https://arxiv.org/pdf/1901.07729.pdf
 Also try to drive a network towards better performance.
-
-Haluszczynski, A., Aumeier, J., Herteux, J., & Räth, C. (2020). Reducing network size and improving prediction stability of reservoir computing. Chaos: An Interdisciplinary Journal of Nonlinear Science, 30(6), 063136.
-https://arxiv.org/pdf/2003.03178.pdf
 
 Manjunath, G. (2020). Memory-Loss is Fundamental for Stability and Distinguishes the Echo State Property Threshold in Reservoir Computing & Beyond._arXiv preprint arXiv:2001.00766_.
 [https://arxiv.org/pdf/2001.00766.pdf](https://arxiv.org/pdf/2001.00766.pdf)
@@ -135,9 +145,6 @@ He totally considered fixed weights here, and shows that it doesn't hurt. Calls 
 
 Cui, H., Liu, X., & Li, L. (2012). The architecture of dynamic reservoir in the echo state network. Chaos: An Interdisciplinary Journal of Nonlinear Science, 22(3), 033127.
 (No obvious access online. But I'm not very hopeful about this one: it seems that they just tried small-world and sale-free networks, and described how ESN worked in them)
-
-Mutual Information and the Edge of Chaos in Reservoir Computers
-https://arxiv.org/pdf/1906.03186.pdf
 
 Ceni, A., Ashwin, P., Livi, L., & Postlethwaite, C. (2020). The Echo Index and multistability in input-driven recurrent neural networks. arXiv preprint arXiv:2001.07694.
 https://arxiv.org/pdf/2001.07694.pdf
@@ -189,8 +196,6 @@ Stimberg, M., Goodman, D. F., & Nowotny, T. (2019). [Brian2GeNN: accelerating sp
 Spiking network simulator that is apparently so optimized that it runs very fast. Check before writing any custom spiking models.
 
 Sussillo, D., & Abbott, L. F. (2012). Transferring learning from external to internal weights in echo-state networks with sparse connectivity._PLoS One_,_7_(5).
-
-Lukoševičius, M., & Uselis, A. (2019, September). Efficient Cross-Validation of Echo State Networks. In_International Conference on Artificial Neural Networks_(pp. 121-133). Springer, Cham.
 
 Bürger, J., Goudarzi, A., Stefanovic, D., and Teuscher, C. (2015, July) Hierarchical composition of memristive networks for real-time computing. In Nanoscale Architectures (NANOARCH), 2015 IEEE/ACM International Symposium on (pp. 33-38)
 Allegedly a link between reservoir computing and neuromorphic computing (I'm sure not the only one, but cited by Jaeger)
