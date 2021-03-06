@@ -6,7 +6,7 @@ https://distill.pub/2017/feature-visualization/
 #image #interpretability #diversity
 
 Related: [[interpretability]], [[illusions]], [[superstimulus]]
-* Follow-up: [[Olah2018interpretability]]
+* Follow-up: Olah2018interpretability
 
 Really pretty and weird pictures in this one.
 
@@ -35,7 +35,7 @@ Just optimizing inputs doesn't work, as you generate an **optical illusion**: a 
 
 _They then have a really cool summary of previous attempts at regularization_
 
-Two winners in terms of interpretability seem to be #gan (make images generated instead of directly optimized; _do they gradient-descent the latent representation or something?_) and **Transformation robustness**, perhaps together with high-frequency penalization. **Transformation robustness** means that the signal still activates the network strongly even if it is slightly perturbed via stochastir jitter, rotation, and scaling. Like some sort of a few-pixels-scale probabilistic spatial invariance.
+Two winners in terms of interpretability seem to be #gan (make images generated instead of directly optimized; _do they gradient-descent the latent representation or something?_) and **Transformation robustness**, perhaps together with high-frequency penalization. **Transformation robustness** means that the signal still activates the network strongly even if it is slightly perturbed via stochastic jitter, rotation, and scaling. Like some sort of a few-pixels-scale probabilistic spatial invariance.
 
 Next idea: maybe optimize not in the space of images, but in a different basis, like a Fourier basis? This won't change the position of minima, but the direction of the gradient will be different (aka **gradient preconditioning**) and it helps a lot to avoid "bad" minima, and find "good" ones.
 

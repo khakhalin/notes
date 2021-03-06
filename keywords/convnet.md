@@ -3,7 +3,11 @@
 #dl #convnet
 
 Parent: [[06_DL]]
-See also: [[pooling]], [[wavenet]], [[residual]]
+See also: [[pooling]], [[residual]]
+
+Subtopics:
+* [[vision]] - everything about comparing DL model to brain vision
+* [[wavenet]] - a conv-net for sound?
 
 Papers:
 * [[alexnet]] - the breakthrough paper from 2012
@@ -25,17 +29,6 @@ Simonyan, K., & Zisserman, A. (2014). Very deep convolutional networks for large
 
 A paper from 2014 that fights pooling layers, and claims that pooling is bad, and that in the future we won't use it. What's the current consensus on this? Do we still believe in it, or is it a fringe opinion?
 Springenberg, J. T., Dosovitskiy, A., Brox, T., & Riedmiller, M. (2014). Striving for simplicity: The all convolutional net. arXiv preprint arXiv:1412.6806.
-
-# ConvNets and biological vision
-
-* [[KhalighRazavi2014cortex]] - compares brain activation & performance to diff ML models; DL wins
-* [[Yamins2016viscortex]] - 👈👈👈👈👈👈
-
-Bashivan, P., Kar, K., & DiCarlo, J. J. (2019). Neural population control via deep image synthesis. Science, 364(6439). https://www.gwern.net/docs/ai/2019-bashivan.pdf
-
-Zhang, R., Isola, P., Efros, A. A., Shechtman, E., & Wang, O. (2018). The unreasonable effectiveness of deep features as a perceptual metric. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 586-595). https://openaccess.thecvf.com/content_cvpr_2018/papers/Zhang_The_Unreasonable_Effectiveness_CVPR_2018_paper.pdf 1k+ citations in 2 years!
-
-Pospisil, D. A., Pasupathy, A., & Bair, W. (2018). 'Artiphysiology'reveals V4-like shape tuning in a deep network trained for image classification. Elife, 7, e38242. https://elifesciences.org/articles/38242 - They seem to claim that CNN deep layer neurons selectivity is actually similar to primate V4. Not too wildly cited tho.
 
 # Summary
 

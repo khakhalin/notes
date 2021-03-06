@@ -8,6 +8,7 @@ Currently reading:
 
 **General links:**
 * http://www.arxiv-sanity.com/ - AI search for arxiv
+* https://www.connectedpapers.com/ - similar, but for all papers out there
 
 **Stuff to look through, and place:**
 * Practical intro to ML projects: https://github.com/chiphuyen/machine-learning-systems-design

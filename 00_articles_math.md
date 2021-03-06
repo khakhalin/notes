@@ -40,6 +40,8 @@ Thomas G. Dietterich. Mar 6, 2018.
 https://medium.com/@tdietterich/reflections-on-innateness-in-machine-learning-4eebefa3e1af
 Another must-do short read.
 
+👉 Bengio, Y., Lee, D. H., Bornschein, J., Mesnard, T., & Lin, Z. (2015). Towards biologically plausible deep learning. arXiv preprint arXiv:1502.04156. [https://arxiv.org/pdf/1502.04156.pdf](https://arxiv.org/pdf/1502.04156.pdf)  Mathy, then mnist. [[Bengio2016towards]]
+
 The Unreasonable Effectiveness of Recurrent Neural Networks
 http://karpathy.github.io/2015/05/21/rnn-effectiveness/
 cons
@@ -778,17 +780,16 @@ Original paper by Hinton, 1k citations.
 
 Artificial Intelligence, Values and Alignment. Iason Gabriel. 2020
 https://deepmind.com/research/publications/Artificial-Intelligence-Values-and-Alignment
+On ethics.
 
-Griffiths, T. L. (2020). Understanding Human Intelligence through Human Limitations. Trends in Cognitive Sciences.
-https://arxiv.org/ftp/arxiv/papers/2009/2009.14050.pdf
+Tenenbaum, J. B., Kemp, C., Griffiths, T. L., & Goodman, N. D. (2011). How to grow a mind: Statistics, structure, and abstraction. science, 331(6022), 1279-1285.
+
+Griffiths, T. L. (2020). Understanding Human Intelligence through Human Limitations. Trends in Cognitive Sciences. http://cocosci.princeton.edu/papers/griffiths_understanding.pdf
 
 Universe, Life, Consciousness. Andrei Linde
 https://static1.squarespace.com/static/54d103efe4b0f90e6ca101cd/t/54f9cb08e4b0a50e0977f4d8/1425656584247/universe-life-consciousness.pdf
 
-Shanahan, M., Crosby, M., Beyret, B., & Cheke, L. (2020). Artificial Intelligence and the Common Sense of Animals. Trends in Cognitive Sciences.
-
-Arjovsky, M., Bottou, L., Gulrajani, I., & Lopez-Paz, D. (2019). Invariant risk minimization. arXiv preprint arXiv:1907.02893.
-https://arxiv.org/abs/1907.02893
+Arjovsky, M., Bottou, L., Gulrajani, I., & Lopez-Paz, D. (2019). Invariant risk minimization. arXiv preprint arXiv:1907.02893. https://arxiv.org/abs/1907.02893
 On how to make ML models less racist (some mathematical way to eliminate spurious correlations)
 
 Turing, A. M. (1950). Computing machinery and intelligence. In Parsing the Turing Test (pp. 23-65). Springer, Dordrecht. 2005.
@@ -797,13 +798,13 @@ Said to be a really nicely written paper, seminal, good examples, and with 13k c
 
 Do language network learn what they think they learn?
 https://thegradient.pub/nlps-clever-hans-moment-has-arrived/
+NLP
 
 Peterson, J. C., Battleday, R. M., Griffiths, T. L., & Russakovsky, O. (2019). Human uncertainty makes classification more robust. In Proceedings of the IEEE International Conference on Computer Vision (pp. 9617-9626).
 https://arxiv.org/abs/1908.07086
-On how categorization by humans (compareed to any single ANN) seems to benefit from uncertainty. Propose training on edge cases, which sounds like boosting. But also in the abstract (I haven't opened the paper yet) mention something abou increasing uncertainty (?) that sounds suprisingly as if meta-learning for harnessing uncertainty as a factor may help. Is it true, or is it just a turn of a phrase?
+On how categorization by humans (compareed to any single ANN) seems to benefit from uncertainty. Propose training on edge cases, which sounds like boosting. But also in the abstract (I haven't opened the paper yet) mention something about increasing uncertainty (?) that sounds suprisingly as if meta-learning for harnessing uncertainty as a factor may help. Is it true, or is it just a turn of a phrase?
 
-Sinz, F. H., Pitkow, X., Reimer, J., Bethge, M., & Tolias, A. S. (2019). Engineering a less artificial intelligence. Neuron, 103(6), 967-979.
-http://xaqlab.com/wp-content/uploads/2019/09/LessArtificialIntelligence.pdf
+Sinz, F. H., Pitkow, X., Reimer, J., Bethge, M., & Tolias, A. S. (2019). Engineering a less artificial intelligence. Neuron, 103(6), 967-979. http://xaqlab.com/wp-content/uploads/2019/09/LessArtificialIntelligence.pdf
 Review / Opinion piece on differences between intelligence as it operates in biological brains, and what modern AI offers. Very neuro-style, but it's more about AI than about neuro, so I file it here.
 
 What is an agent?

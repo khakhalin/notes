@@ -158,10 +158,6 @@ Compartments, NMDA, all sorts of STDP stuff.
 
 🟢 Guerguiev, J., Lillicrap, T. P., & Richards, B. A. (2017). Towards deep learning with segregated dendrites. ELife, 6, e22901. https://elifesciences.org/articles/22901.pdf
 
-🔥 Bengio, Y., Lee, D. H., Bornschein, J., Mesnard, T., & Lin, Z. (2015). Towards biologically plausible deep learning. arXiv preprint arXiv:1502.04156.
-https://arxiv.org/pdf/1502.04156.pdf
-Mathy, then mnist. The link will migrate to [[credit]]
-
 Bellec, G., Scherr, F., Subramoney, A., Hajek, E., Salaj, D., Legenstein, R., & Maass, W. (2019). A solution to the learning dilemma for recurrent networks of spiking neurons. bioRxiv, 738385.
 https://www.biorxiv.org/content/10.1101/738385v3
 Something like backpropagation in spiking networks.

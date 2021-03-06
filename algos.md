@@ -14,7 +14,8 @@ Popular data structures:
 Misc curious algorithms
 * [[gcd]] - aka "Euclidean algorithm"
 * [[nimbers]] - on effectively solving stone games
-* [[lis]] - Longest Increasing Subsequence
+* [[lis]] - longest Increasing Subsequence
+* [[bridson]] - sampling on a 2D plane
 
 Todo: #todo
 * https://en.wikipedia.org/wiki/Maximum_subarray_problem

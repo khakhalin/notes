@@ -8,7 +8,7 @@ Restructure the "brain areas" in the following way:
     * Discuss why fovea is amplified
     * It's a good point to mention "upside-down image on the retina" - that it's a nonsensical claim
 * Immediately after talking about color blobs, add visual illusion:
-    * blurring down - can I do it realtime in GIIMP?
+    * blurring down - can I do it realtime in GIMP?
     * we cannot really use color to see shapes - reading. Add an illustration that wild colors actually help, not hurt (grayish are only worse)
     * Watercolor illusion - example of "coloring an object"
 

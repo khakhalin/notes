@@ -13,9 +13,9 @@ Lillicrap, T. P., Cownden, D., Tweed, D. B., & Akerman, C. J. (2016). Random syn
 
 # Backprop in the brain
 
+* [[Bengio2016towards]] - towards biologically plausible deep learning
+
 Backpropagation and the brain. Timothy P. Lillicrap, Adam Santoro, Luke Marris, Colin J. Akerman & Geoffrey Hinton (2020) https://www.nature.com/articles/s41583-020-0277-3
 (Opinion piece) 
-
-Bengio, Y., Lee, D.H., Bornschein, J., Mesnard, T., and Lin, Z. (2015). Towards biologically plausible deep learning. arXiv, arXiv:150204156.
 
 # Credit assignment in RL
