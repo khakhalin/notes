@@ -6,6 +6,8 @@ Parents: [[08_Unsupervised]], [[06_DL]]
 
 # To-Read
 
+https://openai.com/blog/clip/
+
 Odena, "Open Questions about Generative Adversarial Networks", Distill, 2019.
 A nice 	short review.
 https://distill.pub/2019/gan-open-problems/

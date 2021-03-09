@@ -21,3 +21,5 @@ But how to backpropagate through a sampling operation? You just have a stochasti
 Good 15m video explaning VAEs, with an example in tensorflow: https://www.youtube.com/watch?v=9zKuYvjFFS8
 
 Tutorial on VAEs, with math explained: https://jaan.io/what-is-variational-autoencoder-vae-tutorial/
+
+Denoising autoencoder in keras [[tensorflow]]: https://keras.io/examples/vision/autoencoder/

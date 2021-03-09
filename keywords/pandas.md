@@ -11,8 +11,8 @@ See also: [[numpy]], [[py_dates]]
 
 # Creation and basic IO
 
-* Creation: `DataFrame(columns=['x','y'])` (curious capitalization)
-* `[[something]]` simply means "a list of lists". It's a type thing, not a separate synax.
+* Creation: `DataFrame(columns=['x','y'])` (note curious capitalization)
+* `[[something]]` simply means "a list of lists". It's a type thing, not a separate syntax.
 * To look into it: `df.head()`
 * Read: `pd.read_csv('name.txt', sep='\t')`
 * Write: `df.to_csv('name.csv', index=False)`
@@ -20,24 +20,32 @@ See also: [[numpy]], [[py_dates]]
 # Addressing
 
 #### Columns
-* Get column names: `df.columns`.
-* Rename all columns, just overwrite it with a different vector.
+* Get column names: `df.columns`
+* Rename all columns, just overwrite `.columns` with a different vector
 * Rename  only some columns: `df = df.rename({'a': 'X', 'b': 'Y'}, axis=1)`
 * Delete some columns: `df = df.drop(['a','b'], axis=1)` or `df.drop(columns=['a'])`.
 
 #### Indexing
-* Select columns by label: `df['x']`. Returns a series. To cast into a numpy object, add `.values` at the end (right like that, without parentheses). An alternative spelling `df.x` works in most cases, except if the name of the column is special (⚠️Gotcha: for example, `first` and `last` are reserved words, so if you have a column named "first", then `d['first']` would work well, but `d.first` won't)
-    * Two common useful patterns here is to slam `.unique()` at the end if you want only unique values, and `.tolist()` if you need a standard Pythonic list.
+* Select columns by label: `df.x` or `df['x']`. Returns a series. To cast into a numpy object, add `.values` at the end (just like that, without parentheses). Overall, we prefer dot-notation`df.x`, except for several special cases (⚠️): 
+    * If your column name is a reserved word, like `count`, `first` or `last`. If you have a column named "first", `d['first']` would work well, but `d.first` won't
+    * If column name contains a space (only `df.['my dog']` would work)
+    * Column name is an integer rather than a string
+    * You use dynamic addressing (`a = 'name'; df[a]`)
+    * You want to assign values to a dataframe (see below)
+    * Two common useful patterns  to slam after `.values` are `.unique()` if you want only unique values, and `.tolist()` if you need a standard Pythonic list. Both are numpy methods, not pandas.
 * Select rows by label: `df.loc[1]`. Works for both df (returns a row-series), and for column-series (returns a single value).
 * To cast a single value from a row-series into just a value, use `.values[0]` at the end.
 * Out-of-range integers are forgiven (ignored) on reading, but cause an error if you try to write
 * **Iterating through rows**: either `for i in range(df.shape[0]): df.loc[i]`, or `for key,val in df.iterrows()`  (in both cases we get row-series). To slice into slivery dataframes, one could use `df.loc[[i]]`, but usefulness of that is unclear.
 
+Footnotes:
+* https://www.dataschool.io/pandas-dot-notation-vs-brackets/
+
 #### Conditionals and filtering
 For **conditional data retrieval** we have a choice between: 
 * **logical indexing** `df.loc[d.x>0]` Can take list comprehensions as an argument (instead of a series); can be written to; but slower, and harder to read.
 * Another form of logical indexing: `df.x.eq(0)` (or things like `ne`, `le` etc.)
-* **queries**: `df.query('x>0')`, where `x` is a name of a column. Easier for a human to read; works slightly faster, but cannot be written to. To reference a normal variable `a` in a query, use `@a` inside the query string.
+* **queries**: `df.query('x>0')`, where `x` is a name of a column. Easier for a human to read; works slightly faster, but cannot be written to. To reference a normal variable `a` in a query, use `@a` inside the query string. Also keep in mind that they create a view of the original dataframe, not a new dataframe, which saves time and space, but can lead to slice-assignment issues if you assume that the result is an independent dataframe of its own. It's not.
 * To find the first row index that satisfies a criterion, follow with `.idxmax()` - it returns the location of the maximum (like `np.argmax()`), and in this case truth is the maximum.
 * To find `None`-like objects (or their absence), use `	.notnull()`, and its opposite `.isnull()`. It seems that `isna()` and `notna()` also work, and are exact synonyms (I think?).
     * Note that while **queries** support stuff like `'x>0 | x<100'`, they don't support these na-related functions for some reason, unless you call with a certain flourish. So to filter out nans one has two options:
@@ -81,10 +89,19 @@ Footnotes:
 * To create as series of datastamps from a reasonable column of strings, use `df.x = pd.to_datetime(df.x)`.
 * See also: [[py_dates]] for Pythonic work with dates in general
 
-**Applying functions to every element**
-If transforming only one column: **map**: `df.x = df.x.map(@function)`. For one-liners, works well with lambda notation. There's also`df.apply(@fun, axis=1)`, and it appears that with it one can write a function that is applied to every row of a dataframe, but I'm not quite sure.
+**Applying  arbitrary functions to every element of a column**
+Several options here:
+* **map**: `df.x = df.x.map(@function)`. For one-liners, works well with lambda notation. 
+* `df.apply(@fun, axis=1)`, and it appears that with it one can write a function that is applied to every row of a dataframe, but I'm not quite sure.
 
-There's also `df.eval('C=A/B', inplace=True)` that is apparently much faster than explicit formulas on series, but this still needs to be tested / researched. #halfthere
+**Creating a new column from old columns:**
+There are least 6 different ways to do it, listed here from (arguably) best to worst:
+* `df['z']=df.x+df.y` - that's what most people use, and it's one of the fastest approaches, but it has 2 draw-backs. One, it cannot be chained (using `.` notation). And two, when used on a view, it throws a "slice assignment" warning. So after things like `.agg` it will work just fine, but after a `.query` it will cause a problem (as `.query` creates a view!).
+* `df=df.assign(z=df.x+df.y)` - this one is a bit slower, but can be chained! Many people prefer it, and consider it archetypical.
+* `df.insert(2, 'z', df.x+df.y)` - the fastest of all, but cannot be chained (it's in-place), which also means that it doesn't feel Pandas-y. Also, you cannot run it 2 times in a row (returns an error, saying that this column already exists), and you need to know where to add this new column.
+* `df.loc[:,'z']=...` - prevents slicing assignment warning, but is the slowest of all by far. May be good for updates though. Still not chainable though.
+* `df.eval('z=x+y', inplace=True)` - I read somewhere that it is supposed faster than other methods, but in my experiments it is slower than almost any other method. So not sure why anyone would use it. Also, non-chainable.
+* `df=df.eval('z=x+y', inplace=False)` - chainable, but also slower.
 
 **Refs:**
 * https://www.tutorialspoint.com/python_pandas/python_pandas_working_with_text_data.htm
@@ -137,13 +154,18 @@ First group, then apply aggregation. `dfs = df.groupby('g').agg({'a': [min, np.m
 
 **Grouping** columns (those that appear in the summary dataframe not because they were summarized, but because they were grouped by) also become a multiindex. It means that they aren't normal columns, and cannot be referenced directly. To turn into a "normal" data frame, do `dfs = dfs.reset_index()`.
 
-**Sorting** rows is done with `.sort_values(by='str')`, or a list of strings (column names).
+**Sorting** rows is done with `.sort_values(by='str')`, or a list of strings (column names). `ascending=True` is a default, so change if necessary.
 
 # Pivoting
 
 * To go from wide to long format: `pd.melt()`. Gets dataframe, a list of columns to preserve (as `id_vars`), and optionally, new names for var and value columns (as `var_name` and `value_name`). Also some flexibility around indices.
-* The opposite to melting seems to be `pd.pivot_table()`. There's also `pd.pivot()` _and as of now I'm now sure what the difference would be. Check at some point?__ #todo
-* There's also `wide_to_long` that is useful if the input table has columns with suffices (like "day1, day2, day3" or something like that). You provide it with these suffices, it automates the transformation.
+* The opposite to melting:
+    * `df.pivot(index='factor1', columns='factor2', values='values')`. Each of them may also be a list of columns, in which case it creates nested indices. If some value is not available, it is filled with NaNs. Requires that every combo of factor1-factor2 were unique in the original table, or returns an error (so it doesn't aggregate, only reshapes the data. Aggregate manually first).
+    * `df.pivot_table()` - same as `pivot` (so takes same parameters `index, columns, values`), but also can do simple aggregation (a parameter `aggfunc`) that can take values like `mean` (default), `count, first, max, min` etc. Which means that it handles duplicates, by default trying to silently average them.
+    * There's also `wide_to_long` that is useful if the input table has columns with values that fit a certain prefix-suffix pattern(like `day1, day2, day3` or something like that). You provide it with these suffixes, it automates the transformation.
+
+Footnotes:
+* https://stackoverflow.com/questions/30960338/pandas-difference-between-pivot-and-pivot-table-why-is-only-pivot-table-workin
 
 # Misc
 

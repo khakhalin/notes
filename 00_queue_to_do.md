@@ -42,15 +42,17 @@ Dump:
 
 # Top priorities
 
-* Reread 3 papers linked in the [[ticket]] note
+* Reread 3 notes for papers linked in the [[ticket]] note
+* Figure out what `.where` means in [[pandas]]; looks cool: https://www.metasnake.com/blog/pydata-assign.html
 * How to backprop through the maxpooling layer? Document it in [[pooling]]
 * Batch normalization [[batch_normalization]] - why and how?
 * How to perform unsupervised clustering using DL networks?
-* spectral properties of graphs, spectral radius
 * How react sites talk to SQL now?
 * docker - what and how
     * Flask docker file (allegedly 80% of what one needs for a typical deployment)
     * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
+* python environments
+* difference between conda and pip	
 * how to extend vocabulary for word-embedding?
 * tableau - read more about. Is there a way to "learn it" just enough to report it? Any tests on it?
 * Django (alternative to Flask, slightly less popular)
@@ -74,6 +76,7 @@ Dump:
     * https://www.youtube.com/watch?v=QEWe-aRBUAs
 * What is lecun_normal init in [[init_dl]]?
 * do "go around the tree" 
+* spectral properties of graphs
 * Chartio
 * Looker
 * in-place mergesort (how?)

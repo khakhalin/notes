@@ -24,4 +24,4 @@ Original publication:
 Riesenhuber, M. & Poggio, T. (1999). Hierarchical Models of Object Recognition in Cortex. Nature Neuroscience 2: 1019-1025.
 
 Technical details:
-Serre, T., & Riesenhuber, M. (2004). Realistic Modeling of Simple and Complex Cell Tuning in the HMAX Model, and Implications for Invariant Object Recognition in Cortex. CBCL Paper #239/AI Memo #2004&#x2012;004, Massachusetts Institute of Technology, Cambridge, MA, July 2004.
+Serre, T., & Riesenhuber, M. (2004). Realistic Modeling of Simple and Complex Cell Tuning in the HMAX Model, and Implications for Invariant Object Recognition in Cortex. CBCL Paper 239/AI Memo 2004&x2012;004, Massachusetts Institute of Technology, Cambridge, MA, July 2004.

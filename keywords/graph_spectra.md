@@ -3,7 +3,9 @@
 #stub #graphs
 
 Parents: [[09_Graphs]]
-Related:
+Related: [[spectral_clustering]]
+
+* [[spectral_radius]] - and how to calculate it
 
 # Refs
 

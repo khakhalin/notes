@@ -28,7 +28,7 @@ Mention that "liquid state networks" are very similar (Maas 2002; Maas 2003).
 
 # Details (from Supporting Materials)
 
-Not every randomly generated reservoir can support a process like that. They call it "damping properties": the spectral radius should be smaller than 1. In practice, they generated a random network, then rescaled it to spectral radius of 0.8.
+Not every randomly generated reservoir can support a process like that. They call it "damping properties": the **spectral radius** (see [[spectral_raidus]]) should be smaller than 1. In practice, they generated a random network, then rescaled it to spectral radius of 0.8.
 
 To make sure the network is really chaotic, they let it run in generation mode for 317 steps after the "standard" generation sequence; then perturbed the very last state of the standard run (one time point) with normal noise. Looked at the exponential divergence rate [[lyapunov-exp]]. Averaged over 100 trials, got λ~0.0058, which is very close to λ for the original signal.
 

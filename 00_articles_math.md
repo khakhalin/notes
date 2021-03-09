@@ -502,6 +502,10 @@ https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning
 
 # Self-supervised learning
 
+Jure Zbontar, Li Jing, Ishan Misra, Yann LeCun, Stéphane Deny. 2021. Barlow Twins: Self-Supervised Learning via Redundancy Reduction. https://arxiv.org/abs/2103.03230
+On learning invariant representation by explicitly demanding distorted images (or parts of the same image) produce very similar activation vectors in the last layer (in terms of correlation). As an alternative to negative sampling, for example.
+Tweetprint: https://twitter.com/StephaneDeny/status/1368886834420457472
+
 Jing, L., & Tian, Y. (2019). [Self-supervised visual feature learning with deep neural networks: A survey](https://arxiv.org/pdf/1902.06162.pdf). arXiv preprint arXiv:1902.06162.
 
 Kolesnikov, A., Zhai, X., & Beyer, L. (2019). [Revisiting self-supervised visual representation learning](http://openaccess.thecvf.com/content_CVPR_2019/papers/Kolesnikov_Revisiting_Self-Supervised_Visual_Representation_Learning_CVPR_2019_paper.pdf). arXiv preprint arXiv:1901.09005.

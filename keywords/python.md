@@ -169,7 +169,7 @@ How to **create a namespace** to compartmentalize some functions (in a style of 
 * The static class is self-explanatory: just create a `py` file, and define a class with many static functions, then import this class in the main init with `from .name import name`.
 * For a package, create a folder `name`, with `__init__.py` and a bunch of files. Make this package's init contain imports of every function from each of the files (like, `from .fun import fun`), and so on. Then once you need to use package, elsewhere do `from . import name`, or maybe `from . import name as meaningful_name` if you prefer. This import needs to be done in every Python file that uses this functionality, the same way it happens for numpy, for example. This `from .` is relative import, but from the current folder.
 
-If you need to call one subpackage from another subpackage, it's a bit harder. There are three options here: good, and hacky.
+If you need to call one subpackage from another subpackage, it's a bit harder. There are two options here: good, and hacky.
 * The good one: `from ..sub2 import smth` or `from ..sub2.smth import somefun`
 * Sometimes this doesn't work however, giving an error "attempted relative import beyond top-level package". An alternative is to add the upper (`..`) folder in the path variable, by doing `import sys; sys.path.append('..')`
 

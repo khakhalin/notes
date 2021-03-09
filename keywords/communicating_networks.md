@@ -6,6 +6,10 @@
 
 Related: [[mnist]], [[linguistics]]
 
+# Papers to read
+
+Honkela, T., & Winter, J. (2003). Simulating language learning in community of agents using self-organizing maps. Helsinki University of Technology. https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.196.772&rep=rep1&type=pdf
+
 # Refs
 
 Ryan Murdock, "Cooperative Communication Networks", 2020.
@@ -20,3 +24,5 @@ https://www.joelsimon.net/dimensions-of-dialogue.html
 Twitter inspirations:
 * https://twitter.com/noahtren/status/1269035375051386880
 * https://twitter.com/alek_thiery/status/1278413701377257472
+
+Some other (older) research on artificial language evolution: https://www.upf.edu/web/icrea-luc-steels
