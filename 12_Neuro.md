@@ -24,7 +24,7 @@ To look up:
 * Mechanisms:
     * [[stdp]] - Spike-time-dependent plasticity
     * [[intrinsic_plasticity]] - subj
-    * [[one_neuron]] - computation in one neuron, dendritic processing
+    * [[dendritic_comp]] - computation in one neuron, dendritic processing
 
 # Refs
 

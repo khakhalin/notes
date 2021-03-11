@@ -1,13 +1,14 @@
-# How much can one neuron do?
+# Dendritic computations. How much can one neuron compute?
 
 #bib #neuro #dendritic
 
 Parent: [[12_Neuro]]
+See also: [[deepneuro]]
 
 Papers:
 * [[Titley2017neurocentric]] - dendritic processing in Purkinje cells, Hansel lab
 
-# Unread
+# To Read
 
 Approximate logic neuron model trained by states of matter search algorithm
 J Ji, S Song, Y Tang, S Gao, Z Tang, Y Todo - Knowledge-Based Systems, 2018

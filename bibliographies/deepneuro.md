@@ -3,7 +3,9 @@
 #deepneuro #dl #neuro
 
 Parents: [[12_Neuro]], [[06_DL]]
-Related: [[network_neuro]]
+Related: 
+* [[vision]] - specifically about comparing neuro and DL models of vision
+* [[network_neuro]] - everything that is more about networks and graphs
 
 Subplotics:
 * [[stdp]] - unsupervised rules in the brain
@@ -12,7 +14,12 @@ Subplotics:
 # Papers
 
 Reviews
+* [[Zador2019pure]] - on how DL doesn't approach animal intelligence yet
+* [[Sinz2019lessartificial]] - engineering less artificial intelligence
 * [[Hassabis2017neuroai]]- neuro-inspired AI; past and future; 3-4 refs for every topic
+
+DL models of cortex (except for visual cortex that is covered in [[vision]])
+* [[Muller2019cake]] - elements of unsupervised learning in the cortex
 
 #vet
 

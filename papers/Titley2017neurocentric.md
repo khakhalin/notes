@@ -2,7 +2,9 @@
 
 Titley, H. K., Brunel, N., & Hansel, C. (2017). Toward a neurocentric view of learning. Neuron, 95(1), 19-32.
 
-#neuro #review #dendritic
+Parents: [[dendritic_comp]], [[intrinsic_plasticity]]
+
+#neuro #review #dendritic #intrinsic
 
 A motto / research program of Hansel lab, U Chicago.
 

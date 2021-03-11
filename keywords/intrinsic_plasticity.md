@@ -1,6 +1,9 @@
 # Intrinsic plasticity
 
-#neuro #bib
+Parents: [[12_Neuro]]
+See also: [[dendritic_comp]]
+
+#neuro #bib #intrinsic
 
 Papers:
 * [[Titley2017neurocentric]] - review of how neurono-centric is better than synapto-centric
@@ -40,7 +43,7 @@ AIS shifts depend on the temporal properties of stimulation (dissociated hippoca
 Kole, M. H., & Stuart, G. J. (2012). Signal processing in the axon initial segment. Neuron, 73(2), 235-247.
 Review, including what channels are there and how. High variability of somatic AP thresholds, but low variability in the AIS (because of the distance).
 
-Hamada, M. S., Goethals, S., de Vries, S. I., Brette, R., & Kole, M. H. (2016). Covariation of axon initial segment location and dendritic tree normalizes the somatic action potential. Proceedings of the National Academy of Sciences, 113(51), 14841-14846.
+Hamada, M. S., Goethals, S., de Vries, S. I., Brette, R., & Kole, M. H. (2016). Covariation of axon initial segment location and dendritic tree normalizes the somatic action potential. Proceedings of the National Academy of Sciences, 113(51), 14841-14846. See [[dendritic_comp]]
 The larger the dendritic tree - the further is AIS, to enable same basic transfer function despite different somatodendritic capacitance. The further is the AIS, the stronger is the AIS current, to maintain same AP amplitudes in the soma! Double-co-regulation. This second part however may be specific for pyramidal neurons, as they rely on dendritic back-propagation. Also describes how AIS movement may be paradoxical: decreased coupling with the rest of the cell means higher threshold, but also more intense (independent) spiking, not shunted by the rest of the cell (refs).
 
 Evans, M. D., Dumitrescu, A. S., Kruijssen, D. L., Taylor, S. E., & Grubb, M. S. (2015). Rapid modulation of axon initial segment length influences repetitive spike firing. Cell reports, 13(6), 1233-1245.

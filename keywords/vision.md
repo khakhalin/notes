@@ -2,7 +2,7 @@
 
 #bib #neuro
 
-Parents: [[12_Neuro]], [[bib_image]], [[video]]
+Parents: [[12_Neuro]], [[bib_image]], [[video]], [[deepneuro]]
 Related: [[superstimulus]], [[illusions]], [[ene_070_vision]]
 
 Pure ML vision is covered in [[bib_image]] and [[video]], so here we have only neuro-inspired ML, and pure neuroscience.
@@ -19,6 +19,9 @@ Papers:
 * [[Bashivan2019control]] - using DL to create stimuli for brains (see [[superstimulus]])
 * [[KhalighRazavi2014cortex]] - recordings from humans and monkeys match DL activation
 * [[hmax]] - old (1999) manual model of primate vision
+* [[Walker2018inception]] - reconstructing visual perception from visual recordings
+
+
 
 Pospisil, D. A., Pasupathy, A., & Bair, W. (2018). 'Artiphysiology'reveals V4-like shape tuning in a deep network trained for image classification. Elife, 7, e38242. https://elifesciences.org/articles/38242 - They seem to claim that CNN deep layer neurons selectivity is actually similar to primate V4. Not too wildly cited tho.
 

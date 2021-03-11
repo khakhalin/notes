@@ -42,11 +42,6 @@ Dump:
 
 # Top priorities
 
-* Reread 3 notes for papers linked in the [[ticket]] note
-* Figure out what `.where` means in [[pandas]]; looks cool: https://www.metasnake.com/blog/pydata-assign.html
-* How to backprop through the maxpooling layer? Document it in [[pooling]]
-* Batch normalization [[batch_normalization]] - why and how?
-* How to perform unsupervised clustering using DL networks?
 * How react sites talk to SQL now?
 * docker - what and how
     * Flask docker file (allegedly 80% of what one needs for a typical deployment)
@@ -55,6 +50,8 @@ Dump:
 * difference between conda and pip	
 * how to extend vocabulary for word-embedding?
 * tableau - read more about. Is there a way to "learn it" just enough to report it? Any tests on it?
+* File unfinished article descriptions currently dumped at [[deepneuro]], [[intrinsic_plasticity]], [[dendritic_comp]]
+* Reread 3 notes for papers linked in the [[ticket]] note
 * Django (alternative to Flask, slightly less popular)
 * FastAPI (another alternative to Flask, seems more trendy, and gaining on Flask?)
 * pseudoinverse (there's more than one!), and how numpy calculates them. [[pseudoinverse]]
@@ -66,6 +63,9 @@ Dump:
 * numpy broadcasting - what are the rules again? Does it not broadcast from a 2D to 1D array?
 * model view controller - most important design pattern for web apps
 * PostgreSQL - how is it different from other SQLs?
+* How to backprop through the maxpooling layer? Document it in [[pooling]]
+* Batch normalization [[batch_normalization]] - why and how?
+* How to perform unsupervised clustering using DL networks?
 * [[Redis]]
 * Regex (including in Python)
     * https://medium.com/factory-mind/regex-cookbook-most-wanted-regex-aa721558c3c1

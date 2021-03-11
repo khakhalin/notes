@@ -132,7 +132,7 @@ Model of the cortex.
 
 # Single-neuron calculations
 
-See [[one_neuron]]
+See [[dendritic_comp]]
 
 David, Beniaguev, Segev Idan, and London Michael. "Single Cortical Neurons as Deep Artificial Neural Networks." bioRxiv (2019): 613141. https://www.biorxiv.org/content/10.1101/613141v1.full.pdf
 

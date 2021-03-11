@@ -1,6 +1,8 @@
 #  Postsynaptic and Presynaptic NMDARs have opposite effects on cell morphology
 
-#neuro
+See also: [[dendritic_comp]]
+
+#neuro #nmda
 
 Kesner, P., Schohl, A., Warren, E. C., Ma, F., & Ruthazer, E. S. (2020). Postsynaptic and Presynaptic NMDARs Have Distinct Roles in Visual Circuit Development. Cell Reports, 32(4), 107955.
 https://www.sciencedirect.com/science/article/pii/S2211124720309360

@@ -73,15 +73,16 @@ Footnotes:
 
 # Data transformations
 
+**Numbers and logic**
+* Cast to type: `.astype(int)`
+* Vectorized not: `~` operator. For example, `~np.array([True,False])` is "F, T" obviously.
+
 **Strings**
 * For basic string operations, like cut first chars: `df['x'].str[1:]`
 * Other operations, all follow a paradigm of `df['x'].str.lower()`. They only work on a series, not on a dataframe. It also means that `df.x` won't work in this case, as it doesn't return a series. 
 * To create a new column by combining other columns, use a normal `+` notation for strings, like `d['a'] = d['b'] + d['c']`. f-strings don't seem to work here though.
 * `split` splits every string into an array of substrings, same as for normal Python.
 * There's a support of regular expressions (see [[regex]]) in `str`, such as `extract` (extracting part of a string that matches the pattern), `findall` (only leaving entries that match the pattern).
-
-**Numbers**
-* Cast to type: `.astype(int)`
 
 **Dates and times**
 * Documentation (not too well organized; hard to find stuff): https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html
@@ -93,6 +94,9 @@ Footnotes:
 Several options here:
 * **map**: `df.x = df.x.map(@function)`. For one-liners, works well with lambda notation. 
 * `df.apply(@fun, axis=1)`, and it appears that with it one can write a function that is applied to every row of a dataframe, but I'm not quite sure.
+
+**Updating certain values in a column**
+The archetypical way seems to be using a `where` command, which is cool, but weird: first, it doesn't feel like a "where" keywords (it's more an "update" or "replace" kinda of a command), and second, the condition `where` gets is actually for those values that won't be updated. If the condition is true, `where` passes the value through, otherwise it replaces it with a default. Example: `df.x.where(df.x>0, -2)` will replace all values that are below zero with −2. Use `~` if need to flip the condition (some people even prefer writing it with a tilde, to make it more clear which values are updated, even tho it's obviously a mindhack).
 
 **Creating a new column from old columns:**
 There are least 6 different ways to do it, listed here from (arguably) best to worst:
