@@ -2,7 +2,7 @@
 
 #algo #monte-carlo #graphs
 
-Stems: [[algos]] / [[algos_graph]] / [[algos_trees]]
+Parents: [[algos]] / [[algos_graph]] / [[algos_trees]]
 
 A way to quickly build a space-filling tree, or find a path around an obstacle (e.g. in motion planning). Relies on sampling points from the space randomly, and then trying to reach it from the closest point in the existing tree, which makes is related to **Voronoi** regions.
 

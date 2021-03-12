@@ -29,6 +29,9 @@ Other refs:
 * https://www.askamanager.org/ - some general advice
 * [How to prepare for Google interview](https://www.linkedin.com/pulse/average-googler-four-weeks-study-plan-milad-naseri/?trk=v-feed), by Milad Naseri. Nice list of books, practical advice. 
 * https://www.reddit.com/r/ProgrammerHumor/comments/i49h96/jobs_requirements/g0ikzmr/ - interesting stories and advice
+* Cool videos with advice for how to think in these interviews: https://www.youtube.com/watch?v=0l2nePjDFuA&list=PLlxjrJ5pd8sqqpWqGZDzNi4F2wXGllX-z&index=7
+
+See [[algos]] for actual algorithmic strategies.
 
 **General advice:**
 * Always ask **clarification** questions! Google (at least) intentionally designs questions to be **vague**, with some core assumptions undisclosed, so you need to ask. They are trying to model real life, where you always perform research to better understand the problem before attempting to solve it.
