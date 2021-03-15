@@ -17,6 +17,7 @@ Papers:
 * [[Yamins2016viscortex]] - a review comparing primate vision to convnets
 * [[Zhang2018perceptive_dl]] - convnet models are really good for identifying perceptually similar images
 * [[Bashivan2019control]] - using DL to create stimuli for brains (see [[superstimulus]])
+* [[Walker2018inception]] - also using DL to create superstimuli
 * [[KhalighRazavi2014cortex]] - recordings from humans and monkeys match DL activation
 * [[hmax]] - old (1999) manual model of primate vision
 * [[Walker2018inception]] - reconstructing visual perception from visual recordings

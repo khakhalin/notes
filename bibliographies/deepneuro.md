@@ -3,6 +3,7 @@
 #deepneuro #dl #neuro
 
 Parents: [[12_Neuro]], [[06_DL]]
+
 Related: 
 * [[vision]] - specifically about comparing neuro and DL models of vision
 * [[network_neuro]] - everything that is more about networks and graphs

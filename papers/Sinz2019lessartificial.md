@@ -22,7 +22,7 @@ Quite **bad in non-local integration**. While in [[convnet]]s local information 
 
 > Didn't recent synthesis experiments with CLIP have a similar problem with extreme localization? Or was it specific to CLIP algorithm in particular?
 
-Their solution: **inductive bias** or **model bias**; a type of meta-regularization, where you **constrain the space of solutions** for a network. And, they think, looking at the brain may help, as by making models "brain-like" we may inadvertently make them smarter, just because brain-likeness may correspond to some cool evolutionary findings. Two ways to constrain the network through the data, and arguably model how actual bio brains work:
+Their solution: **model bias** (what a model can even do), and **inductive bias** (what this training system can teach it); a type of meta-regularization, where you **constrain the space of solutions** for a network. And, they think, looking at the brain may help, as by making models "brain-like" we may inadvertently make them smarter, just because brain-likeness may correspond to some cool evolutionary findings. Two ways to constrain the network through the data, and arguably model how actual bio brains work:
 * **Data augmentation** (see [[augmentation]])
 * **Multi-task learning**: training same network on different tasks at the same time (essentially, **weights sharing**?)
 

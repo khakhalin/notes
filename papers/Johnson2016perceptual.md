@@ -3,9 +3,10 @@
 Johnson, J., Alahi, A., & Fei-Fei, L. (2016, October). Perceptual losses for real-time style transfer and super-resolution. In European conference on computer vision (pp. 694-711). Springer, Cham.
 https://arxiv.org/pdf/1603.08155.pdf
 
+Parents: [[bib_generate]] / [[perceptual_loss]]
+
 #image #loss
 
-Parents: [[bib_generate]] / [[perceptual_loss]]
 
 The **loss network** is pre-trained as an image classifier (16 layers, convolutional, on ImageNet). Just calculate the Σ(ϕ1-ϕ2)^2 where ϕ are feature representations **in early layers** (values in the latent space) learned by the classifier. They say: "image content and overall spatial structure are preserved, but color, texture, and exact shape are not".
 

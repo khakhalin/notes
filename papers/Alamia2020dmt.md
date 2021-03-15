@@ -1,4 +1,4 @@
-# DMT alters cortical travelling waves
+# DMT alters cortical traveling waves
 
 Alamia, A., Timmermann, C., VanRullen, R., & Carhart-Harris, R. (2020). DMT alters cortical travelling waves. bioRxiv.
 https://elifesciences.org/articles/59784

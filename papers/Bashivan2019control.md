@@ -3,7 +3,9 @@
 Bashivan, P., Kar, K., & DiCarlo, J. J. (2019). Neural population control via deep image synthesis. Science, 364(6439). https://www.gwern.net/docs/ai/2019-bashivan.pdf
 
 Parent: [[vision]]
-See also: [[superstimulus]], [[convnet]], [[Olah2017visualization]], [[interpretability]]
+See also: [[superstimulus]], [[convnet]], [[interpretability]]
+* [[Olah2017visualization]]- same in ANNs: 
+* [[Walker2018inception]] - very similar neuro paper
 
 #vision #illusion
 

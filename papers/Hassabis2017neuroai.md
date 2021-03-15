@@ -24,7 +24,7 @@ Reinforcement learning ([[11_RL]]) was also originally inspired by animal behavi
 
 ## Attention
 
-A nice review paragraph, but it's not quite clear from it if it speaks about [[transformers]]-like attention, or something different. I suspect they may be talking about RNNs mostly, but this needs to be investigated. Is Transformers attention similar to this attention?
+A nice review paragraph, but it's not quite clear from it if it also speaks about [[transformers]]-like attention, or whether it only thinks about larger-scale phenomena. I suspect they may be talking about RNNs mostly, but this needs to be investigated. Is Transformers attention similar to this attention?
 
 Footnotes: 
 * Xu, K., Ba, J., Kiros, R., Cho, K., Courville, A., Salakhudinov, R., ... & Bengio, Y. (2015, June). Show, attend and tell: Neural image caption generation with visual attention. In International conference on machine learning (pp. 2048-2057). PMLR. (6k citations)

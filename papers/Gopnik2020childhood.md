@@ -5,6 +5,7 @@ https://royalsocietypublishing.org/doi/10.1098/rstb.2019.0502
 
 #review #cognition #bio #exploration #game
 
+
 Humans have a very long childhood; even chimps are self-sustaining by age 7, while humans need at least 15 years. And childhood is expensive: in a 4-year old at rest, 60% of energy is used by the brain (~20% in an adult). We even started to live longer to support these babies (Grandmothers as alloparents).
 
 Main thesis: training needs in humans are so demanding that childhood "involves a distinctive set of cognitive characteristics that actually trade off with adult characteristics". Motivation to learn: exploration with almost no exploitation. Apparently, a rough correlation across species, in terms of maturation length vs. eventual brain complexity. **Simualted annealing** (loweing temperature during training) as a ML metaphor for childhood.

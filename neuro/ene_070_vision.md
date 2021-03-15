@@ -17,7 +17,7 @@ Restructure the "brain areas" in the following way:
 * Starting with pupillary reflexes
     * Show imperfection of this connection (and mention that it's not the same as recurrent laringial nerve (double-check the name!!), which is more famous. But a similar story.)
 * Then circadian rhythms
-* Then  pulvinar
+* Then  [[pulvinar]]
 * Then fusiform cortex.
     * And btw, is this innate? Yes, and no, which is a great example of how brains are. Based on monkey studies, our interest in faces is innate (we foveate to them and study them instinctively), but the face area forms (and works) properly only if we have this opportunity in early childhood.
     * Maybe mention dyslexia?
