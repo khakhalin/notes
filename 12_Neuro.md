@@ -2,7 +2,7 @@
 
 #neuro #behav
 
-See [[00_to_read_neuro]] for the queue of papers to read.
+See [[00_articles_neuro]] for the queue of papers to read.
 
 To look up:
 * Oja rule: a popular extension of the Hebb's rule? https://en.wikipedia.org/wiki/Oja%27s_rule

@@ -2,7 +2,9 @@
 #fun #bib
 
 # Free will
+
 #freewill
+
 [[Smith2011freewill]] - a quick summary on free will in human neuroscience
 [[Gal2010zombies]] - zombie roaches don't have free will ⇒ normal roaches do
 

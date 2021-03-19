@@ -43,9 +43,12 @@ Dump:
 # Top priorities
 
 * How react sites talk to SQL now?
+* How Python SQL?
+* How to best practice SQL?
 * docker - what and how
     * Flask docker file (allegedly 80% of what one needs for a typical deployment)
     * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
+* What is flask?
 * python environments
 * difference between conda and pip	
 * how to extend vocabulary for word-embedding?

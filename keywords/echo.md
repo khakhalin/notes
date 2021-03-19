@@ -90,6 +90,9 @@ Huang, R., Li, Z., & Cao, B. (2020). A Soft Sensor Approach Based on an Echo Sta
 
 Tallec, C., & Ollivier, Y. (2017). Unbiased online recurrent optimization. arXiv preprint arXiv:1702.05043. https://arxiv.org/pdf/1702.05043.pdf
 
+Grigoryeva, L., & Ortega, J. P. (2018). Echo state networks are universal. Neural Networks, 108, 495-508.
+https://www.sciencedirect.com/science/article/abs/pii/S089360801830251X
+
 Lukoševičius, M., & Uselis, A. (2019, September). Efficient Cross-Validation of Echo State Networks. In_International Conference on Artificial Neural Networks_(pp. 121-133). Springer, Cham. https://arxiv.org/pdf/2006.11282.pdf
 
 Schrauwen, B., Wardermann, M., Verstraeten, D., Steil, J. J., & Stroobandt, D. (2008). Improving reservoirs using intrinsic plasticity. Neurocomputing, 71(7-9), 1159-1171.

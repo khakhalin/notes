@@ -12,6 +12,8 @@ Essentially, everything about language (a bit broader than linguistics), but  mo
 
 # Refs
 
+Languages of the world: https://glottolog.org/
+
 A course of lectures on computational linguistics (on youtube):
 https://www.youtube.com/playlist?list=PLegWUnz91WfuPebLI97-WueAP90JO-15i
 

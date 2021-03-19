@@ -66,6 +66,8 @@ Morrison, A., Aertsen, A., and Diesmann, M. (2007). Spike-timing dependent plast
 
 Ozturk, I., & Halliday, D. M. (2016, December). Mapping spatio-temporally encoded patterns by reward-modulated STDP in Spiking neurons. In Computational Intelligence (SSCI), 2016 IEEE Symposium Series on (pp. 1-8). IEEE. 💡
 
+Encoding innate ability through a genomic bottleneck. Alexei Koulakov, Sergey Shuvaev, Anthony Zador. 2021. https://www.biorxiv.org/content/10.1101/2021.03.16.435261v1
+
 Hoerzer, G. M., Legenstein, R., & Maass, W. (2014). Emergence of complex computational structures from chaotic neural networks through reward-modulated Hebbian learning. Cerebral cortex, 24 (3), 677-690. 💡
 
 Gilson, M., Burkitt, A., & van Hemmen, J. L. (2010). STDP in recurrent neuronal networks. Spike-timing dependent plasticity, 271.
