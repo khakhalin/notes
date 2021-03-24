@@ -44,14 +44,16 @@ Dump:
 
 * How react sites talk to SQL now?
 * How Python SQL?
-* How to best practice SQL?
 * docker - what and how
     * Flask docker file (allegedly 80% of what one needs for a typical deployment)
     * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
-* What is flask?
+* Sagemaker and Amazon EMR - what are they?
 * python environments
+* Ha, D., & Schmidhuber, J. (2018). World models. arXiv preprint arXiv:1803.10122.
+https://arxiv.org/abs/1803.10122
 * difference between conda and pip	
-* how to extend vocabulary for word-embedding?
+* What is flask?
+* how to extend vocabulary for DL word-embedding?
 * tableau - read more about. Is there a way to "learn it" just enough to report it? Any tests on it?
 * File unfinished article descriptions currently dumped at [[deepneuro]], [[intrinsic_plasticity]], [[dendritic_comp]]
 * Reread 3 notes for papers linked in the [[ticket]] note

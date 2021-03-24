@@ -12,13 +12,20 @@ Three warnings:
 Caveats:
 * Average vs distribution
 * Probability vs guarantee: just because smoking increases the rate of lung cancer doesn't mean that every smoker will die of cancer, or every non-smoker won't. Even when a probability of event is pretty high, sometimes it won't happen, and the other way around.
-* Humans are multifaceted and modular: one may be an amazing painter, but be bad at drawing, or the other way around. One can be a great improv speaker, but a bad writer, or a great writer who cannot speak publicly. Yes supposedly both of these people are "great with words". So what exactly would we mean if we say that someone has strong language skills, for example? That that they would tend to be both? Either?
+* Humans are multifaceted and modular: one may be an amazing painter, but be bad at drawing, or the other way around. One can be a great improv speaker, but a bad writer, or a great writer who cannot speak publicly. Yes supposedly both of these people are "great with words". So what exactly would we mean if we say that someone has strong language skills, for example? That that they would tend to be both? Or either of two?
 * Average vs. typical (that for high-D spaces, averages don't really make sense, and so average humans don't exist - see [[typical_sample]]). An average human has one breast and one testicle. The average position of the moon is in the center of earth (or the sun, or the galaxy, depending on how you think about it). _Better examples?_
 
 Safe(r) examples of personal characteristics:
 * Extroverts and saliva
 
 # Refs
+
+Eliot, L., Ahmed, A., Khan, H., & Patel, J. (2021). Dump the “dimorphism”: Comprehensive synthesis of human brain studies reveals few male-female differences beyond size. Neuroscience & Biobehavioral Reviews.
+https://www.sciencedirect.com/science/article/pii/S0149763421000804
+There are almost no differences between male and female brains in humans, in terms of their morphology, as almsot all differences that are significant disappear once you control for brain size. And literature is a mess (many contradicting studies, many underpowered, or don't replicate from one group of humans to another). This includes no differences in lateralization, as judged from looking at commissures sizes.
+* Tweetprint from the author: https://twitter.com/Lise_Eliot/status/1373315409475072001
+* A slightly critical (but positive) response: https://twitter.com/WiringTheBrain/status/1373587590398496768
+* 
 
 Dunsworth, H. M. (2020). Expanding the evolutionary explanations for sex differences in the human skeleton. Evolutionary Anthropology: Issues, News, and Reviews.
 https://digitalcommons.uri.edu/cgi/viewcontent.cgi?article=1036&context=soc_facpubs

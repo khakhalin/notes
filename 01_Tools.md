@@ -16,6 +16,7 @@ Tips and notes on individual tools:
 * [[git]] - GIT cheat sheet
 * [[sql]] - SQL cheat sheet
 * [[latex]] - tiny notes in LaTeX
+* [[javascript]] - subj
 
 Running ML projects:
 * [[ml_lore]] - a collection of rules of thumb about everything Deep Learning (which defaults to pick etc.)
@@ -86,4 +87,6 @@ Refs:
 * The missing semester of CS education: https://missing.csail.mit.edu/
 Lots of useful practical bits and pieces: the shell, debugging, metaprogramming and what not. Also has [lectures on youtube](https://www.youtube.com/playlist?list=PLyzOVJj3bHQuloKGG59rS43e29ro7I57J).
 
-Capture screen animation to a gif, client-side: https://gifcap.dev/
+Capture screen animation to a gif, client-side:
+* online tool: https://gifcap.dev/	
+* small downloadable tool: http://blog.bahraniapps.com/gifcam/

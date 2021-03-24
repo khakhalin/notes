@@ -8,11 +8,11 @@ See also: [[database]]
 ## Generic query
 
 ```sql
-SELECT col1, MAX(col2) AS colname2
+SELECT col1, MAX(col2) AS altname
 FROM table1 AS t1
 WHERE (col1=1 AND col2>2) OR NOT (col5 IN ("cat","dog")) OR (col8 BETWEEN 3 AND 7)
 GROUP BY col3
-HAVING COUNT(*)>1 OR SUM(col7)>0
+HAVING COUNT(*)>1 AND SUM(col7)<100
 ORDER BY col4 DESC, col5 ASC
 LIMIT 10
 FROM table2 AS t2 JOIN *
@@ -22,18 +22,18 @@ WHERE t2.col2 IS NULL;
 
 ##  More bells and whistles
 * `DISTINCT` - return unique results only. Can go right after select: `SELECT DISTINCT`, or can be put inside count, like in `COUNT (DISTINCT col2)`.
-* `LIKE` - search for a pattern in text; goes inside the condition: `WHERE col LIKE 'a%'`. Supports wildcards: `%` for any number of characters (including none), `_` for a single character; `[ab]` for either a or b (as in regular expressions), `[^ab]` for any character except a and b (not on all systems). In general, wildcards seem to differ a bit across systems.
-* Depending on the version, SQL may use either `<>` or `!=` for 'not equal'. It seems that `!=` is preferred, but `<>` is older, and so is used as a legacy operator. At least in some versions, `!<` (not less than) and `!>` also exist. They seem to compare strings, in a case-sensitive manner, and if a string would meet a number, it seems there will be an attempt to convert them for comparison. It is also possible to cast a string to a different type, or to transform it, including changing its encoding (see below).
+* `LIKE` - search for a pattern in text; goes inside the condition: `WHERE col LIKE 'a%'`. Supports wildcards: `%` for any number of characters (including none), `_` for a single character; `[ab]` for either a or b (as in regular expressions), `[^ab]` for any character except a and b (not on all systems). In general, wildcards seem to differ a bit across systems, so double-check.
+* Depending on the version, SQL may use either `<>` or `!=` for 'not equal'. It seems that `!=` is preferred, but `<>` is older, and so is used as a legacy operator. At least in some versions, `!<` (not less than) and `!>` also exist. They seem to compare strings, in a case-sensitive manner. If a string is compared to a number, it seems there will be an attempt to convert them for comparison. It is also possible to cast a string to a different type, or to transform it (like with `LOWER`), including changing its encoding (see below). ⚠️ Note that SQL uses `=` rather than `==`.
 * Precedence: arithmetic (including bitwise `~&|`) > comparisons > `NOT` > `AND` > `OR` and its friends (`LIKE`, `IN`, `BETWEEN`, `ALL`, `ANY`, `SOME`) > assignment.
 * `IN` can use either a fixed list, or a subquery.
 * `AVG`, `MIN`, `MAX` - other functions for grouped queries, similar to SUM. They can also go in the SELECT block (to be returned, instead of conditioned), and combined with aliasing.
 * `COALESCE (col1, col2, "default value")` - returns the first non-null element from this list
-* `CASE` - a whole case switch system for binning values on-the fly, and returning the bin name (uses `WHEN`, `THEN`, and `ELSE` as other keywords inside the CASE structure. Read the manual if needed.)
+* `CASE` - a whole case switch system for binning values on-the fly, and returning the bin name. Uses `WHEN`, `THEN`, and `ELSE` as keywords inside the CASE structure. Read the manual if needed.
 * `HAVING` is used for clauses on aggregate functions, as it is performed after WHERE (and after grouping).
 * `ASC` is used with `ORDER BY` by default, and so can be omitted
-* Some systems use `TOP 10` (SQL Server, MS Access) or `ROWNUM <= 10` (Oracle) instead of `LIMIT 10` (mySQL). Those that use TOP also support a codeword `TOP 10 PERCENT`.
-* `OFFSET 1` - a rather rare thing that goes in the same part as LIMIT, and makes the query return not the rows that were found, but rows that are offset from this rows by this number.
-* `UNION`, `INTERSECT`, `EXCEPT` - Logical operations on selects. Usage: `SELECT * FROM table1 UNION SELECT * FROM table 2;`. The tables should match in terms of their columns, otherwise it'll break (use JOINs if the tables don't match perfectly). The first table that was called defines column names for the entire output. By default UNION only returns distinct rows, but use `UNION ALL` if duplicates are needed.
+* ⚠️ Some systems use `TOP 10` immediately after `SELECT` (SQL Server, MS Access) or `ROWNUM <= 10` inside `WHERE` (Oracle) instead of `LIMIT 10` (mySQL). Those that use TOP also support a codeword `TOP 10 PERCENT`.
+* `OFFSET 1` - a rather rare thing that goes in the same  part as `LIMIT`, and makes the query return not the rows that were found, but rows that are offset from this rows by this number.
+* `UNION`, `INTERSECT`, `EXCEPT` - Logical operations on selects. Usage: `SELECT * FROM table1 UNION SELECT * FROM table 2;`. The tables should match in terms of their columns, otherwise it'll break (use JOINs if the tables don't match perfectly). The first table that was called defines column names for the entire output. By default `UNION` only returns distinct rows, but use `UNION ALL` if duplicates are needed.
 
 ### Joins
 * `INNER JOIN` - only those records that exist in both tables. A simple `JOIN` without anything else, is an INNER JOIN by default.
@@ -43,11 +43,13 @@ WHERE t2.col2 IS NULL;
 * To imitate subtraction, do: `SELECT * FROM t1 LEFT JOIN t2 ON t1.key=t2.key WHERE t2.key is NULL;`. This way it will first try to LEFT JOIN, and maybe finds some matches, but for those rows of t1 that didn't get  a match in t2, it sets t2.key to NULL. And then we immediately filter these rows.
 * Something like a self-join is also possible, using syntax with aliasing: `SELECT a.name AS name1, b.name AS name2 FROM table1 AS a, table1 AS b WHERE a.manager=b.id;`. In this case we'll have a list of all relations between people in an organization, all from one self-referencing table.
 
-### Subquery
-`SELECT * FROM table1 WHERE id IN (SELECT ...);`.
-* `ALL`, `ANY` - used within where or having, as conditions on subqueries. So you can do `WHERE col1 = ANY (SELECT ...)`.
-* `SOME` - exact synonym to `ANY` used in some versions.
-* `EXISTS`- to check whether a subquery returned anything: `WHERE EXISTS (SELECT ...)`.
+### Subqueries
+There are three type of subqueries:
+1. The most common one goes inside `WHERE`: `SELECT * FROM table1 WHERE id IN (SELECT ...);`.
+    * Some  useful keywords here include `ALL` and `ANY`, that are used as conditions on subqueries. (Some systems use`SOME` instead of `ANY`). For example: `WHERE num > ANY (SELECT ...)`. _It seems that it can be replaced with `MAX` or `MIN` under inner `SELECT`, no? If yest, then what's the benefit of using them? Isn't `SELECT MAX(num)` inherently easier to understand?_
+    * `EXISTS`- to check whether a subquery returned anything: `WHERE EXISTS (SELECT ...)`.
+2. `FROM` subquery: for example `SELECT * FROM (SELECT ...) AS table2`. This `AS` is required, as without it we will have ambiguity, as inner and outer tables would obviously have same column names. In systems without windows and `OFFSET` one can find 2nd max element with it, for example.
+3. `SELECT` subquery: one can write `SELECT a, b, SELECT(...) as c FROM ...`. This one seems to be the most esoteric, and at least some systems don't allow there to be more than one query of this kind per entire SQL expression.
 
 ### Virtual table
 `CREATE VIEW view_name AS SELECT * FROM table1 WHERE coll="whatever";`. Can also be updated by `CREATE OR REPLACE VIEW view_name`. After you are done with this virtual table, it should be dropped using `DROP VIEW view_name`.
@@ -76,15 +78,24 @@ Apparently it's possible not to grant users permissions to delete rows and drop 
 * `BACKUP DATABASE dbname` also exists.
 
 ## Functions on data
-There are lots of built-in functions; too many to mention, including math, trigonometry, string manipulation (like `LEFT`, `LEN`, `LOWER`, and so on), and what not. Some interesting ones that are not obvious are `LEAST` and `GRATEST` that work across different columns within the same row, as opposed to MAX and MIN that work along all rows (entries) for a returned column. There are also lots of **system-specific operations on dates and times**. Read the manual.
+There are lots of built-in functions; too many to list here, including math, trigonometry, string manipulation (like `LEFT`, `LEN`, `LOWER`, and so on), and what not. Some interesting ones that are not obvious are `LEAST` and `GRATEST` that work across different columns within the same row, as opposed to MAX and MIN that work along all rows (entries) for a returned column. There are also lots of **system-specific operations on dates and times**. Read the manual:
+* https://www.w3schools.com/sql/sql_ref_sqlserver.asp
+
+Some interesting cases tho:
+* `ROUND` takes a second param for n digits, and it can be negative, so `ROUND(..., -3)` rounds to the nearest 1000, for example.
+
+## Technical tips and bits
+* **Escape sequence** for apostrophe `'` is double apostrophe `''`. So it would be `O''Hara` if you wanted to search for this data.
+* Some versions of SQL (Oracle?) refuse to, for example, sort by a Boolean value (some versions do type coercion, but some don't). To treat Booleans as numbers, use `CASE WHEN condition THEN 1 ELSE 0 END`. You can obviously do any other values here.
+* Some versions (Oracle again?) cannot do `UNION` on sorted  queries, as they treat `UNION` as a set operation, which invalidates sorting. You can only sort things after union.	
 
 ## Control structures
 Apparently SQL (especially larger systems, like **SQLServer**, or **Transact-SQL** from Microsoft) also has its own system of control structures, with IF, ELSE, BEGIN TRY, BEGIN CATCH, WHILE, and what not.
 
 # Refs
 
-* Good reference / tutorial: https://www.w3schools.com/sql/default.asp
-* Basic intro tutorial with quizzes: https://sqlzoo.net/
+* Main reference / tutorial: https://www.w3schools.com/sql/default.asp
+* Basic intro tutorial with some nice quizzes: https://sqlzoo.net/
+* Confetti also has a whole section on SQL: https://www.confetti.ai/curriculum
 * PostgreSQL Exercises: https://pgexercises.com/
-* Allegedly some other tutorial site (looks sketchy tho): https://www.sql-ex.ru/learn_exercises.php
 * Some other site: https://www.stratascratch.com/

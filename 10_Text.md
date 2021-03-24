@@ -13,6 +13,16 @@
 
 # To read:
 
+Non-technical, but supposedly detailed, introduction into modern text methods:
+* https://machinelearningmastery.com/statistical-language-modeling-and-neural-language-models/
+* https://paperswithcode.com/task/language-modelling
+* https://www.topbots.com/leading-nlp-language-models-2020/
+* https://web.stanford.edu/~jurafsky/slp3/
+* https://raohacker.com/why-the-new-ai-nlp-language-model-gpt-3-is-a-big-deal/
+* https://jalammar.github.io/a-visual-guide-to-using-bert-for-the-first-time/
+* https://jalammar.github.io/illustrated-bert/
+* https://cacm.acm.org/magazines/2020/6/245162-contextual-word-representations/fulltext
+
 Chiang, C. H., & Lee, H. Y. (2020). Pre-Training a Language Model Without Human Language. arXiv preprint arXiv:2012.11995.
 https://arxiv.org/pdf/2012.11995.pdf
 
