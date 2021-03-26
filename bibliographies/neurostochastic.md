@@ -25,5 +25,4 @@ Portugues, R., Haesemeyer, M., Blum, M. L., & Engert, F. (2015). Whole-field vis
 
 # Individual variability
 
-Jones, B. M., Rao, V. D., Gernat, T., Jagla, T., Cash-Ahmed, A. C., Rubin, B. E., ... & Middendorf, M. (2020). Individual differences in honey bee behavior enabled by plasticity in brain gene regulatory networks. Elife, 9, e62850.
-https://elifesciences.org/articles/62850
+Jones, B. M., Rao, V. D., Gernat, T., Jagla, T., Cash-Ahmed, A. C., Rubin, B. E., ... & Middendorf, M. (2020). Individual differences in honey bee behavior enabled by plasticity in brain gene regulatory networks. Elife, 9, e62850. https://elifesciences.org/articles/62850

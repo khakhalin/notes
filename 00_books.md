@@ -97,6 +97,7 @@ Job-search specific materials:
 
 * [Google Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course/) - a really good introduction for complete noobs 
 * "Dive into Deep Learning": http://d2l.ai/index.html 🔥
+* FastAI course: https://course.fast.ai/
 * Lectures by Sebastian Raschka: https://www.youtube.com/c/SebastianRaschka/videos
 * [Some other intro to data science](https://www.youtube.com/playlist?list=PLMrJAkhIeNNQV7wi9r7Kut8liLFMWQOXn) - with Steve Brunton
 * [Theory of computation](https://www.youtube.com/playlist?list=PL601FC994BDD963E4) - Youtube
@@ -133,8 +134,9 @@ Useful pure math for naive people
 # Interactive demos
 
 * ConvNetJS in-browser DL by Karpathy: https://cs.stanford.edu/people/karpathy/convnetjs/
+* A bunch of cool ML-related visualizations from Terence Parr: https://explained.ai/
 
-# Teaching links
+# Intro links
 
 Teaching coding:
 * Think Python: https://greenteapress.com/wp/think-python-2e/

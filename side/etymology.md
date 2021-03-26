@@ -33,7 +33,6 @@ Missing languages:
 * Ossetic
 * Kabardian
 * Kalmyk
-* Nogai	
 * Kumyk
 * Nogai
 * Abkhaz
@@ -48,6 +47,10 @@ Cool map with all languages:
 https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Simplified_Languages_of_Europe_map.svg/1541px-Simplified_Languages_of_Europe_map.svg.png
 
 # Remotely relevant links
+
+A world map for every year: http://geacron.com/home-en/
+
+A map catalog of medieval badges: https://www.kunera.nl/
 
 Russian public kadaster: https://pkk.rosreestr.ru/
 Реестр: https://egrp365.ru/reestr?egrp=50:33:0030577

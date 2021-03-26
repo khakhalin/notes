@@ -16,3 +16,5 @@ Subtopics and papers:
 https://www.expunctis.com/2019/03/07/Not-so-random.html
 
 # Refs
+
+Rose, S. P. (2005). Human agency in the neurocentric age: Philosophers and scientists resort to dualistic explanations to reconcile the age‐old dichotomy between determinism and ‘free will’, but agency is an integral part of human biology. EMBO reports, 6(11), 1001-1005. https://pubmed.ncbi.nlm.nih.gov/16264421/

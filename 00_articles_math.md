@@ -40,7 +40,7 @@ Thomas G. Dietterich. Mar 6, 2018.
 https://medium.com/@tdietterich/reflections-on-innateness-in-machine-learning-4eebefa3e1af
 Another must-do short read.
 
-👉 Bengio, Y., Lee, D. H., Bornschein, J., Mesnard, T., & Lin, Z. (2015). Towards biologically plausible deep learning. arXiv preprint arXiv:1502.04156. [https://arxiv.org/pdf/1502.04156.pdf](https://arxiv.org/pdf/1502.04156.pdf)  Mathy, then mnist. [[Bengio2016towards]]
+Bengio, Y., Lee, D. H., Bornschein, J., Mesnard, T., & Lin, Z. (2015). Towards biologically plausible deep learning. arXiv preprint arXiv:1502.04156. [https://arxiv.org/pdf/1502.04156.pdf](https://arxiv.org/pdf/1502.04156.pdf)  Mathy, then mnist. [[Bengio2016towards]]
 
 The Unreasonable Effectiveness of Recurrent Neural Networks
 http://karpathy.github.io/2015/05/21/rnn-effectiveness/
