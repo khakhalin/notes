@@ -3,9 +3,11 @@
 Murray, J. M. (2019). Local online learning in recurrent networks with random feedback. ELife, 8, e43299.
 https://elifesciences.org/articles/43299
 
-Related: [[echo]]
+Parents: [[credit]], [[echo]]
+Related: [[Lillicrap2020backprop]]
 
 #echo #neuro
+
 
 Classic [[echo]] architecture: x→W→echo→Wou→y, exponentially decaying neurons, tanh() activation. Like fancy-looking equations, even though the logic is simple.
 

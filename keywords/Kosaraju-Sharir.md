@@ -2,6 +2,7 @@
 
 Parents: [[09_Graphs]] / [[algos_graph]]
 
+
 A linear time algorithm (O(V+E)) for finding strongly connected components in a directed graph. Boils down to the following:
 * Using DFS, calculate reversed-postorder (a proxy for topological order). Call it L.
 * Reverse the graph. Run DFS on this graph, initiating new DFS recursions in the order of L. Every part on which DFS propagates recursively until completion is its own strongly connected component.

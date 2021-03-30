@@ -1,19 +1,20 @@
 # Local Linear Regression, or LOESS
 
-#regression #dsp #smoothing
-
 Parents: [[02_Regression]], [[smoothing]], dsp (digital signal processing)
 Related: [[kernels]]
 
+#regression #dsp #smoothing
+
+
 **LOESS** stands for **Locally Estimated Scatterplot Smoothing**, and it is the most common way of smoothing time series. But essentially it is local linear regression. Is also sometimes called the **Savitzky–Golay filter**", after a famous dsp implementation from 1964.
 
-The general idea: let's assume that our approximating function h behaves kinda linearly near every point x_i, so that $h(x) ≈ θ_0 + θ(x-x_0)$. But then instead of assuming that θ is the same across the entire space, we will believe  that each x_0 has its own θ, that is valid in the vicinity of x_0. We will define this vicinity using a kernel (making the importance of fitting each (x,y) pair fall off if they are further away from x_0), and we'll also make this kernel have a finite size, so that we wouldn't have to include every possible point in each calculation. But note: x_0 is not a learning point (not one of the points in the dataset we're working with, it's the point where we want to calculate the estimator!)
+The general idea: let's assume that our approximating function h behaves kinda linearly near every point x_i, so that $h(x) ≈ θ_0 + θ(x-x_0)$. But then instead of assuming that θ is the same across the entire space, we will believe  that each x_0 has its own θ, that is valid in the vicinity of x_0. We will define this vicinity using a kernel (making the importance of fitting each (x,y) pair fall off if they are further away from x_0), and we'll also pick a finite kernel, so that we don't have to include every possible point in each calculation. But note ⚠️: in this notation, x_0 is not a learning point (not one of the points in the dataset we're working with, it's the point for which we want to calculate the estimator!)
 
-> That's the huge problem with all these explanations of local regression: they use the **notation** that doesn't match the notation for any other method! Usually you have data (x_i, y_i), and a new point x, and you're trying to estimate h(x), so that it h(x_i)~y_i. But for LOESS we estimate h for each point using a "virtual" linear regression, anchored at this point, that we call x_0 (just because that's the standard notation for linear regression). And then while describing this linear regression we kinda have a "virtual" variable (x) that runs in the vicinity of our anchoring point (x_0). So instead of a standard notation where h(x) approximates points (x_i, y_i), we have h(x_0) approximating (x_i, y_i) by assuming that for each x_0 there's some x that lives in its vicinity, and θ0+θ(x-x_0) approximates those y that can be found in this vicinity. With ever increasing tolerance, as you go further from x_0 (because kernels).
+> That's a huge problem with all these explanations of local regression: they use the **notation** that doesn't match the notation for any other method! Usually you have data (x_i, y_i), and a new point x, and you're trying to estimate h(x), so that it h(x_i)~y_i. But for LOESS we estimate h for each point using a "virtual" linear regression, anchored at this point, that we call x_0 (just because that's the standard notation for linear regression). And then while describing this linear regression we kinda have a "virtual" variable (x) that runs in the vicinity of our anchoring point (x_0). So instead of a standard notation where h(x) approximates points (x_i, y_i), we have h(x_0) approximating (x_i, y_i) by assuming that for each x_0 there's some x that lives in its vicinity, and $θ_0+θ(x-x_0)$ approximates those y that can be found in this vicinity. With ever increasing tolerance (increasingly relaxed attitude), as you go further from x_0 (because kernels).
 
 So, in practice, for every point x_0 for which we want to build an estimation (for each x point on our graph, for example, if we are making a plot) , we find the best set of parameters θ, to build a good linear estimator $h(x) = θ_0 + θ(x-x_0)$.  But to show that only local y points matter, we calculate L2 loss ([[l2]]) with a discounting term called a **kernel** $K$ that quickly drops as we move away from x_0:
 
-$\displaystyle L = \sum_i K(||x_i - x_0||/d)(y_i-h(x_i))^2$, where, again, $h(x) = θ_0 + θ(x-x_0)$, and θ is unique for this $x_0$ in particular. $K$ is a kernel function with quick drop-off, and $d$ is a spacial scaling factor typically called the **bandwidth**.
+$\displaystyle L = \sum_i K(||x_i - x_0||/d)(y_i-h(x_i))^2$, where, again, $h(x) = θ_0 + θ(x-x_0)$, and θ is unique for this $x_0$ in particular. $K$ is a kernel function with quick drop-off, and $d$ is a spatial scaling factor that is typically called **bandwidth**.
 
 The most popular kernels include:
 * **Gaussian** (but not for loess)

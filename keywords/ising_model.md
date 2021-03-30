@@ -1,6 +1,10 @@
 # Ising model
 
+Parent: [[complexity]], [[chaos]]
+Derived models: [[hopfield]], [[boltzmann_machine]]
+
 #complexity #physics #chaos
+
 
 A famous simplified model of magnetic interactions in a crystal that replicates phase transitions, and can be used as a model of practically anything.
 

@@ -50,7 +50,7 @@ For **conditional data retrieval** we have a choice between:
 * To find `None`-like objects (or their absence), use `	.notnull()`, and its opposite `.isnull()`. It seems that `isna()` and `notna()` also work, and are exact synonyms (I think?).
     * Note that while **queries** support stuff like `'x>0 | x<100'`, they don't support these na-related functions for some reason, unless you call with a certain flourish. So to filter out nans one has two options:
         * A hack: `query('x == x')`. This works, because NAs aren't equal to themselves!!
-        * A proper fancy call:  `query('x.notna()', engine='pyton')`
+        * A proper fancy call:  `query(	'x.notna()', engine='python')`
 
 To thin out a dataset, several options:
 * One: `df = df[df.x>0]`.

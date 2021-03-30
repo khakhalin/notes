@@ -6,6 +6,8 @@ Subtopics:
 * [[lstm]] - Long Short-Term Memory
 * [[gru]] - Gated Recurrent Unit (kinda a simplified version of LSTM)
 * [[echo]] - Echo-State Networks
+* [[boltzmann_machine]] - a famous older model
+* [[hopfield]] - another famous older model
 
 Papers:
 * ?

@@ -4,15 +4,15 @@ Parents: [[linalg]], [[02_Regression]]
 
 #linalg
 
-> #todo: this description doesn't make sense currently. It's supposed to summarize ESL p54, but I cannot understand it upon re-reading it. Rewrite!
+> #todo: this description doesn't make sense currently. It's supposed to summarize ESL p54, but I cannot understand it upon re-reading. Rewrite!
 
-GS is a computationally solid approach to calculating θ, that is much better than inverse matrices computationally. The idea: iteratively break y into x_j and everything else, as if the basis was orthonormal; calculate everything that remains, continue.
+GS is a computationally solid approach to calculating θ, which is much better computationally than calculating an inverse matrix. The idea: lets's break (decompose) y into x_j and everything else, iteratively, as if the basis was orthonormal; calculate everything that remains, continue.
 
 **Algorithm** (without normalization):
 1. Set xi (the current best guess for x) to x0
-2. Replace xi with its projection to the complement of all previously considered coordinates: qi = xi - ∑proj(xi→qj) = xi - ∑qj∙⟨xi,qj⟩/⟨qj,qj⟩ where j=0 to i-1. Remember all scalar products from this formula as cji = ⟨xi,qj⟩.
+2. Replace xi with its projection to the complement of all previously considered coordinates: $q_i = x_i - ∑_j\text{proj}(x_i→q_j)$ $= x_i - ∑_j q_j⟨x_i,q_j⟩/⟨q_j,q_j⟩$ where j=0 to i-1. Remember all scalar products from this formula as $⟨x_i,q_j⟩=c_{ji}$.
 3. Find the best projection of y onto qi: γi = ⟨y,qi⟩
-4. Shift current x from xi to x_i+1. Go to step 2.
+4. Shift "current" x from xi to x_i+1. Go to step 2.
 
 This produces a split of X into X = QR where Q with dimensions (N × p+1) is column-orthogonal, and R with dim of (p+1 × p+1) that is upper triangular, with elements cji=⟨xi,qj⟩/⟨qj,qj⟩ (in case or not-normalized basis, 1s on the diagonal). And we get a set of estimates {γ_i} that represent y in the basis Q.
 

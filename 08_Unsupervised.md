@@ -3,12 +3,13 @@
 #bib #unsupervised #self-supervised #embedding #representation
 
 **Subtopics:**
-* [[embedding]]
+* [[embedding]] - embedding and representation
 * [[vae]] - autoencoders
-* [[gan]] - GANs :)
+* [[gan]] - Generative Adversarial Networks
 * noisy-student #todo
+* [[boltzmann_machine]] - a famous older model
 
-**Related:**
+**Related concepts:**
 * [[triplet_loss]] - aka contrastive loss or contrastive learning, aka **negative sampling** (which also seems to be a more popular term)
 * [[word2vec]] - an example from text
 

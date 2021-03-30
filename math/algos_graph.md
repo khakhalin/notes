@@ -1,8 +1,9 @@
 # Graphical algorithms
 
+Parent: [[09_Graphs]]
+
 #algo #networks
 
-Parent: [[09_Graphs]]
 
 Famous algorithms:
 * [[dijkstra]] - Dijsktra's shortest path algorithm (from source to all nodes)

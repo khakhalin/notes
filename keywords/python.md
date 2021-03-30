@@ -4,10 +4,10 @@
 
 Path: [[01_Tools]]
 
-Related and subtopics: 
+Subtopics and related:
 * [[oop]] - Pythonic implementation of OOP is all given there
 * [[unit_test]] - how to write unit tests correctly (in Python)
-* Libraries: [[pandas]], [[tensorflow]], [[numpy]], [[matplotlib]], [[py_dates]]
+* Libraries: [[pandas]], [[tensorflow]], [[numpy]], [[matplotlib]], [[py_dates]], [[regex]]
 * Tools: [[anaconda]], [[jupyter]]
 
 # Random tips

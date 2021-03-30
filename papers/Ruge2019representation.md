@@ -1,4 +1,5 @@
 # Neural representation of newly instructed rule identities during early implementation trials
+
 Ruge, H., Schäfer, T. A., Zwosta, K., Mohr, H., & Wolfensteller, U. (2019). Neural representation of newly instructed rule identities during early implementation trials. eLife, 8.
 https://elifesciences.org/articles/48293
 

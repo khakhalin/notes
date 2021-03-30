@@ -26,7 +26,7 @@ As a corollary, the entropy for a variable X following distribution P is lower t
 H(X) = log(N_events) - D( P || uniform_across_events ) .
 For uniform P(x), we have max entropy, so by updating from it to P, we demonstrate that we learned something, so entropy decreases.
 
-It's interesting that if we think of it in terms of an **update**, it is P that is a posterior, or an update, while if we use it as a **loss function**, ten P is the "ground truth", and Q is a distribution that is compared to it. So which one is known first, and which one second, is kind of opposite in these two scenarios. What is common in both cases, is that **P is a better known distribution**, and thus a "more true" one.
+It's interesting that if we think of it in terms of an **update**, it is P that is a posterior, or an update, while if we use it as a **loss function**, then P is the "ground truth", and Q is a distribution that is compared to it. So which one is known first, and which one second, is kind of opposite in these two scenarios. What is common in both cases, is that **P is a better known distribution**, and thus a "more true" one.
 
 Note also that when used as a loss function, KL is the same as cross-entropy, as they differ by H(p), and in loss function scenarios, H(p) is usually constant, and so doesn't affect optimization. (See for example [[umap]])
 

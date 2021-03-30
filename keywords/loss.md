@@ -12,10 +12,6 @@ Subtopics
 * [[perceptual_loss]]
 * Hinge loss - used in [[svm]]
  
-# MSE, ara L2, aka Eucledian
-
-Obvious choice for continuous output: **Eucleadian distance**, aka **Mean Squared Error**, aka  **MSE**. See: [[l2]].
-
 # Huber Loss
 
 **Huber loss**: a compromise between MSE loss that is tolerant to small noise (behaves nicely around 0, as x² ≪ x for small x), but is super-sensitive to outliers, and linear loss that is the other way around. Essentially, just a parabola with two linear arms smoothly grafted to it, to keep growth for large x linear. Smooth in terms of f(x) and f'(x).

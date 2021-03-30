@@ -5,22 +5,15 @@
 The concept of **ensembles** is about combining (or gradually refining) many poor predictions (aka **weak learners**) into a very good predictor.
 
 Subtopics:
-* [[bagging]] - bootstrap data repeatedly, many models, average predictions
+* [[bagging]] - bootstrap data repeatedly, many models, average their predictions
 * [[stacking]] - many predictors (bagging + diff hyperparameters), then optimal linear combination of models
 * [[bumping]] - randomly move in the latent space, to avoid local minima, then simply pick the best model
-* [[boosting]] -  pick best single-var single split (decision stump), boost wrong points, build a weighted model
+* [[boosting]] -  iteratively pick best single-var split (decision stump), boost errors, build a weighted model
 * [[gbm]] - gradient boosting machines; similar to boosting, but for non-categorical data
 * [[random_forest]] - bagging + features_bagging (random subset of coordinates), average all
 
 See also:
 * [[dropout]] - similar idea for DL
-
-## Bagging vs Boosting comparison
-
-* Bagging tends to decrease variance, but not necessarily bias (biases of different models would just average). Boosting tends to reduce both variance and bias.
-* Conversely, Bagging does not overfit (each weak learning may overfit, but these effects will cancel out), while Boosting can overfit very easily, by slicing space ever thinner around every point.
-* Except for the very last step, bagging can happen in parallel, while boosting is by definition sequential, and so not easily parallelizable.
-* Compared to many other ML methods, both bagging and boosting are very fast.
 
 # Refs
 

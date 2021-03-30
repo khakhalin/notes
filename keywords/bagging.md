@@ -1,17 +1,16 @@
 # Bagging
 
-#ensemble
-
 Parent: [[05_Ensembles]]
 Related: [[boosting]]
 
-# Bagging
+#ensemble
 
-Bootstrapping can be used to improve estimations. **Bagging**: bootstrap the data repeatedly; each time build an estimator, then average predictions of these estimators. Why does it work though? For linear estimators (like linear regression) it doesn't, as E(h(x)) = h(E(x)) = h(full data). But for non-linear h(), like **regression trees**, it may smoothen idiosyncrasies of each individual h(x).
 
-How to best combine opinions of several classifiers into one output? One option is to one-hot encode output labels, average them across models, then pick the maximal score (the most popular label). Another is to make each classifier output vectors of probabilities for different levels, instead of levels themselves; then average these probabilities. This latter approach is smoother (lower variance), and if each vector is ∑=1, then the final output would naturally ∑=1, which is helpful.
+Bootstrapping data can improve estimations. **Bagging** bootstraps data repeatedly; each time build an estimator, then average predictions of these estimators. Why does it work? For linear estimators (like linear regression) it doesn't, as E(h(x)) = h(E(x)) = h(full data). But for non-linear h(), like **regression trees**, it may smoothen idiosyncrasies of each individual h(x).
 
-> Bias is apparently unchanged (ESL p285, stated as a fact, followed by a page of confusing "illustration"). Is it because no additional constraints are introduced by the procedure? How to intuit it? In which cases the bias WOULD BE changed? What sorts of modifications of h(x) procedure change the bias, and which sorts do not?
+How to best combine opinions of several classifiers into one output? One option is to one-hot encode output labels, average them across models, then simply pick the maximal score (the most popular label). Another is to make each classifier output vectors of probabilities for different levels, instead of levels themselves; then average these probabilities. This latter approach is smoother (lower variance), and if each vector is ∑=1, then the final output would naturally ∑=1, which is helpful.
+
+> Bias is apparently unchanged (ESL p285, stated as a fact, followed by a page of confusing "illustration"). Is it because no additional constraints are introduced by the procedure? How to intuit it? In which cases the bias WOULD change? What sorts of modifications of h(x) procedure change the bias, and which sorts do not?
 
 > So it seems that the key power of bagging is that it takes a very discrete, run-down method that is by design jumpy, and overfits like hell, and turns it into a smoothed landscape. Is this shifting from discrete to pseudo-continuous the main reason for why bagging works? Or are there some hidden indirect serendipitous regularizatons involved?
 

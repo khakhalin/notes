@@ -1,9 +1,9 @@
 # Logistic Regression
 
-#classification
-
 Parent: [[03_Classification]], [[02_Regression]]
 See also: [[linear_regression]], [[linear_separation]], [[softmax]], [[lda]], [[svm]], [[loss]], [[ranking]]
+
+#classification
 
 
 By Bayes theorem, our best guess about $P(g|x)$, the probability of point x belonging to a class g, would be $\displaystyle P(g|x) = \frac{f(x)p_g}{\sum_h f(x)p_h}$ , where p_g is prior probability of belonging to this class, and the sum goes through all possible classes. Not only it looks a more like a probability, but actually leads to the math behind logistic regression.
@@ -35,7 +35,7 @@ And that's why log-regression (that is, assuming that p follows a sigmoid curve)
 
 # Regularized Log Regression
 
-**L1 penalty** (lasso) is good for this: take the previous L=-∑ y log(p) + (1-y) log(1-p), and add to it λ∑|θj| , where the sum runs by dimension (by coordinate). Apparently, if you now do the math, you get the following link between everything: xθjᵀ(y-p) = λ∙sign(θj) for each dimension j.
+**L1 penalty** (lasso) is good for this: take the previous L=-∑ y log(p) + (1-y) log(1-p), and add to it λ∑|θj| , where the sum runs by dimension (by coordinate). Apparently, if you now do the math, you get the following link between everything: $xθ_j^\top (y-p) = λ\cdot\text{sign}(θ_j)$ for each dimension j.
 
 > Not sure what it means. Check elsewhere or derive! #todo
 

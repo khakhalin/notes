@@ -19,7 +19,7 @@ For all echo-like networks in actual brains, see: [[synfire]] chains.
 * [[Lukosevicius2012echo]] - practical advice
 * [[Carroll2019structure]] - playing with minimalistic structure (all weights +1, 0, or −1)
 * [[Carroll2020chaos]] - is chaos good for ESN? Not always (but apparently "yes" for ODE ESN)
-* [[Murray2019local]] - Hebb  + eligibility trace + random feedback weights approximate backprop
+* [[Murray2019local]] - Hebb  + eligibility trace + random feedback weights approximate [[backprop]]
 
 # Summary
 

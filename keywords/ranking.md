@@ -1,9 +1,10 @@
 # On ranking from pairwise comparisons
 
-#centrality #bib
-
 Parents: ??
 Related: [[centrality]], [[logreg]]
+
+#centrality #bib
+
 
 **Problem:** we have a bunch of pairwise comparisons (say, plays within players, that can end in a win for one or another). We want to create a "natural" ranking system. I think the most logical ways to define it is so that the Δrank would be a predictor of the win/loss ratio, but not sure how universal this assumption is.
 

@@ -3,7 +3,11 @@
 #bib #rnn
 
 Parents: [[07_RNNs]]
+Sister models: [[boltzmann_machine]], [[ising_model]]
 Related: [[deepneuro]], [[ene_091_hipp]], [[stdp]]
+
+
+An **energy-based model**.
 
 # Continuous Hopfield networks
 

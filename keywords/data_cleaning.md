@@ -16,7 +16,7 @@ Approaches to data validation:
 * Range constraints (for numbers) and set-constraints (for nominal data with a limited set of options)
 * Uniqueness
 * Foreign key constraints (a generalization for set membership)
-* [[Regex]] patterns
+* [[regex]] patterns
 
 # Refs
 

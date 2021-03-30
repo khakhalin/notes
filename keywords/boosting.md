@@ -1,9 +1,10 @@
 # Boosting and AdaBoost
 
-#ensemble
-
 Parents: [[05_Ensembles]]
 Related: [[bagging]], [[gbm]]
+
+#ensemble
+
 
 Boosting uses simplest decision trees possible:  for every coordinate we make a single split into 2 categories, aka **decision stumps**. But with every next series of trees, we increase the weights for those elements that weren't classified correctly by the previous generation of classifiers. (At the beginning of the process, for the very first tree, we start with equal weights). These weights may either be explicitly included in the error calculation, or be used as probabilities for each data point to appear in next training subset (mathematically, the results are the same). At the end, predictions are made by **weighted majority rule**: the average across all trees, weighted by the **accuracy of individual trees**, followed by argmax.
 
@@ -28,6 +29,13 @@ For multi-class classification, either create lots of binary classifiers (each c
 In many ways, AdaBoost goes against the conventional wisdom for classification: it doesn't try to build a good classifier, but instead uses a lot of crappy ones. It does not try to identify important variables, or isolate important features using dimensionality reduction, but instead, it thrives in this high-D multi-variable space.
 
 It is also possible to use boosting with custom loss functions: for example, one can put more weight in false-positives compared to false-negatives, or ther other way around.
+
+## Bagging vs Boosting comparison
+
+* Bagging tends to decrease variance, but not necessarily bias (biases of different models would just average). Boosting tends to reduce both variance and bias.
+* Conversely, Bagging does not overfit (each weak learning may overfit, but these effects will cancel out), while Boosting can overfit very easily, by slicing space ever thinner around every point.
+* Except for the very last step, bagging can happen in parallel, while boosting is by definition sequential, and so not easily parallelizable.
+* Compared to many other ML methods, both bagging and boosting are very fast.
 
 # Refs
 

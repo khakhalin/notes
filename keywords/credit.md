@@ -13,10 +13,8 @@ Lillicrap, T. P., Cownden, D., Tweed, D. B., & Akerman, C. J. (2016). Random syn
 
 # Backprop in the brain
 
-* [[Lillicrap2020backprop]]  - Backpropagation in the brain (review)
+* [[Lillicrap2020backprop]]  - [[backprop]] in the brain (review)
+* [[Murray2019local]] - feedback alignment imitating [[backprop]] in [[echo]]-like networks
 * [[Bengio2016towards]] - towards biologically plausible deep learning #todo (nothing there yet)
-
-Backpropagation and the brain. Timothy P. Lillicrap, Adam Santoro, Luke Marris, Colin J. Akerman & Geoffrey Hinton (2020) https://www.nature.com/articles/s41583-020-0277-3
-(Opinion piece) 
 
 # Credit assignment in RL

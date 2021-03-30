@@ -72,10 +72,6 @@ https://arxiv.org/abs/1803.10122
 * Batch normalization [[batch_normalization]] - why and how?
 * How to perform unsupervised clustering using DL networks?
 * [[Redis]]
-* Regex (including in Python)
-    * https://medium.com/factory-mind/regex-cookbook-most-wanted-regex-aa721558c3c1
-    * https://medium.com/better-programming/introduction-to-regex-8c18abdd4f70
-    * https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285
 * Neural networks breakpoints (a visualization / troubleshooting method):
     * https://discourse.numenta.org/t/the-breakpoints-of-a-neural-network/6775
     * https://www.youtube.com/watch?v=QEWe-aRBUAs
