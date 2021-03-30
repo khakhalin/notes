@@ -6,12 +6,13 @@ Subtopics:
 * Entropy - described below
 * [[cross-entropy]]
 * [[kl]] - KL (Kullback–Leibler) and JS (Jensen-Shannon) Divergences
+* [[gini]] - a classification loss important for [[gbm]]
 
 # Entropy
 
-Let's start from the very beginning. Intuitively, for a single **event** x happening with probability p(x), the amount of information obtained if we learned that the event happened is −lg(p(x)). We want the measure of information behave that way, as it would mean that when two independent events happen together, **probabilities multiply, but informations add**. For the information definition of entropy we usually use a base-2 logarithm: lg(). _(But  I'm not consistent)._
+Let's start from the very beginning. Intuitively, for a single **event** x happening with probability p(x), the amount of information obtained if we learned that the event happened is −lg(p(x)). We want the measure of information behave that way, as it would mean that when two independent events happen together, **probabilities multiply, but informations add**. For the information definition of entropy we usually use a base-2 logarithm: lg(). _(But  I'm not consistent with notation here, and most books aren't)._
 
-For a **random variable**, entropy is defined as "the expected smallest number of bits needed to describe the state of this system". If all states are equally probable, you always need as many bits as you have for a binary representation for the number of states; you cannot cheat. For example, if you have 3 states to encode, a binary code (two letters, 0 and 1, or "a" and "b"), and messages that are at most 2-letters (bits) long, we'll have to use something like (a, b, aa) to encode the 3 states. So the average (expected) message length will be 1/3+1/3+2/3 = 4/3 bits. But if the probabilities for 3 states are (1/2, 1/4, 1/4), then we can can assign a longer word to a less frequent states, and the expected length will be only 1/2 + 1/4 + 2/4 = 5/4, which is smaller.  
+For a **random variable**, entropy can also be defined as the "expected smallest number of bits needed to describe the state of this system". If all states are equally probable, you always need as many bits as you have for a binary representation for the number of states; you cannot cheat. For example, if you have 3 states to encode, a binary code (two letters, 0 and 1, or "a" and "b"), and messages that are at most 2-letters (bits) long, we'll have to use something like (a, b, aa) to encode the 3 states. So the average (expected) message length will be 1/3+1/3+2/3 = 4/3 bits. But if the probabilities for 3 states are (1/2, 1/4, 1/4), then we can can assign a longer word to one of the less frequent states, and the expected length will be only 1/2 + 1/4 + 2/4 = 5/4, which is smaller.  
 
 An actual formula is: E = −∑p(x)∙lg(p(x)). As illustrated above, when the distribution of probabilities for different events is highly skewed (in an extreme case: almost always one value), entropy is small. For a constant value, it will converge to 0, as x log(x) → 0 when x→0. 
 
