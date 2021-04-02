@@ -95,7 +95,7 @@ https://arxiv.org/abs/1803.10122
 * CICD (combined practices of continuous integration)
 * With pycharm and Anaconda, do I now have Python installed twice? How does it work?
 * Briefly describe other patterns [[design_patterns]]
-* predictive coding in the brain - definition?
+* predictive coding in the brain - definition? - Huang, Y., & Rao, R. P. (2011). Predictive coding. Wiley Interdisciplinary Reviews: Cognitive Science, 2(5), 580-593.
 * pull requests, and how this workflow works
     * https://www.netlify.com/blog/2020/03/31/how-to-scope-down-prs/
 * How Python works inside:

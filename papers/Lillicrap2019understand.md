@@ -3,18 +3,20 @@
 Lillicrap, T. P., & Kording, K. P. (2019). What does it mean to understand a neural network?. arXiv preprint arXiv:1907.06374.
 https://arxiv.org/abs/1907.06374
 
-#opinion #complexity #interpretability
-
 Parents: developmental neuro, [[interpretability]]
 See also: kolmogorov complexity, crutchfield complexity, [[curriculum]] learning
+Related papers: [[Cichy2019dlasmodels]]
+
+#opinion #complexity #interpretability
 
 
 Imagine an ANN doing something cool. We can code it, describe it (vectors of params), or look at its elementary operations. But we usually cannot grasp "how" it works.
 
 > My thoughts: But how do we understand how another human acts, or maybe even how we function? Say, you learned to hit a target with a ball, or tell a raven from a crow. What does it mean to understand how you do it? Argually, we only feel that we understand it if we can explain it, so essentially create a "curriculum learning" sequence that, when presented to a different but similar human would teach them how to perform same function. And the neater (shorter), simpler (robust to noise), and clear (effective in teaching) this explanation is, the more we feel that we "get it".
-> If translated to an ANN case, to "understand an ANN", rather counter-intuitively, may mean "to provide an efficient distillation paradygm".
 
-They mention "compessability of rules", so again "distillation".
+> If translated to an ANN case, to "understand an ANN", rather counter-intuitively, may mean "to provide an efficient distillation paradigm".
+
+They mention "compressability of rules", so again "distillation".
 
 "Neuroscience should focus on understanding development and learning" - wholeheartedly agree!
 

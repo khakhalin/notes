@@ -214,10 +214,6 @@ Fremaux N, Sprekeler H, Gerstner W. Reinforcement learning using a continuous ti
 
 #deepneuro
 
-🔥 Deep Neural Networks as Scientific Models (2020). Radoslaw M. Cichy, Daniel Kaiser. Trends in Cognitive Sciences.
-https://www.cell.com/trends/cognitive-sciences/fulltext/S1364-6613(19)30034-8
-Seem to suggest that for some types of tasks data it may be easier to model a process with a DL and interpret a DL, instead of directly interpreting the data?
-
 🔥 Yaoda Xu, Maryam Vaziri-Pashkam (2020) Limited correspondence in visual representation between the human brain and convolutional neural networks
 https://www.biorxiv.org/content/10.1101/2020.03.12.989376v1 
 Essentially, some critique of deepneuro!
@@ -316,9 +312,8 @@ Spoerer, C. J., Kietzmann, T. C., & Kriegeskorte, N. (2019). Recurrent networks 
 https://www.biorxiv.org/content/10.1101/677237v3.full
 Recurrent convolutional network  works better than a feed-forward convolutional network. It's slower, but better. Claim that it's similar to primate vision somehow.
 
-Kietzmann, T. C., McClure, P., & Kriegeskorte, N. (2018). Deep neural networks in computational neuroscience. bioRxiv, 133504.
-https://www.biorxiv.org/content/10.1101/133504v2.abstract
-Overview of how DL may be a model for the brain. Seems less convinsing than Kording or Richards tbh.
+Kietzmann, T. C., McClure, P., & Kriegeskorte, N. (2018). Deep neural networks in computational neuroscience. bioRxiv, 133504. https://www.biorxiv.org/content/10.1101/133504v2.abstract
+Overview of how DL may be a model for the brain. At a first glance, seems less convinsing than Kording or Richards tbh.
 
 # Dynamics
 

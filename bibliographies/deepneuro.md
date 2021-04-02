@@ -18,6 +18,8 @@ Reviews
 * [[Zador2019pure]] - on how DL doesn't approach animal intelligence yet
 * [[Sinz2019lessartificial]] - engineering less artificial intelligence
 * [[Hassabis2017neuroai]]- neuro-inspired AI; past and future; 3-4 refs for every topic
+* [[Richards2019deepneuro]] - deep learning framework for neuroscience
+* [[Cichy2019dlasmodels]] - deep networks as scientific models
 
 DL models of cortex (except for visual cortex that is covered in [[vision]])
 * [[Muller2019cake]] - elements of unsupervised learning in the cortex
