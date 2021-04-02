@@ -40,8 +40,6 @@ See also:
 
 **Dataiku**: some sort of visual programming language platform for data science?
 
-**Docker** (db): Cloud computing service that provides a pratform with OS-level virtualization: an isolated user space (called a **container**) that looks like a dedicated computer to programs running on it. Containers can talk to each other via defined channels. But unlike virtual machines, there's only one OS, so is less resource-hungry.
-
 **Document store** (db): instead of rows, returns XML documents or something similar. [wiki](https://en.wikipedia.org/wiki/Document-oriented_database)
 
 **Drop-in replacement** (prog): Replacing part of the code without rewriting anything else. Aka "bug for bug compatibility" (drop-in will only work if all idiosynctratic bugs match exactly).

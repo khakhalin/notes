@@ -21,8 +21,9 @@ See also: [[numpy]], [[py_dates]]
 
 #### Columns
 * Get column names: `df.columns`
-* Rename all columns, just overwrite `.columns` with a different vector
 * Rename  only some columns: `df = df.rename({'a': 'X', 'b': 'Y'}, axis=1)`
+* Rename all columns, just overwrite `.columns` with a different vector
+    * Or, if chaining, do this: `.set_axis(['X','Y'], axis=1, inplace=False)`
 * Delete some columns: `df = df.drop(['a','b'], axis=1)` or `df.drop(columns=['a'])`.
 
 #### Indexing
@@ -32,7 +33,7 @@ See also: [[numpy]], [[py_dates]]
     * Column name is an integer rather than a string
     * You use dynamic addressing (`a = 'name'; df[a]`)
     * You want to assign values to a dataframe (see below)
-    * Two common useful patterns  to slam after `.values` are `.unique()` if you want only unique values, and `.tolist()` if you need a standard Pythonic list. Both are numpy methods, not pandas.
+    * Two common useful patterns  is to use `.unique()` instead of `.values`if you want a list of unique values, and `.tolist()` after either, if you need a standard  list, and not a numpy array.
 * Select rows by label: `df.loc[1]`. Works for both df (returns a row-series), and for column-series (returns a single value).
 * To cast a single value from a row-series into just a value, use `.values[0]` at the end.
 * Out-of-range integers are forgiven (ignored) on reading, but cause an error if you try to write
@@ -125,7 +126,7 @@ There are least 6 different ways to do it, listed here from (arguably) best to w
 An example of full-featured in-memory join: `pd.merge`. Archetypeical use:
         ```python
         res = df_left.merge(df_right[['key1', 'key2', 'col3']], 
-                             how='right', 
+                            how='left', 
                             on=['key1', 'key2'],
                             suffixes=[None, "_y"]
                            )
@@ -163,7 +164,7 @@ First group, then apply aggregation. `dfs = df.groupby('g').agg({'a': [min, np.m
 # Pivoting
 
 * To go from wide to long format: `pd.melt()`. Gets dataframe, a list of columns to preserve (as `id_vars`), and optionally, new names for var and value columns (as `var_name` and `value_name`). Also some flexibility around indices.
-* The opposite to melting:
+* The opposite to melting (pivoting):
     * `df.pivot(index='factor1', columns='factor2', values='values')`. Each of them may also be a list of columns, in which case it creates nested indices. If some value is not available, it is filled with NaNs. Requires that every combo of factor1-factor2 were unique in the original table, or returns an error (so it doesn't aggregate, only reshapes the data. Aggregate manually first).
     * `df.pivot_table()` - same as `pivot` (so takes same parameters `index, columns, values`), but also can do simple aggregation (a parameter `aggfunc`) that can take values like `mean` (default), `count, first, max, min` etc. Which means that it handles duplicates, by default trying to silently average them.
     * There's also `wide_to_long` that is useful if the input table has columns with values that fit a certain prefix-suffix pattern(like `day1, day2, day3` or something like that). You provide it with these suffixes, it automates the transformation.

@@ -14,6 +14,7 @@ Tips and notes on individual tools:
 * [[python]] - with separate notes for [[numpy]], [[pandas]], and some more
 * [[tensorflow]] - subj
 * [[git]] - GIT cheat sheet
+* [[docker]] - containerization
 * [[sql]] - SQL cheat sheet
 * [[latex]] - tiny notes in LaTeX
 * [[javascript]] - subj
