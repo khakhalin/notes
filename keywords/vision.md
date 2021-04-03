@@ -23,7 +23,6 @@ Papers:
 * [[Walker2018inception]] - reconstructing visual perception from visual recordings
 
 
-
 Pospisil, D. A., Pasupathy, A., & Bair, W. (2018). 'Artiphysiology'reveals V4-like shape tuning in a deep network trained for image classification. Elife, 7, e38242. https://elifesciences.org/articles/38242 - They seem to claim that CNN deep layer neurons selectivity is actually similar to primate V4. Not too wildly cited tho.
 
 Nayebi, A., Sagastuy-Brena, J., Bear, D. M., Kar, K., Kubilius, J., Ganguli, S., ... & Yamins, D. L. (2021). Goal-Driven Recurrent Neural Network Models of the Ventral Visual Stream. bioRxiv. https://www.biorxiv.org/content/biorxiv/early/2021/02/18/2021.02.17.431717.full.pdf
@@ -32,3 +31,6 @@ Nayebi, A., Sagastuy-Brena, J., Bear, D. M., Kar, K., Kubilius, J., Ganguli, S.,
 
 Olshausen, B. A., & Field, D. J. (1996). Emergence of simple-cell receptive field properties by learning a sparse code for natural images. Nature, 381(6583), 607-609.
 Some classic paper that (if I got the abstract right?) derives wavelet-like RFs from the idea of sparseness.
+
+Olshausen, B. A., & Field, D. J. (2006). What is the other 85 percent of V1 doing. L. van Hemmen, & T. Sejnowski (Eds.), 23, 182-211. http://www.rctn.org/bruno/papers/V1-chapter.pdf
+A famous paper on how we don't really understand V1 (relevant for [[convnet]]-discussions)

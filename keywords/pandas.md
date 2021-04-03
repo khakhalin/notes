@@ -172,6 +172,12 @@ First group, then apply aggregation. `dfs = df.groupby('g').agg({'a': [min, np.m
 Footnotes:
 * https://stackoverflow.com/questions/30960338/pandas-difference-between-pivot-and-pivot-table-why-is-only-pivot-table-workin
 
+# Chaining
+
+How to change columns in a chaining way? It doesn't seem to be easy. `assign` for example doesn't always work, as you cannot reference newly created columns in it (those made by `agg` or `pivot`). So we have the following options:
+* Official version: `pipe(fun, arg1)` - allows user-written functions in chains, except that this `fun` shold be defined on a dataframe, and return dataframe. So it's not for quick apply-lambdas on a single column.
+* Hack: `.apply(lambda x: fun(x) if x.name=='col_name' else x)` - not very pretty, but it works.
+
 # Misc
 
 To print a really long data frame, do this:
@@ -184,3 +190,6 @@ with pd.option_context('display.max_rows', 1400):
 
 Pandas advice from Chip Huyen
 https://github.com/chiphuyen/just-pandas-things/blob/master/just-pandas-things.ipynb
+
+Chaining:
+* https://tomaugspurger.github.io/method-chaining.html
