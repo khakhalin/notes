@@ -1,9 +1,9 @@
 # Stepwise Regression
 
-#regularization #stats
-
 Parent: [[02_Regression]]
 See also: [[ridge_regression]], [[aic]]
+
+#regularization
 
 A (bad) compromise between performance and speed: automated stepwise selection of features based on the quality of fit, and a complexity penalty (regularization). Two main approaches: **Forward selection** and **Backward selection**. Or a combinationof both (*not sure how?*)
 

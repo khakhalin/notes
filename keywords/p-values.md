@@ -1,8 +1,9 @@
 # P-values
 
+Parents: [[stats]]
+
 #stats
 
-Parents: stats
 
 # Refs
 

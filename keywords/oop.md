@@ -6,7 +6,7 @@ Parent: [[01_Tools]]
 Related:  [[python]], [[dictionary]]
 
 Subtopics:
-* [[design_patterns]] - best practices
+* [[design_pattern]] - best practices
 * [[unit_test]] - testing-driven development
 
 # Terminology

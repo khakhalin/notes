@@ -1,9 +1,10 @@
 # Principal Components Regression
 
-#stats
-
 Parents: [[02_Regression]]
 See also: [[pca]], [[ridge_regression]]
+
+#stats #regression
+
 
 A type of regression with regularization; similar to Shrinkage (aka [[ridge_regression]]), in the sense that Shrinkage also ends up shrinking components with small eigenvalues more. With the principal components regression, we just zero them altogether. Unlike ridge though, it can amplify "unworthy" coefficients in the original X space, that would have been shrunk by both Ridge and Lasso.
 

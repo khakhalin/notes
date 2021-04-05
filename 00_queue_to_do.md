@@ -32,7 +32,7 @@ Dump:
 * https://www.researchgate.net/profile/Jasmin_Saric/publication/224890616_Literature_mining_for_the_biologist_from_information_retrieval_to_biological_discovery/links/00b7d51e65b75b50cf000000/Literature-mining-for-the-biologist-from-information-retrieval-to-biological-discovery.pdf
 * https://journals.sagepub.com/doi/pdf/10.1177/1536867X0200200405
 * https://arxiv.org/abs/1801.01253#
-* https://www.builtinboston.com/
+* https://www.builtinboston.com/f
 * https://www.youtube.com/watch?v=0--5AxiZefg
 * https://www.youtube.com/watch?v=DG7YTlGnCEo
 * http://web.stanford.edu/class/cs224w/
@@ -42,13 +42,15 @@ Dump:
 
 # Top priorities
 
+* how to save sklearn models, and then load them back?
 * How react sites talk to SQL now?
 * How Python SQL?
 * docker - what and how
     * Flask docker file (allegedly 80% of what one needs for a typical deployment)
     * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
+* Apparently Java doesn't have default values for parameters, but people use builder [[design_pattern]] to emulate it. How?? https://stackoverflow.com/questions/997482/does-java-support-default-parameter-values
 * Sagemaker and Amazon EMR - what are they?
-* python environments
+* python environments - how are they realized?
 * Ha, D., & Schmidhuber, J. (2018). World models. arXiv preprint arXiv:1803.10122.
 https://arxiv.org/abs/1803.10122
 * difference between conda and pip	
@@ -94,7 +96,7 @@ https://arxiv.org/abs/1803.10122
 * redux
 * CICD (combined practices of continuous integration)
 * With pycharm and Anaconda, do I now have Python installed twice? How does it work?
-* Briefly describe other patterns [[design_patterns]]
+* Briefly describe other patterns [[design_pattern]]s
 * predictive coding in the brain - definition? - Huang, Y., & Rao, R. P. (2011). Predictive coding. Wiley Interdisciplinary Reviews: Cognitive Science, 2(5), 580-593.
 * pull requests, and how this workflow works
     * https://www.netlify.com/blog/2020/03/31/how-to-scope-down-prs/

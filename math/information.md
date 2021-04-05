@@ -1,6 +1,9 @@
 # Information and entropy
 
+Parents: [[stats]]
+
 #todo #math #entropy #stats #bib
+
 
 Subtopics:
 * Entropy - described below

@@ -1,9 +1,10 @@
 # Confusion Matrix and model assessment
 
-#classification
-
 Parents: [[03_Classification]]
 Related: [[youdens-j]], [[roc]], [[validation]]
+
+#classification #stats
+
 
 **Model accuracy**: The most primitive measure = number of true statements / total number of statements. Obvious dependency on class balance (famous example, a statement of "today is not Christmas" has an accuracy of 99.7%). But may work for toy examples with carefully balanced classes (like [[mnist]] for example).
 

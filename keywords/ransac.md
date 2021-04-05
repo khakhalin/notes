@@ -1,8 +1,9 @@
 # RANSAC - Random Sample Consensus
 
-#stats #bootstrapping
-
 See also: [[02_Regression]]
+
+#stats #bootstrapping #nonparametric
+
 
 A way to fight outliers while estimating parameters; and we are talking not just 1-2, but a **huge share of the dataset being outliers**. The key intuition is that, if given a chance, "inliers" will all "vote for" (will be in higher accordance with) some ground-truth model (or a family of models that are similar to it?), while outliers will be idiosyncratic, and won't be consistent with most (almost any) models.
 
@@ -15,7 +16,7 @@ The idea is that reasonable models will be oversampled, and so reasonable inlier
 
 Conversely, RANSAC can also be used to detect outliers.
 
-The main disadvantage of RANSAC is that it doesn't guarantee a good solution, but is supposed to always improve, so there's no clear way to tell when it is done. There are some mathematical tricks to choose the number of points, based on the binomial distribution, but one needs an estimate for the ratio of outliers/inliers to use it:
+The main disadvantage of RANSAC is that it doesn't guarantee a good solution, but is supposed to always improve, so there's no clear way to tell when it is done. There are some mathematical tricks to choose the number of points, based on the [[binomial]] distribution, but one needs an estimate for the ratio of outliers/inliers to use it:
 
 $N=\frac{log(1-p)}{log(1-(1-v)^m)}$ where p is the probability that at least one subset does NOT contain an outlier (usually set at something high like 0.99), and $v$ is the rate of outliers (probability of observing an outlier). _Not sure how exactly it is helpful, given that p is such as weird input for this formula, but apparently people can relate to it?_
 

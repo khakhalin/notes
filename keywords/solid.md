@@ -3,7 +3,7 @@
 #oop
 
 Parent: [[oop]]
-See also: [[design_patterns]]
+See also: [[design_pattern]]
 
 An acronym for 5 core principles of OOP:
 1. SRP: Single-Responsibility
