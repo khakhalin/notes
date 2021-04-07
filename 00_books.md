@@ -64,7 +64,7 @@ Also:
 * Pattern recognition and ML by Christopher Bishop ([pdf](https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/)) - Has a more Bayesian perspective. [This set of notebooks](https://github.com/ctgk/PRML) implements this book, chapter by chapter.
 * Foundations of ML by M. Mohri et al ([pdf](https://cs.nyu.edu/~mohri/mlbook/)) - more mathy?
 * ML book by K.P. Murphy - ([site](https://www.cs.ubc.ca/~murphyk/MLbook/), but no full pdf)
-* Morgan, S. L., & Winship, C. (2015). Counterfactuals and causal inference (pdfs are googlable)
+* Morgan, S. L., & Winship, C. (2015). Counterfactuals and causal inference (pdfs are googlable). [[counterfactuals]]
 * Bayesian Statistics: Statistical Rethinking, by Richard McElreath
 * Artificial Intelligence: A Modern Approach, by Russel and Norvig. ([site](http://aima.cs.berkeley.edu/), but no online)
 * [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/index.html) by Michael Nielsen

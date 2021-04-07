@@ -42,6 +42,7 @@ Dump:
 
 # Top priorities
 
+* bayesian accuracy (and bias) compared to human-level? What's the deal here? What are these questions even  about?
 * how to save sklearn models, and then load them back?
 * How react sites talk to SQL now?
 * How Python SQL?

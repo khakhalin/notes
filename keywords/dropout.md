@@ -1,15 +1,16 @@
 # Dropout
 
-#regularization #dl
-
 Path: [[06_DL]] / [[regularization]]
 See also: [[05_Ensembles]], [[weight_decay]]
 
-**Dropout** (formerly also known as **Dilution**): proposed 2012 (Hinton) as a way to avoid overfitting in deep networks when data is relatively scarse. Let's randomly inactivate a decent share (~50%) of all units in every layer at every training step; then only consider the output of remaining units; and only train these remaining untes. When all weights are learned together, many of them slack out by just running into the ground (zero), and not contributing to anything (would have to be pruned, if we were to prune the network). But with drop-out, we have something of a built-in ensemble method when many sub-networks have to train in parallel.
+#regularization #dl
+
+
+**Dropout** (formerly also known as **Dilution**): proposed 2012 (Hinton) as a way to avoid overfitting in deep networks when data is relatively scarce. Let's randomly inactivate a decent share (~50%) of all units in every layer at every training step; then only consider the output of remaining units; and only train these remaining units. When all weights are learned together, many of them slack out by just running into the ground (zero), and not contributing to anything (would have to be pruned, if we were to prune the network). But with drop-out, we have something of a built-in ensemble method when many sub-networks have to train in parallel.
 
 # Math
 
-At the forward step, we inactivate some random subset of nodes with probability (1-p). If we use an index vector δ_i (with elements equal to either 1 or 0), instead of Wx+b we will now use W(x⨀δ)+b. As the average of inputs each unit is now weaked by $p$ (as $p$ share of all nodes is inactivated), we need to scale the remaining inputs up during by 1/(1-p). Meaning that the final equation for one layer is $y_i = ϕ(\frac{1}{1-p}\sum_k W_{ik} δ_k x_k + b)$. (This is tehnically called **inverted dropout**, as the original implementation scaled unit activations down at the testing step, not up at the training step, but this is how tensorflow does it now, as it is more computationally efficient).
+At the forward step, we inactivate some random subset of nodes with probability (1-p). If we use an index vector δ_i (with elements equal to either 1 or 0), instead of Wx+b we will now use W(x⨀δ)+b. As the average of inputs each unit receives is now weakened by 1-p (as 1-p share of all nodes is inactivated), we need to scale the remaining inputs up during training by 1/(1-p). Meaning that the final equation for one layer is $y_i = ϕ(\frac{1}{1-p}\sum_k W_{ik} δ_k x_k + b)$. (This is technically called **inverted dropout**, as the original implementation scaled unit activations down at the testing step, not up at the training step, but this is how tensorflow does it now, as it is more computationally efficient).
 
 For a simple linear regression (as shown in the original 2012 paper) gradient of a dropped-out network is the same as for a full network, but with an additional **L2 regularization** term for activation: $∂J'/∂w = ∂J/∂w + p(1-p)wΓ^2$, where p is the probability of elements staying active at each step, and $Γ^2 = \text{diag} (X ^\top X)$. But this is only true for this simplest case of linear regression; once non-linearity is added, and then layers multiply, this simplest logic no longer holds.
 
@@ -21,19 +22,19 @@ In practice, each "submodel" (a network with inactivated units) sees not an indi
 
 The original paper by Hinton (2012) introduced dropout in terms of a ensemble technique that allows training many overlapping networks in parallel, and thus improving the solution. Specifically, it kinda feels similar to [[bagging]], as every subnetwork sees a slightly different subset of data.
 
-One way to understand dropout is that it breaks co-adaptation of nodes that reduces network expressiveness (it's like, when one node just learns to carefully counterinteract another node, and then both don't help).
+One way to understand dropout is that it breaks co-adaptation of nodes that reduces network expressiveness (it's like, when one node just learns to carefully counteract another node, and then both don't help).
 
-Another potential explanation: to generalize well, a model should ideally be in a "flat area" in regards to certain changes of inputs: for example, changes, orthogonal to meaningful dimentions shouldn't change the output. In practice, to make the output flat, we should drive some elements into saturated state. But on the other hand, with saturated hidden units, a model can no longer learn, as gradients vanish. (Hahn 2020) hypothesize that dropout solves this problem and allows to saturate inputs while still having access to meaningful gradients.
+Another potential explanation: to generalize well, a model should ideally be in a "flat area" in regards to some changes of inputs: changes, orthogonal to the space of meaningful dimensions shouldn't change the output. In practice, to make the output flat, we should drive some elements into saturated state. But on the other hand, with saturated hidden units, a model can no longer learn, as gradients vanish. (Hahn 2020) hypothesize that dropout solves this problem and allows to saturate inputs while still having access to meaningful gradients.
 
 # Lore
 
 Because of the p(1-p) term, dropout is most effective for p=0.5 (it maximizes p(1-p)). In practice, it's OK to set p at 0.5 for intermediate layers, but it should be higher (~0.8) for input layers, to avoid undersampling. _What? Why?_
 
-Keras takes 1-p as an argument (p of dropping, not p of leaving), so adjust your thinking accordingly.
+Keras takes 1-p as an argument (p of dropping, not p of leaving), so adjust your thinking accordingly. _Weird, right?_
 
-Some sources claim that dropout can, or even should be combined with L2 regularizations, but some state that it is unnecessary, as they often act similarly, and only hurt each other.
+Some sources claim that dropout can, or even should be combined with L2 regularization, but some state that it is unnecessary, as they act similarly, and only hurt each other.
 
-Batch normalization allegedly makes droupout unnecessary. _Some sources seem to imply that it is strictly better in some way._
+[[batch_normalization]] allegedly makes droupout unnecessary. _Some sources seem to imply that it is strictly better in some way._
 
 Dropout **should not be used on convolutional networks**, as convolution introduces coordination between changes in different weights, which contradicts the very idea of dropout. Or, another way to put it, there's no risk of overfitting with convolutions, as the weight matrix is relatively small, while the data is abundant, which means that in general regularization is not necessary. Refs: [1](https://towardsdatascience.com/dropout-on-convolutional-layers-is-weird-5c6ab14f19b2), [2](https://www.kdnuggets.com/2018/09/dropout-convolutional-networks.html)
 

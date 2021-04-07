@@ -10,8 +10,13 @@ Papers:
 
 # Unprocessed bibliography:
 
-Super-review: 🔥🔥
+Review of transformers in vision (how they surpassed convnets?)
 Khan, S., Naseer, M., Hayat, M., Zamir, S. W., Khan, F. S., & Shah, M. (2021). Transformers in Vision: A Survey. arXiv preprint arXiv:2101.01169. https://arxiv.org/abs/2101.01169
+
+Some super-hot recent transformer (for text) representation visualization (interpretability!)
+Summary: https://syncedreview.com/2021/04/05/yann-lecun-team-uses-dictionary-learning-to-peek-into-transformers-black-boxes/
+Paper itself: https://arxiv.org/pdf/2103.15949.pdf
+Yun, Z., Chen, Y., Olshausen, B. A., & LeCun, Y. (2021). Transformer visualization via dictionary learning: contextualized embedding as a linear superposition of transformer factors. arXiv preprint arXiv:2103.15949.
 
 Interfaces for Explaining Transformer Language Models
 https://jalammar.github.io/explaining-transformers/
