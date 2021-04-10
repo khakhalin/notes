@@ -133,11 +133,6 @@ Model of the cortex.
 
 See [[dendritic_comp]]
 
-David, Beniaguev, Segev Idan, and London Michael. "Single Cortical Neurons as Deep Artificial Neural Networks." bioRxiv (2019): 613141. https://www.biorxiv.org/content/10.1101/613141v1.full.pdf
-
-Jones, I. S., & Kording, K. P. (2020). Can Single Neurons Solve MNIST? The Computational Power of Biological Dendritic Trees. arXiv preprint arXiv:2009.01269.
-https://arxiv.org/abs/2009.01269
-
 Abraham, W. C., Jones, O. D., & Glanzman, D. L. (2019). Is plasticity of synapses the mechanism of long-term memory storage?. NPJ science of learning, 4(1), 1-10.
 https://www.ncbi.nlm.nih.gov/pubmed/31285847
 A review on alternatives (non-synaptic) ways too store memories in the brain.

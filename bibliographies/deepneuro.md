@@ -10,6 +10,7 @@ Related:
 
 Subplotics:
 * [[stdp]] - unsupervised rules in the brain
+* [[dendritic_comp]] - dendritic computations and single neurons as ANNs
 * [[credit]] - credit assignment in the brain, and backprop in the brain
 
 # Papers

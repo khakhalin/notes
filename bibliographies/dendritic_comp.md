@@ -7,13 +7,15 @@ See also: [[deepneuro]]
 
 Papers:
 * [[Titley2017neurocentric]] - dendritic processing in Purkinje cells, Hansel lab
+* [[Jones2020neuronmnist]] - can a single neuron solve [[mnist]]?
+* [[Beniaguev2019singleneurons]] - single neurons as deep ANNs; a review
 
 # To Read
 
 Approximate logic neuron model trained by states of matter search algorithm
 J Ji, S Song, Y Tang, S Gao, Z Tang, Y Todo - Knowledge-Based Systems, 2018
 
-Dendritic Pooling of Noisy Threshold Processes Can Explain Many Properties of a Collision-Sensitive Visual Neuron (2015)
+Dendritic Pooling of Noisy Threshold Processes Can Explain Many Properties of a Collision-Sensitive Visual Neuron (2015) See also: [[neurostochastic]]
 https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004479
 
 # Annotated
