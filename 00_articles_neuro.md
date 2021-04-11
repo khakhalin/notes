@@ -1,8 +1,9 @@
 # To-read: Neuro
 
+Se also: [[12_Neuro]] (the official hub age)
+
 #neuro #bib #todo
 
-Se also: [[12_Neuro]] (the official hub age)
 
 🔥🔥 Zenke … Goodman. Visualizing a joint future of neuroscience and neuromorphic engineering. 2020
 https://www.sciencedirect.com/science/article/pii/S089662732100009X?dgcid=coauthor
@@ -165,6 +166,9 @@ https://www.biorxiv.org/content/10.1101/2020.03.30.015511v1
 🟢 Lindsey, J., & Litwin-Kumar, A. (2020). Learning to Learn with Feedback and Local Plasticity. arXiv preprint arXiv:2006.09549.
 https://arxiv.org/abs/2006.09549
 Also related to "continuing learning"
+
+Sezener, E., Grabska-Barwinska, A., Kostadinov, D., Beau, M., Krishnagopal, S., Budden, D., ... & Latham, P. (2021). A rapid and efficient learning rule for biological neural circuits. bioRxiv.
+https://www.biorxiv.org/content/10.1101/2021.03.10.434756v1
 
 Aljadeff, J., D'amour, J., Field, R. E., Froemke, R. C., & Clopath, C. (2019). Cortical credit assignment by Hebbian, neuromodulatory and inhibitory plasticity. arXiv preprint arXiv:1911.00307.
 [https://arxiv.org/pdf/1911.00307.pdf](<https://arxiv.org/pdf/1911.00307.pdf>)

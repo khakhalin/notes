@@ -738,7 +738,10 @@ Makhzani, A. (2018). Implicit autoencoders. arXiv preprint arXiv:1805.09804.
 https://arxiv.org/abs/1805.09804
 Sort of GAN-like architecture that tries to optimize the latent space directly? Interesting, but hard to get from the abstract.
 
-# Bayesian and stats
+# Stats (including Bayesian	)
+
+Ng, A. Y., & Jordan, M. I. (2002). On discriminative vs. generative classifiers: A comparison of logistic regression and naive bayes. In Advances in neural information processing systems (pp. 841-848).
+https://ai.stanford.edu/~ang/papers/nips01-discriminativegenerative.pdf
 
 Negative probabilities (a short essay by Richard Feinman)
 http://cds.cern.ch/record/154856/files/pre-27827.pdf

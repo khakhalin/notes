@@ -2,16 +2,17 @@
 
 #interview
 
-They are looking for signals, and mostly it’s  “no” signals  (red flags) rather than  “yes” signals. For example, blaming others is a bad sign. Don’t try to fake it, as being fake  (not genuine, shifty, fishy) is the worst possible sign there could be.
+
+They are looking for signals, and mostly it’s  “no” signals (red flags) rather than  “yes” signals. For example, blaming others and being negative about things is a bad sign. Don’t try to fake it, as being fake (not genuine, shifty, fishy) is the worst possible sign there could be.
 
 Ultimately: is this person a net positive contributor?
 
 In tech companies, typically not the HR, but a high-level manager.
 
 **Schema:**
-* Situation > Problem 
-* or: Goal > Solution > Impact > Lessons
-* or **STAR: Situation → Task → Action → Result**. A general paradigm for answering behavioral questions. Describe the Context / Challenge, then what was done, then what was the result of it. Potentially followed with long-term lessons learned.
+* **STAR: Situation → Task → Action → Result**. A general paradigm for answering behavioral questions. Describe the Context / Challenge, then what was done, then what was the result of it. Probably followed with long-term lessons learned.
+* or **CAR: Challenge → Action → Result**
+* or Goal > Solution > Impact > Lessons
 
 **Typical questions:**
 * A conflict (disagreement, sticky situation) you had
@@ -34,5 +35,10 @@ In tech companies, typically not the HR, but a high-level manager.
 
 https://zety.com/blog/star-method-interview
 
-From Standford course on passing interviews:
+From Stanford course on passing interviews:
 * https://web.stanford.edu/class/cs9/lectures/CS9Teamwork.pdf
+
+An interesting paper on scoring behavioral interview:
+Rad, D., & Balas, V. E. (2020). A Novel Fuzzy Scoring Approach of Behavioural Interviews in Personnel Selection. BRAIN. Broad Research in Artificial Intelligence and Neuroscience, 11(2), 178-188.
+https://www.edusoft.ro/brain/index.php/brain/article/viewFile/1026/1192
+About scoring CAR (Challenge-Action-Result) schema. In a good response all three aspects should be good.

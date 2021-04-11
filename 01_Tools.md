@@ -18,6 +18,7 @@ Tips and notes on individual tools:
 * [[sql]] - SQL cheat sheet
 * [[latex]] - tiny notes in LaTeX
 * [[javascript]] - subj
+* [[tableau]] - subj
 
 Running ML projects:
 * [[ml_lore]] - a collection of rules of thumb about everything Deep Learning (which defaults to pick etc.)

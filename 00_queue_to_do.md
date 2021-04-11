@@ -1,8 +1,6 @@
 # Words and topics to look up
 
-Key tags:
-* #halfthere - for projects that are close to completion.
-* #todo - for follow-ups that need to be done
+#halfthere #todo
 
 Other lists to look through:
 * https://www.confetti.ai/
@@ -10,45 +8,27 @@ Other lists to look through:
 * https://e2eml.school/blog.html
 * [[job_search]] - lots of questions and more links & opinions about what to learn
 
-Kick-start videos: https://www.youtube.com/playlist?list=PLllx_3tLoo4csmLveWHpjcRTXVMCcvvmc
-
 **The missing semester of CS education**
 https://missing.csail.mit.edu/ ⚠️
 lots of useful practical bits and pieces: shell, debugging, data wrangling, metaprogramming and what not. Also has [lectures on youtube](https://www.youtube.com/watch?v=Z56Jmr9Z34Q&list=PLyzOVJj3bHQuloKGG59rS43e29ro7I57J&index=2&t=0s).
 (the link is also in [[01_Tools]] / Resources, so delete it from here later)
 
-Dump:
-* https://rpubs.com/wgervais/667244
-* https://www.youtube.com/watch?v=gXbThCXjZFM&list=PLMrJAkhIeNNQV7wi9r7Kut8liLFMWQOXn&index=21
-* https://arxiv.org/pdf/2009.06489.pdf
-* https://gema-parreno-piqueras.medium.com/real-world-games-look-like-spinning-tops-b77411a54b57
-* https://arxiv.org/pdf/2004.09468.pdf
-* https://www.youtube.com/watch?v=sQFxbQ7ade0
-* https://www.euclidea.xyz/en/game/packs/Epsilon/level/LineAlongPoints
-* https://www.youtube.com/watch?v=i5tUMd__tC0
-* https://www.youtube.com/c/YannicKilcher
-* https://aeon.co/essays/the-rise-and-fall-of-the-oxford-school-of-fantasy-literature
-* https://en.wikipedia.org/wiki/Bradley%E2%80%93Terry_model
-* https://www.researchgate.net/profile/Jasmin_Saric/publication/224890616_Literature_mining_for_the_biologist_from_information_retrieval_to_biological_discovery/links/00b7d51e65b75b50cf000000/Literature-mining-for-the-biologist-from-information-retrieval-to-biological-discovery.pdf
-* https://journals.sagepub.com/doi/pdf/10.1177/1536867X0200200405
-* https://arxiv.org/abs/1801.01253#
-* https://www.builtinboston.com/f
-* https://www.youtube.com/watch?v=0--5AxiZefg
-* https://www.youtube.com/watch?v=DG7YTlGnCEo
-* http://web.stanford.edu/class/cs224w/
-* https://en.wikipedia.org/wiki/Yarsanism#Worship
-* https://www.bbc.com/news/world-middle-east-50378946
-* زرده (دالاهو)
+# Queue
 
-# Top priorities
-
-* bayesian accuracy (and bias) compared to human-level? What's the deal here? What are these questions even  about?
-* how to save sklearn models, and then load them back?
-* How react sites talk to SQL now?
-* How Python SQL?
 * docker - what and how
     * Flask docker file (allegedly 80% of what one needs for a typical deployment)
     * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
+* bayesian accuracy (and bias) compared to human-level? What's the deal here? What are these questions even  about?
+* Linkedin MachineLearning test
+* How react sites talk to SQL now?
+* How Python SQL?
+* Bash - start with "missing semester", then more tutorials, then linkedin certification
+* Git - what is "upstream" and "downstream workflow"?
+* MySQL Stored Procedures?
+* MySQL triggers?
+* https://github.com/chiphuyen/just-pandas-things/blob/master/just-pandas-things.ipynb
+* This text about Pandas: https://github.com/chiphuyen/just-pandas-things/blob/master/just-pandas-things.ipynb
+* how to save sklearn models, and then load them back?
 * Apparently Java doesn't have default values for parameters, but people use builder [[design_pattern]] to emulate it. How?? https://stackoverflow.com/questions/997482/does-java-support-default-parameter-values
 * Sagemaker and Amazon EMR - what are they?
 * python environments - how are they realized?
@@ -57,7 +37,6 @@ https://arxiv.org/abs/1803.10122
 * difference between conda and pip	
 * What is flask?
 * how to extend vocabulary for DL word-embedding?
-* tableau - read more about. Is there a way to "learn it" just enough to report it? Any tests on it?
 * File unfinished article descriptions currently dumped at [[deepneuro]], [[intrinsic_plasticity]], [[dendritic_comp]]
 * Reread 3 notes for papers linked in the [[ticket]] note
 * Django (alternative to Flask, slightly less popular)
@@ -99,6 +78,7 @@ https://arxiv.org/abs/1803.10122
 * With pycharm and Anaconda, do I now have Python installed twice? How does it work?
 * Briefly describe other patterns [[design_pattern]]s
 * predictive coding in the brain - definition? - Huang, Y., & Rao, R. P. (2011). Predictive coding. Wiley Interdisciplinary Reviews: Cognitive Science, 2(5), 580-593.
+* Kick-start videos: https://www.youtube.com/playlist?list=PLllx_3tLoo4csmLveWHpjcRTXVMCcvvmc
 * pull requests, and how this workflow works
     * https://www.netlify.com/blog/2020/03/31/how-to-scope-down-prs/
 * How Python works inside:
@@ -121,8 +101,6 @@ Few questions on Load balancers & Reverse proxies. Also continuing discussion on
     * (programming exercise, followed by 3 real-world examples)
 * read Neural Heterogeneity (see [[00_to_read_neuro]])
 * https://en.wikipedia.org/wiki/Moore%E2%80%93Penrose_inverse
-* https://github.com/chiphuyen/just-pandas-things/blob/master/just-pandas-things.ipynb
-* This text about Pandas: https://github.com/chiphuyen/just-pandas-things/blob/master/just-pandas-things.ipynb
 * https://www.expunctis.com/2019/01/27/Loss-functions.html
 * [[motifs]] (not really motifs yet - listen to the lecture) #todo
 * https://github.com/khangich/machine-learning-interview - disassemble
@@ -134,10 +112,8 @@ Few questions on Load balancers & Reverse proxies. Also continuing discussion on
 * What's the deal with this new vision transformer from Facebook (published in 2020). Supposedly they surpassed convnets. Why? What does it mean for us?
     * https://ai.facebook.com/blog/data-efficient-image-transformers-a-promising-new-technique-for-image-classification/
     * Distillation through attention?
-* check how tableau works, to claim it
-* refresh logistic regression, documenting this: https://rpubs.com/wgervais/667244
-    * And also this: https://ai.stackexchange.com/questions/3852/is-logistic-regression-more-free-from-the-conditional-independence-assumption-th
 * AWS - do some tutorials
+* counterfactuals: http://bayes.cs.ucla.edu/PRIMER/primer-ch4.pdf
 * Granger causality (do I have notes about it somewhere?)
 * Stack
     * react
@@ -570,3 +546,27 @@ Parked parts of ESL that need to be revisited:
 
 Lists of topics used by other people:
 * https://github.com/amitness/learning
+
+# Temp Dump
+
+* https://rpubs.com/wgervais/667244
+* https://www.youtube.com/watch?v=gXbThCXjZFM&list=PLMrJAkhIeNNQV7wi9r7Kut8liLFMWQOXn&index=21
+* https://arxiv.org/pdf/2009.06489.pdf
+* https://gema-parreno-piqueras.medium.com/real-world-games-look-like-spinning-tops-b77411a54b57
+* https://arxiv.org/pdf/2004.09468.pdf
+* https://www.youtube.com/watch?v=sQFxbQ7ade0
+* https://www.euclidea.xyz/en/game/packs/Epsilon/level/LineAlongPoints
+* https://www.youtube.com/watch?v=i5tUMd__tC0
+* https://www.youtube.com/c/YannicKilcher
+* https://aeon.co/essays/the-rise-and-fall-of-the-oxford-school-of-fantasy-literature
+* https://en.wikipedia.org/wiki/Bradley%E2%80%93Terry_model
+* https://www.researchgate.net/profile/Jasmin_Saric/publication/224890616_Literature_mining_for_the_biologist_from_information_retrieval_to_biological_discovery/links/00b7d51e65b75b50cf000000/Literature-mining-for-the-biologist-from-information-retrieval-to-biological-discovery.pdf
+* https://journals.sagepub.com/doi/pdf/10.1177/1536867X0200200405
+* https://arxiv.org/abs/1801.01253#
+* https://www.builtinboston.com/f
+* https://www.youtube.com/watch?v=0--5AxiZefg
+* https://www.youtube.com/watch?v=DG7YTlGnCEo
+* http://web.stanford.edu/class/cs224w/
+* https://en.wikipedia.org/wiki/Yarsanism#Worship
+* https://www.bbc.com/news/world-middle-east-50378946
+* زرده (دالاهو)

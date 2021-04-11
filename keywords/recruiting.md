@@ -11,14 +11,40 @@ Materials:
 * [[Bock2015workrules]] - a book about Google corporate culture
 
 Related:
-* [[id20201020160912]] - Why CS recruiting market is broken, by Aline Lerner 2020
+* [[id20201020160912]] - why CS recruiting market is broken, Aline Lerner 2020
+* [[id20210410164415]] - that objective tech interviews are impossible, Mark Saroufim 2021
 
-# Refs and links
+# Annotated bibliography
 
-Erik Bernhardsson 
-How to hire smarter than the market: a toy model
+Erik Bernhardsson. How to hire smarter than the market: a toy model. 2020.
 https://erikbern.com/2020/01/13/how-to-hire-smarter-than-the-market-a-toy-model.html
-tldr: In any competitive pool, experience and performance (or any 2 talents!) will anti-correlate. So to hire best ppl, we should NOT hire well-rounded candidates.
+1. In any competitive pool, experience and performance (or any 2 talents!) will anti-correlate. Because people develop either skill 1 or skill 2; with spent effort being const, it's a zero-sum game.
+2. Which means that going for "most rounded candidates" we will actually end up with subpar performance. Maybe it's better to have "pokemon teams" where people with extreme strengths balance each other?
+3. It's also good to go against the grain of the market, and to officially give up on some of the "virtues" in your candidates. It allows to get better candidates on all other dimensions.
 
 Kausel, E. E., Culbertson, S. S., & Madrid, H. P. (2016). Overconfidence in personnel selection: When and why unstructured interview information can hurt hiring decisions. Organizational Behavior and Human Decision Processes, 137, 27-44.
 Unstructured interviews not just don't help, but actually HURT the quality of hiring.
+
+Woolley, K., & Fishbach, A. (2018). Underestimating the importance of expressing intrinsic motivation in job interviews. Organizational Behavior and Human Decision Processes, 148, 1-11.
+Recruiters actually care about intrinsic motivations of candidates (seeking a meaningful job, and having the description match what is available), which candidates don't quite realize. So from a practical pov, it means that it's good to express a genuine interest in the kind of work you're applying for.
+
+Ammon Bartram.. Who Y Combinator companies want. 2015.
+https://triplebyte.com/blog/who-y-combinator-companies-want
+They asked ~30 big software companies to fill a table about what properties of job candidates they value, and which ones actually hurt an application. They found:
+1. Almost no correlation between companies! It is completely unpredictable (and actually seems to most closely follow the profile of the founder of each company).
+2. There are some universals though:
+    * Everyone likes product-oriented people (product programmers), as opposed to technique-based programmers;
+    * Everyone likes practical programmers, and hates academic programmers.
+    * Experience matters (but that's obvious)
+
+Meijer, R. R., Neumann, M., Hemker, B. T., & Niessen, A. S. M. (2020). A tutorial on mechanical decision-making for personnel and educational selection. Frontiers in psychology, 10, 3002.
+https://www.frontiersin.org/articles/10.3389/fpsyg.2019.03002/full
+In hiring, more information is not better. Even completely noisy measures will be given some weight by people (that's just how our brains work), making hiring outcomes objectively worse.
+* Footnote: citation for that: Adams, G.S., Converse, B.A., Hales, A.H. et al. People systematically overlook subtractive changes. Nature 592, 258–261 (2021). https://doi.org/10.1038/s41586-021-03380-y
+
+Dalal, D. K., Sassaman, L., & Zhu, X. S. (2020). The impact of nondiagnostic information on selection decision making: A cautionary note and mitigation strategies. Personnel Assessment and Decisions, 6(2), 7.
+https://scholarworks.bgsu.edu/cgi/viewcontent.cgi?article=1117&context=pad
+About biases in hiring (they call it "nondiagnostic information"). "Stubborn reliance on intuition" as the main enemy of good hiring (see next ref).
+
+Highhouse, S. (2008). Stubborn reliance on intuition and subjectivity in employee selection. Industrial and Organizational Psychology, 1(3), 333-342. [link](https://www.guruji24.com/acwi_guru/resources/blog_files/6Organizational_Psychology_-_Reliance.pdf)
+Anti-test sentiment and a desire for "holistic assessment" are ruining selection and hiring, as they introduce random noise in decision-making. And yet people keep to stubbornly believe in their ability to guess who the candidates "really are". Summarizes hard data that adding personal assessment to test scores reduces quality of prediction about the success of students, candidates. Moreover, intuition of a recruiter doesn't improve with experience (many refs here). People believe that they get better in finding good candidates, but they actually aren't getting better; they are just getting more confident. Biggest counter-argument: the "broken-leg factor": an ability of a human to incorporate novel, unexpected information (like, a person with a freshly broken leg is not likely to go to a cinema, and it has nothing to do with whether they like the movie).

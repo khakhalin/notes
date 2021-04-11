@@ -57,7 +57,13 @@ Useful links:
 * https://www.askamanager.org/2017/05/if-youre-not-getting-interviews-heres-how-to-fix-your-resume-and-cover-letter.html
 * Some advice for academics specifically: https://www.insidehighered.com/blogs/gradhacker/intro-resumes-cv-minded-academics
 
-# Advice for academics
+# General advice
+
+How to get a great job (No CV required). Mark Saroufim. Sep 2, 2020
+https://marksaroufim.medium.com/how-to-get-a-great-job-68cb69ddfeb1
+Basically he says, start running projects, and do them publicly, in everyone's view. It will help you to get the audience, and this audience is your path to finding a good job.
+
+# Specific advice for academics
 
 Break the stereotype of a "non-doer" that many people have about academia. Ways to do it, before the first job:
 * Accent on practical technologists that academics almost never know: AWS, Docker, other cloud solutions
