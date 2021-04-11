@@ -1,4 +1,4 @@
-# Sex and gender (including differences)
+# Sex and gender (in neurobiology)
 
 #bib #evo #bio #side
 
@@ -25,7 +25,6 @@ https://www.sciencedirect.com/science/article/pii/S0149763421000804
 There are almost no differences between male and female brains in humans, in terms of their morphology, as almsot all differences that are significant disappear once you control for brain size. And literature is a mess (many contradicting studies, many underpowered, or don't replicate from one group of humans to another). This includes no differences in lateralization, as judged from looking at commissures sizes.
 * Tweetprint from the author: https://twitter.com/Lise_Eliot/status/1373315409475072001
 * A slightly critical (but positive) response: https://twitter.com/WiringTheBrain/status/1373587590398496768
-* 
 
 Dunsworth, H. M. (2020). Expanding the evolutionary explanations for sex differences in the human skeleton. Evolutionary Anthropology: Issues, News, and Reviews.
 https://digitalcommons.uri.edu/cgi/viewcontent.cgi?article=1036&context=soc_facpubs
@@ -38,3 +37,7 @@ Another paper from the same review:
 DeWitte, S. N. (2018). Stress, sex, and plague: Patterns of developmental stress and survival in pre‐and post‐Black Death London. American Journal of Human Biology, 30(1), e23073.
 https://onlinelibrary.wiley.com/doi/abs/10.1002/ajhb.23073
 "After the Black Death, the bubonic plague pandemic that ravaged Europe in the 14th century, the average height difference between males and females increased by 62%: Men got about 9 centimeters taller and women got 5.5 centimeters shorter." Why? Better food → earlier maturation in women → earlier estrogen → smaller body size. (Really??? wow!)
+
+**White-throated Sparrow** (a very common Eastern North American bird) has 2 **morphs** (white and tan -striped), and W mates with T. Different strategies: tan-striped are more peaceful, less competitive, monogamous (or is it only within one season?), and males contribute to parenting. White-striped are aggressive, trespassers, and seek more sexual partners. Differences are due to different receptor expression. All 4 (sex by type) types of kids are about similarly likely to happen (is it true? Or is one of the morphs more common?). See also [[strange_animals]].
+* https://www.allaboutbirds.org/guide/White-throated_Sparrow/sounds
+* https://en.wikipedia.org/wiki/White-throated_sparrow

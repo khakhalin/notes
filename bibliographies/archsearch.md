@@ -7,9 +7,7 @@ Papers:
 * [[Gaier2019agnostic]] - looking for connectivities that work with any weights
 * [[Xie2019randomwire]] - same, randomly wire networks, then pick those that work
 
-Bio-inspired: see [[deepneuro]], but maybe in particular:
-* [[Zador2019pure]]
-* [[Sinz2019lessartificial]]
+Bio-inspired: see [[deepneuro]].
 
 # Summary
 

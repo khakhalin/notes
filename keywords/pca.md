@@ -30,3 +30,19 @@ Why projecting to these ellipsoid-aligned axes **maximizes the variance along th
 **Varimax rotation**: orthogonal rotation of PCA results (so components stay orthogonal) that maximizes the share of near-zero coordinates (scores) for points. It tries to rotate points (scores) to the axes, and away from "innards" of each quadrant. Makes points commit to "mostly one axis", instead of being torn between many axes.
 
 **Promax rotation**: similar to varimax, but oblique (with shears, making components non-orthogonal), which allows higher contrasting, and is also cheaper computationally.
+
+# In Python
+
+Archetypical use of pca in Python. Input is a matrix, where every row is a value, and each column is a coordinate.
+
+```python
+import sklearn.decomposition
+pca = sklearn.decomposition.PCA(n_components=2)
+pca.fit(X)
+scores = pca.transform(X)
+loadings = pca.inverse_transform(np.eye(2))
+```
+
+# Refs
+
+A very nice practical introduction to PCA in Python: https://jakevdp.github.io/PythonDataScienceHandbook/05.09-principal-component-analysis.html

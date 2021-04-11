@@ -1,8 +1,10 @@
 # Perplexity
 
-#text
+Parents: [[10_Text]]
+See also: [[transformers]], [[information]]
 
-See also: [[transformers]], [[10_Text]]
+#text #entropy
+
 
 Mostly used with text. Intuitively, in its simplest form, just the inverse of geometric-average probability of words in a sentence:
 
@@ -14,7 +16,7 @@ As multiplying probabilities is lame, usually people do log, sum them, and exp. 
 
 $\displaystyle \text{per} = 2^{-\frac{1}{N}\sum \log_2 P(w_i)}$
 
-This formula above is usually derived as a partial case of a more general definition, according to which perplexity is just 2 power entropy: P = 2^H, where H = −∑p∙log(p). The higher the entropy, the higher the perplexity. And we use log base 2. ([ref](https://stats.stackexchange.com/questions/10302/what-is-perplexity)). The lowest theoretical possible perplexity is that for complete certainty, 2^log(1) = 1.
+This formula above is usually derived as a partial case of a more general definition, according to which perplexity is just 2 power [[entropy]]: P = 2^H, where H = −∑p∙log(p). The higher the entropy, the higher the perplexity. And we use log base 2. ([ref](https://stats.stackexchange.com/questions/10302/what-is-perplexity)). The lowest theoretical possible perplexity is that for complete certainty, 2^log(1) = 1.
 
 The name originates from a different situation though: when a model is trained on probabilities {q}, but meets a sample with probabilities {q}. The measure of mismatch (the amount of information needed to encode a message form {p} using symbols from {q}) is equal to cross-entropy: H(p,q) = -∑p∙log(q). The higher H, the more confused, perplexed the model is. The better the match between p and q, the smaller the perplexity (as cross-entropy H(p,q) is always larger than entropy H(q) = H(q,q)).
 
@@ -24,9 +26,10 @@ When training models on text, **perplexity goes down for larger ngrams**. For a 
 
 **Perplexity minimization** (for p from test data, and q from model predictions) is a great objective for training text generators. The lower perplexity, that is, the more certain the model is about each next word in the test dataset, the better. Low perplexity strongly correlates with human ratings of bot quality, such as the average of Sensibleness and Specificity measures (SSA), which in turn positively correlates with subjectively assessed "human-likeness" (ref: Adiranwana 2020). For a good model, vocab is ~10k, while perplexity is ~10 (ibid).
 
-Perplexity of two models can only be compared if they use the same vacabulary, and tested on the same testing dataset (Jurafsky).
+Perplexity of two models can only be compared if they use the same vocabulary, and tested on the same testing dataset (Jurafsky).
 
 # Refs
+
 * [Post by Lei Mao](https://leimao.github.io/blog/Entropy-Perplexity/) with some general formulas
 * Adiranwana 2020: Towards a Human-like Open-Domain Chatbot. Google Research, Brain Team. Jan 2020.
     * https://arxiv.org/pdf/2001.09977.pdf

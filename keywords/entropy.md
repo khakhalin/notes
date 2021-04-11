@@ -1,3 +1,1 @@
-Redirect: see [[information]]
-
-Or [[cross-entropy]]
+Redirect: see [[information]] or [[cross-entropy]]

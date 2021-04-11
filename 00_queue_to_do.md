@@ -16,26 +16,33 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 # Queue
 
 * docker - what and how
-    * Flask docker file (allegedly 80% of what one needs for a typical deployment)
     * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
+    * Docker and Kubernetes: https://www.youtube.com/watch?v=u8dW8DrcSmo
+* What is flask?
+    * Flask docker file (allegedly 80% of what one needs for a typical deployment)
 * bayesian accuracy (and bias) compared to human-level? What's the deal here? What are these questions even  about?
-* Linkedin MachineLearning test
+* Finish SQL training site
 * How react sites talk to SQL now?
 * How Python SQL?
 * Bash - start with "missing semester", then more tutorials, then linkedin certification
 * Git - what is "upstream" and "downstream workflow"?
 * MySQL Stored Procedures?
 * MySQL triggers?
+* Implement the pandas part of this in Echo: https://koaning.io/posts/for-loop-memo/
 * https://github.com/chiphuyen/just-pandas-things/blob/master/just-pandas-things.ipynb
 * This text about Pandas: https://github.com/chiphuyen/just-pandas-things/blob/master/just-pandas-things.ipynb
+* How to design Twitter: https://www.youtube.com/watch?v=KmAyPUv9gOY
+* Start missing semester of CS education
 * how to save sklearn models, and then load them back?
-* Apparently Java doesn't have default values for parameters, but people use builder [[design_pattern]] to emulate it. How?? https://stackoverflow.com/questions/997482/does-java-support-default-parameter-values
-* Sagemaker and Amazon EMR - what are they?
 * python environments - how are they realized?
+* difference between conda and pip	
 * Ha, D., & Schmidhuber, J. (2018). World models. arXiv preprint arXiv:1803.10122.
 https://arxiv.org/abs/1803.10122
-* difference between conda and pip	
-* What is flask?
+* Apparently Java doesn't have default values for parameters, but people use builder [[design_pattern]] to emulate it. How?? https://stackoverflow.com/questions/997482/does-java-support-default-parameter-values
+* Python decorators (things like `def decorator`, `@wraps`etc)
+    * Some reading: https://www.geeksforgeeks.org/python-functools-wraps-function/
+    * Nice example: https://github.com/koaning/memo/blob/main/memo/_base.py
+* Sagemaker and Amazon EMR - what are they?
 * how to extend vocabulary for DL word-embedding?
 * File unfinished article descriptions currently dumped at [[deepneuro]], [[intrinsic_plasticity]], [[dendritic_comp]]
 * Reread 3 notes for papers linked in the [[ticket]] note
@@ -45,13 +52,11 @@ https://arxiv.org/abs/1803.10122
     * Moore-Penrose?
     * https://stackoverflow.com/questions/13265299/the-difference-of-pseudo-inverse-between-scipy-and-numpy
 * Reread data warehouses
-* Reread SQL, locate the SQL training site, try it out	
 * What methods are typically included in the idea of "knowing time series analysis"? Do I know them? If not, disassemble and put some terms into this stack.
 * numpy broadcasting - what are the rules again? Does it not broadcast from a 2D to 1D array?
 * model view controller - most important design pattern for web apps
 * PostgreSQL - how is it different from other SQLs?
 * How to backprop through the maxpooling layer? Document it in [[pooling]]
-* Batch normalization [[batch_normalization]] - why and how?
 * How to perform unsupervised clustering using DL networks?
 * [[Redis]]
 * Neural networks breakpoints (a visualization / troubleshooting method):
@@ -66,9 +71,6 @@ https://arxiv.org/abs/1803.10122
 * dual-pivot quicksort
 * https://en.wikipedia.org/wiki/S-expression
 * Scalability lecture: https://www.youtube.com/watch?v=-W9F__D3oY4 (I'm at 24m right now)
-* Docker and Kubernetes: https://www.youtube.com/watch?v=u8dW8DrcSmo
-* How to design Twitter: https://www.youtube.com/watch?v=KmAyPUv9gOY
-* Start missing semester of CS education
 * Scaling Etsy: https://www.youtube.com/watch?v=eenrfm50mXw
 * Read about this HTM thing that Numenta is doing: https://numenta.com/blog/2019/10/24/machine-learning-guide-to-htm
 * timsort

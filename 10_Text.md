@@ -2,14 +2,22 @@
 
 #text #bib
 
-**Methods and concepts:**
+## Methods and concepts
+
+Pre-ANN:
 * [[ngram]] - N-grams: low-level feature for text analysis, beyond single words. "Bags" of several (2-3) words.
 * [[tfidf]] - **Text Frequency - Inverse Document Frequency**. A basic approach to ranking documents by their relevance for a given keyword.
-* [[perplexity]] - main measure of language model quality, as well as a good practical objective function during training.
-* [[beam_search]] - a way to go beyound a level of suggesting one word at a time for text generation, by exploring a decision tree.
 * [[stupid_back_off]] - a simplistic Markovian approach to text generation
+
+Word embeddings ([[embedding]]):
 * [[word2vec]] - famous word embedding method developed by Google.
-* [[transformers]] - currently popular architecture
+* [[transE]] - abstract knowledge graphs (not necessarily on words)
+* [[debiasing]] - how to make word embeddings less biased
+
+Modern ANNs:
+* [[beam_search]] - a way to go beyond a level of suggesting one word at a time for text generation, by exploring a decision tree.
+* [[perplexity]] - main measure of language model quality, as well as a good practical objective function during training.
+* [[transformers]] - most popular architecture right now
 
 # To read:
 
@@ -23,8 +31,7 @@ Non-technical, but supposedly detailed, introduction into modern text methods:
 * https://jalammar.github.io/illustrated-bert/
 * https://cacm.acm.org/magazines/2020/6/245162-contextual-word-representations/fulltext
 
-Chiang, C. H., & Lee, H. Y. (2020). Pre-Training a Language Model Without Human Language. arXiv preprint arXiv:2012.11995.
-https://arxiv.org/pdf/2012.11995.pdf
+Chiang, C. H., & Lee, H. Y. (2020). Pre-Training a Language Model Without Human Language. arXiv preprint arXiv:2012.11995. https://arxiv.org/pdf/2012.11995.pdf
 
 * https://ruder.io/unsupervised-cross-lingual-learning/index.html
 * https://ruder.io/state-of-transfer-learning-in-nlp/index.html
@@ -58,6 +65,8 @@ Improved word embeddings by somehow forcing (encouraging) the development of sem
 **GloVe** - Global Vectors for Word Representation: a dataset from Standford, which is like word2vec, but pre-calculated, and shared as a dataset ([link](https://nlp.stanford.edu/projects/glove/))
 
 # Analysis of code
+
+(A related, but distinct topic, about using ML methods to analyze (and then check, improve, simplify, suggest) programming code)
 
 Allamanis, M., Barr, E. T., Devanbu, P. T., & Sutton, C. A. (2017). A survey of machine learning
 for big code and naturalness. CoRR.

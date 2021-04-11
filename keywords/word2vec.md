@@ -1,9 +1,10 @@
 # Word2vec
 
-#text #embedding
-
 Parent: [[10_Text]]
 See also: [[node2vec]], [[softmax]], [[neg_sampling]]
+
+#text #embedding
+
 
 Developed by Google; works with "bags of words". A representation learning, where we train 2 layers, - a linear (no activation!) dense layer followed by a softmax, - to use the dense layer later for the latent-space projection. The thing we train it on is to predict the word nearby (one of the words nearby picked at random). Not necessarily the "nearest" word, but one somewhat close within the sentence.
 
