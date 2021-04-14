@@ -15,8 +15,7 @@ GROUP BY col3
 HAVING COUNT(*)>1 AND SUM(col7)<100
 ORDER BY col4 DESC, col5 ASC
 LIMIT 10
-FROM table2 AS t2 JOIN *
-ON t1.id=t2.id
+LEFT JOIN t2 ON t1.id=t2.id
 WHERE t2.col2 IS NULL;
 ```
 
@@ -42,6 +41,7 @@ WHERE t2.col2 IS NULL;
 * `FULL JOIN` - combines both tables (and thus acts same as UNION describe above).
 * To imitate subtraction, do: `SELECT * FROM t1 LEFT JOIN t2 ON t1.key=t2.key WHERE t2.key is NULL;`. This way it will first try to LEFT JOIN, and maybe finds some matches, but for those rows of t1 that didn't get  a match in t2, it sets t2.key to NULL. And then we immediately filter these rows.
 * Something like a self-join is also possible, using syntax with aliasing: `SELECT a.name AS name1, b.name AS name2 FROM table1 AS a, table1 AS b WHERE a.manager=b.id;`. In this case we'll have a list of all relations between people in an organization, all from one self-referencing table.
+* Note that the `ON` statement can technically contain any time of logic, including logical functions. So one can do something like `ON (t1.id=t2.id OR t2.name='cat')`
 
 ### Subqueries
 There are three type of subqueries:

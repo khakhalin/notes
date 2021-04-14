@@ -16,7 +16,7 @@ The most popular, archetypical approach: **AdaBoost**, aka **Adaptive Boosting**
 7. Reject trees with accuracy less than 50%. _Not all descriptions mention that._
 9. **Update the final model**: produce an average of tree outputs, weighted by their α_k.
 10. If all points are classified correctly, or if some pre-agreed threshold accuracy is reached, consider the task completed. This weighted average from the previous step is our model.
-11. But if we are not happy yet, **boost misclassified samples** by increasing their weights: $w_i ← w_i \exp(α_k)$; decrease weights of correctly classified samples by multiplying them by exp(−α); then normalize all weights again to $∑w = 1$. Then go to step 2 and generate a new split for our collection.
+11. ⭐ But if we are not happy yet, **boost misclassified samples** by increasing their weights: $w_i ← w_i \exp(α_k)$; decrease weights of correctly classified samples by multiplying them by exp(−α); then normalize all weights again to $∑w = 1$. Then go to step 2 and generate a new split for our collection.
 
 In practice, instead of changing weights for points, people often just resample the bag of points, gradually living their only points misclassified by previous models.
 

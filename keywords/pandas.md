@@ -1,9 +1,9 @@
 # Pandas
 
-#tools
-
 Parent: [[python]]
 See also: [[numpy]], [[py_dates]]
+
+#tools
 
 # Open questions
 

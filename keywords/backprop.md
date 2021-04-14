@@ -8,7 +8,7 @@ Related: [[credit]] (credit assignment, including in the brain)
 
 Essentially a chain differentiation rule, to differentiate loss function J by weights w.
 
-Consider a network of several layers (full = dense = all to all), eventually all converging on one output element (just because it's easier to describe it for one output element, but the math is essentially the same if you have many). MSE loss: J=(a0-y)², where a0 = out = h(z) = h(∑ w10_i a1_i) = dot product of of prev (1st) layer activations with weights from layer 1 to layer 0. (I'll be numbering layers backwards, starting from 0 for the output layer)
+Consider a network of several layers (full = dense = all to all), eventually all converging on one output element (just because it's easier to describe it for one output element, but the math is essentially the same if you have many). MSE loss: J=(a0-y)², where a0 = out = h(z) = $h(∑ w^{10}_i a^1_i)$ = dot product of of prev (1st) layer activations with weights from layer 1 to layer 0. (I'll be numbering layers backwards, starting from 0 for the output layer)
 
 $a^0 = h (\sum w^{10}_ i a^1_i )$
 
@@ -30,9 +30,9 @@ Now we can go deeper, to the yet-previous layer 2→1, with weights w21_j.
 No need to sum yet, as w21_j only affects one element in the 1st layer: a1_i:
 Again, we have:
 $\displaystyle \frac{∂J}{∂w^{21}_j} = \frac{∂J}{∂a^1_i} \frac{∂a^1_i}{∂w^{21}_j}$.
-∂J/∂a1_i can be calculated as above = 2(a0-y) h'(z0) w10_i,
-while ∂a1_i/∂w2_j = ∂a1_i/∂z1_i ∂z1_i/∂w2_j = h'(z1_i) a2_j (activation a2_j from yet prev layer).
-So the full expression: ∂J/∂w21_j = 2(a-y) h'(z) w10_i h'(z1_i) a2_j.
+$∂J/∂a^1_i$ can be calculated as above $= 2(a^0-y) h'(z^0) w^{10}_i$,
+while $∂a^1_i/∂w^{21}_j = ∂a^1_i/∂z^1_i \cdot ∂z^1_i/∂w^{21}_j = h'(z^1_i) a^2_j$ (activation a2_j from yet prev layer).
+So the full expression:
 
 $\displaystyle \frac{∂J}{∂w^{21}_ j} = \frac{∂J}{∂a^1_i} \frac{∂a^1_i}{∂w^{21}_ j} = 2(a^0-y)h'(z^0)w^{10}_ i h'(z^1_ i) a^2_ j = ε^0 w^{10}_ i h'(z^1_ i) a^2_ j = ε^1_i a^2_j$
 
@@ -40,9 +40,9 @@ where $w^{21}_ j$ should actually read $w^{21}_ {j→i}$ , or $w^{21}_ {ij}$, as
 
 And similar to what we had before, $\displaystyle \frac{∂J}{∂b^1_i} = ε^1_i$.
 
-This part about $ε^1_i = ε^0 w^{10}_ i h'(z^1_ i)$ is why this process is called **backpropagation**: the error at layer 2→1 is obtained from 
+This part about $ε^1_i = ε^0 w^{10}_ i h'(z^1_ i)$ is why this process is called **backpropagation**: the error at layer 2→1 is obtained from the error 1→0 via weights $w^{10}$. The error is propagating back through weight matrices.
 
-Now consider layer 3→2. Again chain rule, except now while link w32_k coming from a neuron a3_k in the 3d layer affects only one neuron a2_j in the 2nd layer, at the next step the activity of this neuron a2_j affects **all neurons** a1_i in the first layer. And then each of them gathers on our single output. So index i for 1→0 is no longer fixed, but we have to run a sum for it:
+Now consider layer 3→2. Again chain rule, except now while link w32_k, coming from a neuron a3_k in the 3d layer, affects only one neuron a2_j in the 2nd layer, at the next step the activity of this neuron a2_j affects **all neurons** a1_i in the first layer. And then each of them gathers on our single output. So index i for 1→0 is no longer fixed, but we have to run a sum for it:
 
 ∂J/∂w32_k = ∑_i ∂J/∂a1_i ∂a1_i/∂w32_k = 
 2(a0-y) h'(z0) ∑_i w10_i ∂a1_i/∂w32_k = 
@@ -64,20 +64,22 @@ And so on; we can now do it for all layers. What's important is that we essentia
 # Forward:
 x = input
 for L in layers:
-    z = w∙x + b   # Note: Each layer should remember its x and z
-    x = h(z)
+    L.x = x
+    L.z = w∙x + b   # Note: Each layer should remember its x and z
+    x = h(L.z)      # New x to be used at next iteraction
     
 # Backwards:
 e = -∇Loss
 for L in reversed(layers):
-    ε = h'(z) ⨀ e    # Scale the error. That's where remembered z is used.
-    e  = wᵀ∙ε         # Remember ε, ten propagate errors backwards    
-for L in layers:      # Now update values:
-    b += ε*α          # α is the learning speed; ε is ε_L for this layer
-    w += (ε∙xᵀ)*α     # Hebb-like outer product. That's where x_L is used.
+    L.ε = h'(L.z) ⨀ e  # Scale the error. That's where remembered z is used.
+    e  = wᵀ∙L.ε         # Remember ε, then propagate errors backwards    
+    
+for L in layers:        # Now update values:
+    b += L.ε*α          # α is the learning speed; ε is ε_L for this layer
+    w += (L.ε∙L.xᵀ)*α   # Hebb-like outer product
 ```
 
-Above, `∙` stands for dot-product, `⨀` for elementwise Hadamard product, h' for dh/dz, and α for learning rate. The problem with ε is that, depending on your notation, it may weights from next layer, but h'(z) from this layer, which puts it off-kilter with layer-by-layer loop. Most tutorials call this thing δ instead of ε. I also have 2 loops for backprop, which is of course not needed if we can get access to this layer's error (for update) and previous layer's error (for further backprop) at the same time. You just cannot do it without remembering the errors, completely "in-memory". Unless you first update w then backprop, which is incorrect.
+Above, `∙` stands for dot-product, `⨀` for element-wise Hadamard product, h' for dh/dz, and α for learning rate. The problem with ε is that, depending on your notation, it may weights from next layer, but h'(z) from this layer, which puts it off-kilter with layer-by-layer loop. Most tutorials call this thing δ instead of ε. I also have 2 loops for backprop, which is of course not needed if we can get access to this layer's error (for update) and previous layer's error (for further backprop) at the same time. You just cannot do it without remembering the errors, completely "in-memory". Unless you first update w then backprop, which is incorrect.
 
 Some potential problems can be immediately deduced from this story. If a certain w_ji=0, it kills the effect of all weights converging on element j. Same if the value of z_j is such that it drives h'(z_j) to zero, which also kills the gradient (aka **vanishing gradients**). Say, for sigmoids it happens for very high or very small z; for ReLUs it happens for any z<0, and they can't recover (aka **Dead ReLUs**). And the other way around, in a deep network, gradients can grow arbitrarily large (**exploding gradients**) as you keep multiplying errors by wᵀ, allowing errors deep in the network to grow.
 
