@@ -1,7 +1,7 @@
 # Backpropagation
 
 Parents: [[06_DL]]
-Related: [[credit]] (credit assignment, including in the brain)
+Related: [[credit]] (credit assignment, including in the brain), [[bptt]] (backprop for RNNs)
 
 #dl
 

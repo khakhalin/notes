@@ -16,4 +16,4 @@ As it turns out, they trained on the StyleGAN original dataset, and it (I think?
 
 The image will now obviously be the best texbook case of bias in AI. Unfortuantely, many people's response was to blame the data (that it was biased), which is of course true, but I think the fact that the bias exists, and how hard it is to remove it, is more important than the particular reasons this biased appeared. In a sense that we don't want people to "unbias" their applications by carefully balancing (cherry-picking) their datasets; we want more robust, stable solutions.
 
-Apparently this paper also caused a bit of controversy on twitter, as some prominent AI researchers were annoyed by the attacks on the authors of the paper (youtube summary: https://www.youtube.com/watch?v=n1SXlK5rhR8 ).
+This paper also caused a lot of controversy on twitter, as some prominent AI researchers started to argue increasingly ad-hominem about whether the problem is with the algorithm, or with the data (a biased, but detailed youtube summary here, 14 min: https://www.youtube.com/watch?v=n1SXlK5rhR8 ).

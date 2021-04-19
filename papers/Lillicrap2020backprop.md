@@ -5,7 +5,7 @@ https://brainscan.uwo.ca/research/cores/computational_core/uploads/11May2020-Lil
 
 Parents: [[deepneuro]] / [[credit]]
 
-#deepneuro #neuro #credit
+#deepneuro #neuro #credit #review
 
 
 Is there backprop in the brain? Changes of synaptic connections are a given, and there have to be some non-local aspect to these changes (even if the rules themselves are local), for the brain to learn anything useful. But in ANNs people use [[backprop]] that carries info from the end (loss function, error) through the network (even for self-supervised and reinforcement learning [[11_RL]]). As ANNs, The brain has lots of feedback connections, but apparently they are used for different purpose (not for backprop), and most local learning seems unsupervised. How does it work then, and is backprop even a useful metaphor for bio networks?
@@ -34,7 +34,7 @@ Footnotes for this claim:
 
 Finally, there are two more indirect and vulnerable, but cool arguments: 
 1. Backprop-based ANNs are quite decent in predicting how cortex is tuned (refs from 68 to 72, including motor and sensorimotor regions), *unlike* computationally effective, but not-ANN-based models, which is super-inspiring.
-2. Backrop-based ANN are for now the only algorithm that approaches human- (animal)-like visual recognition (say, on Imagenet). Can backprop-like logic be, at least to some extent, inevitable? _At least if you loosen the definition enough to include any kind of parallelized vector-based descent?_
+2. Backprop-based ANNs are for now the only algorithm that approaches human- (animal)-like visual recognition (say, on Imagenet). Can backprop-like logic be, at least to some extent, inevitable? _At least if you loosen the definition enough to include any kind of parallelized vector-based descent?_
 
 Next point: If there's backprop in the cortex, then somebody needs to calculate errors, right? Guess what, there are neurons in the cortex that compute mismatches between predicted and observed sensory events!
 

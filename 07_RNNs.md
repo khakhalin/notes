@@ -4,10 +4,11 @@
 
 Subtopics:
 * [[lstm]] - Long Short-Term Memory
+* [[bptt]] - back-propagation through time
 * [[gru]] - Gated Recurrent Unit (kinda a simplified version of LSTM)
-* [[echo]] - Echo-State Networks
 * [[boltzmann_machine]] - a famous older model
 * [[hopfield]] - another famous older model
+* [[echo]] - Echo-State Networks (Reservoir computing)
 
 Papers:
 * ?

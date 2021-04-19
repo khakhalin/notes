@@ -49,9 +49,10 @@ For **conditional data retrieval** we have a choice between:
 * **queries**: `df.query('x>0')`, where `x` is a name of a column. Easier for a human to read; works slightly faster, but cannot be written to. To reference a normal variable `a` in a query, use `@a` inside the query string. Also keep in mind that they create a view of the original dataframe, not a new dataframe, which saves time and space, but can lead to slice-assignment issues if you assume that the result is an independent dataframe of its own. It's not.
 * To find the first row index that satisfies a criterion, follow with `.idxmax()` - it returns the location of the maximum (like `np.argmax()`), and in this case truth is the maximum.
 * To find `None`-like objects (or their absence), use `	.notnull()`, and its opposite `.isnull()`. It seems that `isna()` and `notna()` also work, and are exact synonyms (I think?).
-    * Note that while **queries** support stuff like `'x>0 | x<100'`, they don't support these na-related functions for some reason, unless you call with a certain flourish. So to filter out nans one has two options:
+    * Note that while **queries** support stuff like `'x>0 | x<100'`, they don't support these na-related functions for some reason, unless you call with a  flourish. To filter out nans one has two options:
         * A hack: `query('x == x')`. This works, because NAs aren't equal to themselves!!
         * A proper fancy call:  `query(	'x.notna()', engine='python')`
+* Useful ways to search by string: `df.col1.str.match('Smth')` if you want strings that start with 'Smth'. If you want strings that contain a substring, do `df.col1.str.contains('sub')`. Both only work for queries if you add an `engine` flourish.
 
 To thin out a dataset, several options:
 * One: `df = df[df.x>0]`.
@@ -72,11 +73,20 @@ A problem while writing to a frame, selecting by both column and row.
 Footnotes:
 * https://stackoverflow.com/questions/29888341/a-value-is-trying-to-be-set-on-a-copy-of-a-slice-from-a-dataframe-warning-even-a
 
+# Exploration
+
+Useful methods:
+* `df.col.hist()` - draws a nice histogram
+* `df.col.value_counts()` - outputs value-counts for a categorical variable.
+* `df.describe(include='all')` - outputs a derivative dataframe with min-max-mean-std-count etc. summary. Without this `include='all'` clause doesn't include categorical variables, but only numerical ones.
+
 # Data transformations
 
 **Numbers and logic**
 * Cast to type: `.astype(int)`
-* Vectorized not: `~` operator. For example, `~np.array([True,False])` is "F, T" obviously.
+* Vectorized not: `~` operator. For example, `~np.array([True,False])` is "F, T".
+* Replace NaNs: `.fillna(0)` replaces all NaNs with zeroes. Can be run on a dataframe, or a series.
+* Replace something else: use a numpy function: `.replace(old, new)`.
 
 **Strings**
 * For basic string operations, like cut first chars: `df['x'].str[1:]`
@@ -94,7 +104,7 @@ Footnotes:
 **Applying  arbitrary functions to every element of a column**
 Several options here:
 * **map**: `df.x = df.x.map(@function)`. For one-liners, works well with lambda notation. 
-* `df.apply(@fun, axis=1)`, and it appears that with it one can write a function that is applied to every row of a dataframe, but I'm not quite sure.
+* `df.apply(@fun, axis=1)`, and it appears that with it one can write a function that is applied to every row of a dataframe (see chaining advice below).
 
 **Updating certain values in a column**
 The archetypical way seems to be using a `where` command, which is cool, but weird: first, it doesn't feel like a "where" keywords (it's more an "update" or "replace" kinda of a command), and second, the condition `where` gets is actually for those values that won't be updated. If the condition is true, `where` passes the value through, otherwise it replaces it with a default. Example: `df.x.where(df.x>0, -2)` will replace all values that are below zero with −2. Use `~` if need to flip the condition (some people even prefer writing it with a tilde, to make it more clear which values are updated, even tho it's obviously a mindhack).
@@ -155,9 +165,11 @@ For **merging multiple dataframes** at once, set indices properly, and then do `
 
 First group, then apply aggregation. `dfs = df.groupby('g').agg({'a': [min, np.mean]})`
 
-**Aggregation** is coded as a dictionary, and more than one function can be applied to every column. Functions are passed as an array of functions (!!!), or function names (like `'count'`). If a column in the original dataframe is summarized in more than one way (say, if you calculate Column names in summary dataframe become a **multiindex** (when column index is a tuple).
-
 **Grouping** columns (those that appear in the summary dataframe not because they were summarized, but because they were grouped by) also become a multiindex. It means that they aren't normal columns, and cannot be referenced directly. To turn into a "normal" data frame, do `dfs = dfs.reset_index()`.
+
+**Aggregation** is coded as a dictionary, and more than one function can be applied to every column. Functions are passed as an array of functions (!!!), or function names as strings (like `'count'`). If a column in the original dataframe is summarized in more than one way (say, if you calculate Column names in summary dataframe become a **multiindex** (when column index is a tuple).
+
+Some useful functions: sum, mean, min, max, count, var, std, sem, first, last, nth (?).
 
 **Sorting** rows is done with `.sort_values(by='str')`, or a list of strings (column names). `ascending=True` is a default, so change if necessary.
 
@@ -172,11 +184,11 @@ First group, then apply aggregation. `dfs = df.groupby('g').agg({'a': [min, np.m
 Footnotes:
 * https://stackoverflow.com/questions/30960338/pandas-difference-between-pivot-and-pivot-table-why-is-only-pivot-table-workin
 
-# Chaining
+# Chaining tips and tricks
 
 How to change columns in a chaining way? It doesn't seem to be easy. `assign` for example doesn't always work, as you cannot reference newly created columns in it (those made by `agg` or `pivot`). So we have the following options:
-* Official version: `pipe(fun, arg1)` - allows user-written functions in chains, except that this `fun` shold be defined on a dataframe, and return dataframe. So it's not for quick apply-lambdas on a single column.
-* Hack: `.apply(lambda x: fun(x) if x.name=='col_name' else x)` - not very pretty, but it works.
+* Official version: `pipe(fun, arg1)` - allows user-written functions in chains, except that this `fun` should be defined on a dataframe, and return a dataframe. So it's not for quick apply-lambdas on a single column.
+* Hack: `.apply(lambda x: fun(x) if x.name=='col_name' else x)` - not very pretty, but it works, as long as your `fun(x)` can work on an entire column, numpy-style, as x here is not a single value, but an entire column.
 
 # Misc
 

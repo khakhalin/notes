@@ -2,21 +2,21 @@
 
 #bib #unsupervised #self-supervised #embedding #representation
 
-**Subtopics:**
+Subtopics:
 * [[embedding]] - embedding and representation
 * [[vae]] - autoencoders
 * [[gan]] - Generative Adversarial Networks
 * noisy-student #todo
 * [[boltzmann_machine]] - a famous older model
 
-**Related concepts:**
-* [[triplet_loss]] - aka contrastive loss or contrastive learning, aka **negative sampling** (which also seems to be a more popular term)
+Related concepts:
+* [[triplet_loss]] - contrastive loss /  learning, a case of **negative sampling**
 * [[word2vec]] - an example from text
 
-**ML papers:**
+ML papers:
 * [[Weng2019self-supervised.md]] - a review of sorts
 * [[Yu2020lookback]] - graph networks and label propagation for few-shots learning, using embedding from both late and early layers.
 * [[Zoph2020pretraining]] - pre-training on images hurts more often than it helps	
 
-**Neuro papers:**
+Neuro papers:
 * [[Gillon2021distal]] - learning from unexpected stimuli in visual cortex
