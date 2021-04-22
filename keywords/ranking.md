@@ -1,6 +1,6 @@
 # On ranking from pairwise comparisons
 
-Parents: ??
+Parents: [[stats]]
 Related: [[centrality]], [[logreg]]
 
 #centrality #bib
@@ -28,7 +28,7 @@ Apparently, it's really easy to come with illogical counter-examples where CBI p
 
 ### David's score
 
-Let $p_{ij}$ is the probability of i winning over j (the share of wins among all interactions they had).
+Let $p_{ij}$ be the probability of i winning over j (the share of wins among all interactions they had).
 
 $\displaystyle R_i = \sum_j p_{ij} + \sum_j \sum_k p_{ij} p_{jk} - \sum_j p_{ji} - \sum_j \sum_k p_{ji} p_{kj}$, where sums only include those pairs {ij} where an interaction actually happened.
 

@@ -10,13 +10,14 @@ See also: [[database]]
 ```sql
 SELECT col1, MAX(col2) AS altname
 FROM table1 AS t1
-WHERE (col1=1 AND col2>2) OR NOT (col5 IN ("cat","dog")) OR (col8 BETWEEN 3 AND 7)
+LEFT JOIN t2 ON (t1.id=t2.id) OR (t2.col2 IS NULL)
+WHERE (col1=1 AND col2>2) 
+  OR NOT (col5 IN ("cat","dog")) 
+  OR col8 BETWEEN 3 AND 7
 GROUP BY col3
 HAVING COUNT(*)>1 AND SUM(col7)<100
 ORDER BY col4 DESC, col5 ASC
 LIMIT 10
-LEFT JOIN t2 ON t1.id=t2.id
-WHERE t2.col2 IS NULL;
 ```
 
 ##  More bells and whistles
@@ -41,7 +42,10 @@ WHERE t2.col2 IS NULL;
 * `FULL JOIN` - combines both tables (and thus acts same as UNION describe above).
 * To imitate subtraction, do: `SELECT * FROM t1 LEFT JOIN t2 ON t1.key=t2.key WHERE t2.key is NULL;`. This way it will first try to LEFT JOIN, and maybe finds some matches, but for those rows of t1 that didn't get  a match in t2, it sets t2.key to NULL. And then we immediately filter these rows.
 * Something like a self-join is also possible, using syntax with aliasing: `SELECT a.name AS name1, b.name AS name2 FROM table1 AS a, table1 AS b WHERE a.manager=b.id;`. In this case we'll have a list of all relations between people in an organization, all from one self-referencing table.
-* Note that the `ON` statement can technically contain any time of logic, including logical functions. So one can do something like `ON (t1.id=t2.id OR t2.name='cat')`
+
+Some logic of joining:
+* `ON` statement can technically contain any time of logic, including logical functions. So one can do something like `ON (t1.id=t2.id OR t2.name='cat')`
+* For inner and left joins, `ON` and `WHERE` are equivalent, and the order in which they are written is irrelevant. It's better to think of them as being performed after joining (even though optimizer may choose to actually perform them before joining if it doesn't change the output)
 
 ### Subqueries
 There are three type of subqueries:
@@ -78,16 +82,16 @@ Apparently it's possible not to grant users permissions to delete rows and drop 
 * `BACKUP DATABASE dbname` also exists.
 
 ## Functions on data
-There are lots of built-in functions; too many to list here, including math, trigonometry, string manipulation (like `LEFT`, `LEN`, `LOWER`, and so on), and what not. Some interesting ones that are not obvious are `LEAST` and `GRATEST` that work across different columns within the same row, as opposed to MAX and MIN that work along all rows (entries) for a returned column. There are also lots of **system-specific operations on dates and times**. Read the manual:
+There are lots of built-in functions; too many to list here, including math, trigonometry, string manipulation (like `LEFT`, `LEN`, `LOWER`, and so on), and what not. Some interesting ones that are not obvious are `LEAST` and `GREATEST` that work across different columns within the same row, as opposed to MAX and MIN that work along all rows (entries) for a returned column. There are also lots of **system-specific operations on dates and times**. Read the manual:
 * https://www.w3schools.com/sql/sql_ref_sqlserver.asp
 
 Some interesting cases tho:
 * `ROUND` takes a second param for n digits, and it can be negative, so `ROUND(..., -3)` rounds to the nearest 1000, for example.
 
 ## Technical tips and bits
-* **Escape sequence** for apostrophe `'` is double apostrophe `''`. So it would be `O''Hara` if you wanted to search for this data.
+* **Escape sequence** for apostrophe `'` is double apostrophe `''`. So it would be `O''Hara` if you wanted to search for this name.
 * Some versions of SQL (Oracle?) refuse to, for example, sort by a Boolean value (some versions do type coercion, but some don't). To treat Booleans as numbers, use `CASE WHEN condition THEN 1 ELSE 0 END`. You can obviously do any other values here.
-* Some versions (Oracle again?) cannot do `UNION` on sorted  queries, as they treat `UNION` as a set operation, which invalidates sorting. You can only sort things after union.	
+* Some versions (Oracle again?) cannot do `UNION` on sorted  queries, as they treat `UNION` as a set operation, which invalidates sorting. You can only sort things after union.
 
 ## Control structures
 Apparently SQL (especially larger systems, like **SQLServer**, or **Transact-SQL** from Microsoft) also has its own system of control structures, with IF, ELSE, BEGIN TRY, BEGIN CATCH, WHILE, and what not.

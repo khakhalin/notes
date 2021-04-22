@@ -15,6 +15,8 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 
 # Queue
 
+* common table expressions (newer SQL)
+* windowed functions (newer SQL)
 * docker - what and how
     * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
     * Docker and Kubernetes: https://www.youtube.com/watch?v=u8dW8DrcSmo

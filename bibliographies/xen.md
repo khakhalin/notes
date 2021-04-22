@@ -17,6 +17,10 @@ https://news.mit.edu/2021/artificial-intelligence-adversarial-0308
 
 # OMR
 
+Image motion with color contrast suffices to elicit an optokinetic reflex in Xenopus laevis tadpoles.
+Knorr AG, Gravot CM, Glasauer S, Straka H.
+Sci Rep. 2021 Apr 19;11(1):8445. doi: 10.1038/s41598-021-87835-2.
+
 Xie, J., Jusuf, P. R., Bui, B. V., & Goodbourn, P. T. (2019). Experience-dependent development of visual sensitivity in larval zebrafish. Scientific Reports, 9(1), 1-11.
 https://www.nature.com/articles/s41598-019-54958-6
 Compare spatial frequency tuning between naive and visually experienced larvae. See an improvement with experience.
