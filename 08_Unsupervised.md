@@ -4,8 +4,9 @@
 
 Subtopics:
 * [[embedding]] - embedding and representation
-* [[vae]] - autoencoders
-* [[gan]] - Generative Adversarial Networks
+* [[15_generate]] - generative  models
+    * [[autoencoder]] - autoencoders
+    * [[gan]] - Generative Adversarial Networks
 * noisy-student #todo
 * [[boltzmann_machine]] - a famous older model
 

@@ -1,4 +1,4 @@
-# Variational Auto-Encoder
+# Auto-Encoders
 
 Parents: [[08_Unsupervised]], [[15_generate]]
 Related: [[gan]]

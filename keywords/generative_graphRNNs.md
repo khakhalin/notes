@@ -49,7 +49,7 @@ p_model() = $\prod$ p(new something  | all previous somethings)
 
 Sequential  generation, where we take "actions" (add a point, a component, a word to a sentence etc) based on all previously taken actions, until the result is complete. In our case, we would be adding nodes and edges one after another.
 
-> He makes some vague statement that other generative approaches, including GANs and VAE, are somehow related to ARMs?.. Not sure. He says that "at least one part of fancier generators contains an ARM", or something like that… #todo: what??
+> He makes some vague statement that other generative approaches, including [[gan]]s and [[autoencoder]]s, are somehow related to ARMs?.. Not sure. He says that "at least one part of fancier generators contains an ARM", or something like that… #todo: what??
 
 ## graphRNNs
 

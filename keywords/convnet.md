@@ -60,7 +60,8 @@ Pooling layers don't have trainable parameters, but has hyperparameters that may
 
 In the past, average-pooling was common, but fell out of favor, as max pooling works better in practice. _If I get it right, the use of maxpooling should also favor sparse coding, so that max(feature) made sense. So it probably works better in combination with deep tensors, and may even be a motivation behind these really deep convnet outputs with ~256 filters. Right?_
 
-Some people hate pooling, and believe that in the future we'll get rid of it. See for example "All convolutional net" (Springenberg 2014). Apparently, pooling layers are also not used in autoencoders and generative models (see [[vae]], [[gan]]) - is it true?
+Some people hate pooling, and believe that in the future we'll get rid of it. See for example "All convolutional net" (Springenberg 2014). Apparently, pooling layers are also not used in autoencoders and generative models (see [[autoencoder]], [[gan]]) - is it true?
+
 Footnotes:
 * Springenberg, J. T., Dosovitskiy, A., Brox, T., & Riedmiller, M. (2014). Striving for simplicity: The all convolutional net. arXiv preprint arXiv:1412.6806.
 

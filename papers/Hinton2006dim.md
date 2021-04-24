@@ -1,9 +1,9 @@
 # Hinton 2006: Dim reduction with RNNs
 
-Hinton, G. E., & Salakhutdinov, R. R. (2006). Reducing the dimensionality of data with neural networks. science, 313(5786), 504-507.
-https://dbirman.github.io/learn/hierarchy/pdfs/Hinton2006.pdf
+Hinton, G. E., & Salakhutdinov, R. R. (2006). Reducing the dimensionality of data with neural networks. science, 313(5786), 504-507. https://dbirman.github.io/learn/hierarchy/pdfs/Hinton2006.pdf
 
 #dim #representation
+
 
 Seminal paper describing how RNNs can generate representations; 12k citations. Main reasons it is cited:
 * That dimensionality reduction with RNNs is possible at all
@@ -22,6 +22,8 @@ Then they train in a there-and-back-again fashion: pick training image as X; cal
 
 Finally, as each sets of weights works both for encoding and for decoding, they can be used as proxies (initialization) not only for the encoding part of an autoencoder, but also for the reverse funnel. They used cross-entropy error $E = -\sum p_i \log q_i - \sum (1-p_i) \log (1-q_i)$ where p_i is i-th pixel intensity (in 0:1) and q_i is its reconstruction. And they also applied the same model to news articles of different topics, using top 2000 thematic words as a feature vector.
 
-But the most interesting (for the time) part of the paper seems that they compared the representation to PCA, and noticed two things. One, is that PCA gives a much worse reconstruction (coz it's linear?). And second, that you can visualize it if you make an extreme two-dimensional autoencoder, and the visualization shows much clearer separation between categories in the latent space.
+But the most interesting (for the time) part of the paper seems that they compared the representation to PCA, and noticed two things. One, is that PCA gives a much worse reconstruction (coz it's linear?). And second, that you can visualize it if you make an extreme two-dimensional autoencoder, and the visualization shows much clearer separation between categories in the latent space. The paper is very short, and not big on details, but it seems that the way they made it happen is by actually training a real deep autoencoder with a bottleneck of only 2 dimensions, and a funnel that looks like 784→1000→500→250→2 (followed by an anti-funnel, exactly mimicking the funnel, so it would be →250→500→1000→784 in this case). And then one can plot the inner 2-dim layer.
+
+Arguably, one could try to use a similar approach with pre-trained models as well; like, you could train a model with 30-wide bottleneck, then fix the weights, but replace the →30→ part with a new →30→2→30→ sequence that is alone allowed to train. But I don't think they did it in this paper, did they?
 
 > I'm guessing, there should be a simple way to identify two top explanatory dimensions for a higher-dimension autoencoder. Would it be by the average amplitude of activation? Feels like it's probably a solved problem in [[interpretability]], no?

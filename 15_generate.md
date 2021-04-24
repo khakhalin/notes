@@ -3,7 +3,7 @@
 #generative #bib
 
 Topics:
-* [[vae]]
+* [[autoencoder]]
 * [[gan]]
 * [[wf_collapse]] - Wave Function Collapse
 * [[perceptual_loss]] - a good loss to optimize image generators

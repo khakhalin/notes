@@ -16,4 +16,4 @@ In DL ([[06_DL]]), solves the problem of data sparsity (to avoid direct training
 One possible approach: get hold of some similarity or co-occurance measure; use it to produce groups, then "withhold some information", predicting missing members of a group based on those that are visible.
 > Where does it come from? Does it really work? Is it like a "noisy student" approach? ([[Xie2020noisy_student]]) Is it a modern technique, an experimental one, or an older one?
 
-> Is it where autoencoders ([[vae]]) can be helpful, for pre-training the embedding? Or is it not a thing now, and everything is trained as one giant network?
+> Is it where [[autoencoder]]s can be helpful, for pre-training the embedding? Or is it not a thing now, and everything is trained as one giant network?

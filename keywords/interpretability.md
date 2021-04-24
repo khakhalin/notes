@@ -2,15 +2,24 @@
 
 For now, a stub, to collect good info on interpretability.
 
+Parents: [[06_DL]]
+See also: [[fairness]]
+
 #interpretability #dim #datavis #bib
 
-See also: [[fairness]]
 
 # Papers
 
 * [[Hinton2006dim]] - used a PCA-like plot to understand representation in a deepest layer of the autoencoder, by training a separate 2-wide autoencoder
-* [[Olah2017visualization]] - interpreting visual classifiers
-* [[Saxe2020interpretable]] - a blog post about additive ANN models (GAM)
+* [[Lillicrap2019understand]] - what does it mean to understand a neural network? (a plug for [[curriculum]]?)
+* "Circuits" series from Google Brain: https://distill.pub/2020/circuits/
+        * [[Olah2017visualization]] - interpreting visual classifiers
+        * [[Olah2018interpretability]] - building blocks of interpretability
+        * https://distill.pub/2019/computing-receptive-fields/
+        * https://distill.pub/2020/circuits/zoom-in/
+        * https://distill.pub/2020/circuits/curve-detectors/
+        * https://distill.pub/2021/multimodal-neurons/
+* [[Saxe2020interpretable]] - a blog post about additive ANN models (GAMs)
 
 # Comparing networks
 
@@ -30,10 +39,10 @@ It's possible that ANNs don't feel like good "conceptual models" just coz the co
 
 # To read
 
-https://distill.pub/2018/building-blocks/
-Olah2018interpretability
-
 https://distill.pub/2019/computing-receptive-fields/
+
+https://distill.pub/2020/circuits/zoom-in/
+
 
 https://distill.pub/2020/circuits/curve-detectors/
 
