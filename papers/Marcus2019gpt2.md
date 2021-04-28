@@ -3,9 +3,10 @@
 The Gradient. 25 Jan 2020. Gary Marcus
 https://thegradient.pub/gpt2-and-the-nature-of-intelligence/
 
+Related: [[10_Text]], [[Vaswani2017attention]], [[transformers]]
+
 #language #opinion #meaning #gi
 
-Related: [[10_Text]]
 
 An opinion piece on OpenAI's gpt2 model.
 

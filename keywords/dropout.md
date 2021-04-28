@@ -51,7 +51,8 @@ There's apparently a way to make it work both with convnets and RNNs, but it's n
 # Refs
 
 Original paper by Hinton (21k citations):
-Srivastava, N., Hinton, G., Krizhevsky, A., Sutskever, I., & Salakhutdinov, R. (2014). Dropout: a simple way to prevent neural networks from overfitting. The journal of machine learning research, 15(1), 1929-1958.
+Srivastava, N., Hinton, G., Krizhevsky, A., Sutskever, I., & Salakhutdinov, R. (2014). Dropout: a simple way to prevent neural networks from overfitting. The journal of machine learning research, 15(1), 1929-1958. https://www.cs.toronto.edu/~rsalakhu/papers/srivastava14a.pdf
+* Interestingly, claims, among other things, that the motivation for dropout comes from sexual selection in evolution (experimenting with combinations without committing too strongly to any of them)
 
 Hahn, S., & Choi, H. (2020). Understanding dropout as an optimization trick. Neurocomputing.
 https://www.sciencedirect.com/science/article/abs/pii/S0925231220302575

@@ -4,9 +4,10 @@ Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., ..
 (Google Research and Google Brain)
 https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf
 
+Parent: [[transformers]]
+
 #attention
 
-Parent: [[transformers]]
 
 The paper introducing **Transformers**
 

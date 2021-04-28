@@ -57,3 +57,8 @@ Russian public kadaster: https://pkk.rosreestr.ru/
 Free pics from Smithsonian: https://www.si.edu/openaccess
 
 Russian ipa: https://www.lonweb.org/links/russian/lang/006.htm
+
+# Strange references
+
+Федченко, О. Д. (2020). Балтская гидронимия центральной России. Теоретическая и прикладная лингвистика, 6(4), 104-127. https://lingua.amursu.ru/upload/lingua/2020/4/thal_2020_4_10_104_127.pdf
+He claims that all rivers in central Russia have Baltic origins, even those that are traditionally are thought of as Finnic. Also he's an independent researcher. Some claims are based on conjunctures like "this is too general, nobody would call a river like that". Together it makes me skeptical, although some parallels with river names in actual Baltics are interesting.

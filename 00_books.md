@@ -56,12 +56,12 @@ Also:
 * Applied Predictive Modeling by Kuhn Johnson (no free pdf online). Code in R.
 * Hands-On M with Scikit-Learn, Keras, and TensorFlow, by Aurélien Géron. Python obviously. [All labs on github](https://github.com/ageron/handson-ml2), but no full version of the book online.
 * "The 100 pages ML book" by Andriy Burkov. [full pdf](http://themlbook.com/wiki/doku.php) 
-* Convex Optimization, by Stephen Boyd. [site](https://web.stanford.edu/~boyd/cvxbook/), [pdf](https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
 * Deep Learning, by Ian Goodfellow et al. [pdf](http://www.deeplearningbook.org/)
-* All of Statistics, Larry Wasserman (no online version)
-* ESL (The Elements of Statistical Learning) by Hastie, Tibshirani, Friedman. ([pdf](https://web.stanford.edu/~hastie/ElemStatLearn/)) A more encyclopaedic version of ISLR: extensive, no code, and with most proofs and derivations "left to the reader" ([ref](https://www.quora.com/How-do-I-learn-the-book-Elements-of-Statistical-Learning-What-books-materials-would-help-beef-up-my-foundations-so-that-I-will-be-able-to-comprehend-the-book-easily)). Great book to revisit and integrate the material you already know.
-* Speech and Language Processing by D. Jurafsky & JH Martin ([draft pdf](https://web.stanford.edu/~jurafsky/slp3/))
 * Pattern recognition and ML by Christopher Bishop ([pdf](https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/)) - Has a more Bayesian perspective. [This set of notebooks](https://github.com/ctgk/PRML) implements this book, chapter by chapter.
+* All of Statistics, Larry Wasserman (no online version)
+* Convex Optimization, by Stephen Boyd. [site](https://web.stanford.edu/~boyd/cvxbook/), [pdf](https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
+* ESL (The Elements of Statistical Learning) by Hastie, Tibshirani, Friedman. ([pdf](https://web.stanford.edu/~hastie/ElemStatLearn/)) A more encyclopedic version of ISLR: extensive, no code, and with most proofs and derivations "left to the reader" ([ref](https://www.quora.com/How-do-I-learn-the-book-Elements-of-Statistical-Learning-What-books-materials-would-help-beef-up-my-foundations-so-that-I-will-be-able-to-comprehend-the-book-easily)). Great book to revisit and integrate the material you already know.
+* Speech and Language Processing by D. Jurafsky & JH Martin ([draft pdf](https://web.stanford.edu/~jurafsky/slp3/))
 * Foundations of ML by M. Mohri et al ([pdf](https://cs.nyu.edu/~mohri/mlbook/)) - more mathy?
 * ML book by K.P. Murphy - ([site](https://www.cs.ubc.ca/~murphyk/MLbook/), but no full pdf)
 * Morgan, S. L., & Winship, C. (2015). Counterfactuals and causal inference (pdfs are googlable). [[counterfactuals]]
@@ -69,6 +69,7 @@ Also:
 * Artificial Intelligence: A Modern Approach, by Russel and Norvig. ([site](http://aima.cs.berkeley.edu/), but no online)
 * [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/index.html) by Michael Nielsen
 * Probability and Stochastic Processes: With a View Toward Applications by Leo Breiman
+* Information Theory, Inference and Learning Algorithms. David J. C. MacKay. 2003. - actual math (calculus, distributions) underlying practical methods that people use (like, actual reasons why [[logreg]] works etc.)
 
 Coding problems
 * https://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/

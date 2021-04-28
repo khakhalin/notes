@@ -15,11 +15,12 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 
 # Queue
 
-* common table expressions (newer SQL)
 * windowed functions (newer SQL)
+* common table expressions (newer SQL)
 * docker - what and how
     * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
     * Docker and Kubernetes: https://www.youtube.com/watch?v=u8dW8DrcSmo
+* https://hdbscan.readthedocs.io/en/latest/how_hdbscan_works.html
 * What is flask?
     * Flask docker file (allegedly 80% of what one needs for a typical deployment)
 * bayesian accuracy (and bias) compared to human-level? What's the deal here? What are these questions even  about?

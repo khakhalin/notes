@@ -4,12 +4,19 @@
 
 Parents: [[04_Features]]
 
-Density-based clustering:
-https://towardsdatascience.com/a-gentle-introduction-to-hdbscan-and-density-based-clustering-5fd79329c1e8
-
 Methods:
 * [[spectral_clustering]]
 * [[mean_shift]]
+
+# To Read
+
+https://scikit-learn.org/stable/modules/clustering.html
+* Including a nice compact description of the Silhouette Coefficient - the most popular way of quantifying clustering quality when ground truth is not available. The one calculated with `sklearn.metrics.silhouette_score`
+
+http://www.homepages.ucl.ac.uk/~ucakche/presentations/cqualitybolognahennig.pdf
+
+Density-based clustering:
+https://towardsdatascience.com/a-gentle-introduction-to-hdbscan-and-density-based-clustering-5fd79329c1e8
 
 # Refs
 
