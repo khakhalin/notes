@@ -1,4 +1,4 @@
-# Neuro and behavioral stochasticity, variability, personality
+# Neuro and behavioral stochasticity and variability
 
 #neuro #bib #freewill #behav #variance
 
@@ -8,6 +8,7 @@ Note: strictly speaking, in math, the term **stochastic** is very distinct from 
 
 Related:
 * [[randomness]] - what randomness even is? How to define it?
+* [[personality]] - personality in humans and individual variability in non-human animals
 * [[levy_walks]] - random exploration / exploitation in space, used by various animals during foraging
 * [[moth]] - ultrasound avoidance in moths (free will)
 
@@ -30,7 +31,3 @@ Young birds explore the song space, and their songs are highly variable. However
 
 Tervo, D. G., Proskurin, M., Manakov, M., Kabra, M., Vollmer, A., Branson, K., & Karpova, A. Y. (2014). Behavioral variability through stochastic choice and its gating by anterior cingulate cortex. Cell, 159(1), 21-32.	https://www.sciencedirect.com/science/article/pii/S0092867414011076
 They tricked rats into stochastic behavior by creating a competitive environment in which unpredictability was beneficial. Once all parameters were calibrated, the behavior was essentially unpredictable (from the experimenter's pov). Found that the cingulate cortex is the substrate.
-
-# Individual variability
-
-Jones, B. M., Rao, V. D., Gernat, T., Jagla, T., Cash-Ahmed, A. C., Rubin, B. E., ... & Middendorf, M. (2020). Individual differences in honey bee behavior enabled by plasticity in brain gene regulatory networks. Elife, 9, e62850. https://elifesciences.org/articles/62850

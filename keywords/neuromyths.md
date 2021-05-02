@@ -1,17 +1,19 @@
 # Neuromyths
 
-#neuro #edu #literacy
+#neuro #edu #literacy #debunked
 
-Subtopics:
+Examplse:
 * [[gustation]] - on tongue regions
+* [[myers-briggs]] - beloved pseudoscience of self-classification
 
 Other:
 * Marshmallow test
-* 10%
+* Ego depletion
+* Using 10% of the brain
 * Red dress
 * Hot coffee priming
 * learning styles
-* left/right brain personality (_see below for learning, but I think I've seen a paper on L/R brain personalities, based on self-reporting and assessments of friends and family, that also showed no effect, but now I cannot find it_)
+* left/right brain personality (_see below a summary for learning, but I think I've seen a paper on L/R brain personalities in general, based on self-reporting and assessments of friends and family, that also showed no effect, but now I cannot find it_) #todo
 
 # Refs
 

@@ -1,0 +1,3 @@
+# Effect size
+
+Parent: [[stats]]

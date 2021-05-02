@@ -1,4 +1,4 @@
-# Stats - related topic
+# Stats root page
 
 #bib #stats
 
@@ -8,11 +8,13 @@ Subtopics:
 * [[point_process]] - everything on point processes (empty for now)
 * [[time-series]] - time-series analysis and prediction
 
-Basic probability topics:
-* [[binomial]] - binomial distribution
+Probability distributions and alike:
+* [[binomial]], [[normal]]
 
 Tests and measurements:
-* [[p-values]] - pvalues :)
+* [[p-values]] - subj
+* [[effect-size]] - subj
+* [[ab-testing]] - on testing in business context
 * [[intraclass_corr]] - how strongly items from the same group resemble each other
 * [[shapiro-wilk]] - test for normality
 * [[hotteling_test]] - a generalization of t-test for multivariate data
