@@ -1,11 +1,16 @@
-# Games, and Game Theory
+# Games, Game psych, and Game Theory
 
 #bib #game
 
-Children:
+Subtopics:
 * [[multi_armed_bandit]] - classic abstract model of exploration / exploitation dilemma
 * [[levy_walks]] - spatial exploration
 * [[boardgame]] - algorithms and AI solutions for board games
+* [[bartle_taxonomy]] - an attempt in classifying gamers
+
+Papers:
+* [[Zammitto2001gaming]] - psychological (personality) classification of gamers
+* [[Braun2016gamerpersonality]] - casual gamers have lower neuroticism than either non-gamers or game addicts
 
 # Refs
 

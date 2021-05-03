@@ -48,6 +48,8 @@ Other related papers:
 
 # To-Read: ML on Graphs
 
+Bronstein, M. M., Bruna, J., Cohen, T., & Veličković, P. (2021). Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges. arXiv preprint arXiv:2104.13478. https://arxiv.org/abs/2104.13478
+
 A collection of hot papers from Nov 2020:
 https://www.reddit.com/r/MachineLearning/comments/j6wzut/r_latest_developments_in_graph_neural_networks_a/
 

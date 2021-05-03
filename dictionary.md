@@ -30,11 +30,17 @@ See also:
 
 **Collaborative filtering** (pipe): a name for what Netflix users do when they watch movies and generate data of "co-occurrence". Similar to Federated Learning. [[collab_filtering]]
 
+**CPC** (marketing): Cost Per Click = Ad spending / N clicks
+
+**CPI** (marketing): Cost Per Install = Ad spend / N installs
+
 **CRM** (business): Customer Relationship Management system. A customer DB + a system to aid conversations (aka "Contact Management": history of conversations etc.) + pipeline tracking (aka Lead management) + analytics and forecasting + tools for within-organization info sharing. ([ref](https://www.salesforce.com/eu/learning-centre/crm/crm-systems/))
 
 # D
 
 **DAG** (math): Directed Acyclic Graph
+
+**DAU** (marketing): Daily Active Users
 
 **Databricks Workspace** (db): workspace (environment) by Databricks, to interact with programs (jobs), notebooks, libraries, data. (?)
 
