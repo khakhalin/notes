@@ -5,6 +5,9 @@
 Parents: [[system_design]]
 See also: [[ethics]], [[interpretability]]
 
+Papers:
+* [[Hooker2021bias]] - can bias in AI be blamed on "bad data"? (no, as data is always bad. Need smth else!)
+
 A nice example with bananas from Google lecture. When we say "bananas", we typically mean "yellow bananas", while if they are not yellow (variety, unripe, overripe), we would say that. This have several implications. One, we may decide not to include this color as a feature, then have problems. Another, if as this feature is often presumed, is it underreported, so we may not be able to learn from naive text mining that most bananas are yellow, as the color is only mentioned when they are not yellow. Third, we may assume that non-yellow bananas are more alike to each other than they actually are (aka out-group homogeneity bias; say, if there are ripe green variety bananas out there).
 
 If some values are missing, it may also be a sign of data collection bias, which can lead to meaningful consequences.
@@ -132,3 +135,6 @@ https://arxiv.org/abs/1810.08810
 
 Google lecture on fairness
 https://developers.google.com/machine-learning/crash-course/fairness/video-lecture
+
+"Are we automating racism?" - a really cool (a bit slow) laypeople-friendly video on this topic (20 min):
+https://www.youtube.com/watch?v=Ok5sKLXqynQ
