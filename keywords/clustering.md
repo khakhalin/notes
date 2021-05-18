@@ -18,6 +18,11 @@ http://www.homepages.ucl.ac.uk/~ucakche/presentations/cqualitybolognahennig.pdf
 Density-based clustering:
 https://towardsdatascience.com/a-gentle-introduction-to-hdbscan-and-density-based-clustering-5fd79329c1e8
 
+Comparison of different clustering algorithms:
+https://scikit-learn.org/stable/auto_examples/cluster/plot_cluster_comparison.html#sphx-glr-auto-examples-cluster-plot-cluster-comparison-py
+
+A presentation on various measures of clustering quality: http://www.homepages.ucl.ac.uk/~ucakche/presentations/cqualitybolognahennig.pdf
+
 # Refs
 
 Priebe, C. E., Park, Y., Vogelstein, J. T., Conroy, J. M., Lyzinski, V., Tang, M., ... & Bridgeford, E. (2019). On a two-truths phenomenon in spectral graph clustering. Proceedings of the National Academy of Sciences, 116(13), 5995-6000. https://www.pnas.org/content/116/13/5995

@@ -5,7 +5,8 @@ Related: [[pandas]]
 
 #tools
 
-Two main libraries: **time** and **datetime** with different syntax.
+
+Two main libraries: **time** and **datetime** with different syntax. Because of that, I actually often consider just using [[pandas]] built-in date-time functionality where possible. But it's not always possible (as most of its functions run as methods of a series, and not as functions ready to process an arbitrary argument).
 
 ### Main functions
 

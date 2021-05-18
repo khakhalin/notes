@@ -36,6 +36,7 @@ They asked ~30 big software companies to fill a table about what properties of j
     * Everyone likes product-oriented people (product programmers), as opposed to technique-based programmers;
     * Everyone likes practical programmers, and hates academic programmers.
     * Experience matters (but that's obvious)
+Tweet to quote: https://twitter.com/DynamicWebPaige/status/1377464761013653505
 
 Meijer, R. R., Neumann, M., Hemker, B. T., & Niessen, A. S. M. (2020). A tutorial on mechanical decision-making for personnel and educational selection. Frontiers in psychology, 10, 3002.
 https://www.frontiersin.org/articles/10.3389/fpsyg.2019.03002/full

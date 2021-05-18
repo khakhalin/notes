@@ -3,6 +3,7 @@
 Parents: [[02_Regression]], [[linalg]]
 Related: [[l2]], [[gram-schmidt]], [[loess]]
 
+
 **Linear model**: y ~ h(x) = $∑θ_j x_j$ = xθ, or in matrix form: h = Xθ ~ y. We assume that θ is a column-vector of coefficients, and each row of X is a vector x length p+1, with x_0 = 1 (intercept), followed by n "normal" coordinates for this point. The equation above defines a hyperplane in ℝ^p.
 
 # L2 formula for LR

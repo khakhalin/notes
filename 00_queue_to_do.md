@@ -15,8 +15,19 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 
 # Queue
 
+* hierarchical best-fit models 
+    * [[arima]]
+    * [[pacf]]
+    * partial correlation
+    * prophet
+* Map/Reduce - learn to explain? What are the alternatives?
+* anomaly detection
 * windowed functions (newer SQL)
 * common table expressions (newer SQL)
+* refresh [[design_pattern]], especially those used in data science
+* cointegration: https://www.youtube.com/watch?v=vvTKjm94Ars
+* document those subplot-like tricks in [[matplotlib]]
+* in [[sklearn]], for pca, add reconstruction (test in jupyter to make sure it's correct)
 * docker - what and how
     * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
     * Docker and Kubernetes: https://www.youtube.com/watch?v=u8dW8DrcSmo

@@ -22,6 +22,9 @@
     * See also:
         * [[ransac]] - bootstrapping-like regression estimator based on inliners voting
 
+**For time-series** (see [[time-series]])
+* [[arima]] - autoregressive models
+
 # Notation
 
 To sum up **notation choices** (roughly matching ESL): one data point is a row-vector of coordinates, so all points in a dataset make up a tall slim matrix (a column of row- vectors). The values of y are also a column. Next, as one data-point is a row, parameters θ have to be a column, so that dim(y) = N×1 = dim(Xθ). When writing it all, a part that is a bit confusing is that X (matrix) of N×k is multiplied by θ from the right (Xθ), but individual points x may have to be written as xᵀθ to show that they are row-vectors (by default x would have been a column-vector).

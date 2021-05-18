@@ -1,13 +1,10 @@
 # Pandas
 
 Parent: [[python]]
-See also: [[numpy]], [[py_dates]]
+See also: [[numpy]], [[py_dates]], [[sklearn]]
 
 #tools
 
-# Open questions
-
-* There's still some controversy with creating filtered dataframes using `query` (see below). I found a way to make it work correctly, and without warnings, but I still don't understand why the warnings appeared in the first place, and how adding `.copy()` happened to fix it.
 
 # Creation and basic IO
 
@@ -48,11 +45,13 @@ For **conditional data retrieval** we have a choice between:
 * Another form of logical indexing: `df.x.eq(0)` (or things like `ne`, `le` etc.)
 * **queries**: `df.query('x>0')`, where `x` is a name of a column. Easier for a human to read; works slightly faster, but cannot be written to. To reference a normal variable `a` in a query, use `@a` inside the query string. Also keep in mind that they create a view of the original dataframe, not a new dataframe, which saves time and space, but can lead to slice-assignment issues if you assume that the result is an independent dataframe of its own. It's not.
 * To find the first row index that satisfies a criterion, follow with `.idxmax()` - it returns the location of the maximum (like `np.argmax()`), and in this case truth is the maximum.
-* To find `None`-like objects (or their absence), use `	.notnull()`, and its opposite `.isnull()`. It seems that `isna()` and `notna()` also work, and are exact synonyms (I think?).
+* To find `None`-like objects (or their absence), use `	.notnull()`, and its opposite `.isnull()`. It seems that `isna()` and `notna()` also work, and are exact synonyms (I think?). Note also that it's `np.isnan()` in Numpy, but `isna()` in Pandas.
     * Note that while **queries** support stuff like `'x>0 | x<100'`, they don't support these na-related functions for some reason, unless you call with a  flourish. To filter out nans one has two options:
         * A hack: `query('x == x')`. This works, because NAs aren't equal to themselves!!
         * A proper fancy call:  `query(	'x.notna()', engine='python')`
-* Useful ways to search by string: `df.col1.str.match('Smth')` if you want strings that start with 'Smth'. If you want strings that contain a substring, do `df.col1.str.contains('sub')`. Both only work for queries if you add an `engine` flourish.
+* Useful ways to search by string:
+    * `df.col1.str.match('Smth')` if you want strings that start with 'Smth'. 
+    * `df.col1.str.contains('sub')` if you want strings that contain a substring. Both only work for queries if you add an `engine='python'` flourish.
 
 To thin out a dataset, several options:
 * One: `df = df[df.x>0]`.
@@ -61,7 +60,7 @@ To thin out a dataset, several options:
 
 Conditional indexing supports functions, as long as they take and return Pandas series, or something compatible, like a Numpy array). For example, conditional forms (both local indexing and queries) support elementwise Boolean operators, like `&` and `|`.
 
-⚠️ There's a strange pitfall associated with conditional data retrieval that I doesn't understand for now. `query` seems to create a new dataframe (fewer rows), but apparently (?) it acts as a copy, and not as a deepcopy. As a result, if you save the results in a "new" dataframe `df2 = df.query('x>0')`, and then set or transform values in  `df2` in any way, it causes a warning "A value is trying to be set on a copy of a slice from a DataFrame". Even though df2 gets updated, and df seems still intact (unchanged). Replacing a simple `query` with `df.query(...).copy()` seems to help ( works, and the warning is eliminated). By extension, it should not be a problem if you do some transforms in the same dot-pipeline as querying, as it is this other transform that would create a copy. But if querying is the only thing you do, always finish with a `copy()` (_or at least that's my current understanding_).
+⚠️ There's a strange pitfall associated with conditional data retrieval that I doesn't understand for now. `query` seems to always create a view of a dataframe, which may look like a new dataframe with fewer rows, but that actualy acts as a copy, and not as a deepcopy. As a result, if you save the results in a "new" dataframe `df2 = df.query('x>0')`, and then change values in  `df2` in any way, it may case a warning "A value is trying to be set on a copy of a slice from a DataFrame". In this case df2 gets updated, and df seems still intact (unchanged), but there's this warning, and I'm not sure why. (Is it because they had to replace a view with a copy when you ran a command? So they want us to be more deliberate here?). Replacing a simple `query` with `df.query(...).copy()` turns a view into a legit new dataframe, and thus eliminates a warning.
 
 **Chained Assignment**
 A problem while writing to a frame, selecting by both column and row.
@@ -87,19 +86,32 @@ Useful methods:
 * Vectorized not: `~` operator. For example, `~np.array([True,False])` is "F, T".
 * Replace NaNs: `.fillna(0)` replaces all NaNs with zeroes. Can be run on a dataframe, or a series.
 * Replace something else: use a numpy function: `.replace(old, new)`.
+* Basic math with a series returns a series, so one can do `(df.a + 10).values` etc.
 
 **Strings**
 * For basic string operations, like cut first chars: `df['x'].str[1:]`
 * Other operations, all follow a paradigm of `df['x'].str.lower()`. They only work on a series, not on a dataframe. It also means that `df.x` won't work in this case, as it doesn't return a series. 
 * To create a new column by combining other columns, use a normal `+` notation for strings, like `d['a'] = d['b'] + d['c']`. f-strings don't seem to work here though.
+* To cast to a string: `df.x.astype(str)`
 * `split` splits every string into an array of substrings, same as for normal Python.
+* To remove leading spaces: `strip()`
 * There's a support of regular expressions (see [[regex]]) in `str`, such as `extract` (extracting part of a string that matches the pattern), `findall` (only leaving entries that match the pattern).
 
 **Dates and times**
-* Documentation (not too well organized; hard to find stuff): https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html
-* Most useful methods are called on a datastamp series using a prefix (similar to how it works for strings): for example `df.x.dt.dayofyear` (note the absence of brackets; it's really like that). Other useful ones (beyond obvious `hour`, `day` etc.): `date()` and `time()` (these two return a new timestamp, not a number, and so have brackets!); `weekofyear`, `dayofweek` (zero-indexed starting Monday), `is_month_end` (subj) etc.
-* To create as series of datastamps from a reasonable column of strings, use `df.x = pd.to_datetime(df.x)`.
-* See also: [[py_dates]] for Pythonic work with dates in general
+(See [[py_dates]] for alternatives.)
+* Documentation (a bit wordy): https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html
+* Most useful methods are called on a datastamp series using a prefix (similar to how it works for strings): for example `df.x.dt.dayofyear` (note the absence of brackets; it's really like that). Useful functions:
+    * `year`, `hour`, `day`, and other obvious words, that turn a a datastamp into an integer. Note that these don't have parentheses. From the same list: `weekofyear`, `dayofweek` (zero-indexed starting Monday)
+    * `date()` and `time()` return a new timestamp, not a number, and so have brackets!);
+    * To round: `dt.round('D')` for rounding to a day; similarly `floor` is for rounding down, and `ceil` for rounding up. Aliases for frequencies here: https://pandas.pydata.org/docs/user_guide/timeseries.html#timeseries-offset-aliases
+    * To test if a date is special:`is_month_end`
+    * To produce a nice string: `strftime('%w-%a')`, where the codes are described here: https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior
+* To turn strings to stamps: `df.x = pd.to_datetime(df.x)` - it's surprisingly flexible, and in most cases just works magically.
+* **Timedelta** is a separate class. It can be produced by subtraction of two stamps, and it can be added to a stamp. It also supports its own set of methods, such as `dt.days` (to express this difference as a number of days), `dt.hours` etc. Note the plural, and the absence of parentheses.
+    * Number of days from the smallest date: `(df.Date - df.Date.min()).dt.days`
+* **DateOffset** is another curious class that I don't quite understand, but it is necessary in these cases:
+    * To create a series of stamps: `pd.date_range(start, end, freq=pd.offsets.MonthBegin(1))`
+    * To round to the first day of this month:`df.date.dt.floor('d') + pd.offsets.MonthEnd(n=0)-pd.offsets.MonthBegin(n=1)`. This is more complicated than just rounding to a month, as months are not a real unit (they have variable size), which somehow makes this context-sensitive construction necessary.
 
 **Applying  arbitrary functions to every element of a column**
 Several options here:
@@ -112,7 +124,7 @@ The archetypical way seems to be using a `where` command, which is cool, but wei
 **Creating a new column from old columns:**
 There are least 6 different ways to do it, listed here from (arguably) best to worst:
 * `df['z']=df.x+df.y` - that's what most people use, and it's one of the fastest approaches, but it has 2 draw-backs. One, it cannot be chained (using `.` notation). And two, when used on a view, it throws a "slice assignment" warning. So after things like `.agg` it will work just fine, but after a `.query` it will cause a problem (as `.query` creates a view!).
-* `df=df.assign(z=df.x+df.y)` - this one is a bit slower, but can be chained! Many people prefer it, and consider it archetypical.
+* `df=df.assign(z=df.x+df.y)` - this one is a bit slower, but can be chained! Many people prefer it, and it seems to be considered archetypical.
 * `df.insert(2, 'z', df.x+df.y)` - the fastest of all, but cannot be chained (it's in-place), which also means that it doesn't feel Pandas-y. Also, you cannot run it 2 times in a row (returns an error, saying that this column already exists), and you need to know where to add this new column.
 * `df.loc[:,'z']=...` - prevents slicing assignment warning, but is the slowest of all by far. May be good for updates though. Still not chainable though.
 * `df.eval('z=x+y', inplace=True)` - I read somewhere that it is supposed faster than other methods, but in my experiments it is slower than almost any other method. So not sure why anyone would use it. Also, non-chainable.
@@ -163,11 +175,12 @@ For **merging multiple dataframes** at once, set indices properly, and then do `
 
 # Grouping and Aggregation
 
-First group, then apply aggregation. `dfs = df.groupby('g').agg({'a': [min, np.mean]})`
+First group, then apply aggregation. `dfs = df.groupby('g').agg({'a': ['min', np.mean]})`
 
 **Grouping** columns (those that appear in the summary dataframe not because they were summarized, but because they were grouped by) also become a multiindex. It means that they aren't normal columns, and cannot be referenced directly. To turn into a "normal" data frame, do `dfs = dfs.reset_index()`.
 
-**Aggregation** is coded as a dictionary, and more than one function can be applied to every column. Functions are passed as an array of functions (!!!), or function names as strings (like `'count'`). If a column in the original dataframe is summarized in more than one way (say, if you calculate Column names in summary dataframe become a **multiindex** (when column index is a tuple).
+**Aggregation** is coded as a dictionary, and more than one function can be applied to every column. Functions are passed as either an array of functions, or function names (strings, like `'count'`). If a column in the original dataframe is summarized in more than one way (say, if you calculate Column names in summary dataframe become a **multiindex** (column index becomes a tuple).
+* To calculate a **mode**, use this trick: `mode = lambda x: x.value_counts().index[0]`, then pass `mode` (the function, not a string) as an argument to `agg`.
 
 Some useful functions: sum, mean, min, max, count, var, std, sem, first, last, nth (?).
 
@@ -183,6 +196,17 @@ Some useful functions: sum, mean, min, max, count, var, std, sem, first, last, n
 
 Footnotes:
 * https://stackoverflow.com/questions/30960338/pandas-difference-between-pivot-and-pivot-table-why-is-only-pivot-table-workin
+
+# Modeling
+
+Interactions with [[sklearn]].
+
+Create dummy variables from a categorical column:
+```python
+df = (pd.concat((df, pd.get_dummies(df[col_name], prefix=col_name)), axis=1)
+      .drop(col_name, axis=1)
+     )
+```
 
 # Chaining tips and tricks
 
