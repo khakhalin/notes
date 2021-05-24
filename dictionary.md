@@ -68,7 +68,7 @@ See also:
 
 **ETL** (db): Extract Transform Load ([wiki](https://en.wikipedia.org/wiki/Extract,_transform,_load)). Either a process, or a tool. See [[data_wh]]
 
-**Feature store** (data) A practical concept for data project implementation: a collection of curated features that are automatically produced (updated) from new data, and can be tapped into by various projects. Paying it forward with feature engineering.
+**Feature store** (data) A practical concept for data project implementation: a collection of curated features that are automatically produced (updated) for new data, and can be tapped into by various projects. In a way, paying it forward with feature engineering.
 
 # G
 
@@ -102,7 +102,7 @@ See also:
 
 # KL
 
-**Kafka** (db): open-source stream-processing plantform developed by Linkedin, written in Scala, and donated to Apache. High-throughput low-latency platform to handle realtime data feeds.
+**Kafka** (db): open-source stream-processing platform developed by Linkedin, written in Scala, and donated to Apache. High-throughput low-latency platform to handle realtime data feeds.
 
 **Kimball data warehouse model**: see [[data_wh]]
 

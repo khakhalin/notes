@@ -1,7 +1,7 @@
 # PACF = Partial Auto-Correlation Function
 
 Parent: [[time-series]]
-Related: [[arima]], correlation
+Related: [[arima]], [[correlation]]
 
 #timeseries
 

@@ -17,10 +17,8 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 
 * hierarchical best-fit models 
     * [[arima]]
-    * [[pacf]]
-    * partial correlation
     * prophet
-* Map/Reduce - learn to explain? What are the alternatives?
+* Map/Reduce - learn to explain? What are the alternatives? https://en.wikipedia.org/wiki/MapReduce
 * anomaly detection
 * windowed functions (newer SQL)
 * common table expressions (newer SQL)

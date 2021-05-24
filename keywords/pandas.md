@@ -107,7 +107,7 @@ Useful methods:
     * To test if a date is special:`is_month_end`
     * To produce a nice string: `strftime('%w-%a')`, where the codes are described here: https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior
 * To turn strings to stamps: `df.x = pd.to_datetime(df.x)` - it's surprisingly flexible, and in most cases just works magically.
-* **Timedelta** is a separate class. It can be produced by subtraction of two stamps, and it can be added to a stamp. It also supports its own set of methods, such as `dt.days` (to express this difference as a number of days), `dt.hours` etc. Note the plural, and the absence of parentheses.
+* **Timedelta** is a separate class. It can be produced by subtraction of two stamps, and it can be added to a stamp. It also supports its own set of methods, such as `dt.days` (to express this difference as a number of days)	. Note the plural, and the absence of parentheses.
     * Number of days from the smallest date: `(df.Date - df.Date.min()).dt.days`
 * **DateOffset** is another curious class that I don't quite understand, but it is necessary in these cases:
     * To create a series of stamps: `pd.date_range(start, end, freq=pd.offsets.MonthBegin(1))`

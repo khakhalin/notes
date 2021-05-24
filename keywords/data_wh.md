@@ -26,7 +26,7 @@ A Data WH typically consists of:
 
 ## Inmon model
 
-Named after Bill Inmon. In this approach, databases are **normalized**, which means that main tables of the database store highly optimized keys, and push actual values to a bunchof peripheral tables; then join on retrieval. This minimizes data redundancy, as nothing is stored twice: helps with repeated values, and makes everything leaner and more structured. The central table stores **atomic data**.
+Named after Bill Inmon. In this approach, databases are **normalized**, which means that main tables of the database store highly optimized keys, and push actual values to a bunch of peripheral tables; then join on retrieval. This minimizes data redundancy, as nothing is stored twice: helps with repeated values, and makes everything leaner and more structured. The central table stores **atomic data**.
 
 This type of a Data WH is easier to understand, backup, maintain (except that you need a rather technical specialist to maintain it), and update. Analyses and reporting are infinitely flexible (data mine anything you want). But it also makes everything slower (because of joins that a necessary for any query); it's harder to develop; and  transformations (ETL) are needed at the analysis stage (between databases and users).
 

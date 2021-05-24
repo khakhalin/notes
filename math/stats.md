@@ -12,6 +12,7 @@ Probability distributions and alike:
 * [[binomial]], [[normal]]
 
 Tests and measurements:
+* [[correlation]] - everything correlation-like
 * [[p-values]] - subj
 * [[effect-size]] - subj
 * [[ab-testing]] - on testing in business context
