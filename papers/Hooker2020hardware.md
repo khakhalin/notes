@@ -4,11 +4,10 @@ https://arxiv.org/abs/2009.06489 Hooker, S. (2020). The Hardware Lottery. arXiv 
 
 #meaning #dl
 
-**Hardware lottery**: an idea that some solutions (mathematical, archectures) win just because they are highly compatible with the existing hardware. Not because they are intrinsically superior.
+
+**Hardware lottery**: an idea that some solutions (mathematical, architectural) win just because they are highly compatible with the existing hardware. Not because they are intrinsically superior.
 
 Deep historic analysis.
-
-
 
 # Coverage:
 

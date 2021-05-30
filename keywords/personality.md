@@ -1,6 +1,6 @@
 # Personality
 
-Parents: psychology
+Parents: [[psychology]]
 
 #bib #psych #personality
 

@@ -15,17 +15,24 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 
 # Queue
 
+* https://en.wikipedia.org/wiki/Partial_correlation
 * hierarchical best-fit models 
     * [[arima]]
+        * https://laptrinhx.com/arima-model-from-scratch-in-python-3262984784/
     * prophet
 * Map/Reduce - learn to explain? What are the alternatives? https://en.wikipedia.org/wiki/MapReduce
 * anomaly detection
-* windowed functions (newer SQL)
+* [[Hooker2020hardware]] - read and fill (it's a stub now)
+* windowed functions (newer SQL): https://mode.com/sql-tutorial/sql-window-functions/
 * common table expressions (newer SQL)
+* Finish SQL quests: https://sqlzoo.net/wiki/SUM_and_COUNT
+* [Constrained optimization](https://www.khanacademy.org/math/multivariable-calculus/applications-of-multivariable-derivatives/lagrange-multipliers-and-constrained-optimization/v/constrained-optimization-introduction) on Khan Academy
 * refresh [[design_pattern]], especially those used in data science
 * cointegration: https://www.youtube.com/watch?v=vvTKjm94Ars
 * document those subplot-like tricks in [[matplotlib]]
 * in [[sklearn]], for pca, add reconstruction (test in jupyter to make sure it's correct)
+* https://www.jeremyjordan.me/ml-monitoring/
+* https://en.wikipedia.org/wiki/Cointegration
 * docker - what and how
     * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
     * Docker and Kubernetes: https://www.youtube.com/watch?v=u8dW8DrcSmo
@@ -50,6 +57,7 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 * difference between conda and pip	
 * Ha, D., & Schmidhuber, J. (2018). World models. arXiv preprint arXiv:1803.10122.
 https://arxiv.org/abs/1803.10122
+* https://en.wikipedia.org/wiki/Conditional_random_field
 * Apparently Java doesn't have default values for parameters, but people use builder [[design_pattern]] to emulate it. How?? https://stackoverflow.com/questions/997482/does-java-support-default-parameter-values
 * Python decorators (things like `def decorator`, `@wraps`etc)
     * Some reading: https://www.geeksforgeeks.org/python-functools-wraps-function/

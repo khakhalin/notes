@@ -4,11 +4,17 @@ A collection of weird animals (and plants) that make you think "how come I've ne
 
 #side #bio
 
+
 See also: [[beetles]]
 
 That plant that looks like a blob
 Those giant unicellular plants
 That copepod (?) with eyes like scopes
+
+Naked mole rats have dialects in different colonies and kill intruders:
+Barker, A. J., Veviurko, G., Bennett, N. C., Hart, D. W., Mograby, L., & Lewin, G. R. (2021). Cultural transmission of vocal dialect in the naked mole-rat. Science, 371(6528), 503-507.
+http://www.kokkonuts.org/wp-content/uploads/Barker_et_al_2021.pdf
+(they used random forest on spectrogram shape, got about 70% colony matching accuracy)
 
 **Jacana** - an african bird with giant legs that also looks as if it had 6 legs, as it typically carries its (rather large) chicks under its wings.
 

@@ -10,6 +10,10 @@ Topics:
 
 Essentially, everything about language (a bit broader than linguistics), but  more practical title.
 
+# To-read
+
+* https://en.wikipedia.org/wiki/Winograd_schema_challenge
+
 # Refs
 
 Languages of the world: https://glottolog.org/

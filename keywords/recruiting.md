@@ -14,7 +14,15 @@ Related:
 * [[id20201020160912]] - why CS recruiting market is broken, Aline Lerner 2020
 * [[id20210410164415]] - that objective tech interviews are impossible, Mark Saroufim 2021
 
+General ideas for good interviewing:
+* Don't do unstructured interviews (they just reinforce your biases). Always come with a structure first, a list of questions to ask, and ask all candidates these questions
+* Questions that don't help (don't correlate with performance): trivia, puzzles, invasive behavioral questions (like "If I ask your colleagues about your main weakness, what would they say?" - very bad, potentially discriminatory!)
+* Questions that help: anything that resembles real work. So either questions about past work (asking them to explain something they did - tests both what they did, and how well they can explain it), and questions about potential problems they may face in their new job (like, how would you approach this problem, or that situation)
+* Actual mini-projects (2-3 hours) in theory work even better, but it may be hard to come up with them.
+
 # Annotated bibliography
+
+Zhang, D. C. (2021). Horse-sized ducks or duck-sized horses? Oddball Personality Questions are likable (but useless) for organizational recruitment. Journal of Business and Psychology, 1-19. https://psyarxiv.com/phnsr/
 
 Erik Bernhardsson. How to hire smarter than the market: a toy model. 2020.
 https://erikbern.com/2020/01/13/how-to-hire-smarter-than-the-market-a-toy-model.html

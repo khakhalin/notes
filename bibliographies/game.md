@@ -21,3 +21,7 @@ Also a blog post:
 https://medium.com/@gema.parreno.piqueras/real-world-games-look-like-spinning-tops-b77411a54b57
 And a demo:
 http://spinningtop.lejlot.com/
+
+# Unsorted weird links
+
+Set game trainer: http://lode.ameije.com/Set-game-trainer/set-trainer.html

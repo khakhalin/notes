@@ -1,5 +1,7 @@
 # German-learning resources
 
+See also: [[linguistics]], [[germany]]
+
 #side #language
 
 * Best En-Ge Dict: https://www.linguee.com/

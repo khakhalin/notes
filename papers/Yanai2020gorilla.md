@@ -5,6 +5,7 @@ https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-02133-w
 
 #stats #psych
 
+
 See also: [[p-values]]
 
 They created a fake data where if you plot BMI against the number of steps somebody took, it looks like a really over-the top cartoonish Gorilla drawing :) But some points were supposedly "male", and some "female".

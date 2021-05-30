@@ -50,6 +50,9 @@ Other related papers:
 
 Bronstein, M. M., Bruna, J., Cohen, T., & Veličković, P. (2021). Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges. arXiv preprint arXiv:2104.13478. https://arxiv.org/abs/2104.13478
 
+Jin, N., Young, C., & Wang, W. (2009, November). Graph classification based on pattern co-occurrence. In Proceedings of the 18th ACM conference on Information and knowledge management (pp. 573-582).
+https://www1.se.cuhk.edu.hk/~hcheng/summer2010/paper/CIKM09-jin.pdf
+
 A collection of hot papers from Nov 2020:
 https://www.reddit.com/r/MachineLearning/comments/j6wzut/r_latest_developments_in_graph_neural_networks_a/
 

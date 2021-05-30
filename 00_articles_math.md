@@ -52,10 +52,16 @@ Zhang, C., Bengio, S., Hardt, M., Recht, B., & Vinyals, O. (2016). Understanding
 https://arxiv.org/pdf/1611.03530.pdf?from=timeline&isappinstalled=0
 (2k citations)
 
+Ahmed, N., & Wahed, M. (2020). The De-democratization of AI: Deep Learning and the Compute Divide in Artificial Intelligence Research. arXiv preprint arXiv:2010.15581.
+https://arxiv.org/ftp/arxiv/papers/2010/2010.15581.pdf
+
 Follow-ups and prequels:
 * Arpit, D., Jastrzębski, S., Ballas, N., Krueger, D., Bengio, E., Kanwal, M. S., ... & Lacoste-Julien, S. (2017, July). A closer look at memorization in deep networks. In International Conference on Machine Learning (pp. 233-242). PMLR. http://proceedings.mlr.press/v70/arpit17a/arpit17a.pdf
 * Zhang, C., Bengio, S., Hardt, M., Mozer, M. C., & Singer, Y. (2019). Identity crisis: Memorization and generalization under extreme overparameterization. arXiv preprint arXiv:1902.04698. https://arxiv.org/abs/1902.04698 Google brain. Identity mapping: just train the output to be exactly like the input, then study the logic of transfer to other inputs.
 * Choromanska, A., Henaff, M., Mathieu, M., Arous, G. B., & LeCun, Y. (2015, February). The loss surfaces of multilayer networks. In Artificial intelligence and statistics (pp. 192-204). PMLR.  http://proceedings.mlr.press/v38/choromanska15.pdf (1k citations)
+
+Goyal, A., Didolkar, A., Lamb, A., Badola, K., Ke, N. R., Rahaman, N., ... & Bengio, Y. (2021). Coordination among neural modules through a shared global workspace. arXiv preprint arXiv:2103.01197.
+https://arxiv.org/pdf/2103.01197.pdf
 
 Bahri, Y., Kadmon, J., Pennington, J., Schoenholz, S. S., Sohl-Dickstein, J., & Ganguli, S. (2020). Statistical mechanics of deep learning. Annual Review of Condensed Matter Physics.
 https://www.annualreviews.org/doi/pdf/10.1146/annurev-conmatphys-031119-050745
