@@ -41,9 +41,10 @@ Also:
 **Coding**
 * How to think like a computer scientist by Allen B. Downey: ([site](https://greenteapress.com/wp/think-python-2e/)) - best intro to Python ever
 * Problem solving with data structures in Python ([full text online](https://runestone.academy/runestone/books/published/pythonds/index.html))
-* Competitive Programmer's Handbook by Antti Laaksonen: [pdf](https://cses.fi/book/book.pdf) (C++) - great idea, but the descriptions of algorithms are not clear, while implementations seem a bit itiosynchratic. Worth revisiting tho.
 * Programming in Python: **Fluent Python**, by Luciano Ramalho (no online version)
 * On Programming Well, by Robert C. Martin (no online version)
+* Competitive Programmer's Handbook by Antti Laaksonen: [pdf](https://cses.fi/book/book.pdf) (C++) - great idea, but the descriptions of algorithms are not always clear, while implementations seem a bit idiosyncratic. Worth reading tho!
+
 
 **Math**
 * VLMS (Introduction to Applied Linear Algebra) by Stephen Boyd. [pdf](http://vmls-book.stanford.edu/)
@@ -53,6 +54,7 @@ Also:
 
 **ML and Stats**
 * ISLR: Introduction to Statistical Learning with R, by James, Witten, Hastie, Tibshirani. ([pdf](http://faculty.marshall.usc.edu/gareth-james/ISL/)). See also this fan-made translation of all code into Python: [JW](https://github.com/JWarmenhoven/ISLR-python).
+* This Bayes by Allen Downey: https://greenteapress.com/wp/think-bayes/
 * Applied Predictive Modeling by Kuhn Johnson (no free pdf online). Code in R.
 * Hands-On M with Scikit-Learn, Keras, and TensorFlow, by Aurélien Géron. Python obviously. [All labs on github](https://github.com/ageron/handson-ml2), but no full version of the book online.
 * "The 100 pages ML book" by Andriy Burkov. [full pdf](http://themlbook.com/wiki/doku.php) 

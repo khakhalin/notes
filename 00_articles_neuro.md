@@ -5,13 +5,13 @@ Se also: [[12_Neuro]] (the official hub age)
 #neuro #bib #todo
 
 
-🔥🔥 Zenke … Goodman. Visualizing a joint future of neuroscience and neuromorphic engineering. 2020
-https://www.sciencedirect.com/science/article/pii/S089662732100009X?dgcid=coauthor
-
 🟢 Suarez, L. E., Richards, B. A., Lajoie, G., & Misic, B. (2020). Learning function from structure in neuromorphic networks. bioRxiv. https://www.biorxiv.org/content/biorxiv/early/2020/11/11/2020.11.10.350876.full.pdf
 
 Perez-Nieves, N., Leung, V. C., Dragotti, P. L., & Goodman, D. F. (2020). Neural heterogeneity promotes robust learning. bioRxiv.
 https://www.biorxiv.org/content/10.1101/2020.12.18.423468v1
+
+💎 Keller, G. B., & Mrsic-Flogel, T. D. (2018). Predictive processing: a canonical cortical computation. Neuron, 100(2), 424-435. https://pubmed.ncbi.nlm.nih.gov/30359606/
+Apparently linking together things like vision, imagination, hallucinations, dreams, and other aspects of predictive coding, bottom-up and top-down processes etc.
 
 Predictive coding is an emergent property of input-driven RNNs trained to be energy efficient
 https://www.biorxiv.org/content/10.1101/2021.02.16.430904v1

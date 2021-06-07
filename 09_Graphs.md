@@ -12,6 +12,7 @@
 
 **Network science**
 * [[graph_properties]] - How to characterize graphs and networks
+* [[modularity]]
 * [[centrality]]
     * [[pagerank]] - Pagerank and link analysis
 * [[motifs]] - Motif analysis #todo

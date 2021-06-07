@@ -1,5 +1,7 @@
 # Memory, dreams, hippocampus
 
+#neuro #dreams #hippocampus
+
 ### Todo
 
 * Add dreams very explicitly! That's one of the biggest connections for people

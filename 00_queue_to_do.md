@@ -33,6 +33,9 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 * in [[sklearn]], for pca, add reconstruction (test in jupyter to make sure it's correct)
 * https://www.jeremyjordan.me/ml-monitoring/
 * https://en.wikipedia.org/wiki/Cointegration
+* spectral properties of graphs
+    * [[spectral_clustering]] - finish
+    * [[modularity]] - connection to eigenvalues, do
 * docker - what and how
     * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
     * Docker and Kubernetes: https://www.youtube.com/watch?v=u8dW8DrcSmo
@@ -84,7 +87,6 @@ https://arxiv.org/abs/1803.10122
     * https://www.youtube.com/watch?v=QEWe-aRBUAs
 * What is lecun_normal init in [[init_dl]]?
 * do "go around the tree" 
-* spectral properties of graphs
 * Chartio
 * Looker
 * in-place mergesort (how?)

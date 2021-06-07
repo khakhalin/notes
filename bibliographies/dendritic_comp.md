@@ -7,7 +7,7 @@ See also: [[deepneuro]]
 
 Papers:
 * [[Titley2017neurocentric]] - dendritic processing in Purkinje cells, Hansel lab
-* [[Jones2020neuronmnist]] - can a single neuron solve [[mnist]]?
+* [[Jones2020neuromnist]] - can a single neuron solve [[mnist]]?
 * [[Beniaguev2019singleneurons]] - single neurons as deep ANNs; a review
 
 # To Read

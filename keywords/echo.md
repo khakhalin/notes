@@ -75,6 +75,9 @@ Joschka Boedecker, Oliver Obst, Norbert Michael Mayer, Minoru Asada
 Haluszczynski, A., Aumeier, J., Herteux, J., & Räth, C. (2020). Reducing network size and improving prediction stability of reservoir computing. Chaos: An Interdisciplinary Journal of Nonlinear Science, 30(6), 063136.
 https://arxiv.org/pdf/2003.03178.pdf
 
+Laje, R., & Buonomano, D. V. (2013). Robust timing and motor patterns by taming chaos in recurrent neural networks. Nature neuroscience, 16(7), 925-933. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3753043/
+Twitter demo: https://twitter.com/DeanBuono/status/1401714030994026496
+
 Optimization and applications of echo state networks with leaky- integrator neurons
 H. Jaeger, Mantas Lukosevicius, D. Popovici, U. Siewert
 2007, Neural Networks
