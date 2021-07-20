@@ -5,6 +5,7 @@ https://www.sciencedirect.com/science/article/pii/S1747938X18305116
 
 #edu #language #psych #children
 
+
 They performed a meta-analysis of 54 studies, and showed that the effect of reading books together with kids (5-7 year olds?) on their language development is much smaller than believed. It exists, but it's very small. 
 
 Why does not it work?

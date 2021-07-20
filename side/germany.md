@@ -16,15 +16,22 @@
     * [Immonet](https://www.immonet.de/angebot/44340623?drop=sel&related=false&product=standard)
     * wg-gesucht (more for temp): https://www.wg-gesucht.de
     * http://ebay-kleinanzeigen.de
-* [Isochrone map](https://app.traveltime.com/search/0-lng=13.39985&0-tt=60&0-time=d1622138984340&0-title=187%2C%20Brunnenstra%C3%9Fe%2C%20Spandauer%20Vorstadt%2C%20Mitte%2C%20Berlin%2C%2010119%2C%20Germany&0-lat=52.53095)
+    * https://www.miettraum.com/ - ? unchecked for now
 
+Schools
+* Interactive map of schools: https://interaktiv.morgenpost.de/schul-finder-berlin/#/
+* Database: https://www.gymnasium-berlin.net/
+* [Isochrone map](https://app.traveltime.com/search/0-lng=13.39985&0-tt=60&0-mode=ferry&0-time=d1622138984340&0-title=187%2C%20Brunnenstra%C3%9Fe%2C%20Spandauer%20Vorstadt%2C%20Mitte%2C%20Berlin%2C%2010119%2C%20Germany&0-lat=52.53095) - to visualize 30-min walking range
+
+Full guide to renting in berlin: https://allaboutberlin.com/guides/find-a-flat-in-berlin
+
+Relevant facebook groups:
 https://www.facebook.com/groups/692914578117333/
 https://www.facebook.com/groups/sysberlin/
 https://www.facebook.com/groups/marktaufsicht/
 https://www.facebook.com/groups/easy.wg/
 https://www.facebook.com/groups/316886635183491/
 https://www.facebook.com/groups/547530108636607/
-https://www.facebook.com/groups/1670587603159473/
 https://www.facebook.com/groups/1838736853107778/
 https://www.facebook.com/groups/1301177050272820/
 https://www.facebook.com/groups/573217653125011/
@@ -38,3 +45,7 @@ https://www.facebook.com/groups/156793591673300/
 
 * Info for immigrants: https://www.arbeitsagentur.de/fuer-menschen-aus-dem-ausland?pk_vid=162214487376c081
 * Compare providers: https://www.check24.de/
+
+What to do:
+* Berlin for Families
+* Awesome Berlin

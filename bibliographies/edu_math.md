@@ -47,3 +47,8 @@ https://www.complexity-explorables.org/
 
 Explorables by **Nicky Case**: has fewer demos, but much better explanations:
 https://explorabl.es/
+
+Eric Mazur's famous talk on physics education; how students don't get it even if they learn how to apply formulas mechanically, and how they sit at the "Aristotelian phase"
+https://www.youtube.com/watch?v=WwslBPj8GgI
+Also this paper: Mahajan, S. (2005). Observations on teaching first-year physics. arXiv preprint physics/0512158.
+https://arxiv.org/pdf/physics/0512158.pdf
