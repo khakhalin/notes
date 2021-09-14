@@ -5,6 +5,11 @@
 
 # Berlin
 
+* Lidar map: https://geoportal.brandenburg.de/de/cms/portal/start/geosearch/9544b609-4db8-47c0-a14e-c49420b29737#
+* Slawen Burgen: https://slawenburgen.hpage.com/berlin.html
+
+Utilitarian links:
+
 * https://www.settle-in-berlin.com/category/just-landed/
     * https://www.settle-in-berlin.com/first-time-on-this-blog/
 * Mietwohnungen suchen:

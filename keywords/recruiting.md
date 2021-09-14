@@ -20,6 +20,12 @@ General ideas for good interviewing:
 * Questions that help: anything that resembles real work. So either questions about past work (asking them to explain something they did - tests both what they did, and how well they can explain it), and questions about potential problems they may face in their new job (like, how would you approach this problem, or that situation)
 * Actual mini-projects (2-3 hours) in theory work even better, but it may be hard to come up with them.
 
+# What is Data Science?
+
+James Densmore, 2017. There are two types of data scientists — and two types of problems to solve
+https://medium.com/@jamesdensmore/there-are-two-types-of-data-scientists-and-two-types-of-problems-to-solve-a149a0148e64
+Type A (for "Analysis") like working with data, answering questions, applying methods, finding patterns, making sense of numbers, designing experiments, applying statistics. Type B (for "Builders") like developing new tools for production (more of a software engineer type), such as prediction systems, pipelines, etc. Two types of problems, two types of people, and they need to match, or everyone are unhappy.
+
 # Annotated bibliography
 
 Zhang, D. C. (2021). Horse-sized ducks or duck-sized horses? Oddball Personality Questions are likable (but useless) for organizational recruitment. Journal of Business and Psychology, 1-19. https://psyarxiv.com/phnsr/
