@@ -8,13 +8,19 @@ https://www.google.com/search?q=best+downtempo+albums
 https://www.google.com/search?q=Maria+Stolarova&source=lnms&tbm=isch
 https://medium.com/bits-and-behavior/im-a-professor-d732ba26c522
 
-# Reasonable
+# Tools
 
 Free online photoshop-like thing:
 https://pixlr.com/
 
 Lyx publishing system (allegedly, a less painful alternative to latex):
 https://www.lyx.org/
+
+# Books
+
+* https://imwerden.de/
+* https://ru.pdfdrive.com/
+* Journals (ru): https://prozhito.org/notes?date=%221943-01-01%22&diaries=%5B1033%5D
 
 # Random
 
