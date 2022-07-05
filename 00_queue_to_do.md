@@ -15,17 +15,33 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 
 # Queue
 
+* Move pandas here
+* Move git here
+* Document [[shapely]]
+* windowed functions (newer SQL): https://mode.com/sql-tutorial/sql-window-functions/
+* common table expressions (newer SQL)
+* Finish SQL quests: https://sqlzoo.net/wiki/SUM_and_COUNT
+* This text about Pandas: https://github.com/chiphuyen/just-pandas-things/blob/master/just-pandas-things.ipynb
+* How to design Twitter: https://www.youtube.com/watch?v=KmAyPUv9gOY
+* Bash - start with "missing semester", then more tutorials, then linkedin certification
+* python environments - how are they realized?
+* Python decorators (things like `def decorator`, `@wraps`etc)
+    * Some reading: https://www.geeksforgeeks.org/python-functools-wraps-function/
+    * Nice example: https://github.com/koaning/memo/blob/main/memo/_base.py
+* difference between conda and pip	
+* docker - what and how
+    * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
+    * Docker and Kubernetes: https://www.youtube.com/watch?v=u8dW8DrcSmo
+* What is flask?
+    * Flask docker file (allegedly 80% of what one needs for a typical deployment)
 * https://en.wikipedia.org/wiki/Partial_correlation
 * hierarchical best-fit models 
     * [[arima]]
         * https://laptrinhx.com/arima-model-from-scratch-in-python-3262984784/
     * prophet
-* Map/Reduce - learn to explain? What are the alternatives? https://en.wikipedia.org/wiki/MapReduce
+* Isn't everything essentially map-reduce? What is the crux? What are the alternatives? https://en.wikipedia.org/wiki/MapReduce
 * anomaly detection
 * [[Hooker2020hardware]] - read and fill (it's a stub now)
-* windowed functions (newer SQL): https://mode.com/sql-tutorial/sql-window-functions/
-* common table expressions (newer SQL)
-* Finish SQL quests: https://sqlzoo.net/wiki/SUM_and_COUNT
 * [Constrained optimization](https://www.khanacademy.org/math/multivariable-calculus/applications-of-multivariable-derivatives/lagrange-multipliers-and-constrained-optimization/v/constrained-optimization-introduction) on Khan Academy
 * refresh [[design_pattern]], especially those used in data science
 * cointegration: https://www.youtube.com/watch?v=vvTKjm94Ars
@@ -36,35 +52,15 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 * spectral properties of graphs
     * [[spectral_clustering]] - finish
     * [[modularity]] - connection to eigenvalues, do
-* docker - what and how
-    * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
-    * Docker and Kubernetes: https://www.youtube.com/watch?v=u8dW8DrcSmo
 * https://hdbscan.readthedocs.io/en/latest/how_hdbscan_works.html
-* What is flask?
-    * Flask docker file (allegedly 80% of what one needs for a typical deployment)
 * bayesian accuracy (and bias) compared to human-level? What's the deal here? What are these questions even  about?
-* Finish SQL training site
 * How react sites talk to SQL now?
-* How Python SQL?
-* Bash - start with "missing semester", then more tutorials, then linkedin certification
-* Git - what is "upstream" and "downstream workflow"?
-* MySQL Stored Procedures?
-* MySQL triggers?
 * Implement the pandas part of this in Echo: https://koaning.io/posts/for-loop-memo/
-* https://github.com/chiphuyen/just-pandas-things/blob/master/just-pandas-things.ipynb
-* This text about Pandas: https://github.com/chiphuyen/just-pandas-things/blob/master/just-pandas-things.ipynb
-* How to design Twitter: https://www.youtube.com/watch?v=KmAyPUv9gOY
-* Start missing semester of CS education
 * how to save sklearn models, and then load them back?
-* python environments - how are they realized?
-* difference between conda and pip	
 * Ha, D., & Schmidhuber, J. (2018). World models. arXiv preprint arXiv:1803.10122.
 https://arxiv.org/abs/1803.10122
 * https://en.wikipedia.org/wiki/Conditional_random_field
 * Apparently Java doesn't have default values for parameters, but people use builder [[design_pattern]] to emulate it. How?? https://stackoverflow.com/questions/997482/does-java-support-default-parameter-values
-* Python decorators (things like `def decorator`, `@wraps`etc)
-    * Some reading: https://www.geeksforgeeks.org/python-functools-wraps-function/
-    * Nice example: https://github.com/koaning/memo/blob/main/memo/_base.py
 * Sagemaker and Amazon EMR - what are they?
 * how to extend vocabulary for DL word-embedding?
 * File unfinished article descriptions currently dumped at [[deepneuro]], [[intrinsic_plasticity]], [[dendritic_comp]]
@@ -123,7 +119,6 @@ Few questions on Load balancers & Reverse proxies. Also continuing discussion on
 * finish google training
     * https://developers.google.com/machine-learning/crash-course/fairness/programming-exercise
     * (programming exercise, followed by 3 real-world examples)
-* read Neural Heterogeneity (see [[00_to_read_neuro]])
 * https://en.wikipedia.org/wiki/Moore%E2%80%93Penrose_inverse
 * https://www.expunctis.com/2019/01/27/Loss-functions.html
 * [[motifs]] (not really motifs yet - listen to the lecture) #todo
@@ -139,11 +134,6 @@ Few questions on Load balancers & Reverse proxies. Also continuing discussion on
 * AWS - do some tutorials
 * counterfactuals: http://bayes.cs.ucla.edu/PRIMER/primer-ch4.pdf
 * Granger causality (do I have notes about it somewhere?)
-* Stack
-    * react
-    * nodejs
-    * typescript
-    * Apache beam / spark
 * work through confetti tutorials and exams, like https://www.confetti.ai/exams/14/start
 * log regression from scratch
 * Finish manifold learning list at [[04_Features]]
@@ -152,14 +142,11 @@ Few questions on Load balancers & Reverse proxies. Also continuing discussion on
 * how to run AdaBoost in scipy
 * how to save the results of AdaBoost in scipy
 * how do people actually save and load a trained model in tensorflow
-* do SQL exercises
-* try mySQL Linkedin as a way to refresh
 * What is the best answer for "how to run logistic regression"?
 * variational inference (and how is it different from sampling)
 * wait, is softmax based on mean and sigma, or is it just a difference? Is it the same formula ultimately, or are there two different softmaxes?  https://twitter.com/chrisalbon/status/1323293801398509568
     * Some people seem to argue it should be called softargmax and there's a difference? Summarize here.
 * Rethinking attention with performers: https://www.youtube.com/watch?v=xJrKIPwVwGM
-* refresh database scalability (???????)
 * simple data pipeline: https://towardsdatascience.com/10-minutes-to-building-a-machine-learning-pipeline-with-apache-airflow-53cd09268977?gi=fb094bc58b8f
 * Case studies for ML from [[Huyen2019book]]: https://github.com/chiphuyen/machine-learning-systems-design/blob/master/content/case-studies.md
 * Features permutation - why it is bad? https://blog.ceshine.net/post/please-stop-permuting-features/

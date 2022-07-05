@@ -64,7 +64,7 @@ The pluses and minuses of rebase (compared to Merge):
 # Working with github
 As github switched to using tokens, go here to generate a token: https://github.com/settings/tokens
 Then type this for the git repo: `git remote set-url origin https://<githubtoken>@github.com/<username>/<repositoryname>.git`
-Source of info: https://stackoverflow.com/questions/68775869/message-support-for-password-authentication-was-removed-please-use-a-personal
+Source of info: [1](https://stackoverflow.com/questions/68775869/message-support-for-password-authentication-was-removed-please-use-a-personal)
 
 # Open questions
 * `--no-ff` for `git merge
