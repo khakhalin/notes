@@ -1,6 +1,6 @@
 # Linguistics
 
-#language #bib
+#language #bib #maps
 
 Related: [[10_Text]]
 
@@ -13,6 +13,10 @@ Essentially, everything about language (a bit broader than linguistics), but  mo
 # To-read
 
 * https://en.wikipedia.org/wiki/Winograd_schema_challenge
+
+# Maps
+
+* The world atlas of language structures: https://wals.info/feature/44A#2/18.6/151.0
 
 # Refs
 
