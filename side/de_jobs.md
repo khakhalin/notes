@@ -1,6 +1,7 @@
 # IT (and AI) leads in Germany
 
 #interview
+See also: [[germany]]
 
 General links:
 * [Getting into CS from the outside](https://www.reddit.com/r/cscareerquestions/comments/17n5a1/getting_in_to_a_cs_career_from_outside_cs/)

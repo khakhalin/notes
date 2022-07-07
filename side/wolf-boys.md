@@ -1,6 +1,6 @@
 # Wolf-people
 
-#fun
+#history #magic
 
 Brown, D. R., & Anthony, D. W. (2019). Late Bronze Age midwinter dog sacrifices and warrior initiations at Krasnosamarskoe, Russia. Tracing the Indo-Europeans: New evidence for archaeology and historical linguisfics, 97-122.
 

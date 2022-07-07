@@ -1,10 +1,10 @@
 # Wehrmacht and other Nazi terms
 
-#side #language
+#language
 
 Parent: [[german]]
 
-An interesting thread about why in English Soviet army (or any other army for that matter) is translated ("Soviet Army"), but so many Nazi terms are left untranslated (Wehrmacht, panzer, Reich, Führer, Luftwaffe etc.) Why is it so?
+An interesting thread about why in English, Soviet army (or any other army for that matter) is translated ("Soviet Army"), but so many Nazi terms are left untranslated (Wehrmacht, panzer, Reich, Führer, Luftwaffe etc.) Why is it so?
 
 https://www.reddit.com/r/AskHistorians/comments/hd52ng/why_do_english_language_speakers_americans_like/
 

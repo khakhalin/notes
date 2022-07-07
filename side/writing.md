@@ -2,7 +2,7 @@
 
 Related: [[zettelkasten]], [[JohnMcPhee]]
 
-#lifehack #writing
+#lifehack #writing #language
 
 
 # Resources
