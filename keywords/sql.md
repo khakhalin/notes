@@ -55,8 +55,8 @@ There are three type of subqueries:
 2. `FROM` subquery: for example `SELECT * FROM (SELECT ...) AS table2`. This `AS` is required, as without it we will have ambiguity, as inner and outer tables would obviously have same column names. In systems without windows and `OFFSET` one can find 2nd max element with it, for example.
 3. `SELECT` subquery: one can write `SELECT a, b, SELECT(...) as c FROM ...`. This one seems to be the most esoteric, and at least some systems don't allow there to be more than one query of this kind per entire SQL expression.
 
-### Virtual table
-`CREATE VIEW view_name AS SELECT * FROM table1 WHERE coll="whatever";`. Can also be updated by `CREATE OR REPLACE VIEW view_name`. After you are done with this virtual table, it should be dropped using `DROP VIEW view_name`.
+### Views
+`CREATE VIEW view_name AS SELECT * FROM table1 WHERE coll="whatever";`. Can also be updated by `CREATE OR REPLACE VIEW view_name`. After you are done with this virtual table, it can be dropped using `DROP VIEW view_name`.
 
 ## Insert data
 `INSERT INTO table1 (col1, col2) VALUES (1, "dog");`. If you know the order of columns, you can also skip the first bracket, and just do `INSERT INTO table1 VALUES (...);`. If not all columns are specified, all remaining will be set to null.
@@ -64,7 +64,9 @@ There are three type of subqueries:
 Interesting way to copy some selected stuff from one table to another: `INSERT INTO table1 SELECT * FROM table2 WHERE condition;`. Interestingly, the condition may reference both tables, allowing for interesting data movements. If the table doesn't exist yet, use a different syntax: `SELECT * INTO table1 FROM table2 ...;`.
 
 ## Update rows
-Like a simple select query (without grouping and other fancy things obviously), just instead of SELECT you do: `UPDATE table1 SET col1=1, col2="dog" WHERE id=0;`. Be careful to always have a `WHERE` statement there, as without it the statement will still be valid; just it will update all records. Updates can directly reference table fields, so things like `col1 = col1+1` are normal. Updates can also reference other tables by running a subquery, or doing a JOINT, or (in some versions) even by having a FROM sequence directly following the UPDATE part.
+Like a simple select query (without grouping and other fancy things obviously), just instead of SELECT you do: `UPDATE table1 SET col1=1, col2="dog" WHERE id=0;`. Be extra careful to always have a `WHERE` statement there, as without it the statement will still be valid; just it will update all records 😱. Updates can directly reference table fields, so things like `col1 = col1+1` are normal. Updates can also reference other tables by running a subquery, or doing a JOINT, or (in some versions) even by having a FROM sequence directly following the UPDATE part.
+
+Updating some rows in one column is possible ([ref](https://stackoverflow.com/questions/36872053/update-a-single-column-on-multiple-rows-with-one-sql-query)), but it seems cumbersome enough, so in practice it's probably easier to download these rows, update them locally, then delete them remotely, and re-insert. _The only risk, I guess, is that if you crash between deletion and insertion, data will be lost..._
 
 ## Create stuff
 * Create database: `CREATE DATABASE db_name;`

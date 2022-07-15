@@ -4,7 +4,6 @@
 
 Currently reading:
 * [[Bock2015workrules]]
-* https://thebookofshaders.com/05/
 
 **General links:**
 * http://www.arxiv-sanity.com/ - AI search for arxiv
@@ -44,7 +43,6 @@ Also:
 * Programming in Python: **Fluent Python**, by Luciano Ramalho (no online version)
 * On Programming Well, by Robert C. Martin (no online version)
 * Competitive Programmer's Handbook by Antti Laaksonen: [pdf](https://cses.fi/book/book.pdf) (C++) - great idea, but the descriptions of algorithms are not always clear, while implementations seem a bit idiosyncratic. Worth reading tho!
-
 
 **Math**
 * VLMS (Introduction to Applied Linear Algebra) by Stephen Boyd. [pdf](http://vmls-book.stanford.edu/)
@@ -86,6 +84,7 @@ Data science problems (like leetcode, but for DS):
 
 Fun
 * https://thebookofshaders.com/
+    * I technically read it up to: https://thebookofshaders.com/05/
 
 Job-search specific materials:
 * Cracking the code interview (book)

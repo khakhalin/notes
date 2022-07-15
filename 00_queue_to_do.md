@@ -17,18 +17,37 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 
 * Move pandas here
 * Move git here
-* Document [[shapely]]
+* document creating (and editing) custom colormaps in matplotlib
+* Document some non-trivial points for [[shapely]]
+* start documenting [[tableau]]. Describe INCLUDE and FIXED in particular
+* geopandas - create some useful patterns
+* bash
+* swagger
+* jump server
+* ssh
+* tunnel (?) - in the ssh / linux context
+* sudo
+* bokeh
+* python environments
+* conda vs pip
+* how to properly do importing in large packages (does root import everything from its folder?)
+* homebrew casks
+* how to set up an etl machine (in theory)
 * windowed functions (newer SQL): https://mode.com/sql-tutorial/sql-window-functions/
 * common table expressions (newer SQL)
 * Finish SQL quests: https://sqlzoo.net/wiki/SUM_and_COUNT
 * This text about Pandas: https://github.com/chiphuyen/just-pandas-things/blob/master/just-pandas-things.ipynb
 * How to design Twitter: https://www.youtube.com/watch?v=KmAyPUv9gOY
 * Bash - start with "missing semester", then more tutorials, then linkedin certification
-* python environments - how are they realized?
+* Business 
+    * pricing (read some theory on customer psychology)
+    * pricing elasticity
+    * why softmax is apparently a decent choice for decision probabilit calculations?
+    * transportation choice    * 
 * Python decorators (things like `def decorator`, `@wraps`etc)
     * Some reading: https://www.geeksforgeeks.org/python-functools-wraps-function/
     * Nice example: https://github.com/koaning/memo/blob/main/memo/_base.py
-* difference between conda and pip	
+* Read something on 1D brownian walks maybe? Or is it too mathy?
 * docker - what and how
     * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
     * Docker and Kubernetes: https://www.youtube.com/watch?v=u8dW8DrcSmo
@@ -40,6 +59,8 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
         * https://laptrinhx.com/arima-model-from-scratch-in-python-3262984784/
     * prophet
 * Isn't everything essentially map-reduce? What is the crux? What are the alternatives? https://en.wikipedia.org/wiki/MapReduce
+* kibana
+* databricks
 * anomaly detection
 * [[Hooker2020hardware]] - read and fill (it's a stub now)
 * [Constrained optimization](https://www.khanacademy.org/math/multivariable-calculus/applications-of-multivariable-derivatives/lagrange-multipliers-and-constrained-optimization/v/constrained-optimization-introduction) on Khan Academy
