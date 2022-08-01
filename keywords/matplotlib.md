@@ -14,8 +14,15 @@ See also: [[numpy]], [[pandas]]
     * For bw colors, add: `cmap='gray'`. to distinguish "all 1s" from "all 0s", add `vmin=0, vmax=1`
     * To change x ticks, add this (as another param): `extent=[xmin, xmax, 0, x.shape[1]]`
 
-**Colors**
-Some nice colors (tableau-like) can be reached as `'tab:blue'` etc. Not as aggressive as defaults.
+# Colors and colormaps
+
+Some nice colors (tableau-like) can be reached as named colors of form `'tab:blue'` etc. Not as aggressive as defaults.
+
+A really cool tutorial on creating custom colormaps and colorbars: https://matplotlib.org/stable/tutorials/colors/colorbar_only.html
+Among other things, here's how you apparently create a colormap from individual colors:
+```python
+cmap = mpl.colors.ListedColormap(['red', 'green', 'blue', 'cyan']
+```
 
 # Refs
 

@@ -1,6 +1,9 @@
 # Urbanism
 
-#ubran #geo
+#ubranism #bib #geo
+
+See also: [[gis]], [[art]]
+
 
 Jane Jacobs. The Death and Life of Great American Cities
 https://en.wikipedia.org/wiki/The_Death_and_Life_of_Great_American_Cities

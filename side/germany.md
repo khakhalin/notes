@@ -2,15 +2,27 @@
 
 #side #maps #geo
 
+See also: [[maps]]
+
+A database of all German cities by population - does it work, and can it be downloaded?
+https://www.back4app.com/database/back4app/list-name-of-city-in-germany
 
 # Berlin
 
+## Maps
+
+* Election map: https://interaktiv.morgenpost.de/bundestagswahl-berlin-2021-ergebnisse-wahlkarte/
 * Lidar map: https://geoportal.brandenburg.de/de/cms/portal/start/geosearch/9544b609-4db8-47c0-a14e-c49420b29737#
 * Slawische Burgen: https://slawenburgen.hpage.com/berlin.html
-* [Isochrone map for Berlin](https://app.traveltime.com/search/0-lng=13.39985&0-tt=60&0-mode=ferry&0-time=d1622138984340&0-title=187%2C%20Brunnenstra%C3%9Fe%2C%20Spandauer%20Vorstadt%2C%20Mitte%2C%20Berlin%2C%2010119%2C%20Germany&0-lat=52.53095) - to visualize 30-min walking range
-* A much better isochrone map: https://apidocs.geoapify.com/playground/isoline
+* Isochrone maps
+    * [Isochrone map for Berlin](https://app.traveltime.com/search/0-lng=13.39985&0-tt=60&0-mode=ferry&0-time=d1622138984340&0-title=187%2C%20Brunnenstra%C3%9Fe%2C%20Spandauer%20Vorstadt%2C%20Mitte%2C%20Berlin%2C%2010119%2C%20Germany&0-lat=52.53095) - to visualize 30-min walking range
+    * A much better isochrone map: https://apidocs.geoapify.com/playground/isoline
 
-Utilitarian links:
+Schools
+* Interactive map of schools: https://interaktiv.morgenpost.de/schul-finder-berlin/#/
+* Database of schools: https://www.gymnasium-berlin.net/
+
+### Renting in Berlin
 
 * https://www.settle-in-berlin.com/category/just-landed/
     * https://www.settle-in-berlin.com/first-time-on-this-blog/
@@ -24,10 +36,6 @@ Utilitarian links:
     * wg-gesucht (more for temp): https://www.wg-gesucht.de
     * http://ebay-kleinanzeigen.de
     * https://www.miettraum.com/ - ? unchecked for now
-
-Schools
-* Interactive map of schools: https://interaktiv.morgenpost.de/schul-finder-berlin/#/
-* Database: https://www.gymnasium-berlin.net/
 
 Full guide to renting in berlin: https://allaboutberlin.com/guides/find-a-flat-in-berlin
 
@@ -50,8 +58,4 @@ https://www.facebook.com/groups/156793591673300/
 # General links
 
 * Info for immigrants: https://www.arbeitsagentur.de/fuer-menschen-aus-dem-ausland?pk_vid=162214487376c081
-* Compare providers: https://www.check24.de/
-
-Fun things to do (supposedly):
-* Berlin for Families
-* Awesome Berlin
+* Compare providers of various stuff: https://www.check24.de/

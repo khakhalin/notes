@@ -18,6 +18,8 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 * Move pandas here
 * Move git here
 * document creating (and editing) custom colormaps in matplotlib
+* copy a few simple sequential [[keras]] examples here
+* Check out this `categorical` type in Pandas: would it help to save space? ([ref](https://pandas.pydata.org/docs/user_guide/categorical.html))
 * Document some non-trivial points for [[shapely]]
 * start documenting [[tableau]]. Describe INCLUDE and FIXED in particular
 * geopandas - create some useful patterns
