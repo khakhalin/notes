@@ -4,10 +4,11 @@
 
 See also:
 * [[database]] - databases and alternatives to them
-* [[system_interview]] - collections of tips regarding system interviews
-* [[01_Tools]] - ML production tools may be there
+* [[microservice]]
 * [[fairness]] - an ethical aspect of system development
 * [[metal]] - everything hardware
+* [[system_interview]] - collections of tips regarding system interviews
+* [[01_Tools]] - ML production tools may be there
 
 # Scaling
 

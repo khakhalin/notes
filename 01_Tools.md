@@ -12,13 +12,14 @@ Major subtopics:
 
 Tips and notes on individual tools:
 * [[python]] - with separate notes for [[numpy]], [[pandas]], and some more
-* [[tensorflow]] - subj
-* [[git]] - GIT cheat sheet
-* [[docker]] - containerization
-* [[sql]] - SQL cheat sheet
+* ML frameworks: [[tensorflow]], [[jax]] 
+* DB: [[sql]]
+* Version control: [[git]]
+* Scripting / terminal: [[bash]], [[linux]]
+* Containerization tools: [[docker]], [[kubernetes]], [[flask]]
+* Reporting tools: [[tableau]], [[kibana]], shiny (?)
 * [[latex]] - tiny notes in LaTeX
-* [[javascript]] - subj
-* [[tableau]] - subj
+* [[javascript]]
 
 Running ML projects:
 * [[ml_lore]] - a collection of rules of thumb about everything Deep Learning (which defaults to pick etc.)
@@ -29,7 +30,6 @@ Running ML projects:
 Project management and knowledge management:
 * [[scrum]] - the methodology
 * [[zettelkasten]] - how to properly create and support this knowledge base
-* [How to do citations with Zettlr](https://docs.zettlr.com/en/academic/citations/) - #todo, this must be nice! 
 
 # Good coding habits
 * Keep code clean (not smelly). Types of **smells** ([ref](https://www.thoughtworks.com/insights/blog/coding-habits-data-scientists)):

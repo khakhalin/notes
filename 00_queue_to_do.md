@@ -15,15 +15,33 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 
 # Queue
 
+* Missing semester - parts on shell, Scripting, VIM, Linux, Command line
+* [[bash]]
+* microservices - what they actually are
+    * Intro by James Quigley: https://www.youtube.com/watch?v=1xo-0gCVhTU
+* crontab jobs
+* docker - what and how
+    * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
+    * [[docker]] and [[kubernetes]]: https://www.youtube.com/watch?v=u8dW8DrcSmo
+* Flask (allegedly flask + docker = 80% of what one needs for a typical deployment)
+* AWS Elastic Kubernetes Service
+* postgresql
+* rds 
+* stream kinesis
+* [[kibana]]
+* curl
+* brew
+* how people use aws in practice
+* Maybe: https://aws.amazon.com/getting-started/
 * Move pandas here
 * Move git here
+* Missing semester - Data Wrangling, GIT, Debugging, Meta, Security, last 2 lectures
 * document creating (and editing) custom colormaps in matplotlib
 * copy a few simple sequential [[keras]] examples here
 * Check out this `categorical` type in Pandas: would it help to save space? ([ref](https://pandas.pydata.org/docs/user_guide/categorical.html))
 * Document some non-trivial points for [[shapely]]
 * start documenting [[tableau]]. Describe INCLUDE and FIXED in particular
 * geopandas - create some useful patterns
-* bash
 * swagger
 * jump server
 * ssh
@@ -32,15 +50,15 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 * bokeh
 * python environments
 * conda vs pip
-* how to properly do importing in large packages (does root import everything from its folder?)
-* homebrew casks
+* Bash - find a tutorisl
+* Bash - linkedin certification
 * how to set up an etl machine (in theory)
+* Python: how to properly do importing in large packages (does root import everything from its folder?)
 * windowed functions (newer SQL): https://mode.com/sql-tutorial/sql-window-functions/
 * common table expressions (newer SQL)
 * Finish SQL quests: https://sqlzoo.net/wiki/SUM_and_COUNT
 * This text about Pandas: https://github.com/chiphuyen/just-pandas-things/blob/master/just-pandas-things.ipynb
 * How to design Twitter: https://www.youtube.com/watch?v=KmAyPUv9gOY
-* Bash - start with "missing semester", then more tutorials, then linkedin certification
 * Business 
     * pricing (read some theory on customer psychology)
     * pricing elasticity
@@ -50,11 +68,6 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
     * Some reading: https://www.geeksforgeeks.org/python-functools-wraps-function/
     * Nice example: https://github.com/koaning/memo/blob/main/memo/_base.py
 * Read something on 1D brownian walks maybe? Or is it too mathy?
-* docker - what and how
-    * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
-    * Docker and Kubernetes: https://www.youtube.com/watch?v=u8dW8DrcSmo
-* What is flask?
-    * Flask docker file (allegedly 80% of what one needs for a typical deployment)
 * https://en.wikipedia.org/wiki/Partial_correlation
 * hierarchical best-fit models 
     * [[arima]]
@@ -375,7 +388,6 @@ See also: [[system_design]]
 Go through 2-3 youtube lectures in the queue that describe some of the existing solutions:
 * Ruby on rails - what is it, how it works, and why so popular?
 * Hadoop vs Spark video: https://hackr.io/blog/hadoop-vs-spark
-* Kubernetes and Docker video (30 min): https://www.youtube.com/watch?v=u8dW8DrcSmo
 * Avro
 * Parquet (data storage format)
 	* data warehouse technologies

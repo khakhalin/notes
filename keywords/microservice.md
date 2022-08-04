@@ -1,7 +1,7 @@
 # Microservice
 
 Parents: [[system_design]]
-See: [[docker]]
+See: [[docker]], [[kubernetes]]
 
 #systems
 

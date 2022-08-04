@@ -3,28 +3,30 @@
 #lifehack #tools
 
 Related:
+
 * [[JohnMcPhee]] - on his writing system, which is not dissimilar to Zettelkasten
 * [[writing]] - on writing well
 
 # How One German Scholar Was So Freakishly Productive
 
-Clear 2019
-https://writingcooperative.com/zettelkasten-how-one-german-scholar-was-so-freakishly-productive-997e4e0ca125
+Clear 2019 https://writingcooperative.com/zettelkasten-how-one-german-scholar-was-so-freakishly-productive-997e4e0ca125
 
 A good description of how zettelkasten works. The main idea is linking cards. To paraphrase, **the rules** seem to be:
-1. Constantly add new material to the system. Don't take notes anywhere else, in other notebooks and places. Always feed the Zettelkasten!
-2. Don't be afraid to create new notes. Don't try to impose a pre-conceived rigid structure on your notes. Just add new notes (nodes), and let the graph live.
-3. Always link new nodes to existing nodes. Don't leave them hanging alone; integrate them into the system with links.
-4. Never just cite stuff; always either comment liberally, or rephrase. Treat it as a conversatoin; shape it into an external memory.
+
+1.  Constantly add new material to the system. Don't take notes anywhere else, in other notebooks and places. Always feed the Zettelkasten!
+2.  Don't be afraid to create new notes. Don't try to impose a pre-conceived rigid structure on your notes. Just add new notes (nodes), and let the graph live.
+3.  Always link new nodes to existing nodes. Don't leave them hanging alone; integrate them into the system with links.
+4.  Never just cite stuff; always either comment liberally, or rephrase. Treat it as a conversatoin; shape it into an external memory.
 
 Some **asides and consequences**:
+
 * Tags are good, but limiting. Still, at the very least, tag every card you create.
 * In Zettlr (as in paper card version) direct (outcoming links) are clearly visible, while incoming links are hidden. Still, unlike for paper notes, in Zettlr you can fetch the name of this card, and put it in the search box. You'll get all cards linking this card.
 * My current system of naming cards after papers (author-year-topic) is actually still not complete Zettelkasten, as it retains (and follows) the desire to keep control of card readability. The original system by Luhmann allowed him to let go of this fear of control, and just inject information into the system, relying on the power of links.
 
-# References about Luhmann
+# About Luhmann
 
-* **Archive of Luhmann's cards:** https://niklas-luhmann-archiv.de/bestand/zettelkasten/zettel/ZK_1_NB_1_1_V
+* **Archive of Luhmann's cards:** [https://niklas-luhmann-archiv.de/bestand/zettelkasten/zettel/ZK\_1\_NB\_1\_1_V](https://niklas-luhmann-archiv.de/bestand/zettelkasten/zettel/ZK_1_NB_1_1_V)
 
 It seems that he also mostly filed cards within a tree. So every card was "guaranteed" to belong to a certain thematical box (sometimes strongly, sometimes loosely). Any other links would come on top of that. Perhaps With Zettlr, it's easier to use tags as this "guarantee of minimal inclusion", just because they are so much easier to implement.
 
@@ -41,10 +43,11 @@ This note, for example, would have been represented by several linearly linked n
 
 # Some writing by Luhmann himself
 
-## Communicating with Slip Boxes
+### Communicating with Slip Boxes
+
 http://luhmann.surge.sh/communicating-with-slip-boxes
 
-For this system to work, it should feel like a communication. For it to feel like a communiation, it should be different (have a different schema) than whatever you have in your mind as you use the Zettelkasten, or try to use it to write. There has to be an element of surprise. 
+For this system to work, it should feel like a communication. For it to feel like a communiation, it should be different (have a different schema) than whatever you have in your mind as you use the Zettelkasten, or try to use it to write. There has to be an element of surprise.
 
 Advices against "filing in order", as in a book catalog, precisely because it would bind you to a certain system of thinking for decades. Instead, just file them one after another, with incremental address-like numbers. _(But that said, while Luhmann wrote about the danger of overstructuring the archive, his archive was still structured in a thematic tree.)_
 
@@ -56,7 +59,7 @@ A funny quotation: "If you wish to educate a partner in communication, it will b
 
 > Still unclear, from this short article, how he wrote after all. Did he start with an outline, and then followed it, going on tangents through the links?
 
-## More info on how Luhmann wrote
+# More info on how Luhmann wrote
 
 https://mindyourwriting.wordpress.com/2015/09/10/how-famous-researchers-work-niklas-luhmann/
 
