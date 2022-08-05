@@ -9,21 +9,20 @@ Major subtopics:
 * [[oop]] - on good software engineering, patterns, testing etc.
 
 Tips and notes on individual tools:
-* [[python]] - with separate notes for [[numpy]], [[pandas]], and some more
-* ML frameworks: [[tensorflow]], [[jax]] 
-* DB: [[sql]]
-* Version control: [[git]]
-* Scripting / terminal: [[bash]], [[linux]]
-* Containerization tools: [[docker]], [[kubernetes]], [[flask]]
-* Reporting tools: [[tableau]], [[kibana]], shiny (?)
-* [[latex]] - tiny notes in LaTeX
-* [[javascript]]
+* [[python]] - with separate notes for [[numpy]], [[pandas]] etc.
+* [[tensorflow]], [[jax]] - ML frameworks
+* [[sql]] - Databases
+* [[git]] - Version control
+* [[bash]] - Scripting / terminal
+* [[docker]], [[kubernetes]], [[flask]] - Containerization tools
+* [[tableau]], [[kibana]], shiny (?) - Reporting tools
+* [[latex]] - misk
+* [[javascript]], [[julia]] - other programming languages
 
 Running ML projects:
 * [[ml_lore]] - a collection of rules of thumb about everything Deep Learning (which defaults to pick etc.)
 * [[Breck2017testing]] - a rubric for ML project readiness
-* [[data_cleaning]]
-* [[julia]] - about the language
+* [[data_cleaning]]* 
 
 Project management and knowledge management:
 * [[scrum]] - the methodology

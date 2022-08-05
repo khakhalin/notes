@@ -1,5 +1,10 @@
 # GIT
+
+Path: [[01_Tools]]
+See also: [[bash]], ssh
+
 #tools
+
 
 Todo:
 * https://git-scm.com/docs/git-restore
@@ -62,12 +67,18 @@ The pluses and minuses of rebase (compared to Merge):
 * `git reset --hard HEAD~3` - destroy and delete last 3 commits, reset HEAD three positions lower. Note: If you want to save their content just in case, before running this, do `git branch [branch_name]`. Then when you destroy commits in the original branch, they will still be present in this new branch. Note also that rewriting history like that is a very bad idea if those commits were already shared.
 
 # Github
-### Working with github from terminal
+## Working with github from terminal
+
 As github switched to using tokens, go here to generate a token: https://github.com/settings/tokens
-Then type this for the git repo: `git remote set-url origin https://<githubtoken>@github.com/<username>/<repositoryname>.git`. For these contributions to show on the main page, make sure your user email is set up correctly; this can be done locally at a repo level using `git config user.email "blabla@gmail.com"`.
+
+Then type this for the git repo:
+`git remote set-url origin https://<githubtoken>@github.com/<username>/<repositoryname>.git`
+For these contributions to show on the main page, make sure your user email is set up correctly. This can be done locally at a repo level using `git config user.email "blabla@gmail.com"`
+
 Sources: [1](https://stackoverflow.com/questions/68775869/message-support-for-password-authentication-was-removed-please-use-a-personal)
 
 # Open questions
+
 * `--no-ff` for `git merge
 * `git pull -f` - what does this f mean?
 * `pick`
@@ -75,5 +86,6 @@ Sources: [1](https://stackoverflow.com/questions/68775869/message-support-for-pa
 * why `commit -am` (for committing all) is even an option? What's the point of committing all?
 * pull requests?
 
-## References
+# References
+
 * Funny short cheatsheet "Dangit" (without swears) or this one with: https://ohshitgit.com/

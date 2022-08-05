@@ -15,12 +15,10 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 
 # Queue
 
-* Command Line crash course https://learnpythonthehardway.org/book/appendixa.html
 * Missing semester - parts on shell, Scripting, VIM, Linux, Command line
 * ssh
 * microservices - what they actually are
     * Intro by James Quigley: https://www.youtube.com/watch?v=1xo-0gCVhTU
-* crontab jobs
 * docker - what and how
     * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
     * [[docker]] and [[kubernetes]]: https://www.youtube.com/watch?v=u8dW8DrcSmo
