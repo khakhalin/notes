@@ -1,9 +1,7 @@
 # Tools, coding, project management
 
-#tools #lifehack
+#tools #lifehack #bib
 
-#todo: Command Line crash course
-https://learnpythonthehardway.org/book/appendixa.html
 
 Major subtopics:
 * [[system_design]] - system design, scalability
@@ -32,6 +30,7 @@ Project management and knowledge management:
 * [[zettelkasten]] - how to properly create and support this knowledge base
 
 # Good coding habits
+
 * Keep code clean (not smelly). Types of **smells** ([ref](https://www.thoughtworks.com/insights/blog/coding-habits-data-scientists)):
     1. Bad variable names (Remember: a long name is always better than a long comment!)
     2. Functions that do many things instead of one thing

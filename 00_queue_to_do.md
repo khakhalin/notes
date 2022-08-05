@@ -6,31 +6,38 @@ Other lists to look through:
 * https://www.confetti.ai/
 * https://machinelearningmastery.com/start-here/
 * https://e2eml.school/blog.html
-* [[job_search]] - lots of questions and more links & opinions about what to learn
+* [[job_search]] - lots of "interview questions" (of quetionable quality) and lots of opinions and links on what to learn
 
 **The missing semester of CS education**
 https://missing.csail.mit.edu/ ⚠️
 lots of useful practical bits and pieces: shell, debugging, data wrangling, metaprogramming and what not. Also has [lectures on youtube](https://www.youtube.com/watch?v=Z56Jmr9Z34Q&list=PLyzOVJj3bHQuloKGG59rS43e29ro7I57J&index=2&t=0s).
-(the link is also in [[01_Tools]] / Resources, so delete it from here later)
+(the link is also saved in [[01_Tools]] / Resources, so delete it from here once done)
 
 # Queue
 
+* Command Line crash course https://learnpythonthehardway.org/book/appendixa.html
 * Missing semester - parts on shell, Scripting, VIM, Linux, Command line
-* [[bash]]
+* ssh
 * microservices - what they actually are
     * Intro by James Quigley: https://www.youtube.com/watch?v=1xo-0gCVhTU
 * crontab jobs
 * docker - what and how
     * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
     * [[docker]] and [[kubernetes]]: https://www.youtube.com/watch?v=u8dW8DrcSmo
+    * https://www.docker.com/blog/containerized-python-development-part-1/ 
 * Flask (allegedly flask + docker = 80% of what one needs for a typical deployment)
 * AWS Elastic Kubernetes Service
 * postgresql
 * rds 
 * stream kinesis
-* [[kibana]]
+* jump server
+* tunnel (?) - in the ssh / linux context
 * curl
 * brew
+* vim
+* sudo
+* bokeh
+* [[kibana]]
 * how people use aws in practice
 * Maybe: https://aws.amazon.com/getting-started/
 * Move pandas here
@@ -43,11 +50,6 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 * start documenting [[tableau]]. Describe INCLUDE and FIXED in particular
 * geopandas - create some useful patterns
 * swagger
-* jump server
-* ssh
-* tunnel (?) - in the ssh / linux context
-* sudo
-* bokeh
 * python environments
 * conda vs pip
 * Bash - find a tutorisl
