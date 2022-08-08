@@ -1,7 +1,7 @@
 # Docker and Containerization
 
 Parent: [[01_Tools]]
-See: [[microservice]], [[kubernetes]], [[flask]]
+See: [[bash]], [[microservice]], [[kubernetes]], [[flask]]
 
 #tools
 

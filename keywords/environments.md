@@ -1,4 +1,4 @@
-# Anaconda and packages
+# Environments
 
 #tools
 
@@ -8,15 +8,14 @@ Two key ways to install stuff
 * **conda** installs packages written in any language. Makes sure there are no conflicts using a "Satisfiability Solver".
 * **pip** installs python packages. Installs in an "overwrite" mode: recursively installs all downstream dependencies, but doesn't look for overall consistency.
 
-## Environments
 
-If, say, Tensorflow and Pytorch have conflicting requirements on versions of everything, we can isolate them in different environments. Conda can create its environments itself; for pip it's possible to use some weird tools (venv?), but it's better to just do pip within a decidated conda environment.
+When different python packages (like Tensorflow vs Pytorch) have conflicting requirements on versions of everything, we can isolate them in different environments. Conda can create its environments itself; for pip it's possible to use some weird tools (venv?), but it's better to just do pip within a decidated conda environment.
 
 * Create an environment for a package: `conda create -n NAME PACKAGE`. For example `conda create -n tf tensorflow-gpu`
 * Switch: `conda activate NAME`.
 * To go to base: `conda deactivate`
 
-**Jupyter** doesn't seem to be aware of Anaconda environments by default, although apparently it is possible to hack it. Because of that, for now, I'll probably forgo environments. Even though not being able to easily make backup version of a conda state is a pain. _Maybe I can still use environments like that, tho? Like, make a copy of base, them mofidify base, then if it doesn't work, copy from the backup version back to base?_
+**Jupyter** doesn't seem to be aware of conda environments by default, although apparently it is possible to hack it. Because of that, for now, I'll probably forgo environments. Even though not being able to easily make backup version of a conda state is a pain. _Maybe I can still use environments like that, tho? Like, make a copy of base, them mofidify base, then if it doesn't work, copy from the backup version back to base?_
 
 ## Conda
 `

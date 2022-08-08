@@ -1,14 +1,15 @@
 # Python
 
+Path: [[01_Tools]]
+
 #tools #coding #oop
 
-Path: [[01_Tools]]
 
 Subtopics and related:
 * [[oop]] - Pythonic implementation of OOP is all given there
-* Common libraries: [[numpy]], [[pandas]], [[sklearn]], [[matplotlib]], [[tensorflow]], [[py_dates]], [[regex]]
-* [[unit_test]] - how to write unit tests correctly (in Python)
-* Tools: [[anaconda]], [[jupyter]], [[flask]]
+* Common libraries: [[numpy]], [[pandas]], [[sklearn]], [[matplotlib]], [[tensorflow]], [[py_dates]], [[regex]], [[flask]]
+* Core tools: [[environments]], [[jupyter]]
+* [[unit_test]] - how to write unit tests correctly (in Python) 
 
 # Random tips
 

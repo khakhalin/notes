@@ -1,8 +1,9 @@
 # Flask
 
-Path: [[python]]
-See also: [[docker]]
+Path: [[01_Tools]] / [[python]]
+See also: [[microservice]] internet? http?
 
-A Python module to work with [[docker]].
+
+A thing to create simple html APIs.
 
 Allegedly, is expected to be replaced with a new better module `fastAPI` in the future.

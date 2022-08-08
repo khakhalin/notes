@@ -23,14 +23,15 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
     * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
     * [[docker]] and [[kubernetes]]: https://www.youtube.com/watch?v=u8dW8DrcSmo
     * https://www.docker.com/blog/containerized-python-development-part-1/ 
+    * crontab
+* rds
+* curl
 * Flask (allegedly flask + docker = 80% of what one needs for a typical deployment)
 * AWS Elastic Kubernetes Service
 * postgresql
-* rds 
 * stream kinesis
 * jump server
 * tunnel (?) - in the ssh / linux context
-* curl
 * brew
 * vim
 * sudo
@@ -49,7 +50,8 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 * geopandas - create some useful patterns
 * swagger
 * python environments
-* conda vs pip
+* conda vs pip - see [[environments]]
+    * wheel (?)
 * Bash - find a tutorisl
 * Bash - linkedin certification
 * how to set up an etl machine (in theory)
