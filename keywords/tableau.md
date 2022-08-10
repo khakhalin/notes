@@ -39,8 +39,31 @@ You can write your own code in Tableau version of [[javascript]].
 
 When sharing on the web, the description of a dashboard is stored as an html, with divs and everything, and  `<object class=...>`  tags to host actual visualizations. `<param name=... value...>` tags specify parameters specify parameters. `host_url` parameter points at the server, and that's where the data comes from, while a script (written in [[javascript]]) will take care of working with it.
 
+# Level of Data Aggregation (LOD)
+
+...
+
+## Finding latest used value for an id
+
+In a normal world, you would probably summarize the table, finding the last value of the target field after grouping by id and sorting by data, and then left-joined this summary table back on the full table by id. Tableau doesn't have normal joins though, but we can emulate this logic with LODs. 
+
+```
+{FIXED [id]: 
+    MAX(
+        IF [date] = {FIXED [id]: MAX([date])} 
+        THEN [name]
+        END
+    )
+}
+```
+
+Explanation of the code: The inner part returns `None` for non-recent values, and target value (`name` in this case) for the most recent value. Just to be on a safe side, we also calculate the most recent value separately for each `id`, although if the data is orthogonal on `time/id` dimensions, this is technically not necessary. Then it calculates `max()` on them, and real values are `>` than `none`, so they win in this battle. And finally, we match these values to `id` (the part that feels most similar to to a join, conceptually).
+
 # Refs
 
-Decent intro video: https://www.youtube.com/watch?v=jEgVto5QME8
+Basic intros and tutorials:
+* Decent intro video: https://www.youtube.com/watch?v=jEgVto5QME8
+* A longer tutorial: https://www.youtube.com/watch?v=fO7g0pnWaRA
 
-A longer tutorial: https://www.youtube.com/watch?v=fO7g0pnWaRA
+LODs
+* https://www.flerlagetwins.com/2020/02/lod-uses.html

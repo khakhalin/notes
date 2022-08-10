@@ -17,6 +17,7 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 
 * Missing semester - parts on shell, Scripting, VIM, Linux, Command line
 * ssh
+* LODs for [[tableau]]
 * microservices - what they actually are
     * Intro by James Quigley: https://www.youtube.com/watch?v=1xo-0gCVhTU
 * docker - what and how
@@ -41,6 +42,7 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 * Maybe: https://aws.amazon.com/getting-started/
 * Move pandas here
 * Move git here
+* 
 * Missing semester - Data Wrangling, GIT, Debugging, Meta, Security, last 2 lectures
 * document creating (and editing) custom colormaps in matplotlib
 * copy a few simple sequential [[keras]] examples here

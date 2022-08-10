@@ -27,7 +27,7 @@ LIMIT 10
 * Precedence: arithmetic (including bitwise `~&|`) > comparisons > `NOT` > `AND` > `OR` and its friends (`LIKE`, `IN`, `BETWEEN`, `ALL`, `ANY`, `SOME`) > assignment.
 * `IN` can use either a fixed list, or a subquery.
 * `AVG`, `MIN`, `MAX` - other functions for grouped queries, similar to SUM. They can also go in the SELECT block (to be returned, instead of conditioned), and combined with aliasing.
-* `COALESCE (col1, col2, "default value")` - returns the first non-null element from this list
+* `COALESCE (col1, col2, "default value")` - returns the first non-null element from this list. Is really useful for setting default values in `SELECT`
 * `CASE` - a whole case switch system for binning values on-the fly, and returning the bin name. Uses `WHEN`, `THEN`, and `ELSE` as keywords inside the CASE structure. Read the manual if needed.
 * `HAVING` is used for clauses on aggregate functions, as it is performed after WHERE (and after grouping).
 * `ASC` is used with `ORDER BY` by default, and so can be omitted
