@@ -11,22 +11,22 @@ Other lists to look through:
 **The missing semester of CS education**
 https://missing.csail.mit.edu/ ⚠️
 lots of useful practical bits and pieces: shell, debugging, data wrangling, metaprogramming and what not. Also has [lectures on youtube](https://www.youtube.com/watch?v=Z56Jmr9Z34Q&list=PLyzOVJj3bHQuloKGG59rS43e29ro7I57J&index=2&t=0s).
-(the link is also saved in [[01_Tools]] / Resources, so delete it from here once done)
+(the link is also saved in [[01_Tools]], so delete it from here once done)
 
 # Queue
 
 * Missing semester - parts on shell, Scripting, VIM, Linux, Command line
+* how to start crontab jobs? (document in [[bash]])
+* curl - how to use exactly (document in [[bash]])
 * ssh
-* LODs for [[tableau]]
+* LODs for [[tableau]] - read this: https://www.flerlagetwins.com/2020/02/lod-uses.html
 * microservices - what they actually are
     * Intro by James Quigley: https://www.youtube.com/watch?v=1xo-0gCVhTU
 * docker - what and how
     * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
     * [[docker]] and [[kubernetes]]: https://www.youtube.com/watch?v=u8dW8DrcSmo
     * https://www.docker.com/blog/containerized-python-development-part-1/ 
-    * crontab
 * rds
-* curl
 * Flask (allegedly flask + docker = 80% of what one needs for a typical deployment)
 * AWS Elastic Kubernetes Service
 * postgresql

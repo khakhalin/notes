@@ -1,16 +1,15 @@
 # Bash
 
 Parent: [[01_Tools]]
-See also: [[git]]
+See also: [[git]], [[docker]]
 
 #tools
 
-Todo: 
+#todo: 🔥🔥🔥
 * xargs
 * sudo
 * chmod - what does it take?
 * chown
-* curl
 * shebang lines (#!)
 
 # Basic commands
@@ -37,6 +36,10 @@ Todo:
     * Technically it is a command to stream outputs, so one can do stream for a file etc. (_not sure how it works yet_)
 * `less file` - display file screen-by-screen. Press `q` to quit this process. (Note that Windows powershell uses `more` instead of `less` for some reason, with same functionality)
 * `find -name "file_name"` - find a file. Has a whole syntax of its own, for fancy searches by condition (size etc.)
+* `head filename` - see first 10 lines of the file. 
+    * `head -30 filename` or `head -c 30 filename` to change the number of lines. 
+    * Is typically used for piping, to only save the beginning of the output: `some_command | head -c 10 log.txt`
+    * `tail -c 10 filename` - exactly same thing, but for the end. Is useful for piping and logging when key info comes at the end.
 
 **Create**
 * `mkdir folder_name` - create a folder. 
@@ -60,22 +63,26 @@ Todo:
     * Note that on Mac, folders often have a `.DS_Store` hidden file, so there may be problems with there removal.
     * `rmdir -rf` removes all files in this folder as well (so doesn't halt if it is non-empty)
 
-# Working with remote connections
+# Remote connections and downloading
 
-`scp` - same as `cp`, but for copying remotely
+* `scp` - same as `cp`, but for copying remotely
+* `wget options url` - to download something from the internet in a simple way using http protocol
+* `curl options url` - another way to dowload stuff, but upports non-http protocols. Also one can exchange info with a server, and one can send stuff with it.
+* `apt-get` - to update packages
+    * `apt-get install ...` 🔥
+    * `apt-get -y update` 🔥
 
 # Scripting
 
 * `echo "Hi!"` - output something
 * `alias new_command_name='custom sequence of commands'` - creates an alias that becomes a new command
 * `sh file_name` - execute this file as a script
-* `at` - run a command at a later time (once)🏮
-* `crontab` - executes a command regularly🏮
+* `at` - run a command at a later time (once)🔥
 * `>` - redirects command output
 * `>>` - redirects command output, but making it append output
 * `|` - chains commands, such as output of the left command becomes input for the right one.
 * `tee` - catches standard output and redirects it to the file. For example `command | tee log.txt`
-* `tar` - compressor to compress data 🏮
+* `tar` - compressor to compress data 🔥
 
 Control structures
 * `if [[ condition ]]; then ... fi` - here `...` is actually a multi-line, as there's no clear separator after `then`. `fi` serves as an "end" command for this block. 
@@ -95,6 +102,27 @@ Working with variables
 Useful tips
 * `.bash_profile` (or, on modern Mac, `.zprofile`)  is a hidden file in the root folder that is executed every time the terminal is initialized (on Mac, locally, on remote Linux machine - as you connect it with a terminal). Anything default can be put there.
 * `$PATH` - environmental variable that lists all paths where the shell will look for commands. Separated by `:` apparently (weird)
+
+# Cron and crontab
+
+Cron is a utility to execute certain commands regularly. You start with creating a special `crontab` file (traditionally, no extension, and named `crontab`, for "cron table"). The file starts with setting some paths and other environmental variables, such as  `PATH` snf `CODEDIR` (the last one, probably pointing at the folder where all the useful programs are stored). Then go crontab lines proper.  Every crontab line has the following format:
+
+```bash
+30 4 * * 1 root python3 $CODEDIR/demo/script.py
+```
+Here the meaning of first 6 positions is:
+1. Minutes
+    * if non-`*`, while hour is empty (`*`) - run the job every that many minutes
+    * if non-`*` and hour is also non-empty, then run the job at that time 
+3. Hours
+4. Day of the month (1 to 31)
+5. Month
+6. Day of the week. Both 0 and 7 mean Sunday, and one can do one day, or something like `1-5` for working days, or `1,3,5` for a list.
+7. Username (in practice, probably `root`)
+ 
+Then goes the actual command to be scheduled.
+
+To actually make these commands execute, run `crontab -e`, and it will start looking into the file. There's no need to "recompile" the jobs in any way if the file is edited. Crontab checks the edits. 🔥 🔥 🔥  Is it actually true??
 
 # VIM
 
