@@ -24,17 +24,25 @@ See also: [[numpy]], [[py_dates]], [[sklearn]]
 * Delete some columns: `df = df.drop(['a','b'], axis=1)` or `df.drop(columns=['a'])`.
 
 #### Indexing
-* Select columns by label: `df.x` or `df['x']`. Returns a series. To cast into a numpy object, add `.values` at the end (just like that, without parentheses). Overall, we prefer dot-notation`df.x`, except for several special cases (⚠️): 
+* Select columns by label: `df.x` or `df['x']`. Returns a series. To cast into a numpy object, add `.values` at the end (just like that, without parentheses). In most cases, dot-notation and parentheses-notation are equivalent, but there are some special cases when only parenthesis-notation works:
     * If your column name is a reserved word, like `count`, `first` or `last`. If you have a column named "first", `d['first']` would work well, but `d.first` won't
     * If column name contains a space (only `df.['my dog']` would work)
     * Column name is an integer rather than a string
     * You use dynamic addressing (`a = 'name'; df[a]`)
     * You want to assign values to a dataframe (see below)
-    * Two common useful patterns  is to use `.unique()` instead of `.values`if you want a list of unique values, and `.tolist()` after either, if you need a standard  list, and not a numpy array.
+* Two common useful patterns  is to use `.unique()` instead of `.values`if you want a list of unique values, and `.tolist()` after either, if you need a standard  list, and not a numpy array.
+
+Overall, dot-notation looks neat, and saves you 3 characters, but over time I decided to phase it out and switch to parenthesis. The main reason is that with color highlighting, strings have a different color, and parenthesis notation typically shows string contansts inside, when you know the names of your columns. So it is much easier to quickly see where the same word is used repeatedly in the code. While with dot-notation, column names and methods llook identical, and this somehow feels wrong.
+
+Other useful patterns:
 * Select rows by label: `df.loc[1]`. Works for both df (returns a row-series), and for column-series (returns a single value).
 * To cast a single value from a row-series into just a value, use `.values[0]` at the end.
 * Out-of-range integers are forgiven (ignored) on reading, but cause an error if you try to write
-* **Iterating through rows**: either `for i in range(df.shape[0]): df.loc[i]`, or `for key,val in df.iterrows()`  (in both cases we get row-series). To slice into slivery dataframes, one could use `df.loc[[i]]`, but usefulness of that is unclear.
+
+To iterate through rows:
+* either `for i in range(df.shape[0]): df.loc[i]`
+* or `for key,val in df.iterrows()`  (in both cases we get row-series). 
+* To slice into one-row slivery dataframes, one could also use `df.loc[[i]]`, but not sure if useful.
 
 Footnotes:
 * https://www.dataschool.io/pandas-dot-notation-vs-brackets/
@@ -56,23 +64,26 @@ For **conditional data retrieval** we have a choice between:
 To thin out a dataset, several options:
 * One: `df = df[df.x>0]`.
 * Another, `df = df.drop(df[df.x>0].index)`. This one seems bulkier, so not sure if it is ever preferred?
-* Use a query (see above). `df = df.query('x>0')`
+* Use a query (see above). `df = df.query('x>0')`, potentially with a `.copy()` at the end, to immediately cast (copy) a view of a parent dataframe into a separate dataframe.
 
 Conditional indexing supports functions, as long as they take and return Pandas series, or something compatible, like a Numpy array). For example, conditional forms (both local indexing and queries) support elementwise Boolean operators, like `&` and `|`.
 
 ⚠️ There's a strange pitfall associated with conditional data retrieval that I doesn't understand for now. `query` seems to always create a view of a dataframe, which may look like a new dataframe with fewer rows, but that actualy acts as a copy, and not as a deepcopy. As a result, if you save the results in a "new" dataframe `df2 = df.query('x>0')`, and then change values in  `df2` in any way, it may case a warning "A value is trying to be set on a copy of a slice from a DataFrame". In this case df2 gets updated, and df seems still intact (unchanged), but there's this warning, and I'm not sure why. (Is it because they had to replace a view with a copy when you ran a command? So they want us to be more deliberate here?). Replacing a simple `query` with `df.query(...).copy()` turns a view into a legit new dataframe, and thus eliminates a warning.
 
-**Chained Assignment**
-A problem while writing to a frame, selecting by both column and row.
-* Good: reference both by label (index): `df.loc[1,'x']`
-* Also Good: reference both by position:`df.iloc[1,0]`. Row goes first. 
-* Read, but not write: `df.x[1]`, which is equivalent to `df['x'][1]`.
-* Read but not write: Both `df.x.iloc[1]` and `df.iloc[1].x`. Documentation states that whether assigning values to any given slice would work or not is "officially unpredictable", so chained assignment should never be used.
+#### Chained Assignment problem
+"Chained assignment" is a name for a problem that you get when writing to a section of a dataframe, when selecting by both column and row. In essence, if you manage to selecte both of them at once, you're good. But if you do first one, then another, then you get a view of a view, and you can read, but not write. The situationis complicated by the fact that in some cases even chained assignment may actually work (with a warning), but for a different dataframe the same code may crash.
+
+* `df.loc[1,'x']` - Read and write. Reference both by column and row by index.
+* `df.iloc[1,0]` - Read and write. Reference both by position. Row number goes first. 
+* `df['x'][1]` - Only read.
+* `df.x[1]`- Only read. (completely equivalent to the one above, just different syntax)
+* `df.x.iloc[1]` - Officially Unpredictable (according to the manuals), so should be assumed to be "Only read"
+* `df.iloc[1].x` - Officially Unpredictable, exactly like the one above.
 
 Footnotes:
 * https://stackoverflow.com/questions/29888341/a-value-is-trying-to-be-set-on-a-copy-of-a-slice-from-a-dataframe-warning-even-a
 
-# Exploration
+# Quick data exploration
 
 Useful methods:
 * `df.col.hist()` - draws a nice histogram
@@ -210,13 +221,18 @@ df = (pd.concat((df, pd.get_dummies(df[col_name], prefix=col_name)), axis=1)
 
 # Chaining tips and tricks
 
-How to change columns in a chaining way? It doesn't seem to be easy. `assign` for example doesn't always work, as you cannot reference newly created columns in it (those made by `agg` or `pivot`). So we have the following options:
-* Official version: `pipe(fun, arg1)` - allows user-written functions in chains, except that this `fun` should be defined on a dataframe, and return a dataframe. So it's not for quick apply-lambdas on a single column.
-* Hack: `.apply(lambda x: fun(x) if x.name=='col_name' else x)` - not very pretty, but it works, as long as your `fun(x)` can work on an entire column, numpy-style, as x here is not a single value, but an entire column.
+How to change columns while chaining? It doesn't seem to be easy.
+
+* `.eval("COL = OLD + OTHER + @variable")` or `.eval(f"COL = OLD + {variable}")` - seems to be the best way, but has some serious limitations:
+    * doesn't support string methods on data
+    * cannot work with variables that are dictionaries (I think)
+* `.pipe(fun, arg1, arg2)` - allows user-written functions in chains, as long as this `fun` is happy to accept a dataframe, and return a dataframe.
+* `.apply(lambda x: fun(x) if x.name=='col_name' else x)` - An ugly, but working way to apply a function to one column only. The function `fun(x)` needs to be ready to take the entire column as an interable, numpy-style, as x here is not a single value, but an entire column.
+* `assign` seems to be bad for chaining, as you cannot reference newly created columns with it.
 
 # Misc
 
-To print a really long data frame, do this:
+To print a really long data frame without abbreviating the middle of it, do this:
 ```python
 with pd.option_context('display.max_rows', 1400):
     print(dfs)

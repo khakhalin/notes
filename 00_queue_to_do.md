@@ -38,6 +38,7 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 * sudo
 * bokeh
 * [[kibana]]
+* Reread this pandas advice just in case: https://github.com/chiphuyen/just-pandas-things/blob/master/just-pandas-things.ipynb
 * how people use aws in practice
 * Maybe: https://aws.amazon.com/getting-started/
 * Move pandas here

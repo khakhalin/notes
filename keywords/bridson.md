@@ -7,6 +7,7 @@ Parents: [[algos]]
 To create a nice uniform-looking coverage of points on a 2D plane. Uniformly distributed random samplings are really clumpy and have a weird distribution of inter-points distances. While we want a distribution of distances with a sharp peak (not quite regular, but not that far from a regular grid actually).
 
 Algo:
+
 0. Pick a point, add it to a list of active points
 1. Loop until the list is empty:
     2. Pick a source point from the list

@@ -1,7 +1,7 @@
 # Bash
 
 Parent: [[01_Tools]]
-See also: [[git]], [[docker]]
+See also: [[git]], [[docker]], [[crontab]]
 
 #tools
 
@@ -103,26 +103,7 @@ Useful tips
 * `.bash_profile` (or, on modern Mac, `.zprofile`)  is a hidden file in the root folder that is executed every time the terminal is initialized (on Mac, locally, on remote Linux machine - as you connect it with a terminal). Anything default can be put there.
 * `$PATH` - environmental variable that lists all paths where the shell will look for commands. Separated by `:` apparently (weird)
 
-# Cron and crontab
-
-Cron is a utility to execute certain commands regularly. You start with creating a special `crontab` file (traditionally, no extension, and named `crontab`, for "cron table"). The file starts with setting some paths and other environmental variables, such as  `PATH` snf `CODEDIR` (the last one, probably pointing at the folder where all the useful programs are stored). Then go crontab lines proper.  Every crontab line has the following format:
-
-```bash
-30 4 * * 1 root python3 $CODEDIR/demo/script.py
-```
-Here the meaning of first 6 positions is:
-1. Minutes
-    * if non-`*`, while hour is empty (`*`) - run the job every that many minutes
-    * if non-`*` and hour is also non-empty, then run the job at that time 
-3. Hours
-4. Day of the month (1 to 31)
-5. Month
-6. Day of the week. Both 0 and 7 mean Sunday, and one can do one day, or something like `1-5` for working days, or `1,3,5` for a list.
-7. Username (in practice, probably `root`)
- 
-Then goes the actual command to be scheduled.
-
-To actually make these commands execute, run `crontab -e`, and it will start looking into the file. There's no need to "recompile" the jobs in any way if the file is edited. Crontab checks the edits. 🔥 🔥 🔥  Is it actually true??
+For scheduling periodical jobs, see [[crontab]]
 
 # VIM
 

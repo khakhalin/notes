@@ -45,7 +45,7 @@ When sharing on the web, the description of a dashboard is stored as an html, wi
 
 ## Finding latest used value for an id
 
-In a normal world, you would probably summarize the table, finding the last value of the target field after grouping by id and sorting by data, and then left-joined this summary table back on the full table by id. Tableau doesn't have normal joins though, but we can emulate this logic with LODs. 
+In a normal world (like, in [[pandas]], for example), you would probably summarize the table, finding the last value of the target field after grouping by id and sorting by data, and then left-joined this summary table back on the full table by id. Tableau doesn't have normal joins though, but we can emulate this logic with LODs. 
 
 ```
 {FIXED [id]: 
