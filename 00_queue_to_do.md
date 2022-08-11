@@ -43,7 +43,8 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 * Maybe: https://aws.amazon.com/getting-started/
 * Move pandas here
 * Move git here
-* 
+* try XGBoost on real data
+* LightGBM - new better replacement for XGBoost (as de-facto practical SOTA)
 * Missing semester - Data Wrangling, GIT, Debugging, Meta, Security, last 2 lectures
 * document creating (and editing) custom colormaps in matplotlib
 * copy a few simple sequential [[keras]] examples here
