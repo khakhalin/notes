@@ -6,7 +6,7 @@ Other lists to look through:
 * https://www.confetti.ai/
 * https://machinelearningmastery.com/start-here/
 * https://e2eml.school/blog.html
-* [[job_search]] - lots of "interview questions" (of quetionable quality) and lots of opinions and links on what to learn
+* [[job_search]] - lots of "interview questions" (of questionable quality) and lots of opinions and links on what to learn
 
 **The missing semester of CS education**
 https://missing.csail.mit.edu/ ⚠️
