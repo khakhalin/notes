@@ -15,9 +15,11 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 
 # Queue
 
-* Missing semester - parts on shell, Scripting, VIM, Linux, Command line
-* how to start crontab jobs? (document in [[bash]])
+* kubernetes deployment
+* gitlab-ci
 * curl - how to use exactly (document in [[bash]])
+* sudo
+* Missing semester - parts on shell, Scripting, VIM, Linux, Command line
 * ssh
 * LODs for [[tableau]] - read this: https://www.flerlagetwins.com/2020/02/lod-uses.html
 * microservices - what they actually are
@@ -28,6 +30,8 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
     * https://www.docker.com/blog/containerized-python-development-part-1/ 
 * rds
 * Flask (allegedly flask + docker = 80% of what one needs for a typical deployment)
+* how to troubleshoot Flask locally
+* Roles in Snowflake - how do they work
 * AWS Elastic Kubernetes Service
 * postgresql
 * stream kinesis
@@ -35,10 +39,11 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 * tunnel (?) - in the ssh / linux context
 * brew
 * vim
-* sudo
+* python decorators (how do they work?)
 * bokeh
 * [[kibana]]
 * Reread this pandas advice just in case: https://github.com/chiphuyen/just-pandas-things/blob/master/just-pandas-things.ipynb
+* aws-okta as a command
 * how people use aws in practice
 * Maybe: https://aws.amazon.com/getting-started/
 * Move pandas here
