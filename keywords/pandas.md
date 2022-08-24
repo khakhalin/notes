@@ -16,14 +16,14 @@ See also: [[numpy]], [[py_dates]], [[sklearn]]
 
 # Addressing
 
-#### Columns
+### Columns
 * Get column names: `df.columns`
 * Rename  only some columns: `df = df.rename({'a': 'X', 'b': 'Y'}, axis=1)`
 * Rename all columns, just overwrite `.columns` with a different vector
     * Or, if chaining, do this: `.set_axis(['X','Y'], axis=1, inplace=False)`
 * Delete some columns: `df = df.drop(['a','b'], axis=1)` or `df.drop(columns=['a'])`.
 
-#### Indexing
+### Indexing
 * Select columns by label: `df.x` or `df['x']`. Returns a series. To cast into a numpy object, add `.values` at the end (just like that, without parentheses). In most cases, dot-notation and parentheses-notation are equivalent, but there are some special cases when only parenthesis-notation works:
     * If your column name is a reserved word, like `count`, `first` or `last`. If you have a column named "first", `d['first']` would work well, but `d.first` won't
     * If column name contains a space (only `df.['my dog']` would work)
@@ -47,7 +47,7 @@ To iterate through rows:
 Footnotes:
 * https://www.dataschool.io/pandas-dot-notation-vs-brackets/
 
-#### Conditionals and filtering
+### Conditionals and filtering
 For **conditional data retrieval** we have a choice between: 
 * **logical indexing** `df.loc[d.x>0]` Can take list comprehensions as an argument (instead of a series); can be written to; but slower, and harder to read.
 * Another form of logical indexing: `df.x.eq(0)` (or things like `ne`, `le` etc.)
@@ -70,7 +70,7 @@ Conditional indexing supports functions, as long as they take and return Pandas 
 
 ⚠️ There's a strange pitfall associated with conditional data retrieval that I doesn't understand for now. `query` seems to always create a view of a dataframe, which may look like a new dataframe with fewer rows, but that actualy acts as a copy, and not as a deepcopy. As a result, if you save the results in a "new" dataframe `df2 = df.query('x>0')`, and then change values in  `df2` in any way, it may case a warning "A value is trying to be set on a copy of a slice from a DataFrame". In this case df2 gets updated, and df seems still intact (unchanged), but there's this warning, and I'm not sure why. (Is it because they had to replace a view with a copy when you ran a command? So they want us to be more deliberate here?). Replacing a simple `query` with `df.query(...).copy()` turns a view into a legit new dataframe, and thus eliminates a warning.
 
-#### Chained Assignment problem
+### Chained Assignment problem
 "Chained assignment" is a name for a problem that you get when writing to a section of a dataframe, when selecting by both column and row. In essence, if you manage to selecte both of them at once, you're good. But if you do first one, then another, then you get a view of a view, and you can read, but not write. The situationis complicated by the fact that in some cases even chained assignment may actually work (with a warning), but for a different dataframe the same code may crash.
 
 * `df.loc[1,'x']` - Read and write. Reference both by column and row by index.
@@ -90,16 +90,16 @@ Useful methods:
 * `df.col.value_counts()` - outputs value-counts for a categorical variable.
 * `df.describe(include='all')` - outputs a derivative dataframe with min-max-mean-std-count etc. summary. Without this `include='all'` clause doesn't include categorical variables, but only numerical ones.
 
-# Data transformations
+# Data types
 
-**Numbers and logic**
+### Numbers and Boolean
 * Cast to type: `.astype(int)`
 * Vectorized not: `~` operator. For example, `~np.array([True,False])` is "F, T".
 * Replace NaNs: `.fillna(0)` replaces all NaNs with zeroes. Can be run on a dataframe, or a series.
 * Replace something else: use a numpy function: `.replace(old, new)`.
 * Basic math with a series returns a series, so one can do `(df.a + 10).values` etc.
 
-**Strings**
+### Strings
 * For basic string operations, like cut first chars: `df['x'].str[1:]`
 * Other operations, all follow a paradigm of `df['x'].str.lower()`. They only work on a series, not on a dataframe. It also means that `df.x` won't work in this case, as it doesn't return a series. 
 * To create a new column by combining other columns, use a normal `+` notation for strings, like `d['a'] = d['b'] + d['c']`. f-strings don't seem to work here though.
@@ -108,21 +108,31 @@ Useful methods:
 * To remove leading spaces: `strip()`
 * There's a support of regular expressions (see [[regex]]) in `str`, such as `extract` (extracting part of a string that matches the pattern), `findall` (only leaving entries that match the pattern).
 
-**Dates and times**
-(See [[py_dates]] for alternatives.)
-* Documentation (a bit wordy): https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html
-* Most useful methods are called on a datastamp series using a prefix (similar to how it works for strings): for example `df.x.dt.dayofyear` (note the absence of brackets; it's really like that). Useful functions:
-    * `year`, `hour`, `day`, and other obvious words, that turn a a datastamp into an integer. Note that these don't have parentheses. From the same list: `weekofyear`, `dayofweek` (zero-indexed starting Monday)
-    * `date()` and `time()` return a new timestamp, not a number, and so have brackets!);
-    * To round: `dt.round('D')` for rounding to a day; similarly `floor` is for rounding down, and `ceil` for rounding up. Aliases for frequencies here: https://pandas.pydata.org/docs/user_guide/timeseries.html#timeseries-offset-aliases
-    * To test if a date is special:`is_month_end`
-    * To produce a nice string: `strftime('%w-%a')`, where the codes are described here: https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior
-* To turn strings to stamps: `df.x = pd.to_datetime(df.x)` - it's surprisingly flexible, and in most cases just works magically.
-* **Timedelta** is a separate class. It can be produced by subtraction of two stamps, and it can be added to a stamp. It also supports its own set of methods, such as `dt.days` (to express this difference as a number of days)	. Note the plural, and the absence of parentheses.
-    * Number of days from the smallest date: `(df.Date - df.Date.min()).dt.days`
-* **DateOffset** is another curious class that I don't quite understand, but it is necessary in these cases:
-    * To create a series of stamps: `pd.date_range(start, end, freq=pd.offsets.MonthBegin(1))`
-    * To round to the first day of this month:`df.date.dt.floor('d') + pd.offsets.MonthEnd(n=0)-pd.offsets.MonthBegin(n=1)`. This is more complicated than just rounding to a month, as months are not a real unit (they have variable size), which somehow makes this context-sensitive construction necessary.
+### Dates and times
+
+Documentation (a bit wordy): https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html
+
+The main data type for dates is a **Timestamp**, and it directly inherits to the `datetime.datetime` types (described in [[py_dates]]). Pandas however provides a much neater interface for manipulating these methods. It means that if you create a pandas-timestamp and a datatime-datetime for the same moment, they will be equal to each other, and `isinstance(dt, datetime.datetime)` will be true for both of them, even though `type()` will return different names, and formally types won't be equal to each other. A standard case of class inheritance.
+
+The most useful methods are called on series of Timestamps using a prefix (similar to how it works for strings): for example `df.x.dt.dayofyear`. For example:
+* `year`, `hour`, `day`, and other obvious words, that turn a a datastamp into an integer. Also: `dayofyear`, `weekofyear`, `dayofweek` (zero-indexed starting Monday). Note the absence of parentheses; it's really like that; it's a property, but not a method, apparently! (🔥 why?)
+* `date()` and `time()` return a new series of either **Dates** or **Times** that are not quite Timestamps, but kinda related, and only partially functional datatypes. Most importantly, note that a Date is not just a rounded Datetime, and it does not inherit to a Timestamp, which may cause problems if one if substituted for the other.
+* `dt.round('D')` - rounding to a day; similarly `floor` is for rounding down, and `ceil` for rounding up. Aliases for frequencies can be found here: https://pandas.pydata.org/docs/user_guide/timeseries.html#timeseries-offset-aliases
+* To produce a nice string: `strftime('%w-%a')`; the format codes are described here: https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior
+* To parse strings into stamps (an opposite to formatted output): `df.x = pd.to_datetime(df.x)` - it's surprisingly smart, and in most cases just magically works.
+* To test if a date is special:`is_month_end`
+* To generate a range of dates: `pd.date_range(start, end, frequency)` (for more parameters, see [manual](https://pandas.pydata.org/docs/reference/api/pandas.date_range.html)). Frequency may be either a simple code (like the default of `d`), or a fancy complicated offset (see below), which is needed for example to generate the 5th day of each month. Despite the name, generates proper full-blooded timestamps, and not just scrawny dates.
+
+**Timedelta** is a separate class. It can be produced by subtraction of two stamps, and it can be added to a stamp. It also supports its own set of methods, such as `dt.days` (to express this difference as a number of days)	. Note the plural, and the absence of parentheses.
+* Number of days from the smallest date: `(df.Date - df.Date.min()).dt.days`
+
+**DateOffset** is another curious class that I don't quite understand, but it is necessary in these cases:
+* To create a series of stamps: `pd.date_range(start, end, freq=pd.offsets.MonthBegin(1))`
+* To round to the first day of every month:`df.date.dt.floor('d') + pd.offsets.MonthEnd(n=0)-pd.offsets.MonthBegin(n=1)`. This is more complicated than just rounding to a month, as months are not a real unit (they have variable size), which somehow makes this fancy context-sensitive construction necessary.
+
+_A note on future deprecation_: apparently, the only part that will be deprecated is the `pd.datetime` class - one needs to really import `datetime.datetime` (see [[py_dates]]). All other interfaces, like `pd.to_datetime` for example will remain intact. (Refs: [1](https://gitlab.tudelft.nl/rhenning/ANTS-model/-/issues/28), [2](https://stackoverflow.com/questions/60856866/why-was-datetime-removed-from-pandas-1-0#:~:text=%22FutureWarning%3A%20The%20pandas.,Import%20from%20datetime%20module%20instead.%22))
+
+# Dataframe transformations
 
 **Applying  arbitrary functions to every element of a column**
 Several options here:

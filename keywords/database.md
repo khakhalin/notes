@@ -1,13 +1,17 @@
 # Notes on databases
 
-#tools #bib #db
-
 Parents: [[01_Tools]], [[system_design]]
+
+#tools #bib #db
 
 See also:
 * [[data_wh]] - Data Warehouse
 * [[nosql]] - an alternative to tables
 * [[dictionary]] - many names are still sitting there
+
+Subtopics:
+* [[sql]]
+* [[mongo]]
 
 # Principles and guarantees
 

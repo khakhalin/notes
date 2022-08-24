@@ -15,13 +15,18 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 
 # Queue
 
+* python - how to pass command line parameters?
 * kubernetes deployment
+* proper way of setting up gitlab for pushing from git
 * gitlab-ci
 * curl - how to use exactly (document in [[bash]])
 * sudo
 * Missing semester - parts on shell, Scripting, VIM, Linux, Command line
 * ssh
-* LODs for [[tableau]] - read this: https://www.flerlagetwins.com/2020/02/lod-uses.html
+* move pandas stuff here (from the notes)
+* move git stuff here
+* move sql stuff here
+* LODs for [[tableau]] - read and document this: https://www.flerlagetwins.com/2020/02/lod-uses.html
 * microservices - what they actually are
     * Intro by James Quigley: https://www.youtube.com/watch?v=1xo-0gCVhTU
 * docker - what and how
@@ -41,13 +46,12 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 * vim
 * python decorators (how do they work?)
 * bokeh
+* json and swagger
 * [[kibana]]
 * Reread this pandas advice just in case: https://github.com/chiphuyen/just-pandas-things/blob/master/just-pandas-things.ipynb
 * aws-okta as a command
 * how people use aws in practice
 * Maybe: https://aws.amazon.com/getting-started/
-* Move pandas here
-* Move git here
 * try XGBoost on real data
 * LightGBM - new better replacement for XGBoost (as de-facto practical SOTA)
 * Missing semester - Data Wrangling, GIT, Debugging, Meta, Security, last 2 lectures
@@ -56,8 +60,7 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 * Check out this `categorical` type in Pandas: would it help to save space? ([ref](https://pandas.pydata.org/docs/user_guide/categorical.html))
 * Document some non-trivial points for [[shapely]]
 * start documenting [[tableau]]. Describe INCLUDE and FIXED in particular
-* geopandas - create some useful patterns
-* swagger
+* geopandas - go and collect some useful patterns
 * python environments
 * conda vs pip - see [[environments]]
     * wheel (?)
@@ -84,6 +87,8 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
     * [[arima]]
         * https://laptrinhx.com/arima-model-from-scratch-in-python-3262984784/
     * prophet
+* How to do code reviews: https://google.github.io/eng-practices/review/reviewer/
+* document lambda notation in [[python]], with some common use cases
 * Isn't everything essentially map-reduce? What is the crux? What are the alternatives? https://en.wikipedia.org/wiki/MapReduce
 * kibana
 * databricks
@@ -154,9 +159,6 @@ https://arxiv.org/abs/1803.10122
     * Multithreading
     * Subinterpreters
 * Neural turning machines: https://distill.pub/2016/augmented-rnns/
-* How to do code reviews: https://google.github.io/eng-practices/review/reviewer/
-* document lambda calculus in [[python]]
-* MongoDB
 * Differences between HTTP2 and 1
 * Pub-sub architectures
 * Microservices
@@ -297,7 +299,6 @@ https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-networ
 * Density-based clustering, aka HDBSCAN: https://towardsdatascience.com/a-gentle-introduction-to-hdbscan-and-density-based-clustering-5fd79329c1e8 (the idea is to project the points in a low-D space, but try to preserve local densities of points)
 * How to do bayesian 01 guesser? How does process 001 if current history is 0? How to combine n-grams of diff length? Derive, and also google / check on the web.
 * When to use BatchNormalization() in a network? Why don't we use it always? Or should we use it always? What's the logic here?
-* MongoDB
 * [[julia]] - a 2020 review paper about the language
 * manual bagging and bumping on XOR
 * Manual bagging for a bad diagonal case (flag with quadrants)
@@ -386,7 +387,6 @@ https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-networ
 * How does garbage collection work in Python? What's the logic, and how fast is it? ([link](https://gist.github.com/osavsunenko-ring/205fa72c65d6343eaede0dc43f1c79d4))
 * collections - or whatever is this common module ppl often use with prepackaged datastructures
 * refresh "read from a console" and read from file in Python
-* Command line intro: https://learnpythonthehardway.org/book/appendixa.html
 * Lint (pylint) - what is it and why? It seems that it can catch errors, type mismatches etc.
 * Keras checkpoints
 * Python collections: deque, Counter, defaultdict etc.

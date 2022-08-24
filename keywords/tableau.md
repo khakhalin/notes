@@ -10,12 +10,15 @@ Cool interactive visual tool for interactive dashboard creation. Several version
 
 # Creating a visualization
 
-You connect it to data (json, txt, excel, server-side ?? etc.) You kinda add tables (in long form), and you can join them by id. (It even tries to guess how to join them). Uses some funny terminology:
-* **dimensions** are things one can grouping by, and filter by (qualitative)
-* **measures**  are numerical values to plot.
-It also tries to guess the type of each data column, including **dates**, **geography** (city names, country names - are all auto-recognized as geography), **strings**, **numbers**.  Measures can also be treated as continuous or discrete (which be changed at the dashboard construction stage below, as is bound to the visualization, not to the data itself). For dates, we can also switch between treating them as continuous (good for linear plots) or discrete values (good for showing similar plots by year, for example). Essentially it's as if we had `YEAR(mydate)` or `factor(YEAR(mydate))` derivative functions.
+First, you connect it to data; typically, by creating a DB connection (but can also use static json, excel, etc.) Add tables in long form, join them by id (except that Tableau manuals pretend that it's not a join, but something a bit more flexible, but for now I don't feel the difference). It even tries to guess how to join them. 
 
-The interface is very similar to Excel pivot tables, but for visuals, where columns in the dataset can control: **columns** (essentially, X axis), **rows** (Y axis), aggregation level (what does a single point represent - this goes onto the **Marks** panel), filters to run (**Filters** panel), colors of the chart, marker sizes, column widths, etc. (different sub-parts of the "Marks" panel). For each of these "inputs" you drag-n-drop variables from a list on the left onto a respective panel / control-element for a visual. You can also apply aggregation functions, and so instead of setting `y=sales`, look at `SUM(sales)`, `MEAN(sales)`, `COUNTD` (for "count-distrinct") etc. For "columns" (X axis) it automatically does really nice hierarchical visuals (with dates, for example, where you can have it split first by year, and then by month etc.) The visualizations are available from the "Show me" button in the top right corner, but can also be changed later on (in the "Marks" panel).
+For the fields, T uses some funny terminology:
+* **dimensions** are things one can be grouping by, and filter by (qualitative, that I think of as "factors")
+* **measures**  are numerical values to plot.
+
+T also tries to guess the type of each data column, including **dates**, **geography** (city names, country names - are all auto-recognized as geography), **strings**, **numbers**.  Measures can also be treated as continuous or discrete (which be changed at the dashboard construction stage, as is bound to the visualization, not to the data itself). For dates, we can also switch between treating them as continuous (good for linear plots) or discrete values (good for showing similar plots by year, for example). Essentially it's as if we had `YEAR(mydate)` or `factor(YEAR(mydate))` derivative functions. With dates, it is also possible to create hierarchies (see below), but I don't like them.
+
+The interface is similar to Excel pivot tables, but for visuals, where columns in the dataset can control: **columns** (essentially, X axis), **rows** (Y axis), aggregation level (what does a single point represent - this goes onto the **Marks** panel), filters to run (**Filters** panel), colors of the chart, marker sizes, column widths, etc. (different sub-parts of the "Marks" panel). For each of these "inputs" you drag-n-drop variables from a list on the left onto a respective panel / control-element for a visual. You can also apply aggregation functions, and so instead of setting `y=sales`, look at `SUM(sales)`, `MEAN(sales)`, `COUNTD` (for "count-distrinct") etc. For "columns" (X axis) it automatically does really nice hierarchical visuals (with dates, for example, where you can have it split first by year, and then by month etc.) The visualizations are available from the "Show me" button in the top right corner, but can also be changed later on (in the "Marks" panel).
 
 Within the visualization, items can be sorted (sorting buttons in the toolbar), in different ways (by value, alphabetically etc.) We can drop more than one category into the "Columns" line on top, and get a hierarchical, grouped view (bars put in groups for a bar chart, or a "facet"-like view of several continuous charts). We can also sort of "bind" this grouping to the data, by dragging the subcategory on top of a category in the data field itself, and creating a **Hierarchy** (a shortcut for a bunch of variables, with their hierarchical relations baked-in). This "derivative variable" also allows doing drill-in in the visualization, with hierarchical filtering (that pretends to be the top category at first, but gives access to more granular categories if selected).
 
@@ -27,12 +30,6 @@ Finally, you get these individual visualizations called **Sheets**, and combine 
 
 And then on top of these automated "actions" (filter, highlight) we can also create custom actions on a dashboard, to create a dynamic interface.
 
-# Data storage and processing
-
-It has its own format of storing data, and an interface to create data cleaning and processing pipelines (ETL = Extract Transform Load)
-
-You can write your own code in Tableau version of [[javascript]].
-
 # Deployment
 
 ?
@@ -41,9 +38,15 @@ When sharing on the web, the description of a dashboard is stored as an html, wi
 
 # Level of Data Aggregation (LOD)
 
-...
+Some paradigmatic usages:
 
-## Finding latest used value for an id
+#### Calculate the average of daily maxima
+
+Instead of a simple basic `MAX([value])`, write: `AVG({INCLUDE DATE([time]): MAX([value])})`
+
+In practice, this processing is probably used together with some other grouping: perhaps by `id` (the way reporting is built), and some higher-order groups of id. Which means that `INCLUDE` command adds the date to `id`, and then runs `MAX` on this granules, then `AVG` is run on these values.
+
+#### Finding latest used value for an id
 
 In a normal world (like, in [[pandas]], for example), you would probably summarize the table, finding the last value of the target field after grouping by id and sorting by data, and then left-joined this summary table back on the full table by id. Tableau doesn't have normal joins though, but we can emulate this logic with LODs. 
 
@@ -56,8 +59,11 @@ In a normal world (like, in [[pandas]], for example), you would probably summari
     )
 }
 ```
+Code analysis: The inner part returns `None` for non-recent values, and target value (`name` in this case) for the most recent value. Just to be on a safe side, we also calculate the most recent value separately for each `id`, although if the data is orthogonal on `time/id` dimensions, this is technically not necessary. Then it calculates `max()` on them, and real values are `>` than `none`, so they win in this battle. And finally, we match these values to `id` (the part that feels most similar to to a join, conceptually).
 
-Explanation of the code: The inner part returns `None` for non-recent values, and target value (`name` in this case) for the most recent value. Just to be on a safe side, we also calculate the most recent value separately for each `id`, although if the data is orthogonal on `time/id` dimensions, this is technically not necessary. Then it calculates `max()` on them, and real values are `>` than `none`, so they win in this battle. And finally, we match these values to `id` (the part that feels most similar to to a join, conceptually).
+# Other
+
+Apparently, one can write their own code in Tableau version of [[javascript]], and it also has something like internal restricted [[python]], but I haven't tried either yet.
 
 # Refs
 
