@@ -85,7 +85,7 @@ Refs:
 # Misc tools
 
 * The missing semester of CS education: https://missing.csail.mit.edu/
-Lots of useful practical bits and pieces: the shell, debugging, metaprogramming and what not. Also has [lectures on youtube](https://www.youtube.com/playlist?list=PLyzOVJj3bHQuloKGG59rS43e29ro7I57J).
+Lots of useful practical bits and pieces: the shell, debugging, metaprogramming and what not. Also has [lectures on youtube](https://www.youtube.com/playlist?list=PLyzOVJj3bHQuloKGG59rS43e29ro7I57J). Quite counter-intuitively, youtube lectures seem to be way more systematic than the notes. So maybe do the youtube.
 
 Capture screen animation to a gif, client-side:
 * online tool: https://gifcap.dev/	

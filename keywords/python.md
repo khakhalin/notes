@@ -139,7 +139,6 @@ All of these advices are Python-specific:
 * Numbers: use a numerical prefix (n_cats, max_cats, min_cats, total_cats)
 * Transformations: to_dollars, to_uppercase
 
-
 * Import entire modules or packages, not classes or functions, to retain `module.class.method()` structure, and prevent name collisions.
 * Lines shouldn't be longer than 80 chars (Google style guide)
 * `.py` files are not scripts, so even executables	 should  be written inside a main function: `def main():`. The benefit of this construction is that this `.py` won't be auto-executed on import. And to make them callable script-like from the command line, add this inside:
@@ -185,6 +184,13 @@ Footnotes:
 (check out last answer, about intentionally including `__init__.py`)
 * https://docs.python.org/3/reference/import.html
 * https://github.com/chiphuyen/python-is-cool
+
+# Command line
+
+To make scripts that are runnable from the terminal, use `import sys` and then refer to `sys.argv`. It contains a list, with the leftmost (0th) element being the name of the program, and all consecutive elements, parameters (kinda as if the command line was split by space). And if you need something fancier (many different optional keys), and you don't want to parse them yourself, there's the `from argparse import ArgumentParser` module / object. It unpacks them for you, supports variable order, synonyms, auto-generates help messages and whatnot.
+
+Footnotes:
+* https://stackoverflow.com/questions/1009860/how-to-read-process-command-line-arguments
 
 # General Refs
 

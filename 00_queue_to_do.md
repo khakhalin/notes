@@ -15,13 +15,12 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 
 # Queue
 
-* python - how to pass command line parameters?
 * kubernetes deployment
 * proper way of setting up gitlab for pushing from git
 * gitlab-ci
 * curl - how to use exactly (document in [[bash]])
 * sudo
-* Missing semester - parts on shell, Scripting, VIM, Linux, Command line
+* Missing semester - parts on [[bash]] (shell), Scripting, VIM, Linux, Command line
 * ssh
 * move pandas stuff here (from the notes)
 * move git stuff here
