@@ -33,14 +33,14 @@ Why projecting to these ellipsoid-aligned axes **maximizes the variance along th
 
 # In Python
 
-Archetypical use of pca in Python. Input is a matrix, where every row is a value, and each column is a coordinate.
+Archetypical use of pca in [[python]] / [[numpy]]. Input is a matrix, where every row is a value, and each column is a coordinate.
 
 ```python
 import sklearn.decomposition
 pca = sklearn.decomposition.PCA(n_components=2)
 pca.fit(X)
 scores = pca.transform(X)
-loadings = pca.inverse_transform(np.eye(2))
+loadings = pca.inverse_transform(np.eye(2)) # This command is somehow really not obvious from the manual
 ```
 
 # Refs
