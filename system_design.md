@@ -1,14 +1,16 @@
 # System Design
 
-#tools #systems #bib #interview
+Parents: [[01_Tools]]
 
 See also:
 * [[database]] - databases and alternatives to them
 * [[microservice]]
-* [[fairness]] - an ethical aspect of system development
 * [[metal]] - everything hardware
 * [[system_interview]] - collections of tips regarding system interviews
-* [[01_Tools]] - ML production tools may be there
+* [[fairness]] - an ethical aspect of system development
+
+#tools #systems #bib
+
 
 # Scaling
 

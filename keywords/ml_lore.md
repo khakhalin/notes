@@ -1,9 +1,10 @@
 # ML lore
 
-#lifehack
-
 Parent: [[06_DL]], [[01_Tools]]
-Related: [[Breck2017testing]], [[tensorflow]], [[hyperparameters]], [[Huyen2019book]]
+Related: [[ml_project_management]], [[Breck2017testing]], [[tensorflow]], [[hyperparameters]], [[Huyen2019book]]
+
+#ml #devops
+
 
 **Deep learning maxims**: ([ref](https://pcc.cs.byu.edu/2017/10/02/practical-advice-for-building-deep-neural-networks/)):
 * Use 80/10/10 split in training / validation / testing tests ([ref](https://medium.com/@staceysvetlichnaya/hyperparameter-search-with-iterative-sweeps-3799df1a4d45))

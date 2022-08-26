@@ -1,10 +1,11 @@
 # Environments
 
-#tools
-
 Parent: [[python]]
 
-Two key ways to install stuff
+#tools
+
+
+There are two key ways to install packages in Python:
 * **conda** installs packages written in any language. Makes sure there are no conflicts using a "Satisfiability Solver".
 * **pip** installs python packages. Installs in an "overwrite" mode: recursively installs all downstream dependencies, but doesn't look for overall consistency.
 
@@ -18,13 +19,15 @@ When different python packages (like Tensorflow vs Pytorch) have conflicting req
 **Jupyter** doesn't seem to be aware of conda environments by default, although apparently it is possible to hack it. Because of that, for now, I'll probably forgo environments. Even though not being able to easily make backup version of a conda state is a pain. _Maybe I can still use environments like that, tho? Like, make a copy of base, them mofidify base, then if it doesn't work, copy from the backup version back to base?_
 
 ## Conda
-`
+
 * List all packages: `conda list`
 * Find all available versions of a certain package: `conda search NAME` (same for core python)
 * Figure out which one is installed: `conda list NAME`
 * Force update to a certain version `conda install NAME=VERSION` (like 2.2.0 or smth)
 
 Never do `update all`, or it can ruin your TF installation. Only upgrade point-by-point, and give up easily if any risky conflicts emerge. It's a house of cards.
+
+Activate a certain environment: `source activate env_name`. "activate" is actually a tiny bash script sitting in the same folder as python and conda, that runs `conda.sh` properly.
 
 ## PIP
 

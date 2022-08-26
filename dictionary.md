@@ -166,8 +166,6 @@ See also:
 
 **RCT** (stats): Randomized Controlled Trial(s) - basically, what most scientists mean by an "experiment". Diff treatment groups, assigned randomly. Gold standard (everything else is epistemologically inferior)
 
-**Redshift** (dev): MPP postgreSQL-based data warehouse from Amazon (AWS). Competes with Google BigQuery and Snowflake. Bigger but also older, and not growing anymore. Snowflake is apparently the youngest, but growing the fastest.
-
 **REST** (dev): Representational State Transfer. Predefined set of stateless operations (stateless means that all session info is tracked by the client, not the server). HTTP is the archetypical RESTful system.
 
 **RSS** (stats): Residual Sum of Squares. See [[l2]], [[02_Regression]], [[bias-variance]]

@@ -14,7 +14,7 @@ The hierarchy of Mongo data (it's a tree, with several elements at each level):
 * **Document** - this is roughly equivalent to a row in a large [[sql]] table. It probably corresponds to one instance / object, of whatever this database is supposed to track / represent
 * **Key-value pairs** - these serve as columns in an [[sql]] database, except that every document may have different keys, so it's really not an orthogonal table, but a collection of somewhat similar objects. There's also no expectation that a shared key implies the same data type.
 
-The only required key (?) is `_id` - you either provide it, or Mongo invites it if you don't. Unique for each document.
+The only required key (?) is `_id` - you either provide it, or Mongo invents it for you, if you don't. Unique for each document.
 
 The most typical way to repsent documents is using [[json]].
 
@@ -29,13 +29,10 @@ To enable fast sorting, lookup, and range-like retrieval within a collection, on
 Queries in Mongo don't look like normal expressions we all like, but rather as ugly tiny pieces of JSON (also reminiscent of python dicts), in a form of `find(expression)`. For example:
 
 * Equality: `{'location':'osaka'}`
-* Less then: `{'date':{'$lt':'2002-02-02'}}`. 
-    * Similarly, `gt` (greater), `lte` (less or eq), `gte`
+* Less then: `{'date':{'$lt':'2002-02-02'}}`. Similarly, `gt` (greater), `lte` (less or eq), `gte`
 * Not equals: `{'location':{'$ne':'berlin'}}`
-* In set: `{'location':{'$in':['osaka', 'kyoto']}}`. 
-    * Similarly, `$nin` for "not in set"
-* AND: `{'$and': [EXPR1, EXPR2]}` (where `EXPR` shoud both have their own `{}`)
-    * Similarly, `$or`, `$not`, `$nor`
+* In set: `{'location':{'$in':['osaka', 'kyoto']}}`. Similarly, `$nin` for "not in set"
+* AND: `{'$and': [EXPR1, EXPR2]}` (where `EXPR` shoud both have their own `{}`). Similarly, `$or`, `$not`, `$nor`
 
 # Pymongo
 

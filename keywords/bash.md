@@ -73,7 +73,8 @@ See also: [[git]], [[docker]], [[crontab]]
 * `echo "Hi!"` - output something (see below for outputting variables)
 * `alias new_command_name='custom sequence of commands'` - creates an alias that becomes a new command
 * `which command_name` - tries to find the command in the PATH (see below), but instead of implementing it, returns the full path to where it was found
-* `sh file_name` - execute `file_name` file as a script
+* `sh file_name` - execute this file's contents as a script, in a _fork_ shell. It means that all variables that were set by this time will be inherited, but if `file_name` creates new environment variables, they will be dropped once `sh` execution is over. For example, if you change the working directory inside the `file_name` script, it won't change the working directory in the shell from which `sh` was called.
+* `source file_name` - execute this file's contents as a script in the current shell. Apparently `. file_name` is a synonym.
 * `>` - redirects command output
 * `>>` - redirects command output, but making it append output
 * `|` - chains commands, such as output of the left command becomes input for the right one.
@@ -82,10 +83,13 @@ See also: [[git]], [[docker]], [[crontab]]
 
 **Variables**
 * `var="whatever"` - sets a variable
-* `echo $var` - outputs the contents of a variable
-    * For example, `echo $PATH` shows the contents of the `PATH`, which is an environmental variable that lists all paths where the shell will look for commands. Separated by `:` apparently (weird)
+* `echo $var` - outputs the contents of a variable. For example, `echo $PATH` shows the contents of `PATH`.
 * `$var` - instead of outputting the content, _executes_ it, as if somebody typed it in the command line and pressed Enter. This may actually generalize with the previous `echo` example: when someone types a dollar sign-variable, before the next step of processing, this construction is kinda replaced with the contents of the variable.
 * `$(command)` - executes command, then tries to interpret the output of this command as a command (as if it was typed in the command line directly). For example: `for file in $(ls)` will become a loop over files, as if one typed all the file names after `in`.
+* Because `$smth` just replaces it with the contents (or output) of `smth`, concatecating strings just means writing them one after another, like `$var1$var2`.
+
+Environmental variables:
+* `PATH` lists all paths where the shell will look for commands. Separated by `:` apparently (weird).
 
 **Control structures**
 * `if [[ condition ]]; then ... fi` - here `...` is actually a multi-line, as there's no clear separator after `then`. `fi` serves as an "end" command for this block. 

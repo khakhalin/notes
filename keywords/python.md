@@ -6,7 +6,7 @@ Path: [[01_Tools]]
 
 
 Subtopics and related:
-* [[oop]] - Pythonic implementation of OOP is all given there
+* [[oop]] - OOP, but obviously entirely in Python for now
 * Common libraries: [[numpy]], [[pandas]], [[sklearn]], [[matplotlib]], [[tensorflow]], [[py_dates]], [[regex]], [[flask]]
 * Core tools: [[environments]], [[jupyter]]
 * [[unit_test]] - how to write unit tests correctly (in Python) 

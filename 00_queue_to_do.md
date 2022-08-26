@@ -9,23 +9,28 @@ Other lists to look through:
 * [[job_search]] - lots of "interview questions" (of questionable quality) and lots of opinions and links on what to learn
 
 **The missing semester of CS education**
-https://missing.csail.mit.edu/ ⚠️
+https://missing.csail.mit.edu/ 🔥 
 lots of useful practical bits and pieces: shell, debugging, data wrangling, metaprogramming and what not. Also has [lectures on youtube](https://www.youtube.com/watch?v=Z56Jmr9Z34Q&list=PLyzOVJj3bHQuloKGG59rS43e29ro7I57J&index=2&t=0s).
 (the link is also saved in [[01_Tools]], so delete it from here once done)
 
 # Queue
 
-* kubernetes deployment
-* proper way of setting up gitlab for pushing from git
+* proper way of setting up gitlab for pushing to it from git (just document it)
 * gitlab-ci
 * curl - how to use exactly (document in [[bash]])
 * sudo
 * Missing semester - parts on [[bash]] (shell), Scripting, VIM, Linux, Command line
 * ssh
+* jump server
+* tunnel (?) - in the ssh / linux context
+* brew
+* vim
+* json and swagger
 * move pandas stuff here (from the notes)
 * move git stuff here
 * move sql stuff here
 * LODs for [[tableau]] - read and document this: https://www.flerlagetwins.com/2020/02/lod-uses.html
+* what is [[devops]] actually, canonically?
 * microservices - what they actually are
     * Intro by James Quigley: https://www.youtube.com/watch?v=1xo-0gCVhTU
 * docker - what and how
@@ -33,20 +38,15 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
     * [[docker]] and [[kubernetes]]: https://www.youtube.com/watch?v=u8dW8DrcSmo
     * https://www.docker.com/blog/containerized-python-development-part-1/ 
 * sql things like `lead(COL, 1, default_value) over (partition by COL2 order by COL3) as NAME`
-* rds (postgres)? what's the difference vs other databases?
+* rds (postgres) - what makes it particularly special, compared to others?
 * Flask (allegedly flask + docker = 80% of what one needs for a typical deployment)
 * how to troubleshoot Flask locally
 * Roles in Snowflake - how do they work
+* Kubernetes Cookbook (from O'Reilly) - maybe find it and leaf through it?
 * AWS Elastic Kubernetes Service
-* postgresql
 * stream kinesis
-* jump server
-* tunnel (?) - in the ssh / linux context
-* brew
-* vim
 * python decorators (how do they work?)
 * bokeh
-* json and swagger
 * [[kibana]]
 * spark jobs? - for streaming data
 * data life (or delta life?) tables (?) in databricks (?) - for streaming data
@@ -83,6 +83,12 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 * Python decorators (things like `def decorator`, `@wraps`etc)
     * Some reading: https://www.geeksforgeeks.org/python-functools-wraps-function/
     * Nice example: https://github.com/koaning/memo/blob/main/memo/_base.py
+* How does garbage collection work in Python? What's the logic, and how fast is it? ([link](https://gist.github.com/osavsunenko-ring/205fa72c65d6343eaede0dc43f1c79d4))
+* collections - or whatever is this common module ppl often use with prepackaged datastructures
+* Lint (pylint) - what is it and why? It seems that it can catch errors, type mismatches etc.
+* Keras checkpoints
+* Python collections: deque, Counter, defaultdict etc.
+* Python closures, why they are a thing, what's dangerous about them, and how to use them
 * Read something on 1D brownian walks maybe? Or is it too mathy?
 * https://en.wikipedia.org/wiki/Partial_correlation
 * hierarchical best-fit models 
@@ -128,7 +134,6 @@ https://arxiv.org/abs/1803.10122
 * What methods are typically included in the idea of "knowing time series analysis"? Do I know them? If not, disassemble and put some terms into this stack.
 * numpy broadcasting - what are the rules again? Does it not broadcast from a 2D to 1D array?
 * model view controller - most important design pattern for web apps
-* PostgreSQL - how is it different from other SQLs?
 * How to backprop through the maxpooling layer? Document it in [[pooling]]
 * How to perform unsupervised clustering using DL networks?
 * [[Redis]]
@@ -384,16 +389,6 @@ https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-networ
 * https://en.wikipedia.org/wiki/S-expression
 * Go through [[ml_questions]], see what is missing
 
-# Python tools
-
-* How does garbage collection work in Python? What's the logic, and how fast is it? ([link](https://gist.github.com/osavsunenko-ring/205fa72c65d6343eaede0dc43f1c79d4))
-* collections - or whatever is this common module ppl often use with prepackaged datastructures
-* refresh "read from a console" and read from file in Python
-* Lint (pylint) - what is it and why? It seems that it can catch errors, type mismatches etc.
-* Keras checkpoints
-* Python collections: deque, Counter, defaultdict etc.
-* Python closures, why they are a thing, what's dangerous about them, and how to use them
-
 # Systems
 
 See also: [[system_design]]
@@ -404,21 +399,10 @@ Go through 2-3 youtube lectures in the queue that describe some of the existing 
 * Avro
 * Parquet (data storage format)
 	* data warehouse technologies
-* difference between columnar and row-oriented data stores
-* star schema
+* * star schema
 * difference between dimension and fact tables
 * OLAP ([wiki](https://en.wikipedia.org/wiki/Online_analytical_processing))
 
-* https://www.hiredintech.com/app - a whole intro mini-course on systems design?
-* https://www.byte-by-byte.com/3-ways-to-ace-your-system-design-interview/
-* Go through the list of terms and write down a definition for each of them
-* https://github.com/donnemartin/system-design-primer
-    * https://github.com/donnemartin/system-design-primer#index-of-system-design-topics
-* https://github.com/checkcheckzz/system-design-interview
-
-Every solution depends on parameters of scale: amount of data, n users, requests per seconds, expected response time, read/write ratio.
-
-List from Google
 * Processes, threads, concurrency
 * locks, mutexes, semaphores, monitors
 * deadlocks, livelocks, and how to avoid them
@@ -428,33 +412,36 @@ List from Google
 * multicore concurrency
 
 **Data solutions**
-* sqlalchemy
+* AWS - also has a badge on Linkedin
 * airflow,
 * Docker
-* What does it mean to "learn NoSQL"? What technical, practical skills are meant here?
-    * NoSQL has a badge on LinkedIn - is it passiable?
-* AWS - also has a badge on Linkedin
+* Solr, ElasticSearch
+* Spark
 * Kotlin - also has a badge
 * ETL (Extract, Transform and Load) pipelines
 * Hadoop
+* sqlalchemy
 * Hive
-* DevOps
 * Orchestration
 * RDF
 * SPARQL
 * Triple (RDF) and graph stores
-* MongeDB
 * Couchbase
 * Memcashed
 * Redis cluster
 * Zookeeper
 * Kafka
 * NGINX, HAProxy - balancers
-* Solr, ElasticSearch
 * Blobstore
-* Spark
-* Flink
-* postgreSQL
+* DevOps - would it make a better name for a root haha?
+* nosql badge on Linkedin
+
+* https://www.hiredintech.com/app - a whole intro mini-course on systems design?
+* https://www.byte-by-byte.com/3-ways-to-ace-your-system-design-interview/
+* Go through the list of terms and write down a definition for each of them
+* https://github.com/donnemartin/system-design-primer
+    * https://github.com/donnemartin/system-design-primer#index-of-system-design-topics
+* https://github.com/checkcheckzz/system-design-interview
 
 **Concepts**
 * FAIR data principles and support FAIRification of legacy data
