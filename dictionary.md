@@ -182,7 +182,7 @@ See also:
 
 **SMOTE** (stats): Synthetic Minority Oversampling Technique. A simple approach to oversampling (supplementing) under-represented categories by creating fake points (in pD of variables describing each case), that are linearly shifted from under-represented points to one of its closest neighbors. [wiki](https://en.wikipedia.org/wiki/Oversampling_and_undersampling_in_data_analysis) 
 
-**Snowflake** (dev): cloud SQL data warehouse; mostly interesting as a contender for older / larger players. SQL, Java Script in queries; possibility of in-database ML. Emphasis on virtualization for deep cloning, allowing virtual queries on big data. Refs: [1](https://towardsdatascience.com/why-you-need-to-know-snowflake-as-a-data-scientist-d4e5a87c2f3d), [2](https://towardsdatascience.com/machine-learning-in-snowflake-fdcff3bdc1a7).
+**Snowflake** (dev): cloud SQL data warehouse; as of 2022 the main contender for older / larger players (AWS Reshift and Google BigQuery). Supports SQL, Java Script in queries; possibility of in-database ML. Emphasis on virtualization for deep cloning, allowing virtual queries on big data. Refs: [1](https://towardsdatascience.com/why-you-need-to-know-snowflake-as-a-data-scientist-d4e5a87c2f3d), [2](https://towardsdatascience.com/machine-learning-in-snowflake-fdcff3bdc1a7).
 
 **Spark** (dev): cluster computing framework (engine to work with big data). Written in Scala; donated to Apache. Runs on the JVM, nterfaces with programming languages, has its own SQL, graph processing, and what not.
 

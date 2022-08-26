@@ -32,7 +32,8 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
     * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
     * [[docker]] and [[kubernetes]]: https://www.youtube.com/watch?v=u8dW8DrcSmo
     * https://www.docker.com/blog/containerized-python-development-part-1/ 
-* rds
+* sql things like `lead(COL, 1, default_value) over (partition by COL2 order by COL3) as NAME`
+* rds (postgres)? what's the difference vs other databases?
 * Flask (allegedly flask + docker = 80% of what one needs for a typical deployment)
 * how to troubleshoot Flask locally
 * Roles in Snowflake - how do they work
@@ -47,6 +48,8 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 * bokeh
 * json and swagger
 * [[kibana]]
+* spark jobs? - for streaming data
+* data life (or delta life?) tables (?) in databricks (?) - for streaming data
 * Reread this pandas advice just in case: https://github.com/chiphuyen/just-pandas-things/blob/master/just-pandas-things.ipynb
 * aws-okta as a command
 * how people use aws in practice

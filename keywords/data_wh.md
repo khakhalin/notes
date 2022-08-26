@@ -1,9 +1,10 @@
 # Data warehouse (aka Kimball vs Inmon)
 
-#tools #db
-
 Parents: [[01_Tools]], [[database]]
 Related: [[dictionary]], [[nosql]]
+
+#tools #db
+
 
 **Data Warehouse** is a data repository, to preserve records and make them available for quering and analysis. Includes a **ETL tool** (Extract Transform and Load), analysis and reporting capabilities. Often a relational DB in the core, but potentially other stuff (non-relational, files, etc.) Typically not raw data, but semi-processed towards certain **themes**, to add future analysis (raw data → staging area → conversion into usable structure → storage). **Non-volatile**: old data is not removed, and is not altered once it was added.
 
