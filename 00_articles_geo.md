@@ -6,6 +6,7 @@ See also: [[gis]], [[mobility]], [[urbanism]], [[maps]]
 
 ### Courses
 * Geospatial Data Science: https://github.com/mszell/geospatialdatascience
+* Look through these videos (about geopandas mostly): https://www.youtube.com/c/OpenGeoHubFoundation
 
 ### General queue
 * geodesic projections - move existing stuff, but also populate a to-read list

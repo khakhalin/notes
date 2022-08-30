@@ -64,3 +64,6 @@ FROM pg_stat_activity where query like '%target_keyword%' ORDER BY backend_start
 ```
 
 # Refs
+
+Postgres mainetnance cheatsheet (useful commands):
+https://gist.github.com/rgreenjr/3637525
