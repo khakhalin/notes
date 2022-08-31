@@ -100,8 +100,15 @@ Apparently SQL (especially larger systems, like **SQLServer**, or **Transact-SQL
 
 # Refs
 
+Intros
 * Main reference / tutorial: https://www.w3schools.com/sql/default.asp
 * Basic intro tutorial with some nice quizzes: https://sqlzoo.net/
 * Confetti also has a whole section on SQL: https://www.confetti.ai/curriculum
+* https://sqlbolt.com/
+
+Exercises and practice questions
+* https://datalemur.com/ - people seem to like it
+* https://www.stratascratch.com/ - also found via recommendations
 * PostgreSQL Exercises: https://pgexercises.com/
-* Some other site: https://www.stratascratch.com/
+* https://advancedsqlpuzzles.com/
+* https://www.hackerrank.com/
