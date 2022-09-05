@@ -2,6 +2,7 @@
 
 #maps #geo #gis
 
+Parents: [[gis]]
 See also: [[germany]], [[linguistics]]
 
 # World / Europe
@@ -24,11 +25,16 @@ Air quality map. Can zoom on individual cities. The higher the value of AQI - th
     * An even better isochrone map: https://apidocs.geoapify.com/playground/isoline
 * Traffic-related air pollution (interactive): https://www.berlin.de/umweltatlas/en/air/traffic-related-emissions-and-immissions/2018/maps/artikel.981259.en.php
 * Nose map (kinda old, from 2018, before Tegel was closed): https://interaktiv.morgenpost.de/laermkarte-berlin/
-* 
 
 Schools
 * Interactive map of schools: https://interaktiv.morgenpost.de/schul-finder-berlin/#/
 * Database of schools: https://www.gymnasium-berlin.net/
+
+All playgrounds of Berlin: 
+https://fbinter.stadt-berlin.de/fb/index.jsp?loginkey=zoomStart&center=389130,5821586&width=8590&height=7649&mapId=gris_oeffgruen@senstadt
+
+All trees of Berlin:
+
 
 # Hamburg
 

@@ -16,7 +16,7 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 # Queue
 
 * if you include `SET lock_timeout TO '300s'` to postgres, how to see in Python if it succeded or timeoutet? Is there a code it returns?
-* what is "vacuuming" on RDS?
+* https://postgis.net/
 * proper way of setting up gitlab for pushing to it from git (just document it)
 * gitlab-ci - describe what I know, but also find some text
 * curl - how to use exactly (document in [[bash]])

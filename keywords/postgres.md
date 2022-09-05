@@ -8,9 +8,52 @@ Related: snowflake
 
 MPP postgreSQL-based solution from Amazon (AWS). Competes with Google BigQuery and Snowflake. As of 2022 it has a bigger market share, but it is also one of the oldest, and not growing anymore. Snowflake is apparently the youngest, and growing the fastest.
 
-Postgres seems to have some automatic gridlock resolution, but it doesn't always work.
+Postgres seems to have some automatic gridlock (aka "deadlock"?) resolution, but it doesn't always work (or maybe timeouts are typically set too long?). But in principle, it shoudl identify pairs of gridlocked transactions and eventually cancel one of them.
 
-# Practical Postgres
+# Concurrency control
+
+**Concurrency** is achieved via **snapshots**: each transaction runs against a "frozen" (snapshotted) database; it cannot see the results of anything that runs together with it (except itself). Which means that while rows are changed, both old and new rows co-exist, but are visible to different transactions. Then old rows are eventually removed. This is called `VACUUM` and amounts to removing rows that are no longer visible to anyone. This also explains why long transactions are bad even if they are read-only: while a long transaction is running, newly written rows accumulate in memory, and all rows are not deleted (as they were snapshotted by the reader), so memory fills up.
+
+To make a bunch of changes and then commit them at once, use a block that starts with a `BEGIN` command, and ends with either `COMMIT` or `ROLLBACK` command. In terms of **writing**, a `BEGIN-COMMIT` block acts kinda as a single transactions: changed rows are not committed until the very end of a block.
+
+In terms of **reading**, by default, each transaction with the block takes its own snapshot (aka **read committed** mode), and so consecutive transactions may see slightly different versions of the DB if writing is happening concurrently. To make the entire block work on the same "forked" version of the DB, we need to use a **serializable** mode, like that:
+```sql
+BEGIN;
+SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
+...
+COMMIT;
+```
+It is also possible to set it for all blocks within a session using `SET DEFAULT TRANSACTION ISOLATION TO SERIALIZABLE;`. Overall, it is a good idea to isolate in serializable mode if several tables are read in a sequence, and they need to be consistent with each other.
+
+Writing in a table doesn't lock the entire table (by default), but rather locks individual rows. As long as two writers write to different rows, they can write concurrently. Writers and readers also never block each other. If two writers write to the same row, the second writer waits; then, if they run in `READ COMMITTED` mode, it uses the new version of the row for writing into it (and actually, it first rechecks if it still satisfies the `WHERE` clause, coz maybe in the meanwhile it stopped being applicable!). In `SERIALIZABLE` mode, it fails (aborts) with "Can't serialize" error (similar to a merge conflict, except there's no one there to resolve it). Which shows the strengths and weaknesses of two modes.
+* "Read-committed" concurrent writers never fail; they just gracefully get into a queue to wait for each other, and eventually update everything. However they all see slightly different versions of the table, so there is no consistency in what they see. 
+* "Serializable" writers work on the same snapshot, so you can for example first read something, then update it, and write back. But as a downside, this operation would fail if somebody happens to write into these rows while you calculated the update. Which means that this mode requires some extra coding, to handle unsuccessful transactions.
+
+To make serializable mode more resilient, on top of working with a snapshot of a table as an input, we can **lock a set of rows** within a `BEGIN-COMMIT` block, using `SELECT * FOR UPDATE` in the first transaction after `BEGIN`. This is better than locking the entire table, but more pessimistic than updating in serializable mode and just retrying until it succeeds. In this case, different parts of the table may still be updated concurrently. But at the same time, we can never believe any global properties of a table (say, some `COUNT` of rows), as we'll be calculating it based on a snapshot, not on the actual state of the table (once we commit our locked rows).
+
+It seems that essentially we have a ladder of fixing the environment:
+* Just a bunch of commands - fix input states within each transaction; commit results after each transaction
+* `BEGIN-COMMIT` block + `READ COMMIT` mode - fix input state only within each transaction; wait for rows to free if they are being read to; commit everything at once at the end
+* `SERIALIZABLE` - fix input state for a bunch of transactions; work on this forked version of the table; commit all at once; fail if "merge conflict"
+* `SERIALIZABLE` + `SELECT FOR UPDATE` - fix input state, but also block some rows from the table until commit
+* `LOCK` - lock the entire table.
+
+Note that locking in the middle of a block in serializable mode is weird and kinda unpreditable. Either lock at the beginning (then it doesn't matter what the mode was), or lock in the middle of a "read commit" mode (then at least you know that the table was internally consistent when you locked it). But better to always lock in the beginning.
+
+Footnotes:
+* https://www.postgresql.org/files/developer/concurrency.pdf - very nice and rich lecture slides on concurrency in PostgreSQL
+* https://www.postgresql.org/docs/current/sql-begin.html
+
+# Practical Combos
+
+## Replacing an entire column
+
+We may try something like that:
+```sql
+ALTER TABLE t DROP column s, ADD column s int;
+```
+
+## Swapping an entire table
 
 To avoid [[gridlock]]s, you may try someting like this (or pieces from it):
 
@@ -38,6 +81,8 @@ truncate {temp_table};
 
 Footnotes:
 * On gridlocks: https://www.citusdata.com/blog/2018/02/22/seven-tips-for-dealing-with-postgres-locks/
+
+## Uploading data
 
 `\COPY` command can do `\COPY table TO 'file_name' CSV`, or in the opposite direction, if `FROM` is used instead of `TO`.  For some reason some manuals use `WITH` keyword before `CSV`, while some don't.
 
