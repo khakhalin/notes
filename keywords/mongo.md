@@ -96,6 +96,8 @@ Not all fields can be used as hashed indices though; array-like fields cannot be
 
 To see what indexes exist on a collection, do: `collection.index_information()`
 
+The best way to troubleshoot an index is to feed some queries to the database, but instead of looking at the results, look at the statistics of execution using `collection.find(query).explain()['executionStats'] `. The key parameter here is how many rows were considered. For a correctly created index, the number of rows viewed should be almost the same as the number of rows ultimately found. 
+
 🧿 A really weird thing about indexes that I see "experimentally" (in my practice) is that if an index contains 2 keys, each with more than one level, and you do `query={'key1': val1}`, Mongo will look through all records, and it will be super-slow. Essentially, in this case it does not use the index at all. But  if you do `query={'key1': val1, 'key2' : {'$ne' : 'something_weird'}}`, so basically "key2 is not equal to some totally made-up and impossible value", this second query ends up looking only all proper rows (those that have a correct value for the first key, but all possible values for the second key). So it starts using the index. Why wouldn't it use the idex for the first query, I cannot fathom.
 
 Footnotes:
