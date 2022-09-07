@@ -1,9 +1,9 @@
 # Redshift Postgres RDS
 
-Parents: [[devops]], [[aws]]
+Parents: [[devops]], [[database]], [[aws]]
 Related: snowflake 
 
-#devops
+#devops #db
 
 
 MPP postgreSQL-based solution from Amazon (AWS). Competes with Google BigQuery and Snowflake. As of 2022 it has a bigger market share, but it is also one of the oldest, and not growing anymore. Snowflake is apparently the youngest, and growing the fastest.

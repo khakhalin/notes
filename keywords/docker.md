@@ -30,7 +30,7 @@ Here
 * `COPY` copy stuff from the outside to the inside
 * `ADD` also adds stuff to the container, but on top of basic copying also auto-extracts `tar` files, and can work with remote directories
 
-The commands you're likely to get inside after `RUN` are [[bash]] things like `curl`, `apt-get`, `unzip` and `rm`, `mkdir`
+The commands you're likely to use after `RUN` are [[bash]] things like `curl`, `apt-get`, `unzip` and `rm`, `mkdir`
 then a buch of `conda config` commands probably
 
 To actually build an image do: `docker build -t my_container` (where `my_container` becomes the name of the container)
@@ -48,11 +48,15 @@ docker rmi image_name
 ```
 (🧵 _not sure why two different removals?_)
 
+# Operating inside a container
+
+You can **step inside the container** with `docker exec -it image_name path`, and then work inside it. Here `image_name` can be learned by running `docker ps` to see all containers, and `path` should specify the path _inside the container_ leading to the bash files (so that bash commands were in fact executed); typically something like `/bin/bash`. The `-it` key stands for "interactive", and without it it would only run one bash command, but in "interactive" mode it kinda teleports you into a bash terminal inside the container. Once done, use `exit` to quit back again.
+
+To run a command manually, first `cat` the `cronetab` file, and remind yourself what commands you're actually running. Then step inside the container. Then (if necessary) manually init those environmental variables that are set up in the beginning of the `crontab` script. Then run the actual command specified in your crontab job.
+
 # Updating a container
 
-You can step inside the container with `docker exec -it image_name path`, and then work inside it. Use `exit` to quit back again. Without the `-it` key it only runs one command, I think, but `-it` probably stands for "interactive", so it's kinda teleports you inside the container.
-
-Most files (like, python files) from the outside can be made accessible from inside a container using an alias, as described above 🔥🔥🔥🔥🔥🔥🔥🔥🔥 . So most python programs may be just updated (outside the container), and [[crontab]] will still run existing (scheduled) processes just fine.
+Most files (like, python files) from the outside can be made accessible from inside a container using an alias, as described above 🔥🔥🔥🔥🔥🔥🔥🔥🔥  (_for now it is NOT described above - add it!_ #todo 🔥 ). So most python programs may be just updated (outside the container), and [[crontab]] will still run existing (scheduled) processes just fine.
 
 If you need to reschedule the [[crontab]] jobs, without rebuildling the container, you need to update the crontab file. You can do it with a single command (no need even to go into interactive docker terminal), by replacing the crontab file. For the standard location of cron, just do this: `docker cp crontab /etc/cron.d/my_cron_file`. Cron automatically runs all cronfiles in this folder, and `cp` just copies your `crontab` (from the root of the system on which Docker runs) into this target folder.
 

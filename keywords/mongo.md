@@ -1,11 +1,11 @@
 # Mongo
 
-Path: [[database]] / [[nosql]]
+Path: [[database]], [[nosql]]
 
 #db #tools
 
 
-Most conceptual topics about nosql database design are covered in [[nosql]]
+Most high-level conceptual topics about nosql database design are covered in [[nosql]]
 
 The hierarchy of Mongo data (it's a tree, with several elements at each level):
 * **Server**
@@ -14,7 +14,7 @@ The hierarchy of Mongo data (it's a tree, with several elements at each level):
 * **Document** - this is roughly equivalent to a row in a large [[sql]] table. It probably corresponds to one instance / object, of whatever this database is supposed to track / represent
 * **Key-value pairs** - these serve as columns in an [[sql]] database, except that every document may have different keys, so it's really not an orthogonal table, but a collection of somewhat similar objects. There's also no expectation that a shared key implies the same data type.
 
-The only required key (?) is `_id` - you either provide it, or Mongo invents it for you, if you don't. Unique for each document.
+The only required key is `_id` - you either provide it, or Mongo invents it for you, if you don't. Unique for each document.
 
 The most typical way to repsent documents is using [[json]].
 
@@ -56,7 +56,7 @@ collection.delete_many({$and: [{'location':'osaka'},
 collection.drop()
 ```
 
-As with pandas, instead of brackets-notation `db['collection']` one can use point-notation `db.collection`, but then collection name needs to be written explicitly, while with bracket-notation it can be stored in a variable (as a string).
+As with pandas, instead of brackets-notation `db['collection_name']` one can use point-notation `db.collection_name`, but then collection name needs to be written explicitly, while with bracket-notation it can be stored in a variable (as a string).
 
 Note that while `find_one()` directly returns a document, a simple `find()` returns a lazy iterator, so we have to either iterate through it, or force data retrieval using `list(result)`
 
@@ -65,15 +65,17 @@ Note that while `find_one()` directly returns a document, a simple `find()` retu
 To create a new collection, just pretend to "grab" a non-existing collection `db['new_name']` and try to write into it - it should totally work. The only way to figure out if a collection actually exists (or rather, if it is non-empty) is to request a list of non-empty collections and explicitly compare your name to this list : `if 'new_name' in db.list_collection_names()`
 
 To create an **index** on a collection:
-`db['collection_name'].create_index('key')`
-Or, in a more fancy example:
-`db['collection_name'].create_index([('key1': 1), ('key2': -1)])`
+`collection.create_index('key')`
+For a fancy nested multi-property index (first sort by `key1` ascending, then, within each value of `key1`, by `key2` descending):
+`collection.create_index([('key1': 1), ('key2': -1)])`
+To see what indexes exist on a collection, do:
+`collection.index_information()`
 
 On storing **dates**: apparently Mongo has an internal date format, so storing dates as strings is not recommended. However unlike sql, it doesn't convert string queries to dates on the fly. So the best strategy is to convert all date-times pythonic **datetime** (see [[py_dates]]), then pass them to queries as variables. 
 
 # Other
 
-Judging from the fact that during index creation one can set parameters `expireAfterSeconds` and `weights` (for relatively weiging a bunch of fields while ordering), Mongo may be used for some sort of fuzzy queuing. (???)
+Judging from the fact that during index creation one can set parameters `expireAfterSeconds` and `weights` (for weiging a bunch of fields while ordering), Mongo may support some sort of fuzzy queuing with timeouts. (??? 👁 )
 
 # Refs
 

@@ -6,12 +6,13 @@ Parents: [[01_Tools]], [[system_design]]
 
 See also:
 * [[data_wh]] - Data Warehouse
-* [[nosql]] - an alternative to tables
+* [[nosql]] - a conceptual alternative to tables
 * [[dictionary]] - many names are still sitting there
 
 Subtopics:
-* [[sql]]
-* [[mongo]]
+* [[sql]] - about the language
+* [[mongo]] - fav nosql
+* [[postgres]] - for realtme applications
 
 # Principles and guarantees
 

@@ -21,7 +21,7 @@ See also: [[git]], [[docker]], [[crontab]]
     * `cd ~` teleports us into the home folder for this user.
     * `cd /` teleports you to the root
     * `cd -` teleports us to where you have been before the last `cd` command. Which means that doing `cd -` repeatedly will teleport you back and forth between two different folders.
-* `pushd` - remember current location (like a clipboard, but for location). After doing that, you can go to the new location, and then teleport back with `popd`. It's literally a stack of locations.
+* `pushd` - remember current location (like a clipboard, but for location). After doing that, you can go to the new location, and then teleport back with `popd`. It's literally a stack of locations. (🔥 Not sure I understand how it works, as when I type it on other machine, it says "no other directory" - does it mean that it actually needs a parameter? 🔥 )
     * Allegedly it's possible to remember locations by name, but I can't make it work 🔥 
 * To see a brief help for the program, do `program_name --help`, or `help program_name` (🔥 does it work on Mac as well, or only on Windows?). For a long extensive and better formatted manual, do `man program_name`.  On linux, instead of dumping the content into an infinite scrollable screen, these commands start some sort of an editor, so you have to press "Enter" to scroll, and eventually press either `q` or `ZZ` to exit (see below).
 * `exit` exits the terminal :)
