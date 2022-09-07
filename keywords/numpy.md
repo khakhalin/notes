@@ -1,9 +1,10 @@
 # Numpy
 
-#tools
-
 Parent: [[python]]
 See also: [[pandas]], [[tensorflow]], [[matplotlib]]
+
+#tools #python
+
 
 # Syntax innovations
 

@@ -16,6 +16,7 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 # Queue
 
 * if you include `SET lock_timeout TO '300s'` to postgres, how to see in Python if it succeded or timeoutet? Is there a code it returns?
+* Read Google Python style guide, it's fun: https://google.github.io/styleguide/pyguide.html
 * https://postgis.net/
 * proper way of setting up gitlab for pushing to it from git (just document it)
 * gitlab-ci - describe what I know, but also find some text
@@ -32,6 +33,7 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 * move git stuff here
 * move sql stuff here
 * LODs for [[tableau]] - read and document this: https://www.flerlagetwins.com/2020/02/lod-uses.html
+* Read this on [[tableau]]: https://vizpainter.com/
 * what is [[devops]] actually, canonically?
 * microservices - what they actually are
     * Intro by James Quigley: https://www.youtube.com/watch?v=1xo-0gCVhTU

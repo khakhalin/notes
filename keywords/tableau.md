@@ -6,7 +6,7 @@ See also: [[dataviz]]
 #tools #datavis
 
 
-Cool interactive visual tool for interactive dashboard creation. Several versions, including public (like googledocs, in a way), personal, professional. Server for local deployment, online for cloud subscription. Reader - for sharing data with people who don't have Tableau.
+Cool interactive visual tool for interactive dashboard creation. Proprietary. Several versions, including public (like googledocs, in a way), personal, professional. Server for local deployment, online for cloud subscription (going cloud seems to be a trend). There's also a "reader" that can be used for sharing data with people who don't have Tableau installed.
 
 # Creating a visualization
 
@@ -31,8 +31,6 @@ Finally, you get these individual visualizations called **Sheets**, and combine 
 And then on top of these automated "actions" (filter, highlight) we can also create custom actions on a dashboard, to create a dynamic interface.
 
 # Deployment
-
-?
 
 When sharing on the web, the description of a dashboard is stored as an html, with divs and everything, and  `<object class=...>`  tags to host actual visualizations. `<param name=... value...>` tags specify parameters specify parameters. `host_url` parameter points at the server, and that's where the data comes from, while a script (written in [[javascript]]) will take care of working with it.
 
@@ -60,6 +58,20 @@ In a normal world (like, in [[pandas]], for example), you would probably summari
 }
 ```
 Code analysis: The inner part returns `None` for non-recent values, and target value (`name` in this case) for the most recent value. Just to be on a safe side, we also calculate the most recent value separately for each `id`, although if the data is orthogonal on `time/id` dimensions, this is technically not necessary. Then it calculates `max()` on them, and real values are `>` than `none`, so they win in this battle. And finally, we match these values to `id` (the part that feels most similar to to a join, conceptually).
+
+# Misc Hacks
+
+**Renaming Columns and Rows** is apparently quite easy using an "inline custom calculation", as if a calculation starts with a comment, then this comment becomes the title of this calculation. So if you have a field named `Ugly`, and you want to hide its name in the dashboard, then instead of using it directly (as `[Ugly]`), do this:
+```
+//Pretty
+[Ugly]
+```
+And it will be shown everyehwere as "Pretty" :) Even if the editing window seems to be a one-liner (say, the windows inside the Column / Row fields on top), they are actually secretly multi-line, and one can go to the next line with Shift-Enter.
+
+Similarly, this hack can be really useful for creating ad-hoc calculated fields: if you aren't going to reuse this field, and only need to do some cosmetic improvement once (like flip the sign, or something like that), istead of using a field directly, do something to it (like `-[X]` for example), and use this "Naming with a multiline comment" trick to give it a reasonable name.
+
+Footnotes:
+* https://vizpainter.com/10-things-you-didnt-know-about-ad-hoc-calculations-in-tableau-9/
 
 # Other
 

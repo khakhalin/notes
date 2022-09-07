@@ -2,7 +2,7 @@
 
 Path: [[01_Tools]]
 
-#tools #coding #oop
+#tools #python #coding #oop
 
 
 Subtopics and related:
@@ -196,4 +196,6 @@ Footnotes:
 
 Downey, A. (2012). Think Python. " O'Reilly Media, Inc.".
 
-Programming in Python: Fluent Python,  Luciano Ramalho.
+Programming in Python: Fluent Python, Luciano Ramalho
+
+Google Styleguide for Python: https://google.github.io/styleguide/pyguide.html

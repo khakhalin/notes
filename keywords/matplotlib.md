@@ -3,7 +3,7 @@
 Parents: [[01_Tools]] / [[python]]
 See also: [[numpy]], [[pandas]]
 
-#tools
+#tools #python
 
 
 # A library of tricks

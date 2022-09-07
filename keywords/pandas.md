@@ -1,9 +1,9 @@
 # Pandas
 
-Parent: [[python]]
+Parent: [[01_Tools]], [[python]]
 See also: [[numpy]], [[py_dates]], [[sklearn]]
 
-#tools
+#tools #python
 
 
 # Creation and basic IO
@@ -48,7 +48,8 @@ Footnotes:
 * https://www.dataschool.io/pandas-dot-notation-vs-brackets/
 
 ### Conditionals and filtering
-For **conditional data retrieval** we have a choice between: 
+For conditional data retrieval we have a choice between: 
+
 * **logical indexing** `df.loc[d.x>0]` Can take list comprehensions as an argument (instead of a series); can be written to; but slower, and harder to read.
 * Another form of logical indexing: `df.x.eq(0)` (or things like `ne`, `le` etc.)
 * **queries**: `df.query('x>0')`, where `x` is a name of a column. Easier for a human to read; works slightly faster, but cannot be written to. To reference a normal variable `a` in a query, use `@a` inside the query string. Also keep in mind that they create a view of the original dataframe, not a new dataframe, which saves time and space, but can lead to slice-assignment issues if you assume that the result is an independent dataframe of its own. It's not.
@@ -71,6 +72,7 @@ Conditional indexing supports functions, as long as they take and return Pandas 
 ⚠️ There's a strange pitfall associated with conditional data retrieval that I doesn't understand for now. `query` seems to always create a view of a dataframe, which may look like a new dataframe with fewer rows, but that actualy acts as a copy, and not as a deepcopy. As a result, if you save the results in a "new" dataframe `df2 = df.query('x>0')`, and then change values in  `df2` in any way, it may case a warning "A value is trying to be set on a copy of a slice from a DataFrame". In this case df2 gets updated, and df seems still intact (unchanged), but there's this warning, and I'm not sure why. (Is it because they had to replace a view with a copy when you ran a command? So they want us to be more deliberate here?). Replacing a simple `query` with `df.query(...).copy()` turns a view into a legit new dataframe, and thus eliminates a warning.
 
 ### Chained Assignment problem
+
 "Chained assignment" is a name for a problem that you get when writing to a section of a dataframe, when selecting by both column and row. In essence, if you manage to selecte both of them at once, you're good. But if you do first one, then another, then you get a view of a view, and you can read, but not write. The situationis complicated by the fact that in some cases even chained assignment may actually work (with a warning), but for a different dataframe the same code may crash.
 
 * `df.loc[1,'x']` - Read and write. Reference both by column and row by index.
@@ -146,7 +148,7 @@ The archetypical way seems to be using a `where` command, which is cool, but wei
 There are least 6 different ways to do it, listed here from (arguably) best to worst:
 * `df['z']=df.x+df.y` - that's what most people use, and it's one of the fastest approaches, but it has 2 draw-backs. One, it cannot be chained (using `.` notation). And two, when used on a view, it throws a "slice assignment" warning. So after things like `.agg` it will work just fine, but after a `.query` it will cause a problem (as `.query` creates a view!).
 * `df=df.assign(z=df.x+df.y)` - this one is a bit slower, but can be chained! Many people prefer it, and it seems to be considered archetypical.
-* `df.insert(2, 'z', df.x+df.y)` - the fastest of all, but cannot be chained (it's in-place), which also means that it doesn't feel Pandas-y. Also, you cannot run it 2 times in a row (returns an error, saying that this column already exists), and you need to know where to add this new column.
+* `df.insert(2, 'z', df.x+df.y)` - the fastest of all, but cannot be chained (it's in-place!), which also means that it doesn't feel Pandas-y. Also, you cannot run it 2 times in a row (returns an error, saying that this column already exists), and you need to know where to add this new column.
 * `df.loc[:,'z']=...` - prevents slicing assignment warning, but is the slowest of all by far. May be good for updates though. Still not chainable though.
 * `df.eval('z=x+y', inplace=True)` - I read somewhere that it is supposed faster than other methods, but in my experiments it is slower than almost any other method. So not sure why anyone would use it. Also, non-chainable.
 * `df=df.eval('z=x+y', inplace=False)` - chainable, but also slower.
