@@ -35,6 +35,7 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 * LODs for [[tableau]] - read and document this: https://www.flerlagetwins.com/2020/02/lod-uses.html
 * Read this on [[tableau]]: https://vizpainter.com/
 * what is [[devops]] actually, canonically?
+* Learn to have category column in pd
 * microservices - what they actually are
     * Intro by James Quigley: https://www.youtube.com/watch?v=1xo-0gCVhTU
 * docker - what and how
@@ -70,7 +71,6 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 * python environments
 * conda vs pip - see [[environments]]
     * wheel (?)
-* Bash - find a tutorisl
 * Bash - linkedin certification
 * how to set up an etl machine (in theory)
 * Python: how to properly do importing in large packages (does root import everything from its folder?)
@@ -90,6 +90,7 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 * How does garbage collection work in Python? What's the logic, and how fast is it? ([link](https://gist.github.com/osavsunenko-ring/205fa72c65d6343eaede0dc43f1c79d4))
 * collections - or whatever is this common module ppl often use with prepackaged datastructures
 * Lint (pylint) - what is it and why? It seems that it can catch errors, type mismatches etc.
+* Fun explanation of momentum in ANN convergence: https://distill.pub/2017/momentum/
 * Keras checkpoints
 * Python collections: deque, Counter, defaultdict etc.
 * Python closures, why they are a thing, what's dangerous about them, and how to use them

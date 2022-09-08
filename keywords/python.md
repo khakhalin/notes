@@ -155,6 +155,8 @@ Footnotes:
 * Creating scikit-learn -like packages: https://scikit-learn.org/stable/developers/develop.html
 Some interesting info on exposing parameters, careful work with random generators (to ensure replicability) and related interfaces etc.
 
+On dangers of naming: there's a legit package called thefuck: https://pypi.org/project/thefuck/
+
 # File structure and importing
 
 Main idea: it seems that one can think of `import`as of just a bunch of code being literally included from a file, at the point where `import` is called. (With a caveat that it's only loaded once, so if you call it twice nothing happens, and if you change the imported file afterit  imported, also nothing happens). It means that with numpy and such, we call them in the beginning of the script, for the `np` prefix to become available as a public class, but for class methods we can call it within the class declaration. And just have class methods written in separate files, if we so desire.
