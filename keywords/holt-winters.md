@@ -1,6 +1,7 @@
 # Holt-Winters triple exponential smoothing method
 
 Parents: [[time-series]]
+See also: [[arima]]
 
 #timeseries #stats
 
@@ -27,7 +28,8 @@ In practice it's easier to do it recursively:
 ```python
 b[i] = b[i-1]
 l[i] = l[i-1] + b[i]
-s[i] = s[i-p]```
+s[i] = s[i-p]
+```
 
 # Refs
 

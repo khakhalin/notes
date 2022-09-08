@@ -18,7 +18,7 @@ While we can simply use last p values, it's actually better to place these input
 
 > A question here, why not just use [[regularization]]? L1 if we want a sparse representation?
 
-A covariance matrix that you have defines whether the process is stationary. If eigenvalues are real and <1, we have a relaxation. If some are complex, we have an oscillation. If real part is >1, it diverges and the solution isn't stationary. _Is it true? Did I get it right?_
+A covariance matrix that you have defines whether the process is stationary. If eigenvalues are real and <1, we have a relaxation. If some are complex, we have an oscillation. If real part is >1, it diverges and the solution isn't stationary.
 
 > Why do we have to shift everything by μ, why wouldn't we just do a linear regression of y[t] from past y[t-i]? Wouldn't it be both more expressive, and way more obvious; like a primitive single-linear-layer convolution network? Or is the problem here is that we'll get diverging series all the time?
 
@@ -34,13 +34,13 @@ MA models are stationary (in a weak sense), as for a good AR model, errors are n
 
 # ARMA
 
-**ARMA(p, q)** uses p last predictions for an autoregressive model (AR), and q last errors ($ε = y-\hat{y}$)  for a moving average-like (MA) model of small perturbations. So essentially we have a combination of two stationary models: one is an auto-regressive process that can support oscillations (seasonatlity) etc; and another faster process that models relaxation of perturbations.
+**ARMA(p, q)** uses p last predictions for an autoregressive model (AR), and q last errors ($ε = y-\hat{y}$)  for a moving average-like (MA) model of small perturbations. So essentially we have a combination of two stationary models: one is an auto-regressive process that can support oscillations (seasonality) etc; and another faster process that models relaxation of perturbations.
 
-In more mathy intros, these models are described using **backshift operator** and polynomials. So instead of writing $\sum x_{t-i} φ_i$  we write $φ(B)x$, where φ is a polinomial $\sum φ_i x^i$, and B is defined as $B^k x_t = x_{t-k}$. It is not immediately obvious to me how this notation helps, but that's what they seem to mean.
+In more mathy intros, these models are described using **backshift operator** and polynomials. So instead of writing $\sum x_{t-i} φ_i$  we write $φ(B)x$, where φ is a polynomial $\sum φ_i x^i$, and B is defined as $B^k x_t = x_{t-k}$. It is not immediately obvious to me how this notation helps, but that's what they seem to mean.
 
 # ARIMA
 
-ARMA + non-stationary drift (moving average). Three parameters: ARIMA(p, d, q), where p and q are the same values as in ARMA, and d is how many times you differentiate the y sequence before feeding it to ARMA, killing long-term derivatives (trends in case of d=1, gradua accelerations of trends in case of d=2 etc.).
+ARMA + non-stationary drift (moving average). Three parameters: ARIMA(p, d, q), where p and q are the same values as in ARMA, and d is how many times you differentiate the y sequence before feeding it to ARMA, killing long-term derivatives (trends in case of d=1, gradual accelerations of trends in case of d=2 etc.).
 
 # Refs
 
