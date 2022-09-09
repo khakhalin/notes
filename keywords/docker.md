@@ -23,7 +23,6 @@ ADD source_outside target_path_inside
 RUN touch /log/cron.log
 CMD cron && : >> /log/cron.log && tail -f /log/cron.log 🔥🔥 ???????????
 ```
-
 Here
 * `RUN` - runs a command
 * `WORKDIR` sets the working folder inside the image 🔥 ?
@@ -56,11 +55,11 @@ To run a command manually, first `cat` the `cronetab` file, and remind yourself 
 
 # Updating a container
 
-Most files (like, python files) from the outside can be made accessible from inside a container using an alias, as described above 🔥🔥🔥🔥🔥🔥🔥🔥🔥  (_for now it is NOT described above - add it!_ #todo 🔥 ). So most python programs may be just updated (outside the container), and [[crontab]] will still run existing (scheduled) processes just fine.
+Most files (like, python files) from the outside can be made accessible from inside a container using an alias, as described above 🔥🔥🔥🔥🔥🔥🔥🔥🔥  (_for now it is NOT described above - add it!_ #todo 🔥 ). So most python code may be just updated (outside the container, probably by pulling from an external respo), and [[crontab]] will still run existing (scheduled) processes just fine.
 
-If you need to reschedule the [[crontab]] jobs, without rebuildling the container, you need to update the crontab file. You can do it with a single command (no need even to go into interactive docker terminal), by replacing the crontab file. For the standard location of cron, just do this: `docker cp crontab /etc/cron.d/my_cron_file`. Cron automatically runs all cronfiles in this folder, and `cp` just copies your `crontab` (from the root of the system on which Docker runs) into this target folder.
+If you need to reschedule the [[crontab]] jobs without rebuildling the container, you need to update the crontab file. You can do it with a single command (no need to go into interactive docker terminal), just by replacing the crontab file. For the standard location of cron, just do something like this: `docker cp crontab container_name:/etc/cron.d/my_cron_file`. Cron automatically runs all cronfiles in this folder, and `cp` just copies your `crontab` (from the root of the system on which Docker runs) into this target folder. To check whether crontab copied correctly, do `docker exec container_name cat /etc/cron.d/my_cron_file`.
 
-In general `services` allows one to start, stop, and restart services. On Ubuntu (?) `service --status-all`  lists all current services and if they are running (`+` or not `-`).
+In general `services` command allows one to start, stop, and restart services. On Ubuntu (?) `service --status-all`  lists all current services and if they are running (`+` or not `-`).
 
 # Orchestrators
 

@@ -15,7 +15,7 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 
 # Queue
 
-* if you include `SET lock_timeout TO '300s'` to postgres, how to see in Python if it succeded or timeoutet? Is there a code it returns?
+* write to [[kubernetes]] about "sealed secrets", while I can still remember how to make them
 * Time-series prediction with trees: https://www.naturalspublishing.com/files/published/l259iab891zec2.pdf
 * Read Google Python style guide, it's fun: https://google.github.io/styleguide/pyguide.html
 * https://postgis.net/

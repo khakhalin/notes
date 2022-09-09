@@ -58,7 +58,7 @@ ALTER TABLE t DROP column s, ADD column s int;
 To avoid [[gridlock]]s, you may try someting like this (or pieces from it):
 
 ```sql
-SET lock_timeout TO '300s' --5 minutes
+SET lock_timeout TO '10s' -- Actual time should be about 1 s for a 10 000 - rows multicol table
 BEGIN;
 LOCK target_table IN EXCLUSIVE MODE; --As of now target_table can be read, but cannot be written to
 CREATE TABLE temp_table (LIKE target_table INCLUDING ALL);
@@ -68,15 +68,19 @@ ALTER TABLE temp_table RENAME TO target_table;
 COMMIT; --This also releases the table
 DROP TABLE temp_table;
 ```
-My understanding is that in the code above, locking the `target_table` for writes actually comes a too late, as we haven't blocked it in the time it took us to prepare `new_data.csv`, supposedly. If new data was based on the old contents of the table, it should have been locked before we read its contents, because either way it will be now overwritten and lost. But I guess it preserves at least some writes, and in some cases this manual locking may be even more useful.
+My understanding is that in the code above, locking the `target_table` for writes actually comes too late, as we haven't blocked it in the time it took us to prepare `new_data.csv`, supposedly. If new data was based on the old contents of the table, it should have been locked before we read its contents, because either way it will be now overwritten and lost. But I guess it preserves at least some writes, and in some cases this manual locking may be even more useful. (🔥 would be nice to get a review on it)
 
 Another potential optimization: instead of dropping and creating the `temp_table` just clean it at the end using `TRUNCATE temp_table`, and keep an empty table always in place.
 
-🔥 Homework: so it is true that this code above would be faster than something like that below, if we add locks?
-```sql
-truncate {target_table};
-insert into {target_table} select * from {temp_table};
-truncate {temp_table};
+And then one can **catch timeouts** in python, and postpone microservice resurrection by prolonging the life of this instance (the scheduler typically won't create new instances if the old one is still running):
+```python
+try:
+    postgresql("SET lock_timeout TO '5s'; ...")
+    _log.degub("Success")
+except psycopg2.OperationalError as error: # This exception is thrown if a query times-out
+    _log.warning("Failure; see error message: " + str(error))
+    # Any clean-up if needed
+    time.sleep(60) # Let the script wait for a few minutes
 ```
 
 Footnotes:
@@ -93,20 +97,9 @@ Footnotes:
 * Uses WITH: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/PostgreSQL.Procedural.Importing.Copy.html
 * https://www.postgresql.org/docs/current/sql-copy.html
 
-# Misc maintenance
+# On-the-fly troubleshooting
 
-To find all queries running on RDS that mention a certain table, or a certain dangerous (slow) command, login as root (a separate user-login pair that is used only for this purpose, essentially), then run this sql:
-```sql
-SELECT * FROM pg_stat_activity where query like '%target_keyword%' ORDER BY backend_start
-```
-Then you can kill the unwanted (blocking) query using this:
-`SELECT pg_germinate_backend(<pid>)`, where `pid` is the id from the `pid` column in the table above.
-
-A version of the same query with a more readable output:
-```sql
-SELECT datname, pid, usename, backend_start, wait_event_type, wait_event, state, query
-FROM pg_stat_activity where query like '%target_keyword%' ORDER BY backend_start
-```
+See [[aws]] (seeing queries, killing queries etc.)
 
 # Refs
 

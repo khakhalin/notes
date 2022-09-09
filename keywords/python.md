@@ -82,7 +82,7 @@ How to iterate properly:
 
 Apparently functions can have properties (as if they were in class), but that's weird, and almost always  not recommended: https://sethdandridge.com/blog/assigning-attributes-to-python-functionss
 
-# Errors
+# Error handling
 
 To **raise an error** do: `raise KeyError('Error Message')`, except instead of a `KeyError` there are lots of "Base error types" to try. Some useful examples include:
 
@@ -92,20 +92,20 @@ To **raise an error** do: `raise KeyError('Error Message')`, except instead of a
 * `AssertionError`: when assert fails
 * And many more: [see the list](https://docs.python.org/3/library/exceptions.html)
 
-To **handle an error**, do something like this code below. This whole traceback things creates a proper stack of exception handling.
+To **handle an error**, do something like this code below. This whole traceback things creates a proper stack of exception handling (see also [[logger]])
 ```python
 a = 0
 try:
     x = 1/a
-except KeyError:
-    # do something
-    tb = sys.exc_info()[2]
-    raise SomeOtherException(...).with_traceback(tb)
+except Exception as error:
+    # do something clean-up
+    _log.warning(str(error).strip()) # Warn about the error without breaking
+    raise SomeOtherException(...).with_traceback(tb) # Or break with a different error if you want to
 finally:
     # Clean-up part that is always executed
     del a
 ```
-# With
+## With
 
 An alternative to `try - except - finally`.	 Relies on the fact that many objects are shipped with methods `__enter__` and `__exit__`: one to create an object, set it up, and return the instance; the other one to gracefully clean up after the sensitive operation is performed. `__exit__` typically (or always?) doesn't delete the object, so the object can be referenced after the "with construction" is over. Even if the "with" part itself is empty, by that time three methods would have been executed: init, enter, and exit, in this order.
 

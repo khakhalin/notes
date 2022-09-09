@@ -1,9 +1,9 @@
 # Kibana and Elasticsearch
 
 Path: [[01_Tools]]
-See also : [[tableau]], logging
+See also : [[tableau]], [[logger]]
 
-#tools #logging
+#tools #debugging
 
 
 **Kibana** is an almost-open-source (source-available) dashboard / visualization software, that seems to be primarily used to analyze and root-cause logs and near-realtime events. Works with **Elasticsearch**: a realtime search engine targeted at processing [[json]] documents. Ideal for log-parsing.
