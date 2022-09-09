@@ -27,6 +27,10 @@ To see logs (those produced by a logger): `kubectl logs specific_pod_name`, wher
 If the pod fails, you can try to summarize the reasons with `kubectl describe pods my_pod_name`
 
 ssh into pod: `kubectl exec -it pod_name /bin/sh`
+(Except kubctl says this format is deprecated, and one should type it differently??
+`ubectl exec [POD] [COMMAND] is DEPRECATED and will be removed in a future version. Use kubectl exec [POD] -- [COMMAND] instead.` 🔥🔥🔥 )
+
+One useful reason to ssh into the pod is to see the values of hidden secret encoded environmental variables if they are mentioned in the code as `os.environ['MY_TABLE']` constants. Which is typical, as you want to keep them as env variables so that you could run the same code in different environments (dev / int / prod), and for security reasons they may be obfuscated (aka "sealed-secrets" 🔥🔥🔥🔥🔥)
 
 Restart pod: `kubectl delete pods pod_name_precise`. It deletes it indeed, but then kubernetes immediately restarts it. The name needs to be a precise one (?🔥 ) as you're killing an instance.
 
