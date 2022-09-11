@@ -15,6 +15,15 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 
 # Queue
 
+Analyze this:
+* https://discord.com/channels/814557108065534033/882748207996760164
+* https://stanford-cs329s.github.io/syllabus.html
+* https://mlops.toys/experiment-tracking
+* https://github.com/features/actions
+* https://learning.edx.org/course/course-v1:ColumbiaX+DS102X+1T2016/home
+* https://github.com/dipanjanS/BerkeleyX-CS190.1x-Scalable-Machine-Learning
+
+Main queue
 * write to [[kubernetes]] about "sealed secrets", while I can still remember how to make them
 * Time-series prediction with trees: https://www.naturalspublishing.com/files/published/l259iab891zec2.pdf
 * Read Google Python style guide, it's fun: https://google.github.io/styleguide/pyguide.html
