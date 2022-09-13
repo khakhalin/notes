@@ -24,6 +24,7 @@ Analyze this:
 * https://github.com/dipanjanS/BerkeleyX-CS190.1x-Scalable-Machine-Learning
 
 Main queue
+* on [[logger]]: How to get separately a clean log on the screen, and a full (crazy) log in the file?
 * write to [[kubernetes]] about "sealed secrets", while I can still remember how to make them
 * Time-series prediction with trees: https://www.naturalspublishing.com/files/published/l259iab891zec2.pdf
 * Read Google Python style guide, it's fun: https://google.github.io/styleguide/pyguide.html

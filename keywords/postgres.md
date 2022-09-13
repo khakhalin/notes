@@ -8,7 +8,7 @@ Related: snowflake
 
 MPP postgreSQL-based solution from Amazon (AWS). Competes with Google BigQuery and Snowflake. As of 2022 it has a bigger market share, but it is also one of the oldest, and not growing anymore. Snowflake is apparently the youngest, and growing the fastest.
 
-Postgres seems to have some automatic gridlock (aka "deadlock"?) resolution, but it doesn't always work (or maybe timeouts are typically set too long?). But in principle, it shoudl identify pairs of gridlocked transactions and eventually cancel one of them.
+Postgres seems to have some automatic gridlock (aka "deadlock"?) resolution, but it doesn't always work (or maybe timeouts are typically set too long?). But in principle, it shoudl identify pairs of gridlocked transactions and eventually cancel one of them (see [[aws]] for some useful tricks)
 
 # Concurrency control
 
@@ -97,9 +97,35 @@ Footnotes:
 * Uses WITH: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/PostgreSQL.Procedural.Importing.Copy.html
 * https://www.postgresql.org/docs/current/sql-copy.html
 
-# On-the-fly troubleshooting
+# Control structures
 
-See [[aws]] (seeing queries, killing queries etc.)
+```sql
+IF ... THEN ... END IF;
+IF ... THEN ... ELSE ... END IF;
+ELSEIF -- instead of the first ELSE (works just as one would expect)
+
+CASE <what> 
+        WHEN <value1>, <value2> THEN -- Where of course "value1" can be a complex expression 
+            <statements> 
+        WHEN <value3> THEN
+            <statements>
+        ELSE
+            <statements>
+END CASE;
+```
+
+For example, if you want to only run something when a table exists:
+```sql
+IF
+    EXISTS (SELECT 1 FROM information_schema.tables WHERE table_name='table_name')
+THEN    
+    ...
+END IF;
+```
+
+Footnotes:
+* A summary: https://www.w3resource.com/PostgreSQL/pl-pgsql-control-structures.php
+* https://stackoverflow.com/questions/50678559/execute-select-statement-if-table-exists
 
 # Refs
 
