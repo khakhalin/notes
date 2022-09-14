@@ -35,14 +35,33 @@ Other commands:
 
 # Cron service
 
-Setting it up: 🔥 ????????
+Note that despite the similarity of names `cron` service is not the same as `crontab` utility. `cron` service runs in the background, and while it can read crontab-type files, including the main crontab-type file that is traditionally named `crontab` without an extension, the jobs ran by `cron` services are not necessarily visible via `crontab -l`.
 
-Checking if it works, stopping, and restarting
+Setting it up on [[docker]]: `cron` is not a standard part of Ubuntu installation, so add this line to the dockerfile:
+```docker
+ADD crontab /etc/cron.d/my-cron-file # Copies the prepared crontab file and renames it
+RUN chmod 0644 /etc/cron.d/my-cron-file
+RUN crontab /etc/cron.d/my-cron-file # This adds cron job via the crontab utility
+ENTRYPOINT ["cron", "-f"]  # Starts the cron service
+```
+Here `/etc/cron.d/` is a traditional **drop-in** directory.
+
+Checking if the service works; stopping and restarting the service:
 ```bash
 service cron status
 service cron stop
 service cron start
 ```
+
+`cron` daemon (service) tries to run all jobs specified in any of whole set of folders. There's the drop-in folder + there are daily / hourly etc. folders + there's (or rather, there may be) an active `crontab` utility cron file set up for this user. And then there may also be different users. Collecting and checking all currently active cron jobs is a non-trivial task.
+
+> One of the answers below the question gives a great (and quite fancy!) bash script, combining all possible sources and storage places for cron-scheduled jobs. Illustrates just how many different places one has to consider:
+https://stackoverflow.com/questions/134906/how-do-i-list-all-cron-jobs-for-all-users
+
+Footnotes:
+* https://cronitor.io/cron-reference/how-to-list-all-cron-jobs
+* https://www.airplane.dev/blog/docker-cron-jobs-how-to-run-cron-inside-containers
+* https://www.liquidweb.com/kb/how-to-display-list-all-jobs-in-cron-crontab/
 
 # Refs
 

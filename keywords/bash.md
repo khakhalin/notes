@@ -1,7 +1,7 @@
 # Bash
 
 Parent: [[01_Tools]]
-See also: [[git]], [[docker]], [[crontab]]
+See also: [[git]], [[docker]], [[crontab]], [[vim]]
 
 #tools
 
@@ -116,14 +116,6 @@ Misc tips
 * `apt-get` - to update packages
     * `apt-get install ...` 🔥
     * `apt-get -y update` 🔥
-
-# VIM
-
-To start: `vi file_name`
-
-To start editing: `i`, then, when done, `Esc`
-
-To quit: `ZZ` (capitalized, aka don't forget to press "Shift", or it won't work)
 
 # References
 
