@@ -35,31 +35,43 @@ Other commands:
 
 # Cron service
 
-Note that despite the similarity of names `cron` service is not the same as `crontab` utility. `cron` service runs in the background, and while it can read crontab-type files, including the main crontab-type file that is traditionally named `crontab` without an extension, the jobs ran by `cron` services are not necessarily visible via `crontab -l`.
+Note that despite the similarity of names `cron` service and `crontab` utility are two slightly different things. `cron` service runs in the background, and executes lots of various crontab-typed files. `Crontab` utility is one way for a user to schedule crontab-like activities, but not the only one. Which means that lots of jobs that `cron` runs aren't actually visible if you do a `crontab -l`, and getting a full overview of all jobs runing on a certain [[docker]] container, for example, may be quite tricky (see below). Reading about this topic is not fun at all, as people use the word "crontab" in 4 very different meanings:
+* The actual `crontab` utility that you can run from a command line
+* Any sort of scheduling
+* Any sort of crontab-like file with `* * * * *` and everyhthing
+* The "main" crontab-like file that lies in the main directory of a docker image and is traditionally called just `crontab` without an extension.
 
-Setting it up on [[docker]]: `cron` is not a standard part of Ubuntu installation, so add this line to the dockerfile:
+Setting it up cron service on [[docker]]: `cron` is not a standard part of Ubuntu installation, so add this line to the dockerfile:
 ```docker
 ADD crontab /etc/cron.d/my-cron-file # Copies the prepared crontab file and renames it
 RUN chmod 0644 /etc/cron.d/my-cron-file
 RUN crontab /etc/cron.d/my-cron-file # This adds cron job via the crontab utility
 ENTRYPOINT ["cron", "-f"]  # Starts the cron service
 ```
-Here `/etc/cron.d/` is a traditional **drop-in** directory.
+Here `/etc/cron.d/` is a traditional **drop-in** directory. Note that we are copying the "default crontab-like file that happens to be named crontab" into a folder (`/etc/cron.d/`) that the `cron` service routinely checks, and from where it picks up cron-like jobs.
 
-Checking if the service works; stopping and restarting the service:
+Checking if the `cron` service works; stopping and restarting the service:
 ```bash
 service cron status
 service cron stop
 service cron start
 ```
 
-`cron` daemon (service) tries to run all jobs specified in any of whole set of folders. There's the drop-in folder + there are daily / hourly etc. folders + there's (or rather, there may be) an active `crontab` utility cron file set up for this user. And then there may also be different users. Collecting and checking all currently active cron jobs is a non-trivial task.
+Unfortinutely, even if the service runs, it does not actually mean that it does something useful (that it runs any jobs), and there's no simple way to tell. Normally, `cron` daemon (service) tries to run all jobs described in any of whole set of folders. The problem is that if the crontab is broken (and it's enough to have one stray character to break it), then all jobs will fail. One way to check if the crontab-file is at least syntactically correct is to load it into the crontab utility (with `crontab crontabfile`). If it's broken, it will refuse. You can also check it with `crontab -l`. Just don't forget to drop it back with `corntab -r` later. 
 
-> One of the answers below the question gives a great (and quite fancy!) bash script, combining all possible sources and storage places for cron-scheduled jobs. Illustrates just how many different places one has to consider:
+List of places where crontab-like jobs may be stored:
+* `/etc/cron.d/` - drop-in folder 
+* `/etc/cron.daily`, `cron.hourly`, `cron.monthly` and `cron.weekly` are files (not folders) with respective periodic jobs
+* `/etc/crontab` is another cron-type file, which sounds as if the crontab utility would write into it, but it doesn't seem to
+* An active set of jobs set by the `crontab` utility for each of the users active on this machine (or in this container).
+* some other unexpected locations
+
+At the link below, in one of the answers somewhat lower on the page, there's a great (and quite fancy!) bash script that combines all possible sources and storage places for cron-scheduled jobs, and outputs them as one list. The script illustrates really well just how many different places one has to consider:
 https://stackoverflow.com/questions/134906/how-do-i-list-all-cron-jobs-for-all-users
 
 Footnotes:
 * https://cronitor.io/cron-reference/how-to-list-all-cron-jobs
+* https://serverfault.com/questions/43733/is-there-a-way-to-validate-etc-crontab-s-format
 * https://www.airplane.dev/blog/docker-cron-jobs-how-to-run-cron-inside-containers
 * https://www.liquidweb.com/kb/how-to-display-list-all-jobs-in-cron-crontab/
 

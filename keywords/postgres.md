@@ -44,6 +44,21 @@ Footnotes:
 * https://www.postgresql.org/files/developer/concurrency.pdf - very nice and rich lecture slides on concurrency in PostgreSQL
 * https://www.postgresql.org/docs/current/sql-begin.html
 
+# Connection leak
+
+Connection leak is a situation when apps open connections, but never close them, letting them time-out. As every server has an upper limit on the number of connections it can have open concurrently (typically in the order of a few hundreds), with a fast-running leaking service, it's possible to throttle the server, leading to global outage of all services relying on this server.
+
+When using [[python]], a good way to avoid connection leak is to always use `with` to create a temp connection object, and then work with this object (calling `pandas.read_sql` on it etc), as `with` will cleanup after it is executed, and for a connection object cleanup includes deleting the cursor and closing the connection.
+
+```python
+with psycopg2.connect(CONNECTION_STRING) as conn:
+    cursor = conn.cursor()
+    cursor.execute(sql_query + ';')
+    conn.commit()
+```
+
+
+
 # Practical Combos
 
 ## Replacing an entire column

@@ -24,6 +24,8 @@ Analyze this:
 * https://github.com/dipanjanS/BerkeleyX-CS190.1x-Scalable-Machine-Learning
 
 Main queue
+* What does `...smth.py  >> /var/log/competitor_rentals.log 2>&1` in crontab mean
+* materialized view postgres
 * What's the difference between `grep` and `find` in [[bash]]?
 * https://www.ctl.io/developers/blog/post/dockerfile-entrypoint-vs-cmd/
 * Linux vs Ubuntu?

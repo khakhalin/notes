@@ -159,25 +159,41 @@ On dangers of naming: there's a legit package called thefuck: https://pypi.org/p
 
 # File structure and importing
 
-Main idea: it seems that one can think of `import`as of just a bunch of code being literally included from a file, at the point where `import` is called. (With a caveat that it's only loaded once, so if you call it twice nothing happens, and if you change the imported file afterit  imported, also nothing happens). It means that with numpy and such, we call them in the beginning of the script, for the `np` prefix to become available as a public class, but for class methods we can call it within the class declaration. And just have class methods written in separate files, if we so desire.
+Main idea: it seems that one can think of `import`as of just a bunch of code being literally included from a file, at the point where `import` is called. (With a caveat that it's only loaded once, so if you call it twice nothing happens, and if you change the imported file after it was imported, also nothing happens). It means that with numpy and such, we call them in the beginning of the script, for the `np` prefix to become available as a public class, but for class methods we can call it within class declaration. And we can have class methods written in separate files, if we so desire.
+
+A corollary statement about **numpy**: it's OK (and actually proper) to have `import numpy as np` in the beginning of every source file, as only the first one will be actually "run". What IS bad however is to do `from X import *` (aka **Wild import**), as it imports everything from `X`, including all of its imports. Also, it only works at the module level.
+
+## Scripting
 
 Note that it means that `import` technically runs each `py` file, so if it's written like a script (not like a bunch of declarations), it will get implemented. For modules and submodules, it runs `__init__.py` in a similar fashion.
 
-A corollary statement about **numpy**: it's OK (and actually proper) to have `import numpy as np` in the beginning of every source file.
+It has three consequences for scripting. One, it means that writing a script like a script is dangerous. The only things that can be written "just so", as "no-indent commands", are constant declarations, imports, and getting the [[logger]] handle. But none of the actual actionable code. 
 
-What IS bad however is to do `from X import *` (aka **Wild import**), as it imports everything from `X`, including all of its imports. Also, it only works at the module level.
+Second, if we want a script work as a script, we should use this trick:
+```python
+if __name__ == '__main__':
+    some.code()
+```
+This part will only work if the script is really called on its own, from the command prompt for example, as that's the only way to make `__name__` be equal to `__main__`.
+
+But third, if later you realize that you actually want to run this script from another python file, you will never be able to access this code in `__main__`, so an even better idea is to put all code inside a method, and call this method from `__main__`. But if necessary, you would also be able later to import this file, and run `file.method()` on it.
+
+Footnotes:
+* https://stackoverflow.com/questions/47524054/calling-main-from-another-file-in-python
+
+## Namespaces
 
 How to **create a namespace** to compartmentalize some functions (in a style of `utils.fun()`)? Two options: a **static class** and a **Python package**.
 * The static class is self-explanatory: just create a `py` file, and define a class with many static functions, then import this class in the main init with `from .name import name`.
 * For a package, create a folder `name`, with `__init__.py` and a bunch of files. Make this package's init contain imports of every function from each of the files (like, `from .fun import fun`), and so on. Then once you need to use package, elsewhere do `from . import name`, or maybe `from . import name as meaningful_name` if you prefer. This import needs to be done in every Python file that uses this functionality, the same way it happens for numpy, for example. This `from .` is relative import, but from the current folder.
 
 If you need to call one subpackage from another subpackage, it's a bit harder. There are two options here: good, and hacky.
-* The good one: `from ..sub2 import smth` or `from ..sub2.smth import somefun`
+* The good one: `from ..sub2 import smth` or `from ..sub2.smth import some_method`
 * Sometimes this doesn't work however, giving an error "attempted relative import beyond top-level package". An alternative is to add the upper (`..`) folder in the path variable, by doing `import sys; sys.path.append('..')`
 
 Now, if you need to import the entire package (parent package) from one of subpackages (as it happens when you do unit testing [[unit_test]]), and you don't want to use the "sys" hack, just make sure the package you are in has an `__init__.py` file (it may even be empty). Then do simple `from package_name import smth`. Apparently, the logic is the following: if you don't do relative import (`from .smth`), it tries the current folder, and the system folders (in some sequence? not sure what gets priority), but also it goes up from the current folder until the first folder without `__init__.py`, and tries this folder as well. Because in normally organized projects it corresponds to the top level `src` folder. And that's where `package_name` (the top level package) sits in this case.
 
-> I am not 100% sure I got it right, and also it's quite possible that one can avoid the hacky hack described above by adding fake `__init__.py` to the subplackage folder as well. But that needs some testing.
+> I am not 100% sure I got it right, and also it's quite possible that one can avoid the hacky hack described above by adding fake `__init__.py` to the subplackage folder as well. But that needs some testing. 🔥 
 
 Footnotes:
 * https://stackoverflow.com/questions/47561840/python-how-can-i-separate-functions-of-class-into-multiple-files
