@@ -56,15 +56,18 @@ The pluses and minuses of rebase (compared to Merge):
         * Bad: never use rebase on public branches, as rebasing rewrites history, and if somebody is synchronized with this branch, they'll get a weird conflict of histories. The only way to use it with remote branches is with hard-pushing at the end (rewriting the remote branch), which is of course an extreme measure. [1](https://www.atlassian.com/git/tutorials/merging-vs-rebasing), [2](https://medium.com/@porteneuve/getting-solid-at-git-rebase-vs-merge-4fa1a48c53aa), [3](http://gitready.com/advanced/2009/02/11/pull-with-rebase.html)
 * `git rebase --onto [target_branch] [list of branches]` - allows advanced tree manipulation that I don't understand for now: [1](https://git-scm.com/docs/git-rebase)
 * `git pull --rebase` - in practice, this command integrates unpulled (relatively recent) commits form the origin, placing them before (sic!) recent commits in the local branch. Equivalent to virtually rebasing to the origin, and then hard-pulling the result to the local branch. **The end-result is exactly as if you pulled origin before making your commits.** Note how in this case rebase also rewrite the history, but in a safer way (it can be pushed back to origin without any issues), because rebasing happens locally. [1](http://thelazylog.com/git-rebase-or-git-pull/), [2](https://www.atlassian.com/git/tutorials/merging-vs-rebasing), [3](http://gitready.com/advanced/2009/02/11/pull-with-rebase.html)
-* `git push --force` - hard push to origin, overwriting it: generally, a very dangerous idea.
-* `git fetch origin master; git reset --hard origin/master` - hard-pull from origin overwriting local files. Equally dangerous. [r1](https://stackoverflow.com/questions/1125968/how-do-i-force-git-pull-to-overwrite-local-files)
 * `git reset` - default mode of reset is `mixed`, which is not destructive (as in `hard`), but unlike `soft`, doesn't automatically stage files that were changed since that commit. Which means that it's easier to lose them. If commit isn't specified, it just resets the last commit.
 
 # Destructive commands
 * `git clean` - from the current dir, removes all files that are not under version control (all untracked files)
 * `git reset --hard [commit_id]` - reset to commit (last one by default), mercilessly discarding and erasing everything that happened since (all changes, committed and uncommited).
+* `git push --force` - hard push to origin, overwriting it: A _super_ dangerous a wrong thing to do; forbidden on all normal repos.
+* `git fetch origin master; git reset --hard origin/master` - hard-pull from origin completely erasing any local changes.
 * `git branch -d branch_name` - deletes branch
 * `git reset --hard HEAD~3` - destroy and delete last 3 commits, reset HEAD three positions lower. Note: If you want to save their content just in case, before running this, do `git branch [branch_name]`. Then when you destroy commits in the original branch, they will still be present in this new branch. Note also that rewriting history like that is a very bad idea if those commits were already shared.
+
+Footnotes:
+* https://stackoverflow.com/questions/1125968/how-do-i-force-git-pull-to-overwrite-local-files
 
 # Github
 

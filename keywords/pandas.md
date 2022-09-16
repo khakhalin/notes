@@ -147,16 +147,29 @@ The archetypical way seems to be using a `where` command, which is cool, but wei
 **Creating a new column from old columns:**
 There are least 6 different ways to do it, listed here from (arguably) best to worst:
 * `df['z']=df.x+df.y` - that's what most people use, and it's one of the fastest approaches, but it has 2 draw-backs. One, it cannot be chained (using `.` notation). And two, when used on a view, it throws a "slice assignment" warning. So after things like `.agg` it will work just fine, but after a `.query` it will cause a problem (as `.query` creates a view!).
-* `df=df.assign(z=df.x+df.y)` - this one is a bit slower, but can be chained! Many people prefer it, and it seems to be considered archetypical.
+* `df = df.assign(z = df.x + df.y)` - this one is a bit slower, but can be chained! Many people prefer it, and it seems to be considered archetypical. In its simplest form (the one shown here) it can however only reference columns that existed in the original dataframe
+* `df = df.assign(z = lambda d: d['x'] + d['y'])` - similar to the previous one, but as now it references an abstract dataframe, and not the original dataframe, this one can be fully chained, as it can reference columns created at the previous step.
 * `df.insert(2, 'z', df.x+df.y)` - the fastest of all, but cannot be chained (it's in-place!), which also means that it doesn't feel Pandas-y. Also, you cannot run it 2 times in a row (returns an error, saying that this column already exists), and you need to know where to add this new column.
 * `df.loc[:,'z']=...` - prevents slicing assignment warning, but is the slowest of all by far. May be good for updates though. Still not chainable though.
-* `df.eval('z=x+y', inplace=True)` - I read somewhere that it is supposed faster than other methods, but in my experiments it is slower than almost any other method. So not sure why anyone would use it. Also, non-chainable.
-* `df=df.eval('z=x+y', inplace=False)` - chainable, but also slower.
+* `df = df.eval('z=x+y')` - chainable, but also slower. In principle, `eval` can also be run in-place, but then of course it becomse non-chainable, while still being slow.
+
+In practice, in terms of both speed and readability (and maybe a bit of a balance between the two), I would recommend always using chaining, and thus relying on `eval` as much as possible (because of serialization it is actually quite fast). But as eval doesn't support some operations (for example, `eval`  cannot work with strings, or with `.shift`), we can always switch to `assign + lambda` for tougher cases. Assign _may_ also bring some performance boost, but this still needs to be investigated.
+
+```python
+df = (df
+      .eval("z = x + y")
+      .assign(w = lambda d: d['z'].astype(str) + ' hehe')
+      .assign(v = lambda d: d['w'].shift(-1))
+     )
+```
+
+Note that even `assign-lambda` does not support f-strings, so the best way to cast a non-string to a string seems to be use `.astype(str)`. (Using an f-string inside `eval` causes an error; inside `lambda` it doesn't cause an error, but is not serialized, and transform the entire series into one giant string.) Also, running `str(d.z)` does not cause an error, but doesn't do what we want, as it retains the type explanation at the end (debugging-style). Short of using a list comprehension, at the moment, I'm not sure how to plug f-string functionalify to pandas directly.
 
 **Refs:**
 * https://www.tutorialspoint.com/python_pandas/python_pandas_working_with_text_data.htm
 * https://pandas.pydata.org/pandas-docs/stable/user_guide/text.html
 * https://jakevdp.github.io/PythonDataScienceHandbook/03.12-performance-eval-and-query.html
+* https://datatofish.com/integers-to-strings-dataframe/
 
 # Joining and merging
 

@@ -34,6 +34,14 @@ Queries in Mongo don't look like normal expressions we all like, but rather as u
 * In set: `{'location':{'$in':['osaka', 'kyoto']}}`. Similarly, `$nin` for "not in set"
 * AND: `{'$and': [EXPR1, EXPR2]}` (where `EXPR` shoud both have their own curly brackets, e.g. `[{'location': 'osaka'}, {'weather': 'sunny'}]`). Similarly, `$or`, `$not`, `$nor`
 
+Another type of query, to find **distinct levels** for a field (kinda like unique in [[pandas]]):
+```python
+db.Collection_name.distinct(
+    field : field_name,
+    query : {'date': {'$gt': pd.to_datetime('2002-02-02')}}
+)
+```
+
 # Pymongo
 
 The most popular [[python]] package for mongo is **pymongo** . Typical use:

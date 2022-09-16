@@ -26,6 +26,7 @@ Analyze this:
 Main queue
 * What does `...smth.py  >> /var/log/competitor_rentals.log 2>&1` in crontab mean
 * materialized view postgres
+* flake8
 * What's the difference between `grep` and `find` in [[bash]]?
 * https://www.ctl.io/developers/blog/post/dockerfile-entrypoint-vs-cmd/
 * Linux vs Ubuntu?
@@ -35,6 +36,8 @@ Main queue
 * https://postgis.net/
 * proper way of setting up gitlab for pushing to it from git (just document it)
 * gitlab-ci - describe what I know, but also find some text
+* automated testing on gitlab
+* frog artifactory - some sort of package used for continuous integration (?) in SoftEng
 * curl - how to use exactly (document in [[bash]])
 * sudo
 * Missing semester - parts on [[bash]] (shell), Scripting, VIM, Linux, Command line
