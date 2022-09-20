@@ -1,7 +1,7 @@
 # Bash
 
 Parent: [[01_Tools]]
-See also: [[git]], [[docker]], [[crontab]], [[vim]]
+See also: [[git]], [[docker]], [[cron]], [[vim]]
 
 #tools
 
@@ -53,13 +53,15 @@ See also: [[git]], [[docker]], [[crontab]], [[vim]]
     * `cp file_name path/` - copy to folder
 * `mv source_file target_file` - rename file (suppots wildcards)
     * `mv file_name path/` - move file. It's obviously possible to move and rename at the same time.
-* `chmod` - change access rights. 
-    * Access codes look something like `rwxr-x---`. Here the first 3 characters (`rwx`) are the permissions to read, write, and execute that the owner of this file has. Then the same 3 letters for the group to which the current user belongs. And then 3 letters with permissions for everyone else.
-        * For folders, "read" means the ability to list the contents, and "write" means the ability to rename, create, or delete files in it. "Execute" on folders is kinda weird, but essentially, to access files one needs to have an "execute" permission on the folder itself, and all upstream folders. So typically for folders, "execute" pattern matches "read" pattern (🔥 is it true?).
-    * The full and transparent syntax goes something like `chmod u=rwx,g=rwx,o=rwx file_name` for example, with tridads for owner, group, and "others" explicitly written. But it is also possible to do binary codes on these triads in base 8, for example:
-    * `chmod 600 file_name` - makes it read/write, as 6 corresponds to `110`
-    * `chmod 400 file_name` - makes it read only even for the owner, as 4 means `100`.
-    * Note that it is possible to have write access to a file, but not to a folder that contains it. You will be able to write to the file, but not rename or delete it.
+
+**Access Rights**
+`chmod` - change access rights. Usage: `chmod code file_name`
+* Access codes look something like `rwxr-x---`. Here the first 3 characters (`rwx`) are the permissions to read, write, and execute that the owner of this file has. Then the same 3 letters for the group to which the current user belongs. And then 3 letters with permissions for everyone else.
+    * For folders, "read" means the ability to list the contents, and "write" means the ability to rename, create, or delete files in it. "Execute" on folders is kinda weird, but essentially, to access files one needs to have an "execute" permission on the folder itself, and all upstream folders. So typically for folders, "execute" pattern matches "read" pattern (🔥 is it true?).
+* The full and transparent syntax goes something like `chmod u=rwx,g=rwx,o=rwx file_name` for example, with tridads for owner, group, and "others" explicitly written. But it is also possible to do binary codes on these triads in base 8, for example:
+* `chmod 600 file_name` - makes it read/write, as 6 corresponds to `110`
+* `chmod 400 file_name` - makes it read only even for the owner, as 4 means `100`.
+* Note that it is possible to have write access to a file, but not to a folder that contains it. You will be able to write to the file, but not rename or delete it.
 
 **Destroy**
 * `rm file_name` - removes file
@@ -75,6 +77,7 @@ See also: [[git]], [[docker]], [[crontab]], [[vim]]
 * `which command_name` - tries to find the command in the PATH (see below), but instead of implementing it, returns the full path to where it was found
 * `sh file_name` - execute this file's contents as a script, in a _fork_ shell. It means that all variables that were set by this time will be inherited, but if `file_name` creates new environment variables, they will be dropped once `sh` execution is over. For example, if you change the working directory inside the `file_name` script, it won't change the working directory in the shell from which `sh` was called.
 * `source file_name` - execute this file's contents as a script in the current shell. Apparently `. file_name` is a synonym.
+* `&&` - to concat 2 commands, so that the 2nd one runs only if the 1st one succeeds
 * `>` - redirects command output
 * `>>` - redirects command output, but making it append output
 * `|` - chains commands, such as output of the left command becomes input for the right one.

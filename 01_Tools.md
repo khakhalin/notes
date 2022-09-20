@@ -13,7 +13,7 @@ Tips and notes on individual tools:
 * [[tensorflow]], [[jax]] - ML frameworks
 * [[sql]], [[postgres]] - Databases
 * [[git]] - Version control
-* [[bash]] - Scripting / terminal
+* [[bash]], [[cron]] - Scripting / terminal
 * [[docker]], [[kubernetes]], [[flask]] - Containerization tools
 * [[tableau]], [[kibana]], shiny (?) - Reporting tools
 * [[javascript]], [[julia]] - other programming languages

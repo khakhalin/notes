@@ -41,6 +41,10 @@ Lots of useful stats by district: https://www.statistik-nord.de/fileadmin/maps/z
 
 A collection of demographic and architectural maps from the city of Amsterdam: https://maps.amsterdam.nl/?LANG=en
 
+# France
+
+* Map of Paris stereotypes: https://hoodmaps.com/paris-neighborhood-map
+
 # Data sources
 
 Global Human Settlements Population density: https://ghsl.jrc.ec.europa.eu/ 
