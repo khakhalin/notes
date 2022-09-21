@@ -32,7 +32,8 @@ Queries in Mongo don't look like normal expressions we all like, but rather as u
 * Less then: `{'date':{'$lt':'2002-02-02'}}`. Similarly, `gt` (greater), `lte` (less or eq), `gte`
 * Not equals: `{'location':{'$ne':'berlin'}}`
 * In set: `{'location':{'$in':['osaka', 'kyoto']}}`. Similarly, `$nin` for "not in set"
-* AND: `{'$and': [EXPR1, EXPR2]}` (where `EXPR` shoud both have their own curly brackets, e.g. `[{'location': 'osaka'}, {'weather': 'sunny'}]`). Similarly, `$or`, `$not`, `$nor`
+* AND on the same field: just create a dict: `{'val': {'$gte':0, '$lt':5}}`
+* AND on different fields: `{'$and': [EXPR1, EXPR2]}` (where `EXPR` shoud both have their own curly brackets, e.g. `[{'location': 'osaka'}, {'weather': 'sunny'}]`). Similarly, `$or`, `$not`, `$nor`
 
 Another type of query, to find **distinct levels** for a field (kinda like unique in [[pandas]]):
 ```python

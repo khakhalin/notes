@@ -6,7 +6,7 @@ Major subtopics:
 * [[system_design]] - system design, scalability
 * [[devops]] ?
 * [[database]] - everything databases
-* [[oop]] - on good software engineering, patterns, testing etc.
+* [[coding]] - everything on coding
 
 Tips and notes on individual tools:
 * [[python]] - with separate notes for [[numpy]], [[pandas]] etc.
@@ -17,7 +17,7 @@ Tips and notes on individual tools:
 * [[docker]], [[kubernetes]], [[flask]] - Containerization tools
 * [[tableau]], [[kibana]], shiny (?) - Reporting tools
 * [[javascript]], [[julia]] - other programming languages
-* [[latex]] - misc
+* [[latex]], [[slack]] - misc
 
 Running ML projects:
 * [[ml_project_management]] - organizational principles
@@ -29,25 +29,8 @@ Project management and knowledge management:
 * [[scrum]] - the methodology
 * [[zettelkasten]] - how to properly create and support this knowledge base
 
-# Good coding habits
-
-* Keep code clean (not smelly). Types of **smells** ([ref](https://www.thoughtworks.com/insights/blog/coding-habits-data-scientists)):
-    1. Bad variable names (Remember: a long name is always better than a long comment!)
-    2. Functions that do many things instead of one thing
-    3. Code repetition
-    4. Magic values (hard-coded values like 256, 0.9 etc.)
-    5. Dead code (commented out, inconsequential)
-    6. Print statements everywhere (ruins of abandoned debugging)
- 
-Instead:
-* Write unit tests, and start with tests (aka test-driven development, see [[unit_test]])
-* Make small and frequent commits
-* Methods and functions:
-    * should be small (~20 lines = 1 screen; better lesst than that), 
-    * do one thing, 
-    * at one level of abstraction (like, it shouldn't combine high-level processing of an object, and low-level processing of its parts; it should be dealt with by a hierarchy of functions, not raw code in one function)
-    * have few arguments (ideally, 0-2)
-    * avoid flags (`also_do_this=True`); consider writing 2 functions instead (_hmm? Is it true, and why? Not sure I necessarily understand how this is a help._)
+Other lifehacks:
+* [[mac]] - how to make mac behave almost like a normal computer
 
 # Misc tools
 

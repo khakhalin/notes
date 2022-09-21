@@ -1,7 +1,7 @@
-# Unit testing and continuous integration for Python & Data Science
+# Testing and continuous integration for Python & Data Science
 
-Parents: [[oop]], [[01_Tools]]
-See also: [[python]], [[design_pattern]], [[ml_lore]] - some examples of unit tests for ML
+Parents: [[01_Tools]] / [[oop]]
+See also: [[python]], [[design_pattern]], [[ml_lore]], [[coding]] - some examples of unit tests for ML
 
 #tools #coding #testing #oop
 
