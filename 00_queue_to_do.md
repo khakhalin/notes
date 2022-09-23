@@ -29,11 +29,12 @@ Main queue
 * flake8
 * What's the difference between `grep` and `find` in [[bash]]?
 * https://www.ctl.io/developers/blog/post/dockerfile-entrypoint-vs-cmd/
-* Linux vs Ubuntu?
+* Linux vs Ubuntu? What's the difference?
 * write to [[kubernetes]] about "sealed secrets", while I can still remember how to make them
 * Time-series prediction with trees: https://www.naturalspublishing.com/files/published/l259iab891zec2.pdf
 * Read Google Python style guide, it's fun: https://google.github.io/styleguide/pyguide.html
 * https://postgis.net/
+* LightGBM https://en.wikipedia.org/wiki/LightGBM
 * proper way of setting up gitlab for pushing to it from git (just document it)
 * gitlab-ci - describe what I know, but also find some text
 * automated testing on gitlab
@@ -53,6 +54,7 @@ Main queue
 * LODs for [[tableau]] - read and document this: https://www.flerlagetwins.com/2020/02/lod-uses.html
 * Read this on [[tableau]]: https://vizpainter.com/
 * what is [[devops]] actually, canonically?
+* [[dbt]]
 * Learn to have category column in pd
 * microservices - what they actually are
     * Intro by James Quigley: https://www.youtube.com/watch?v=1xo-0gCVhTU
@@ -61,8 +63,9 @@ Main queue
     * [[docker]] and [[kubernetes]]: https://www.youtube.com/watch?v=u8dW8DrcSmo
     * https://www.docker.com/blog/containerized-python-development-part-1/ 
 * sql things like `lead(COL, 1, default_value) over (partition by COL2 order by COL3) as NAME`
-* rds (postgres) - what makes it particularly special, compared to others?
-* Flask (allegedly flask + docker = 80% of what one needs for a typical deployment)
+* sql common table expression
+* https://en.wikipedia.org/wiki/Amazon_S3 - what is it?
+* * Flask (allegedly flask + docker = 80% of what one needs for a typical deployment)
 * how to troubleshoot Flask locally
 * Roles in Snowflake - how do they work
 * Kubernetes Cookbook (from O'Reilly) - maybe find it and leaf through it?

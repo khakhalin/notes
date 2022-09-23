@@ -77,6 +77,11 @@ Footnotes:
 
 Apparently, one can write their own code in Tableau version of [[javascript]], and it also has something like internal restricted [[python]], but I haven't tried either yet.
 
+# Competitors
+
+Apache Superset
+https://en.wikipedia.org/wiki/Apache_Superset
+
 # Refs
 
 Basic intros and tutorials:

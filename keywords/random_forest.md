@@ -5,9 +5,13 @@
 Parent: [[05_Ensembles]]
 Related: [[bagging]], [[boosting]]
 
-The idea: construct many full trees, by bagging (generating partial data with subsetting, aka **sample with replacement**), but also by only considering a random subset of features at every split, aka **feature bagging**, aka **Random subspace method**. Typically, we use √p features out of p total, or something like max(5, p/3) (according to Wikipedia). This is an improvement upon bagging, as it makes trees less correlated, and way more diverse. In this approach, trees are always built to maximal depth, which makes every individual tree quite overfit, but it's OK, as there are many of them. All trees have an equal weight in the final classification.
+The idea: construct many alterantive full trees, by 
+1) **data bagging** - generating partial data with subsetting, aka "sampling with replacement"), and also 
+2) **feature bagging** - by only considering a random subset of features at every split (aka Random subspace method), to force a creation of many very ddifferent trees. Typically, we use √p features out of p total, or something like max(5, p/3) (according to Wikipedia). 
 
-Random forests are also great for ranging features in terms of their usefulness, as one can look into average performance of trees that use a certain feature (or use it at one of the early splits perhaps?), and compare them to the average performance of all trees in a forest (aka **Feature Importance**). Scikit-Learn, for example, computes these scores automatically.
+This mixed approach is an improvement upon pure bagging, as it makes trees less correlated, and way more diverse. Trees are always built to maximal depth, which makes every individual tree quite overfit, but it's OK, as there are a lot of them. All trees have an equal weight in the final classification.
+
+Random forests are also great for ranging features in terms of their usefulness (aka **Feature Importance**), as one can look into average performance of trees that use a certain feature (or use it at one of the early splits perhaps?), and compare them to the average performance of all trees in a forest. Scikit-Learn, for example, computes these scores automatically.
 
 # Varieties and extensions
 
@@ -17,5 +21,4 @@ Random forests are also great for ranging features in terms of their usefulness,
 
 # Refs
 
-* History of the method: https://en.wikipedia.org/wiki/Random_forest
-* 
+* https://en.wikipedia.org/wiki/Random_forest
