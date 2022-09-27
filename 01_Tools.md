@@ -4,7 +4,7 @@
 
 Major subtopics:
 * [[system_design]] - system design, scalability
-* [[devops]] ?
+* [[devops]] (and mlops)
 * [[database]] - everything databases
 * [[coding]] - everything on coding
 

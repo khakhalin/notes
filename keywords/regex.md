@@ -1,11 +1,12 @@
 # Regular Expressions
 
 Parents: [[01_Tools]] / [[python]]
-Related:
+Related: [[pandas]]
 
 #tools
 
-In Python, package `re`.
+
+In Python, package `re` (also used by [[pandas]], see below for speficifs)
 
 * `a` - letter a, once
     * `a?` - same, but either 0 or 1 times
@@ -13,6 +14,10 @@ In Python, package `re`.
     * `a*` - same, but either 0 times, or more
     * `{2}`- exactly 2 repetitions
     * `{2,4}` - anything from 2 to 4 repetitions (inclusive)
+    * `{2,}` - 2 or more
+* `(a)` - letter "a" found, and captured (outputted)
+* `(?:a)` - letter "a" detected
+* `(ba)+` - a sequence "ba", repeated any number of times, and captured to the output
 * `.` - any one symbol (except the newline symbol)
 * `[abc]` - any symbol from this set, once. Combine with `?+*` to regulate how many times these symbols need to be matched. For example `[abc]+` would match `cccb`
 * `[^abc]` - any symbol except these
@@ -48,9 +53,13 @@ p = re.compile("[a-z]+")
 p.match('lala: lovely string')
 ```
 
-# Links
+When using with [[pandas]], use `.str.extract(r'(expr))` on a series, where `expr` is a regex expression.
+
+# Refs
 
 Intro: https://docs.python.org/3/howto/regex.html
+
+A really cool sandbox to play with, that both explains and traces the logic of the match: https://regex101.com/
 
 Full syntax: https://docs.python.org/3.4/library/re.html
 

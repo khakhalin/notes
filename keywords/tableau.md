@@ -70,6 +70,8 @@ And it will be shown everyehwere as "Pretty" :) Even if the editing window seems
 
 Similarly, this hack can be really useful for creating ad-hoc calculated fields: if you aren't going to reuse this field, and only need to do some cosmetic improvement once (like flip the sign, or something like that), istead of using a field directly, do something to it (like `-[X]` for example), and use this "Naming with a multiline comment" trick to give it a reasonable name.
 
+🛑 Unfortunately, it seems that renaming a field breaks all action-based filters, if you have one part of your dashboard affect some other part. One would have thought that generating a `//Pretty; [Ugly]` field would still retain the connection between `Pretty` and `Ugly`, and thus between `Ugly` and all the filters that it was involved in, but it seems that on-the-fly this connection is not established. If you create a calculated field named `Pretty`, with the same trivial formula of `[Ugly]`, then filters based on `Pretty` work. But if you do it "on the fly" (aka "in the shelf"), the on-the-fly field is shown in the action dialog, but doesn't seem to work.
+
 Footnotes:
 * https://vizpainter.com/10-things-you-didnt-know-about-ad-hoc-calculations-in-tableau-9/
 
