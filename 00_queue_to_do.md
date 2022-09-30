@@ -24,7 +24,8 @@ Analyze this:
 * https://github.com/dipanjanS/BerkeleyX-CS190.1x-Scalable-Machine-Learning
 
 Main queue
-* What does `...smth.py  >> /var/log/competitor_rentals.log 2>&1` in crontab mean
+* What does `.bfill(axis=1)[0]` in the end of `str.extract()` regex actually mean? Document.
+* What does `...smth.py  >> /var/log/competitor_rentals.log 2>&1` in crontab mean (the last 4 digits, that is)
 * materialized view postgres
 * flake8
 * What's the difference between `grep` and `find` in [[bash]]?
@@ -45,6 +46,7 @@ Main queue
 * ssh
 * jump server
 * tunnel (?) - in the ssh / linux context
+* https://regex101.com/quiz
 * brew
 * vim
 * json and swagger
@@ -55,6 +57,7 @@ Main queue
 * Read this on [[tableau]]: https://vizpainter.com/
 * what is [[devops]] actually, canonically?
 * [[dbt]]
+* Read a bit about gdpr, create an article
 * Learn to have category column in pd
 * microservices - what they actually are
     * Intro by James Quigley: https://www.youtube.com/watch?v=1xo-0gCVhTU

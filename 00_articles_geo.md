@@ -1,15 +1,17 @@
 # To-read GIS and mobility
 
+See also: [[gis]], [[mobility]], [[urbanism]], [[maps]]
+
 #bib #gis #geo #todo
 
-See also: [[gis]], [[mobility]], [[urbanism]], [[maps]]
 
 ### Courses
 * Geospatial Data Science: https://github.com/mszell/geospatialdatascience
 * Look through these videos (about geopandas mostly): https://www.youtube.com/c/OpenGeoHubFoundation
 
 ### General queue
-* geodesic projections - move existing stuff, but also populate a to-read list
+
+* Look through this wiki, identify most interesting topics: https://www.transitwiki.org/TransitWiki/index.php/Table_of_Contents
 * Read about this Google open-source grid (S2 square grid): is it even good for my purposes?
 * http://michael.szell.net/downloads/talk_szell2021mcb.pdf
 * Hexagonal universal grid from Uber:

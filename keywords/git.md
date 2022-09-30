@@ -76,10 +76,10 @@ Footnotes:
 As github switched to using tokens, go here to generate a token: https://github.com/settings/tokens
 
 Then type this for the git repo:
-`git remote set-url origin https://<githubtoken>@github.com/<username>/<repositoryname>.git`
+`git remote set-url origin https://<githubtoken>@github.com/<username>/<repositoryname>`
 For these contributions to show on the main page, make sure your user email is set up correctly. This can be done locally at a repo level using `git config user.email "blabla@gmail.com"`
 
-Sources: [1](https://stackoverflow.com/questions/68775869/message-support-for-password-authentication-was-removed-please-use-a-personal)
+Source: https://stackoverflow.com/questions/68775869/message-support-for-password-authentication-was-removed-please-use-a-personal
 
 # Open questions
 

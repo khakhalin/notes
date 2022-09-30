@@ -53,13 +53,21 @@ p = re.compile("[a-z]+")
 p.match('lala: lovely string')
 ```
 
+# Support in Pandas
+
 When using with [[pandas]], use `.str.extract(r'(expr))` on a series, where `expr` is a regex expression.
+
+Footnotes:
+* https://stackoverflow.com/questions/61822799/using-pandas-extract-regex-with-multiple-groups
+* https://stackoverflow.com/questions/766372/python-non-greedy-regexes
+* https://pandas.pydata.org/docs/reference/api/pandas.Series.str.extract.html
 
 # Refs
 
 Intro: https://docs.python.org/3/howto/regex.html
 
 A really cool sandbox to play with, that both explains and traces the logic of the match: https://regex101.com/
+* Including this "learning quiz" that gets progressively harder: https://regex101.com/quiz
 
 Full syntax: https://docs.python.org/3.4/library/re.html
 

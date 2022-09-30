@@ -6,7 +6,7 @@ See also: [[numpy]], [[py_dates]], [[sklearn]]
 #tools #python
 
 
-# Creation and basic IO
+# Creation and IO
 
 * Creation: `DataFrame(columns=['x','y'])` (note curious capitalization)
 * `[[something]]` simply means "a list of lists". It's a type thing, not a separate syntax.
@@ -134,7 +134,7 @@ The most useful methods are called on series of Timestamps using a prefix (simil
 
 _A note on future deprecation_: apparently, the only part that will be deprecated is the `pd.datetime` class - one needs to really import `datetime.datetime` (see [[py_dates]]). All other interfaces, like `pd.to_datetime` for example will remain intact. (Refs: [1](https://gitlab.tudelft.nl/rhenning/ANTS-model/-/issues/28), [2](https://stackoverflow.com/questions/60856866/why-was-datetime-removed-from-pandas-1-0#:~:text=%22FutureWarning%3A%20The%20pandas.,Import%20from%20datetime%20module%20instead.%22))
 
-# Dataframe transformations
+# Data transformations
 
 **Applying  arbitrary functions to every element of a column**
 Several options here:
@@ -205,7 +205,7 @@ Some comments on joining and merging:
 
 For **merging multiple dataframes** at once, set indices properly, and then do `pd.concat()` with a list of dataframes, and `join=inner` (or something else) argument. See documentation for details. This looks neater, and may be faster, than consecutive merges.
 
-**Refs**
+Footnotes:
 * Documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/merging.html
 * https://stackoverflow.com/questions/53645882/pandas-merging-101
 
@@ -220,7 +220,21 @@ First group, then apply aggregation. `dfs = df.groupby('g').agg({'a': ['min', np
 
 Some useful functions: sum, mean, min, max, count, var, std, sem, first, last, nth (?).
 
-**Sorting** rows is done with `.sort_values(by='str')`, or a list of strings (column names). `ascending=True` is a default, so change if necessary.
+**Sorting** rows is done with `.sort_values(by='str')`, or a list of strings (column names). `ascending=True` by default.
+
+`transform` is a really weird method that's helpful, but also feels a bit like a cheat. Normally it is used to call a function on a dataframe, producing a dataframe of a similar shape (like, apply something to every element). But with group objects it behaves like an agg followed by a reverse-merge by grouping factors. So instead of doing something like this (summarizing by column a, then reverse-merging to a, to get a total written in every row):
+
+```python
+df = pd.DataFrame({'a': [1,2,2], 'x': [1,2,3]})
+df = df.merge(
+        df.groupby('a').sum().reset_index().set_axis(['a', 'total'], axis=1),
+        on='a', how='left'
+        )
+```  
+one can just do this, and get the same result:
+```python
+df.loc[:,'total'] = df.groupby('a')['x'].transform('sum')
+```
 
 # Pivoting
 
