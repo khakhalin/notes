@@ -9,11 +9,12 @@ See also: [[gis]]
 
 ## MDS (Mobility Data Specification)
 
-Developed in 2018 in LA to track scooters. Vehicles are assigned states (vailablek reserved, trip, inactive etc.) Providers create an API, agencies can read from it, and typically get full info about every trip all the time. Which means that it can in principle de-anonymized, and is potentially unsafe. The standard is maintained by the Open Mobility Foundation. 
+Developed in 2018 in LA to track scooters. (This is important because the standard assumes that not just vehicles ids and exact GPS locations are shared, but also the routes taken by the vehicles). Of important conceptual ideas, vehicles are assigned states (available, reserved, trip, inactive etc.) Providers are supposed create an API, agencies can read from it, and get full info about every trip, all the time. Which means that it can in principle de-anonymized, and is potentially unsafe (a well known weakest aspect of the approach). The standard is maintained by the Open Mobility Foundation. 
 
 Links:
 * https://www.transitwiki.org/TransitWiki/index.php/Mobility_Data_Specification
 * specifications: https://github.com/openmobilityfoundation/mobility-data-specification
+    * among other things, a schema for data exchange: https://github.com/openmobilityfoundation/mobility-data-specification/blob/main/provider/README.md#trips 
 
 ## CDS-M
 

@@ -24,7 +24,7 @@ LIMIT 10
 
 * `DISTINCT` - return unique results only. Can go right after select: `SELECT DISTINCT`, or can be put inside count, like in `COUNT (DISTINCT col2)`.
 * `LIKE` - search for a pattern in text; goes inside the condition: `WHERE col LIKE 'a%'`. Supports wildcards: `%` for any number of characters (including none), `_` for a single character; `[ab]` for either a or b (as in regular expressions), `[^ab]` for any character except a and b (not on all systems). In general, wildcards seem to differ a bit across systems, so double-check.
-* Depending on the version, SQL may use either `<>` or `!=` for 'not equal'. It seems that `!=` is preferred, but `<>` is older, and so is used as a legacy operator. At least in some versions, `!<` (not less than) and `!>` also exist. They seem to compare strings, in a case-sensitive manner. If a string is compared to a number, it seems there will be an attempt to convert them for comparison. It is also possible to cast a string to a different type, or to transform it (like with `LOWER`), including changing its encoding (see below). 🧿  Note that SQL uses `=` rather than `==`.
+* Depending on the version, SQL may use either `<>` or `!=` for 'not equal'. It seems that `!=` is preferred, but `<>` is older, and so is used as a legacy operator. At least in some versions, `!<` (not less than) and `!>` also exist. They seem to compare strings, in a case-sensitive manner. If a string is compared to a number, it seems there will be an attempt to convert them for comparison. It is also possible to cast a string to a different type, or to transform it (like with `LOWER`), including changing its encoding (see below). 🧿  Annoyingly, SQL uses `=` rather than `==`.
 * Precedence: arithmetic (including bitwise `~&|`) > comparisons > `NOT` > `AND` > `OR` and its friends (`LIKE`, `IN`, `BETWEEN`, `ALL`, `ANY`, `SOME`) > assignment.
 * `IN` can use either a fixed list, or a subquery.
 * `AVG`, `MIN`, `MAX` - other functions for grouped queries, similar to SUM. They can also go in the SELECT block (to be returned, instead of conditioned), and combined with aliasing.
@@ -51,11 +51,11 @@ There are lots of built-in functions; too many to list here, including math, tri
 * `RIGHT JOIN`- same as left, but reverse
 * `FULL JOIN` - combines both tables (and thus acts same as UNION describe above).
 * To imitate subtraction, do: `SELECT * FROM t1 LEFT JOIN t2 ON t1.key=t2.key WHERE t2.key is NULL;`. This way it will first try to LEFT JOIN, and maybe finds some matches, but for those rows of t1 that didn't get  a match in t2, it sets t2.key to NULL. And then we immediately filter these rows.
-* Something like a self-join is also possible, using syntax with aliasing: `SELECT a.name AS name1, b.name AS name2 FROM table1 AS a, table1 AS b WHERE a.manager=b.id;`. In this case we'll have a list of all relations between people in an organization, all from one self-referencing table.
+* Self-joins are also possible, using syntax with aliasing: `SELECT a.name AS name1, b.name AS name2 FROM table1 AS a, table1 AS b WHERE a.manager=b.id;`. In this case we'll have a list of all managerial relations between people in an organization, all from one self-referencing table.
 
 Some logic of joining:
-* `ON` statement can technically contain any time of logic, including logical functions. So one can do something like `ON (t1.id=t2.id OR t2.name='cat')`
-* For inner and left joins, `ON` and `WHERE` are equivalent, and the order in which they are written is irrelevant. It's better to think of them as being performed after joining (even though optimizer may choose to actually perform them before joining if it doesn't change the output)
+* `ON` statement can technically contain any type of logic, including logical functions. So one can do something like `ON (t1.id=t2.id OR t2.name='cat')`
+* For inner and left joins, `ON` and `WHERE` are equivalent, and the order in which they are written is irrelevant. It's better to think of them as being performed after joining (even though optimizer will mostly likely choose to actually perform them before joining if it doesn't change the output)
 
 # Subqueries
 
