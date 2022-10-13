@@ -46,6 +46,9 @@ Footnotes:
 * `--name container_name` - sets a container name. If you don't give a container a name, it is named with a combo of two funny words.
 * `-v` creates a shared volume; syntax for the key is `-v source:dest`, where `source` is the source address in the host (linux) filesystem, and `dest` is the future address in the container. For example, doing `-v ~:/vols` binds current folder (in most cases, probably, the root folder of the etl projects) to a folder `/vols` inside the container.
 
+Which makes the following line the mostly likely way to run a container:
+`docker run -d --name my_container -v ~:/vols my_container`
+
 Other stuff:
 * `docker restart container_name` - restart a container (based on the same image, which means that you cannot update cron jobs that way, as any changes you do would be overwritten)
 * `docker rename old_name new_name` - renaming a container
@@ -60,7 +63,7 @@ Most files (like, python files to run) can be made accessible from inside a cont
 To actually copy new files from the outside to inside the container you can do this:
 `docker cp source container_name:destination`. Just make sure you know the address of your container's home folder (by running `docker exec container_name pwd`, or by looking in the Dockerfile). Note that there's a bit of inconsistency here: `docker exec container_name ls` lists you the contents of the working folder, yet `docker cp source_file container_name:` (without a folder name) copies into the root folder, not working folder.
 
-Unfortunately writing a new [[cron]] job into a cron drop-in folder that way doesn't seem to work; even if the service is stopped before you copy the file, it ruins it. Even if you overwrite this file with an identical file, it still ruins it. Online discussions claim that just adding a file via `docker cp crontab container_name:/etc/cron.d/my_cron_file` should be enough, but for me it just breaks everything. Restarting the container also doesn't help.
+Unfortunately writing a new [[cron]] job into a cron drop-in folder that way doesn't seem to work (at least for me); even if the service is stopped before I copy the file, it ruins it. Even if you overwrite this file with an identical file, it still ruins it. Online discussions claim that just adding a file via `docker cp crontab container_name:/etc/cron.d/my_cron_file` should work, but for me it breaks everything. Even restarting the container doesn't help, only rebuilding it.
 
 Note also that if you just mess with the files inside a container, it kinda goes against the idea of how containers are supposed to be used, as if a container fails, it will be (or should be) restarted from the old image, and so your changes won't be there.
 

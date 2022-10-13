@@ -24,6 +24,12 @@ The meanings of the first 7 positions are:
 6. Username (in practice, probably `root`)
 7. Then goes the actual command to be scheduled.
 
+Quite commonly (typically?) cron jobs have something like that in the end: `...smth.py >> /var/log/smth.log 2>&1`
+Here `>>` is a standard [[bash]] way of redirecting standard output (I think?) to a file (in this case, a log file). And these 4 characters at the end show that the "output stream 2" (standard error) should be merged into the "output stream 1" (standard output). And `&` is a sort of a weird escape character, only in this context (so that `1` wouldn't be interpreted as a file name). In other words, it's just "something that needs to be at the end of this row", and there's no space for iimprovization here. Just copy it from another row.
+
+Footnotes:
+* https://stackoverflow.com/questions/818255/what-does-21-mean
+
 # Crontab utility
 
 To actually make these commands execute, they should be placed somewhere in a file or a folder that cron reads. There's no need to "recompile" the jobs in any way when the file is edited, as cron checks for edits automatically. Many manuals insist that to create a crontab file one needs to run `crontab -e`, but this command just starts an interactive editor (like vim) to type crontab commands in. It may be helpful when working remotely, but if you are copying files on a remote computer, and your jobs are non-trivial, you may as well prepare a crontab file in advance. In which case, to schedule it, do `crontab crontab` (the first one is the command, the second one is a file name, if it is the filename you use). Another benefit of preparing and uploading a file in advance is that in this case running `crontab -r` by mistake doesn't ruin all your progress (coz in the `-e` workflow you don't have a reserve copy).
@@ -55,6 +61,7 @@ Checking if the `cron` service works; stopping and restarting the service:
 service cron status
 service cron stop
 service cron start
+service cron restart
 ```
 
 Unfortinutely, even if the service runs, it does not actually mean that it does something useful (that it runs any jobs), and there's no simple way to tell. Normally, `cron` daemon (service) tries to run all jobs described in any of whole set of folders. The problem is that if the crontab is broken (and it's enough to have one stray character to break it), then all jobs will fail. One way to check if the crontab-file is at least syntactically correct is to load it into the crontab utility (with `crontab crontabfile`). If it's broken, it will refuse. You can also check it with `crontab -l`. Just don't forget to drop it back with `corntab -r` later. 

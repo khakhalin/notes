@@ -58,10 +58,18 @@ See also: [[git]], [[docker]], [[cron]], [[vim]]
 `chmod` - change access rights. Usage: `chmod code file_name`
 * Access codes look something like `rwxr-x---`. Here the first 3 characters (`rwx`) are the permissions to read, write, and execute that the owner of this file has. Then the same 3 letters for the group to which the current user belongs. And then 3 letters with permissions for everyone else.
     * For folders, "read" means the ability to list the contents, and "write" means the ability to rename, create, or delete files in it. "Execute" on folders is kinda weird, but essentially, to access files one needs to have an "execute" permission on the folder itself, and all upstream folders. So typically for folders, "execute" pattern matches "read" pattern (🔥 is it true?).
-* The full and transparent syntax goes something like `chmod u=rwx,g=rwx,o=rwx file_name` for example, with tridads for owner, group, and "others" explicitly written. But it is also possible to do binary codes on these triads in base 8, for example:
-* `chmod 600 file_name` - makes it read/write, as 6 corresponds to `110`
-* `chmod 400 file_name` - makes it read only even for the owner, as 4 means `100`.
-* Note that it is possible to have write access to a file, but not to a folder that contains it. You will be able to write to the file, but not rename or delete it.
+* The full, transparent, and verbose syntax goes something like `chmod u=rwx,g=rwx,o=rwx file_name` (for example), with triads for owner, group, and "others" rights explicitly written. It is also possible to do binary codes on these triads in base 8, for example:
+    * `chmod 600 file_name` - makes it read/write, as 6 corresponds to `110`
+    * `chmod 400 file_name` - makes it read only even for the owner, as 4 means `100`.
+* Note that it is possible to have write access to a file, but not to a folder that contains it. In this case, you will be able to write to the file, but not rename or delete it.
+* Finally, there's a "symbolic" way of modifying existing rights. For example:
+    * `chmod g+w filename` - gives (`+`) write rights (`w`) to the "group" (`g`) set of rights
+    * `chmod a+x filename` - gives execute rigts to everyone
+    * `chmod og-w filename` - removes write rights from "other" and "group"
+    * `chmod ug=rwx filename` - sets user and group rights to read-write-execute
+
+Footnotes:vi
+* https://en.wikipedia.org/wiki/Chmod
 
 **Destroy**
 * `rm file_name` - removes file

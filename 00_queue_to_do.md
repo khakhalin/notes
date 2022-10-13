@@ -24,21 +24,13 @@ Analyze this:
 * https://github.com/dipanjanS/BerkeleyX-CS190.1x-Scalable-Machine-Learning
 
 Main queue
-* What does `.bfill(axis=1)[0]` in the end of `str.extract()` regex actually mean? Document.
-* What does `...smth.py  >> /var/log/competitor_rentals.log 2>&1` in crontab mean (the last 4 digits, that is)
-* materialized view postgres
-* flake8
+* "pin docker containers" (?) - what does this mean?
 * What's the difference between `grep` and `find` in [[bash]]?
 * https://www.ctl.io/developers/blog/post/dockerfile-entrypoint-vs-cmd/
+* write to [[kubernetes]] about "sealed secrets", and how to make them
 * Linux vs Ubuntu? What's the difference?
-* write to [[kubernetes]] about "sealed secrets", while I can still remember how to make them
-* Time-series prediction with trees: https://www.naturalspublishing.com/files/published/l259iab891zec2.pdf
-* Read Google Python style guide, it's fun: https://google.github.io/styleguide/pyguide.html
-* https://postgis.net/
-* LightGBM https://en.wikipedia.org/wiki/LightGBM
-* proper way of setting up gitlab for pushing to it from git (just document it)
+* automated testing on gitlab - read about it, figure about these stagings, continous integration
 * gitlab-ci - describe what I know, but also find some text
-* automated testing on gitlab
 * frog artifactory - some sort of package used for continuous integration (?) in SoftEng
 * curl - how to use exactly (document in [[bash]])
 * sudo
@@ -50,6 +42,15 @@ Main queue
 * brew
 * vim
 * json and swagger
+* proper way of setting up gitlab for pushing to it from git (document it)
+* materialized view postgres
+* flake8
+* What does `.bfill(axis=1)[0]` in the end of `str.extract()` regex actually mean? Document.
+* Time-series prediction with trees: https://www.naturalspublishing.com/files/published/l259iab891zec2.pdf
+* Read Google Python style guide, it's fun: https://google.github.io/styleguide/pyguide.html
+* https://postgis.net/
+* LightGBM https://en.wikipedia.org/wiki/LightGBM
+* shap values
 * move pandas stuff here (from the notes)
 * move git stuff here
 * move sql stuff here

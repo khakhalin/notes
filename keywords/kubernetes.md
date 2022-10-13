@@ -24,7 +24,7 @@ First log in to [[aws]]. 🔥
 
 `kubectl logs specific_pod_name` - See logs (those produced by a logger). The pod name can be taken from the pods list above. Note that the name in the pods list has a constant part (the beginning), and a unique part (the end) that is different for different instances, and changes when the pod restarts (?). For the log command you need the full version of the name (constant and variable), as you want to see logs of a particular instance of a pod. For some other commands below you only need the constant part, as you are scaling the number of pods, not a specific instance. (🔥 not sure the terminology is correct here)
 
-If the pod fails, you can try to summarize the reasons with `kubectl describe pods my_pod_name`
+If a pod fails, you can try to summarize the reasons with `kubectl describe pods my_pod_name`
 
 ssh into pod: `kubectl exec -it pod_name /bin/sh`
 > (Except kubctl says this format is deprecated, and one should type it differently??
