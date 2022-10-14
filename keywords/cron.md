@@ -54,7 +54,9 @@ RUN chmod 0644 /etc/cron.d/my-cron-file
 RUN crontab /etc/cron.d/my-cron-file # This adds cron job via the crontab utility
 ENTRYPOINT ["cron", "-f"]  # Starts the cron service
 ```
-Here `/etc/cron.d/` is a traditional **drop-in** directory. Note that we are copying the "default crontab-like file that happens to be named crontab" into a folder (`/etc/cron.d/`) that the `cron` service routinely checks, and from where it picks up cron-like jobs.
+Here `/etc/cron.d/` is a traditional **drop-in** directory. Note the weird tautological naming here: we are copying the "default crontab-like file that happens to be named crontab" into a folder (`/etc/cron.d/`) that the `cron` service routinely checks, and from where it picks up cron-like jobs. At no point here we run the actual `crontab` utility; we only work with the `cron` service.
+
+Note that because of security concerns`cron` will refuse to write a cron-like file in a spooling folder if it has `chmod` "write" rights set for anyone but "user". Typically, by default, files have `664` rights, and copying them over will stop the service. That's a case when it's a file having too high access rights, not too low access rights, that breaks everything.
 
 Checking if the `cron` service works; stopping and restarting the service:
 ```bash
@@ -81,6 +83,7 @@ Footnotes:
 * https://serverfault.com/questions/43733/is-there-a-way-to-validate-etc-crontab-s-format
 * https://www.airplane.dev/blog/docker-cron-jobs-how-to-run-cron-inside-containers
 * https://www.liquidweb.com/kb/how-to-display-list-all-jobs-in-cron-crontab/
+* https://stackoverflow.com/questions/70846431/cronjob-in-docker-container-not-running
 
 # Refs
 
