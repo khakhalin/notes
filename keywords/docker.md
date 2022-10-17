@@ -84,7 +84,7 @@ Footnotes:
 * https://www.quora.com/How-do-I-add-changes-to-a-docker-image-without-rebuilding-it-just-for-testing-purpose
 * https://docs.docker.com/engine/reference/commandline/commit/
 
-When inside the container, `services` command allows one to start, stop, and restart services.  `service --status-all`  lists all current services and if they are running (`+` or not `-`). For example, for [[cron]], `service cron status` gives you the status of one particular service (cron, in this case), and you can turn it on and off witn `service cron start` and `service cron stop`. And there's also `service cron reload`.
+When inside the container, `services` command allows one to start, stop, and restart services.  `service --status-all`  lists all current services and if they are running (`+` or not `-`). For example, for [[cron]], `service cron status` gives you the status of one particular service (cron, in this case), and you can turn it on and off witn `service cron start` and `service cron stop` (see [[cron]] for more details on this).
 
 ## Cleaning up
 

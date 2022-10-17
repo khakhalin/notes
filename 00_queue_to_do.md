@@ -31,6 +31,7 @@ Main queue
     * What does `commit` for docker, in relation to images, mean? Is it what I'm seeking?
     * And only if these problems are solved, then we try to solve the problem of changing cron jobs without killing everything.
 * "pin docker containers" (?) - what does this mean?
+* "helm" thing for kubernetes - some yaml autmoation for environment setup?
 * What's the difference between `grep` and `find` in [[bash]]?
 * https://www.ctl.io/developers/blog/post/dockerfile-entrypoint-vs-cmd/
 * write to [[kubernetes]] about "sealed secrets", and how to make them

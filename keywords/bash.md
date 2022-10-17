@@ -82,6 +82,7 @@ Footnotes:vi
 
 * `echo "Hi!"` - output something (see below for outputting variables)
 * `alias new_command_name='custom sequence of commands'` - creates an alias that becomes a new command
+    * It may be useful to add a bunch of good aliases to a "default" bash file that is auto-ran on startup. On some systems it may be stored at `~/.bashrc`, on modern Mac systems it's usually at `~/.zprofile` (both files would be hidden system files by default, so use `ls -a` in console, or `Ctrl Shift .` in Mac Finder).
 * `which command_name` - tries to find the command in the PATH (see below), but instead of implementing it, returns the full path to where it was found
 * `sh file_name` - execute this file's contents as a script, in a _fork_ shell. It means that all variables that were set by this time will be inherited, but if `file_name` creates new environment variables, they will be dropped once `sh` execution is over. For example, if you change the working directory inside the `file_name` script, it won't change the working directory in the shell from which `sh` was called.
 * `source file_name` - execute this file's contents as a script in the current shell. Apparently `. file_name` is a synonym.
@@ -90,7 +91,7 @@ Footnotes:vi
 * `>>` - redirects command output, but making it append output
 * `|` - chains commands, such as output of the left command becomes input for the right one.
 * `tee` - catches standard output and redirects it to the file. For example `command | tee log.txt`
-* `tar` - compressor to compress data 🔥
+* `tar` - archiver to compress data 🔥
 
 **Variables**
 * `var="whatever"` - sets a variable

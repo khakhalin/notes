@@ -54,9 +54,7 @@ RUN chmod 0644 /etc/cron.d/my-cron-file
 RUN crontab /etc/cron.d/my-cron-file # This adds cron job via the crontab utility
 ENTRYPOINT ["cron", "-f"]  # Starts the cron service
 ```
-Here `/etc/cron.d/` is a traditional **drop-in** directory. Note the weird tautological naming here: we are copying the "default crontab-like file that happens to be named crontab" into a folder (`/etc/cron.d/`) that the `cron` service routinely checks, and from where it picks up cron-like jobs. At no point here we run the actual `crontab` utility; we only work with the `cron` service.
-
-Note that because of security concerns`cron` will refuse to write a cron-like file in a spooling folder if it has `chmod` "write" rights set for anyone but "user". Typically, by default, files have `664` rights, and copying them over will stop the service. That's a case when it's a file having too high access rights, not too low access rights, that breaks everything.
+Here `/etc/cron.d/` is a traditional **drop-in** directory. Note the weird tautological naming here: we are copying the "default crontab-like file that happens to be named crontab" into a folder (`/etc/cron.d/`) that the `cron` service routinely monitors, and from where it picks up all cron-like files, regardless of the name. At no point here we run the actual `crontab` utility; we only work with the `cron` service.
 
 Checking if the `cron` service works; stopping and restarting the service:
 ```bash
@@ -64,9 +62,18 @@ service cron status
 service cron stop
 service cron start
 service cron restart
+service cron reload # allegedly reloads all files from all spooling folders
+service cron force-reload # not sure what the difference is :)
 ```
+Unfortinutely, even if the service runs, it does not actually mean that it does something useful (that it runs any jobs), and there's no simple way to tell which files it currently considers "worthy" of being executed. Normally, `cron` daemon (service) monitors all "spooling folders" every minute, reloads all valid files with valid crontab-like syntax, and tries to run all jobs described in them. But if the syntax is broken, all jobs in this file will fail. If the file has incorrect rights, it will fail as well.
 
-Unfortinutely, even if the service runs, it does not actually mean that it does something useful (that it runs any jobs), and there's no simple way to tell. Normally, `cron` daemon (service) tries to run all jobs described in any of whole set of folders. The problem is that if the crontab is broken (and it's enough to have one stray character to break it), then all jobs will fail. One way to check if the crontab-file is at least syntactically correct is to load it into the crontab utility (with `crontab crontabfile`). If it's broken, it will refuse. You can also check it with `crontab -l`. Just don't forget to drop it back with `corntab -r` later. 
+One way to check if the crontab-file is at least syntactically correct is to load it into the crontab utility (with `crontab crontabfile`). If it's broken, it won't load. You can also check it with `crontab -l` if the load was successful. And then reset everything back with `corntab -r`. 
+
+🧿 Because of security concerns, cron will refuse to run a cron-like file in a spooling folder if it has `chmod` "write" rights set for anyone but "user". Typically, by default, files have `664` rights, and so they wont' be executed. That's an interesting case when it's having too high access rights, not too low access rights, that breaks everything. So you need to reduce the rights with `chmod 0644` or `chmod g-w` (see [[bash]]).
+
+🧿 Similarly, cron will refuse to run any files that are not owned by the root user. This is why naively copying an outside crontab-like file into docker with `docker cp source_file container_name:path/` won't work, even if the file has correct `chmod` rights: after you copy it, the file won't belong to `root`, but to some other user, and so will be ignored. There are two options here:
+1. Either immediately after copying the file, change its owner with `chown` (using `docker exec')
+2. Or use `docker exec container_name cp ...` to reach to a file from inside a container, assuming that you have set up a shared volume using `docker run -v` when creating a container, and so now can reach to the outside from inside. See [[docker]] for more details on this.
 
 List of places where crontab-like jobs may be stored:
 * `/etc/cron.d/` - drop-in folder 
@@ -84,6 +91,9 @@ Footnotes:
 * https://www.airplane.dev/blog/docker-cron-jobs-how-to-run-cron-inside-containers
 * https://www.liquidweb.com/kb/how-to-display-list-all-jobs-in-cron-crontab/
 * https://stackoverflow.com/questions/70846431/cronjob-in-docker-container-not-running
+* https://unix.stackexchange.com/questions/487064/crontab-changes-not-working
+* https://unix.stackexchange.com/questions/478968/can-i-manually-create-and-edit-var-spool-cron-crontabs-t-without-crontab-e
+* https://stackoverflow.com/questions/10193788/restarting-cron-after-changing-crontab-file
 
 # Refs
 
