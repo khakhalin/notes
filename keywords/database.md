@@ -4,6 +4,7 @@ Parents: [[01_Tools]], [[system_design]]
 
 #tools #bib #db
 
+
 See also:
 * [[data_wh]] - Data Warehouse
 * [[nosql]] - a conceptual alternative to tables
@@ -13,6 +14,7 @@ Subtopics:
 * [[sql]] - about the language
 * [[mongo]] - fav nosql
 * [[postgres]] - for realtme applications
+* [[databricks]]
 
 # Principles and guarantees
 

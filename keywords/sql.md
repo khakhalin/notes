@@ -36,13 +36,25 @@ LIMIT 10
 * `OFFSET 1` - a rather rare thing that goes in the same  part as `LIMIT`, and makes the query return not the rows that were found, but rows that are offset from this rows by this number.
 * `UNION`, `INTERSECT`, `EXCEPT` - Logical operations on selects. Usage: `SELECT * FROM table1 UNION SELECT * FROM table 2;`. The tables should match in terms of their columns, otherwise it'll break (use JOINs if the tables don't match perfectly). The first table that was called defines column names for the entire output. By default `UNION` only returns distinct rows, but use `UNION ALL` if duplicates are needed.
 
-## Functions on data
+## Custom on the fly columns
 
-There are lots of built-in functions; too many to list here, including math, trigonometry, string manipulation (like `LEFT`, `LEN`, `LOWER`, and so on), and what not. Some non-obvious examples:
+There are lots of built-in functions; too many to list here, including math, trigonometry, string manipulation (like `LEFT`, `LEN`, `LOWER`, and so on), and what not. But in call cases you do something like `SELECT FUN(col1) AS new_col`.
 
-* `LEAST` and `GREATEST` work across different columns within the same row, as opposed to MAX and MIN that work along all rows (entries) of one column (???)
+Some non-trivial functions:
+* `LEAST` and `GREATEST` work across different columns within the same row, as opposed to MAX and MIN that compare rows within a column.
+    * The only problem with `least(COL1, COL2)` is that for rows where one of the columns has a NULL in it, `least` will return NULL. If you want NULLs to be ignored (maybe, ideally, returned only for those rows where _all_ columns contain a NULL), you have several options (all of them annoying):
+        1. `case when COL1<COL2 then COL1 when COL2<COL1 then COL2 else NULL end` - Hard-code a system of `case` explicitly comparing columns.  A comparison with nulls doesn't return true, so this should work (?🔥 will it?). But obviously it will get increasingly messy as the number of columns increases.
+        2. `least(coalesce(COL1, 999), coalesce(COL2, 999))` - A large magic number solution + coalesce wrapper. This will obviously fail if all columns are NULL
+        3. `least(coalesce(COL1, COL2), coalesce(COL2, COL1))` - works exactly as intended, but is hard to generalize to more columns, as one needs to consider all possible wrap-arounds of this sequence (every column should be mentioned )
+        4. Do a `union` of these columns into one "virtual column", followed by grouping by some row id, and `min`.
+        5. Do a bunch of `where ... is null` and then union the results.
 * `ROUND` takes a second param for n digits, and it can be negative, so `ROUND(..., -3)` rounds to the nearest 1000, for example.
 * There are also lots of system-specific operations on dates and times. See the manual: https://www.w3schools.com/sql/sql_ref_sqlserver.asp
+
+Footnotes:
+* https://modern-sql.com/concept/null
+* https://stackoverflow.com/questions/29549036/sql-select-the-minimum-value-from-multiple-columns-with-null-values
+* https://stackoverflow.com/questions/21313770/least-value-but-not-null-in-oracle-sql
 
 # Joins
 
