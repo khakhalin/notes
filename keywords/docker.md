@@ -58,29 +58,24 @@ Footnotes:
 
 ## Updating a container
 
-Most files (like, python files to run) can be made accessible from inside a container even if they are stored outside, using a binding, as described above (key `-v` during container run). So most python code may be just updated outside the container, probably by just pulling from an external respo. The [[cron]] job already running inside the container will then run the updated scripts just fine.
+Most outside files (e.g. python files to run) can be made accessible from inside a container using a folder binding, as described above (key `-v` during `docker run`). So most python code may just be updated outside the container without any changes to the container itself, by just pulling from an external respo. The [[cron]] job already running inside the container will then run the updated scripts just fine.
 
-To actually copy new files from the outside to inside the container you can do this:
-`docker cp source container_name:destination`. Just make sure you know the address of your container's home folder (by running `docker exec container_name pwd`, or by looking in the Dockerfile). Note that there's a bit of inconsistency here: `docker exec container_name ls` lists you the contents of the working folder, yet `docker cp source_file container_name:` (without a folder name) copies into the root folder, not working folder.
+To copy new files from the outside to inside the container: `docker cp source container_name:path_inside`. Make sure you know, which folder within the container is considered your home folder (either run `docker exec container_name pwd`, or read `WORKDIR` command in the Dockerfile). Note that there's a bit of inconsistency here: `docker exec container_name ls` lists you the contents of the working folder, yet `docker cp source_file container_name:` (with empty folder name) copies into the root folder, not the working folder. Without the folder (without the `:` it won't work).
 
-Unfortunately writing a new [[cron]] job into a cron drop-in folder that way doesn't seem to work (at least for me); even if the service is stopped before I copy the file, it ruins it. Even if you overwrite this file with an identical file, it still ruins it. Online discussions claim that just adding a file via `docker cp crontab container_name:/etc/cron.d/my_cron_file` should work, but for me it breaks everything. Even restarting the container doesn't help, only rebuilding it.
+Note that afer copying a file like that, it will be owned not by root user, but by some other docker-related user. In most cases it doesn't matter, but [[cron]] for example refuses to run crontab-like files if they don't belong to the root user, so `docker cp crontab container_name:/etc/cron.d/my_cron_file` won't work just like that; it should either be followed by `chown root:root`, or copy from inside the container (not from the outside), using `docker exec` and bound folders (see [[cron]], [[bash]]).
 
-Note also that if you just mess with the files inside a container, it kinda goes against the idea of how containers are supposed to be used, as if a container fails, it will be (or should be) restarted from the old image, and so your changes won't be there.
+Once the container is updated, if it is restarted, it will be re-created form the image, and all changes will be lost. Therefore, if you like the changes, you need to commit them using `docker commit container_name image_name`.
 
 `docker ps` - See all running detached containers (seems to be a synonym to `docker container ls`). 
 `docker ps -a` - See all containers, including stopped ones, and those that were created by never changed
 `docker ps -l` - Shows the latest created container
-`docker image ls` - see all images.
+`docker image ls` - see all images
+`docker images` - same as above (but easier to remember)
 
 Footnotes:
 * https://docs.docker.com/engine/reference/commandline/container_ls/
 * https://docs.docker.com/engine/reference/commandline/image_ls/
 * https://docs.docker.com/engine/reference/commandline/ps/
-
-It seems to be possible to **commit** changes to a container by producing a new image without rebuilding the entire container from scratch. But again, for me, in the context of cron jobs, it didn't work somehow. 🔥🔥🔥🔥🔥. Allegedly the command looks liks this:
-`docker commit container_id new_image_name`, where `id` comes from the leftmost column in the `docker ps` output.
-
-Footnotes:
 * https://www.quora.com/How-do-I-add-changes-to-a-docker-image-without-rebuilding-it-just-for-testing-purpose
 * https://docs.docker.com/engine/reference/commandline/commit/
 

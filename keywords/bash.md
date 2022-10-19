@@ -68,7 +68,9 @@ See also: [[git]], [[docker]], [[cron]], [[vim]]
     * `chmod og-w filename` - removes write rights from "other" and "group"
     * `chmod ug=rwx filename` - sets user and group rights to read-write-execute
 
-Footnotes:vi
+`chown user:group file_name` - change file's owner. For example, to make a file root user-owned, `chown root:root`.
+
+Footnotes:
 * https://en.wikipedia.org/wiki/Chmod
 
 **Destroy**

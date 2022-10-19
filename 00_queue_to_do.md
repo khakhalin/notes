@@ -24,14 +24,9 @@ Analyze this:
 * https://github.com/dipanjanS/BerkeleyX-CS190.1x-Scalable-Machine-Learning
 
 Main queue
-* [[docker]] questions:
-    * Is it even possible (realistically) to change the content of a docker container after it was created? At this point we get a disagreement between the image and the actual content, right? which means that if the container is restarted, all changes will be lost. So what is the canonical way to deal with it then?
-        * (This question is, in a way, more fundamental than the question of updating a cron job description, as what's the point of updating it if it will be killed once the container is restarted… Unless we update the image somehow. If we can update the image, then the problem of having a running container again becomes critical)
-    * Maybe some keywords like "updating docker container without rebuilding it"? Essentially any way that does not involve fully rebuilding it for 20 minutes, reinstalling all pip packages etc., would be wonderful to have.
-    * What does `commit` for docker, in relation to images, mean? Is it what I'm seeking?
-    * And only if these problems are solved, then we try to solve the problem of changing cron jobs without killing everything.
 * "pin docker containers" (?) - what does this mean?
 * "helm" thing for kubernetes - some yaml autmoation for environment setup?
+* terraform and terragrunt (in the context of gitlab) - what are they?
 * What's the difference between `grep` and `find` in [[bash]]?
 * https://www.ctl.io/developers/blog/post/dockerfile-entrypoint-vs-cmd/
 * write to [[kubernetes]] about "sealed secrets", and how to make them

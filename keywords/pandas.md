@@ -235,6 +235,10 @@ one can just do this, and get the same result:
 ```python
 df.loc[:,'total'] = df.groupby('a')['x'].transform('sum')
 ```
+Combining this with `assign`, one can for example calculate subtotals in a middle of a complex chained calculation:
+```python
+df.assign(SUBTOTAL=lambda df : df.groupby('a')['x'].transform('sum'))
+```
 
 # Pivoting
 
