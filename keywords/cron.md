@@ -71,9 +71,17 @@ One way to check if the crontab-file is at least syntactically correct is to loa
 
 🧿 Because of security concerns, cron will refuse to run a cron-like file in a spooling folder if it has `chmod` "write" rights set for anyone but "user". Typically, by default, files have `664` rights, and so they wont' be executed. That's an interesting case when it's having too high access rights, not too low access rights, that breaks everything. So you need to reduce the rights with `chmod 0644` or `chmod g-w` (see [[bash]]).
 
-🧿 Similarly, cron will refuse to run any files that are not owned by the root user. This is why naively copying an outside crontab-like file into docker with `docker cp source_file container_name:path/` won't work, even if the file has correct `chmod` rights: after you copy it, the file won't belong to `root`, but to some other user, and so will be ignored. There are two options here:
-1. Either immediately after copying the file, change its owner with `chown` (using `docker exec')
+🧿 Similarly, cron will refuse to run any files that are not owned by the root user. This is why naively copying an outside crontab-like file into docker with `docker cp` won't work, even if the file has correct `chmod` rights: after you copy it, the file won't belong to `root`, but to some other user, and so will be ignored. So there are two options:
+1. Easier own:  change its owner with `chown`
 2. Or use `docker exec container_name cp ...` to reach to a file from inside a container, assuming that you have set up a shared volume using `docker run -v` when creating a container, and so now can reach to the outside from inside. See [[docker]] for more details on this.
+
+The canonical way to change the scheduled jobs therefore is:
+```bash
+chmod g-w contab_file # This needs to only be done once in entire history of this repo
+docker cp crontab_file container_name:/etc/cron.d/crontab_file
+docker exec container_name chown root:root /etc/cron.d/contab_file
+docker commit container_name image_name
+```
 
 List of places where crontab-like jobs may be stored:
 * `/etc/cron.d/` - drop-in folder 

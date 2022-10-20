@@ -60,11 +60,11 @@ Footnotes:
 
 Most outside files (e.g. python files to run) can be made accessible from inside a container using a folder binding, as described above (key `-v` during `docker run`). So most python code may just be updated outside the container without any changes to the container itself, by just pulling from an external respo. The [[cron]] job already running inside the container will then run the updated scripts just fine.
 
-To copy new files from the outside to inside the container: `docker cp source container_name:path_inside`. Make sure you know, which folder within the container is considered your home folder (either run `docker exec container_name pwd`, or read `WORKDIR` command in the Dockerfile). Note that there's a bit of inconsistency here: `docker exec container_name ls` lists you the contents of the working folder, yet `docker cp source_file container_name:` (with empty folder name) copies into the root folder, not the working folder. Without the folder (without the `:` it won't work).
+`docker cp source container_name:path_inside`- To copy new files from the outside to inside the container. Make sure you know, which folder within the container is considered your home folder (either run `docker exec container_name pwd`, or read `WORKDIR` command in the Dockerfile). Note that there's a bit of inconsistency here: `docker exec container_name ls` lists you the contents of the working folder, yet `docker cp source_file container_name:` (with empty folder name) copies into the root folder, not the working folder. Without the folder (without the `:` it won't work).
 
 Note that afer copying a file like that, it will be owned not by root user, but by some other docker-related user. In most cases it doesn't matter, but [[cron]] for example refuses to run crontab-like files if they don't belong to the root user, so `docker cp crontab container_name:/etc/cron.d/my_cron_file` won't work just like that; it should either be followed by `chown root:root`, or copy from inside the container (not from the outside), using `docker exec` and bound folders (see [[cron]], [[bash]]).
 
-Once the container is updated, if it is restarted, it will be re-created form the image, and all changes will be lost. Therefore, if you like the changes, you need to commit them using `docker commit container_name image_name`.
+`docker commit container_name image_name` - Once the container is updated, if it is restarted, it will be re-created form the image, and all changes will be lost. Therefore, if you like the changes, you need to commit them.
 
 `docker ps` - See all running detached containers (seems to be a synonym to `docker container ls`). 
 `docker ps -a` - See all containers, including stopped ones, and those that were created by never changed

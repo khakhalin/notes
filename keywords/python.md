@@ -125,6 +125,10 @@ with Thing() as t:
 
 # Code Style
 
+* https://hackernoon.com/the-art-of-naming-variables-52f44de00aad
+* Google style guide: https://google.github.io/styleguide/pyguide.html
+* PEP: https://peps.python.org/pep-0008/
+
 ### Naming
 
 All of these advices are Python-specific:
@@ -148,11 +152,9 @@ if __name__ == '__main__':
 ```
 * Smuggle code from Jupyter to classes as soon as possible (Jupyter only for prototyping, reporting, and use case)
 
-Footnotes:
-* https://hackernoon.com/the-art-of-naming-variables-52f44de00aad
-* [Google style guide](https://github.com/google/styleguide), including that [for Python in particular](https://google.github.io/styleguide/pyguide.html)
+**Other links**
 
-* Creating scikit-learn -like packages: https://scikit-learn.org/stable/developers/develop.html
+Creating scikit-learn -like packages: https://scikit-learn.org/stable/developers/develop.html
 Some interesting info on exposing parameters, careful work with random generators (to ensure replicability) and related interfaces etc.
 
 On dangers of naming: there's a legit package called thefuck: https://pypi.org/project/thefuck/
