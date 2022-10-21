@@ -24,12 +24,15 @@ Analyze this:
 * https://github.com/dipanjanS/BerkeleyX-CS190.1x-Scalable-Machine-Learning
 
 Main queue
+* how to seal secret files
 * "pin docker containers" (?) - what does this mean?
 * "helm" thing for kubernetes - some yaml autmoation for environment setup?
 * terraform and terragrunt (in the context of gitlab) - what are they?
 * What's the difference between `grep` and `find` in [[bash]]?
 * https://www.ctl.io/developers/blog/post/dockerfile-entrypoint-vs-cmd/
 * write to [[kubernetes]] about "sealed secrets", and how to make them
+* proper way of setting up gitlab for pushing to it from git (document it)
+* [[bash]] shebang lines (#!)
 * Linux vs Ubuntu? What's the difference?
 * automated testing on gitlab - read about it, figure about these stagings, continous integration
 * gitlab-ci - describe what I know, but also find some text
@@ -37,15 +40,15 @@ Main queue
 * curl - how to use exactly (document in [[bash]])
 * sudo
 * Missing semester - parts on [[bash]] (shell), Scripting, VIM, Linux, Command line
-* ssh
+* ssh - read something careful
 * jump server
 * tunnel (?) - in the ssh / linux context
 * https://regex101.com/quiz
 * brew
-* vim
 * json and swagger
-* proper way of setting up gitlab for pushing to it from git (document it)
 * materialized view postgres
+* screen tool on Linux
+* htop
 * flake8
 * What does `.bfill(axis=1)[0]` in the end of `str.extract()` regex actually mean? Document.
 * Time-series prediction with trees: https://www.naturalspublishing.com/files/published/l259iab891zec2.pdf

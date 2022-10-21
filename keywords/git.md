@@ -44,7 +44,7 @@ Todo:
 * `git branch` - show the current branch
 * `git switch branch_name` - move to a target branch (in the past, used `checkout` command).
 * `git branch branch_name` - creates a new branch.
-* `git switch -p branch_name` - an alias for creating a new branch at current HEAD, and checking it out. May be a good idea after a pull, to do all sorting in a safe branch, without endangering Master. [1](https://blog.carbonfive.com/2017/08/28/always-squash-and-rebase-your-git-commits/)
+* `git switch -c branch_name` - an alias for creating a new branch at current HEAD, and checking it out. May be a good idea after a pull, to do all sorting in a safe branch, without endangering Master. [1](https://blog.carbonfive.com/2017/08/28/always-squash-and-rebase-your-git-commits/)
 * `git branch -m old_name new_name` - rename branch
 
 The concept of a **detached HEAD**: when HEAD points to an old commit. In this situation you cannot commit anything, as there's no branch to commit to (committing can only be done to the end of a branch). If you create a new branch there in the past however, you can commit, and then you can merge these changes if you need to. [2](https://www.atlassian.com/git/tutorials/using-branches/git-checkout)
@@ -73,7 +73,7 @@ If there's a conflict, one has to cherrypick 🔥
 A basic manual on cherry-picking  in a terminal:  https://docs.gitlab.com/ee/topics/git/cherry_picking.html
 
 # Rebasing (a dangerous practice)
-* `git rebase [target_branch] <source_branch>` - recommits new commits from the current branch (the one that is currently checked out), or the source_branch (if specified), to the end of the target branch; then moves HEAD to the target branch. The semantics here is "Rebase source (or current branch) onto target". What you are doing is taking a thread of commits, and changing their base from whatever it is now, to target. 
+* `git rebase [target_branch] <source_branch>` - recommits new commits from the source branch (or the current branch, the one that is currently checked out, if a source_branch is not specified), or the source_branch (if specified), to the end of the target branch; then moves HEAD to the target branch. The semantics here is "Rebase source (or current branch) onto target". What you are doing is taking a thread of commits, and changing their base from whatever it is now, to target. 
 * The pluses and minuses of rebase (compared to Merge):
     * Good: it makes history linear, and thus clear, as there's no branching and merging. Say, if a month ago you created a side-project file in a side branch, and nobody touched it since, but kept working on the main thing, there's no need in merging this file in; you can as well just recommit it on top of master (rebase).
     * Good: allows code clean-up (e.g. described above for interactive rebase and commit squishing)
@@ -87,6 +87,7 @@ A basic manual on cherry-picking  in a terminal:  https://docs.gitlab.com/ee/top
 * `git reset` - default mode of reset is `mixed`, which is not destructive (as in `hard`), but unlike `soft`, doesn't automatically stage files that were changed since that commit. Which means that it's easier to lose them. If commit isn't specified, it just resets the last commit.
 
 # Destructive commands
+* `git branch branch_name --force` - to leave weird states like "Detached head with uncommited changes after a failed rebase"
 * `git clean` - from the current dir, removes all files that are not under version control (all untracked files)
 * `git reset --hard [commit_id]` - reset to commit (last one by default), mercilessly discarding and erasing everything that happened since (all changes, committed and uncommited).
 * `git push --force` - hard push to origin, overwriting it: A _super_ dangerous a wrong thing to do; forbidden on all normal repos.

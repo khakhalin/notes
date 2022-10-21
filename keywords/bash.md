@@ -1,16 +1,10 @@
 # Bash
 
 Parent: [[01_Tools]]
-See also: [[git]], [[docker]], [[cron]], [[vim]]
+See also: [[git]], [[docker]], [[cron]], [[vim]], [[ssh]]
 
 #tools
 
-#todo: 🔥🔥🔥
-* xargs
-* sudo
-* chmod - what does it take?
-* chown
-* shebang lines (#!)
 
 # Basics
 
@@ -41,6 +35,7 @@ See also: [[git]], [[docker]], [[cron]], [[vim]]
     * `head -30 filename` or `head -c 30 filename` to change the number of lines. 
     * Is typically used for piping, to only save the beginning of the output: `some_command | head -c 10 log.txt`
     * `tail -c 10 filename` - exactly same thing, but for the end. Is useful for piping and logging when key info comes at the end.
+* `date` - shows current date and time. Using something like `date '+%Y/%m/%d %H:%M:%S'` one can generate custom date-time strings.
 
 **Create**
 * `mkdir folder_name` - create a folder. 
@@ -82,6 +77,8 @@ Footnotes:
 
 # Scripting
 
+Typically, bash scripts have a `.sh` extension. Comments start with a `#` sign.
+
 * `echo "Hi!"` - output something (see below for outputting variables)
 * `alias new_command_name='custom sequence of commands'` - creates an alias that becomes a new command
     * It may be useful to add a bunch of good aliases to a "default" bash file that is auto-ran on startup. On some systems it may be stored at `~/.bashrc`, on modern Mac systems it's usually at `~/.zprofile` (both files would be hidden system files by default, so use `ls -a` in console, or `Ctrl Shift .` in Mac Finder).
@@ -94,6 +91,7 @@ Footnotes:
 * `|` - chains commands, such as output of the left command becomes input for the right one.
 * `tee` - catches standard output and redirects it to the file. For example `command | tee log.txt`
 * `tar` - archiver to compress data 🔥
+* `bash -c "string"` - makes bash execute whatever is written in this string
 
 **Variables**
 * `var="whatever"` - sets a variable
@@ -113,20 +111,28 @@ Environmental variables:
     * `condition || command_on_failure` - command will only be executed if condition is not met
     * `condition && command_on_success` - command will only be executed if condition is met
 
-Scheduling
+To run a very short [[python]] script, do something like `python3 -c "import sys; print(sys.argv[1])" argument` - and it will process your argument (in this case, just print it as is, but there's no limit to it, obviously.)
+
+**Other weird tools**
+* `sed "s|search_string|$target|g" file_name` - will output the content of `file_name` file, but replacing all occurences of `seach_string` with the contents of `$target` variable. There are lots of other uses of `sed`, including some in-place process (that didn't work for me somehow).
+
+Footnotes:
+ * https://askubuntu.com/questions/76808/how-do-i-use-variables-in-a-sed-command
+
+**Scheduling**
 * `at` - run a command at a later time (once)🔥
 * For more complicated scheduling of periodical jobs, see [[crontab]]
 
-Misc tips
-* `.bash_profile` (or, on modern Mac, `.zprofile`)  is a hidden file in the root folder that is executed every time the terminal is initialized (on Mac, locally, on remote Linux machine - as you connect it with a terminal). Anything default can be put there.
-* Many (but by far not all) of these commands are available on Windows via **powershell**. Essentially, a linux-like interface (way more so than cmd)
-* In general, Linux and Mac machines have this central root, while Windows machines has a root for every partition (something that we call a "disk" colloquially)
+**Misc tips**
+* `.bash_profile` (or, on modern Mac, `.zprofile`)  is a hidden file in the root folder that is executed every time the terminal is initialized (on Mac, locally, on remote Linux machine - as you connect it with a terminal). Anything default can be put there (like `alias` commands, for example)
+* Many (but by far not all) of bash commands are available on Windows via **powershell**, which is a linux-like interface (way more so than cmd)
+* In general, Linux and Mac machines have a central root, while Windows has a root for every partition (something called a "drive" colloquially)
 
 # Remote connections and downloading
 
 * `scp` - same as `cp`, but for copying remotely
 * `wget options url` - to download something from the internet in a simple way using http protocol
-* `curl options url` - another way to download stuff, but upports non-http protocols. Also one can exchange info with a server, and one can send stuff with it.
+* `curl options url` - another way to download stuff, but upports non-http protocols. Also one can exchange info with a server, and one can send stuff with it. By default has a time-out of 5 minutes (but can be changed with a key).
 * `apt-get` - to update packages
     * `apt-get install ...` 🔥
     * `apt-get -y update` 🔥
