@@ -25,6 +25,7 @@ Analyze this:
 
 Main queue
 * how to seal secret files
+* what does `ps aux wwf` do?
 * "pin docker containers" (?) - what does this mean?
 * "helm" thing for kubernetes - some yaml autmoation for environment setup?
 * terraform and terragrunt (in the context of gitlab) - what are they?
@@ -43,6 +44,7 @@ Main queue
 * ssh - read something careful
 * jump server
 * tunnel (?) - in the ssh / linux context
+* what is pyspark?
 * https://regex101.com/quiz
 * brew
 * json and swagger

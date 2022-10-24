@@ -1,7 +1,7 @@
 # GIT
 
 Path: [[01_Tools]]
-See also: [[bash]], ssh
+See also: [[bash]], [[ssh]]
 
 #tools
 

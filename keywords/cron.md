@@ -16,13 +16,21 @@ The crontab file starts with setting some paths and other environmental variable
 30 4 * * 1 root python3 $CODEDIR/demo/script.py
 ```
 The meanings of the first 7 positions are:
-1. Minutes. If minutes are not empty (not `*`) while hour is empty, it will run the job every that many minutes. If minutes are not empty and hour is also non-empty, it will run the job at that time (hours:minutes). If minutes are empty, but something else is not, the value of minutes will be assumed to be :00.
-2. Hours
-3. Day of the month (1 to 31)
-4. Month
-5. Day of the week. Both 0 and 7 mean Sunday, and one can do one day, or something like `1-5` for working days, or `1,3,5` for a list.
-6. Username (in practice, probably `root`)
-7. Then goes the actual command to be scheduled.
+1. Minutes. Several options here:
+    * `* *`  - every minute
+    * `5 *` - every hour, at H:05
+    * `5 10` - at this exact hour and minute (10:05)
+    * `* 10` - every minute after 10 am (weird!)
+    * `*/10 *` - every 10 minutes
+    * `5-15 *` - every minute from 5 through 15
+    * `5-15/5 *` - every 5 minutes, starting at :05 and no later than :15 (so 3 times: at 5, 10, and 15)
+    * `6-15/5 *` - every 5 minutes, starting at :06, and no later than :15 (so 2 times: at 6 and 11)
+3. Hours (with logic similar to that described above)
+4. Day of the month (1 to 31)
+5. Month
+6. Day of the week. Both 0 and 7 mean Sunday, and one can do one day, or something like `1-5` for working days, or `1,3,5` for a list.
+7. Username (in practice, probably `root`)
+8. Then goes the actual command to be scheduled.
 
 Quite commonly (typically?) cron jobs have something like that in the end: `...smth.py >> /var/log/smth.log 2>&1`
 Here `>>` is a standard [[bash]] way of redirecting standard output (I think?) to a file (in this case, a log file). And these 4 characters at the end show that the "output stream 2" (standard error) should be merged into the "output stream 1" (standard output). And `&` is a sort of a weird escape character, only in this context (so that `1` wouldn't be interpreted as a file name). In other words, it's just "something that needs to be at the end of this row", and there's no space for iimprovization here. Just copy it from another row.
@@ -94,7 +102,6 @@ At the link below, in one of the answers somewhat lower on the page, there's a g
 https://stackoverflow.com/questions/134906/how-do-i-list-all-cron-jobs-for-all-users
 
 Footnotes:
-* https://cronitor.io/cron-reference/how-to-list-all-cron-jobs
 * https://serverfault.com/questions/43733/is-there-a-way-to-validate-etc-crontab-s-format
 * https://www.airplane.dev/blog/docker-cron-jobs-how-to-run-cron-inside-containers
 * https://www.liquidweb.com/kb/how-to-display-list-all-jobs-in-cron-crontab/
@@ -104,6 +111,9 @@ Footnotes:
 * https://stackoverflow.com/questions/10193788/restarting-cron-after-changing-crontab-file
 
 # Refs
+
+A nice cron-signature generator:
+https://cronitor.io/cron-reference/how-to-list-all-cron-jobs
 
 A decent summary intro:
 https://www.airplane.dev/blog/how-to-start-stop-and-restart-cron-jobs?gclid=CjwKCAjw0dKXBhBPEiwA2bmObalfHIylLTAP3DvhcJFd_Y4dJmVZjX2Cepp6NILHMNDzelqr2nn21xoCt5QQAvD_BwE
