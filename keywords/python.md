@@ -6,28 +6,10 @@ Path: [[01_Tools]]
 
 
 Subtopics and related:
-* [[oop]] - OOP, but obviously entirely in Python for now
+* [[oop]] - OOP, entirely Python-specific for now. Functions, scope, decorators
 * Common libraries: [[numpy]], [[pandas]], [[sklearn]], [[matplotlib]], [[tensorflow]], [[py_dates]], [[regex]], [[flask]]
 * Core tools: [[environments]], [[jupyter]]
 * [[unit_test]] - how to write unit tests correctly (in Python) 
-
-# Random tips
-
-* If in a module you start a method name with one underscore, like `_helper`, this method isn't imported on `from module import *`. Unfortunately it is still accessible if you do `import module`and address it as `module._helper()`.
-* **Ternary operator**: `x = 1 if condition else 2`.
-* Empty arrays, strings, and dicts are False, so write `if foo:` instead of `if foo!=[]:` or `if len(foo)>0:`. It's considered a good form ([proof](https://google.github.io/styleguide/pyguide.html)).
-* To add += 1 to a dict when a key may not exist, use `get()` as it allows to set a default value: `a[i] = a.get(i,0)+1`
-* To get some (or rather, first) key from a dict: `next(iter(a.keys()))`
-* To split a long line one could use `\`, but it is advised to use implicit line joining instead, which happens if brackets were open and not closed. It's better to add "unnecessary" brackets than usie a backslash.
-* **Docstring**: First constant in a declaration, starts and ends with triple double quotes `"""`, accessible via `object.__doc__` property. Minimum: one sentence, capitalized, with a full stop at the end, explaining what this function does. Don't include the name, or usage. Any other comments - lower, after an empty line. For modules, similar, at the very beginning, before any declarations. Refs: [1](https://www.python.org/dev/peps/pep-0257/), [2](https://www.pythonforbeginners.com/basics/python-docstrings)
-* With big numbers, we can write `100_000`, and it's still a number :)
-* We can do chain comparisons: `1 <= x < 3`, which is equivalent to `1<=x and x<3`.
-* To check type: either `if isinstance(x, str):` or `if type(x) is str:`
-
-How to iterate properly:
-* Sweetest way to **iterate through a dictionary**: `for key,val in d.items():`.
-* With iterable, but also having a counter: `for i,val in enumerate(vals):`
-* A mix of two is possible: `for i,(key,val) in enumerate(d.items()):`
 
 # Sets
 
@@ -59,8 +41,25 @@ How to iterate properly:
     * Left, right, and center align: `<>^`
     * Examples: `10.3f` - 10 wide with three digits after point. `010d` - 10-wide and filled with zeros. `<+20,d` - left-aligned, 20 chars wide, with comma separating thousands, and a mandatory sign upfront (+ or - depending on the sign of the value). `=>20d` - 20-wide, right-aligned, and with equality signs used instead of spaces.
 
-# Gotchas
+# Random tips and Gotchas
 
+* If in a module you start a method name with one underscore, like `_helper`, this method isn't imported on `from module import *`. Unfortunately it is still accessible if you do `import module`and address it as `module._helper()`.
+* **Ternary operator**: `x = 1 if condition else 2`.
+* Empty arrays, strings, and dicts are False, so write `if foo:` instead of `if foo!=[]:` or `if len(foo)>0:`. It's considered a good form ([proof](https://google.github.io/styleguide/pyguide.html)).
+* To add += 1 to a dict when a key may not exist, use `get()` as it allows to set a default value: `a[i] = a.get(i,0)+1`
+* To get some (or rather, first) key from a dict: `next(iter(a.keys()))`
+* To split a long line one could use `\`, but it is advised to use implicit line joining instead, which happens if brackets were open and not closed. It's better to add "unnecessary" brackets than usie a backslash.
+* **Docstring**: First constant in a declaration, starts and ends with triple double quotes `"""`, accessible via `object.__doc__` property. Minimum: one sentence, capitalized, with a full stop at the end, explaining what this function does. Don't include the name, or usage. Any other comments - lower, after an empty line. For modules, similar, at the very beginning, before any declarations. Refs: [1](https://www.python.org/dev/peps/pep-0257/), [2](https://www.pythonforbeginners.com/basics/python-docstrings)
+* With big numbers, we can write `100_000`, and it's still a number :)
+* We can do chain comparisons: `1 <= x < 3`, which is equivalent to `1<=x and x<3`.
+* To check type: either `if isinstance(x, str):` or `if type(x) is str:`
+
+How to iterate properly:
+* Sweetest way to **iterate through a dictionary**: `for key,val in d.items():`.
+* With iterable, but also having a counter: `for i,val in enumerate(vals):`
+* A mix of two is possible: `for i,(key,val) in enumerate(d.items()):`
+
+**Gotchas**
 * Objects (including empty lists `[]`) should never be used as **default arguments** for functions, as they are evaluated and instantiated only once per program (during object definition), not when methods are called! Instead use `x=None`, then `if x is None: x=[]`. It sounds cumbersome, but that's just how it is. ([ref](https://docs.python-guide.org/writing/gotchas/))
 * While it is possible to use `not a` instead of `len(a)==0` to check if an array is empty, as `[]` evaluates to False, this `if not a` is not a good idea for checking default parameters, even though `None` also evaluates to false. Because `0` also evaluates to false!! So always use `if a is None`.
 * Similarly `[{}]*3` will actually create 3 references to the SAME dict.  To create an array of empty dicts or arrays or something else, use a list comprehension.
@@ -75,12 +74,6 @@ How to iterate properly:
 **Refs:**
 * Tips from Chip Huyen: https://github.com/chiphuyen/python-is-cool
 * Nice [list of Python gotchas](https://www.toptal.com/python/top-10-mistakes-that-python-programmers-make) from Martin Chilikian
-
-# Functions
-
-**Non-local variables**: when defining function within a function, we can make local variables of the outer function become sorta "global" for the inner function, which may be handy. If you only plan to read from this variable, just refer to it as if it's global. If you plan to update it, write `nonlocal var_name` inside the inner function, as if declaring it. After that it won't be masked. 
-
-Apparently functions can have properties (as if they were in class), but that's weird, and almost always  not recommended: https://sethdandridge.com/blog/assigning-attributes-to-python-functionss
 
 # Error handling
 

@@ -26,6 +26,7 @@ Analyze this:
 Main queue
 * how to seal secret files
 * what does `ps aux wwf` do?
+* docker detached vs foreground: https://docs.docker.com/engine/reference/run/
 * "pin docker containers" (?) - what does this mean?
 * "helm" thing for kubernetes - some yaml autmoation for environment setup?
 * terraform and terragrunt (in the context of gitlab) - what are they?
@@ -34,7 +35,9 @@ Main queue
 * write to [[kubernetes]] about "sealed secrets", and how to make them
 * proper way of setting up gitlab for pushing to it from git (document it)
 * [[bash]] shebang lines (#!)
+* On logging: https://www.linkedin.com/pulse/five-philosophies-designing-logs-veronica-schmitt/
 * Linux vs Ubuntu? What's the difference?
+* MLflow introduction: https://docs.databricks.com/mlflow/end-to-end-example.html
 * automated testing on gitlab - read about it, figure about these stagings, continous integration
 * gitlab-ci - describe what I know, but also find some text
 * frog artifactory - some sort of package used for continuous integration (?) in SoftEng
@@ -44,7 +47,8 @@ Main queue
 * ssh - read something careful
 * jump server
 * tunnel (?) - in the ssh / linux context
-* what is pyspark?
+* what is pyspark? (without details for now, just the main idea)
+* LODs for [[tableau]] - read and document this: https://www.flerlagetwins.com/2020/02/lod-uses.html
 * https://regex101.com/quiz
 * brew
 * json and swagger
@@ -61,7 +65,6 @@ Main queue
 * move pandas stuff here (from the notes)
 * move git stuff here
 * move sql stuff here
-* LODs for [[tableau]] - read and document this: https://www.flerlagetwins.com/2020/02/lod-uses.html
 * Read this on [[tableau]]: https://vizpainter.com/
 * what is [[devops]] actually, canonically?
 * [[dbt]]

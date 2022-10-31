@@ -9,7 +9,7 @@ Subtopics:
 * [[design_pattern]] - best practices
 * [[unit_test]] - testing-driven development
 
-# Terminology
+# General terminology of OOP
 
 Important terms, ordered thematically, not alphabetically:
 * Dog **extends** Animal - Dog is a derived class from Animal, so any dog is a Dog, but also an Animal.
@@ -22,6 +22,12 @@ Important terms, ordered thematically, not alphabetically:
 * **Static method** - a method that is just included in the class hierarchy, but doesn't need an instance. Good for utility functions.
 
 # Specifics of OOP in Python
+
+**Non-local variables**: when defining function within a function, we can make local variables of the outer function become sorta "global" for the inner function, which may be handy. If you only plan to read from this variable, just refer to it as if it's global. If you plan to update it, write `nonlocal var_name` inside the inner function, as if declaring it. After that it won't be masked.
+🔥  Is it actually just a naive way to describe some of the "smarter" concepts listed below?
+
+Apparently functions can have properties (as if they were in class), but that's weird, and almost always  not recommended: https://sethdandridge.com/blog/assigning-attributes-to-python-functionss
+🔥  Is it actually just a naive way to describe some of the "smarter" concepts listed below?
 
 To create a **static method**, use `@staticmethod` magic immediately before declaration (before the `def` line). They obviously don't take `self` as the first argument. As "staticness" of methods is implicit in Python (via either using or not using `self` as the first argument), the `@` decorator is entirely about communicating your intent, not about changing the way the method behaves. _Is it true?_
 
@@ -45,9 +51,14 @@ Footnote:  https://realpython.com/inheritance-composition-python/
 
 **Closures**: Writing a function that returns another function. One way to use it: to bind data to the function, as if this data was hard-coded inside the function, as an alternative to either global variables, or passing data as an argument every time. Have a function that receives the data, whips out a function that uses this data, and then returns the function itself. Refs: [1](http://www.trytoprogram.com/python-programming/python-closures/), [2](https://www.programiz.com/python-programming/closure)
 
-**Decorators**: a type of a function that acts as a meta-function: takes another function as an argument, writes a helper function around it, and returns this outer helper function. Can, for example, be used to wrap a closure around a function, to sorta "automate memoization": ([ref](https://www.python-course.eu/python3_memoization.php)). According to Google style code, while they may be helpful, they aren't exactly recommended, as they tend to complicate things.
+## Decorators
 
-# Getters and setters
+Decorators are a type of a function that acts as a meta-function: takes another function as an argument, writes a helper function around it, and returns this outer helper function. Can, for example, be used to wrap a closure around a function, to sorta "automate memoization". According to Google style code, while they may be helpful, they aren't exactly recommended, as they tend to complicate things.
+
+Footnote:
+* https://www.python-course.eu/python3_memoization.php
+
+## Getters and setters
 
 The idea is to protect object properties, making them private, and channeling all outer-world interactions with them through special methods: a getter (to get the property), and a setter. The benefit here is that you can add all sorts of safety checks when the property is both assigned and returned.
 
@@ -71,7 +82,7 @@ Note also that it introduces a distinction between terms "property" and "attribu
 Footnotes:
 * https://www.python-course.eu/python3_properties.php
 
-# List of special methods for pythonic objects
+## List of special methods for pythonic objects
 
 **General:**
 * `__new__`:

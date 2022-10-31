@@ -4,11 +4,17 @@ See also: [[linguistics]], [[germany]]
 
 #side #language
 
+
+Dictionaries:
 * Best En-Ge Dict: https://www.linguee.com/
 * Etymological dictionary: https://www.dwds.de/wb/billig
+* Word collocations: https://kollokationenwoerterbuch.ch/web/
 
 A review of German grammar:
 http://www.dartmouth.edu/~deutsch/Grammatik/Grammatik.html
+
+Nomen-Verb-Verbindungen (a huge list):
+https://www.deutschkurse-passau.de/JM/images/stories/LISTEN/nomen_verb_verbindungen.pdf
 
 The good song:
 https://www.youtube.com/watch?v=vqRWMDv0r78

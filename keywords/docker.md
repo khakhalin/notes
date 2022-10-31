@@ -53,6 +53,16 @@ Footnotes:
 * https://docs.docker.com/engine/reference/run/
 * https://docs.docker.com/engine/reference/commandline/image_build/
 
+## Troubleshooting
+
+`docker ps` - See all running detached containers (seems to be a synonym to `docker container ls`). 
+`docker ps -a` - See all containers, including stopped ones, and those that were created by never changed
+`docker ps --size` - Also reports the real (not virtual) space used by every container
+`docker ps -l` - Shows the latest created container
+`docker images` - See all images
+
+When inside the container, `services` command allows one to start, stop, and restart services.  `service --status-all`  lists all current services and if they are running (`+` or not `-`). For example, for [[cron]], `service cron status` gives you the status of one particular service (cron, in this case), and you can turn it on and off witn `service cron start` and `service cron stop` (see [[cron]] for more details on this). See [[bash]] for more info on working with services.
+
 ## Updating a container
 
 Most outside files (e.g. python files to run) can be made accessible from inside a container using a folder binding, as described above (key `-v` during `docker run`). So most python code may just be updated outside the container without any changes to the container itself, by just pulling from an external respo. The [[cron]] job already running inside the container will then run the updated scripts just fine.
@@ -65,14 +75,6 @@ Note that afer copying a file like that, it will be owned not by root user, but 
 
 > This property above seems to make automation a bit tricky, as after a few commits one cannot be sure about the name of the image currently in use, no?
 
-`docker ps` - See all running detached containers (seems to be a synonym to `docker container ls`). 
-`docker ps -a` - See all containers, including stopped ones, and those that were created by never changed
-`docker ps -l` - Shows the latest created container
-`docker image ls` - see all images
-`docker images` - same as above (but easier to remember)
-
-🔥  For reasons unclear to me, if I 
-
 Footnotes:
 * https://docs.docker.com/engine/reference/commandline/container_ls/
 * https://docs.docker.com/engine/reference/commandline/image_ls/
@@ -80,8 +82,6 @@ Footnotes:
 * https://www.quora.com/How-do-I-add-changes-to-a-docker-image-without-rebuilding-it-just-for-testing-purpose
 * https://docs.docker.com/engine/reference/commandline/commit/
 * https://stackoverflow.com/questions/44222376/docker-commit-on-a-existing-image
-
-When inside the container, `services` command allows one to start, stop, and restart services.  `service --status-all`  lists all current services and if they are running (`+` or not `-`). For example, for [[cron]], `service cron status` gives you the status of one particular service (cron, in this case), and you can turn it on and off witn `service cron start` and `service cron stop` (see [[cron]] for more details on this). See [[bash]] for more info on working with services.
 
 ## Cleaning up
 
@@ -97,6 +97,8 @@ Note that containers can be addressed by image_name (in some contexts at least?)
 
 `docker image prune` - remove all "dangling" images, aka unnamed copies of existing images (? not sure I got it 🔥) 
 `docker image prune -a` - remove all unused images, aka images not referenced by any container (a stronger claim). This is dangerous in production if you use a workflow in which containers are rolled back on the previous release (older image), as this command would remove old images.
+
+🔥  For reasons unclear, both hard and soft `image prune` doesn't seem to work for me, while `rmi image_id` works. Doesn't return an error, just nothing changes.
 
 Footnotes:
  * https://stackoverflow.com/questions/45142528/what-is-a-dangling-image-and-what-is-an-unused-image
