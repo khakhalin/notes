@@ -43,6 +43,8 @@ Main queue
 * frog artifactory - some sort of package used for continuous integration (?) in SoftEng
 * curl - how to use exactly (document in [[bash]])
 * sudo
+* https://martinfleischmann.net/line-simplification-algorithms/
+* https://ianqvist.blogspot.com/2010/05/ramer-douglas-peucker-polygon.html
 * Missing semester - parts on [[bash]] (shell), Scripting, VIM, Linux, Command line
 * ssh - read something careful
 * jump server

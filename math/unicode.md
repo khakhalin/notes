@@ -41,7 +41,7 @@ Latex codes that I always forget: \sim $\sim$ , \top $\top$ .
  æÆ
  ў
  よのまて
- ꣼ꡮꡁꡇꡬ꡵ꡤꡖꡟ	ꡍꡜ ([pha](https://unicodes.smpc.io/%EA%A1%9C))
+- [ ]  ꣼ꡮꡁꡇꡬ꡵ꡤꡖꡟ	ꡍꡜ ([pha](https://unicodes.smpc.io/%EA%A1%9C))
  ꦬ꧁꧂ꧪꧺ꧴ꦟꦪꦎꦋ ([java](https://unicodes.smpc.io/%EA%A7%93), [ref](https://en.wikipedia.org/wiki/Javanese_script))
  
  𐎧𐎠𐎫 ([u](https://unicodes.smpc.io/%F0%90%8E%AB))
