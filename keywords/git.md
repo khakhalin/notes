@@ -99,6 +99,7 @@ Footnotes:
 
 # Destructive commands
 * `git branch branch_name --force` - to leave weird states like "Detached head with uncommited changes after a failed rebase"
+* `git restore .` - cancel all unstaged changes in existing files (but all new files still remain) 🔥 is there a better way?
 * `git clean` - from the current dir, removes all files that are not under version control (all untracked files)
 * `git reset --hard [commit_id]` - reset to commit (last one by default), mercilessly discarding and erasing everything that happened since (all changes, committed and uncommited).
 * `git push --force` - hard push to origin, overwriting it: A _super_ dangerous a wrong thing to do; forbidden on all normal repos.

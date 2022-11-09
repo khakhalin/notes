@@ -24,7 +24,7 @@ Analyze this:
 * https://github.com/dipanjanS/BerkeleyX-CS190.1x-Scalable-Machine-Learning
 
 Main queue
-* how to seal secret files
+* everything about k8s, stage-dependent env variables, and making sealed secrets. 
 * what does `ps aux wwf` do?
 * docker detached vs foreground: https://docs.docker.com/engine/reference/run/
 * "pin docker containers" (?) - what does this mean?
@@ -43,6 +43,9 @@ Main queue
 * frog artifactory - some sort of package used for continuous integration (?) in SoftEng
 * curl - how to use exactly (document in [[bash]])
 * sudo
+* pyspark - what is it, and how it works?
+* parquet
+* how to seal secret files
 * https://martinfleischmann.net/line-simplification-algorithms/
 * https://ianqvist.blogspot.com/2010/05/ramer-douglas-peucker-polygon.html
 * Missing semester - parts on [[bash]] (shell), Scripting, VIM, Linux, Command line
@@ -55,6 +58,7 @@ Main queue
 * brew
 * json and swagger
 * materialized view postgres
+* Look into Flask, but then actually learn SimpleAPI
 * screen tool on Linux
 * htop
 * flake8
@@ -70,6 +74,7 @@ Main queue
 * Read this on [[tableau]]: https://vizpainter.com/
 * what is [[devops]] actually, canonically?
 * [[dbt]]
+* Why everyone likes Rust so much?
 * Read a bit about gdpr, create an article
 * Learn to have category column in pd
 * microservices - what they actually are
@@ -81,8 +86,6 @@ Main queue
 * sql things like `lead(COL, 1, default_value) over (partition by COL2 order by COL3) as NAME`
 * sql common table expression
 * https://en.wikipedia.org/wiki/Amazon_S3 - what is it?
-* * Flask (allegedly flask + docker = 80% of what one needs for a typical deployment)
-* how to troubleshoot Flask locally
 * Roles in Snowflake - how do they work
 * Kubernetes Cookbook (from O'Reilly) - maybe find it and leaf through it?
 * AWS Elastic Kubernetes Service

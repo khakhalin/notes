@@ -15,6 +15,11 @@ Some usage profiles:
 
 To generate new keys (a pair of public and private keys), use `ssh-keygen -o -f path/file_name`. (🔥  _Not sure the keys are correct. Before using, actually google, as there are different standards for these keys, and some are newer than the other_)
 
+# Secure file copy
+
+To send files to a remote location we use `scp`, which is like `cp`, but secure. Basic format:
+`scp file_name user@host:path`
+
 # With version control
 
 To use [[git]] tools (like [[gitlab]] for example), and assuming that you use different keys for different purposes, you'll need to cpecify which key to use for which host. Create `~/.ssh/config` file, and write to it something like:
