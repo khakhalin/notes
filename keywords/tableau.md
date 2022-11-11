@@ -38,13 +38,13 @@ When sharing on the web, the description of a dashboard is stored as an html, wi
 
 Some paradigmatic usages:
 
-#### Calculate the average of daily maxima
+### Calculate the average of daily maxima
 
 Instead of a simple basic `MAX([value])`, write: `AVG({INCLUDE DATE([time]): MAX([value])})`
 
 In practice, this processing is probably used together with some other grouping: perhaps by `id` (the way reporting is built), and some higher-order groups of id. Which means that `INCLUDE` command adds the date to `id`, and then runs `MAX` on this granules, then `AVG` is run on these values.
 
-#### Finding latest used value for an id
+### Finding latest used value for an id
 
 In a normal world (like, in [[pandas]], for example), you would probably summarize the table, finding the last value of the target field after grouping by id and sorting by data, and then left-joined this summary table back on the full table by id. Tableau doesn't have normal joins though, but we can emulate this logic with LODs. 
 
@@ -58,6 +58,13 @@ In a normal world (like, in [[pandas]], for example), you would probably summari
 }
 ```
 Code analysis: The inner part returns `None` for non-recent values, and target value (`name` in this case) for the most recent value. Just to be on a safe side, we also calculate the most recent value separately for each `id`, although if the data is orthogonal on `time/id` dimensions, this is technically not necessary. Then it calculates `max()` on them, and real values are `>` than `none`, so they win in this battle. And finally, we match these values to `id` (the part that feels most similar to to a join, conceptually).
+
+# Maps
+
+See also: [[maps]]
+
+Refs:
+* https://www.tableau.com/blog/10-map-tips-tableau-62949 - an intresting intro to making custom maps from layers tha I haven't quite tried yet. Apparently when working with OpenStreetMap one can remove the background layer, but manually add vector components of the map (?), as described here: https://help.tableau.com/current/pro/desktop/en-us/maps_options.htm
 
 # Misc Hacks
 
