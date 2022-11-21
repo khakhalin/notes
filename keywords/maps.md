@@ -33,7 +33,7 @@ Schools
 * Interactive map of schools: https://interaktiv.morgenpost.de/schul-finder-berlin/#/
 * Database of schools: https://www.gymnasium-berlin.net/
 
-# Hamburg
+## Hamburg
 
 Lots of useful stats by district: https://www.statistik-nord.de/fileadmin/maps/zensus2011_hh/index.html
 
@@ -44,6 +44,10 @@ A collection of demographic and architectural maps from the city of Amsterdam: h
 # France
 
 * Map of Paris stereotypes: https://hoodmaps.com/paris-neighborhood-map
+
+# USA
+
+* Racial dot maps: https://googlemapsmania.blogspot.com/2022/04/the-new-racial-dot-maps-of-america.html
 
 # Data sources
 

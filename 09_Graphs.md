@@ -4,7 +4,7 @@
 
 **Graph techniques**
 * [[graph_intro]] - Basic intro to graphs
-* [[graph_th]] - Random notes on graph theory
+* graph_th - Random notes on graph theory
 * [[algos_graph]] - Classic algorithms on graphs
 * [[la_net]] - Linear algebra on graphs
 * [[graph_spectra]] -  Spectral Techniques #todo

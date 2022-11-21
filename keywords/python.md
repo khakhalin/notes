@@ -85,7 +85,7 @@ To **raise an error** do: `raise KeyError('Error Message')`, except instead of a
 * `AssertionError`: when assert fails
 * And many more: [see the list](https://docs.python.org/3/library/exceptions.html)
 
-To **handle an error**, do something like this code below. This whole traceback things creates a proper stack of exception handling (see also [[logger]])
+To **handle an error**, do something like this code below. This whole traceback things creates a proper stack of exception handling (see also [[logging]])
 ```python
 a = 0
 try:
@@ -162,7 +162,7 @@ A corollary statement about **numpy**: it's OK (and actually proper) to have `im
 
 Note that it means that `import` technically runs each `py` file, so if it's written like a script (not like a bunch of declarations), it will get implemented. For modules and submodules, it runs `__init__.py` in a similar fashion.
 
-It has three consequences for scripting. One, it means that writing a script like a script is dangerous. The only things that can be written "just so", as "no-indent commands", are constant declarations, imports, and getting the [[logger]] handle. But none of the actual actionable code. 
+It has three consequences for scripting. One, it means that writing a script like a script is dangerous. The only things that can be written "just so", as "no-indent commands", are constant declarations, imports, and getting the logger handle (see [[logging]]). But none of the actual actionable code. 
 
 Second, if we want a script work as a script, we should use this trick:
 ```python

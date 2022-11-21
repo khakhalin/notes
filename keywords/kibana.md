@@ -1,7 +1,7 @@
 # Kibana and Elasticsearch
 
 Path: [[01_Tools]]
-See also : [[tableau]], [[logger]]
+See also : [[tableau]], [[logging]]
 
 #tools #debugging
 
@@ -12,7 +12,7 @@ The most common use it to pick a source on the left (typically, a [[microservice
 
 To a get a distribution of log message sources, for example, find the field `name` on the left (assuming that your logger reports the name of the method that sent the message, which is pretty much the default behavior), and click to "visualize". At least for me, by defaut it just shows a static split by `name` values, but by adding `timestamp` as a "Horizontal axis" value on the right, it can be turned into a running stacked bar plot, or a line plot (there's a prominent chart type button on the top). Alternatively one can just drag-and-drop fields form the left into various semi-intuitive parts of the dashboard space, and then adjust details if necessary. Say, moving field to the "Vertical axis", changing "count unique" to "count", and then moving the same field again onto the bars in the middle (to turn on splitting by value), achieves the same results (stacked split graphs).
 
-Individual vizualization can be saved and added to dashboards. All dashboards seem to be visible to all users (?), and editable by all users that have a certan type of access (?).
+Individual vizualization can be saved and added to dashboards. All dashboards seem to be visible to all users (?), and editable by all users that have a certan type of access (?). 🔥 
 
 To add logs to the dashboard, go to "Discovery", adjust the search, save it as a "saved search", then go back to your dashboard, click "Add from library" button, and pick the saved search from the list. It will become a new panel.
 

@@ -45,7 +45,7 @@ Real networks are very sparse (average degree is really low).
 * For undirected graphs - simple, just see whether you can reach one node from another. For an algo, see [[union-find]]
 * For directed graphs: weak and strong connectivity. **Weak** ignores edge directions, as if the graph was undirected. **Strong** requires that you only go along the edges, and you can reach _both_ from node v1 to v2, and back. For a practical algorithm, see [[kosaraju-sharir]] algorithm.
 
-* **Bridge edge**: if you remove this edge, it breaks the graph into two unconnected components.
+* [[bridge]]: if you remove this edge, it breaks the graph into two unconnected components.
 * **Articulation node**: similar, but for a node. If you delete it, the graph breaks into unconnected parts.
 
 If a graph is not connected (can be broken into several disconnected graphs), the adjacency matrix can be represented as a block matrix $\begin{pmatrix} B & 0\\ 0 & C \end{pmatrix}$, but we may have to re-arrange lines and columns. A "barely connected" graph will have "almost zeros" in these blocks, and this logic is used for community detection.

@@ -1,4 +1,4 @@
-# Logger
+# Logging
 
 Parents:[[01_Tools]] - [[python]]
 See also: [[kibana]]

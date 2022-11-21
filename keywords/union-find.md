@@ -1,6 +1,10 @@
 # Union-find, aka Disjoint-Set
 
+Parents: [[algos]] / [[algos_graph]]
+See also: [[09_Graphs]], [[min_span_tree]]
+
 #graphs #algo
+
 
 To find each all connected components in a graph. 
 

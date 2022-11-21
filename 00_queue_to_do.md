@@ -24,7 +24,9 @@ Analyze this:
 * https://github.com/dipanjanS/BerkeleyX-CS190.1x-Scalable-Machine-Learning
 
 Main queue
-* everything about k8s, stage-dependent env variables, and making sealed secrets. 
+* https://medium.com/javarevisited/5-different-git-workflows-50f75d8783a7
+* `.gitlab-ci.yml` and all the rules 
+* everything about k8s, stage-dependent env variables, and making sealed secrets
 * what does `ps aux wwf` do?
 * docker detached vs foreground: https://docs.docker.com/engine/reference/run/
 * "pin docker containers" (?) - what does this mean?
@@ -35,7 +37,7 @@ Main queue
 * write to [[kubernetes]] about "sealed secrets", and how to make them
 * proper way of setting up gitlab for pushing to it from git (document it)
 * [[bash]] shebang lines (#!)
-* On logging: https://www.linkedin.com/pulse/five-philosophies-designing-logs-veronica-schmitt/
+* On how to log propertly: https://www.linkedin.com/pulse/five-philosophies-designing-logs-veronica-schmitt/
 * Linux vs Ubuntu? What's the difference?
 * MLflow introduction: https://docs.databricks.com/mlflow/end-to-end-example.html
 * automated testing on gitlab - read about it, figure about these stagings, continous integration
@@ -54,6 +56,7 @@ Main queue
 * tunnel (?) - in the ssh / linux context
 * what is pyspark? (without details for now, just the main idea)
 * LODs for [[tableau]] - read and document this: https://www.flerlagetwins.com/2020/02/lod-uses.html
+* In [[kibana]], how to color by log event name severety, so that 'Error' were always red? Currently I can only do top count, as as errors are less frequent, it looks almost ok, but there seems to be a better way
 * https://regex101.com/quiz
 * brew
 * json and swagger
@@ -395,7 +398,7 @@ https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-networ
 * read / watch kickstarter competition advice (on their site)
 * in a sequence, if any k elements sum to target - code from scratch quickly
 * All graph exercises from here (they are excellent!): https://algs4.cs.princeton.edu/41graph/
-    * Bridge: an edge that disconnects the graph if removed. Using DFS, find a way to check if E is a bridge in O(V+E)
+    * [[bridge]]: an edge that disconnects the graph if removed. Using DFS, find a way to check if E is a bridge in O(V+E)
     * Articulation point: same, but for a vertex (disconnects the graph if removed). Find an O(V+E) way to check if V is an articulation point.
     * Check if a graph is biconnected, aka 2 paths with diff V between any v1, v2, aka a simple cycle through any v1 v2
     * Center of a tree

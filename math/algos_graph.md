@@ -2,20 +2,22 @@
 
 Parent: [[09_Graphs]]
 
-#algo #networks
+#algo #networks #graph
 
 
-Famous algorithms:
+Useful algorithms:
+* [[union-find]] - find connected components in graph (or weakly connected in an oriented one?)
+* [[min_span_tree]] - minimal spanning tree (Prim and Kruskall)* 
+* [[Kosaraju-Sharir]] - strongly connected component of an oriented graph
 * [[dijkstra]] - Dijsktra's shortest path algorithm (from source to all nodes)
 * [[a-star]] - A* : an improvement upon Dijsktra's
 * [[floyd_warshall]] - shortest distance from all nodes to all nodes
-* [[min_span_tree]] - minimal spanning tree (Prim and Kruskall)
-* [[Kosaraju-Sharir]] - strongly connected component of an oriented graph
+* [[bridge]] - finding bridges (lonely edges connecting two components)
 
 See also:
 * [[graph_intro]] - basic introduction to graphs
 * [[la_net]] - linear algebra about graphs
-* [[graph_th]] - graph theory (more of gropu theory kind)
+* graph_th - graph theory (more of group theory kind)
 
 # Basic graph exploration
 
@@ -38,7 +40,7 @@ In general, 2 main ways to explore graphs:
 
 **Topological order** (aka topological sort): any sequence of vertex ids, such that for no directed edge A→B, vertex B is given in the sequence before vertex A. Is only possible in a **DAG** (**Directed Acyclic Graph**: a graph without  cycles), as obviously a directed cycle cannot be linearized.
 
-One can find topological order with **DFS**, if they consider the order in which DFS exploration **leaves** nodes (after processing them and all their dependencies). Except that, to get a final list, one needs to add elements to the beginning of a running list, as in a stack, rather than at the end (or add to the end, and then reverse once the run is over). It's called **reveresed postorder**: reversed because you add to the beginning of the list (aka **prepend**, instead of appending, which equivalent to writing to the end, then reading it backwards), and postorder because you do it as you leave each node, rather than as you enter them.
+One can find topological order with **DFS**, if they consider the order in which DFS exploration **leaves** nodes (after processing them and all their dependencies). Except that, to get a final list, one needs to add elements to the beginning of a running list, as in a stack, rather than at the end (or add to the end, and then reverse once the run is over). It's called **reversed postorder**: reversed because you add to the beginning of the list (aka **prepend**, instead of appending, which equivalent to writing to the end, then reading it backwards), and postorder because you do it as you leave each node, rather than as you enter them.
 
 > If a graph is not a DAG, DFS still finds something similar to topological order, at least for DAG-like parts of it. Which is useful in many applications (see below), but is referred to awkwardly as **reversed postorder**.
 

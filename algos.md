@@ -3,7 +3,7 @@
 
 Subtopics:
 * [[algos_graph]] - everything graphs
-* [[algos_trees]] - everything trees
+* [[algos_trees]] - everything trees (more data structures / search, rather than than graphs)
 * [[sorting]] algorithms
 * [[np-complete]] - P, NP, and NP-complete
 

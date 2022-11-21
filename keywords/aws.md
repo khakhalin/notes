@@ -23,7 +23,7 @@ To find all queries running on RDS that mention a certain table, or a certain da
 SELECT * FROM pg_stat_activity where query like '%target_keyword%' ORDER BY backend_start
 ```
 Then you can kill the unwanted (blocking) query using this:
-`SELECT pg_germinate_backend(<pid>)`, where `pid` is the id from the `pid` column in the table above.
+`SELECT pg_terminate_backend(<pid>)`, where `pid` is the id from the `pid` column in the table above.
 
 A version of the same query with a more readable output:
 ```sql
