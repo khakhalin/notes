@@ -24,9 +24,14 @@ Analyze this:
 * https://github.com/dipanjanS/BerkeleyX-CS190.1x-Scalable-Machine-Learning
 
 Main queue
+* move pandas stuff here (from the notes)
+* move git stuff here
+* move sql stuff here
 * https://medium.com/javarevisited/5-different-git-workflows-50f75d8783a7
+* what is pyspark?
 * `.gitlab-ci.yml` and all the rules 
 * everything about k8s, stage-dependent env variables, and making sealed secrets
+* https://github.com/jlevy/the-art-of-command-line
 * what does `ps aux wwf` do?
 * docker detached vs foreground: https://docs.docker.com/engine/reference/run/
 * "pin docker containers" (?) - what does this mean?
@@ -42,7 +47,7 @@ Main queue
 * MLflow introduction: https://docs.databricks.com/mlflow/end-to-end-example.html
 * automated testing on gitlab - read about it, figure about these stagings, continous integration
 * gitlab-ci - describe what I know, but also find some text
-* frog artifactory - some sort of package used for continuous integration (?) in SoftEng
+* frog artifactory - some sort of package used for continuous integration (?) in SoftEng? At least stub it
 * curl - how to use exactly (document in [[bash]])
 * sudo
 * pyspark - what is it, and how it works?
@@ -51,12 +56,19 @@ Main queue
 * https://martinfleischmann.net/line-simplification-algorithms/
 * https://ianqvist.blogspot.com/2010/05/ramer-douglas-peucker-polygon.html
 * Missing semester - parts on [[bash]] (shell), Scripting, VIM, Linux, Command line
-* ssh - read something careful
+* finally learn (document) SQL window functions
+* sql things like `lead(COL, 1, default_value) over (partition by COL2 order by COL3) as NAME`
+* windowed functions (newer SQL): https://mode.com/sql-tutorial/sql-window-functions/
+* common table expressions (newer SQL)
+* Finish SQL quests: https://sqlzoo.net/wiki/SUM_and_COUNT
 * jump server
 * tunnel (?) - in the ssh / linux context
 * what is pyspark? (without details for now, just the main idea)
+* Read this on [[tableau]]: https://vizpainter.com/
+* start documenting [[tableau]]. Describe INCLUDE and FIXED in particular
 * LODs for [[tableau]] - read and document this: https://www.flerlagetwins.com/2020/02/lod-uses.html
 * In [[kibana]], how to color by log event name severety, so that 'Error' were always red? Currently I can only do top count, as as errors are less frequent, it looks almost ok, but there seems to be a better way
+* How to be a programmer? (Some short textbook-like material on general principles and philosophy) https://braydie.gitbook.io/how-to-be-a-programmer/
 * https://regex101.com/quiz
 * brew
 * json and swagger
@@ -71,27 +83,19 @@ Main queue
 * https://postgis.net/
 * LightGBM https://en.wikipedia.org/wiki/LightGBM
 * shap values
-* move pandas stuff here (from the notes)
-* move git stuff here
-* move sql stuff here
-* Read this on [[tableau]]: https://vizpainter.com/
 * what is [[devops]] actually, canonically?
-* [[dbt]]
-* Why everyone likes Rust so much?
-* Read a bit about gdpr, create an article
-* Learn to have category column in pd
-* microservices - what they actually are
-    * Intro by James Quigley: https://www.youtube.com/watch?v=1xo-0gCVhTU
+* microservices - intro by James Quigley: https://www.youtube.com/watch?v=1xo-0gCVhTU
 * docker - what and how
     * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
     * [[docker]] and [[kubernetes]]: https://www.youtube.com/watch?v=u8dW8DrcSmo
     * https://www.docker.com/blog/containerized-python-development-part-1/ 
-* sql things like `lead(COL, 1, default_value) over (partition by COL2 order by COL3) as NAME`
-* sql common table expression
+* Kubernetes Cookbook (from O'Reilly) - maybe find it and leaf through it?
 * https://en.wikipedia.org/wiki/Amazon_S3 - what is it?
 * Roles in Snowflake - how do they work
-* Kubernetes Cookbook (from O'Reilly) - maybe find it and leaf through it?
-* AWS Elastic Kubernetes Service
+* [[dbt]]
+* Why everyone likes Rust so much?
+* Read a bit about gdpr, create an article
+* Learn how to have category column in pandas, test the difference
 * stream kinesis
 * python decorators (how do they work?)
 * bokeh
@@ -109,24 +113,14 @@ Main queue
 * copy a few simple sequential [[keras]] examples here
 * Check out this `categorical` type in Pandas: would it help to save space? ([ref](https://pandas.pydata.org/docs/user_guide/categorical.html))
 * Document some non-trivial points for [[shapely]]
-* start documenting [[tableau]]. Describe INCLUDE and FIXED in particular
 * geopandas - go and collect some useful patterns
 * python environments
 * conda vs pip - see [[environments]]
     * wheel (?)
 * Bash - linkedin certification
-* how to set up an etl machine (in theory)
 * Python: how to properly do importing in large packages (does root import everything from its folder?)
-* windowed functions (newer SQL): https://mode.com/sql-tutorial/sql-window-functions/
-* common table expressions (newer SQL)
-* Finish SQL quests: https://sqlzoo.net/wiki/SUM_and_COUNT
 * This text about Pandas: https://github.com/chiphuyen/just-pandas-things/blob/master/just-pandas-things.ipynb
 * How to design Twitter: https://www.youtube.com/watch?v=KmAyPUv9gOY
-* Business 
-    * pricing (read some theory on customer psychology)
-    * pricing elasticity
-    * why softmax is apparently a decent choice for decision probabilit calculations?
-    * transportation choice    * 
 * Python decorators (things like `def decorator`, `@wraps`etc)
     * Some reading: https://www.geeksforgeeks.org/python-functools-wraps-function/
     * Nice example: https://github.com/koaning/memo/blob/main/memo/_base.py
@@ -134,6 +128,7 @@ Main queue
 * collections - or whatever is this common module ppl often use with prepackaged datastructures
 * Lint (pylint) - what is it and why? It seems that it can catch errors, type mismatches etc.
 * Fun explanation of momentum in ANN convergence: https://distill.pub/2017/momentum/
+* On design patterns and whether they failed: https://www.deconstructconf.com/2017/brian-marick-patterns-failed-why-should-we-care
 * Keras checkpoints
 * Python collections: deque, Counter, defaultdict etc.
 * Python closures, why they are a thing, what's dangerous about them, and how to use them
@@ -162,7 +157,6 @@ Main queue
     * [[modularity]] - connection to eigenvalues, do
 * https://hdbscan.readthedocs.io/en/latest/how_hdbscan_works.html
 * bayesian accuracy (and bias) compared to human-level? What's the deal here? What are these questions even  about?
-* How react sites talk to SQL now?
 * Implement the pandas part of this in Echo: https://koaning.io/posts/for-loop-memo/
 * how to save sklearn models, and then load them back?
 * Ha, D., & Schmidhuber, J. (2018). World models. arXiv preprint arXiv:1803.10122.
@@ -331,7 +325,6 @@ https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-networ
 * BayesNet - what is it?
 * ICA: how does it work, and in what cases it's better than PCA
 * radix sort
-* Finish dangit git
 * Refresh hash tables (theory and implementation)
 * Refresh (maybe reimplement) red-black trees
 * LRU cash (Leetcode quest)

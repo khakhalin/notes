@@ -11,6 +11,21 @@ See also: [[gis]], [[mobility]], [[urbanism]], [[maps]]
 
 ### General queue
 
+The universal visitation law of human mobility
+https://www.nature.com/articles/s41586-021-03480-9
+
+* https://en.wikipedia.org/wiki/Location_theory
+* https://en.wikipedia.org/wiki/Central_place_theory
+
+On transportation patterns
+* pricing (read some theory on customer psychology)
+* pricing elasticity
+* why softmax is apparently a decent choice for decision probabilit calculations?
+* transportation choice - any standard models for modling this choice?
+
+Optimization Model of Taxi Fleet Size Based on GPS Tracking Data
+https://www.mdpi.com/2071-1050/11/3/731
+
 * Look through this wiki, identify most interesting topics: https://www.transitwiki.org/TransitWiki/index.php/Table_of_Contents
 * Read about this Google open-source grid (S2 square grid): is it even good for my purposes?
 * http://michael.szell.net/downloads/talk_szell2021mcb.pdf
@@ -41,3 +56,6 @@ Paying before or paying after? Timing and uncertainty in pay-what-youwant pricin
 
 Sprei, F., Habibi, S., Englund, C., Pettersson, S., Voronov, A., & Wedlin, J. (2019). Free-floating car-sharing electrification and mode displacement: Travel time and usage patterns from 12 cities in Europe and the United States. Transportation Research Part D: Transport and Environment, 71, 127-140.
 https://research.chalmers.se/publication/510282/file/510282_Fulltext.pdf
+
+Yap, W., Chang, J. H., & Biljecki, F. (2022). Incorporating networks in semantic understanding of streetscapes: Contextualising active mobility decisions. Environment and Planning B: Urban Analytics and City Science, 23998083221138832.
+[link](https://journals.sagepub.com/doi/pdf/10.1177/23998083221138832?casa_token=8MGV-jXu3L8AAAAA:cGdqX1ZgZZRROlXnzjeeNWnyiAZA3LzlgDlmZlN0gphEK5Qp40bPBEbwGZJmI493Htdi7bhcu5Ee)
