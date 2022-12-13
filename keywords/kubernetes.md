@@ -1,7 +1,7 @@
 # Kubernetes
 
 Parents: [[system_design]]
-See also: [[docker]], [[flask]], [[microservice]], [[aws]]
+See also: [[docker]], [[flask]], [[microservice]], [[aws]], [[ci]]
 
 #systems #tools
 
@@ -27,7 +27,6 @@ First log in to [[aws]] (or whatever provider than you use).
 If a pod fails, you can try to summarize the reasons with `kubectl describe pods my_pod_name`
 
 ssh into pod:
-* `kubectl exec -it pod_name /bin/sh` or 
 * `kubectl exec -it pod_name -- bash`
 
 One useful reason to ssh into the pod is to see the values of hidden secret encoded environmental variables if they are mentioned in the code as `os.environ['MY_TABLE']` constants. Which is typical, as you want to keep them as env variables so that you could run the same code in different environments (dev / int / prod), and for security reasons they may be obfuscated (aka "sealed-secrets"). So to learn them you should enter the pod, and then do this:

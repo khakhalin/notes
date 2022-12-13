@@ -73,7 +73,7 @@ Another DIY alternative is just to delete a branch at either local or remote end
 If there's a conflict, one has to cherrypick 🔥 
 A basic manual on cherry-picking  in a terminal:  https://docs.gitlab.com/ee/topics/git/cherry_picking.html
 
-# Rebasing (a dangerous practice) 🔥
+# Rebasing (a slightly dangerous practice) 🔥
 `git rebase [target_branch] <source_branch>` - recommits new commits from the source branch (or the current branch, if the source_branch is not specified), to the end of the target branch; then moves HEAD to the end. As if you were taking a fresh set of commit and changed the "base" on which they are grafted. Supposedly the typical workflow for rebase is the following: you're working on feature A; people have developed and merged feature B in master. So now you want to catch up. You do:
 ```git
 git pull my_feature
@@ -83,14 +83,16 @@ git rebase master
 git push
 ```
 
-* The pluses and minuses of rebase (compared to Merge):
-    * Good: it makes history linear, and thus clear, as there's no branching and merging. Say, if a month ago you created a side-project file in a side branch, and nobody touched it since, but kept working on the main thing, there's no need in merging this file in; you can as well just recommit it on top of master (rebase).
-    * Good: allows code clean-up (via interactive rebase and commit squishing)
-    * Bad: unlike for merging, commits are not inhereted, but are committed anew, and if branching was conceptually important, the history of it will be lost. Even worse, if b1 is rebased onto b2, and then b2 is merged back to b1, then all commits in b1 will get duplicated (they will be first  recommitted to b2 as new commits during rebasing, but then merged back).
-        * "Always merge" may be a messy option, but it's the safest one for unexperienced teams ([ref](https://www.atlassian.com/git/articles/git-team-workflows-merge-or-rebase))
-        * For example, it means that new commits in master should never be introduced into a development branch using rebase, as it would duplicate them. Rebase is only tolerable if commits are moved from "more temporary" branches towards "less temporary", or it will result in a horrible mess.
-    * Bad: If you have a conflict, you'll see contradicting commits (one adding something, the other one reverting this something back). Which will be quite hard to clean up. (But you can always do `git regabse --abort` and merge instead)
-    * Bad: never use rebase on public branches, as rebasing rewrites history, and if somebody is synchronized with this branch, they'll get a weird conflict of histories. The only way to use it with remote branches is with hard-pushing at the end (rewriting the remote branch), which is of course an extreme measure (and often forbidden anyways). [1](https://www.atlassian.com/git/tutorials/merging-vs-rebasing), [2](https://medium.com/@porteneuve/getting-solid-at-git-rebase-vs-merge-4fa1a48c53aa), [3](http://gitready.com/advanced/2009/02/11/pull-with-rebase.html)
+The pluses and minuses of rebase (compared to Merge):
+* Good: it makes history linear, and thus clear, as there's no branching and merging. Say, if a month ago you created a side-project file in a side branch, and nobody touched it since, but kept working on the main thing, there's no need in merging this file in; you can as well just recommit it on top of master (rebase).
+* Good: allows code clean-up (via interactive rebase and commit squishing)
+* Bad: unlike for merging, commits are not inhereted, but are committed anew, and if branching was conceptually important, the history of it will be lost. Even worse, if b1 is rebased onto b2, and then b2 is merged back to b1, then all commits in b1 will get duplicated (they will be first  recommitted to b2 as new commits during rebasing, but then merged back).
+    * "Always merge" may be a messy option, but it's the safest one for unexperienced teams ([ref](https://www.atlassian.com/git/articles/git-team-workflows-merge-or-rebase))
+    * For example, it means that new commits in master should never be introduced into a development branch using rebase, as it would duplicate them. Rebase is only tolerable if commits are moved from "more temporary" branches towards "less temporary", or it will result in a horrible mess.
+* Bad: If you have a conflict, you'll see contradicting commits (one adding something, the other one reverting this something back). Which will be quite hard to clean up. (But you can always do `git regabse --abort` and merge instead)
+* Bad: never use rebase on public branches, as rebasing rewrites history, and if somebody is synchronized with this branch, they'll get a weird conflict of histories. The only way to use it with remote branches is with hard-pushing at the end (rewriting the remote branch), which is of course an extreme measure (and often forbidden anyways). [1](https://www.atlassian.com/git/tutorials/merging-vs-rebasing), [2](https://medium.com/@porteneuve/getting-solid-at-git-rebase-vs-merge-4fa1a48c53aa), [3](http://gitready.com/advanced/2009/02/11/pull-with-rebase.html)
+
+Other interesting uses:
 * `git rebase --onto [target_branch] [list of branches]` - allows advanced tree manipulation that I don't understand for now: [1](https://git-scm.com/docs/git-rebase) 🔥 
 * `git pull --rebase` - in practice, this command integrates unpulled (relatively recent) commits form the origin, placing them before (sic!) recent commits in the local branch. Equivalent to virtually rebasing to the origin, and then pulling the result to the local branch. The end-result is exactly as if you pulled origin before making your commits, so it may be considered a fix for "omg I forgot to pull before committing". In this case rebase also rewrites the history (your old commits disappear, and are recommitted a new at the HEAD), but this way it is safe: it can be pushed back to origin without any issues, as rebasing happened locally, and origin haven't seen your commits yet. [1](http://thelazylog.com/git-rebase-or-git-pull/), [2](https://www.atlassian.com/git/tutorials/merging-vs-rebasing), [3](http://gitready.com/advanced/2009/02/11/pull-with-rebase.html)
 

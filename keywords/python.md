@@ -116,7 +116,7 @@ with Thing() as t:
 * another official description one: https://www.python.org/dev/peps/pep-0343/ 
 * implementing a class to support `with` statement: https://preshing.com/20110920/the-python-with-statement-by-example/
 
-# Code Style
+# CodeStyle
 
 * https://hackernoon.com/the-art-of-naming-variables-52f44de00aad
 * Google style guide: https://google.github.io/styleguide/pyguide.html

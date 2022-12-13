@@ -1,6 +1,6 @@
 # Logging
 
-Parents:[[01_Tools]] - [[python]]
+Parents:[[01_Tools]] / [[python]]
 See also: [[kibana]]
 
 #python #debugging
@@ -8,7 +8,7 @@ See also: [[kibana]]
 
 The hierarchy of logging levels: `DEBUG < INFO < WARN < ERROR < FATAL`
 
-Most logging traditionally happens at `DEBUG` level, while warnings and errors are to report bad news. `INFO` level is a bit of a mystery: supposedly, it is needed to offer a very basic markup of code behavior, to position Warnings within this markup. Some say, you should get no more 1 info-level message for every 20 debug-level messages. But it also means that one shouldn't really use `INFO` level within packages, as every function in a package may be called thousands of times during a normal script execution.
+Most logging traditionally happens at `DEBUG` level, while warnings and errors are to report bad news. `INFO` level is a bit of a mystery: supposedly, it is needed to offer a very basic markup of code behavior, to position Warnings and Errors within this markup. Some say, you should get no more 1 info-level message for every 20 debug-level messages. But it also means that one shouldn't really use `INFO` level within packages, as every function in a package may be called thousands of times during a normal script execution.
 
 Some people also position a `TRACE` level either somewhere between `DEBUG` and `INFO`, or the other way around - even lower than `DEBUG`. A classic python logger doesn't support this level though.
 

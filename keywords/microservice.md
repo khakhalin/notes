@@ -1,7 +1,7 @@
 # Microservice
 
 Parents: [[system_design]]
-See: [[docker]], [[kubernetes]]
+See: [[docker]], [[kubernetes]], [[ci]]
 
 #systems
 
@@ -10,7 +10,7 @@ See: [[docker]], [[kubernetes]]
 
 Because of the abstract API, they can be written in different languages. Can be updated separately, supported by different teams, more resilient to crashes. But most importantly, can be dynamically scaled at runtime (you can always containerize them and just run more if you need them). See [[docker]].
 
-But as a downside, complexity. Harded to support (lots of info to learn or remember), require fancier infrastructure (not just one program running on one server).
+But as a downside, complexity. Harded to support (lots of info to learn or remember); require fancier infrastructure (not just one program running on one server).
 
 # Refs
 

@@ -24,6 +24,7 @@ Analyze this:
 * https://github.com/dipanjanS/BerkeleyX-CS190.1x-Scalable-Machine-Learning
 
 Main queue
+* Check out this book: https://refactoring.com
 * move pandas stuff here (from the notes)
 * move git stuff here
 * move sql stuff here
@@ -90,6 +91,7 @@ Main queue
     * [[docker]] and [[kubernetes]]: https://www.youtube.com/watch?v=u8dW8DrcSmo
     * https://www.docker.com/blog/containerized-python-development-part-1/ 
 * Kubernetes Cookbook (from O'Reilly) - maybe find it and leaf through it?
+* homebrew: 
 * https://en.wikipedia.org/wiki/Amazon_S3 - what is it?
 * Roles in Snowflake - how do they work
 * [[dbt]]
