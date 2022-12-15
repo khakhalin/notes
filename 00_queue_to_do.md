@@ -24,6 +24,7 @@ Analyze this:
 * https://github.com/dipanjanS/BerkeleyX-CS190.1x-Scalable-Machine-Learning
 
 Main queue
+* describe sealing files [[kubernetes]]
 * Check out this book: https://refactoring.com
 * move pandas stuff here (from the notes)
 * move git stuff here
@@ -53,7 +54,7 @@ Main queue
 * sudo
 * pyspark - what is it, and how it works?
 * parquet
-* how to seal secret files
+* redis - what is it
 * https://martinfleischmann.net/line-simplification-algorithms/
 * https://ianqvist.blogspot.com/2010/05/ramer-douglas-peucker-polygon.html
 * Missing semester - parts on [[bash]] (shell), Scripting, VIM, Linux, Command line

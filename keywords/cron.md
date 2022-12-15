@@ -112,8 +112,11 @@ Footnotes:
 
 # Refs
 
-A nice cron-signature generator:
+General info on cron:
 https://cronitor.io/cron-reference/how-to-list-all-cron-jobs
+
+Cron signature expression editor:
+https://crontab.guru/
 
 A decent summary intro:
 https://www.airplane.dev/blog/how-to-start-stop-and-restart-cron-jobs?gclid=CjwKCAjw0dKXBhBPEiwA2bmObalfHIylLTAP3DvhcJFd_Y4dJmVZjX2Cepp6NILHMNDzelqr2nn21xoCt5QQAvD_BwE

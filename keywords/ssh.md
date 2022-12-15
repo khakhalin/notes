@@ -6,19 +6,21 @@ See also: [[git]]
 #tools
 
 
-Public key goes to the machine you're connecting to; private key is stored locally. All of them are typically stored in the `.ssh` hidden folder in the main (user's root, aka `~`) folder.
+Public key goes to the machine you're connecting to; private key is stored locally. All of them are typically stored in the `.ssh` hidden folder in the main folder (user's root, aka `~`).
 
 Some usage profiles:
 `ssh username@ip` - connect to that machine
 `ssh -i path/custom_private_key username@ip` - connect using a custom key
-`scp source_file username@ip:path` - secure copy to a remote machine
 
 To generate new keys (a pair of public and private keys), use `ssh-keygen -o -f path/file_name`. (🔥  _Not sure the keys are correct. Before using, actually google, as there are different standards for these keys, and some are newer than the other_)
 
 # Secure file copy
 
-To send files to a remote location we use `scp`, which is like `cp`, but secure. Basic format:
-`scp file_name user@host:path`
+`scp source_file username@ip:path` - secure copy to a remote machine. It is kinda similar to`cp`, but secure. It can also take same keys as `ssh`, like `-i` for example. 
+
+The `:path` at the end of the "target" part seems to be required; it doesn't default to anything, and if you forget to add it, it just "thinks" that your `username@ip` was a cute name for a new folder, and creates this folder, locally.
+
+If it complains, it failed. If it's silent, it also probabl yfailed. When it's successful, it echos to the terminal the name of the file that was copied.
 
 # With version control
 

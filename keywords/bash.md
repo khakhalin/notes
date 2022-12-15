@@ -17,8 +17,12 @@ See also: [[git]], [[docker]], [[cron]], [[vim]], [[ssh]]
     * `cd -` teleports us to where you have been before the last `cd` command. Which means that doing `cd -` repeatedly will teleport you back and forth between two different folders.
 * `pushd` - remember current location (like a clipboard, but for location). After doing that, you can go to the new location, and then teleport back with `popd`. It's literally a stack of locations. (🔥 Not sure I understand how it works, as when I type it on other machine, it says "no other directory" - does it mean that it actually needs a parameter? 🔥 )
     * Allegedly it's possible to remember locations by name, but I can't make it work 🔥 
-* To see a brief help for the program, do `program_name --help`, or `help program_name` (🔥 does it work on Mac as well, or only on Windows?). For a long extensive and better formatted manual, do `man program_name`.  On linux, instead of dumping the content into an infinite scrollable screen, these commands start some sort of an editor, so you have to press "Enter" to scroll, and eventually press either `q` or `ZZ` to exit (see below).
-* `exit` exits the terminal :)
+* `program_name --help`, or `help program_name` - On some systems (e.g. Windows PowerShell), shows help for a command.
+* `man program_name` - shows a manual (nice, long) for a command.
+    * On Mac/Linux, instead of dumping the content into an infinite scrollable screen, these commands start some sort of an editor, so you have to press "Enter" to scroll, and eventually press `q`to exit (see below).
+* `history` - shows full history of commands
+    * `history | grep 'keyword'` - looks for this keywords among your commands. Except that next time you'll find this search line as well, as it also contains the keyword, so it's kidna polluting your history lol
+* `exit` - exits the terminal :)
 
 **See**
 * `ls` - list current folder content
@@ -35,7 +39,7 @@ See also: [[git]], [[docker]], [[cron]], [[vim]], [[ssh]]
     * `head -30 filename` or `head -c 30 filename` to change the number of lines. 
     * Is typically used for piping, to only save the beginning of the output: `some_command | head -c 10 log.txt`
     * `tail -c 10 filename` - exactly same thing, but for the end. Is useful for piping and logging when key info comes at the end.
-* `date` - shows current date and time. Using something like `date '+%Y/%m/%d %H:%M:%S'` one can generate custom date-time strings.
+* `date` - shows current date and time. With something like `date '+%Y/%m/%d %H:%M:%S'` one can generate custom date-time strings.
 
 **Create**
 * `mkdir folder_name` - create a folder. 
@@ -130,7 +134,7 @@ Footnotes:
 
 # Remote connections and downloading
 
-* `scp` - same as `cp`, but for copying remotely
+* `scp` - same as `cp`, but for copying remotely ( see [[ssh]])
 * `wget options url` - to download something from the internet in a simple way using http protocol
 * `curl options url` - another way to download stuff, but upports non-http protocols. Also one can exchange info with a server, and one can send stuff with it. By default has a time-out of 5 minutes (but can be changed with a key).
 * `apt-get` - to update packages
