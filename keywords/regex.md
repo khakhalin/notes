@@ -6,7 +6,7 @@ Related: [[pandas]]
 #tools
 
 
-In Python, package `re` (also used by [[pandas]], see below for speficifs)
+In Python, package `re`, and is also supported by Pandas, as described in [[pandas]].
 
 * `a` - letter a, once
     * `a?` - same, but either 0 or 1 times
@@ -52,15 +52,6 @@ Ideally REs need to be  **compiled** (for speed?). For example:
 p = re.compile("[a-z]+")
 p.match('lala: lovely string')
 ```
-
-# Support in Pandas
-
-When using with [[pandas]], use `.str.extract(r'(expr))` on a series, where `expr` is a regex expression.
-
-Footnotes:
-* https://stackoverflow.com/questions/61822799/using-pandas-extract-regex-with-multiple-groups
-* https://stackoverflow.com/questions/766372/python-non-greedy-regexes
-* https://pandas.pydata.org/docs/reference/api/pandas.Series.str.extract.html
 
 # Refs
 

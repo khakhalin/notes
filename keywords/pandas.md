@@ -108,7 +108,18 @@ Useful methods:
 * To cast to a string: `df.x.astype(str)`
 * `split` splits every string into an array of substrings, same as for normal Python.
 * To remove leading spaces: `strip()`
-* There's support of regular expressions in `str`, such as `extract` (extracting part of a string that matches the pattern), `findall` (only leaving entries that match the pattern). For actual examples, see [[regex]]
+
+### Regex
+
+There's support of regular expressions (see [[regex]]) in `str`, such as:
+* `.str.extract(r'(expr))` - extract part of a string that matches the pattern
+* `.str.findall(r'...')` - only leave entries that match the pattern ??? 🔥
+* `extractall` ?? 🔥
+
+Footnotes:
+* https://stackoverflow.com/questions/61822799/using-pandas-extract-regex-with-multiple-groups
+* https://stackoverflow.com/questions/766372/python-non-greedy-regexes
+* https://pandas.pydata.org/docs/reference/api/pandas.Series.str.extract.html
 
 ### Dates and times
 
