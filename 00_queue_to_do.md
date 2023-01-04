@@ -63,12 +63,13 @@ Main queue
 * windowed functions (newer SQL): https://mode.com/sql-tutorial/sql-window-functions/
 * common table expressions (newer SQL)
 * Finish SQL quests: https://sqlzoo.net/wiki/SUM_and_COUNT
-* jump server
-* tunnel (?) - in the ssh / linux context
 * what is pyspark? (without details for now, just the main idea)
 * Read this on [[tableau]]: https://vizpainter.com/
 * start documenting [[tableau]]. Describe INCLUDE and FIXED in particular
 * LODs for [[tableau]] - read and document this: https://www.flerlagetwins.com/2020/02/lod-uses.html
+* warmup and cooldown in the context of deep networks training (for example, [[transformers]])
+* jump server
+* tunnel (?) - in the ssh / linux context
 * In [[kibana]], how to color by log event name severety, so that 'Error' were always red? Currently I can only do top count, as as errors are less frequent, it looks almost ok, but there seems to be a better way
 * How to be a programmer? (Some short textbook-like material on general principles and philosophy) https://braydie.gitbook.io/how-to-be-a-programmer/
 * https://regex101.com/quiz
