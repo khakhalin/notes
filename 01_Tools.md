@@ -17,7 +17,7 @@ Tips and notes on individual tools:
 * [[docker]], [[kubernetes]], [[flask]] - Containerization tools
 * [[tableau]], [[kibana]], shiny (?) - Reporting tools
 * [[javascript]], [[julia]] - other programming languages
-* [[latex]], [[slack]] - misc
+* [[latex]], [[slack]], [[graph_network_tools]] - misc
 
 Running ML projects:
 * [[ml_project_management]] - organizational principles

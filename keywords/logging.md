@@ -14,7 +14,23 @@ Some people also position a `TRACE` level either somewhere between `DEBUG` and `
 
 # Logging in Python
 
-A minimal example of two 
+Just to send logging events from a package:
+```python
+import logging
+_log = logging.getLogger(__name__)
+_log.debug("Hey there!")
+```
+
+To see events in a Jupyter notebook:
+```python
+import logging
+import sys
+_log = logging.getLogger(__name__)
+logging.basicConfig(level=logging.INFO, stream=sys.stdout,
+                   format='%(asctime)s | %(levelname)s : %(message)s'))
+```
+
+To send 2 different logs from a script, with two different levels:
 ```python
 import logging
 

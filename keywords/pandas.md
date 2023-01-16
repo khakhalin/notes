@@ -121,17 +121,22 @@ Footnotes:
 * https://stackoverflow.com/questions/766372/python-non-greedy-regexes
 * https://pandas.pydata.org/docs/reference/api/pandas.Series.str.extract.html
 
+### Json-like dicts
+
+* `pd.json_normalize(df['col_name'])` - takes a single column of [[json]]-like recursive dicts; produces a dataframe with all possible columns (with `NaN` for missing values). The names of these new columns are point-joined property names (like in `user.name.suffix`)
+
 ### Dates and times
 
 Documentation (a bit wordy): https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html
 
-The main data type for dates is a **Timestamp**, and it directly inherits to the `datetime.datetime` types (described in [[py_dates]]). Pandas however provides a much neater interface for manipulating these methods. It means that if you create a pandas-timestamp and a datatime-datetime for the same moment, they will be equal to each other, and `isinstance(dt, datetime.datetime)` will be true for both of them, even though `type()` will return different names, and formally types won't be equal to each other. A standard case of class inheritance.
+The main data type for dates is a **Timestamp**, and it directly inherits to the `datetime.datetime` types (described in [[py_dates]]). Pandas however provides a set of much neater wrappers these methods. It means that if you create a pandas-timestamp and a datatime-datetime for the same moment, they will be equal to each other, and `isinstance(dt, datetime.datetime)` will be true for both of them, even though `type()` will return different names, and formally types won't be equal to each other. A standard case of class inheritance.
 
 The most useful methods are called on series of Timestamps using a prefix (similar to how it works for strings): for example `df.x.dt.dayofyear`. For example:
 * `year`, `hour`, `day`, and other obvious words, that turn a a datastamp into an integer. Also: `dayofyear`, `weekofyear`, `dayofweek` (zero-indexed starting Monday). Note the absence of parentheses; it's really like that; it's a property, but not a method, apparently! (🔥 why?)
-* `date()` and `time()` return a new series of either **Dates** or **Times** that are not quite Timestamps, but kinda related, and only partially functional datatypes. Most importantly, note that a Date is not just a rounded Datetime, and it does not inherit to a Timestamp, which may cause problems if one if substituted for the other.
+* `date()` and `time()` return a new series of either **Dates** or **Times** that are not quite Timestamps, but kinda related. ☣️ Note that a Date is not just a rounded Datetime, as it does not inherit to a Timestamp, and is not equal to a datastamp encoding 00:00 time on the same date. This may cause problems if one isn't careful.
 * `dt.round('D')` - rounding to a day; similarly `floor` is for rounding down, and `ceil` for rounding up. Aliases for frequencies can be found here: https://pandas.pydata.org/docs/user_guide/timeseries.html#timeseries-offset-aliases
 * To produce a nice string: `strftime('%w-%a')`; the format codes are described here: https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior
+    * Most common ones: `%Y-%m-$d` - ISO date. Alghouth `str(timestamp.date())` gives the same result.
 * To parse strings into stamps (an opposite to formatted output): `df.x = pd.to_datetime(df.x)` - it's surprisingly smart, and in most cases just magically works.
 * To test if a date is special:`is_month_end`
 * To generate a range of dates: `pd.date_range(start, end, frequency)` (for more parameters, see [manual](https://pandas.pydata.org/docs/reference/api/pandas.date_range.html)). Frequency may be either a simple code (like the default of `d`), or a fancy complicated offset (see below), which is needed for example to generate the 5th day of each month. Despite the name, generates proper full-blooded timestamps, and not just scrawny dates.
@@ -143,7 +148,7 @@ The most useful methods are called on series of Timestamps using a prefix (simil
 * To create a series of stamps: `pd.date_range(start, end, freq=pd.offsets.MonthBegin(1))`
 * To round to the first day of every month:`df.date.dt.floor('d') + pd.offsets.MonthEnd(n=0)-pd.offsets.MonthBegin(n=1)`. This is more complicated than just rounding to a month, as months are not a real unit (they have variable size), which somehow makes this fancy context-sensitive construction necessary.
 
-_A note on future deprecation_: apparently, the only part that will be deprecated is the `pd.datetime` class - one needs to really import `datetime.datetime` (see [[py_dates]]). All other interfaces, like `pd.to_datetime` for example will remain intact. (Refs: [1](https://gitlab.tudelft.nl/rhenning/ANTS-model/-/issues/28), [2](https://stackoverflow.com/questions/60856866/why-was-datetime-removed-from-pandas-1-0#:~:text=%22FutureWarning%3A%20The%20pandas.,Import%20from%20datetime%20module%20instead.%22))
+_A note on deprecation announced some time in 2022_: apparently, the only part that will be deprecated is the `pd.datetime` class - one needs to really import `datetime.datetime` (see [[py_dates]]). All other wrappers, like `pd.to_datetime()` for example will remain intact. (Refs: [1](https://gitlab.tudelft.nl/rhenning/ANTS-model/-/issues/28), [2](https://stackoverflow.com/questions/60856866/why-was-datetime-removed-from-pandas-1-0#:~:text=%22FutureWarning%3A%20The%20pandas.,Import%20from%20datetime%20module%20instead.%22))
 
 # Data transformations
 
@@ -192,7 +197,7 @@ Note that even `assign-lambda` does not support f-strings, so the best way to ca
     * If indices are meaningful, use this notation, and it will check that they don't duplicate. If indices are essentially just row numbers, add `ignore_index=True` to make it more relaxed. And maybe also `sort=False`, to keep things simple and fast. Note that `ignore_index=True` seems to be necessary if we're supplying new rows as a dictionary (because by definition we don't have an index in this case?)
     * Remember that while `append()` sounds pythonic, it's actually not an in-place method, so we need to do `df = df.append(blabla)`.
 
-An example of full-featured in-memory join: `pd.merge`. Archetypeical use:
+**Merging** (full-featured, in-memory join). Archetypeical use:
         ```python
         res = df_left.merge(df_right[['key1', 'key2', 'col3']], 
                             how='left', 
@@ -205,12 +210,12 @@ Some comments on joining and merging:
 
 * We can also do `df_left2 = pd.merge(df_left, df_right, ...)`.
 * `how` is one of the following: `inner` (default), `outer`, `left`, `right`.
-* If keys are named differently in left and right dataframes, use `left_on='keyleft', right_on='keyright'`. If merging on more than one column, use a list (same as for `on`).
-* If some columns are duplicated, inherits both, but modifies names. This can be changed by providing `suffixes` argument (a list). By default, adds `_x` and `_y` for left and right respectively. If you want one set of columns to retain old names, pass `None` as one of the elements of this list.
+* If `on` is left empty (None), merges on all columns that are found in both dataframes (unless joining on indexes is invoked)
+* If keys are named differently in left and right dataframes, use `left_on='keyleft', right_on='keyright'`. If merging on more than one column, use lists for both (same as for `on`).
+* If some columns are duplicated, the result inherits both, but modifies names. This can be changed by providing `suffixes` argument (a list). By default, adds `_x` and `_y` for left and right respectively. If you want one set of columns to retain old names, pass `None` as one of the elements of this list.
 * If some rows are not unique, behavior can be modified with `validate` parameter.
-* A diagnostic column may be created with `indicator=True` parameter. This creates a new column `_merge` with values of `left_only`, `right_only`, or `both`. 
-* This can also be used in conjunction with `.query` and `.drop` to create exclusive joins; e.g. do a join, then only leave records from the left that weren't found in right).
-* Instead of merging on an arbitrary column, we can also merge on index, which is controlled with `left_index=True` argument (and similar for the right). _Is it faster? Is it better?_
+* A diagnostic column may be created with `indicator=True` parameter. This creates a new column `_merge` with values of `left_only`, `right_only`, or `both`.  This feature may be quite helpful when used in conjunction with `.query` and `.drop` to create exclusive joins; e.g. do a join, then only leave records from the left that weren't found in right).
+* Instead of merging on an arbitrary column, we can also merge on index, which is controlled with `left_index=True` argument (and similar for the right). _Is it faster?_
 * To join only some columns, join with an incomplete dataframe (make df_left not a full dataframe, but select the columns you need using standard `df[['x','y']]` notation).
 * To remove duplicates, do `.drop_duplicates()`
 

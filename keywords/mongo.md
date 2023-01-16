@@ -52,6 +52,7 @@ client = MongoClient('mongo.my.domain', port=8080) # Some arbitrary values here 
 db = client['database_name']
 collection = db['collection_name'] # This can be done even if 'collection_name' doesn't exist yet! (for writing)
 result = collection.find({'location': 'osaka'})
+result = collection.count({'location': 'osaka'}) # Only count rows, without getting the data
 
 # Writing and editing
 id = collection.insert_one(document_as_a_dict) # Returns the _id field of a newly created document

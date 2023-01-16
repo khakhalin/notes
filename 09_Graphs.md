@@ -2,7 +2,8 @@
 
 #bib #graphs #networks
 
-**Graph techniques**
+
+**Classic graph theory**
 * [[graph_intro]] - Basic intro to graphs
 * graph_th - Random notes on graph theory
 * [[algos_graph]] - Classic algorithms on graphs
@@ -11,11 +12,12 @@
 * [[algebraic_topology]] - basis for [[umap]], cliques etc.
 
 **Network science**
-* [[graph_properties]] - How to characterize graphs and networks
+* [[graph_properties]] - How to characterize large graphs and networks
 * [[modularity]]
 * [[centrality]]
     * [[pagerank]] - Pagerank and link analysis
 * [[motifs]] - Motif analysis #todo
+* [[graph_network_tools]] - programmatic tools to work with graphs
 
 **Generative models for graphs**
 * [[graph_generate]] - Generative models for graphs

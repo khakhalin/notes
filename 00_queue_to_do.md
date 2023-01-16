@@ -24,13 +24,13 @@ Analyze this:
 * https://github.com/dipanjanS/BerkeleyX-CS190.1x-Scalable-Machine-Learning
 
 Main queue
-* describe sealing files [[kubernetes]]
 * Check out this book: https://refactoring.com
 * move pandas stuff here (from the notes)
 * move git stuff here
 * move sql stuff here
 * https://medium.com/javarevisited/5-different-git-workflows-50f75d8783a7
 * what is pyspark?
+* redis - how does it look like?
 * `.gitlab-ci.yml` and all the rules 
 * everything about k8s, stage-dependent env variables, and making sealed secrets
 * https://github.com/jlevy/the-art-of-command-line
@@ -53,8 +53,9 @@ Main queue
 * curl - how to use exactly (document in [[bash]])
 * sudo
 * pyspark - what is it, and how it works?
-* parquet
-* redis - what is it
+* parquet* 
+* dbd
+* airflow
 * https://martinfleischmann.net/line-simplification-algorithms/
 * https://ianqvist.blogspot.com/2010/05/ramer-douglas-peucker-polygon.html
 * Missing semester - parts on [[bash]] (shell), Scripting, VIM, Linux, Command line
