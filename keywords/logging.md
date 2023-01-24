@@ -53,6 +53,30 @@ logger.addHandler(fh)
 
 And then everywhere elsewhere you get `logger = logging.getLogger`, and supposedly it will return this nicely pre-configured logger (initialized in `_main_()`), so depending on the levels set, `logger.info("My message")` would go either in both streams (handlers), or only one of them.
 
+To suppress warnings from some of the most verbose packages you use:
+```python
+logging.getLogger("package_name").setLevel(logging.INFO)
+```
+
+To filter one specific warning - 🔥 for now I don't know how to do it!! I tried this, as it seems to be an extension of what people suggest on StockOverflow:
+`logging.getLogger("package").addFilter(lambda record: 'annoying_string' in record.msg)`
+But for some reason it doesn't work (no error, just no filtering)
+
+Footnotes that seem to claim that it should work, but it doesn't work:
+* https://www.programcreek.com/python/example/3364/logging.Filter
+* https://stackoverflow.com/questions/879732/logging-with-filters 
+
+# Warnings
+
+To suppress all warnings (not recommended): `import warnings; warnings.simplefilter('ignore')`
+
+To only suppress deprecation warnings (as these seem to be the most annoying and the least relevant):
+```python
+import warnings
+warnings.filterwarnings('ignore', category=DeprecationWarning)
+warnings.filterwarnings('ignore', category=FutureWarning)
+```
+
 # Refs
 
 A healthy discussion on log levels:

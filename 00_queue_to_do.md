@@ -15,7 +15,7 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 
 # Queue
 
-Analyze this:
+Analyze this set of links:
 * https://discord.com/channels/814557108065534033/882748207996760164
 * https://stanford-cs329s.github.io/syllabus.html
 * https://mlops.toys/experiment-tracking
@@ -24,13 +24,17 @@ Analyze this:
 * https://github.com/dipanjanS/BerkeleyX-CS190.1x-Scalable-Machine-Learning
 
 Main queue
-* Check out this book: https://refactoring.com
+* Google tune-up book (read before model redevelopment): https://github.com/google-research/tuning_playbook
+* Check these books and push them up in the book list:  https://twitter.com/rasbt/status/1617310114922336258
+* From this tutorial, save info about reading population density:   https://twitter.com/milos_agathon/status/1617108301283577858
 * move pandas stuff here (from the notes)
 * move git stuff here
 * move sql stuff here
+* Tabular functions in Snowflake: https://docs.snowflake.com/en/developer-guide/udf/sql/udf-sql-tabular-functions.html
 * https://medium.com/javarevisited/5-different-git-workflows-50f75d8783a7
 * what is pyspark?
 * redis - how does it look like?
+* runbook - is there a definition for this word, best practicies? Or is it just a word?
 * `.gitlab-ci.yml` and all the rules 
 * everything about k8s, stage-dependent env variables, and making sealed secrets
 * https://github.com/jlevy/the-art-of-command-line

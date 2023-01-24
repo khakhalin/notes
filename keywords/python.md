@@ -7,8 +7,13 @@ Path: [[01_Tools]]
 
 Subtopics and related:
 * [[oop]] - OOP, entirely Python-specific for now. Functions, scope, decorators
-* Common libraries: [[numpy]], [[pandas]], [[sklearn]], [[matplotlib]], [[tensorflow]], [[py_dates]], [[regex]], [[flask]]
-* Core tools: [[environments]], [[jupyter]]
+* Common packages:
+    * [[logging]]
+    * [[numpy]], [[pandas]], [[matplotlib]]
+    * [[sklearn]], [[tensorflow]]
+    * [[py_dates]], [[regex]]
+    * [[flask]]
+* Other tools and concepts: [[environments]], [[jupyter]]
 * [[unit_test]] - how to write unit tests correctly (in Python) 
 
 # Sets
@@ -98,9 +103,9 @@ finally:
     # Clean-up part that is always executed
     del a
 ```
-## With
+# With
 
-An alternative to `try - except - finally`.	 Relies on the fact that many objects are shipped with methods `__enter__` and `__exit__`: one to create an object, set it up, and return the instance; the other one to gracefully clean up after the sensitive operation is performed. `__exit__` typically (or always?) doesn't delete the object, so the object can be referenced after the "with construction" is over. Even if the "with" part itself is empty, by that time three methods would have been executed: init, enter, and exit, in this order.
+Sometimes can be seen as an alternative to `try - except - finally`. Relies on the fact that many objects are shipped with methods `__enter__` and `__exit__`: one to create an object, set it up, and return the instance; the other one to gracefully clean up after the sensitive operation is performed. `__exit__` typically (or always?) doesn't delete the object, so the object can be referenced after the "with construction" is over. Even if the "with" part itself is empty, by that time three methods would have been executed: init, enter, and exit, in this order.
 
 In practice, I most often see it used with files, and deep learning objects (TF and Pytorch).
 

@@ -85,7 +85,7 @@ Conditional indexing supports functions, as long as they take and return Pandas 
 Footnotes:
 * https://stackoverflow.com/questions/29888341/a-value-is-trying-to-be-set-on-a-copy-of-a-slice-from-a-dataframe-warning-even-a
 
-# Quick data exploration
+# Data exploration
 
 Useful methods:
 * `df.col.hist()` - draws a nice histogram
@@ -100,6 +100,7 @@ Useful methods:
 * Replace NaNs: `.fillna(0)` replaces all NaNs with zeroes. Can be run on a dataframe, or a series.
 * Replace something else: use a numpy function: `.replace(old, new)`.
 * Basic math with a series returns a series, so one can do `(df.a + 10).values` etc.
+* Rank: `df.groupby('col1')['col2'].rank(method='dense', ascending=False)` produces a rank-transformed series. Lots of cool methods of ranking: `average` (default), but also `min`, `max`, `dense`, `first`. Se [manual](https://pandas.pydata.org/docs/reference/api/pandas.Series.rank.html) for more.
 
 ### Strings
 * For basic string operations, like cut first chars: `df['x'].str[1:]`
@@ -109,9 +110,7 @@ Useful methods:
 * `split` splits every string into an array of substrings, same as for normal Python.
 * To remove leading spaces: `strip()`
 
-### Regex
-
-There's support of regular expressions (see [[regex]]) in `str`, such as:
+There's support of **regular expressions** (see [[regex]]) in `str`, such as:
 * `.str.extract(r'(expr))` - extract part of a string that matches the pattern
 * `.str.findall(r'...')` - only leave entries that match the pattern ??? 🔥
 * `extractall` ?? 🔥
@@ -121,7 +120,7 @@ Footnotes:
 * https://stackoverflow.com/questions/766372/python-non-greedy-regexes
 * https://pandas.pydata.org/docs/reference/api/pandas.Series.str.extract.html
 
-### Json-like dicts
+### Json-like
 
 * `pd.json_normalize(df['col_name'])` - takes a single column of [[json]]-like recursive dicts; produces a dataframe with all possible columns (with `NaN` for missing values). The names of these new columns are point-joined property names (like in `user.name.suffix`)
 

@@ -43,15 +43,12 @@ https://arxiv.org/pdf/2111.02152
 Sprei, F., Habibi, S., Englund, C., Pettersson, S., Voronov, A., & Wedlin, J. (2019). Free-floating car-sharing electrification and mode displacement: Travel time and usage patterns from 12 cities in Europe and the United States. Transportation Research Part D: Transport and Environment, 71, 127-140.
 https://research.chalmers.se/publication/510282/file/510282_Fulltext.pdf
 
-Yap, W., Chang, J. H., & Biljecki, F. (2022). Incorporating networks in semantic understanding of streetscapes: Contextualising active mobility decisions. Environment and Planning B: Urban Analytics and City Science, 23998083221138832.
-[link](https://journals.sagepub.com/doi/pdf/10.1177/23998083221138832?casa_token=8MGV-jXu3L8AAAAA:cGdqX1ZgZZRROlXnzjeeNWnyiAZA3LzlgDlmZlN0gphEK5Qp40bPBEbwGZJmI493Htdi7bhcu5Ee)
-
 # Pricing
 
 * Read / find some theory on customer psychology
-* pricing elasticity
-* why softmax is apparently a decent choice for decision probabilit calculations?
 * Psychology of pricing with fixed and variable (proportional) components
+* pricing elasticity - how is it defined? SOTA for measuring it?
+* why softmax is apparently a decent choice for decision probabilit calculations?
 
 Specifically for transportation?
 * Models of transportation choice - any standard approaches to modling this choice?
@@ -63,3 +60,12 @@ The effects of pricing and service configurations on a ride-pooling service with
 https://repository.tudelft.nl/islandora/object/uuid:3e9426a7-a3ec-4943-af7c-55a26592beaa
 
 Paying before or paying after? Timing and uncertainty in pay-what-youwant pricing ([link](https://pure.port.ac.uk/ws/portalfiles/portal/13177493/VIGLIA_2019_cright_JSR_Paying_before_or_paying_after_Timing_and_uncertainty_in_pay_what_you_want_pricing.pdf))
+
+# Fancy network stuff
+
+Yap, W., Chang, J. H., & Biljecki, F. (2022). Incorporating networks in semantic understanding of streetscapes: Contextualising active mobility decisions. Environment and Planning B: Urban Analytics and City Science, 23998083221138832.
+[link](https://journals.sagepub.com/doi/pdf/10.1177/23998083221138832?casa_token=8MGV-jXu3L8AAAAA:cGdqX1ZgZZRROlXnzjeeNWnyiAZA3LzlgDlmZlN0gphEK5Qp40bPBEbwGZJmI493Htdi7bhcu5Ee)
+
+Emergence of complex network topologies from flow-weighted optimization of network efficiency
+Sebastiano Bontorin, Giulia Cencetti, Riccardo Gallotti, Bruno Lepri, Manlio De Domenico
+https://arxiv.org/abs/2301.08661
