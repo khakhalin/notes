@@ -47,7 +47,7 @@ To iterate through rows:
 Footnotes:
 * https://www.dataschool.io/pandas-dot-notation-vs-brackets/
 
-### Conditionals and filtering
+### Quering and filtering
 For conditional data retrieval we have a choice between: 
 
 * **logical indexing** `df.loc[d.x>0]` Can take list comprehensions as an argument (instead of a series); can be written to; but slower, and harder to read.
