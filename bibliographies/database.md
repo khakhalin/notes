@@ -1,4 +1,4 @@
-# Notes on databases
+# Databases
 
 Parents: [[01_Tools]], [[system_design]]
 
@@ -11,10 +11,12 @@ See also:
 * [[dictionary]] - many names are still sitting there
 
 Subtopics:
-* [[sql]] - about the language
-* [[mongo]] - fav nosql
-* [[postgres]] - for realtme applications
+* [[sql]] - about the language in general.
+    * For sql dialets: [[postgres]], [[snowflake]]
+* [[mongo]] - our fav nosql 
 * [[databricks]]
+
+
 
 # Principles and guarantees
 

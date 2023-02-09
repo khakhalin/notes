@@ -54,8 +54,9 @@ For conditional data retrieval we have a choice between:
 * Another form of logical indexing: `df.x.eq(0)` (or things like `ne`, `le` etc.)
 * **queries**: `df.query('x>0')`, where `x` is a name of a column. Easier for a human to read; works slightly faster, but cannot be written to. To reference a normal variable `a` in a query, use `@a` inside the query string. Also keep in mind that they create a view of the original dataframe, not a new dataframe, which saves time and space, but can lead to slice-assignment issues if you assume that the result is an independent dataframe of its own. It's not.
 * To find the first row index that satisfies a criterion, follow with `.idxmax()` - it returns the location of the maximum (like `np.argmax()`), and in this case truth is the maximum.
-* To find `None`-like objects (or their absence), use `	.notnull()`, and its opposite `.isnull()`. It seems that `isna()` and `notna()` also work, and are exact synonyms (I think?). Note also that it's `np.isnan()` in Numpy, but `isna()` in Pandas.
-    * Note that while **queries** support stuff like `'x>0 | x<100'`, they don't support these na-related functions for some reason, unless you call with a  flourish. To filter out nans one has two options:
+* To find `None`-like objects (or their absence), use `	.notnull()`, and its opposite `.isnull()`. At least for numerical columns, `isna()` and `notna()` also work, but not sure if they are exact synonyms (🔥). Note also that it's `np.isnan()` in Numpy, but `isna()` in Pandas.
+    * `pd.isnull(x)` also works great if you extracted the value from Pandas. Unlike `np` that only supports numbers and NAs, this one also works with strings and dates.
+    * Note that while **queries** support stuff like `'x>0 | x<100'`, they don't support these na-related functions for some reason, unless you call them with a  "fancy call". To filter out nans one has two options:
         * A hack: `query('x == x')`. This works, because NAs aren't equal to themselves!!
         * A proper fancy call:  `query(	'x.notna()', engine='python')`
 * Useful ways to search by string:
@@ -85,7 +86,7 @@ Conditional indexing supports functions, as long as they take and return Pandas 
 Footnotes:
 * https://stackoverflow.com/questions/29888341/a-value-is-trying-to-be-set-on-a-copy-of-a-slice-from-a-dataframe-warning-even-a
 
-# Data exploration
+# Exploratory analysis
 
 Useful methods:
 * `df.col.hist()` - draws a nice histogram
@@ -137,6 +138,7 @@ The most useful methods are called on series of Timestamps using a prefix (simil
 * To produce a nice string: `strftime('%w-%a')`; the format codes are described here: https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior
     * Most common ones: `%Y-%m-$d` - ISO date. Alghouth `str(timestamp.date())` gives the same result.
 * To parse strings into stamps (an opposite to formatted output): `df.x = pd.to_datetime(df.x)` - it's surprisingly smart, and in most cases just magically works.
+    * But if it cannot get the format, just provide a `format` parameter, designed of same `%Y` etc elements (for example, %d/%m/%Y`)
 * To test if a date is special:`is_month_end`
 * To generate a range of dates: `pd.date_range(start, end, frequency)` (for more parameters, see [manual](https://pandas.pydata.org/docs/reference/api/pandas.date_range.html)). Frequency may be either a simple code (like the default of `d`), or a fancy complicated offset (see below), which is needed for example to generate the 5th day of each month. Despite the name, generates proper full-blooded timestamps, and not just scrawny dates.
 
@@ -156,9 +158,6 @@ Several options here:
 * **map**: `df.x = df.x.map(@function)`. For one-liners, works well with lambda notation. 
 * `df.apply(@fun, axis=1)`, and it appears that with it one can write a function that is applied to every row of a dataframe (see chaining advice below).
 
-**Updating certain values in a column**
-The archetypical way seems to be using a `where` command, which is cool, but weird: first, it doesn't feel like a "where" keywords (it's more an "update" or "replace" kinda of a command), and second, the condition `where` gets is actually for those values that won't be updated. If the condition is true, `where` passes the value through, otherwise it replaces it with a default. Example: `df.x.where(df.x>0, -2)` will replace all values that are below zero with −2. Use `~` if need to flip the condition (some people even prefer writing it with a tilde, to make it more clear which values are updated, even tho it's obviously a mindhack).
-
 **Creating a new column from old columns:**
 There are least 6 different ways to do it, listed here from (arguably) best to worst:
 * `df['z']=df.x+df.y` - that's what most people use, and it's one of the fastest approaches, but it has 2 draw-backs. One, it cannot be chained (using `.` notation). And two, when used on a view, it throws a "slice assignment" warning. So after things like `.agg` it will work just fine, but after a `.query` it will cause a problem (as `.query` creates a view!).
@@ -168,7 +167,7 @@ There are least 6 different ways to do it, listed here from (arguably) best to w
 * `df.loc[:,'z']=...` - prevents slicing assignment warning, but is the slowest of all by far. May be good for updates though. Still not chainable though.
 * `df = df.eval('z=x+y')` - chainable, but also slower. In principle, `eval` can also be run in-place, but then of course it becomse non-chainable, while still being slow.
 
-In practice, in terms of both speed and readability (and maybe a bit of a balance between the two), I would recommend always using chaining, and thus relying on `eval` as much as possible (because of serialization it is actually quite fast). But as eval doesn't support some operations (for example, `eval`  cannot work with strings, or with `.shift`), we can always switch to `assign + lambda` for tougher cases. Assign _may_ also bring some performance boost, but this still needs to be investigated.
+In practice, in terms of both speed and readability (and maybe a bit of a balance between the two), I decided to always use chaining, and thus relying on `eval` as much as possible (because of serialization it is actually reasonably fast). But as eval doesn't support some operations (it can't work with strings or with `.shift`, for example), I'd switch to `assign + lambda` for tougher cases. Assign _may_ also bring some performance boost, but this still needs to be investigated.
 
 ```python
 df = (df
@@ -180,21 +179,30 @@ df = (df
 
 Note that even `assign-lambda` does not support f-strings, so the best way to cast a non-string to a string seems to be use `.astype(str)`. (Using an f-string inside `eval` causes an error; inside `lambda` it doesn't cause an error, but is not serialized, and transform the entire series into one giant string.) Also, running `str(d.z)` does not cause an error, but doesn't do what we want, as it retains the type explanation at the end (debugging-style). Short of using a list comprehension, at the moment, I'm not sure how to plug f-string functionalify to pandas directly.
 
+**Updating certain values in a column**
+The most popular way seems to be using a `where` command, which works like a `query` with a default value. Because of that, when it's used to update values, it actually updates values for which the condition is _false_, not true. For example: `df['x'] = df['x'].where(df['x'] > 0, -2)` will replace all values that are below zero with −2. One can use `~` to flip the condition, and it seems that when updating stuff some people even prefer writing it with a tilde, to make it more clear which values are updated, but it is such a mindhack that I reject it with indignation.
+
+The same `where` method can be used for a vectorized **ternary operation** on columns. If you want to get a column that takes values from `x` when a condition `c` is true, and values from `y` otherwise, do this:
+`df.x.where(df.c, df.y)`. As this expression produces a series, it can be used inside a chained `asign`.
+
 **Refs:**
 * https://www.tutorialspoint.com/python_pandas/python_pandas_working_with_text_data.htm
 * https://pandas.pydata.org/pandas-docs/stable/user_guide/text.html
 * https://jakevdp.github.io/PythonDataScienceHandbook/03.12-performance-eval-and-query.html
 * https://datatofish.com/integers-to-strings-dataframe/
 
-# Joining and merging
+# Appending and Merging
 
-* **Concatenation**: `df.concat(objs)` where objs is a list of dataframes. Parameters:
-    * `axis`: default 0 (horizontal stacking), but may be something else
-    * `join`: default value of `outer` (for union of matching indices), but can be changed to `inner` (for intersection). Makes sense for `axis=1` (when columns are merged): with `outer` missing values are padded with NaNs, while with `inner` incomplete rows are eliminated.
-    * `keys`: generated hierarchical keys. Expects a list of names, to become the first level of these keys.
-* A simplified wrapper for **adding homogeneous rows**: `f = f.append(f2)`. Takes either a one-row dataframe, or a dictionary. 
+**Concatenation**: `df.concat(objs)` where objs is a list of dataframes. Parameters:
+* `axis`: default 0 (horizontal stacking), but may be something else
+* `join`: default value of `outer` (for union of matching indices), but can be changed to `inner` (for intersection). Makes sense for `axis=1` (when columns are merged): with `outer` missing values are padded with NaNs, while with `inner` incomplete rows are eliminated.
+* `keys`: generated hierarchical keys. Expects a list of names, to become the first level of these keys.
+
+**Appending**
+* `df = df.append(df2)` - a simplified wrapper for adding homogeneous rows. Takes either a one-row dataframe, or a dictionary. 
     * If indices are meaningful, use this notation, and it will check that they don't duplicate. If indices are essentially just row numbers, add `ignore_index=True` to make it more relaxed. And maybe also `sort=False`, to keep things simple and fast. Note that `ignore_index=True` seems to be necessary if we're supplying new rows as a dictionary (because by definition we don't have an index in this case?)
-    * Remember that while `append()` sounds pythonic, it's actually not an in-place method, so we need to do `df = df.append(blabla)`.
+    * Remember that while `append()` sounds in-place, it's actually NOT an in-place method, so we need to do `df = df.append(blabla)`.
+* An alternative approach: `df.loc[len(df), :] = [a, b, c]`. Seems to be faster than `df = df.append()`, and takes a vector, which is often easier to code.
 
 **Merging** (full-featured, in-memory join). Archetypeical use:
         ```python

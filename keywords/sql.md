@@ -1,9 +1,14 @@
 # SQL
 
-#tools
-
 Parents: [[01_Tools]]
 See also: [[database]]
+
+#tools
+
+
+Dialect-specific pages:
+* [[snowflake]]
+* [[postgres]]
 
 # Generic query
 
@@ -36,7 +41,7 @@ LIMIT 10
 * `OFFSET 1` - a rather rare thing that goes in the same  part as `LIMIT`, and makes the query return not the rows that were found, but rows that are offset from this rows by this number.
 * `UNION`, `INTERSECT`, `EXCEPT` - Logical operations on selects. Usage: `SELECT * FROM table1 UNION SELECT * FROM table 2;`. The tables should match in terms of their columns, otherwise it'll break (use JOINs if the tables don't match perfectly). The first table that was called defines column names for the entire output. By default `UNION` only returns distinct rows, but use `UNION ALL` if duplicates are needed.
 
-## Custom on the fly columns
+## Expression-columns
 
 There are lots of built-in functions; too many to list here, including math, trigonometry, string manipulation (like `LEFT`, `LEN`, `LOWER`, and so on), and what not. But in call cases you do something like `SELECT FUN(col1) AS new_col`.
 
@@ -87,7 +92,7 @@ The most common one goes inside `WHERE`: `SELECT * FROM table1 WHERE id IN (SELE
 
 `CREATE VIEW view_name AS SELECT * FROM table1 WHERE coll="whatever";`. Can also be updated by `CREATE OR REPLACE VIEW view_name`. After you are done with this virtual table, it can be dropped using `DROP VIEW view_name`.
 
-# Writing and messing around
+# Writing and changing data
 
 ## Inserting new data
 
@@ -99,7 +104,7 @@ Interesting way to copy some selected stuff from one table to another: `INSERT I
 
 Like a simple select query (without grouping and other fancy things obviously), just instead of SELECT you do: `UPDATE table1 SET col1=1, col2="dog" WHERE id=0;`. Be extra careful to always have a `WHERE` statement there, as without it the statement will still be valid; just it will update all records 😱. Updates can directly reference table fields, so things like `col1 = col1+1` are normal. Updates can also reference other tables by running a subquery, or doing a JOINT, or (in some versions) even by having a FROM sequence directly following the UPDATE part.
 
-Updating some rows in one column is possible ([ref](https://stackoverflow.com/questions/36872053/update-a-single-column-on-multiple-rows-with-one-sql-query)), but it seems cumbersome enough, so in practice it's probably easier to download these rows, update them locally, then delete them remotely, and re-insert. _The only risk, I guess, is that if you crash between deletion and insertion, data will be lost..._
+Updating some rows in one column is possible ([ref](https://stackoverflow.com/questions/36872053/update-a-single-column-on-multiple-rows-with-one-sql-query)), but it seems cumbersome enough, so in practice it's probably easier to download these rows, update them locally, then within one query, delete them remotely, and re-insert.
 
 ## Creating tables
 
@@ -126,7 +131,8 @@ Apparently it's possible not to grant users permissions to delete rows and drop 
 * Some versions (Oracle again?) cannot do `UNION` on sorted  queries, as they treat `UNION` as a set operation, which invalidates sorting. You can only sort things after union.
 
 # Control structures
-Some dialects of SQL (like **SQLServer**, **Transact-SQL** from Microsoft) have their own control structures, with IF, ELSE, BEGIN TRY, BEGIN CATCH, WHILE, and what not.
+
+Many dialects of SQL (like **SQLServer**, **Transact-SQL** from Microsoft) have their own control structures, with IF, ELSE, BEGIN TRY, BEGIN CATCH, WHILE, and what not. (see individual dialect pages)
 
 # Refs
 

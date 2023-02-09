@@ -1,8 +1,9 @@
 # Hardware (metal)
 
+See also: [[system_design]], operating systems
+
 #metal #hardware #bib #os
 
-See also: [[system_design]], os
 
 A hub for everything hardware-related.
 

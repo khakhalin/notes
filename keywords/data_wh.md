@@ -1,12 +1,15 @@
 # Data warehouse (aka Kimball vs Inmon)
 
 Parents: [[01_Tools]], [[database]]
-Related: [[dictionary]], [[nosql]]
-
+Related: [[nosql]]
 #tools #db
 
 
-**Data Warehouse** is a data repository, to preserve records and make them available for quering and analysis. Includes a **ETL tool** (Extract Transform and Load), analysis and reporting capabilities. Often a relational DB in the core, but potentially other stuff (non-relational, files, etc.) Typically not raw data, but semi-processed towards certain **themes**, to add future analysis (raw data → staging area → conversion into usable structure → storage). **Non-volatile**: old data is not removed, and is not altered once it was added.
+**Data Warehouse** is an approach to storing data in an organized manner, balancing different conflicting goals and interests that every person and organization has, when working with data. Ultimately, about preserving records fully, but also making them available for quering and analysis.
+
+Typically has relational DBs in the core, but potentially other stuff around it (non-relational, files, etc.) Typically relies on several "types" (logical caregories) of tables, and **ETL jobs** (Extract-Transform-Load) to move data across them, for analysis and reporting capabilities. Typically goes away from raw data, and towards certain semi-processed "themes", half-way towards future analyses (raw data → staging area → conversion into a usable structure → storage). 
+
+There's an argument for having a DWH **Non-volatile**, that is, a system wehre old data is not removed, and is not altered once it was added. On the other hand, there is a good argument for having the data amended (say, when an invoice was cancelled or adjusted some weeks after a business event). Would not we, in this case, want the corresponding record in the system contain the amended (new actual) value, and not (only) the original value?
 
 A Data WH typically consists of:
 1. **Database**: usually relational, often cloud-based (Redshift, Azure, or BigQuery)
@@ -47,6 +50,10 @@ All fact tables (facts) should use the same system of dimensions (so user id, re
 The benefits of Kimball approach (compared to Inmon) is that it's simpler, cheaper computationally (no SQL joins), more relateable for users (if well aligned with business processes), most commonly used data takes less space (an inventory snapshot is much smaller than a raw inventory movement listing), has most relevant data easily available. However, the spirit of "one source of data" is lost (as we now have several fact tables that could in principle contradict each other); it may not be very flexible (hard to change the structure of fact tables later on); does not easily support data mining; does not easily support integration of legacy data.
 
 Potential solution: [[nosql]]
+
+# Other good practices
+
+* When 
 
 # Refs
 

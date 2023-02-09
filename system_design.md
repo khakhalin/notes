@@ -3,9 +3,9 @@
 Parents: [[01_Tools]]
 
 See also:
-* [[database]] - databases and alternatives to them
-* [[microservice]]
-* [[metal]] - everything hardware
+* [[database]] - Everything databases (including basic principles and specific solutions)
+* [[microservice]] - Everything microservices
+* [[hardware]] - Everything hardware
 * [[system_interview]] - collections of tips regarding system interviews
 * [[fairness]] - an ethical aspect of system development
 

@@ -53,24 +53,58 @@ logger.addHandler(fh)
 
 And then everywhere elsewhere you get `logger = logging.getLogger`, and supposedly it will return this nicely pre-configured logger (initialized in `_main_()`), so depending on the levels set, `logger.info("My message")` would go either in both streams (handlers), or only one of them.
 
+## Filtering messages
+
 To suppress warnings from some of the most verbose packages you use:
 ```python
 logging.getLogger("package_name").setLevel(logging.INFO)
 ```
 
-To filter one specific warning - 🔥 for now I don't know how to do it!! I tried this, as it seems to be an extension of what people suggest on StockOverflow:
+**To filter one specific warning**: 🔥 for now I don't know how to do it! People on Stackoverflow seem to claim that you don't need a class for that, and that passing a function is enough. But it didn't work fo rme for some reason.
+
 `logging.getLogger("package").addFilter(lambda record: 'annoying_string' in record.msg)`
 But for some reason it doesn't work (no error, just no filtering)
 
-Footnotes that seem to claim that it should work, but it doesn't work:
+ChatGPT claims that this is a solution: (🔥 _still needs to be tested_)
+```python
+import logging
+
+class SnowflakeFilter(logging.Filter):
+    def filter(self, record): 
+        return not record.getMessage().startswith("snowflake.connector.cursor: query execution done") 
+    
+logger = logging.getLogger("snowflake") 
+logger.addFilter(SnowflakeFilter())
+```
+
+An explicit method is not necessary, as we can create it from a function on the fly:
+```python
+def snowflake_filter(record): 
+    return not record.getMessage().startswith("snowflake.connector.cursor: query execution done") 
+
+logger = logging.getLogger("snowflake")
+logger.addFilter(logging.Filter(name="snowflake_filter", filterfunc=snowflake_filter))
+```
+
+And the function can be created on the fly too:
+```python
+logger = logging.getLogger("snowflake") 
+logger.addFilter(logging.Filter(name="snowflake_filter", 
+                   filterfunc=lambda record: not record.getMessage().startswith(
+                       "snowflake.connector.cursor: query execution done")))
+```
+
+> 🔥 So, even if the function works, the first difference is between `record.msg` and `record.getMessage()`, and the second is with my attempts returning True for bad messages, while chatgpt solution returns True for good messages. Need to try it again; perhaps my solution didn't work at all because of the `msg` part, and that is why I haven't noticed that the filter is inversed.
+
+Footnotes with various attempts to solve this:
 * https://www.programcreek.com/python/example/3364/logging.Filter
 * https://stackoverflow.com/questions/879732/logging-with-filters 
 
 # Warnings
 
-To suppress all warnings (not recommended): `import warnings; warnings.simplefilter('ignore')`
+To suppress **all warnings** (not recommended): `import warnings; warnings.simplefilter('ignore')`
 
-To only suppress deprecation warnings (as these seem to be the most annoying and the least relevant):
+To only suppress **deprecation warnings** (as these seem to be the most annoying ones):
 ```python
 import warnings
 warnings.filterwarnings('ignore', category=DeprecationWarning)

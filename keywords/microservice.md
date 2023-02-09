@@ -1,9 +1,13 @@
 # Microservice
 
 Parents: [[system_design]]
-See: [[docker]], [[kubernetes]], [[ci]]
+See also: [[docker]]
 
 #systems
+
+Subtopics:
+* [[kubernetes]] - key technical solution
+* [[ci]] - Continuous integration, a critical approach when your service never sleeps
 
 
 **Microservice**: instead of one big program, you have several small applications, each only supporting one function (users), and talking through each other via some API (like http). Each either talks separately to a database, or even has its own database.

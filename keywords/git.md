@@ -36,7 +36,7 @@ Todo:
 * `git stash pop` - pop files from a buffer. An archetypical use of "oops, wrong branch" includes stashing, changing branch, and unstashing back.
 * `git reset --soft HEAD^` - returns git to the stage before last commit (here `HEAD^` signifies last commit, as is it synonimous to `HEAD~1`. You can also use any other commit as	 the target). All files that were change since that commit become staged (_I think. The manual says "files to be committed" - does it mean "staged"?_)
 * `git reset` - default mode of reset is `mixed`, which is not destructive (as in `hard`), but unlike `soft`, doesn't automatically stage files that were changed since that commit. Which means that it's easier to lose them. If commit isn't specified, it just resets the last commit.
-* `git commit --amend` - equivalent to soft rest to `HEAD~` (the parent of current `HEAD`), following by a new commit. Essentially, rewrites a commit (_right?_)
+* `git commit --amend` - equivalent to soft rest to `HEAD~` (the parent of current `HEAD`), following by a new commit. Essentially, rewrites a commit (🔥  _is it right?_)
 * `git rebase -i HEAD~3` - squash last 3 commits into one, interactively. **Do it only for commits that weren't pushed yet** (or you'll get a conflict with a remote repo), unless you're morally prepared to fix everything locally and force-push to origin, rewriting it. "Interactively" here means that a list of commits is generated, and you leave `pick` for those you want to leave; replace it with `drop` for those you want to delete, and `squash` for those that needs to be squashed (just make sure there's a 'pick' before it, for somewhere to squash to). This workflow is a reason why we shouldn't push to public repo too often (don't push micro-commits); wait until a reasonable piece of work is done, **clean the commits**, then push. [1](https://git-scm.com/docs/git-rebase#_interactive_mode), [2](https://medium.com/@porteneuve/getting-solid-at-git-rebase-vs-merge-4fa1a48c53aa)
 * `git restore [file]` - restore a file in the current tree from another tree or commit. Doesn't update the branch. In the past was homonymous with branch changing (both used the `checkout` keyword).
 * `git revert HEAD~3` - make a new commit that reverts changes in fourth last (3d with zero indexing) commit.
@@ -48,9 +48,9 @@ Todo:
 * `git switch -c branch_name` - an alias for creating a new branch at current HEAD, and checking it out. May be a good idea after a pull, to do all sorting in a safe branch, without endangering Master. [1](https://blog.carbonfive.com/2017/08/28/always-squash-and-rebase-your-git-commits/)
 * `git branch -m old_name new_name` - rename branch
 
-The concept of a **detached HEAD**: when HEAD points to an old commit. In this situation you cannot commit anything, as there's no branch to commit to (committing can only be done to the end of a branch). If you create a new branch there in the past however, you can commit, and then you can merge these changes if you need to. [2](https://www.atlassian.com/git/tutorials/using-branches/git-checkout)
+The concept of a **detached HEAD**: when HEAD points to an old commit. In this situation you cannot commit anything, as there's no branch to commit to (committing can only be done to the end of a branch). You can however create a new branch form this point in the past, and commit to it. Typically, you do: `git checkout HEAD~1` (or whatever number of commits that you want to go back), and then once you travel back in time, create a branch. Alternatively, `git checkout <commit_id>`, where commit ids can be taken from `git log`.
 
-In the past people used to recommend `git checkout branch_name` instead of `switch`, but afaik this use is now considered obsolete, as `checkout` was used for two different unrelated operations, and it is too confusing. [3](https://stackoverflow.com/questions/57265785/whats-the-difference-between-git-switch-and-git-checkout-branch)
+In the past people used to recommend `git checkout branch_name` instead of `switch`, but afaik this use is now considered obsolete, as `checkout` was used for two different unrelated operations, and it is too confusing.
 
 To clone a remote branch that doesn’t yet exist locally, do this:
 
@@ -65,6 +65,10 @@ To change which branch is considered remote-upstream for your local branch (for 
 `git branch branch_name --set-upstream-to your_new_remote/branch_name`
 
 Another DIY alternative is just to delete a branch at either local or remote end, and then pull (or push, respectively) to make local and remote repos match again.
+
+* https://stackoverflow.com/questions/34519665/how-can-i-move-head-back-to-a-previous-location-detached-head-undo-commits
+* https://www.atlassian.com/git/tutorials/using-branches/git-checkout
+* https://stackoverflow.com/questions/57265785/whats-the-difference-between-git-switch-and-git-checkout-branch
 
 # Merging
 * `git switch master ; git merge hotfix` - merge branch `hotfix` into master
@@ -105,7 +109,7 @@ Footnotes:
 * `git clean` - from the current dir, removes all files that are not under version control (all untracked files)
 * `git reset --hard [commit_id]` - reset to commit (last one by default), mercilessly discarding and erasing everything that happened since (all changes, committed and uncommited).
 * `git push --force` - hard push to origin, overwriting it: A _super_ dangerous a wrong thing to do; forbidden on all normal repos.
-* `git fetch origin master; git reset --hard origin/master` - hard-pull from origin completely erasing any local changes.
+* `git fetch origin master; git reset --hard origin/master` - **hard-pull from origin** erasing any local changes.
 * `git branch -d branch_name` - deletes branch
 * `git reset --hard HEAD~3` - destroy and delete last 3 commits, reset HEAD three positions lower. Note: If you want to save their content just in case, before running this, do `git branch [branch_name]`. Then when you destroy commits in the original branch, they will still be present in this new branch. Note also that rewriting history like that is a very bad idea if those commits were already shared.
 

@@ -1,7 +1,7 @@
 # Redshift Postgres RDS
 
-Parents: [[devops]], [[database]], [[aws]]
-Related: snowflake 
+Parents: [[devops]], [[database]], [[aws]], [[sql]]
+See also: [[snowflake]] 
 
 #devops #db
 
@@ -83,6 +83,8 @@ ALTER TABLE temp_table RENAME TO target_table;
 COMMIT; --This also releases the table
 DROP TABLE temp_table;
 ```
+> `\COPY` is a real command, the backslash is not a typo. 🔥🔥🔥 — What is the exact difference between `COPY` and `\COPY` again? This aws doc below calles it a "meta-command"; is this word supposed to have some precise and relevant meaning?
+
 My understanding is that in the code above, locking the `target_table` for writes actually comes too late, as we haven't blocked it in the time it took us to prepare `new_data.csv`, supposedly. If new data was based on the old contents of the table, it should have been locked before we read its contents, because either way it will be now overwritten and lost. But I guess it preserves at least some writes, and in some cases this manual locking may be even more useful. (🔥 would be nice to get a review on it)
 
 Another potential optimization: instead of dropping and creating the `temp_table` just clean it at the end using `TRUNCATE temp_table`, and keep an empty table always in place.
@@ -104,8 +106,6 @@ Footnotes:
 ## Uploading data
 
 `\COPY` command can do `\COPY table TO 'file_name' CSV`, or in the opposite direction, if `FROM` is used instead of `TO`.  For some reason some manuals use `WITH` keyword before `CSV`, while some don't.
-
-🔥 What is the exact difference between `COPY` and `\COPY` again? This aws doc below calles it a "meta-command"; is this word supposed to have some precise and relevant meaning?
 
 Footnotes:
 * Doesn't use WITH: https://skyvia.com/blog/complete-guide-on-how-to-import-and-export-csv-files-to-postgresql

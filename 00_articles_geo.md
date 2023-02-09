@@ -59,7 +59,7 @@ https://www.sciencedirect.com/science/article/abs/pii/S1369847821001789
 The effects of pricing and service configurations on a ride-pooling service with pick-up and drop-off points
 https://repository.tudelft.nl/islandora/object/uuid:3e9426a7-a3ec-4943-af7c-55a26592beaa
 
-Paying before or paying after? Timing and uncertainty in pay-what-youwant pricing ([link](https://pure.port.ac.uk/ws/portalfiles/portal/13177493/VIGLIA_2019_cright_JSR_Paying_before_or_paying_after_Timing_and_uncertainty_in_pay_what_you_want_pricing.pdf))
+Viglia, G., Maras, M., Schumann, J., & Navarro-Martinez, D. (2019). Paying before or paying after? Timing and uncertainty in pay-what-you-want pricing. Journal of Service Research, 22(3), 272-284. ([link](https://pure.port.ac.uk/ws/portalfiles/portal/13177493/VIGLIA_2019_cright_JSR_Paying_before_or_paying_after_Timing_and_uncertainty_in_pay_what_you_want_pricing.pdf))
 
 # Fancy network stuff
 
