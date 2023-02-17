@@ -40,3 +40,5 @@ Lots of useful practical bits and pieces: the shell, debugging, metaprogramming 
 Capture screen animation to a gif, client-side:
 * online tool: https://gifcap.dev/	
 * small downloadable tool: http://blog.bahraniapps.com/gifcam/
+
+Diagram drawer online: https://app.diagrams.net/

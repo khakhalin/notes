@@ -24,16 +24,24 @@ Analyze this set of links:
 * https://github.com/dipanjanS/BerkeleyX-CS190.1x-Scalable-Machine-Learning
 
 Main queue
-* Google tune-up book (read before model redevelopment): https://github.com/google-research/tuning_playbook
-* Check these books and push them up in the book list:  https://twitter.com/rasbt/status/1617310114922336258
-* From this tutorial, save info about reading population density:   https://twitter.com/milos_agathon/status/1617108301283577858
 * move pandas stuff here (from the notes)
 * move git stuff here
 * move sql stuff here
+* LightGBM https://en.wikipedia.org/wiki/LightGBM
+* shap values
+* microservices - intro by James Quigley: https://www.youtube.com/watch?v=1xo-0gCVhTU
+* docker - what and how
+    * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
+    * [[docker]] and [[kubernetes]]: https://www.youtube.com/watch?v=u8dW8DrcSmo
+    * https://www.docker.com/blog/containerized-python-development-part-1/ 
+* Kubernetes Cookbook (from O'Reilly) - maybe find it and leaf through it?
+* Google tune-up book (read before model redevelopment): https://github.com/google-research/tuning_playbook
+* Check these books and push them up in the book list:  https://twitter.com/rasbt/status/1617310114922336258
+* From this tutorial, save info about reading population density:   https://twitter.com/milos_agathon/status/1617108301283577858
 * Tabular functions in Snowflake: https://docs.snowflake.com/en/developer-guide/udf/sql/udf-sql-tabular-functions.html
 * https://medium.com/javarevisited/5-different-git-workflows-50f75d8783a7
 * what is pyspark?
-* redis - how does it look like?
+* redis
 * runbook - is there a definition for this word, best practicies? Or is it just a word?
 * `.gitlab-ci.yml` and all the rules 
 * everything about k8s, stage-dependent env variables, and making sealed secrets
@@ -56,19 +64,16 @@ Main queue
 * frog artifactory - some sort of package used for continuous integration (?) in SoftEng? At least stub it
 * curl - how to use exactly (document in [[bash]])
 * sudo
-* pyspark - what is it, and how it works?
-* parquet* 
+* parquet
 * dbd
 * airflow
 * https://martinfleischmann.net/line-simplification-algorithms/
 * https://ianqvist.blogspot.com/2010/05/ramer-douglas-peucker-polygon.html
-* Missing semester - parts on [[bash]] (shell), Scripting, VIM, Linux, Command line
 * finally learn (document) SQL window functions
-* sql things like `lead(COL, 1, default_value) over (partition by COL2 order by COL3) as NAME`
-* windowed functions (newer SQL): https://mode.com/sql-tutorial/sql-window-functions/
-* common table expressions (newer SQL)
+    * sql things like `lead(COL, 1, default_value) over (partition by COL2 order by COL3) as NAME`
+    * windowed functions (newer SQL): https://mode.com/sql-tutorial/sql-window-functions/
+    * common table expressions (newer SQL)
 * Finish SQL quests: https://sqlzoo.net/wiki/SUM_and_COUNT
-* what is pyspark? (without details for now, just the main idea)
 * Read this on [[tableau]]: https://vizpainter.com/
 * start documenting [[tableau]]. Describe INCLUDE and FIXED in particular
 * LODs for [[tableau]] - read and document this: https://www.flerlagetwins.com/2020/02/lod-uses.html
@@ -89,16 +94,8 @@ Main queue
 * Time-series prediction with trees: https://www.naturalspublishing.com/files/published/l259iab891zec2.pdf
 * Read Google Python style guide, it's fun: https://google.github.io/styleguide/pyguide.html
 * https://postgis.net/
-* LightGBM https://en.wikipedia.org/wiki/LightGBM
-* shap values
 * what is [[devops]] actually, canonically?
-* microservices - intro by James Quigley: https://www.youtube.com/watch?v=1xo-0gCVhTU
-* docker - what and how
-    * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
-    * [[docker]] and [[kubernetes]]: https://www.youtube.com/watch?v=u8dW8DrcSmo
-    * https://www.docker.com/blog/containerized-python-development-part-1/ 
-* Kubernetes Cookbook (from O'Reilly) - maybe find it and leaf through it?
-* homebrew: 
+* homebrew:
 * https://en.wikipedia.org/wiki/Amazon_S3 - what is it?
 * Roles in Snowflake - how do they work
 * [[dbt]]
@@ -107,17 +104,12 @@ Main queue
 * Learn how to have category column in pandas, test the difference
 * stream kinesis
 * python decorators (how do they work?)
-* bokeh
-* [[kibana]]
-* spark jobs? - for streaming data
+* bokeh* 
 * data life (or delta life?) tables (?) in databricks (?) - for streaming data
 * Reread this pandas advice just in case: https://github.com/chiphuyen/just-pandas-things/blob/master/just-pandas-things.ipynb
 * aws-okta as a command
 * how people use aws in practice
 * Maybe: https://aws.amazon.com/getting-started/
-* try XGBoost on real data
-* LightGBM - new better replacement for XGBoost (as de-facto practical SOTA)
-* Missing semester - Data Wrangling, GIT, Debugging, Meta, Security, last 2 lectures
 * document creating (and editing) custom colormaps in matplotlib
 * copy a few simple sequential [[keras]] examples here
 * Check out this `categorical` type in Pandas: would it help to save space? ([ref](https://pandas.pydata.org/docs/user_guide/categorical.html))
@@ -148,16 +140,13 @@ Main queue
         * https://laptrinhx.com/arima-model-from-scratch-in-python-3262984784/
     * prophet
 * How to do code reviews: https://google.github.io/eng-practices/review/reviewer/
-* document lambda notation in [[python]], with some common use cases
 * Isn't everything essentially map-reduce? What is the crux? What are the alternatives? https://en.wikipedia.org/wiki/MapReduce
-* kibana
 * databricks
 * anomaly detection
 * [[Hooker2020hardware]] - read and fill (it's a stub now)
 * [Constrained optimization](https://www.khanacademy.org/math/multivariable-calculus/applications-of-multivariable-derivatives/lagrange-multipliers-and-constrained-optimization/v/constrained-optimization-introduction) on Khan Academy
 * refresh [[design_pattern]], especially those used in data science
 * cointegration: https://www.youtube.com/watch?v=vvTKjm94Ars
-* document those subplot-like tricks in [[matplotlib]]
 * in [[sklearn]], for pca, add reconstruction (test in jupyter to make sure it's correct)
 * https://www.jeremyjordan.me/ml-monitoring/
 * https://en.wikipedia.org/wiki/Cointegration
@@ -181,13 +170,11 @@ https://arxiv.org/abs/1803.10122
 * pseudoinverse (there's more than one!), and how numpy calculates them. [[pseudoinverse]]
     * Moore-Penrose?
     * https://stackoverflow.com/questions/13265299/the-difference-of-pseudo-inverse-between-scipy-and-numpy
-* Reread data warehouses
 * What methods are typically included in the idea of "knowing time series analysis"? Do I know them? If not, disassemble and put some terms into this stack.
 * numpy broadcasting - what are the rules again? Does it not broadcast from a 2D to 1D array?
 * model view controller - most important design pattern for web apps
 * How to backprop through the maxpooling layer? Document it in [[pooling]]
 * How to perform unsupervised clustering using DL networks?
-* [[Redis]]
 * Neural networks breakpoints (a visualization / troubleshooting method):
     * https://discourse.numenta.org/t/the-breakpoints-of-a-neural-network/6775
     * https://www.youtube.com/watch?v=QEWe-aRBUAs
@@ -219,7 +206,6 @@ https://arxiv.org/abs/1803.10122
 * Neural turning machines: https://distill.pub/2016/augmented-rnns/
 * Differences between HTTP2 and 1
 * Pub-sub architectures
-* Microservices
 * Kafka & Redis caching
 Few questions on Load balancers & Reverse proxies. Also continuing discussion on Nginx and Varnish.
 * do linear regression: keras, tf, naive genetic
@@ -238,7 +224,6 @@ Few questions on Load balancers & Reverse proxies. Also continuing discussion on
 * What's the deal with this new vision transformer from Facebook (published in 2020). Supposedly they surpassed convnets. Why? What does it mean for us?
     * https://ai.facebook.com/blog/data-efficient-image-transformers-a-promising-new-technique-for-image-classification/
     * Distillation through attention?
-* AWS - do some tutorials
 * counterfactuals: http://bayes.cs.ucla.edu/PRIMER/primer-ch4.pdf
 * Granger causality (do I have notes about it somewhere?)
 * work through confetti tutorials and exams, like https://www.confetti.ai/exams/14/start

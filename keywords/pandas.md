@@ -182,8 +182,10 @@ Note that even `assign-lambda` does not support f-strings, so the best way to ca
 **Updating certain values in a column**
 The most popular way seems to be using a `where` command, which works like a `query` with a default value. Because of that, when it's used to update values, it actually updates values for which the condition is _false_, not true. For example: `df['x'] = df['x'].where(df['x'] > 0, -2)` will replace all values that are below zero with −2. One can use `~` to flip the condition, and it seems that when updating stuff some people even prefer writing it with a tilde, to make it more clear which values are updated, but it is such a mindhack that I reject it with indignation.
 
-The same `where` method can be used for a vectorized **ternary operation** on columns. If you want to get a column that takes values from `x` when a condition `c` is true, and values from `y` otherwise, do this:
-`df.x.where(df.c, df.y)`. As this expression produces a series, it can be used inside a chained `asign`.
+The same `where` method can be used for a vectorized **ternary operation** on columns. If you want to get a column that takes values from the original `COL_ORIGINAL` column when a condition `CONDITION` is true, and values from `COL_ALTERNATIVE` column otherwise, do this:
+`df.COL_ORIGINAL.where(df.CONDITION, df.COL_ALTERNATIVE)`. 
+And as this expression produces a series, it can be used inside a chained `assign` clause:
+`.assign(COL = lambda d: d.COL.where(<condition>, <alternative_values>)`.
 
 **Refs:**
 * https://www.tutorialspoint.com/python_pandas/python_pandas_working_with_text_data.htm
@@ -243,7 +245,7 @@ First group, then apply aggregation. `dfs = df.groupby('g').agg({'a': ['min', np
 
 Some useful functions: sum, mean, min, max, count, var, std, sem, first, last, nth (?).
 
-**Sorting** rows is done with `.sort_values(by='str')`, or a list of strings (column names). `ascending=True` by default.
+**Sorting** rows is done with `.sort_values(by='str')`, or a list of strings (column names). `ascending=True` by default. If using a list of keys, `ascending` can also be a list.
 
 `transform` is a really weird method that's helpful, but also feels a bit like a cheat. Normally it is used to call a function on a dataframe, producing a dataframe of a similar shape (like, apply something to every element). But with group objects it behaves like an agg followed by a reverse-merge by grouping factors. So instead of doing something like this (summarizing by column a, then reverse-merging to a, to get a total written in every row):
 
