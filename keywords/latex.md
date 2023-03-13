@@ -4,7 +4,10 @@ Random notes, to avoid excessive googling.
 
 #tools
 
+$\displaystyle \huge CM1 = \left( \int_{t=1}^{T_\text{idle}} \text{CityWideRevenue}(t) - \text{OneRentalRevenue}_\text{Zone} \right) \cdot \text{CM1\%}$
+
 Parent: [[01_Tools]]
+See also: [[unicode]]
 
 Special fonts $\mathcal{R} \mathfrak{R} \mathbb{R}$:`\mathcal{R} \mathfrak{R} \mathbb{R}`
 Tilde $\sim$: `\sim` (while `\tilde` is used to make $\tilde a$).

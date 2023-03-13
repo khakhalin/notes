@@ -14,8 +14,9 @@ Compare that to a formula for cross-entropy ([[cross-entropy]]):
 $H(p,q) = -\sum p \cdot \log(q)$
 
 Note two things about the KL formula:
-* We divide by p, so numerically p cannot be 0 anywhere. Even though p∙log(1/p)→0 for p→0.
+* We divide by p and take a log of q, so numerically neither p nor q cannot be 0. Even though p∙log(1/p)→0 for p→0
 * It's **asymmetric**: P is the "target distribution" (baseline), and Q is the one you are trying to compare to P.
+* That p∙log(1/p)→0 for p→0 means that ultimately KL doesn't care about unexpected things that happen (according to P), but does care about expected things not happening
 
 Sometimes is called **relative entropy** of P in respect to Q. Answers the question of how much more you would have learned if you updated from Q to P (Bayesian). Or how many extra bits you would need (you would have to waste) to transmit a message from P using a code optimized for Q, as KL = D(P || Q) = H(P, Q) − H(P).
 
@@ -34,7 +35,8 @@ KL divergence is also related to **mutual information**: I(X;Y) = KL( P(X,Y) || 
 
 # JS divergence
 
-**Jensen-Shannon divergence**: a popular symmetric alternative to KL.
+**Jensen-Shannon divergence**: a popular symmetric alternative to (or an extension of?) KL:
+
 JSD(P||Q) = ( KL(P||M) + KL(Q||M) )/2
 where M = (P+Q)/2
 Always between 0 and 1.

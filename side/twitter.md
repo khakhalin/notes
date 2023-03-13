@@ -1,4 +1,6 @@
-# How to twitter properly
+# Twitter
+
+#side #lifehack
 
 https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007513
 Ten simple rules for getting started on Twitter as a scientist

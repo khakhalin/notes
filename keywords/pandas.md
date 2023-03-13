@@ -193,18 +193,14 @@ And as this expression produces a series, it can be used inside a chained `assig
 * https://jakevdp.github.io/PythonDataScienceHandbook/03.12-performance-eval-and-query.html
 * https://datatofish.com/integers-to-strings-dataframe/
 
-# Appending and Merging
+# Combining and Merging
 
 **Concatenation**: `df.concat(objs)` where objs is a list of dataframes. Parameters:
 * `axis`: default 0 (horizontal stacking), but may be something else
 * `join`: default value of `outer` (for union of matching indices), but can be changed to `inner` (for intersection). Makes sense for `axis=1` (when columns are merged): with `outer` missing values are padded with NaNs, while with `inner` incomplete rows are eliminated.
 * `keys`: generated hierarchical keys. Expects a list of names, to become the first level of these keys.
 
-**Appending**
-* `df = df.append(df2)` - a simplified wrapper for adding homogeneous rows. Takes either a one-row dataframe, or a dictionary. 
-    * If indices are meaningful, use this notation, and it will check that they don't duplicate. If indices are essentially just row numbers, add `ignore_index=True` to make it more relaxed. And maybe also `sort=False`, to keep things simple and fast. Note that `ignore_index=True` seems to be necessary if we're supplying new rows as a dictionary (because by definition we don't have an index in this case?)
-    * Remember that while `append()` sounds in-place, it's actually NOT an in-place method, so we need to do `df = df.append(blabla)`.
-* An alternative approach: `df.loc[len(df), :] = [a, b, c]`. Seems to be faster than `df = df.append()`, and takes a vector, which is often easier to code.
+Appending one row: `df.loc[len(df), :] = [a, b, c]`
 
 **Merging** (full-featured, in-memory join). Archetypeical use:
         ```python
@@ -228,7 +224,18 @@ Some comments on joining and merging:
 * To join only some columns, join with an incomplete dataframe (make df_left not a full dataframe, but select the columns you need using standard `df[['x','y']]` notation).
 * To remove duplicates, do `.drop_duplicates()`
 
-For **merging multiple dataframes** at once, set indices properly, and then do `pd.concat()` with a list of dataframes, and `join=inner` (or something else) argument. See documentation for details. This looks neater, and may be faster, than consecutive merges.
+For **merging multiple dataframes** at once, set indices properly, and then do `pd.concat()` with a list of dataframes, and `join=inner` (or something else) argument. See documentation for details. This looks neater, and may be faster than consecutive merges.
+
+**merge_asof** - sort of a sequential merge with short-circuiting, similar to vlookups in Excel that give up on the last so-so match, instead of searching for a perfect match. For example, if `df_checkpoints` contains only some measures at some time points, and `df_full` contains a full list of time-staps, do this to "infill" (protract step-wise) every point measure across all time-stamps between point-measures:
+`pd.merge_asof(df_full, df_checkpoints, on='TIMESTAMP')`
+In this case to me it feels that we're going foward, filling data with stuff, but actually the default settings for the direction is `direction=backward`. If you switch it to `forward`, you'll start filling missing points with the next value. Apparently, it's the direction of "looking", not that of movement. It's also possible to use `direction=nearest`.
+* Note that without piping, this method is not stackable (it's not a method of a dataframe, but of Pandas). But one can always do `df1.pipe(pd.merge_asof, df2, on='TIME')`.
+* https://pandas.pydata.org/pandas-docs/version/0.25.0/reference/api/pandas.merge_asof.html
+
+🚫 **Recently deprecated: Append**
+* `df = df.append(df2)` - used to be a way to add homogeneous rows. Takes either a one-row dataframe, or a dictionary. 
+* If indices are meaningful, use this notation, and it will check that they don't duplicate. If indices are essentially just row numbers, add `ignore_index=True` to make it more relaxed. And maybe also `sort=False`, to keep things simple and fast. Note that `ignore_index=True` seems to be necessary if we're supplying new rows as a dictionary (because by definition we don't have an index in this case?)
+* Remember that while `append()` sounds in-place, it's actually NOT an in-place method, so we need to do `df = df.append(blabla)`.
 
 Footnotes:
 * Documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/merging.html

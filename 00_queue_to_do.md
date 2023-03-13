@@ -37,6 +37,7 @@ Main queue
 * Kubernetes Cookbook (from O'Reilly) - maybe find it and leaf through it?
 * Google tune-up book (read before model redevelopment): https://github.com/google-research/tuning_playbook
 * Check these books and push them up in the book list:  https://twitter.com/rasbt/status/1617310114922336258
+* Prophet as some handy improvement over ARIMA: https://facebook.github.io/prophet/
 * From this tutorial, save info about reading population density:   https://twitter.com/milos_agathon/status/1617108301283577858
 * Tabular functions in Snowflake: https://docs.snowflake.com/en/developer-guide/udf/sql/udf-sql-tabular-functions.html
 * https://medium.com/javarevisited/5-different-git-workflows-50f75d8783a7

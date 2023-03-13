@@ -60,12 +60,9 @@ To suppress warnings from some of the most verbose packages you use:
 logging.getLogger("package_name").setLevel(logging.INFO)
 ```
 
-**To filter one specific warning**: 🔥 for now I don't know how to do it! People on Stackoverflow seem to claim that you don't need a class for that, and that passing a function is enough. But it didn't work fo rme for some reason.
+**To filter one specific warning**: You need to create a filter (either a class or a function) and attach it to something. The filter is supposed to return a Boolean, and messages that trigger a `True` will pass, while messages that trigger a `False` will be filtered out.
 
-`logging.getLogger("package").addFilter(lambda record: 'annoying_string' in record.msg)`
-But for some reason it doesn't work (no error, just no filtering)
-
-ChatGPT claims that this is a solution: (🔥 _still needs to be tested_)
+Stackoverflow recommend a solution with a class:
 ```python
 import logging
 
@@ -77,7 +74,7 @@ logger = logging.getLogger("snowflake")
 logger.addFilter(SnowflakeFilter())
 ```
 
-An explicit method is not necessary, as we can create it from a function on the fly:
+but also mentions that you don't need a class, technically; that it's enough to pass a function:
 ```python
 def snowflake_filter(record): 
     return not record.getMessage().startswith("snowflake.connector.cursor: query execution done") 
@@ -86,23 +83,35 @@ logger = logging.getLogger("snowflake")
 logger.addFilter(logging.Filter(name="snowflake_filter", filterfunc=snowflake_filter))
 ```
 
-And the function can be created on the fly too:
+Which implies that technically one could even have a one-liner:
+`logging.getLogger("package").addFilter(lambda record: 'annoying_string' not in record.msg)`
+
+The problem is that none of these solutions work for me. What did work, is attaching the filter to a handler, not a logger. Even though that's not what people write online. Don't know the reasons of this difference:
+
 ```python
-logger = logging.getLogger("snowflake") 
-logger.addFilter(logging.Filter(name="snowflake_filter", 
-                   filterfunc=lambda record: not record.getMessage().startswith(
-                       "snowflake.connector.cursor: query execution done")))
+if not len(root_log.handlers):  
+    root_log.addHandler(logging.StreamHandler())  # Standard process of handler creation
+def my_filter(record):
+    return 'lala' not in record.getMessage()
+root_log.handlers[0].addFilter(my_filter)
 ```
-
-> 🔥 So, even if the function works, the first difference is between `record.msg` and `record.getMessage()`, and the second is with my attempts returning True for bad messages, while chatgpt solution returns True for good messages. Need to try it again; perhaps my solution didn't work at all because of the `msg` part, and that is why I haven't noticed that the filter is inversed.
-
-Footnotes with various attempts to solve this:
+Footnotes:
 * https://www.programcreek.com/python/example/3364/logging.Filter
 * https://stackoverflow.com/questions/879732/logging-with-filters 
 
+# Formatting messages
+
+```python
+if not len(root_log.handlers):  
+    root_log.addHandler(logging.StreamHandler())  # Standard process of handler creation
+log_format = logging.Formatter(fmt="%(asctime)s: %(levelname)s: %(name)s: %(message)s")
+root_log.handlers[0].setFormatter(log_format)     
+```
+
 # Warnings
 
-To suppress **all warnings** (not recommended): `import warnings; warnings.simplefilter('ignore')`
+To suppress **all warnings** (not recommended):
+`import warnings; warnings.simplefilter('ignore')`
 
 To only suppress **deprecation warnings** (as these seem to be the most annoying ones):
 ```python

@@ -1,6 +1,6 @@
 # To-read GIS and mobility
 
-See also: [[gis]], [[mobility]], [[urbanism]], [[maps]]
+See also: [[gis]], [[mobility]], [[urbanism]], [[maps]], [[carsharing]]
 
 #bib #gis #geo #todo
 
@@ -42,6 +42,12 @@ https://arxiv.org/pdf/2111.02152
 
 Sprei, F., Habibi, S., Englund, C., Pettersson, S., Voronov, A., & Wedlin, J. (2019). Free-floating car-sharing electrification and mode displacement: Travel time and usage patterns from 12 cities in Europe and the United States. Transportation Research Part D: Transport and Environment, 71, 127-140.
 https://research.chalmers.se/publication/510282/file/510282_Fulltext.pdf
+
+Münzel, K., Arentshorst, M., Boon, W., & Frenken, K. (2022). Assessing policies to scale up carsharing. In Innovations in Transport (pp. 242-268). Edward Elgar Publishing.
+https://dspace.library.uu.nl/bitstream/handle/1874/425265/9781800373372_book_part_9781800373372_18.pdf?sequence=1
+
+Vossebeld, J. A. (2022). Explaining the variation in the demand for roundtrip B2C carsharing in neighbourhoods in the G44 cities in the Netherlands: an explanation based on neighbourhood characteristics and the current distribution of shared cars (Master's thesis, University of Twente).
+http://essay.utwente.nl/89531/1/Vossebeld_MA_EEMCS%20_openbaar.pdf
 
 # Pricing
 
