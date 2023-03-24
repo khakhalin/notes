@@ -104,12 +104,15 @@ Useful methods:
 * Rank: `df.groupby('col1')['col2'].rank(method='dense', ascending=False)` produces a rank-transformed series. Lots of cool methods of ranking: `average` (default), but also `min`, `max`, `dense`, `first`. Se [manual](https://pandas.pydata.org/docs/reference/api/pandas.Series.rank.html) for more.
 
 ### Strings
-* For basic string operations, like cut first chars: `df['x'].str[1:]`
-* Other operations, all follow a paradigm of `df['x'].str.lower()`. They only work on a series, not on a dataframe. It also means that `df.x` won't work in this case, as it doesn't return a series. 
-* To create a new column by combining other columns, use a normal `+` notation for strings, like `d['a'] = d['b'] + d['c']`. f-strings don't seem to work here though.
-* To cast to a string: `df.x.astype(str)`
-* `split` splits every string into an array of substrings, same as for normal Python.
-* To remove leading spaces: `strip()`
+* Operations on existing strings:
+    * cut first chars: `df['x'].str[1:]`
+    * Methods on strings are collable: `df['x'].str.lower()`, but they only work on a series, not on a dataframe.
+        * For example: to remove leading spaces: `strip()`
+        * `.split()` splits every string into an array of substrings, same as for normal Python.
+* Creating new string columns:
+    * The simplest (but inflexible) way to cast to a string: `df.x.astype(str)`
+    * f-strings written in  `f"bla"` way won't work in this type of expression, but they can be used via a `str.format()` method, mapped to a series: `df.x.map('{:02d}'.format)`
+    * To combine strings, use a normal `+` notation, e.g.: `d['a'] = d['b'] + d['c']`. 
 
 There's support of **regular expressions** (see [[regex]]) in `str`, such as:
 * `.str.extract(r'(expr))` - extract part of a string that matches the pattern
