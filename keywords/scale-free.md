@@ -1,6 +1,10 @@
 # Scale-free networks
 
-#networks #graphs
+Parents: [[09_Graphs]]
+See also: [[small_world]]
+
+#networks #graph
+
 
 # Refs
 

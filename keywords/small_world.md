@@ -1,9 +1,10 @@
 # Small-world networks
 
-#graphs #generative #networks
-
 Parent: [[09_Graphs]] / [[graph_generate]]
-Related: [[erdos_graph]]
+See also: [[erdos_graph]], [[scale-free]]
+
+#graph #generative #networks
+
 
 The problem: IRL networks have rather high clustering coeff, as "a friend of my friend is usually my friend" (aka **Triadic closure**). Everything is very local. But unlike in a regular grid (that is local), the diameter is very small (grows logarithmically, and not as a power, as in a grid). We need to satisfy 2 requirements and be local and global at the same time. Intuition: let's go in-between a regular grid-like graph and a random graph.
 

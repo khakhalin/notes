@@ -3,7 +3,7 @@
 Parent: [[09_Graphs]], [[generative]]
 See also: [[graph_properties]]
 
-#graphs #networks #algo #generative
+#graph #networks #algo #generative
 
 
 Subtopics:

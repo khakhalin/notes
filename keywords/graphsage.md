@@ -1,9 +1,10 @@
 # Graph Sage
 
-#dl #graphs
-
 Parents: [[09_Graphs]] / [[graph_embedding]] / [[deep_graphs]]
 Related: [[convnet]], [[generative_graphRNNs]]
+
+#dl #graph
+
 
 Let's generalize the simple idea from [[deep_graphs]] to a case of
 1. more general aggregation function

@@ -3,7 +3,7 @@
 Parent: [[algos_graph]]
 Related:  [[dijkstra]]
 
-#graphs
+#graph #algo
 
 
 Graph traversal, aka path search, aka travel routing algorithm. Very similar to Dijkstra's, but improved by using a heuristics. As with Dijkstra, we have a weighted graph, and we are building a tree, trying to reach from a source node to the target node.

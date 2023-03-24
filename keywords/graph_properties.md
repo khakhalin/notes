@@ -1,9 +1,10 @@
 # Measuring network properties
 
-#graphs
-
 Parent: [[09_Graphs]]
 See also: [[graph_intro]], [[graph_generate]], [[algos_graph]]
+
+#graph #networks
+
 
 Subtopics and papers:
 * [[graph_symmetry]] - symmetrical and asymmetrical graphs

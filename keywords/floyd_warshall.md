@@ -1,9 +1,10 @@
 # Floyd Warshall algorithm
 
-#algo #graphs
-
 Parents: [[algos]] / [[algos_graph]]
 See also: [[dijkstra]], [[a-star]]
+
+#algo #graph
+
 
 Find shortest distances from every node to every other node, using dynamic programming. The main idea: let's consider paths that use only first k nodes of the graph as intermediate nodes. We start with smallest possible k=0 (direct edge, no intermediate nodes). This gives the base case of `d(i,j,0)=w_ij`. Then for each k>0, we get `d(i,j,k) = min(d(i,j,k-1) , d(i,k,k-1)+d(k,j,k-1))`: in this formula k in the 3d position stands for "paths that only go through {nodes 1 to k}", while in the 1st and 2nd positions it is just a node (kth node of the graph). So we can iterate through all k from 0 to V (the number of edges), and calculate all distances.
 

@@ -1,9 +1,10 @@
 # SIR, SIS, and pandemics processes on graphs
 
-#graphs #chaos
+Parents: [[09_Graphs]], [[chaos]], [[complexity]]
+See also: [[graph_cascades]], [[graph_automata]], percolation
 
-Parents: [[09_Graphs]]
-See also: [[graph_cascades]], [[graph_automata]]
+#graph #chaos
+
 
 Papers:
 * [[Jin2003twitter]] - SEIZ model

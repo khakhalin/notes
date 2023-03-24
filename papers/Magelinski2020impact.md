@@ -3,9 +3,10 @@
 Magelinski, T., Bartulovic, M., & Carley, K. M. (2020). Modularity-Impact: a Signed Group Centrality Measure for Complex Networks. arXiv preprint arXiv:2003.00056.
 https://arxiv.org/abs/2003.00056
 
-#centrality #networks #graphs
-
 See also: [[09_Graphs]] / [[graph_properties]], [[sir]]
+
+#centrality #networks #graph
+
 
 Like classic Newman's modularity, but signed, helping to distinguish hubs from bridges. Good for targeted interventions, such as **immunization strategies**, which are essentially **network attacks**. We want to maximally disjoint the network, by removing a minimal number of nodes.
 

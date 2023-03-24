@@ -4,7 +4,7 @@ Parents: [[09_Graphs]] / [[graph_embedding]]
 Siblings: [[node2vec]]
 See also: [[word2vec]], [[embedding]], [[neg_sampling]]
 
-#graphs #embedding #semantic
+#graph #embedding #semantic
 
 
 **TransE**: an alternative approach that doesn't actually rely on random walks. Ref: Borders 2013.

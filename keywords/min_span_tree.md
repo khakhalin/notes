@@ -1,9 +1,9 @@
 # Minimum Spanning Tree, aka Prim and Kruskal
 
-#algo #graphs #trees
-
 Parents: [[algos]] / [[algos_graph]], but also [[09_Graphs]]
 Related: [[algos_trees]], [[union-find]]
+
+#algo #graph #trees
 
 
 **MST**: for an undirected weighted graph, a spanning tree (connected subgraph with no cycles) that also happenes to have a minimal sum of weights across all possible spanning trees. (May not be the ony tree with this sum, but at least there's no better one).

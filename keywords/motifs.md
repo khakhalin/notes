@@ -1,8 +1,10 @@
 # Motifs
 
-#graphs
-
 Parent: [[09_Graphs]] / [[graph_properties]]
+See also:
+
+#graph
+
 
 For the toy model:
 

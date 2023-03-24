@@ -1,6 +1,6 @@
 # Graphs, Networks, and Graphical Methods
 
-#bib #graphs #networks
+#bib #graph #networks
 
 
 **Classic graph theory**

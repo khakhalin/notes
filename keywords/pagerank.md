@@ -1,9 +1,10 @@
 # Pagerank and link analysis
 
-#graphs #centrality
-
 Parents: [[09_Graphs]] / [[centrality]]
-Related: Katz centrality, [[kosaraju-sharir]], PCA, eigenvectors, spectral techniques on graphs
+Related: Katz centrality, [[kosaraju-sharir]], [[pca]], eigenvectors, [[graph_spectra]]
+
+#graph #centrality
+
 
 ## Bowtie with tendrils
 

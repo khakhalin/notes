@@ -1,9 +1,10 @@
 # Spectral techniques on graphs
 
-#stub #graphs
-
 Parents: [[09_Graphs]]
 Related: [[spectral_clustering]]
+
+#stub #graph
+
 
 * [[spectral_radius]] - and how to calculate it
 

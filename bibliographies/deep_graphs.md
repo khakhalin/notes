@@ -1,13 +1,13 @@
 # Deep learning on graphs
 
-#dl #graphs
-
 Parents: [[06_DL]], [[09_Graphs]]
 Related: [[graph_embedding]] (shallow encoders), [[convnet]], [[transformers]]
 
+#dl #graph
+
+
 Children:
 * [[graphsage]] - the next iteration of this idea
-
 
 
 **Reminder**: We want a function f( ): graph → low-dim embedding. How to learn f()? In some sense, f has to learn the structure of the network (graphlets, motifs, etc.) Similar nodes (graph similarity) should be projected to points that are close together (say, cosine proximity = $z_u ^⊤ z_v$). Encoder ENV(v) = z_v. **Shallow encoder**: directly learn coordinates Z, + similarity coming from random walks.

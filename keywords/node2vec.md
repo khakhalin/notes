@@ -1,9 +1,9 @@
 # node2vec
 
-#graphs #embedding
-
 Parent: [[09_Graphs]] / [[graph_embedding]]
 Related: [[word2vec]], [[knowledge_graph]], [[deep_graphs]]
+
+#graph #embedding
 
 
 We start with **random walks** around each node (see [[graph_embedding]]). A **neighborhood** $N_R(u)$ is a multi-set of all nodes that were visited during random walks starting at u following strategy R. As IRL most networks follow a power-law distribution, neighborhoods of each node quickly grow very large.

@@ -1,9 +1,10 @@
 # Deep graph generation with graphRNN
 
-#graphs #generative
-
 Parents: [[09_Graphs]] / [[graph_generate]] ; [[07_RNNs]]
 Related:  [[deep_graphs]], [[graphsage]]
+
+#graph #generative
+
 
 ## Setting the problem
 

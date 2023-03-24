@@ -1,8 +1,9 @@
 # Trie
 
-#algo #text #graphs
+Parents: [[algos_trees]]
 
-Path: [[algos_trees]]
+#algo #text #graph
+
 
 Key idea: A search tree for a string that tells "not found" early on, not waiting for the rest of the string. And also that stores strings with matching beginnings efficiently, without double-storage. Pronounced as "try".
 

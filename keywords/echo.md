@@ -1,9 +1,10 @@
 # Reservoir computing
 
-#echo #rnn #graphs #bib
-
 Parents: [[07_RNNs]]
-See also: [[criticality]], [[cellular_automata]], [[graph_symmetry]], [[intrinsic_plasticity]]
+See also: [[criticality]], [[cellular_automata]], [[graph_symmetry]], [[intrinsic_plasticity]], [[complexity]]
+
+#echo #rnn #graph #bib
+
 
 Related:
 * [[synfire]] - biological networks encoding temporal sequences

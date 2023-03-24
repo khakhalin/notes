@@ -1,9 +1,10 @@
 # Kronecker Graph Model
 
-#graphs #fractal #generative
-
 Parent: [[09_Graphs]] / [[graph_generate]]
 Related: [[small_world]]
+
+#graph #fractal #generative
+
 
 Recursive (self-similar) generation of networks. Start with a small seed graph, and expand recursively. Take an adjacenty matrix K_1, then replace every 1 with K_1 as a block-matrix, and every 0 with a similarly sized block of 0. You get K_2. Repeat recursively. Very parallelizable, so good for creating very large graphs.
 

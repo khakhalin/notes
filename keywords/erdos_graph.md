@@ -1,9 +1,10 @@
 # Erdős–Rényi model
 
-#graphs
-
 Parent: [[09_Graphs]] / [[graph_generate]]
-Related [[small_world]]
+Related [[small_world]], [[randomness]]
+
+#graph
+
 
 Random graph, aka Poisson random graph. Introduced in 1960. Two variants:
 * **G_np**: undirected graph of n node, with edges between all pairs of nodes equally probable, and probability p. More popular.
