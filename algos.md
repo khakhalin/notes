@@ -6,6 +6,7 @@ Subtopics:
 * [[algos_trees]] - everything trees (more data structures / search, rather than than graphs)
 * [[sorting]] algorithms
 * [[np-complete]] - P, NP, and NP-complete
+* [[generative]] - generative algorithms
 
 Popular data structures:
 * [[hash]] - hashmaps, hashtables, and hashing functions

@@ -2,8 +2,11 @@
 
 #ubranism #bib #geo
 
-See also: [[gis]], [[art]]
+Parents: [[gis]]
+See also: [[art]], [[mobile_geoloc]]
 
+
+# Classic oldschool urbanism
 
 Jane Jacobs. The Death and Life of Great American Cities
 https://en.wikipedia.org/wiki/The_Death_and_Life_of_Great_American_Cities

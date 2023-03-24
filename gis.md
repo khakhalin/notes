@@ -1,17 +1,21 @@
 # GIS
 
-#geo #gis #bib
-
 See also: [[00_articles_geo]], [[mobility]]
 
-Cartography: 
-* [[crs]] - Coordinate Reference System
+#geo #gis #bib
+
 
 Techstack:
 * [[shapely]]
+* [[openstreetmap]]
+
+General cartography: 
+* [[crs]] - Coordinate Reference Systems
+
+Subtopics (broadly speaking):
+* [[mobility]] - moving in the city
+* [[mobile_geoloc]] - how to locate phones from signals
+* [[urbanism]] - urban planning
 
 Link collections:
 * [[maps]] - just various maps
-
-Narrow topics
-* [[mobile_geoloc]] - about how to locate phones

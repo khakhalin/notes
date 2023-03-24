@@ -13,6 +13,7 @@ Useful algorithms:
 * [[a-star]] - A* : an improvement upon Dijsktra's
 * [[floyd_warshall]] - shortest distance from all nodes to all nodes
 * [[bridge]] - finding bridges (lonely edges connecting two components)
+* [[graph_generate]]
 
 See also:
 * [[graph_intro]] - basic introduction to graphs

@@ -1,8 +1,12 @@
 # Generative algorithms
 
+Parents: [[algo]]
+See also:
+
 #generative #bib
 
-Topics:
+
+Subtopics:
 * [[autoencoder]]
 * [[gan]]
 * [[wf_collapse]] - Wave Function Collapse

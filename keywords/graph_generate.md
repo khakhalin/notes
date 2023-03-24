@@ -1,9 +1,10 @@
 # Generating graphs and networks
 
-#graphs #networks
+Parent: [[09_Graphs]], [[generative]]
+See also: [[graph_properties]]
 
-Parent: [[09_Graphs]]
-Siblings: [[graph_properties]] (prev)
+#graphs #networks #algo #generative
+
 
 Subtopics:
 * [[erdos_graph]] - basis for everything
