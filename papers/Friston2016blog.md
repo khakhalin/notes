@@ -4,7 +4,8 @@ http://serious-science.org/free-energy-principle-7602
 
 #freeenergy
 
-Not a good summary. Bad summary. It pretends to be written informally, but is actually pretty hard to understand.
+
+Not a good summary. It pretends to be written informally, but is actually very hard to understand (partially because of that).
 
 Brain as a machine that collects of information: not just uses it to infer stuff, but seeks it, and even chooses which info to seek. But to have information, you need objects, or states, that are separate from each other. **Markov blanket**: according to [wiki](https://en.wikipedia.org/wiki/Markov_blanket), some sort of a collection of variables that describe the node, which in a markov net includes the node itself, everything that immediately leads to it (parents), and all immediate children.
 

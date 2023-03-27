@@ -4,6 +4,7 @@ Just a list of names (of artists) that are always inspirational. Something to fe
 
 #art #side
 
+
 Older
 * Duccio Buoninsegna - transition from Icons to renaissance 
 * Odilon Redon - fav French symbolist

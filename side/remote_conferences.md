@@ -2,7 +2,8 @@
 
 #edu #management
 
-Ideas / advice:
+
+Advice:
 * Zoom cloud recording (? #todo)
 * Disable Zoom chat; use Slack for chat (better organized, persistent, conversations can be continued after the event)
 * Webinars can't be raided (as link only allows to watch, not interrupt)

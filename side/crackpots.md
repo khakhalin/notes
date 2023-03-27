@@ -1,5 +1,7 @@
 # Crackpots
 
+#fun
+
 * [Kary Mullis](https://en.wikipedia.org/wiki/Kary_Mullis) got a Nobel Prize in biochemistry (he invented PCR), but is also an HIV and climate science denialist. 
 * James Watson made some weird racist remarks; 
 * Linus Pauling essentially became a pseudo-science essential oils guy (except with vitamin C instead of essential oils); 

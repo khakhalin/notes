@@ -2,14 +2,15 @@
 
 Bock, L. (2015). Work rules!: Insights from inside Google that will transform how you live and lead. Twelve.
 
-#book #management
-
 A book about Google, management, and hiring.
 
 Parents: [[management]], [[recruiting]]
 Related: [[job_search]]
 
-### 2 Culture eats strategy for breakfast
+#book #management
+
+
+## 2 Culture eats strategy for breakfast
 
 Three cornerstones:
 * Give freedom to people, trust them (google maps as an example)
@@ -20,7 +21,7 @@ Some internal competition (say, Chrome vs Android) is OK, but mostly think of it
 
 At least back then (2015) still felt like a democracy. Put innovation in the hands of the people. "Bureaucracy busters" program in 2009, to identify and reduce unnecessary redtape.
 
-### 3 Hiring is the most important activity in any organization
+## 3 Hiring is the most important activity in any organization
 
 Advocates against training on the job, as (apparently) you cannot train an average performer to be great. Instead, just hire the best. Companies that invest in training have their money "spent in the wrong places" (sic).
 

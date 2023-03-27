@@ -1,8 +1,9 @@
 # Beetles
 
+See also: [[strange_animals]]
+
 #side #evo #bio
 
-See also: [[strange_animals]]
 
 Why are there so many beetles? You know this joke about how God seems to be really into beetles, as there are so many species? On trees of life, beetles look kinda almost like a pathological outgrowh; like coppiced poplar of sorts.
 

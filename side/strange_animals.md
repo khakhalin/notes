@@ -2,10 +2,10 @@
 
 A collection of weird animals (and plants) that make you think "how come I've never head about it!"
 
+See also: [[beetles]]
+
 #side #bio
 
-
-See also: [[beetles]]
 
 That plant that looks like a blob
 Those giant unicellular plants

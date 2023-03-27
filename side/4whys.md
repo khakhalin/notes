@@ -1,6 +1,7 @@
 # Tinbergen 4 "WHY"s
 
-#behav
+#behav #bio
+
 
 There are 4 types of "why" question in Biology (as per Tinbergen, 1963):
 1. Function - what is it for? What's the evolutionary benefit of it?

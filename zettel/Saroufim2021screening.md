@@ -4,6 +4,7 @@ The Myth of Objective Tech Screens. Mark Saroufim. Feb 24 2021. https://marksaro
 
 #interview #management
 
+
 A collection of experiences, but with the main message that people hire people that are similar to them. If they go with a rubric, they populate it with abstract random questions (examples that he brings up are a very specific explanation of what backprop is, and using YOLO network). So he's against rubrics.
 
 # My thoughts
