@@ -2,8 +2,9 @@
 
 #bib #neuro #synfire
 
-Parent: [[12_Neuro]]
+Parent: [[neuro]]
 Related: [[echo]], [[synfire]], [[hopfield]] (continuous Hopfield networks in particular)
+
 
 Papers:
 * [[Fiete2010stdp]] - stdp builds long sequences

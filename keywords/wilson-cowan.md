@@ -3,7 +3,7 @@
 #neuro
 
 
-Parent: [[12_Neuro]]
+Parent: [[neuro]]
 Related: [[complexity]], [[cpg]], [[sleep]]
 
 A simplified and very old (1972) model of a mix of excitatory and inhibitory neurons that demonstrates bistability. Basically 2 differential equations on variables E and I (all excitatory and all inhibitory), that is kinda inspired by neuroscience. E population excites both itself and I, while I population inhibits both itself and E. if you solve the system, it converges on either one or another constant level (after a short oscillation). Has a hysteresis to it, and can be turned into an oscillatory model with some small modifications (apparently). Can be analyzed using classical phase portraits.

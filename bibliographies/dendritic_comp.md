@@ -2,7 +2,7 @@
 
 #bib #neuro #dendritic
 
-Parent: [[12_Neuro]]
+Parent: [[neuro]]
 See also: [[deepneuro]]
 
 Papers:

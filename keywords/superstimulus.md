@@ -2,7 +2,7 @@
 
 #neuro #ethology #cognition #interpretability
 
-Parents: [[12_Neuro]], [[interpretability]]
+Parents: [[neuro]], [[interpretability]]
 Related: [[illusions]], [[vision]]
 
 # Superstimuli in ML

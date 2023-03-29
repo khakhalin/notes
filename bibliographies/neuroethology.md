@@ -1,6 +1,6 @@
 # Neuroethology
 
-Parent: [[12_Neuro]]
+Parent: [[neuro]]
 Related: [[behavior]], [[neurostochastic]]
 
 #neuro #bib

@@ -2,7 +2,7 @@
 
 #bib #neuro
 
-Parents: [[12_Neuro]], [[bib_image]], [[video]], [[deepneuro]]
+Parents: [[neuro]], [[bib_image]], [[video]], [[deepneuro]]
 Related: [[superstimulus]], [[illusions]], [[ene_070_vision]]
 
 Pure ML vision is covered in [[bib_image]] and [[video]], so here we have only neuro-inspired ML, and pure neuroscience.

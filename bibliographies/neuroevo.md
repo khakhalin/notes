@@ -2,7 +2,7 @@
 
 #neuro #bib #fun
 
-Parent: [[12_Neuro]]
+Parent: [[neuro]]
 See also: [[neurodevelopment]]
 
 Evolution of rapid nerve conduction. (2016). Castelfranco. Review.

@@ -1,9 +1,10 @@
 # Intrinsic plasticity
 
-Parents: [[12_Neuro]]
+Parents: [[neuro]]
 See also: [[dendritic_comp]]
 
 #neuro #bib #intrinsic
+
 
 Papers:
 * [[Titley2017neurocentric]] - review of how neurono-centric is better than synapto-centric

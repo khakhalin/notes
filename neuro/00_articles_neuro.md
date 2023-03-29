@@ -1,6 +1,6 @@
 # To-read: Neuro
 
-Se also: [[12_Neuro]] (the official hub age)
+Parent: [[neuro]]
 
 #neuro #bib #todo
 

@@ -2,8 +2,9 @@
 
 #neuro #perception #bib #interpretability
 
-Parents: [[12_Neuro]], [[interpretability]]
+Parents: [[neuro]], [[interpretability]]
 Related: [[superstimulus]], adversarial attacks
+
 
 # Priming illusions
 

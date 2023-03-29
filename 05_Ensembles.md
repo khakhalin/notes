@@ -1,6 +1,7 @@
 # Ensemble methods
 
-#ensemble
+#ensemble #bib
+
 
 The concept of **ensembles** is about combining (or gradually refining) many poor predictions (aka **weak learners**) into a very good predictor.
 
@@ -9,11 +10,14 @@ Subtopics:
 * [[stacking]] - many predictors (bagging + diff hyperparameters), then optimal linear combination of models
 * [[bumping]] - randomly move in the latent space, to avoid local minima, then simply pick the best model
 * [[boosting]] -  iteratively pick best single-var split (decision stump), boost errors, build a weighted model
-* [[gbm]] - gradient boosting machines; similar to boosting, but for non-categorical data
 * [[random_forest]] - bagging + features_bagging (random subset of coordinates), average all
+* [[gbm]] - gradient boosting machines; similar to boosting, but for non-categorical data* 
+* Famous implementations:
+    * Xboost
+    * [[LightGBM]]
 
 See also:
-* [[dropout]] - similar idea for DL
+* [[dropout]] - a similar idea for DL
 
 # Refs
 

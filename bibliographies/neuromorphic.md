@@ -1,6 +1,6 @@
 # Neuromorphic
 
-Related: [[12_Neuro]], [[deepneuro]], [[echo]], [[dendritic_comp]]
+Related: [[neuro]], [[deepneuro]], [[echo]], [[dendritic_comp]]
 
 #bib #neuromorphic
 

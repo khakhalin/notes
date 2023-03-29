@@ -1,6 +1,6 @@
 # Synfire chains
 
-Parents: [[12_Neuro]], [[07_RNNs]], [[network_neuro]]
+Parents: [[neuro]], [[07_RNNs]], [[network_neuro]]
 Related: [[echo]], [[stdp]]
 
 #synfire #echo #stdo

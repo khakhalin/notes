@@ -2,8 +2,9 @@
 
 #neuro #psych #bib #dreams
 
-Parent: [[12_Neuro]]
+Parent: [[neuro]]
 See also: [[sleep]]
+
 
 # Bibliography
 

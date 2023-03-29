@@ -7,7 +7,7 @@ Gillon, C.J., Pina, J.E., Lecoq, J.A., Ahmed, R., Billeh, Y., Caldejon, S., Grob
 https://www.biorxiv.org/content/10.1101/2021.01.15.426915v1
 Tweetstorm: https://twitter.com/colleenjgillon/status/1351557910439059457
 
-Related: [[12_Neuro]], [[unsupervised]]
+Related: [[neuro]], [[unsupervised]]
 
 Unsupervised learning in the cortex (awake behaving mice).
 

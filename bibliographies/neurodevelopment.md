@@ -2,7 +2,7 @@
 
 #neuro #development #bib
 
-Parents: [[12_Neuro]]
+Parents: [[neuro]]
 See also: …
 
 Papers:

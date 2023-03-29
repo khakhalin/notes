@@ -27,8 +27,7 @@ Main queue
 * move pandas stuff here (from the notes)
 * move git stuff here
 * move sql stuff here
-* LightGBM https://en.wikipedia.org/wiki/LightGBM
-* shap values
+* shap values for [[LightGBM]]
 * microservices - intro by James Quigley: https://www.youtube.com/watch?v=1xo-0gCVhTU
 * docker - what and how
     * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
@@ -43,6 +42,7 @@ Main queue
 * https://medium.com/javarevisited/5-different-git-workflows-50f75d8783a7
 * what is pyspark?
 * redis
+* vector similarity on redis: https://redis.io/docs/stack/search/reference/vectors/
 * runbook - is there a definition for this word, best practicies? Or is it just a word?
 * `.gitlab-ci.yml` and all the rules 
 * everything about k8s, stage-dependent env variables, and making sealed secrets
