@@ -50,7 +50,7 @@ Todo:
 
 The concept of a **detached HEAD**: when HEAD points to an old commit. In this situation you cannot commit anything, as there's no branch to commit to (committing can only be done to the end of a branch). You can however create a new branch form this point in the past, and commit to it. Typically, you do: `git checkout HEAD~1` (or whatever number of commits that you want to go back), and then once you travel back in time, create a branch. Alternatively, `git checkout <commit_id>`, where commit ids can be taken from `git log`.
 
-In the past people used to recommend `git checkout branch_name` instead of `switch`, but afaik this use is now considered obsolete, as `checkout` was used for two different unrelated operations, and it is too confusing.
+To go back, just do `git switch master` (or some other branch) - and it will reset HEAD to the latest commit.
 
 To clone a remote branch that doesn’t yet exist locally, do this:
 

@@ -1,8 +1,10 @@
 # Data augmentation
 
 Parents: [[06_DL]]
+See also: [[smote]]
 
 #augmentation
+
 
 Types of augmentation:
 * [[Cubik2019randaugment]]

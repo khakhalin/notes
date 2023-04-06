@@ -2,6 +2,7 @@
 
 #bib #unsupervised #self-supervised #embedding #representation
 
+
 Subtopics:
 * [[embedding]] - embedding and representation
 * [[15_generate]] - generative  models
@@ -14,7 +15,7 @@ Related concepts:
 * [[triplet_loss]] - contrastive loss /  learning, a case of **negative sampling**
 * [[word2vec]] - an example from text
 
-ML papers:
+# Key papers
 * [[Weng2019self-supervised.md]] - a review of sorts
 * [[Yu2020lookback]] - graph networks and label propagation for few-shots learning, using embedding from both late and early layers.
 * [[Zoph2020pretraining]] - pre-training on images hurts more often than it helps	

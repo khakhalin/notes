@@ -10,7 +10,7 @@ Dialect-specific pages:
 * [[snowflake]]
 * [[postgres]]
 
-# Generic query
+# Generic select query
 
 ```sql
 SELECT col1, MAX(col2) AS altname

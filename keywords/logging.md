@@ -129,3 +129,6 @@ Python logger documentation:
 https://docs.python.org/3/howto/logging.html
 The cookbook contains some good common ready-to use solutions:
 https://docs.python.org/3/howto/logging-cookbook.html
+
+How to log properly:
+https://www.linkedin.com/pulse/five-philosophies-designing-logs-veronica-schmitt/

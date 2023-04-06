@@ -1,5 +1,7 @@
 # Ensemble methods
 
+See also [[03_Classification]]
+
 #ensemble #bib
 
 
@@ -13,11 +15,13 @@ Subtopics:
 * [[random_forest]] - bagging + features_bagging (random subset of coordinates), average all
 * [[gbm]] - gradient boosting machines; similar to boosting, but for non-categorical data* 
 * Famous implementations:
-    * Xboost
-    * [[LightGBM]]
+    * Xboost - the most popular method until 2022
+    * [[LightGBM]] - the most popular method as of 2023
 
 See also:
-* [[dropout]] - a similar idea for DL
+* [[dropout]] - a similar idea for DL ([[06_DL]])
+
+
 
 # Refs
 

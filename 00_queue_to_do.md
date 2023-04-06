@@ -27,12 +27,20 @@ Main queue
 * move pandas stuff here (from the notes)
 * move git stuff here
 * move sql stuff here
+* MLflow introduction: https://docs.databricks.com/mlflow/end-to-end-example.html
 * shap values for [[LightGBM]]
 * microservices - intro by James Quigley: https://www.youtube.com/watch?v=1xo-0gCVhTU
 * docker - what and how
     * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
     * [[docker]] and [[kubernetes]]: https://www.youtube.com/watch?v=u8dW8DrcSmo
     * https://www.docker.com/blog/containerized-python-development-part-1/ 
+* sudo
+* [[bash]] shebang lines (#!)
+* brew
+* python environments
+* conda vs pip - see [[environments]]
+    * wheel (?)
+* Update [[logging]] with this "how to log properly": https://www.linkedin.com/pulse/five-philosophies-designing-logs-veronica-schmitt/ 
 * Kubernetes Cookbook (from O'Reilly) - maybe find it and leaf through it?
 * Google tune-up book (read before model redevelopment): https://github.com/google-research/tuning_playbook
 * Check these books and push them up in the book list:  https://twitter.com/rasbt/status/1617310114922336258
@@ -44,6 +52,10 @@ Main queue
 * redis
 * vector similarity on redis: https://redis.io/docs/stack/search/reference/vectors/
 * runbook - is there a definition for this word, best practicies? Or is it just a word?
+* automated testing on gitlab - read about it, figure about these stagings, continous integration
+* gitlab-ci - describe what I know, but also find some text
+* frog artifactory - some sort of package used for continuous integration (?) in SoftEng? At least stub it
+* curl - how to use exactly (document in [[bash]])
 * `.gitlab-ci.yml` and all the rules 
 * everything about k8s, stage-dependent env variables, and making sealed secrets
 * https://github.com/jlevy/the-art-of-command-line
@@ -55,16 +67,7 @@ Main queue
 * What's the difference between `grep` and `find` in [[bash]]?
 * https://www.ctl.io/developers/blog/post/dockerfile-entrypoint-vs-cmd/
 * write to [[kubernetes]] about "sealed secrets", and how to make them
-* proper way of setting up gitlab for pushing to it from git (document it)
-* [[bash]] shebang lines (#!)
-* On how to log propertly: https://www.linkedin.com/pulse/five-philosophies-designing-logs-veronica-schmitt/
 * Linux vs Ubuntu? What's the difference?
-* MLflow introduction: https://docs.databricks.com/mlflow/end-to-end-example.html
-* automated testing on gitlab - read about it, figure about these stagings, continous integration
-* gitlab-ci - describe what I know, but also find some text
-* frog artifactory - some sort of package used for continuous integration (?) in SoftEng? At least stub it
-* curl - how to use exactly (document in [[bash]])
-* sudo
 * parquet
 * dbd
 * airflow
@@ -84,7 +87,6 @@ Main queue
 * In [[kibana]], how to color by log event name severety, so that 'Error' were always red? Currently I can only do top count, as as errors are less frequent, it looks almost ok, but there seems to be a better way
 * How to be a programmer? (Some short textbook-like material on general principles and philosophy) https://braydie.gitbook.io/how-to-be-a-programmer/
 * https://regex101.com/quiz
-* brew
 * json and swagger
 * materialized view postgres
 * Look into Flask, but then actually learn SimpleAPI
@@ -105,7 +107,7 @@ Main queue
 * Learn how to have category column in pandas, test the difference
 * stream kinesis
 * python decorators (how do they work?)
-* bokeh* 
+* bokeh
 * data life (or delta life?) tables (?) in databricks (?) - for streaming data
 * Reread this pandas advice just in case: https://github.com/chiphuyen/just-pandas-things/blob/master/just-pandas-things.ipynb
 * aws-okta as a command
@@ -116,9 +118,6 @@ Main queue
 * Check out this `categorical` type in Pandas: would it help to save space? ([ref](https://pandas.pydata.org/docs/user_guide/categorical.html))
 * Document some non-trivial points for [[shapely]]
 * geopandas - go and collect some useful patterns
-* python environments
-* conda vs pip - see [[environments]]
-    * wheel (?)
 * Bash - linkedin certification
 * Python: how to properly do importing in large packages (does root import everything from its folder?)
 * This text about Pandas: https://github.com/chiphuyen/just-pandas-things/blob/master/just-pandas-things.ipynb

@@ -21,11 +21,11 @@ To quickly visualize NaNs in a numpy array: `plt.imshow(np.isnan(x).T, aspect='a
 
 # Colors and colormaps
 
-Some nice Tableau-like colors can be reached as named colors (strings) of form `tab:blue` etc. Not as aggressive as defaults.
+Some nice Tableau-like colors can be reached as named colors (strings) of form `tab:blue` etc. Not as aggressive as defaults. The other way to get some nice names is to use xkcd prefix, e.g. `'xkcd:sky blue'`.
 
 Getting color values from a listed colormap (each color value is a 4-element vector of RGB+alpha. RGB values are within 0-1; Alpha is always 1.0)
-* For a qualitative colormap: `[cmap(i) for i in range(n)]` where `cmap=plt.colormaps.viridis`
-* For a continuous colormap:  `[cmap(i/n) for i in range(n)]` where `cmap=plt.colormaps.tab10`
+* For a qualitative colormap: `cmap=plt.colormaps.viridis`, then call them like a function `cmap(i)`, or prepopulate a list: `[cmap(i) for i in range(n)]`
+* For a continuous colormap:  `cmap=plt.colormaps.tab10`, then `[cmap(i/n) for i in range(n)]`
 * To get the map , one can also do `cmap = matplotlib.colormaps['plasma_r']`
 
 Creating discrete colormaps:
@@ -65,7 +65,20 @@ Footnotes:
 * https://matplotlib.org/stable/api/cm_api.html
 * https://matplotlib.org/stable/tutorials/colors/colormaps.html
 
-# Refs
+# Dates
+
+A pretty minimalistic formatter for dates that only shows years when they change (basically, the smallest amount of labeling that still unambiguously labels the dates):
+
+```python
+import matplotlib.dates
+locator = matplotlib.dates.AutoDateLocator(minticks=2, maxticks=100)
+formatter = matplotlib.dates.ConciseDateFormatter(locator)
+ax = plt.gca()
+ax.xaxis.set_major_locator(locator)
+ax.xaxis.set_major_formatter(formatter)
+```
+
+# General Refs
 
 * Brief intro from Brad Solomon: https://realpython.com/python-matplotlib-guide/
 * Cheatsheet: [https://github.com/rougier/matplotlib-cheatsheet](<https://github.com/rougier/matplotlib-cheatsheet>)

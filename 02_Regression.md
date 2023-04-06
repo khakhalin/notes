@@ -2,25 +2,25 @@
 
 #regression
 
-### Subtopics
 
+Subtopics:
 * [[linear_regression]] - the core concept :)
     * [[gram-schmidt]] - close form elimination
     * [[optimizers]] - related
 * [[smoothing]] - roughness penalty and basis functions
-        * [[kernels]] - kernel methods
+    * [[kernels]] - kernel methods
 * [[bias-variance]] - Bias-Variance Trade-off
 
 **Constrained models**
-    * Reliable approaches:
-        * [[ridge_regression]] - class. Aka **L2 regularization**, aka **shrinkage**, aka Tikhonov
-        * [[lasso]] - aka **L1 regularization**. Also covers **Elastic Net** (a combo of L1 and L2)
-    * Trickier approaches:
-        * [[aic]] - Akaike Information Criterion and Best-Subset Regression
-        * [[stepwise_regression]] - a bit dangerious, but fast. Also covers least angle regression
-        * [[pca_regression]] - pca regression and partial least squares
-    * See also:
-        * [[ransac]] - bootstrapping-like regression estimator based on inliners voting
+* [[regularization]]:
+    * [[ridge_regression]] - class. Aka **L2 regularization**, aka **shrinkage**, aka Tikhonov
+    * [[lasso]] - aka **L1 regularization**. Also covers **Elastic Net** (a combo of L1 and L2)
+* Trickier approaches:
+    * [[aic]] - Akaike Information Criterion and Best-Subset Regression
+    * [[stepwise_regression]] - a bit dangerious, but fast. Also covers least angle regression
+    * [[pca_regression]] - pca regression and partial least squares
+* See also:
+    * [[ransac]] - bootstrapping-like regression estimator based on inliners voting
 
 **For time-series** (see [[time-series]])
 * [[arima]] - autoregressive models
