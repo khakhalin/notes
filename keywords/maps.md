@@ -15,6 +15,9 @@ https://direkt.bahn.guru/
 
 Air quality map. Can zoom on individual cities. The higher the value of AQI - the _worse_ is the air. Seems to have a weird property that to preserve correct average value, and knowing that streeets are bad, it surrounds every street with a halo of "better than average air" that kidna doesn't make much sense necessarily. So big cities look better than the countryside (?): https://air.plumelabs.com/Berlin-air-quality-map-cntd
 
+Biking map (based on OSM, but with really good color scheme that clearly shows biking infrastructure)
+https://www.cyclosm.org/
+
 # Berlin
 
 * Election map: https://interaktiv.morgenpost.de/bundestagswahl-berlin-2021-ergebnisse-wahlkarte/

@@ -24,6 +24,9 @@ Analyze this set of links:
 * https://github.com/dipanjanS/BerkeleyX-CS190.1x-Scalable-Machine-Learning
 
 Main queue
+* on structuring python packages: http://blog.nicholdav.info/four-tips-structuring-research-python/
+* git pull upstream - how does it work?
+* Manage environments (when developing packages): https://python-poetry.org/docs/managing-environments/
 * move pandas stuff here (from the notes)
 * move git stuff here
 * move sql stuff here
@@ -40,6 +43,7 @@ Main queue
 * python environments
 * conda vs pip - see [[environments]]
     * wheel (?)
+* SQLAlchemy - basic idea of where it stands, in terms of abstraction
 * Update [[logging]] with this "how to log properly": https://www.linkedin.com/pulse/five-philosophies-designing-logs-veronica-schmitt/ 
 * Kubernetes Cookbook (from O'Reilly) - maybe find it and leaf through it?
 * Google tune-up book (read before model redevelopment): https://github.com/google-research/tuning_playbook
@@ -51,6 +55,7 @@ Main queue
 * what is pyspark?
 * redis
 * vector similarity on redis: https://redis.io/docs/stack/search/reference/vectors/
+* "fact and dimension tables in third normal form" - what does it mean exactly? dim vs fact - define?
 * runbook - is there a definition for this word, best practicies? Or is it just a word?
 * automated testing on gitlab - read about it, figure about these stagings, continous integration
 * gitlab-ci - describe what I know, but also find some text

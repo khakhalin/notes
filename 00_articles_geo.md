@@ -15,6 +15,11 @@ See also: [[gis]], [[mobility]], [[urbanism]], [[maps]], [[carsharing]]
 Schläpfer, M., Dong, L., O’Keeffe, K., Santi, P., Szell, M., Salat, H., ... & West, G. B. (2021). The universal visitation law of human mobility. Nature, 593(7860), 522-527.
 https://www.nature.com/articles/s41586-021-03480-9
 
+Mobility as a feature (academic publication): https://www.tandfonline.com/doi/full/10.1080/01441647.2022.2159122
+
+Kepler - some sort of an js-based (? is it true ?) pretty map visualizer? https://kepler.gl/
+* Among other things, seem to be good for 3D maps (check?)
+
 Alessandretti, L., & Szell, M. (2022). Urban Mobility. arXiv preprint arXiv:2211.00355. (Actually a book chapter)
 https://arxiv.org/pdf/2211.00355.pdf
 
