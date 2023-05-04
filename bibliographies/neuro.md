@@ -18,14 +18,17 @@ To look up:
 * [[neurodevelopment]] - Developmental neuroscience
     * [[deepneuro]] - deep learning and neuro cross-pollinating each other
 * [[bib_reconstruction]] - On  reconstructing connectivity from activity
+
 * Complexity (also see [[complexity]])
     * [[echo]] - Echo state networks
     * [[network_neuro]] - Network neuroscience
     * [[criticality]] - Mostly in neural activity
+
 * Mechanisms:
     * [[stdp]] - Spike-time-dependent plasticity
     * [[intrinsic_plasticity]] - subj
     * [[dendritic_comp]] - computation in one neuron, dendritic processing
+    * [[dopamine]]
 
 # Refs
 

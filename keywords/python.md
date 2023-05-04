@@ -2,6 +2,8 @@
 
 Path: [[01_Tools]]
 
+Random notes on Python.
+
 #tools #python #coding #oop
 
 
@@ -205,10 +207,33 @@ Footnotes:
 
 # Command line
 
-To make scripts that are runnable from the terminal, use `import sys` and then refer to `sys.argv`. It contains a list, with the leftmost (0th) element being the name of the program, and all consecutive elements, parameters (kinda as if the command line was split by space). And if you need something fancier (many different optional keys), and you don't want to parse them yourself, there's the `from argparse import ArgumentParser` module / object. It unpacks them for you, supports variable order, synonyms, auto-generates help messages and whatnot.
+To make scripts that are runnable from the terminal, use `import sys` and then refer to `sys.argv`. It contains a list, with the leftmost (0th) element being the name of the program, and all consecutive elements, parameters (kinda as if the command line was split by space). 
 
-Footnotes:
+If you need something fancier (many different optional keys), use `ArgumentParser` module. It unpacks them for you, supports variable order, synonyms, auto-generates help messages and whatnot. Example use:
+```python
+import argparse
+
+parser = argparse.ArgumentParser(description="Useful script")  
+parser.add_argument("filename") # positional argument
+parser.add_argument("-a", "--add", help="Add the next number") # option that takes a value
+parser.add_argument("-b", "--block", help="Block asteroids", action='store_true') # switch
+args = parser.parse_args()  
+  
+try:  
+    value = args.add
+except:   # Maybe some default behavior
+    values = 100
+    
+if args.block:
+    print('Go away, asteroids!')
+```
+
+* For value-taking keys, there's also a `default="my default value"` parameter that may be easier than a more verbose try-except block.
+
+Refs:
 * https://stackoverflow.com/questions/1009860/how-to-read-process-command-line-arguments
+* https://docs.python.org/3/library/argparse.html
+
 
 # General Refs
 

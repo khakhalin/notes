@@ -7,12 +7,13 @@ Subtopics:
 * [[levy_walks]] - spatial exploration
 * [[boardgame]] - algorithms and AI solutions for board games
 * [[bartle_taxonomy]] - an attempt in classifying gamers
+* [[goap]] - a way to implement agent-based behaviors in simulation-like games
 
 Papers:
 * [[Zammitto2001gaming]] - psychological (personality) classification of gamers
 * [[Braun2016gamerpersonality]] - casual gamers have lower neuroticism than either non-gamers or game addicts
 
-# Refs
+# General Refs
 
 Czarnecki, W. M., Gidel, G., Tracey, B., Tuyls, K., Omidshafiei, S., Balduzzi, D., & Jaderberg, M. (2020). Real World Games Look Like Spinning Tops. arXiv preprint arXiv:2004.09468.
 https://arxiv.org/pdf/2004.09468.pdf
@@ -22,6 +23,6 @@ https://medium.com/@gema.parreno.piqueras/real-world-games-look-like-spinning-to
 And a demo:
 http://spinningtop.lejlot.com/
 
-# Unsorted weird links
+# Unsorted links
 
 Set game trainer: http://lode.ameije.com/Set-game-trainer/set-trainer.html

@@ -27,7 +27,7 @@ One of the most annoying things about `datetime` as a package is that the main c
 
 Both use this list of format commands: https://docs.python.org/3/library/time.html#time.strftime
 
-Unlike [[pandas]], datetime doesn't have a good smart function that would try to guess the format for you.
+Unlike dates in [[pandas]], datetime doesn't have a good smart function that would try to guess the format for you.
 
 **Gotchas:**
 * Both packages have `strftime` to parse date-time expressions, but they use a different sequence of arguments.

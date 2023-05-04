@@ -24,6 +24,9 @@ Analyze this set of links:
 * https://github.com/dipanjanS/BerkeleyX-CS190.1x-Scalable-Machine-Learning
 
 Main queue
+* Airflow
+* Is there a way to mount volumes on Kumbernetes, to avoid rebuilding the container every time? Or work with layers and commit?
+* Security aspects (access to env variables, technical users)
 * on structuring python packages: http://blog.nicholdav.info/four-tips-structuring-research-python/
 * git pull upstream - how does it work?
 * Manage environments (when developing packages): https://python-poetry.org/docs/managing-environments/

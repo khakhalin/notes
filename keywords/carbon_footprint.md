@@ -2,12 +2,14 @@
 
 Related: [[counterfactuals]]
 
-#bib
+#bib #green
 
 
 Most common definition: the total amount of CO2 emissions that is directly or indirectly, but exclusively caused by an activity or a total life of a product. Often, other gases are translated into "equivalent amount of CO2".
 
-#### Wiedmann, T., & Minx, J. (2008). A definition of ‘carbon footprint’. Ecological economics research trends, 1, 1-11.
+# Wiedmann2008
+
+Wiedmann, T., & Minx, J. (2008). A definition of ‘carbon footprint’. Ecological economics research trends, 1, 1-11.
 http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.467.6821&rep=rep1&type=pdf
 
 Often no clear definition:
@@ -34,7 +36,9 @@ Some concrete case studies:
 Argue against the inclusion of other gases in the "carbon footprint" measure (unless it is renamed into "climate footprint" or something), as it dilutes the definition.
 
 
-#### Čuček, L., Klemeš, J. J., & Kravanja, Z. (2012). A review of footprint analysis tools for monitoring impacts on sustainability. Journal of Cleaner Production, 34, 9-20.
+# Cucek2012
+
+Čuček, L., Klemeš, J. J., & Kravanja, Z. (2012). A review of footprint analysis tools for monitoring impacts on sustainability. Journal of Cleaner Production, 34, 9-20.
 https://www.sciencedirect.com/science/article/pii/S0959652612001126?casa_token=Cno48t_cFuYAAAAA:YW6JWPnAB5An-dmWwUE20yo8zxtes4EcjIj1Dtz2UHczi0N9mWGZ-9YENVUDYer1XH0da6kLuQ
 
 **Life Cycle Assessment (LCA)** - cradle to grave analysis. To stress that grave of a product isn't the end of the story (we need to utilize waste), sometimes people call it "Cradle-to-Cradle" instead.  Origins of Carbon Footprint: Høgevold, 2003. Now standardized:  ISO 14040, ISO 14044. This is important to avoid "problem-shifting" from one process / product / region to another (fudging boundaries).
@@ -48,12 +52,12 @@ A list of tools (as of 2012):
 *  P-graph approach (Friedler et al., 1992; Sűle et al., 2011). Uses advanced branch-and-bound (ABB) algorithm (Friedler, 2010).
 *  Linear programming
 
-### Planetly notes
+# Planetly
 
 https://www.planetly.org/en/how-do-you-analyze-the-carbon-footprint-of-your-company/
 
 Standard way of calculating CF:
-1. Scope 1: 	Direction Emissions - all the fuel the company burns directly
+1. Scope 1: Direction Emissions - all the fuel the company burns directly
 2. Scope 2: Electricity and heating
 3. Scope 3: Everything else: all products & services purchased (upstream), and everything brought to life by companies activity, or the product produced (downstream)
 
@@ -75,17 +79,20 @@ https://www.planetly.org/en/ghg-protocol-and-iso-standards/
 **CDP (Carbon Disclosure Project)**. More and more companies report it, similar to how financial reporting is done. There is a standard now, with those 3 scop	es described above. ISO 14064 is another attempt to standardize the process (but the scope breakdown is simpler: just "direct" and "indirect").
 
 
-#### A case study of Maple Leaf Bacon
+#  Maple Leaf Bacon
+
 https://civileats.com/2020/01/28/can-an-industrial-scale-meat-company-be-carbon-neutral/
 
 A Canadian meat company said they're gonna be carbon-neutral. But they included only scope 1 and 2, as they are a distributor, and the overwhelming share of emissions is generated at feed production and animal raising stages (including manure emissions, as that's not about carbon footprint strictly speaking, but about climate footprint, which involves other gases).
 
 
-#### Less meat is almost always better than sustainable meat
+#  Meat
+
+Less meat is almost always better than sustainable meat
 
 https://ourworldindata.org/less-meat-or-sustainable-meat
 
-Cheese and pork are about 3-4 times better than beef. Chicken and eggs are 6-7 times better. But beans are again 6 times better than chicken! 
+Cheese and pork are about 3-4 times better than beef. Chicken and eggs are 6-7 times better. But beans are again 6 times better than chicken.
 
 Nuts are technically carbon-negative (as they grow on trees). _But are they sustainable? I don't think one can feed the entire world with nuts, can one?_
 
