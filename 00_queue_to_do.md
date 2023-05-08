@@ -24,48 +24,50 @@ Analyze this set of links:
 * https://github.com/dipanjanS/BerkeleyX-CS190.1x-Scalable-Machine-Learning
 
 Main queue
-* Airflow
-* Is there a way to mount volumes on Kumbernetes, to avoid rebuilding the container every time? Or work with layers and commit?
+* What do people mean by Monolith; what's the current practical imlementation of a Monolith, and what are the intermediate steps between 100 microservices and a Monolith?
+* Airflow (the very basics for now - like, what is it?)
+* Double-check Normcore conf - any relevant stuff there?
+* microservices - intro by James Quigley: https://www.youtube.com/watch?v=1xo-0gCVhTU
+* Docker - what and how
+    * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
+    * [[docker]] and [[kubernetes]]: https://www.youtube.com/watch?v=u8dW8DrcSmo
+    * https://www.docker.com/blog/containerized-python-development-part-1/ 
+* Kubernetes Cookbook (from O'Reilly) - maybe find it and leaf through it?
+* Is there a way to mount volumes on Kubernetes, to avoid rebuilding the container every time? Or work with layers and commit?
 * Security aspects (access to env variables, technical users)
+* everything about k8s, stage-dependent env variables, and making sealed secrets
+* automated testing on gitlab - read about it, figure about these stagings, continous integration
+    * gitlab-ci - find a text
+    * `.gitlab-ci.yml` and all the rules 
+* frog artifactory - some sort of package used for continuous integration (?) in SoftEng? At least stub it
+* what is pyspark?
+* what is redis, and what is it good for?
 * on structuring python packages: http://blog.nicholdav.info/four-tips-structuring-research-python/
 * git pull upstream - how does it work?
+* python environments
+    * conda vs pip - see [[environments]]
+    * wheel (?)
+    * python poetry
 * Manage environments (when developing packages): https://python-poetry.org/docs/managing-environments/
 * move pandas stuff here (from the notes)
 * move git stuff here
 * move sql stuff here
 * MLflow introduction: https://docs.databricks.com/mlflow/end-to-end-example.html
 * shap values for [[LightGBM]]
-* microservices - intro by James Quigley: https://www.youtube.com/watch?v=1xo-0gCVhTU
-* docker - what and how
-    * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
-    * [[docker]] and [[kubernetes]]: https://www.youtube.com/watch?v=u8dW8DrcSmo
-    * https://www.docker.com/blog/containerized-python-development-part-1/ 
-* sudo
+* sudo - why called that way?
 * [[bash]] shebang lines (#!)
 * brew
-* python environments
-* conda vs pip - see [[environments]]
-    * wheel (?)
 * SQLAlchemy - basic idea of where it stands, in terms of abstraction
 * Update [[logging]] with this "how to log properly": https://www.linkedin.com/pulse/five-philosophies-designing-logs-veronica-schmitt/ 
-* Kubernetes Cookbook (from O'Reilly) - maybe find it and leaf through it?
 * Google tune-up book (read before model redevelopment): https://github.com/google-research/tuning_playbook
 * Check these books and push them up in the book list:  https://twitter.com/rasbt/status/1617310114922336258
 * Prophet as some handy improvement over ARIMA: https://facebook.github.io/prophet/
 * From this tutorial, save info about reading population density:   https://twitter.com/milos_agathon/status/1617108301283577858
 * Tabular functions in Snowflake: https://docs.snowflake.com/en/developer-guide/udf/sql/udf-sql-tabular-functions.html
 * https://medium.com/javarevisited/5-different-git-workflows-50f75d8783a7
-* what is pyspark?
-* redis
 * vector similarity on redis: https://redis.io/docs/stack/search/reference/vectors/
 * "fact and dimension tables in third normal form" - what does it mean exactly? dim vs fact - define?
-* runbook - is there a definition for this word, best practicies? Or is it just a word?
-* automated testing on gitlab - read about it, figure about these stagings, continous integration
-* gitlab-ci - describe what I know, but also find some text
-* frog artifactory - some sort of package used for continuous integration (?) in SoftEng? At least stub it
 * curl - how to use exactly (document in [[bash]])
-* `.gitlab-ci.yml` and all the rules 
-* everything about k8s, stage-dependent env variables, and making sealed secrets
 * https://github.com/jlevy/the-art-of-command-line
 * what does `ps aux wwf` do?
 * docker detached vs foreground: https://docs.docker.com/engine/reference/run/
@@ -74,11 +76,9 @@ Main queue
 * terraform and terragrunt (in the context of gitlab) - what are they?
 * What's the difference between `grep` and `find` in [[bash]]?
 * https://www.ctl.io/developers/blog/post/dockerfile-entrypoint-vs-cmd/
-* write to [[kubernetes]] about "sealed secrets", and how to make them
 * Linux vs Ubuntu? What's the difference?
 * parquet
 * dbd
-* airflow
 * https://martinfleischmann.net/line-simplification-algorithms/
 * https://ianqvist.blogspot.com/2010/05/ramer-douglas-peucker-polygon.html
 * finally learn (document) SQL window functions
@@ -106,7 +106,7 @@ Main queue
 * Read Google Python style guide, it's fun: https://google.github.io/styleguide/pyguide.html
 * https://postgis.net/
 * what is [[devops]] actually, canonically?
-* homebrew:
+* homebrew
 * https://en.wikipedia.org/wiki/Amazon_S3 - what is it?
 * Roles in Snowflake - how do they work
 * [[dbt]]
