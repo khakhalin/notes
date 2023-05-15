@@ -98,11 +98,13 @@ Typically, bash scripts have a `.sh` extension. Comments start with a `#` sign.
 * `bash -c "string"` - makes bash execute whatever is written in this string
 
 **Variables**
-* `var="whatever"` - sets a variable
+* `var="value"` - sets a variable
 * `echo $var` - outputs the contents of a variable. For example, `echo $PATH` shows the contents of `PATH`.
 * `$var` - instead of outputting the content, _executes_ it, as if somebody typed it in the command line and pressed Enter. This may actually generalize with the previous `echo` example: when someone types a dollar sign-variable, before the next step of processing, this construction is kinda replaced with the contents of the variable.
-* `$(command)` - executes command, then tries to interpret the output of this command as a command (as if it was typed in the command line directly). For example: `for file in $(ls)` will become a loop over files, as if one typed all the file names after `in`.
-* Because `$smth` just replaces it with the contents (or output) of `smth`, concatecating strings just means writing them one after another, like `$var1$var2`.
+    * Because `$smth` just replaces it with the contents (or output) of `smth`, concatecating strings just means writing them one after another, like `$var1$var2`.
+* `$(command)` - executes `command`, then replaces this  entire construction with an output of this command. For example: 
+    * `var=$(pwd)` - saves current directory address to var
+    * `for file in $(ls)` - loops over files, as if one typed all the file names after `in`.
 
 Environmental variables:
 * `PATH` lists all paths where the shell will look for commands. Separated by `:` apparently (weird).
