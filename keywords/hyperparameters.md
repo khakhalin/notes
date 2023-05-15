@@ -1,26 +1,39 @@
 # Hyperparameters
 
+Parents: [[06_DL]]
+Related: [[optimizers]], [[regularization]], [[archsearch]]
+
 #dl
 
-Parents: [[06_DL]]
-Related: [[ml_lore]], [[optimizers]], [[regularization]]
 
-* A list: 
-    * number of training epochs, batch size, optimizer, 
-    * regularization, dropout, weight decay
-    * training set size, and the training / validation split
-* Potentially (but it's a gray zone), also numerical (like, width, depth, convolution window size and stride) and optional (e.g. normalize or not?) aspects of network architecture.
-* Also, aspects of pre-training and fine-tuning. How many layers to freeze?
+When people say "Hyperparameters", they usually mean:
+* the number of training epochs
+* batch size
+* [[optimizers]], including the learning rate
+* [[regularization]] (type and amount), such as L1, L2, dropout, weight decay
+* training / validation split
+* weght init (distribution)
+
+Gray zone 1: Hyperparameters that are almost network architecture ( [[archsearch]] )
+* the number of layers
+* the width and depth of layers
+* convolution window size, window stride and optional
+* layer-level transformations, such as layer normalization
+
+Gray zone 2: Aspects of training regime:
+* Any pre-training / warm-up?
+* Any Fine-tuning? Which layers are frozen during pre-turning?
+
 
 # General ideas
 
-Main **strategies** for optimization: manual, random, grid, Bayesian (or some other form of optimization). Essentially, like minimization on top of minimization. An curious idea is that what approach is better may depend on when (within your project) you're doing it: if you're doing it late, it may be better to use some out-of-the box Bayesian method, but if you're doing it early, it may be more beneficial to understand the minimization landscape.
+Practical advice:
+* [[ml_lore]]
+* https://github.com/google-research/tuning_playbook
+
+There are several main **strategies** for optimization: manual, random, grid, optimized (e.g. Bayesian). Essentially, like minimization on top of minimization. An curious idea is that what approach is better may depend on when (within your project) you're doing it: if you're doing it late, it may be better to use some out-of-the box Bayesian method, but if you're doing it early, it may be more beneficial to do a grid-like search, to get a feeling for the whole minimization landscape.
 
 Iterative Sweeps may be a reasonable strategy (Svetlichnaya 2020), where you go from more obvious parameters to less obvious ones, fixing all but one at each stage, and retaining the best configuration. A logical sequence: optimizer → order of magnitude for learning rate → layer sizes and convolution depth (aka filters) → dropout → all the fancy stuff.
-
-# Learning rate
-
-**Goldilocks principle** - the best learning rate should "magically" put you in the minimum in a very few steps. Large learning rate leads to noisy oscillations after what looked like a convergence. It may even break everything after convergence (unstable).
 
 # Batch size
 

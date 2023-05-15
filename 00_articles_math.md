@@ -5,6 +5,7 @@
 #halfthere - a tag to be used for papers that have their separate entries, but that I haven't actually finished reading, or haven't read well. Papers to revisit!
 
 Other thematic to-read lists:
+* [[00_articles_geo]] - Everything [[gis]]-related
 * [[11_RL]] - Reinforcement Learning
 * [[09_Graphs]] - Graph (aka Graphical) networks
 * [[complexity]] - complexity science
@@ -112,7 +113,7 @@ Stub: [[Xie2020noisy_student]]
 Poggio, T., Banburski, A., & Liao, Q. (2020). Theoretical issues in deep networks. Proceedings of the National Academy of Sciences.	
 https://www.pnas.org/content/pnas/early/2020/06/08/1907369117.full.pdf
 
-One of the original DeepLerning review papers (28k citations!!!)
+One of the original DeepLerning review papers (28k citations!)
 LeCun, Y., Bengio, Y., & Hinton, G. (2015). Deep learning. nature, 521(7553), 436-444.
 https://www.nature.com/articles/nature14539
 
@@ -166,7 +167,7 @@ Jan 16, 2020. Aidan Rocke
 https://keplerlounge.com/neural-computation/2020/01/16/complex-auto-diff.html
 Aidan claims tha this math somehow helps to explain calculations in a dendritic tree, but it has lots of calculus, and seems like something one has to actually think about. It like has math and stuff! Complex functions, poles, and what not.
 
-Research dept
+Research debt
 https://distill.pub/2017/research-debt/
 (Some general ideas about explaining research)
 

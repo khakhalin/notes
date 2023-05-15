@@ -3,10 +3,13 @@
 #bib #evo #gen_alg
 
 Parent: [[13_MC]]
+See also: [[evolution]]
 
-Applications covered
+
+Examples:
 * [[Ryoo2019video]] - Architecture search for video processing
 * [[Kowalski2020arena]] - Deckbuilding
+
 
 # Quality-Diversity
 An approach to evo algorithms in which you don't just pick individuals based on top fitness, but to to optimize the diversity of solutions. Apparently also known as **illumination**.

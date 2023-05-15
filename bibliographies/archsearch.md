@@ -1,6 +1,12 @@
-# Architecture search
+# Architecture search for neural networks
+
+Parents: [[06_DL]]
+Related: [[hyperparameters]]
 
 #bib #archsearch
+
+
+Generalizing beyond [[hyperparameters]] too look for network architectures. One can look at various types of data augmentation, optimal activation functions, layers, or entire networks.
 
 Papers:
 * [[Ryoo2019video]] - evolving optimized network for video segmentation
@@ -8,10 +14,6 @@ Papers:
 * [[Xie2019randomwire]] - same, randomly wire networks, then pick those that work
 
 Bio-inspired: see [[deepneuro]].
-
-# Summary
-
-Generalizing beyond [[hyperparameters]] too look for network architectures. One can look at various types of data augmentation, optimal activation functions, layers, or entire networks.
 
 # Refs
 

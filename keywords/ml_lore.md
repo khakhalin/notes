@@ -1,7 +1,7 @@
 # ML lore
 
-Parent: [[06_DL]], [[01_Tools]]
-Related: [[ml_project_management]], [[Breck2017testing]], [[tensorflow]], [[hyperparameters]], [[Huyen2019book]]
+Parent: [[06_DL]], [[01_Tools]], [[hyperparameters]]
+Related: [[ml_project_management]], [[Breck2017testing]], [[Huyen2019book]]
 
 #ml #devops
 

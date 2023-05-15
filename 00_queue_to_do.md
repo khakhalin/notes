@@ -24,8 +24,19 @@ Analyze this set of links:
 * https://github.com/dipanjanS/BerkeleyX-CS190.1x-Scalable-Machine-Learning
 
 Main queue
+* what is pyspark?
+* move sql stuff here
+* move pandas stuff here (from the notes)
+* move git stuff here
+* windowed functions (newer SQL): https://mode.com/sql-tutorial/sql-window-functions/
+* are there things things that can be done with windowed functions that can't be done with subqueries, and v.v.?
+* how do things `lead(COL, 1, default_value) over (partition by COL2 order by COL3) as NAME` works under the hood, compared to subqueries
+* common table expressions (newer SQL) - find
+* Finish SQL quests: https://sqlzoo.net/wiki/SUM_and_COUNT
 * What do people mean by Monolith; what's the current practical imlementation of a Monolith, and what are the intermediate steps between 100 microservices and a Monolith?
+* Deep lerning tuning playbook: https://github.com/google-research/tuning_playbook
 * Airflow (the very basics for now - like, what is it?)
+* dbt - how exactly it fits into the system, and how do people actually use it in practice?
 * Double-check Normcore conf - any relevant stuff there?
 * microservices - intro by James Quigley: https://www.youtube.com/watch?v=1xo-0gCVhTU
 * Docker - what and how
@@ -40,7 +51,6 @@ Main queue
     * gitlab-ci - find a text
     * `.gitlab-ci.yml` and all the rules 
 * frog artifactory - some sort of package used for continuous integration (?) in SoftEng? At least stub it
-* what is pyspark?
 * what is redis, and what is it good for?
 * on structuring python packages: http://blog.nicholdav.info/four-tips-structuring-research-python/
 * git pull upstream - how does it work?
@@ -49,9 +59,6 @@ Main queue
     * wheel (?)
     * python poetry
 * Manage environments (when developing packages): https://python-poetry.org/docs/managing-environments/
-* move pandas stuff here (from the notes)
-* move git stuff here
-* move sql stuff here
 * MLflow introduction: https://docs.databricks.com/mlflow/end-to-end-example.html
 * shap values for [[LightGBM]]
 * sudo - why called that way?
@@ -81,11 +88,6 @@ Main queue
 * dbd
 * https://martinfleischmann.net/line-simplification-algorithms/
 * https://ianqvist.blogspot.com/2010/05/ramer-douglas-peucker-polygon.html
-* finally learn (document) SQL window functions
-    * sql things like `lead(COL, 1, default_value) over (partition by COL2 order by COL3) as NAME`
-    * windowed functions (newer SQL): https://mode.com/sql-tutorial/sql-window-functions/
-    * common table expressions (newer SQL)
-* Finish SQL quests: https://sqlzoo.net/wiki/SUM_and_COUNT
 * Read this on [[tableau]]: https://vizpainter.com/
 * start documenting [[tableau]]. Describe INCLUDE and FIXED in particular
 * LODs for [[tableau]] - read and document this: https://www.flerlagetwins.com/2020/02/lod-uses.html

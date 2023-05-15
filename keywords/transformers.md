@@ -1,7 +1,7 @@
 # Transformers
 
-Parents: [[10_Text]], attention
-Related: [[convnet]], [[residual]]
+Parents: [[10_Text]], [[06_DL]], attention (in a neuro-sense)
+Related: [[convnet]], [[residual]], [[LLM]]
 
 #attention #text #dl
 
@@ -37,9 +37,11 @@ Yun, Z., Chen, Y., Olshausen, B. A., & LeCun, Y. (2021). Transformer visualizati
 Review of transformers in vision (how they surpassed convnets?)
 Khan, S., Naseer, M., Hayat, M., Zamir, S. W., Khan, F. S., & Shah, M. (2021). Transformers in Vision: A Survey. arXiv preprint arXiv:2101.01169. https://arxiv.org/abs/2101.01169
 
+https://arxiv.org/pdf/2302.01107.pdf - A Survey on Efficient Training of Transformers
+
 # Open questions I still have
 
-* Why residual connections are a good idea ([[residual]])
+* Why residual connections are a good idea in this case ([[residual]])
 * Why decoders are so weird, with this KV from one source, and Q from another?
 * How come we ended up with this really weird architecture, and how have we convinced ourselves that it is beautiful and optimal in any sense? Is it really optimal in some way, as our concepts of simplicity and symmetry are wrong, or is it an example of ad-hoc "evolution of human thought", as wild and random as Darwinian evolution?
 
@@ -63,10 +65,10 @@ Transformers consist of several (original paper has N = 6) **encoders** and the 
 * And finally SA and EDA are built on 3 transformations (QKV, see below)
 Five different layers of organization!
 
-##### Word representation
+### Word representation
 Words are ultimately represented as vectors of reasonable length (512 in GPT2), and is done in two steps. First we embed words simply: for conceptual purposes we can think of it as one-hot encoding, although for practical reasons a more efficient procedure is used, called a **Byte Pair Encoding** (BPE) tokenization. In it, not whole words, but common parts of words (prefixes, roots, suffixes etc.) are one-hot encoded. It makes the vector shorter, but still it's 50257 positions. So we multiply it by a learned $W^E$ matrix, and call it an **embedding**.
 
-##### Position encoding
+### Position encoding
 At the embedding stage for the original text input, they also **encode word positions**, using concatenation of several chirp-like signals; some sin-, some cos-based, and with exponentially decreasing frequencies (see the formula below). This appears to be something like a kernel trick ([[kernels]]). This approach is better than a one-hot encoding for positions, as it makes similar positions be encoded by somewat co-aligned vectors (I think?), and so ANN can relate to word position in a fuzzy way. A visualization of these functions is shown here: http://jalammar.github.io/illustrated-transformer/
 
 The formula: $f(k,p)=\sin(p/τ^{(k/d)})$, where k is depth (from 0 to d) running down the embedding vector; p is the position of the word within a sentence, and τ is some arbitrary period (they used d=256, and τ=10000). And then they do the same with cos, and interleave these two embeddings elementwise, so that they go 1a 1b 2a 2b etc. 
@@ -85,10 +87,10 @@ And then it looks like they literally **added**, not in terms of concatenation, 
 
 > Also, wouldn't it mean that semantic embedding cannot be trained separately from the position embedding? Isn't it a technical debt for the interpretation stage?
 
-##### Encoders
+### Encoders
 Each encoder has the same architecture, but different parameters, and the same is true for decoders.  Each **encoder** consists of two layers: a **Self-Attention** block, consisting of several self-attention operations performed in parallel (aka **Multi-Headed attention**), followed by a shallow **FF network**.  Each decoder is a bit larger (3 layers), but is built of similar elements, and we'll talk about them later.
 
-##### Self-Attention
+### Self-Attention
 The self-attention modeule (in either encoder or decoder - they are very similar) receives word-embeddings vectors (say, length 512). Self-attention uses 3 trainable matrices to transform this vector into 3 smaller vectors (each length 64) **Query**, **Key**, and **Value**. 
 * For each pair of words ij, we calculate an attention **score**, or the **Query-Key interaction**: s_ij = ⟨q_i , k_j⟩, scale it down roughly (s_ij/8), and [[softmax]] (expontiate and normalize, so now ∑s_ij = 1). These **final scores** S quantify interactions between the words. 
 * Then for each target word i we use these scores s_ij with other words (j) as weights, to calculate a weighted sum of **Values** v_j for other words (each one – itself a vector): z_i = ∑ s_ij ∙ v_j. This set of values {z_i} for each word becomes an output of the self-attention layer.
@@ -99,13 +101,13 @@ In practice of course, vector multiplications for each word do  not happenin a l
 
 Several (h=8) attentions are calculated in parallel, each with a different set of {W} for QKV. The outputs of different attention heads are then concatenated together, to form a longer vector of length 512, which is passed further. This is called **Multihead Attention** (the metaphor here is that each head "attends to a different thing").
 
-##### FF network
+### FF network
 Each output Z from the attention layer is passed to a **FF network**. This network consists of a dense ReLu layer, followed by a dense linear layer, with coefficients W_1 and W_2 that perform: Z (dim=512) → transform with W_1 (to dim=2048) → ReLu → transform with W_2 ( to dim=512 again).
 
-##### Residuals
+### Residuals
 In both encoders and decoders, each sub-block works as a **residual block**: it means that these blocks aren't just stacked on top of each other in a simple FF fashion, but have their input added to their outputs (literally, out = in + f(in) ), and then the result is **normalized** (we subtract the mean and divide by sd).
 
-##### Decoders
+### Decoders
 Decoders are built similarly to encoders, but instead of having 2 layers (self-attention, followed by a FF), each **decoder** had **3 layers**:
 1. **Self-Attention** (identical to that of an encoder, but analyzing previously generated outputs)
 2. It is followed by an **Encoder-Decoder Attention** layer, in which Query comes from the previous layer, but Keys and Values come from a matching encoder. So the decoder "knows" what we are looking for (Query), and then use available info (Keys) from the original text to find a good word (Values).
@@ -113,10 +115,10 @@ Decoders are built similarly to encoders, but instead of having 2 layers (self-a
 
 **Self-Attention layers** in decoders are almost identical  to that in encoders, with one difference: at training time, all transformations for a given word don't get access to word after it (they are **masked** with -inf). This models the logic of RNN during training: to translate (or in any other way transform, or generate) text you need to learn on something, so you work with pre-existed texts. But you should not allow the network to "cheat" during learning; it should not be able to look ahead into the training data; you can't let it see the next word, it needs to guess it! That's what masking does. For the source text (in case of translation) you see the entire text in the vicinity of the word, but for the output text each parallelized process sees only the text before the current word, and tries to predict the next word. That's what the mask does. It allows to parallelize the RNN logic.
 
-##### Output
+### Output
 At the very end of all decoders, we have a linear layer with ~10000 outputs, and a softmax to find the best word.
 
-##### Training
+### Training
 In the original paper, for the final model, they averaged last 20 checkpoints. _Why??_
 
 # Application
