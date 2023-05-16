@@ -1,6 +1,6 @@
 # Graphical algorithms
 
-Parent: [[09_Graphs]], [[algo]]
+Parent: [[algos]], [[09_Graphs]]
 See also: [[graph_intro]]
 
 #algo #networks #graph
@@ -15,6 +15,7 @@ Useful algorithms:
 * [[floyd_warshall]] - shortest distance from all nodes to all nodes
 * [[bridge]] - finding bridges (lonely edges connecting two components)
 * [[graph_generate]]
+* [[salesman]] - traveling salesman
 
 See also:
 * [[graph_intro]] - basic introduction to graphs

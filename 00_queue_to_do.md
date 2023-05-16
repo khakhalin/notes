@@ -31,22 +31,25 @@ Main queue
 * windowed functions (newer SQL): https://mode.com/sql-tutorial/sql-window-functions/
 * are there things things that can be done with windowed functions that can't be done with subqueries, and v.v.?
 * how do things `lead(COL, 1, default_value) over (partition by COL2 order by COL3) as NAME` works under the hood, compared to subqueries
-* common table expressions (newer SQL) - find
+* common table expressions (newer SQL)
 * Finish SQL quests: https://sqlzoo.net/wiki/SUM_and_COUNT
+* Speed up your python code: https://pythonspeed.com/datascience/
 * What do people mean by Monolith; what's the current practical imlementation of a Monolith, and what are the intermediate steps between 100 microservices and a Monolith?
 * Deep lerning tuning playbook: https://github.com/google-research/tuning_playbook
 * Airflow (the very basics for now - like, what is it?)
 * dbt - how exactly it fits into the system, and how do people actually use it in practice?
-* Double-check Normcore conf - any relevant stuff there?
+* The art of command line: https://github.com/jlevy/the-art-of-command-line
+* Double-check Normcore conf - any relevant stuff there? https://normconf.com/
 * microservices - intro by James Quigley: https://www.youtube.com/watch?v=1xo-0gCVhTU
 * Docker - what and how
     * installing system packages in Docker with minimal bloat: https://pythonspeed.com/articles/system-packages-docker/
     * [[docker]] and [[kubernetes]]: https://www.youtube.com/watch?v=u8dW8DrcSmo
     * https://www.docker.com/blog/containerized-python-development-part-1/ 
 * Kubernetes Cookbook (from O'Reilly) - maybe find it and leaf through it?
+* how to open-source twitter algo: https://transitivebullsh.it/oss-twitter-algorithm-part-1
 * Is there a way to mount volumes on Kubernetes, to avoid rebuilding the container every time? Or work with layers and commit?
 * Security aspects (access to env variables, technical users)
-* everything about k8s, stage-dependent env variables, and making sealed secrets
+* How to make sealed secretes for k8s?
 * automated testing on gitlab - read about it, figure about these stagings, continous integration
     * gitlab-ci - find a text
     * `.gitlab-ci.yml` and all the rules 
@@ -63,6 +66,7 @@ Main queue
 * shap values for [[LightGBM]]
 * sudo - why called that way?
 * [[bash]] shebang lines (#!)
+* Optuna - what is it?
 * brew
 * SQLAlchemy - basic idea of where it stands, in terms of abstraction
 * Update [[logging]] with this "how to log properly": https://www.linkedin.com/pulse/five-philosophies-designing-logs-veronica-schmitt/ 

@@ -12,7 +12,7 @@ Popular data structures:
 * [[hash]] - hashmaps, hashtables, and hashing functions
 * [[priority_queue]] - priority queue; heap; heap sort
 
-Misc curious algorithms
+Misc curious algorithms (also see below for some short ones)
 * [[gcd]] - greatest common denominator, aka "Euclidean algorithm"
 * [[nimbers]] - on effectively solving stone games
 * [[lis]] - longest Increasing Subsequence
@@ -46,5 +46,5 @@ Tricks and approaches:
 * **Two pointers** - usually L and R; usually O(N) solution.
 * **Sliding window**
 
-Footnotes:
+Refs:
 * Cool videos explaining these paradigmatic approaches: https://www.youtube.com/watch?v=0l2nePjDFuA&list=PLlxjrJ5pd8sqqpWqGZDzNi4F2wXGllX-z&index=7

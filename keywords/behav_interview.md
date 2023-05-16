@@ -1,5 +1,8 @@
 # Behavioral Interview
 
+Parents: [[job_search]]
+See also: [[recruiting]]
+
 #interview
 
 

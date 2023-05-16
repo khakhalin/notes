@@ -76,6 +76,13 @@ Wee, S., Newman, D. A., & Joseph, D. L. (2014). More than g: Selection quality a
 https://www.researchgate.net/profile/Serena-Wee/publication/287207336_Wee2014b/links/5673918e08aedbbb3f9fac7b/Wee2014b.pdf
 When hiring based on tests, if you use total scores, you get rigid non-diverse teams with members following a certain "rounded" profile. The only way to get a more interesting team is to pick people with complementing skills by selecting winners of individual sub-scores. Start with a quick summary that cognitive tests work better than interviews and biographies (2 refs), but worse than work samples and assessments of past performance (4 refs).
 
+# Personality tests
+
+(as an alternative to [[behav_interview]])
+
+The Validity and Utility of Selection Methods in Personnel Psychology: Practical and Theoretical Implications of 100 Years
+https://home.ubalt.edu/tmitch/645/session%204/Schmidt%20&%20Oh%20validity%20and%20util%20100%20yrs%20of%20research%20Wk%20PPR%202016.pdf
+
 # Hiring in Data Science specifically
 
 James Densmore, 2017. There are two types of data scientists — and two types of problems to solve

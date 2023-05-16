@@ -1,10 +1,10 @@
 # Complexity: P, NP, NP-complete
 
-#algo
-
 Parent: [[algos]]
 
-STUB
+#algo #math
+
 
 Examples of NP-complete problems:
-* **Set cover** and [[influence_maximization]]
+* Set cover and [[influence_maximization]]
+* [[salesman]] - Traveling salesman

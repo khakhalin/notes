@@ -8,7 +8,7 @@ Major subtopics:
 * [[database]] - everything databases
 * [[coding]] - everything on coding
 
-Tips and notes on individual tools:
+Tips, notes, and links for individual tools:
 * [[python]] - with separate notes for [[numpy]], [[pandas]] etc.
 * [[tensorflow]], [[jax]] - ML frameworks
 * [[sql]], [[postgres]] - Databases
@@ -17,7 +17,7 @@ Tips and notes on individual tools:
 * [[docker]], [[kubernetes]], [[flask]] - Containerization tools
 * [[tableau]], [[kibana]], shiny (?) - Reporting tools
 * [[javascript]], [[julia]] - other programming languages
-* [[latex]], [[slack]], [[graph_network_tools]] - misc
+* [[latex]], [[slack]], [[graph_network_tools]], [[ppt]] - misc
 
 Running ML projects:
 * [[ml_project_management]] - organizational principles

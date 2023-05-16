@@ -83,3 +83,5 @@ ax.xaxis.set_major_formatter(formatter)
 * Brief intro from Brad Solomon: https://realpython.com/python-matplotlib-guide/
 * Cheatsheet: [https://github.com/rougier/matplotlib-cheatsheet](<https://github.com/rougier/matplotlib-cheatsheet>)
 * Notes from Brandon Rohrer: https://e2eml.school/blog.html#133
+
+A free book on Visualizing stuff in Matplotlib: https://github.com/rougier/scientific-visualization-book

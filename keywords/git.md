@@ -1,7 +1,7 @@
 # GIT
 
 Path: [[01_Tools]]
-See also: [[bash]], [[ssh]]
+See also: [[bash]], [[ssh]], [[vim]], [[gitlab]]
 
 #tools
 
@@ -22,6 +22,7 @@ Todo:
 * `git reflog` - some sort of most complete history? #todo
 * `git status` - see uncommited files + comparison to origin
 * `git diff` - see unstaged changes
+    * If the text keeps appearing, and you don't need that, quit the [[vim]] session using `:q!`
 * `git diff HEAD` - see both staged and unstaged changes
 * `git log -n 5 --online` - show a quick summary of 5 latest commits
 * `git show [branch]:[file]` - show file changes. Tons of output formatting. On itself, describes head. [1](https://git-scm.com/docs/git-show)
@@ -77,7 +78,7 @@ Another DIY alternative is just to delete a branch at either local or remote end
 If there's a conflict, one has to cherrypick 🔥 
 A basic manual on cherry-picking  in a terminal:  https://docs.gitlab.com/ee/topics/git/cherry_picking.html
 
-# Rebasing (a slightly dangerous practice) 🔥
+# Rebase (a slightly dangerous practice) 🔥
 `git rebase [target_branch] <source_branch>` - recommits new commits from the source branch (or the current branch, if the source_branch is not specified), to the end of the target branch; then moves HEAD to the end. As if you were taking a fresh set of commit and changed the "base" on which they are grafted. Supposedly the typical workflow for rebase is the following: you're working on feature A; people have developed and merged feature B in master. So now you want to catch up. You do:
 ```git
 git pull my_feature
@@ -116,17 +117,9 @@ Footnotes:
 Footnotes:
 * https://stackoverflow.com/questions/1125968/how-do-i-force-git-pull-to-overwrite-local-files
 
-# Github
+# Workflows
 
-## Working with github from a terminal
-
-As github switched to using tokens, go here to generate a token: https://github.com/settings/tokens
-
-Then type this for the git repo:
-`git remote set-url origin https://<githubtoken>@github.com/<username>/<repositoryname>`
-For contributions to show on GitHub's main page, make sure your user email is set up correctly. This can be done locally at a repo level using `git config user.email "blabla@gmail.com"`
-
-Source: https://stackoverflow.com/questions/68775869/message-support-for-password-authentication-was-removed-please-use-a-personal
+For platforms, see [[github]], [[gitlab]]
 
 # Open questions
 

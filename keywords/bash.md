@@ -79,6 +79,12 @@ Footnotes:
     * Note that on Mac, folders often have a hidden `.DS_Store` file, so `rmdir` may not work even if a folder seems empty.
     * `rmdir -rf` removes all files in this folder as well (so this way it doesn't halt if it is non-empty)
 
+# Misc
+
+If, while entering a command, you type a quotation mark ("), forget to close it, and press “Enter”, you get into some weird mode of “expecting the other double-quotation mark”, which is indicated by a prompt of `dquote>`. But often by that time you have also typed something embarrassing, like git status or something, so this line is never gonna run successfully. To quit this mode, press `Ctrl-G` (note, it’s really a Ctrl, not a Command, so on a swapped Mac keyboard it would look like Command-G). It will break shte spell. 
+
+The same problem may apparently happen if you type !", trying to end your string with an exclamation mark, as it’s serving as an escape symbol…
+
 # Scripting
 
 Typically, bash scripts have a `.sh` extension. Comments start with a `#` sign.
