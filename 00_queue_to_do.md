@@ -25,13 +25,9 @@ Analyze this set of links:
 
 Main queue
 * what is pyspark?
-* move sql stuff here
-* move pandas stuff here (from the notes)
-* move git stuff here
-* windowed functions (newer SQL): https://mode.com/sql-tutorial/sql-window-functions/
-* are there things things that can be done with windowed functions that can't be done with subqueries, and v.v.?
+* move pandas stuff here (from the notes) 
 * how do things `lead(COL, 1, default_value) over (partition by COL2 order by COL3) as NAME` works under the hood, compared to subqueries
-* common table expressions (newer SQL)
+* common table expressions (newer [[sql]])
 * Finish SQL quests: https://sqlzoo.net/wiki/SUM_and_COUNT
 * Speed up your python code: https://pythonspeed.com/datascience/
 * What do people mean by Monolith; what's the current practical imlementation of a Monolith, and what are the intermediate steps between 100 microservices and a Monolith?

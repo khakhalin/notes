@@ -9,13 +9,19 @@ See also: [[numpy]], [[pandas]]
 # Misc tricks
 
 * log scale axis: `plt.xscale('log')`
-* To make subplots look pretty, always run `plt.tight_layout()` in the end
+* To make subplots look pretty, always run `plt.tight_layout()` in the very end
+
+Hiding stuff:
+* Remove top and right border, ggplot-style: `plt.gca().spines[['right', 'top']].set_visible(False)`
+* Remove tick labels: `ax.set_yticklabels([])`
+* Remove ticks: `plt.xticks([])`
+* Remove entire axis instead: `plt.gca().get_xaxis().set_visible(False)`
 
 Area plot: 
   * Manual: `plt.fill_between(x, ylo, yhi, alpha=0.2)` for each band
   * Entire [[pandas]] dataframe in one go: `plt.stackplot(df.DATE, df.iloc[:, 1:].T)`. Note this `.T`; it doesn't work without it.
 
-To quickly visualize NaNs in a numpy array: `plt.imshow(np.isnan(x).T, aspect='auto')`
+To quickly visualize NaNs in a numpy array as an image: `plt.imshow(np.isnan(x).T, aspect='auto')`
   * For bw colors, add: `cmap='gray'`. to distinguish "all 1s" from "all 0s", add `vmin=0, vmax=1`
   * To change x ticks, add this (as another param): `extent=[xmin, xmax, 0, x.shape[1]]`
 
@@ -24,8 +30,8 @@ To quickly visualize NaNs in a numpy array: `plt.imshow(np.isnan(x).T, aspect='a
 Some nice Tableau-like colors can be reached as named colors (strings) of form `tab:blue` etc. Not as aggressive as defaults. The other way to get some nice names is to use xkcd prefix, e.g. `'xkcd:sky blue'`.
 
 Getting color values from a listed colormap (each color value is a 4-element vector of RGB+alpha. RGB values are within 0-1; Alpha is always 1.0)
-* For a qualitative colormap: `cmap=plt.colormaps.viridis`, then call them like a function `cmap(i)`, or prepopulate a list: `[cmap(i) for i in range(n)]`
-* For a continuous colormap:  `cmap=plt.colormaps.tab10`, then `[cmap(i/n) for i in range(n)]`
+* For a continious colormap: `cmap=plt.colormaps.viridis`, then call them like a function `cmap(i)`, or prepopulate a list: `[cmap(i) for i in range(n)]`. If `cmap()` arguments are integer, the limits (to cover the full colormap) seem to be from 0 to 256, but if you make them float, the limits are 0 to 1, which is probably way more confrotable.
+* For a categorical colormap:  `cmap=plt.colormaps.tab10`, then `[cmap(i/n) for i in range(n)]`
 * To get the map , one can also do `cmap = matplotlib.colormaps['plasma_r']`
 
 Creating discrete colormaps:

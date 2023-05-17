@@ -5,7 +5,9 @@ Parent: [[linguistics]]
 #side #language
 
 
-* Vasmer, [Standard search](https://starling.rinet.ru/cgi-bin/query.cgi?root=%2fusr%2flocal%2fshare%2fstarling%2fmorpho&morpho=1&basename=morpho\vasmer\vasmer) 
+Main dictionaries:
+* Vasmer: [Standard search](https://starling.rinet.ru/cgi-bin/query.cgi?root=%2fusr%2flocal%2fshare%2fstarling%2fmorpho&morpho=1&basename=morpho\vasmer\vasmer) 
+* Starostin's databases: [IE database](https://starlingdb.org/cgi-bin/query.cgi?root=config&morpho=0&basename=\data\ie\piet)
 * [PIE etymology](https://starling.rinet.ru/cgi-bin/query.cgi?basename=\data\ie\piet&root=config&morpho=0) on this same site.
 
 A map with translations of a word in key EU languages:

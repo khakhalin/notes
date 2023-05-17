@@ -94,35 +94,68 @@ The most common one goes inside `WHERE`: `SELECT * FROM table1 WHERE id IN (SELE
 
 # Writing and changing data
 
-## Inserting new data
+## Insert data
 
 `INSERT INTO table1 (col1, col2) VALUES (1, "dog");`. If you know the order of columns, you can also skip the first bracket, and just do `INSERT INTO table1 VALUES (...);`. If not all columns are specified, all remaining will be set to null.
 
 Interesting way to copy some selected stuff from one table to another: `INSERT INTO table1 SELECT * FROM table2 WHERE condition;`. Interestingly, the condition may reference both tables, allowing for interesting data movements. If the table doesn't exist yet, use a different syntax: `SELECT * INTO table1 FROM table2 ...;`.
 
-## Updating rows
+## Update rows
 
 Like a simple select query (without grouping and other fancy things obviously), just instead of SELECT you do: `UPDATE table1 SET col1=1, col2="dog" WHERE id=0;`. Be extra careful to always have a `WHERE` statement there, as without it the statement will still be valid; just it will update all records 😱. Updates can directly reference table fields, so things like `col1 = col1+1` are normal. Updates can also reference other tables by running a subquery, or doing a JOINT, or (in some versions) even by having a FROM sequence directly following the UPDATE part.
 
 Updating some rows in one column is possible ([ref](https://stackoverflow.com/questions/36872053/update-a-single-column-on-multiple-rows-with-one-sql-query)), but it seems cumbersome enough, so in practice it's probably easier to download these rows, update them locally, then within one query, delete them remotely, and re-insert.
 
-## Creating tables
+## Create tables
 
 * Create database: `CREATE DATABASE db_name;`
 * Create a table: `CREATE TABLE table1 (col1 type, col2 type ...);`. There are many types, but key ones are: INT (medium, 4 bytes), BIGINT, DOUBLE, BOOL, CHAR(size) - fixed length, TEXT - variable length, LONGTEXT, ENUM(val1,val2,...) - a limited list of options, DATE, TIME. These really depend on the system though, so need to be researched.
 * Columns can have **constraints** that are specified during creation, like that: `col_name data_type constraint`, where constraints come from the following list: `NOT NULL` - cannot be nulll; `UNIQUE` - all records are unique; `PRIMARY KEY` - both not null and unique (often combined with `AUTO INCREMENT`, which is not technically a constraint, but a built-in resolution of it); `FOREIGN KEY REFERENCES table2(keycol) ` - a key for a diff table; `CHECK (col_name>0)` - requires a condition to be met; `DEFAULT value` - sets a default value; `INDEX` - makes retrieval faster. If a constraint like CHECK or UNIQUE isn't met, it triggers an error, and in a real system it shoudl be handled properly (see below for control structures). Also the syntax of constraints differs a bit between systems.
 * Another way to build an index: `CREATE INDEX ind ON table1 (col1);`. More than one column may be indexed, which may make reading faster, but it will also make writing slower. Ideally, indices should match selects, but maybe almost anti-match insertions, deletions, and updates.
 
-## Changing table structure
+## Change table structure
 
 `ALTER TABLE tb ADD col_name type;`, or `ALTER TABLE tb DROP COLUMN col_name`, or `ALTER TABLE tb MODIFY COLUMN col_name type` (some systems use ALTER COLUMN instead of MODIFY). Constraints may be removed from columns using `ALTER TABLE tb DROP CONSTRAINT constraint;` (slightly diff syntax in MySQL).
 
-## Deleting stuff
+## Delete stuff
 
 * Delete a row: `DELETE FROM table WHERE condition;`. As usual, without WHERE would delete everything.
 * Delete (drop) a whole table: `DROP TABLE table1;`. Simple and brutal.
 Apparently it's possible not to grant users permissions to delete rows and drop tables (something like `REVOKE DELETE ON table TO username;` for this particular user), and it is possible to create server-wide triggers and auto-rollback on dropping; and in some editions. There may also be a way to protect tables using a schema, but I'm not sure about that.
 * `BACKUP DATABASE dbname` also exists.
+
+# Window Functions
+
+```sql
+select 
+    COL, 
+    sum(COL) over (order by DATETIME) as COL_CUMSUM,
+    sum(COL) over (partition by GROUP) as COL_GROUPED, -- same result as in reverse-joined group by
+    sum(COL) over (partition by GROUP order by DATETIME) as COL_CUMSUM_PER_GROUP --resets at each GROUP
+from TABLE where ...
+```
+
+Possible aggregations:
+* `sum, avg, count` - intuitive
+* `row_number()` - naive rank, resetting at each paritition. Gets no column inside, as it is ordering / partition that serves as an argument
+* `dense_rank()` - same, but identical values get identical ranks
+* `rank()` - same, but also after a draw, some ranks are skipped
+* `ntile(100)` - percentile and alike; the number inside is the number of buckets to apply to ordering.
+* `lag(COL, default_value)` - previous row, in this ordering
+* `lead(COL, default_value)` - next row
+
+When using the same window for many calculations, create an alias for this window:
+```sql
+select
+    sum(COL) over my_window as COL,
+    ntile(5) over my_window as NTILE
+from TABLE where ...
+window my_window as (partition by GROUP order by COL)
+order by GROUP, COL -- without this, values will be correct, but not properly ordered
+```
+
+Footnotes:
+* https://mode.com/sql-tutorial/sql-window-functions/
 
 # Misc
 

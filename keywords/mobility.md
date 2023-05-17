@@ -5,6 +5,19 @@ See also: [[gis]], [[carsharing]]
 #geo #urbanism #gdpr #bib
 
 
+# Library
+
+Alessandretti, L., & Szell, M. (2022). Urban Mobility. _arXiv preprint arXiv:2211.00355_.
+https://arxiv.org/pdf/2211.00355.pdf
+A book chapter (like a review, but better!) Analysing individual route trajectories. Brief overview of data sources. Statistical properties (with formulas): entropy, exploration, heterogeneity, periodicity. Distributions of displacements, waiting times, gyration radius. Modeling: random walk, EPR model (Exploration and Preferential Return), PEPR model (Preferential Exploration and Preferential Return), Container model (hierarchy of levels). Then several sections on improving urban mobility networks, and a section on tools.
+
+Choi, S. J., Jiao, J., Lee, H. K., & Farahi, A. (2023). Combatting the mismatch: Modeling bike-sharing rental and return machine learning classification forecast in Seoul, South Korea. _Journal of Transport Geography_, _109_, 103587.
+ https://www.sciencedirect.com/science/article/abs/pii/S0966692323000595
+They looked at the balance of outgoing and incoming trips, classified zones into "sources" and "sinks", and then used various variables to build a predictive model (aka explain) what makes them sources and sinks. Basically, when bikes are distributed all over, people come from where they are (high population density become sources, or what they call "rentals hot spots"), but don't necessarily return there. People also rent more bikes in areas with nature (they use some SIDI index for that...) and in hot areas. On top of that, one fun variable that promotes dead-ends is called SHEI , or Shannon’s evenness index (not sure what it is).
+
+Vehicle-to-grid: https://en.wikipedia.org/wiki/Vehicle-to-grid
+The idea of using electric cars as a giant pool of batteries that are vaguely available to balance the load on the electric network, or maybe even feed back into the network.
+
 # Data sharing standards
 
 ## MDS (Mobility Data Specification)
@@ -41,7 +54,7 @@ Links:
 
 # Markets
 
-Interesting second line cities: Brussels, Barcelona, Oslo, Warsaw, Bordeaux, Prague. (Also Rotterdam)
+Second tier cities with mobility potential in Europe (a consensus of various studies): Brussels, Barcelona, Oslo, Warsaw, Bordeaux, Prague, Rotterdam
 
 # References
 

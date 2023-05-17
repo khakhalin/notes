@@ -41,8 +41,6 @@ Thomas G. Dietterich. Mar 6, 2018.
 https://medium.com/@tdietterich/reflections-on-innateness-in-machine-learning-4eebefa3e1af
 Another must-do short read.
 
-Bengio, Y., Lee, D. H., Bornschein, J., Mesnard, T., & Lin, Z. (2015). Towards biologically plausible deep learning. arXiv preprint arXiv:1502.04156. [https://arxiv.org/pdf/1502.04156.pdf](https://arxiv.org/pdf/1502.04156.pdf)  Mathy, then mnist. [[Bengio2016towards]]
-
 The Unreasonable Effectiveness of Recurrent Neural Networks
 http://karpathy.github.io/2015/05/21/rnn-effectiveness/
 cons
@@ -52,9 +50,6 @@ Sculley, D., Holt, G., Golovin, D., Davydov, E., Phillips, T., Ebner, D., ... & 
 Zhang, C., Bengio, S., Hardt, M., Recht, B., & Vinyals, O. (2016). Understanding deep learning requires rethinking generalization. arXiv preprint arXiv:1611.03530.
 https://arxiv.org/pdf/1611.03530.pdf?from=timeline&isappinstalled=0
 (2k citations)
-
-Ahmed, N., & Wahed, M. (2020). The De-democratization of AI: Deep Learning and the Compute Divide in Artificial Intelligence Research. arXiv preprint arXiv:2010.15581.
-https://arxiv.org/ftp/arxiv/papers/2010/2010.15581.pdf
 
 Follow-ups and prequels:
 * Arpit, D., Jastrzębski, S., Ballas, N., Krueger, D., Bengio, E., Kanwal, M. S., ... & Lacoste-Julien, S. (2017, July). A closer look at memorization in deep networks. In International Conference on Machine Learning (pp. 233-242). PMLR. http://proceedings.mlr.press/v70/arpit17a/arpit17a.pdf
@@ -68,10 +63,6 @@ Bahri, Y., Kadmon, J., Pennington, J., Schoenholz, S. S., Sohl-Dickstein, J., & 
 https://www.annualreviews.org/doi/pdf/10.1146/annurev-conmatphys-031119-050745
 
 Peyré, G., & PSL, É. N. S. Mathematics of Neural Networks.
-
-Ideas for Improving the Field of Machine Learning: Summarizing Discussion from the NeurIPS 2019 Retrospectives Workshop
-Shagun Sodhani, Mayoore S. Jaiswal, Lauren Baker, Koustuv Sinha, Carl Shneider, Peter Henderson, Joel Lehman, Ryan Lowe
-https://arxiv.org/abs/2007.10546
 
 Ramsauer, H., Schäfl, B., Lehner, J., Seidl, P., Widrich, M., Gruber, L., ... & Kreil, D. (2020). Hopfield Networks is All You Need. arXiv preprint arXiv:2008.02217.
 https://arxiv.org/pdf/2008.02217.pdf
@@ -509,6 +500,9 @@ https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning
 
 # Self-supervised learning
 
+Balestriero, R., Ibrahim, M., Sobal, V., Morcos, A., Shekhar, S., Goldstein, T., ... & Goldblum, M. (2023). A Cookbook of Self-Supervised Learning. arXiv preprint arXiv:2304.12210.
+https://arxiv.org/abs/2304.12210
+
 Jure Zbontar, Li Jing, Ishan Misra, Yann LeCun, Stéphane Deny. 2021. Barlow Twins: Self-Supervised Learning via Redundancy Reduction. https://arxiv.org/abs/2103.03230
 On learning invariant representation by explicitly demanding distorted images (or parts of the same image) produce very similar activation vectors in the last layer (in terms of correlation). As an alternative to negative sampling, for example.
 Tweetprint: https://twitter.com/StephaneDeny/status/1368886834420457472
@@ -637,7 +631,7 @@ Two papers describing a similar idea: Just going from 3d-person to first-person 
 * Ye, C., Khalifa, A., Bontrager, P., & Togelius, J. (2020). Rotation, Translation, and Cropping for Zero-Shot Generalization. arXiv preprint arXiv:2001.09908. https://arxiv.org/abs/2001.09908
 I wonder what are the implications for graphical networks. Arguably, RNNs and sliding attention-based convolutional networks are already like 1st-person for texts. But what about graphs? Does it mean that graph-crawlers can be better than holistic processors?
 
-## RNNs, Attention
+# Attention
 
 #attention
 
@@ -788,9 +782,28 @@ Dayan, P., Hinton, G. E., Neal, R. M., & Zemel, R. S. (1995). The helmholtz mach
 http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.34.1800&rep=rep1&type=pdf
 Original paper by Hinton, 1k citations.
 
+# Symbolic
+
+Yoshua Bengio’s short reading list:
+* BabyAI: First Steps Towards Grounded Language Learning With a Human In the Loop, Chevalier-Boisvert et al., 2018: https://arxiv.org/abs/1810.08272v2.
+* A Meta-Transfer Objective for Learning to Disentangle Causal Mechanisms, Bengio et al., 2019:
+https://arxiv.org/abs/1901.10912.
+* Learning Neural Causal Models from Unknown Interventions, Ke et al., 2019: https://arxiv.org/abs/1910.
+01075.
+* Recurrent Independent Mechanisms, Goyal et al., 2019: https://arxiv.org/abs/1909.10893.
+* The Consciousness Prior, Bengio et al., 2017: https://arxiv.org/abs/1709.08568.
+
+Paul Smolensky. Next-generation architectures bridge gap between neural and symbolic representations with neural symbols. Microsoft Research blog. December 12, 2019.
+https://www.microsoft.com/en-us/research/blog/next-generation-architectures-bridge-gap-between-neural-and-symbolic-representations-with-neural-symbols/
+
+Santoro, A., Lampinen, A., Mathewson, K., Lillicrap, T., & Raposo, D. (2021). Symbolic Behaviour in Artificial Intelligence. arXiv preprint arXiv:2102.03406.
+https://arxiv.org/pdf/2102.03406.pdf
+
 # Meta, Meaning, CogSci
 
 #meaning. See also: [[mind]]
+
+Bengio, Y., Lee, D. H., Bornschein, J., Mesnard, T., & Lin, Z. (2015). Towards biologically plausible deep learning. arXiv preprint arXiv:1502.04156. [https://arxiv.org/pdf/1502.04156.pdf](https://arxiv.org/pdf/1502.04156.pdf)  Mathy, then mnist. [[Bengio2016towards]]
 
 Artificial Intelligence, Values and Alignment. Iason Gabriel. 2020
 https://deepmind.com/research/publications/Artificial-Intelligence-Values-and-Alignment
@@ -858,20 +871,8 @@ Cisek, P. (2019). Resynthesizing behavior through phylogenetic refinement. Atten
 https://link.springer.com/article/10.3758/s13414-019-01760-1
 On evolution of mamallian brain, and how you can draw a link between behavioral (computational?) complexity, and hierarchical organization of a vertebrate brain. Tries to ambitiously draw parallels between evolution, development, and behavior.
 
-# Symbolic
+# Politics of AI
 
-Yoshua Bengio’s short reading list:
-* BabyAI: First Steps Towards Grounded Language Learning With a Human In the Loop, Chevalier-Boisvert et al., 2018: https://arxiv.org/abs/1810.08272v2.
-* A Meta-Transfer Objective for Learning to Disentangle Causal Mechanisms, Bengio et al., 2019:
-https://arxiv.org/abs/1901.10912.
-* Learning Neural Causal Models from Unknown Interventions, Ke et al., 2019: https://arxiv.org/abs/1910.
-01075.
-* Recurrent Independent Mechanisms, Goyal et al., 2019: https://arxiv.org/abs/1909.10893.
-* The Consciousness Prior, Bengio et al., 2017: https://arxiv.org/abs/1709.08568.
-
-Paul Smolensky. Next-generation architectures bridge gap between neural and symbolic representations with neural symbols. Microsoft Research blog. December 12, 2019.
-https://www.microsoft.com/en-us/research/blog/next-generation-architectures-bridge-gap-between-neural-and-symbolic-representations-with-neural-symbols/
-
-Santoro, A., Lampinen, A., Mathewson, K., Lillicrap, T., & Raposo, D. (2021). Symbolic Behaviour in Artificial Intelligence. arXiv preprint arXiv:2102.03406.
-https://arxiv.org/pdf/2102.03406.pdf
+Ahmed, N., & Wahed, M. (2020). The De-democratization of AI: Deep Learning and the Compute Divide in Artificial Intelligence Research. arXiv preprint arXiv:2010.15581.
+https://arxiv.org/ftp/arxiv/papers/2010/2010.15581.pdf
 

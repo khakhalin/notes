@@ -1,9 +1,20 @@
 # Unicode Symbols
 
-Best Unicode search site:
-[https://www.compart.com/en/unicode/](<https://www.compart.com/en/unicode/>)
+#side #links
 
-https://emojipedia.org/nature/
+
+Just a weird collection of Unicode characters and examples.
+
+# Links
+
+* Best Unicode search site: [https://www.compart.com/en/unicode/](<https://www.compart.com/en/unicode/>)
+* Draw a character, and it will show similar symbols: https://shapecatcher.com
+* Emojipedia: https://emojipedia.org/nature/
+* https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode
+* A script that writes your text in non-normal characters (Twitter-style, annoying): http://qaz.wtf/u/convert.cgi?text=Just+change+the+text%2C+then+copy+the+Unicode+and+paste+it
+
+# Clipboard
+
 ⚠️💎💡🔥❤️⭐🧠📯🏆📚🪓⛏️🛡️🧲⚙️⚔️🗡️🥇🎲🌱🍒🤯💥
 
 Latex codes that I always forget: \sim $\sim$ , \top $\top$ .
@@ -55,12 +66,8 @@ Pictograms: [u1](https://unicodes.smpc.io/%F0%9F%8C%80)🌱🍒, [u2](https://un
  ವರ್ಣಮಾಲೆ 
  ನಿಊ
  https://en.wikipedia.org/wiki/Kannada_script
- 
- https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode
- 
- http://qaz.wtf/u/convert.cgi?text=Just+change+the+text%2C+then+copy+the+Unicode+and+paste+it
 
-Testing fancy formulas:
+# Gallery of strange math
 
 $\displaystyleლ = \frac{1}{ზ}\sum^{ზ} _ {უ=1}{ტ _ ბ\big(ბ_უ-წ(ქ_უ\cdot ჱ)\big)^2}$
 
@@ -77,12 +84,6 @@ $\displaystyle \large{ꕱ(𑁟) = \frac{ꖘ(\frac{𑀔+1}{2})}{\sqrt{𑀔ꗁ}ꖘ
  
  $\displaystyle \large \int_{🐕}^{🐟}\frac{🐌}{(👩+	👑)} d🐞$
 
-Testing weird interactions between italics and mathjax in markdown:
-
-This is fine before $(a^{ij}_k)$ but becomes italics after
-This is italics before $(a^{ij}_ k)$ but is fine after
-This is fine both before $(a_{k}^{ij})$ and after
-This is also fine both before $(a _ k^{ij})$ and after
 
 
 1️⃣ P(🚗|🚫🔀) = P(🚪🚗) =⅓👍
