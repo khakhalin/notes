@@ -141,8 +141,8 @@ Possible aggregations:
 * `dense_rank()` - same, but identical values get identical ranks
 * `rank()` - same, but also after a draw, some ranks are skipped
 * `ntile(100)` - percentile and alike; the number inside is the number of buckets to apply to ordering.
-* `lag(COL, default_value)` - previous row, in this ordering
-* `lead(COL, default_value)` - next row
+* `lag(COL, n_steps, default_value)` - previous row (or rather, the one `n_steps` before), in this order
+* `lead(COL, n_steps, default_value)` - next row (or `n_steps` after)
 
 When using the same window for many calculations, create an alias for this window:
 ```sql

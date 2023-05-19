@@ -24,16 +24,17 @@ Analyze this set of links:
 * https://github.com/dipanjanS/BerkeleyX-CS190.1x-Scalable-Machine-Learning
 
 Main queue
-* what is pyspark?
-* move pandas stuff here (from the notes) 
-* how do things `lead(COL, 1, default_value) over (partition by COL2 order by COL3) as NAME` works under the hood, compared to subqueries
+* how do sql window functions work under the hood, compared to subqueries
 * common table expressions (newer [[sql]])
+* [[snowflake]] geospatial functions
 * Finish SQL quests: https://sqlzoo.net/wiki/SUM_and_COUNT
+* what is pyspark?
+* Airflow (the very basics for now - like, what is it?)
+* dbt - how exactly it fits into the system, and how do people actually use it in practice?
+* move pandas stuff here (from the notes) 
 * Speed up your python code: https://pythonspeed.com/datascience/
 * What do people mean by Monolith; what's the current practical imlementation of a Monolith, and what are the intermediate steps between 100 microservices and a Monolith?
 * Deep lerning tuning playbook: https://github.com/google-research/tuning_playbook
-* Airflow (the very basics for now - like, what is it?)
-* dbt - how exactly it fits into the system, and how do people actually use it in practice?
 * The art of command line: https://github.com/jlevy/the-art-of-command-line
 * Double-check Normcore conf - any relevant stuff there? https://normconf.com/
 * microservices - intro by James Quigley: https://www.youtube.com/watch?v=1xo-0gCVhTU
@@ -610,7 +611,7 @@ Go through 2-3 youtube lectures in the queue that describe some of the existing 
 * self-supervised boosting
 * Wavenet - that famous convolution network that generates audio on-the-fly
 
-# ESL
+# ESL book
 
 Current position: p290
 
@@ -627,11 +628,6 @@ Parked parts of ESL that need to be revisited:
 * Hamiltonians and how dynamical systems invoke them
 * Perron–Frobenius theorem - something related to centralities and or network graph eigenvectors
 * kuramoto oscillations
-
-# Business
-
-* Deconstruct this: https://boards.greenhouse.io/doordash/jobs/2173764
-* Customer satisfaction surface - how they look like, how they are delivered, how they feel from the data point of view
 
 # Refs
 
@@ -658,6 +654,3 @@ Lists of topics used by other people:
 * https://www.youtube.com/watch?v=0--5AxiZefg
 * https://www.youtube.com/watch?v=DG7YTlGnCEo
 * http://web.stanford.edu/class/cs224w/
-* https://en.wikipedia.org/wiki/Yarsanism#Worship
-* https://www.bbc.com/news/world-middle-east-50378946
-* زرده (دالاهو)

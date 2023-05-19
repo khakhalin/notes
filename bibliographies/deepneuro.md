@@ -13,7 +13,7 @@ Subplotics:
 * [[dendritic_comp]] - dendritic computations and single neurons as ANNs
 * [[credit]] - credit assignment in the brain, and backprop in the brain
 
-# Papers
+# Papers (with sepatate zettels)
 
 Reviews
 * [[Zador2019pure]] - on how DL doesn't approach animal intelligence yet
@@ -25,10 +25,17 @@ Reviews
 DL models of cortex (except for visual cortex that is covered in [[vision]])
 * [[Muller2019cake]] - elements of unsupervised learning in the cortex
 
-#vet
+# Library
+
+Liu, Z., Gan, E., & Tegmark, M. (2023). Seeing is Believing: Brain-Inspired Modular Training for Mechanistic Interpretability. arXiv preprint arXiv:2305.08746.
+https://kindxiaoming.github.io/pdfs/BIMT.pdf
+They took a standard layered DL, and added a [[regularization]] that is not just proportional to the weight of the connection, but the weight multiplied on a _distance_ of this connection in an imagined 3D (or 2D?) space (as if the network was really physicalized in some space). And they also improve convergence by swapping neurons "in place" if it lowers the metrics. What happens is that it pushes the network to stronger modularity, as dedicated feedforward sub-paths become cheaper. Also, as this modularity is spatial, it is easily visible to humans, without special measures.
+* Roughly, one may say, this new organization resembles brains (to me, it looks a bit like FF networks in bird brains, with chains of nuclei). 
+* Also reminds me of Kulakoff's work on the emergence of orientation of maps in the retina that emerge naturally form the cost of neuronal connections.
+* I don't know if it's true, but at least their figures look as if this approach also did a better job in distillation and interpretability, as it seems to prune "nice to have but not really critical" weights much more aggressively. (But of course to judge that one would have to compare it to reorganized maps with deep L1)
 
 Gao P, Ganguli S. (2015) On simplicity and complexity in the brave new world of large-scale neuroscience Current Opinion in Neurobiology
-Very interesting review! What does it mean to "understand" how the brain works? We cannot even understand deep learning; lack ability to make predictions without simulations. They summarize their own research on "how many neurons from a set of N neurons you need to infer K-dim encoding, assuming a certain level of noise). Claim to prove and demonstrate that the number is small ~ K^2, or K^2/P if you have access to P independent behavioral states (?). Then summarize "evolvability": of all possible somethings (protein networks, proteins) that share a property only those can be realised that form clusters, as they are "evolvable", and robust to perturbations. Links to liquid state machines, and general properties of network encoding that is required for network functionality.
+Interesting review! What does it mean to "understand" how the brain works? We cannot even understand deep learning; lack ability to make predictions without simulations. They summarize their own research on "how many neurons from a set of N neurons you need to infer K-dim encoding, assuming a certain level of noise). Claim to prove and demonstrate that the number is small ~ K^2, or K^2/P if you have access to P independent behavioral states (?). Then summarize "evolvability": of all possible somethings (protein networks, proteins) that share a property only those can be realised that form clusters, as they are "evolvable", and robust to perturbations. Links to liquid state machines, and general properties of network encoding that is required for network functionality.
 
 Marblestone, A. H., Wayne, G., & Kording, K. P. (2016). Toward an integration of deep learning and neuroscience. Frontiers in computational neuroscience, 10, 94.
 Intro: great summary on ML getting smarter, and more brain-like (non-trivial cost functions, cool architectures, including adversarial). Different cost functions at different regions / parts of the network. A combo of local cost function (~Hebbian) and global signal can emulate backprop? Refs. On biologically plausible backprop. Interesting references on STDP and how it can simulate backprop. Good summary of how one can use modeling to figure out the internal logic of development (what are the cost functions, what is optimized). Good summary on the structure of the world (sparseness of objects, their continuity etc. - an assumption of continuity can be a part of a cost function!) Interesting thoughts and logic about simple detectors (say, for faces) bootstrapping info for second-level fancier detectors. Good refs on dendritic processing and neurons being more than a node in a graph. Overall, good for teaching, except that they don't need to read the middle part (way too detailed). Main difference brain-ourAI: very limited learning datasets / explicit reinforcement.
