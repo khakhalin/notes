@@ -167,18 +167,18 @@ A corollary statement about **numpy**: it's OK (and actually proper) to have `im
 
 ## Scripting
 
-Note that it means that `import` technically runs each `py` file, so if it's written like a script (not like a bunch of declarations), it will get implemented. For modules and submodules, it runs `__init__.py` in a similar fashion.
+Python's approach to importing means that an `import` statement technically runs each `py` file, and so a file that is written like a script (not as a bunch of function and class declarations) will be run at importing! For modules and submodules, the act of importing would run  `__init__.py` in a similar fashion.
 
-It has three consequences for scripting. One, it means that writing a script like a script is dangerous. The only things that can be written "just so", as "no-indent commands", are constant declarations, imports, and getting the logger handle (see [[logging]]). But none of the actual actionable code. 
+This fact has three consequences for scripting. One, it means that writing a script like a script is dangerous, as it can be imported by mistake, and executed (repeatedly) by mistake. The only things that can be written "just so", as "no-indented commands", should be constant declarations, imports, and getting a logger handle (see [[logging]]). But none of the actual actionable code. 
 
-Second, if we want a script work as a script, we should use this trick:
+Second, if we want a script work as a script, when called from a command line, we should use this trick:
 ```python
 if __name__ == '__main__':
     some.code()
 ```
-This part will only work if the script is really called on its own, from the command prompt for example, as that's the only way to make `__name__` be equal to `__main__`.
+This part will only work if the script is really run on its own, as that's the only way to make `__name__` be equal to `__main__`.
 
-But third, if later you realize that you actually want to run this script from another python file, you will never be able to access this code in `__main__`, so an even better idea is to put all code inside a method, and call this method from `__main__`. But if necessary, you would also be able later to import this file, and run `file.method()` on it.
+But third, if later on you realize that you actually want to run this script from another python file, you won't be able to access this code in `__main__`. Ao an even better idea, actually, is to put all code in a function, and then call this function from `__main__`. This way, in the future, you would also be able later to import this script, and run `my_script.my_function()` on it.
 
 Footnotes:
 * https://stackoverflow.com/questions/47524054/calling-main-from-another-file-in-python
@@ -204,6 +204,11 @@ Footnotes:
 (check out last answer, about intentionally including `__init__.py`)
 * https://docs.python.org/3/reference/import.html
 * https://github.com/chiphuyen/python-is-cool
+
+# Types and type-hinting
+
+Links:
+* https://kobzol.github.io/rust/python/2023/05/20/writing-python-like-its-rust.html - argues that the best strategy in reducing the number of run-time errors is to turn them into compilation-time errors. Which, in turn, is best achieved by "making eror states unrepresentable" by heavy type-hinting.
 
 # Command line
 
