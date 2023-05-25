@@ -91,6 +91,8 @@ Apparently, one can write their own code in Tableau version of [[javascript]], a
 Apache Superset
 https://en.wikipedia.org/wiki/Apache_Superset
 
+PowerBI from Microsoft
+
 # Refs
 
 Basic intros and tutorials:

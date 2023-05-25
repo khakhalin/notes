@@ -1,11 +1,15 @@
 # Datavis inspirations and bibliography
 
-See also: [[01_Tools]], [[stats]], [[network_tools]]
+Parents: [[01_Tools]]
+See also: [[stats]], [[network_tools]], [[interpretability]]
 
 #datavis #bib
 
 
-# Inspirational zoos
+Tools:
+* [[tableau]] Alternatives include _PowerBI_ from Microsoft and _Apache Superset_ (open-source tool)
+
+# Inspirational galleries (zoo)
 
 Xiaoying PuMatthew Kay (2020). A Probabilistic Grammar of Graphics.
 https://osf.io/dy8qv/

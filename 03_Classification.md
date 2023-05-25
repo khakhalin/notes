@@ -9,7 +9,7 @@ Subtopics:
 
 Methods and model types:
 * [[knn]] - K Nearest Neighbors
-* [[linear_separation]] - conceptual preliminary step
+* [[linear_separation]] - conceptual preliminary step leading to Logistics Regression
 * [[logreg]] - Logistic Regression
 * [[lda]] - Linear Discriminant Analysis
 * [[svm]] - Support Vector Machine

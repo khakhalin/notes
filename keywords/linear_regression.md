@@ -3,15 +3,18 @@
 Parents: [[02_Regression]], [[linalg]]
 Related: [[l2]], [[gram-schmidt]], [[loess]]
 
+#regression #linalg
 
-**Linear model**: y ~ h(x) = $∑θ_j x_j$ = xθ, or in matrix form: h = Xθ ~ y. We assume that θ is a column-vector of coefficients, and each row of X is a vector x length p+1, with x_0 = 1 (intercept), followed by n "normal" coordinates for this point. The equation above defines a hyperplane in ℝ^p.
+
+**Linear model**: the value of y for each point x is approximated by $h(x) = ∑θ_j x_j = xθ$, or in a matrix form: $h = Xθ$. Here we assume that θ is a column-vector of coefficients, and each row of X is a vector $x$ (aka "point") length p+1, with $x_0 = 1$ (intercept), followed by n "normal" coordinates for this point. The equation above defines a hyperplane in $ℝ^p$.
 
 # L2 formula for LR
 
-For a linear regression h = xᵀθ, and we can minimize L2 loss by differentiating by θ (partial derivative for each of the coordinates). For one point, we have: 
-$∂J(θ)/∂θ_j = ∂/∂θ_j (h(θ,x)-y)^2$ (by definition of L2 loss)
-= 2(h-y) ∙ ∂h/∂θ_j (simple chain rule)
-= 2(h-y)∙x_j (by definition of h).
+For a linear regression $h = xᵀθ$ we can try to minimize L2 loss by differentiating by θ (partial derivative for each of the coordinates), and finding the mininum. For one point x, we have: 
+$∂J(θ)/∂θ_j$ = 
+= $∂/∂θ_j$ ∙$(h(θ,x)-y)^2$ (by definition of L2 loss)
+= 2(h-y) ∙ $∂h/∂θ_j$ (simple chain rule)
+= 2(h-y)∙$x_j$ (by definition of h).
 
 Minimum: dJ/dθ = 0, ⇒ Xᵀ(Xθ-y) = 0 (if we write all end-formulas for partial derivatives for individual θ_j above in matrix notation). Here X is a matrix m×p (where p is dimensionality of the space); each row of X is an input point in this space; y is a column-vector (height p) of target outputs, and 0 is a p-high vector as well. If XᵀX is nonsignular, we can open the brackets, send y to the right, multiply from the left on inverse, and get: θ = (XᵀX)⁻¹Xᵀy.
 

@@ -6,10 +6,11 @@ See also: [[linear_regression]], [[linear_separation]], [[softmax]], [[lda]], [[
 #classification #regression
 
 
-Intuition: we want something like linear regression (as simple as it gets), but for classification. So we want a function of Xθ. But what function?
-* We could just do Xθ (pure [[linear_separation]]). The problem is that we want outputs to be probabilities of point x belonging to a class, and probabilities are within 0 and 1. And then there's also a problem of class masking. We want something nonlinear: f(p) = Xθ
-* What nonlinearity? One of the most logical choices is to use ln(p), as then a point 2 times further from the decision line would have p² probability of belonging to a class But ln(p) is also not bound.
-* So let's use the "next simplest formula", **logit**: logit(p) $=\ln \frac{p}{1-p}=Xθ$. It behaves close to ln(p) for small p; almost linearly around p=0.5, and symmetrically for p close to 1. Logistic regression for two classes assumes that **log-odds are linear in the space of X**
+Intuition: we want something like linear regression (aka as simple as it gets), but for classification, returning some sort of probabilities. So we want some function of Xθ. But what function would it be?
+
+* We could just do Xθ (pure [[linear_separation]]). But they won't naturally behave as probabilities (won't fit between within 0 and 1). And then there's also a problem of class masking. We want something nonlinear: f(p) = Xθ
+* What nonlinearity to use? One of the most logical choices is to use ln(p), as then a point 2 times further from the decision line would have p² probability of belonging to a class. But ln(p) is also not bound.
+* So let's use the "next simplest formula", **logit**: logit(p) $=\ln \frac{p}{1-p}=Xθ$. It behaves similar to ln(p) for small p; almost linearly around p=0.5, and symmetrically around this point. Logistic regression for two classes assumes that **log-odds are linear in the space of X**
 
 The inverse of logit is a **Logistic function**: $\displaystyle \sigma(x) = \frac{1}{1+e^{-x}} = \frac{e^x}{1+e^x}$. As logit is linear, we have: $p/(1-p)=\exp(Xθ)$, leading to $p = σ(Xθ)$, if you solve for p. This shape is nice and doesn't suffer from class masking.
 

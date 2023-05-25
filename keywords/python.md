@@ -10,11 +10,11 @@ Random notes on Python.
 Subtopics and related:
 * [[oop]] - OOP, entirely Python-specific for now. Functions, scope, decorators
 * Common packages:
-    * [[logging]]
-    * [[numpy]], [[pandas]], [[matplotlib]]
-    * [[sklearn]], [[tensorflow]]
-    * [[py_dates]], [[regex]]
-    * [[flask]]
+    * The holy triad: [[numpy]], [[pandas]], [[matplotlib]]
+    * [[sklearn]], [[tensorflow]] - DL
+    * [[py_dates]], [[regex]] - core utils
+    * [[flask]] - interfaces
+    * [[logging]] - system utils
 * Other tools and concepts: [[environments]], [[jupyter]]
 * [[unit_test]] - how to write unit tests correctly (in Python) 
 

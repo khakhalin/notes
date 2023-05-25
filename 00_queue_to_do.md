@@ -24,13 +24,13 @@ Analyze this set of links:
 * https://github.com/dipanjanS/BerkeleyX-CS190.1x-Scalable-Machine-Learning
 
 Main queue
+* linear programming and mixed-integer programming - quickly review here
 * how do sql window functions work under the hood, compared to subqueries
 * common table expressions (newer [[sql]])
-* [[snowflake]] geospatial functions
 * Finish SQL quests: https://sqlzoo.net/wiki/SUM_and_COUNT
 * what is pyspark?
-* Airflow (the very basics for now - like, what is it?)
-* dbt - how exactly it fits into the system, and how do people actually use it in practice?
+* [[Airflow]] (the very basics for now - like, what is it?)
+* [[dbt]] - how exactly it fits into the system, and how do people actually use it in practice?
 * move pandas stuff here (from the notes) 
 * Speed up your python code: https://pythonspeed.com/datascience/
 * What do people mean by Monolith; what's the current practical imlementation of a Monolith, and what are the intermediate steps between 100 microservices and a Monolith?
@@ -112,7 +112,7 @@ Main queue
 * homebrew
 * https://en.wikipedia.org/wiki/Amazon_S3 - what is it?
 * Roles in Snowflake - how do they work
-* [[dbt]]
+* [[snowflake]] geospatial functions
 * Why everyone likes Rust so much?
 * Read a bit about gdpr, create an article
 * Learn how to have category column in pandas, test the difference

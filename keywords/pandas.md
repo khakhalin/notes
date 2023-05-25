@@ -248,14 +248,15 @@ Footnotes:
 
 # Grouping and Aggregation
 
-First group, then apply aggregation. `dfs = df.groupby('g').agg({'a': ['min', np.mean]})`
+First group by a column, then apply aggregation. `dfs = df.groupby('g').agg({'a': ['min', np.mean]})`
 
 **Grouping** columns (those that appear in the summary dataframe not because they were summarized, but because they were grouped by) also become a multiindex. It means that they aren't normal columns, and cannot be referenced directly. To turn into a "normal" data frame, do `dfs = dfs.reset_index()`.
 
-**Aggregation** is coded as a dictionary, and more than one function can be applied to every column. Functions are passed as either an array of functions, or function names (strings, like `'count'`). If a column in the original dataframe is summarized in more than one way (say, if you calculate Column names in summary dataframe become a **multiindex** (column index becomes a tuple).
-* To calculate a **mode**, use this trick: `mode = lambda x: x.value_counts().index[0]`, then pass `mode` (the function, not a string) as an argument to `agg`.
-
-Some useful functions: sum, mean, min, max, count, var, std, sem, first, last, nth (?).
+**Aggregation** is coded as a dictionary, and more than one function can be applied to every column. Functions are passed as either function objects, or function names (strings, like `'count'`). 
+* You can pass either one function, or a list of them. If a column from the original dataframe is summarized in several different ways, the output summary dataframe gets a _multiindex_. Accessing the index of this summary dataframe gives you tuples.
+* Some useful aggregation functions: sum, mean, min, max, count, var, std, sem, first, last, nth (?).
+* To calculate a **mode** of some variable, use this trick: `mode = lambda x: x.value_counts().index[0]`, then pass `mode` (the function, not a string) as an argument to `agg`.
+* To do a `cumsum` or `rank` that re-sets for every new group of rows, `groupby` by this grouping column, then use `cumsum` (or `rank`) as an aggregating function. This usage feels a bit weird, compared to other usages, as it doesn't change the size of the dataframe, so it cannot be easily combined with "normal" summary functions, such as `sum` or `count` (it doesn't produce an error, and those "normal" functions are still applied, but the results are placed somewhere seemingly arbitrary in the middle of the dataset, and it doesn't seem like a stable or transparent behavior)
 
 **Sorting** rows is done with `.sort_values(by='str')`, or a list of strings (column names). `ascending=True` by default. If using a list of keys, `ascending` can also be a list.
 
