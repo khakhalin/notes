@@ -1,9 +1,10 @@
 # PCA: Principal Component Analysis
 
-#linalg #stats
-
 Parents: [[04_Features]]
 Related: [[svg]], [[pca_regression]], [[pagerank]]
+
+#linalg #stats
+
 
 Simplest type of eigenvalue-based (spectral) factor analysis. X=TΛQᵀ, where X is the original data, T is a set of orthogonal signals (**scores** - like in how much each point scored, therefore dim scores = dim points), and ΛQ is a p×p matrix of weigts that transform basis T into the basis of original data, called **loadings** (like, how hidden factors load into the observed variables, thus dim loadings = p×p, as for basis transformation).
 

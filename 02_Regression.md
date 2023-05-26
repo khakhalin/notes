@@ -25,9 +25,10 @@ Subtopics:
 **For time-series** (see [[time-series]])
 * [[arima]] - autoregressive models
 
+
 # Notation
 
-To sum up **notation choices** (roughly matching ESL): one data point is a row-vector of coordinates, so all points in a dataset make up a tall slim matrix (a column of row- vectors). The values of y are also a column. Next, as one data-point is a row, parameters θ have to be a column, so that dim(y) = N×1 = dim(Xθ). When writing it all, a part that is a bit confusing is that X (matrix) of N×k is multiplied by θ from the right (Xθ), but individual points x may have to be written as xᵀθ to show that they are row-vectors (by default x would have been a column-vector).
+To sum up **notation choices** (roughly matching ESL): one data point is a row-vector of coordinates, so all points in a dataset (X) form a tall slim matrix (a column of row- vectors). The values of y are a single column. Next, as one data-point is a row, parameter θ has to be a column (it's length = dimensionality of this space = the number of features that we use in our analysis), so that dim(y) = N×1 = dim(Xθ). When writing it all, a part that is a bit confusing is that X (matrix) of N×k is multiplied by θ from the right (Xθ), but individual points x may have to be written as xᵀθ to show that they are row-vectors (by default x would have been a column-vector).
 
 Also, as Unicode makes diacritics a hassle, I try to use θ for parameter estimates, and β for true values. x_j is typically a column (one coordinate) of X, to match a corresponding θ_j. Subscripts are shortened (xi instead of x_i) where it looks ok. Cdot (∙) may mean both normal "single-number" product and inner product, while ⟨x,y⟩ always means inner product. 
 

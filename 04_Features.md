@@ -1,19 +1,19 @@
 # Features, Dim reduction, Clustering
 
-#features
+#features #bib
 
 Subtopics:
 * [[variable_selection]] - selecting and constructing features
+    * [[Guyon2003variable]] - review on feature selection and construction
 * [[linear_separation]] - how to pick a good coordinate system for classification
 * [[basis_expansion]] - projecting to a meaningful basis can help
+* [[rbf]] - radial basis functions
 * [[smoothing]] - as a type of feature transformation
-* [[clustering]] - methods in data clustering
-* [[fairness]] - on the practical choice and interpretation of features
+* [[clustering]] - methods in data clustering 
 * [[embedding]] - embedding layers, doing dim reduction in DL
+* [[fairness]] - on the practical choice and interpretation of features
 
-**Dim Reduction and Manifold Learning**
-
-#todo: https://jakevdp.github.io/PythonDataScienceHandbook/05.10-manifold-learning.html
+# Dim Reduction and Manifold Learning
 
 A list of methods:
 * [[subspace_methods]] - linear; finding a projection to an optimal subspace
@@ -38,11 +38,7 @@ Related concepts:
 
 # Refs
 
-### Manifold learning
-
-Good summary:
+Good practical summary in Python:
 https://jakevdp.github.io/PythonDataScienceHandbook/05.10-manifold-learning.html
 
-### Variable selection
 
-[[Guyon2003variable]] - review on feature selection and construction
