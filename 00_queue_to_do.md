@@ -24,13 +24,13 @@ Analyze this set of links:
 * https://github.com/dipanjanS/BerkeleyX-CS190.1x-Scalable-Machine-Learning
 
 Main queue
-* linear programming and mixed-integer programming - quickly review here
-* how do sql window functions work under the hood, compared to subqueries
-* common table expressions (newer [[sql]])
-* Finish SQL quests: https://sqlzoo.net/wiki/SUM_and_COUNT
 * what is pyspark?
 * [[Airflow]] (the very basics for now - like, what is it?)
 * [[dbt]] - how exactly it fits into the system, and how do people actually use it in practice?
+* how do sql window functions work under the hood, compared to subqueries
+* common table expressions (newer [[sql]])
+* Finish SQL quests: https://sqlzoo.net/wiki/SUM_and_COUNT
+* linear programming and mixed-integer programming - quickly review here
 * move pandas stuff here (from the notes) 
 * Speed up your python code: https://pythonspeed.com/datascience/
 * What do people mean by Monolith; what's the current practical imlementation of a Monolith, and what are the intermediate steps between 100 microservices and a Monolith?

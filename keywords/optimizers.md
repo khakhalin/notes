@@ -6,7 +6,9 @@ See also: [[regularization]], [[archsearch]]
 #optimizers
 
 
-Pretty much just read this: [[Ruder2016descent]]
+Subtopics:
+* [[adam]] - the most famous optimizer
+* [[Ruder2016descent]] - an overview of different optimizers
 
 # Learning rate
 

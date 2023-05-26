@@ -10,7 +10,7 @@ Related:
 
 ADAM comes from **Adaptive Moment estimation**. First introduced in this paper with 43k citations: Kingma, D. P., & Ba, J. (2014). Adam: A method for stochastic optimization. arXiv preprint arXiv:1412.6980.
 
-An alternative to  SGD (Stochastic Gradient Descent). Inherits to Adaptive Gradient (AdaGrad) and RMSProp. Often (but apparently not always) works better than SGD.
+An alternative to a simple SGD (Stochastic Gradient Descent). Inherits to Adaptive Gradient (AdaGrad) and RMSProp. Often (but apparently not always) works better than SGD.
 
 Main differences with SGD:
 * Uses exponential running average of gradients, which makes it a momentum-based method
