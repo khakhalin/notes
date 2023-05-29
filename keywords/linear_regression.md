@@ -6,19 +6,24 @@ Related: [[l2]], [[gram-schmidt]], [[loess]]
 #regression #linalg
 
 
-**Linear model**: the value of y for each point x is approximated by $h(x) = ∑θ_j x_j = xθ$, or in a matrix form: $h = Xθ$. Here we assume that θ is a column-vector of coefficients, and each row of X is a vector $x$ (aka "point") length p+1, with $x_0 = 1$ (intercept), followed by n "normal" coordinates for this point. The equation above defines a hyperplane in $ℝ^p$.
+**Linear model**: the value of y for each point x is approximated by $h(x) = ∑θ_j x_j = xθ$, or in a matrix form (across all n available points): $h = Xθ$. Here we assume that θ is a column-vector of coefficients, and each row of X is a vector $x$ (aka "point") length p, with $x_0 = 1$ (intercept), followed by p-1 "normal" coordinates for this point. The equation above defines a hyperplane in $ℝ^p$.
 
 # L2 formula for LR
 
-For a linear regression $h = xᵀθ$ we can try to minimize L2 loss by differentiating by θ (partial derivative for each of the coordinates), and finding the mininum. For one point x, we have: 
+For a linear regression $h = Xθ$ we can try to minimize L2 loss $J = \sum (h-y)^2$  by differentiating it by θ (a vector of partial derivatives for each of the coordinates of θ), then finding the mininum by setting this vector to $\vec{0}$. 
+
+For one coordinate j, we have: 
 $∂J(θ)/∂θ_j$ = 
-= $∂/∂θ_j$ ∙$(h(θ,x)-y)^2$ (by definition of L2 loss)
-= 2(h-y) ∙ $∂h/∂θ_j$ (simple chain rule)
-= 2(h-y)∙$x_j$ (by definition of h).
+= $∂/∂θ_j \cdot \sum (h(θ,x)-y)^2$ (by definition of L2 loss, summing across all points)
+= $2 \sum(h-y) \cdot ∂h/∂θ_j$ (differentiating a square, noting that y is a given, and doesn't depend on θ)
+= $2\sum (h-y)x_j$ (by definition of h)
+= $2x_j^\top(h - y)$ (in matrix notation)
 
-Minimum: dJ/dθ = 0, ⇒ Xᵀ(Xθ-y) = 0 (if we write all end-formulas for partial derivatives for individual θ_j above in matrix notation). Here X is a matrix m×p (where p is dimensionality of the space); each row of X is an input point in this space; y is a column-vector (height p) of target outputs, and 0 is a p-high vector as well. If XᵀX is nonsignular, we can open the brackets, send y to the right, multiply from the left on inverse, and get: θ = (XᵀX)⁻¹Xᵀy.
+Minimum: dJ/dθ = 0, ⇒ Xᵀ(Xθ–y) = 0 (if we combine all partial derivatives for individual θ_j into one matrix equation). Here X is a n×p matrix (n observations, p dimensions); each row of X is an point in this p-dimensional space; y is a column-vector (height n) of target outputs, and 0 is a p-high vector.
 
-Interpretation: if y ~ h = Xθ, then h is in the column-space of X, which forms a subspace of R^N (N data points, p+1 dimensions, assuming x0≡1). To find θ, we project y to col-space using a projection matrix, which obviously minimizes residual (unexplained) variance, by making it orthogonal to the col-space.
+If XᵀX is nonsignular, we can get a closed-form solution, by opening  the brackets, send y to the right, multiply from the left on inverse, and get: θ = (XᵀX)⁻¹Xᵀy.
+
+Interpretation: if y ~ h = Xθ, then h is in the column-space of X, which forms a subspace of R^N (N data points, p+1 dimensions, assuming x0≡1). To find θ, we project y to col-space using a projection matrix, which minimizes residual (unexplained) variance, by making it orthogonal to the col-space.
 
 # Same in linear algebra terms
 
@@ -34,13 +39,13 @@ Note that a "classic" one-variable linear regression, as we know it from math, i
 
 # Conceptual questions
 
-How come Y~X and X~Y have different slopes? Presumably, if we have incomplete data, sometimes with a missing X and sometimes with a missing Y, and want to impute, we would use 2 different slopes for imputing X and Y. Is it true? And if yes, then how is it possible? (I mean, it's counter-intuitive, isn't it?)
+How come Y~X and X~Y have different slopes? Presumably, if we have incomplete data, sometimes with a missing X and sometimes with a missing Y, and want to impute, we would use 2 different slopes for imputing X and Y. Is it true? And if yes, then how is it possible? (I mean, it's counter-intuitive, isn't it?) Coz, let's be honest, [[pca]] axis (on a noisy  cloud) looks better than a regression line. Wouldn't the PCA-line then be a better predictor Y~X, at least for X >> mean? 
 
-How come [[pca]] (on a noisy cloud) looks better than LR? Wouldn't the PCA-line be a better predictor Y~X at least for X≫mean? Consider this logic: the PCA line is the longer axis of the Gaussian ellipsoid that best describes the distribution. Knowing x for sure is like taking a slice of this ellipsoid, which will also be a Gaussian. But the center of this Gaussian will be on the on the PCA axis, not on the regression axis? Sure, the model is different here (x=z+ε, y=z+ε), but isn't this approach more logical, if we have a cloud of points, and then for some more points one coordinate is known, but the other one is missing? Why does everyone use linear regression then?
+> Consider this logic: the PCA line is the longer axis of the Gaussian ellipsoid that best describes the distribution. It defines an axis of symmetry, so it looks good. However if you look at a cross-section of this elipsoid, parallel to one of the coordinates, then, oddly, the intersection with the PCA axis won't sit in the center of this cross-section! An axis of a cylinder or a cone remains the center of any of its cross-sections, but for an elongated, non-spherical ellipsoid it's not the case. Now, to add insult to injury, an off-center cross-section of an ellipsoid is also an p-1 -dimensional ellipsoid, and an off-center cross-section of a Gaussian would also be a p-1 -dimensional Gaussian, so it will still be symmetrical, but the center of symmetry will be lying in the center of this cross-section, not in the point where it intersects with the axis!
 
-> My guess for now is that PCA is really a better approach in this case, and people are just lazy. Regression is good if you control the experiment, _set_ the x, and then observe the Y. If x is not observed noisily, but is set manually, then y=x+ε is warranted. But if we just observe a cloud of points, it seems more logical to assume that both x and y are observed with errors, and so PCA would be a better model. No?
+> It's kinda hard to describe in words, but you can imagining cross-secting a 3D ellipsoid, lying on one of its symmetry planes, like a piece of bread. A cross-section through a point lying on the remaining symmetry axis only has a max in this point if it cross-sects the ellipsoid perpendicularly to this axis. If it's slanted, the maximum is off. In the extreme case, if you are cross-secting parallel to the axis, which in this case is equivalent to cutting along the axis, then the max is obviously in the beginning of the coordinates! either way, all in all, for a given X, the most probably value of Y corresponding to this X likes _below_ the PCA axis (aka symmetry line) of the Gaussian ellipsoid.
 
-Now, back to the linear regression situation. A common explanation for why we have the "(y~x) ≠ (x~y)" situation is that in "y~x" scenario, X is known perfectly, and $Y = X + ε$. That's why we only do (Δy)². But what if X is also observed with an error, just with a lower error? Like, both are imperfect, but X has a better accuracy. Would it mean that we'd have to use something roughly in-between a LR and a PCA?
+Now, back to the linear regression situation. A common explanation for why we have the "(y~x) ≠ (x~y)" situation is that in "y~x" scenario, X is known perfectly, and $Y = X + ε$. That's why we only do (Δy)². While in case of a PCA model, we have a hidden variable Z, and we assume that  x=az+ε, y=bz+ε. But what if X is also observed with an error, just with a lower error? Like, both are imperfect, but X has a better accuracy. Would it mean that we'd have to use something roughly in-between a LR and a PCA?
 
 > It appears so, as it would mean reaching from a point to the "fit line" with an ellipsoid (as opposed to a circle for PCA, or straight line for linear regression), creating a slanted line. Not an orthogonal drop (PCA), but not a vertical line (regression) as well. Intuitively that's how an "in-between" would look like, but how to formalize it mathematically?
 
@@ -50,3 +55,6 @@ Next question: consider the following Bayesian task: we have a cloud of points, 
 
 Linear algebra and statistics behind linear regression (good clear chapter):
 https://www.stat.cmu.edu/~cshalizi/mreg/15/lectures/13/lecture-13.pdf
+
+Interactive linear regression playgrounds:
+* https://www.geogebra.org/m/xC6zq7Zv - with GeoGebra; can only more points, cannot add or delete them

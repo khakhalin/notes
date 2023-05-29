@@ -13,7 +13,7 @@ Subtopics:
 * [[bumping]] - randomly move in the latent space, to avoid local minima, then simply pick the best model
 * [[boosting]] -  iteratively pick best single-var split (decision stump), boost errors, build a weighted model
 * [[random_forest]] - bagging + features_bagging (random subset of coordinates), average all
-* [[gbm]] - gradient boosting machines; similar to boosting, but for non-categorical data* 
+* [[gbm]] - gradient boosting machines; similar to boosting, but for non-categorical data
 * Famous implementations:
     * Xboost - the most popular method until 2022
     * [[LightGBM]] - the most popular method as of 2023

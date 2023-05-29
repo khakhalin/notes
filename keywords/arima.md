@@ -40,7 +40,7 @@ In more mathy intros, these models are described using **backshift operator** an
 
 # ARIMA
 
-ARMA + non-stationary drift (moving average). Three parameters: ARIMA(p, d, q), where p and q are the same values as in ARMA, and d is how many times you differentiate the y sequence before feeding it to ARMA, killing long-term derivatives (trends in case of d=1, gradual accelerations of trends in case of d=2 etc.).
+AutoRegressive Integrated Moving Average = ARMA + non-stationary drift. Three parameters: ARIMA(p, d, q), where p and q are the same values as in ARMA, and d is how many times you differentiate the y sequence before feeding it to ARMA, killing long-term derivatives (trends in case of d=1, gradual accelerations of trends in case of d=2 etc.).
 
 # Refs
 
