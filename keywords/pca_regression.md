@@ -17,6 +17,8 @@ A type of regression with regularization; similar to Shrinkage (aka [[ridge_regr
 
 # Partial Least Squares
 
+The main idea: to find a linear transformation of X that serves as the best basis to linearly predict Y. Typically Y is a matrix, not just a single vector (more than one output variable).
+
 1. Standardize columns of X
 2. Start cycle i=1
 3. Calculate φij = ⟨x_j , y⟩ for each i. Synthesize z_i = ∑j φij xj
@@ -26,10 +28,12 @@ A type of regression with regularization; similar to Shrinkage (aka [[ridge_regr
 7. Repeat 3-6 m times (m<p)
 8. Project ξ back to θ
 
-The idea behind is to let y pull signal from X, regardless of how this signal is encoded (mixed?) in columns of X. ESL claims though that "variance aspect tends to dominate", so in practice this method doesn't behave too differently than Ridge regression. Seems to also be similar in spirit to "Canonical Correlation Analysis" (see [[04_Features]] section). Same to PCR above, may inflate weaker dimensions, making it unstable. Which all together is probably why it is not that widely used? 
+The process lets Y pull signal from X, regardless of how this signal is encoded (mixed?) in columns of X. ESL claims though that "variance aspect tends to dominate", so in practice this method doesn't behave too differently than Ridge regression. Seems to also be similar in spirit to "Canonical Correlation Analysis" (see [[04_Features]] section). Same to PCR above, may inflate weaker dimensions, making it unstable. Which all together is probably why it is not that widely used? 
+
+According to wiki, works well when the dimensionality of X is high, while the number of observations is low.
 
 # Refs
 
 ESL p79, p81
 
-[wiki](https://en.wikipedia.org/wiki/Partial_least_squares_regression)
+https://en.wikipedia.org/wiki/Partial_least_squares_regression

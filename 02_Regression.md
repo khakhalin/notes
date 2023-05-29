@@ -5,18 +5,18 @@
 
 Subtopics:
 * [[linear_regression]] - the core concept :)
-    * [[gram-schmidt]] - close form elimination
+    * [[gram-schmidt]] - closed form elimination
     * [[optimizers]] - related
 * [[smoothing]] - roughness penalty and basis functions
     * [[kernels]] - kernel methods
-* [[bias-variance]] - Bias-Variance Trade-off
+* [[bias-variance]] - Bias-variance trade-off
 
 **Constrained models**
 * [[regularization]]:
-    * [[ridge_regression]] - class. Aka **L2 regularization**, aka **shrinkage**, aka Tikhonov
-    * [[lasso]] - aka **L1 regularization**. Also covers **Elastic Net** (a combo of L1 and L2)
+    * [[ridge_regression]] - aka L2 regularization, aka shrinkage, aka Tikhonov
+    * [[lasso]] - aka L1 regularization. Also covers the **Elastic Net** (a combo of L1 and L2)
 * Trickier approaches:
-    * [[aic]] - Akaike Information Criterion and Best-Subset Regression
+    * [[aic]] - Akaike Information Criterion and Best-Subset Regression (todo)
     * [[stepwise_regression]] - a bit dangerious, but fast. Also covers least angle regression
     * [[pca_regression]] - pca regression and partial least squares
 * See also:

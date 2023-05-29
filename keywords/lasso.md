@@ -1,16 +1,19 @@
 # Lasso and Elastic Net
 
-#regularization
-
 Parents: [[02_Regression]], [[regularization]]
 See also: [[ridge_regression]]
 
-**L1 regularization**, aka **basis pursuit**, aka **Lasso**: require ∑|θ_i| < t, or add λ∑|θ_i| penalty to the loss (summing for i = 1 to p, meaning no punishment for the intercept $θ_0$). Unlike for L2, it has no closed form solution (because abs() is harder to optimize). The word Lasso is actually a weird abbreviation from Least Absolute Shrinkage and Selection Operator.
+#regularization
 
-Overall, while [[ridge_regression]] tends to scale θ_i values down with a coefficient, lasso tends to slide (shift) them towards zero by a certain value, until they bury in 0 and become 0. For an orthonormal X, this can be proven theoretically (ESL p71). The most critical benefit of L1 regularization is that is performs **covariate selection**: when some x_i are strongly correlated, L2 would tend to distribute θ equally between them, while L1 would kill one, and glorify the other.
 
-Visual representation: romboid and a quadratic (elliptic) optimum nearby. A circle (ridge) projected on an elliptic field always has a global minimum. A corner made of two lines (lasso) would either reach a mininum on a line (non-zero optimal θ), or at the corner (zero θ). Graphically, one can see that θ sets to 0 the moment the unpenalized minimum leaves the band that continues the diamond (draw it to see it).
+**L1 regularization**, aka **basis pursuit**, aka **Lasso**: either require ∑|θ_i| < t (where t is some small value), or add a λ∑|θ_i| penalty to the loss (where i runs from 1 to p, not from 0 to p, as there should be no punishment on the intercept $θ_0$). Unlike L2, this one has no closed-form solution (as abs() is hard to optimize). The word Lasso is actually a weird abbreviation for Least Absolute Shrinkage and Selection Operator.
 
-There's a generalizaton of both L1 and L2: one can try to use a penalty of λ∑|θ_i|^q, where q is some value in R. For q=2 we get ridge, for q=1 lasso, and for q in (0,1) - something in-between. Which is nice, but computationally expensive.
+Overall, while [[ridge_regression]] tends to scale θ_i values down with a certain coefficient, lasso tends to slide (shift) them towards zero by a certain value, until they one by one become 0. For an orthonormal X, this can be proven theoretically (ESL p71). The most critical benefit of L1 regularization is that is performs **covariate selection**: when some x_i are strongly correlated, L2 would tend to distribute θ equally between them, while L1 would kill one, and glorify the other.
 
-**Elastic net penalty**: An mix (weighted sum) of both Ridge and Lasso that can be used to approximate these generalized romboid shapes. It's way easier to calculate, but also shares the ability to set some junk coefficients to exactly 0 (because of pointy points )
+Visual representation: romboid around the coordinate center (correpsonding to the λ-term), and a quadratic (elliptic) optimum nearby (corresponding to the neighborhood of an overfitting solution). A circle (L2, ridge) projected on an elliptic field always has a global minimum (keep reducing the ellipse until it touches the circle of L2 in only one point). On the other hand, a corner made of two lines (L1) would either reach a mininum at the corner of it (if this corner is the last point to be caught inside the ellipse, corresponding to zero θ_i for some of the coordinates as an optimal solution), or on a line between corners (corresponding to a non-zero optimal θ). Graphically, θ is sets to 0 the moment the unpenalized minimum (the overfitting point) leaves the band that continues the diamond in one of the directions.
+
+# Elastic Net Penalty
+
+There's a generalizaton of both L1 and L2: one can try to use a penalty of λ∑|θ_i|^q, where q is some value in R. For q=2 we get ridge, for q=1 lasso, and for q in (0,1) - something in-between. This is conceptually nice, but computationally quite expensive.
+
+A better alternative is a mix (weighted sum) of both Ridge and Lasso that can can well approximate these generalized romboid shapes. It is easy to calculate, and it combines the best aspects of both L1 and L2. Like L1, it can set some junk coefficients to exactly 0 (because of pointy points on axes), but like L2 it is convex (🔥 which may lead to a better convergence, right?)

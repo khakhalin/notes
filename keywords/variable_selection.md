@@ -10,13 +10,13 @@ Basic checklist for variable selection:
 
 1. Use domain knowledge
 2. Normalize variables (where appropriate)
-3. If variables aren't independent, construct **conjunctive features** (say, averages or [[pca]])
-4. If need to prune the number of features for some external reasons (compute, memory, biasing) create **disjunctive** features (using upper dimensions of a [[pca]]-style factor analysis, or maybe [[clustering]], to stress which points differed on these features, even if the exact values of these features had to be lost)
-5. Get a baseline by assessing features independently
-6. Detect and handle outliers and dirty data
-7. Start with the simplest predictor (usually linear)
-8. If you have better ideas, implement, then compare (benchmark)
-9. Check stability by bootstrapping (cross-validation)
+3. If variables aren't independent, construct **conjunctive features**, e.g. a simple average, a manually constructed score, or the 1st [[pca]] component.
+4. If features need to be pruned for some external reasons (compute, memory, biasing) create **disjunctive** features. For continuous variables, one can use upper dimensions of a [[pca]]-style factor analysis, or [[clustering]]. For dummy variables, clustering them based on the values of other features may help (say, going from 7 days a week to weekdays and weekends, or from a list of individual categories to a few category types). In either case, the goal is to keep some information about which points differed, and which points were similar, even if the exact values of these features will be removed from the dataset.
+6. Get a baseline by assessing each of the features independently
+7. Detect and handle outliers and dirty data
+8. Start with the simplest predictor (such as linear regression)
+9. Benchmark different ideas
+10. Check solution stability by bootstrapping (cross-validation)
 
 # Refs
 
