@@ -1,13 +1,26 @@
-# Monte-Carlo, Evolution, Particles
+# Brute-force Modeling
 
-#bib #evo
+Monte-Carlo, Agent-based, Evolution, Particles, automata
+
+#bib #evo #agents
 
 
 https://en.wikipedia.org/wiki/Mean_field_particle_methods
 
-See also:
+Subtopics:
 * [[gen_alg]] - Genetic algorithms
 * [[mdp]] - Markov Decision Process
+
+Agent-based modeling:
+* [[goap]] - modeling agents in strategy games
+
+Automata:
+* [[cellular_automata]] - topic
+* [[graph_automata]] - automata on graphs
+* [[neuro_cell_automata]] - automata that are also networks
+
+The interface with DL and RL:
+* [[Baker2019autocurricula]]
 
 # Variational Inference
 

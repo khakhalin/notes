@@ -1,9 +1,10 @@
 # Cellular Automata
 
+Parent: [[complexity]], [[00_articles_math]], [[modeling]]
+See also: [[neurostochastic]], [[randomness]]
+
 #automata #dynamic #chaos
 
-Parent: [[complexity]], [[00_articles_math]]
-See also: [[neurostochastic]], [[randomness]]
 
 Subtopics:
 * [[neuro_cell_automata]] - deep dreaming, something in-between a CA and a recurrent network
@@ -20,7 +21,7 @@ https://web2.qatar.cmu.edu/~gdicaro/15382/additional/generative-music-ca-review.
 
 # Wolfram Code
 
-**Wolfram code** for 1d automata (most often used with neighborhood of 3). As 3 bits → 1 bit, there are 2^3 = 8 combinations that come as in. Two outputs are possible, so the total space of rules is 2^8 = 256. If you write all outputs out as a binary sequence, the rule becomes a binary number. For example, "Rule 30" is cool (chaotic-looking). Wolfram wrote numbers backwards, so leading bit corresponds to 111, and trailing to 000, but from the last to the first you go in standard binary order.
+**Wolfram code** for an 1d automaton (most often used with neighborhood of 3) is a compact way to fully describe this automaton. As 3 bits → 1 bit, there are 2^3 = 8 combinations that come as in. Two outputs are possible, so the total space of rules is 2^8 = 256. If you write all outputs out as a binary sequence, the rule becomes a binary number. For example, "Rule 30" is cool (chaotic-looking). Wolfram wrote numbers backwards, so leading bit corresponds to 111, and trailing to 000, but from the last to the first you go in standard binary order.
 
 Wolfram defined 4 classes:
 1. Converge to a stable state (e.g. 4, 172)

@@ -2,7 +2,7 @@
 
 #bib #evo #gen_alg
 
-Parent: [[13_MC]]
+Parent: [[modeling]]
 See also: [[evolution]]
 
 

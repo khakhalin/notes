@@ -49,6 +49,9 @@ Reviews and intros:
 Other related papers:
 * [[Bojanek2020cyclic]] - using triplet motifs to classify (neural) activity on graphs
 
+See also:
+* [[causality]] - inferring causality from events
+
 # To-Read: ML on Graphs
 
 Bronstein, M. M., Bruna, J., Cohen, T., & Veličković, P. (2021). Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges. arXiv preprint arXiv:2104.13478. https://arxiv.org/abs/2104.13478

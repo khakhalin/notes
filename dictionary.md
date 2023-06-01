@@ -120,7 +120,7 @@ See also:
 
 **Map Reduce** (dev): programming model for parallel computing; a type of split-apply-combine strategy. Essentially, seems to define two functions, one function on splittable tasks (something like `for each a in List`) that analyzes its `a` and sends answers out; and another one that catches answers and combines them all into one answer.
 
-**MCMC** (ml) Markov Chain Monte-Carlo. See [[13_MC]].
+**MCMC** (ml) Markov Chain Monte-Carlo. See [[modeling]].
 
 **MLE** (stats): Max-Likelihod Estimation. See [[02_Regression]].
 

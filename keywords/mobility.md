@@ -56,6 +56,18 @@ Links:
 
 Second tier cities with mobility potential in Europe (a consensus of various studies): Brussels, Barcelona, Oslo, Warsaw, Bordeaux, Prague, Rotterdam
 
+# My notes
+
+The most popular car in Germany is VW Golf. The cost of owning it is ~300€/mo for the car itself + some 50€/mo for insurance, so ~350€/mo.  On the other hand, a typical rental in cities is probably some 30-60 minutes long (very roughly), which with typical prices on the market, gives us about ~10€ per trip, roughly.
+
+If we are going to compare car ownership to car sharing, then fuel cost should be excluded from these 10€, as a person owning a car woud pay them as well. VW Golf does 8L/100 km, fuel costs ~1.8 €/L, Berlin (a very large city by EU standards) is about 30 km across, so fuel would cost about 4€ per trip. Which means that fuel excluded, a person would pay about 6€/trip for the shared car as a service. So a profitability line between owning and sharing a car lies at about 350/6 = 58 trips a month, or about 2 trips a day.
+
+Now, according to my rough estimations, a dedicated carsharing location becomes profitable once it achieves about 10 trips/day (if trips are a poisson process, aka trips of opportunity, and not daily commutes) Which means that for occasional commuters (aka, in places with reliable public transportation), a group of about 5-10 households switching to shared cars would be a win-win (profitable) for both the people, and the shared cars provider!
+
+If people want to commute for work, the calculation is a bit different, and the rates would go up (as we have to assume that in the worst case the car is doing only 2 trips a day). A daily cost of a rented car, for the shared mobility provider, would have to be justified by its daily use, and then the rate would include a variable part as well. The daily cost of a rented car for the provider can be guessed from leasing rates (about 20€ per day), plus we have the variable part (mostly fuel, which we estimated above as about 5€, multiplied by 2 trips), which gives us about 30€/day. As the default price of a rental was estimated as 10€ per trip (above), to get 30€ from 2 trips, the company would have to put a drop-off fee of €10 at this location. Which is a lot of course, but still, with 30€ per working day, it would be more profitable for a household not to own a car, but to share it, if they commute less than 12 times a month. Which roughly corresponds to working hybrid, with 3 days in the office (assuming of course that these days are different for different people, or the concept of sharing won't work). This cenario also increases the size of a minimally profitable locaitonto about 10 / 12 * 30 = 30 households. Which means that in the long-term, with good public transportation and/or hybrid work, any group of houses that has some 30 households within a walking distance from a shared transportation point, would benefit from switching to car-sharing, and this operation would be profitable for the provider.
+
+Interestingly, it means that post-pandemic switch to hybrid work, as well as companies switch to shared offices, both synergize with car-sharing, as they reduce the number of costly car-trapping use cases (reduce daily commute), and also encourage people to stagger this commute across the week! It is a good news for cities and the environment.
+
 # References
 
 Fluctuo Mobility reviews for EU markets:
