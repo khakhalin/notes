@@ -17,7 +17,7 @@ Methods and model types:
 
 Model assessment:
 * [[validation]] - the process of
-* [[confusion]] - confusion matrix and 
+* [[confusion]] - confusion matrix: precision, recall, F1 score
 * [[roc]] - Receiver Operation Characteristic and AUC measure
     * [[youdens-j]] - a single measure to quantify ROC height
 

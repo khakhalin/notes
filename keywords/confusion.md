@@ -17,7 +17,7 @@ Can we balance them somehow, to make sure the model is reasonably good on both a
 
 $\displaystyle F = 2\frac{precision \cdot recall}{precision+recall} = (\text{mean}(precision^{-1},recall^{-1}))^{-1}$
 
-Note that while recall is strictly a measure of the model (class imbalance doesn't affect it), precision is not (it goes down as the share of TP decreases, as most positives become FP). Which means that F1 score also is not, strictly speaking, a measure of the quality of the model, but rather, a score for the performance of a given model on a given dataset.
+Note that while recall is strictly a measure of the model (class imbalance doesn't affect it), precision is not, and depends on the testing data: precision goes down as the share of TP decreases, as with the number of out-of-class points increasing, most positives become FP. It means that F1 score also is not, strictly speaking, a measure of the quality of the model, but rather, a way to score the performance of a given model on a given dataset.
 
 * An better approach: [[ROC]] (and the related measure of AUC)
 * Another option: [[youdens-j]] (also includes )
@@ -26,4 +26,4 @@ Note that while recall is strictly a measure of the model (class imbalance doesn
 
 **Confusion matrix** is a good diagnostic tool for multiclass classification. Take all true classes, and tally into which classes they are misclassified. Identify the issues. _Is it better to do it on the validation set?_ It's better to zero the diagonal, as most cases will be classified correctly, but we're interested in the errors!
 
-And the thing _is_ really confusing. Note for example that FPR and TPR are not at all the opposites of each other; they have different everything! TPR = 1-FNR = TP/(TP + FN), while FPR = 1-TNR = FP/(FP+TN). Don't get confused here. Note that the denominator is always the numerator + its opposite, and if you use some common sense, you can always "reconstruct" what the negative is, as with incorrect classification both the label and the truthfulness of this label are negated.
+And the thing _is_ really confusing. Note for example that FPR and TPR are not at all the opposites of each other, despite sounding  a bit like opposites: they have different everything! TPR = TP/all positive responses = TP/(TP + FN), while FPR = points falsely reported as positive / all negative points = FP/(FP+TN). Don't get confused here! The denominator is always the numerator + its full opposite, as with incorrect classification both the label and the truthfulness of this label are negated. So with some luck one can use their common sense, and try to "guess" what the negative is.
