@@ -1,6 +1,6 @@
 # Management
 
-See also: [[time_management]]
+See also: [[time_management]], [[finance]]
 
 #management #bib
 

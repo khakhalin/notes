@@ -1,6 +1,6 @@
 # Unicode Symbols
 
-#side #links
+#side #links #lifehack
 
 
 Just a weird collection of Unicode characters and examples.
@@ -15,6 +15,9 @@ Just a weird collection of Unicode characters and examples.
 * https://emojipedia.org/nature/ - emojipedia
 * https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode
 * A script that writes your text in non-normal characters (Twitter-style, annoying): http://qaz.wtf/u/convert.cgi?text=Just+change+the+text%2C+then+copy+the+Unicode+and+paste+it
+
+See also:
+* [[memes]] - for collections of Slack emojis
 
 # Clipboard
 
@@ -36,7 +39,7 @@ Latex codes that I always forget: \sim $\sim$ , \top $\top$ .
 ∧∨
 𝒩 ∞ ℕ ℤ ℚ ℝ ℂ 𝕀 𝔼 𝟙
 □∎
-⨀⨂⨁ ∘ • × ◉
+⨀⨂⨁ ∘ • × ◉ ● ○ • °
 
 ž ź ł ń ś ŭ ć č š
 

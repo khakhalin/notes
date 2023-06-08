@@ -5,6 +5,7 @@ https://scholar.harvard.edu/files/jtennessen/files/emoji_guide_to_human_genetic_
 
 #fun #evo #bio
 
+
 A really awesome primer in human genetic diversity that uses emojis for illustration, just for fun.
 
 A really nice metaphor of how long ago the **last common ancestor** was: imagine all your ancestors standing in a queue. In this case, the LCA for all humans is one stadium away; the earliest modern human is about one Central Park away (~50 stadiums), the earliest "actual monkey" is about one car drive away (~50 central parks), the LCA for all primates is about 5 drives, or one flight (like, about half a continent).

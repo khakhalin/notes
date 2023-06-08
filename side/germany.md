@@ -49,3 +49,6 @@ https://www.facebook.com/groups/156793591673300/
 
 * Info for immigrants: https://www.arbeitsagentur.de/fuer-menschen-aus-dem-ausland?pk_vid=162214487376c081
 * Compare providers of various stuff: https://www.check24.de/
+
+A really nice EN-langauge introduction to German law:
+https://www.jura.uni-hamburg.de/media/die-fakultaet/personen/wurmnest-wolfgang/wurmnest-contract-law-in-zekoll-wagner-introduction-to-german-law.pdf

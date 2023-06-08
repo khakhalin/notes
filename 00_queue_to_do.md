@@ -24,6 +24,7 @@ Analyze this set of links:
 * https://github.com/dipanjanS/BerkeleyX-CS190.1x-Scalable-Machine-Learning
 
 Main queue
+* demand forecasting - basics
 * what is pyspark?
 * [[Airflow]] (the very basics for now - like, what is it?)
 * [[dbt]] - how exactly it fits into the system, and how do people actually use it in practice?
@@ -153,7 +154,6 @@ Main queue
 * How to do code reviews: https://google.github.io/eng-practices/review/reviewer/
 * Isn't everything essentially map-reduce? What is the crux? What are the alternatives? https://en.wikipedia.org/wiki/MapReduce
 * databricks
-* anomaly detection
 * [[Hooker2020hardware]] - read and fill (it's a stub now)
 * [Constrained optimization](https://www.khanacademy.org/math/multivariable-calculus/applications-of-multivariable-derivatives/lagrange-multipliers-and-constrained-optimization/v/constrained-optimization-introduction) on Khan Academy
 * refresh [[design_pattern]], especially those used in data science
