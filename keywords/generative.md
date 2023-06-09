@@ -1,6 +1,6 @@
-# Generative algorithms
+# Generative algorithms and techniques
 
-Parents: [[algo]]
+Parents: [[algo]], [[08_Unsupervised]]
 See also:
 
 #generative #bib
@@ -8,7 +8,8 @@ See also:
 
 Subtopics:
 * [[autoencoder]]
-* [[gan]]
+* [[gan]] - generative adversarial network
+* [[augmentation]] - data augmentation
 * [[wf_collapse]] - Wave Function Collapse
 * [[perceptual_loss]] - a good loss to optimize image generators
 * [[generative_graphRNNs]] - generating graphs with RNNs

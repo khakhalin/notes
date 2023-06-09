@@ -1,7 +1,7 @@
 # Measuring network properties
 
 Parent: [[09_Graphs]]
-See also: [[graph_intro]], [[graph_generate]], [[algos_graph]]
+See also: [[graph_intro]], [[algos_graph]]
 
 #graph #networks
 

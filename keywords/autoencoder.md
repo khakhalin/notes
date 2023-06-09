@@ -1,6 +1,6 @@
 # Auto-Encoders
 
-Parents: [[08_Unsupervised]], [[15_generate]]
+Parents: [[08_Unsupervised]]
 Related: [[gan]]
 
 #bib #vae #self-supervised #unsupervised

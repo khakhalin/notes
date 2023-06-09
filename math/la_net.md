@@ -1,13 +1,10 @@
-# Linear algebra and networks
+# Linear algebra on graphs
+
+Parents: [[linalg]], [[09_Graphs]]
+See also: [[graph_intro]], [[algos_graph]]
 
 #networks #linalg #bib #math
 
-Parents and siblings:
-* [[linalg]] - linear algebra
-* [[graph_intro]] - introduction to graphs
-* [[graph_th]] - graph theory of discrete kind
-* [[algos_graph]] - algorithms on graphs
-* [[09_Graphs]] - ML for graphs
 
 # Adjacency
 

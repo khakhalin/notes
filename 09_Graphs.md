@@ -5,9 +5,8 @@
 
 **Classic graph theory**
 * [[graph_intro]] - Basic intro to graphs
-* graph_th - Random notes on graph theory
 * [[algos_graph]] - Classic algorithms on graphs
-* [[la_net]] - Linear algebra on graphs
+* [[la_net]] - Linear algebra of graphs
 * [[graph_spectra]] -  Spectral Techniques #todo
 * [[algebraic_topology]] - basis for [[umap]], cliques etc.
 
@@ -20,11 +19,10 @@
 * [[graph_network_tools]] - programmatic tools to work with graphs
 
 **Generative models for graphs**
-* [[graph_generate]] - Generative models for graphs
-    * [[erdos_graph]] - basis
-    * [[small_world]]  - SW models
-    * [[kronecker_graph]] - Fractal model for graph generation
-    * [[generative_graphRNNs]] - generating graphs with DL RNNs
+* [[erdos_graph]] - basis
+* [[small_world]]  - SW models
+* [[kronecker_graph]] - Fractal model for graph generation
+* [[generative_graphRNNs]] - generating graphs with DL RNNs
 
 **Graph embeddings**
 * [[graph_embedding]] - Learning graph representations, random walks

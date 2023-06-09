@@ -1,30 +1,30 @@
 # Deep graph generation with graphRNN
 
-Parents: [[09_Graphs]] / [[graph_generate]] ; [[07_RNNs]]
+Parents: [[09_Graphs]] ; [[07_RNNs]] ; [[generative]]
 Related:  [[deep_graphs]], [[graphsage]]
 
 #graph #generative
 
 
-## Setting the problem
+We want this to be the **opposite of a graph convolution network** ([[graphsage]]): instead of climbing a graph, collapsing it into a process, we want to use a process (RNN) to generate a graph.
 
-We want to be an **opposite of a graph convolution network** (GCC, or [[graphsage]]): we want to use RNNs to go from a network representation to a graph. We'll use RNNs for that.
-
-Uses for that:
-* Anomaly detection (compare a real graph to simulated graphs)
+This can be used for:
+* [[anomaly]] detection (compare a real graph to simulated graphs)
 * Predictions (future graph structures from the past)
 * Solving algorithmic / optimization problems - if a solution can be represented as a graph, it would be nice to just generate this graph
 * Graph completion (guess missing data from existing data)
 
 Practical example: generating novel molecules.
 
-**Why generating graphs is hard?** All same problems that were previously true for graphs-as-inputs, now apply to graphs-as-outputs:
+**Why generating graphs is hard?**
+All the problems that are true for graphs-as-inputs, now apply to graphs-as-outputs:
+
 * Output space (A matrix) **dimensions are variable**. So we cannot produce it as an output of a  network.
 * Output space is **large**:  n² elements, which grows super-fast, but also for IRL these outputs may be ginormous.
 * **Non-unique representation**: an n-node graph can be represented in n! ways, making objective functions (something to optimize) a nightmare. But we need an objective function if we want to train a network!
 * Complex **long-range dependencies**: say, if we care about cycles length k, the network should be able to "count to k", so that it wouldn't close the cycle too early, or too late. In extreme case, an existence of an edge may depend on the entire graph.
 
-## Generation as a stats problem
+# Generation as a statistical problem
 
 The way we'll be thinking about it is that there's a **distribution of graphs**, and we are sampling from it. So we want to solve a reverse problem, and create a model that generates data with same statistical properties as what is observed in the training set.
 * p_data (x) - actual underlying distribution that is never known to us
@@ -52,7 +52,7 @@ Sequential  generation, where we take "actions" (add a point, a component, a wor
 
 > He makes some vague statement that other generative approaches, including [[gan]]s and [[autoencoder]]s, are somehow related to ARMs?.. Not sure. He says that "at least one part of fancier generators contains an ARM", or something like that… #todo: what??
 
-## graphRNNs
+# graphRNNs
 
 Generating a graph node-by-node means implicitly introducing a certain ordering of nodes in a graph that we'll call π. There are many different π-s that can apply to the same graph. The generation process is now a sequence of actions $S^π$. Sequence of actions is linked to π, and two different orderings would obviously requite different sequences. We will later see that some orderings π are more productive, and can make training easier.
 

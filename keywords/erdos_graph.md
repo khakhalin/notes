@@ -1,9 +1,9 @@
 # Erdős–Rényi model
 
-Parent: [[09_Graphs]] / [[graph_generate]]
+Parent: [[09_Graphs]]
 Related [[small_world]], [[randomness]]
 
-#graph
+#graph #generative
 
 
 Random graph, aka Poisson random graph. Introduced in 1960. Two variants:

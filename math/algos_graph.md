@@ -14,13 +14,11 @@ Useful algorithms:
 * [[a-star]] - A* : an improvement upon Dijsktra's
 * [[floyd_warshall]] - shortest distance from all nodes to all nodes
 * [[bridge]] - finding bridges (lonely edges connecting two components)
-* [[graph_generate]]
 * [[salesman]] - traveling salesman
 
 See also:
 * [[graph_intro]] - basic introduction to graphs
 * [[la_net]] - linear algebra about graphs
-* graph_th - graph theory (more of group theory kind)
 
 # Basic graph exploration
 

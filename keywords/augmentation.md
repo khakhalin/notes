@@ -1,6 +1,6 @@
 # Data augmentation
 
-Parents: [[06_DL]]
+Parents: [[06_DL]], [[generative]]
 See also: [[anomaly]]
 
 #augmentation #synthetic

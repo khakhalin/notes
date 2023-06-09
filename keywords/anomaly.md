@@ -16,19 +16,27 @@ Some practical complications:
 * Behavior drift. The distribution of normal behavior often changes, evolves over time
 * Typically, the data is unlabeled, so supervised techniques may be tricky, as labeleing ooften requires human intervention, and thus is very expensive.
 * Individual variables may be distributed very differently (continuous, categorical, etc.).
-* Contextual anomalies: Often it's not the value (vector) itself that is sketchy, but rather the value in the context (time, spatial). [[time-series]] contextual anomalies are the most common, and both neighboring values of the signal, and values of other signals for this period of time provide the context. (Example: a sudden increase in credit card spending that is normal on Xmas, but maybe not outside)
-* Collective anomalies: when the values themsevelves are ok and changing smoothly, but a collection of points together is weird (say, a cardiogram missing a beat, or a pathological sequence of events in a stream of events).
+* Context (in time, space, etc. - see below)
 
 Tips and tricks:
-* Semi-supervised learning, including synthetic data and data [[augmentation]]
 * For a mix of continuous and categorical values, we may either try an [[embedding]] (see below), or switch to a pairwise distance representation (using Manhatten distance for example), and then either project from distances to a low-D space, or to keep working with distances (see KNN-like methods below)
 * Instead of explicitly modeling a distribution, we can train an [[autoencoder]] to learn an [[embedding]] for valid states, and then either classifying in the space of this embedding, or directly relying on the encoding-decoding error for anomalous points, under an assumption that anomalous points cannot be represented by this network as well as valid points. (This approach also appears to be called "replicator networks")
-    * Back in the 1990s people tried to even use Kolmgorov komplexity for sequences of events with the same motivation (that "legal" sequences have some structure, and so can be zipped to smaller files! See Chandola2009 for refs)
+    * Back in the 1990s people tried to even use Kolmogorov komplexity for sequences of events with the same motivation (that "legal" sequences have some structure, and so can be zipped to smaller files! See Chandola2009 for refs)
+    * In the 2000s they also tried to generate embeddings by taking consecutive points of a time-series, calculating distances, interpreting it as a adjacency matrix of a graph, and then looking at this graph's eigenvectors 😱
 * As for anomaly detection not only the values of valid learning points, but also their concentration is important, one can do something like a reversed [[knn]] method: to look at the number of good valid points in the immediate vicinity of the point of interest, or the size of the vicinity (hypersfhere) necessary to catch a certain number (share) of training points. This group of approaches used to be called "Peer group analysis", "relative density" approach, or "Local Outlier Factor".
 * Partitions and kernels: instead of defining areas as a decision boundary or in a KNN way, optimize "safe space" description by placing some archetypical values in it, and looking at the distance to the closest archetype. Reduces the problem to a bunch of local classifications for the vicinity of each archetype (here "archetype" is my word, not something I read; ppl in the 2000s seem to have mostly called it "parititions")
 * A very simplified variant of partitioning is just calculating probabilities on a grid (hypergrid)
 * In early 2000s it was trendy to play with manually constructed metrics, like Connectivity-based Outlier Factor (COF), Outlier Detecton using In-Degree (ODIN), Multi-Granuality Deviation (MDEF), Cluster-Based Local Outlier Factor (CBLOF) etc, but I would expect these to become less valuable today
 * For weird data, the key is either in creating an [[embedding]], or in starting from distances. Say, for protein sequences, people used some "Probabilistic Suffix Trees"
+* Semi-supervised learning, including synthetic data and data [[augmentation]]
+
+# Context
+
+**Contextual anomalies**: Often it's not the value (vector) itself that is sketchy, but rather the value in the context (time, spatial, neghboring on a graph). [[time-series]] contextual anomalies are the most common, and both neighboring values of the signal, and values of other signals for this period of time provide the context. (Example: a sudden increase in credit card spending that is normal on Xmas, but maybe not outside)
+
+**Collective anomalies**: when the values themsevelves are ok and changing smoothly, but a collection of points together is weird (say, a cardiogram missing a beat, or a pathological sequence of events in a stream of events).
+
+One way to deal with context is to try to cancel it, thus switching to a simpler task of point anomalies (almost like subtracting a local average). Or we can move to a space of local distances, or an autogression matrix for [[time-series]], to somehow characterize the context as a whole (embedding of an embedding?). Modeling of a generative process with [[hmm]] was also popular.
 
 # References
 

@@ -34,6 +34,7 @@ Main queue
 * Finish SQL quests: https://sqlzoo.net/wiki/SUM_and_COUNT
 * linear programming and mixed-integer programming - quickly review here
 * move pandas stuff here (from the notes) 
+* how variational autoencoders work? (move to a separate zetterl from [[autoencoder]])
 * Speed up your python code: https://pythonspeed.com/datascience/
 * What do people mean by Monolith; what's the current practical imlementation of a Monolith, and what are the intermediate steps between 100 microservices and a Monolith?
 * Deep lerning tuning playbook: https://github.com/google-research/tuning_playbook

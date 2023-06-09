@@ -1,8 +1,10 @@
 # GAN: Generative Adversarial Networks
 
+Parents: [[08_Unsupervised]], [[06_DL]]
+See also: [[autoencoder]], [[augmentation]]
+
 #bib #self-supervised #gan #adversarial
 
-Parents: [[08_Unsupervised]], [[06_DL]]
 
 # To-Read
 

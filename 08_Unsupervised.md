@@ -7,7 +7,7 @@ See also: [[06_DL]]
 
 Subtopics:
 * [[embedding]] - embedding and representation
-* [[15_generate]] - generative  models
+* [[generate]] - generative  models
     * [[autoencoder]] - autoencoders
     * [[gan]] - Generative Adversarial Networks
 * noisy-student #todo

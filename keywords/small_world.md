@@ -1,6 +1,6 @@
 # Small-world networks
 
-Parent: [[09_Graphs]] / [[graph_generate]]
+Parent: [[09_Graphs]]
 See also: [[erdos_graph]], [[scale-free]]
 
 #graph #generative #networks
