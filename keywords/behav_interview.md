@@ -28,7 +28,7 @@ In tech companies, typically not the HR, but a high-level manager.
 * Know your own CV, including the language, as they are likely to refer to your experience using the language you used.
 * Practice / write down key stories in advance. Set up the situation fast. Elevator speech. No tangents. Only essential details. Action and result centered, anchored in decisions and actions.
 * For each project, identify 1-2 key achievements, and very high-level overview of the technical side of it, but be ready to dive down if needed.
-* This is a communication skill: ability to be clear, on point, deal with emotions etc.
+* This also tests your communication skill: ability to be clear, on point, deal with emotions etc.
 * Know why you made each of your career transitions. Why you quit, why you joined.
 * General mindset should be that past failures made you better.
 * Mentioning intercultural fluency and awareness is a plus.

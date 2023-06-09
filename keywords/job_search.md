@@ -2,12 +2,14 @@
 
 #management #lifehack #interview
 
+
 A collection of materials on job searching and interviewing, from the point of view of the candidate.
 
 Related pages:
 * [[system_interview]] - system design interviews
 * [[behav_interview]] - behavioral interview
 * [[recruiting]] - the opposite side of the story
+* [[de_jobs]] - jobs specifically in Germany
 
 # Data Science interviews
 
@@ -21,6 +23,7 @@ Advice:
 
 Other refs:
 * https://www.springboard.com/blog/machine-learning-interview-questions/
+* https://demo.useliftoff.com/demo - wild AI-powered tool for practicing interviews with a virtual person (!)
 
 # Coding and whiteboarding interviews
 
@@ -73,6 +76,24 @@ Break the stereotype of a "non-doer" that many people have about academia. Ways 
 Useful wording and targets:
 * A reasonable starting salary for a mid-level DS in NYC in 2021 is 120 (maybe as high as 140 least as an ask); maybe as low as 100 if it's a strategic choice for some strategic reasons. 110 is a good starting number. In Germany, around 60, maybe down to 50 ([link](https://docs.google.com/spreadsheets/d/1cjwB_s4ya57auTjIw-OVjoR_3IDvLcELt9sK420fzbs/edit#gid=1485289967))
 * Python proficiency for a solid ex-academic: 7/10 or 8/10; or "confidently proficient, but lacking production quality professional experience".
+
+General links:
+* [Getting into CS from the outside](https://www.reddit.com/r/cscareerquestions/comments/17n5a1/getting_in_to_a_cs_career_from_outside_cs/)
+* [More similar discussions](https://www.reddit.com/r/cscareerquestions/comments/17n5a1/getting_in_to_a_cs_career_from_outside_cs/)
+* [FAQ on resumes](https://www.reddit.com/r/cscareerquestions/wiki/faq_resumes)
+
+# Specific advice for Germany
+
+Average salaries:
+https://www.payscale.com/research/DE/Job=Data_Scientist/Salary
+https://www.payscale.com/research/DE/Job=Software_Engineer/Salary
+About 55 kEur/Y
+
+Germany taxes calculator / comparator:
+https://www.brutto-netto-rechner.info/
+
+Neuromorphic initiative in Dresden:
+https://www.humanbrainproject.eu/en/follow-hbp/news/second-generation-spinnaker-neurorphic-supercomputer-to-be-built-at-tu-dresden/
 
 # Job boards
 
