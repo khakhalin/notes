@@ -4,10 +4,14 @@ Parents: [[stats]]
 
 #stats #bib #timeseries
 
+
 Subtopics:
 * [[holt-winters]] - Holt-Winters triple exponential smoothing method
 * [[pacf]] - partial auto-correlation function
 * [[arima]] - autoregressive integrated moving average
+
+See also:
+* [[anomaly]] detection
 
 Papers:
 * [[Gortler2019gaussian]] - visual introduction to Gaussian processes

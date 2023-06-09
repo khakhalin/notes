@@ -1,8 +1,10 @@
 # Typical Sample
 
+Parents:
+Related: [[curse_dim]], [[04_Features]], [[metric]], [[smote]]
+
 #dim #stats #interpretability
 
-Related: [[curse_dim]], [[04_Features]], [[metric]]
 
 **Typical Sample** is an idea related to the Curse of Dimensionality: in higher dimensions the idea of "average point" becomes less useful. A mean of lots of colored noises is a gray square, which looks nothing like any of the data points.
 

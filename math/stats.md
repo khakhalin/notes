@@ -7,6 +7,7 @@ Subtopics:
 * [[confusion]] - model assessment
 * [[point_process]] - everything on point processes (empty for now)
 * [[time-series]] - time-series analysis and prediction
+* [[bayes]] - Bayesian methods
 
 Probability distributions and alike:
 * [[binomial]], [[normal]]

@@ -9,7 +9,7 @@ See also: [[Zoph2020pretraining]] - show how augment interacts with pre-training
 #augmentation
 
 
-The key part seems to be that it automatically finds a sequence of augmentations to boost your accuracy when learning on an image dataset. And it does it computationally cheaper than their previous solution called **AutoAugment**, and has fewer hyperparameters (two). Originally they thought of it as a sort of #curriculum learning, as you want to start with small augmentation amplitudes, and then gradually increase them. But then they realized that actually this curriculum doesn't matter at all, and you can as well always use const amplitude, or random amplitude; you get exactly same final results.
+The key part seems to be that it automatically finds a sequence of image augmentations to boost your accuracy when learning on an image dataset. And it does it computationally cheaper than their previous solution called **AutoAugment**, and has fewer hyperparameters (two). Originally they thought of it as a sort of #curriculum learning, as you want to start with small augmentation amplitudes, and then gradually increase them. But then they realized that actually this curriculum doesn't matter at all, and you can as well always use const amplitude, or random amplitude; you get exactly same final results.
 
 I didn't understand the story about some "small subnetwork" that they need to find something something? Not sure.
 

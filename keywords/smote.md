@@ -2,9 +2,10 @@
 
 Synthetic Minority Over-sampling Technique
 
-See also: [[augmentation]]
+Parents: [[augmentation]]
+See also: [[typical_sample]]
 
-#ml #generative
+#ml #synthetic
 
 
-A type of "cheap" synthetic data to fix class imbalance. For your "rare" classes, take a point (in many-D space) and move it by a small amount towards one of its near neighbors.
+A type of "cheap" synthetic data to fix class imbalance. For your "rare" classes, take a point (in many-D space) and move this point repeatedly by a small amount towards one of its nearest neighbors.

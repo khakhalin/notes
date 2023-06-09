@@ -1,5 +1,7 @@
 # Unsupervised and Self-Supervised Learning
 
+See also: [[06_DL]]
+
 #bib #unsupervised #self-supervised #embedding #representation
 
 
@@ -9,6 +11,7 @@ Subtopics:
     * [[autoencoder]] - autoencoders
     * [[gan]] - Generative Adversarial Networks
 * noisy-student #todo
+* [[augmentation]] - data augmentation
 * [[boltzmann_machine]] - a famous older model
 
 Related concepts:

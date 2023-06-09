@@ -1,6 +1,7 @@
 # Power Point Presentations (PPT)
 
 Parent: [[01_Tools]]
+See also: [[dataviz]], [[tableau]]
 
 #lifehack
 

@@ -1,8 +1,10 @@
 # Curriculum learning
 
+Parents: [[06_DL]]
+Related: Kolmogorov compexity
+
 #curriculum
 
-Related: Kolmogorov compexity
 
 Papers:
 * [[Baker2019autocurricula]] - Hide-and-seek RL from OpenAI

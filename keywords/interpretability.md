@@ -3,7 +3,7 @@
 For now, a stub, to collect good info on interpretability.
 
 Parents: [[06_DL]]
-See also: [[fairness]]
+See also: [[fairness]], [[dataviz]]
 
 #interpretability #dim #datavis #bib
 

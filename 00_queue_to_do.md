@@ -26,6 +26,7 @@ Analyze this set of links:
 Main queue
 * demand forecasting - basics
 * what is pyspark?
+* What is Rust?
 * [[Airflow]] (the very basics for now - like, what is it?)
 * [[dbt]] - how exactly it fits into the system, and how do people actually use it in practice?
 * how do sql window functions work under the hood, compared to subqueries

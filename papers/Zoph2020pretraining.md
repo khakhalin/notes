@@ -5,6 +5,7 @@ https://arxiv.org/abs/2006.06882
 
 #self-supervised #image #transfer
 
+
 Basic terms:
 * **Pre-training**: train (or half-train) a model on one dataset, then train it on a different dataset. Example: **ImageNet** pre-trained networks (say, to about 85% of max performance).
 * **Self-training**: When we have more unlabeled data than labeled data, we can first train a model on labeled data, then use predictions of this first model to train a "secondary model" on full data. Aka **pseudo-labels**, or **noisy student** ([[Xie2020noisy_student]])
@@ -20,7 +21,7 @@ For testing they used:
 * COCO - object detection / segmentation dataset: that is, not about calling object, but about showing where they are, and maybe even drawing a margin around them (for the segmentation task)
 * 4 different degrees of **data augmentation**, from flip+crop+small scale jitter, and down to **RandAugment** with large-scale everything (see: [[Cubik2019randaugment]])
 
-## Findings
+# Findings
 
 **When labeled data is strongly augmented, pre-training hurts performance.** So we have an effect reversal: if data is (almost) not augmented, pre-training may help a lot. But if it is data is strongly augmented (that increases the overall performance of the final model!), pre-training actually hurts.
 
