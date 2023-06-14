@@ -1,5 +1,7 @@
 # Music to listen to
 
+See also: [[music]]
+
 #lifehack
 
 http://boilthefrog.playlistmachinery.com/

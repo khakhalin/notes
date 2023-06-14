@@ -3,9 +3,10 @@
 Parent: [[01_Tools]]
 See also: [[dataviz]], [[tableau]]
 
-#lifehack
+#lifehack #tools
 
 
 A collection of resources for good presentations.
 
-* Nice icons to add to presentations etc: https://www.flaticon.com/
+* https://www.flaticon.com/ - Nice icons to add to presentations etc
+* https://q.uiver.app/ - Make awesome "nodes connected by fancy arrows" diagrams

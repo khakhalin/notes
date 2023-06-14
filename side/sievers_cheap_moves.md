@@ -2,9 +2,10 @@
 
 https://twitter.com/beausievers/status/1218260165872406528
 
-#literacy #communication
+#literacy #communication #academia
 
-A nice tweet-thread about "unfair" questions in a discussion, analogous to cheap moves in board games, that almost feel like a form of bullying against new players, even though they  are would not pose that much of a problem to more experienced players.
+
+A nice tweet-thread about "unfair" questions in a discussion, analogous to cheap moves in board games, that almost feel like a form of bullying against new players, even though they would not pose that much of a problem to more experienced players.
 
 * (to a psychologist): "The measurement of people reduces them to a list of numbers, doing violence to the complexity of their experience and the depth of their being."
 * (to a neuroscientist): "It's unsurprising that this process is implemented in the brain, how could it be any other way? What does your work tell us about the purely psychological content of the process?"

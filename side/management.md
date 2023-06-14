@@ -4,17 +4,21 @@ See also: [[time_management]], [[finance]]
 
 #management #bib
 
+Sibtopics:
+* [[small_productive_groups]] - about some legendary examples of small productive research groups
 
-**Maxims**
+
+**Maxims** (qualities of a good manager):
 * Be long-term
 * Give credit
 * Don't reinvent the wheel
 * Promote before being asked for
-* Be consistent, predictable. Transparent decisions
+* Be consistent, predictable. Make decisions transparent
+* Unblock
 * Encourage collaboration, resolve conflict
 * Delegate. Listen to expertise & opinions
 * Don't pass pressure down
-* Notes, structured approaches, regular updates
+* Take note, use structured approaches, provide regular updates
 
 # General Refs
 

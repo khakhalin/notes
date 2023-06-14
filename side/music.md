@@ -1,8 +1,9 @@
 # Music
 
+This is about music as a topic. For music to listen to, see [[listen]]
+
 #behav #bib
 
-This is about music as a topic. For music to listen to, see [[listen]]
 
 Subtopics:
 * [[mus_scales]]

@@ -149,8 +149,9 @@ The most useful methods are called on series of Timestamps using a prefix (simil
 **DateOffset** is another curious class that I don't quite understand, but it is necessary in these cases:
 * To create a series of stamps: `pd.date_range(start, end, freq=pd.offsets.MonthBegin(1))`
 * To round to the first day of every month:
-    * `df.date.dt.floor('d') + pd.offsets.MonthEnd(n=0)-pd.offsets.MonthBegin(n=1)`. This is more complicated than just rounding to a month, as months are not a real unit (they have variable size), which somehow makes this fancy context-sensitive construction necessary.
-    * Alternatievly: `df.date.dt.replace(day=1)`
+    * `df.DATE.dt.floor('d') + pd.offsets.MonthEnd(n=0)-pd.offsets.MonthBegin(n=1)`. This is more complicated than just rounding to a month, as months are not a real unit (they have variable size), which somehow makes this fancy context-sensitive construction necessary.
+    * For one date one can do `my_date.replace(day=1)`, but it is not serialized (can only be serialized with `apply` or list comprehension)
+    * Another hacky solution : `df.DATE.dt.to_period('M').dt.to_timestamp()`
 
 To generate a range of dates: `pd.date_range(start, end, period, freq)` (for more parameters, see [manual](https://pandas.pydata.org/docs/reference/api/pandas.date_range.html)). Frequency may be either a simple code (like the default of `d`), or a fancy offset, such as `pd.offsets.MonthBegin(1)` for the first day of each month. Despite the name, generates proper full-blooded timestamps, and not just scrawny dates. Note also that `freq` is not the 3d default argument, so better to provide it as a named argument.
 
@@ -256,7 +257,9 @@ First group by a column, then apply aggregation. `dfs = df.groupby('g').agg({'a'
 * You can pass either one function, or a list of them. If a column from the original dataframe is summarized in several different ways, the output summary dataframe gets a _multiindex_. Accessing the index of this summary dataframe gives you tuples.
 * Some useful aggregation functions: sum, mean, min, max, count, var, std, sem, first, last, nth (?).
 * To calculate a **mode** of some variable, use this trick: `mode = lambda x: x.value_counts().index[0]`, then pass `mode` (the function, not a string) as an argument to `agg`.
-* To do a `cumsum` or `rank` that re-sets for every new group of rows, `groupby` by this grouping column, then use `cumsum` (or `rank`) as an aggregating function. This usage feels a bit weird, compared to other usages, as it doesn't change the size of the dataframe, so it cannot be easily combined with "normal" summary functions, such as `sum` or `count` (it doesn't produce an error, and those "normal" functions are still applied, but the results are placed somewhere seemingly arbitrary in the middle of the dataset, and it doesn't seem like a stable or transparent behavior)
+* To do a `cumsum` or `rank` that re-sets for every new group of rows, `groupby` by this grouping column, then use `cumsum` (or `rank`) as an aggregating function. 
+    * This usage feels a bit weird, compared to other usages, as it doesn't change the size of the dataframe, so it cannot be easily combined with "normal" summary functions, such as `sum` or `count` (it doesn't produce an error, and those "normal" functions are still applied, but the results are placed somewhere seemingly arbitrary in the middle of the dataset, and it doesn't seem like a stable or transparent behavior)
+    * Also it doesn't preserve indices, so it is not supposed to be merged back; it is supposed bo be put inside an `assign` clause, to be concatenated from the right based on dimensions, not indices.
 
 **Sorting** rows is done with `.sort_values(by='str')`, or a list of strings (column names). `ascending=True` by default. If using a list of keys, `ascending` can also be a list.
 

@@ -2,6 +2,7 @@
 
 #side #bib
 
+
 # Temp-dumps
 
 https://www.google.com/search?q=best+downtempo+albums
@@ -23,9 +24,6 @@ https://www.lyx.org/
 * Journals (ru): https://prozhito.org/notes?date=%221943-01-01%22&diaries=%5B1033%5D
 
 # Random
-
-Make awesome "nodes connected by fancy arrows" diagrams
-https://q.uiver.app/
 
 On properly teaching math (famous Russian essay)
 https://www.uni-muenster.de/Physik.TP/~munsteg/arnold.html

@@ -2,7 +2,11 @@
 
 https://twitter.com/david_perell/status/1221503770783354880
 
+Parents: [[management]]
+See also: [[darpa]]
+
 #management #lifehack
+
 
 Examples: 
 * Inklings

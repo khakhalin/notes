@@ -1,5 +1,8 @@
 # Tinbergen 4 "WHY"s
 
+Parent: [[behavior]]
+See also: [[dennets_creatures]]
+
 #behav #bio
 
 

@@ -1,10 +1,9 @@
 # Zettelkasten
 
-#lifehack #tools
+Parent: [[writing]] - on writing well
+See also: [[JohnMcPhee]] - on his writing system, which is not dissimilar to Zettelkasten
 
-Related:
-* [[JohnMcPhee]] - on his writing system, which is not dissimilar to Zettelkasten
-* [[writing]] - on writing well
+#lifehack #tools
 
 
 # How they work

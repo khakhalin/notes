@@ -8,7 +8,7 @@ See also: [[stats]], [[network_tools]], [[interpretability]]
 
 Tools:
 * [[tableau]] - Dashboards. Alternatives include "PowerBI" from Microsoft and "Apache Superset" (open-source tool)
-* [[ppt]] - powerpoint
+* [[ppt]] - Making presentations
 
 # Inspirational galleries (zoo)
 
