@@ -1,7 +1,7 @@
 # Pandas
 
 Parent: [[01_Tools]], [[python]]
-See also: [[numpy]], [[py_dates]], [[sklearn]]
+See also: [[numpy]], [[py_dates]], [[sklearn]], [[matplotlib]]
 
 #tools #python
 
@@ -16,14 +16,14 @@ See also: [[numpy]], [[py_dates]], [[sklearn]]
 
 # Addressing
 
-### Columns
+## Columns
 * Get column names: `df.columns`
 * Rename  only some columns: `df = df.rename({'a': 'X', 'b': 'Y'}, axis=1)`
 * Rename all columns, just overwrite `.columns` with a different vector
     * Or, if chaining, do this: `.set_axis(['X','Y'], axis=1, inplace=False)`
 * Delete some columns: `df = df.drop(['a','b'], axis=1)` or `df.drop(columns=['a'])`.
 
-### Indexing
+## Indexing
 * Select columns by label: `df.x` or `df['x']`. Returns a series. To cast into a numpy object, add `.values` at the end (just like that, without parentheses). In most cases, dot-notation and parentheses-notation are equivalent, but there are some special cases when only parenthesis-notation works:
     * If your column name is a reserved word, like `count`, `first` or `last`. If you have a column named "first", `d['first']` would work well, but `d.first` won't
     * If column name contains a space (only `df.['my dog']` would work)
@@ -47,7 +47,7 @@ To iterate through rows:
 Footnotes:
 * https://www.dataschool.io/pandas-dot-notation-vs-brackets/
 
-### Quering and filtering
+## Quering and filtering
 For conditional data retrieval we have a choice between: 
 
 * **logical indexing** `df.loc[d.x>0]` Can take list comprehensions as an argument (instead of a series); can be written to; but slower, and harder to read.
@@ -57,22 +57,23 @@ For conditional data retrieval we have a choice between:
 * To find `None`-like objects (or their absence), use `	.notnull()`, and its opposite `.isnull()`. At least for numerical columns, `isna()` and `notna()` also work, but not sure if they are exact synonyms (🔥). Note also that it's `np.isnan()` in Numpy, but `isna()` in Pandas.
     * `pd.isnull(x)` also works great if you extracted the value from Pandas. Unlike `np` that only supports numbers and NAs, this one also works with strings and dates.
     * Note that while **queries** support stuff like `'x>0 | x<100'`, they don't support these na-related functions for some reason, unless you call them with a  "fancy call". To filter out nans one has two options:
-        * A hack: `query('x == x')`. This works, because NAs aren't equal to themselves!!
-        * A proper fancy call:  `query(	'x.notna()', engine='python')`
-* Useful ways to search by string:
+        * Hacky but recommended solution: `query('x == x')`. This works, coz NAs aren't equal to themselves!!
+        * Fancy call:  `query('x.notna()', engine='python')`
+* To search a particualr string:
     * `df.col1.str.match('Smth')` if you want strings that start with 'Smth'. 
     * `df.col1.str.contains('sub')` if you want strings that contain a substring. Both only work for queries if you add an `engine='python'` flourish.
 
 To thin out a dataset, several options:
-* One: `df = df[df.x>0]`.
-* Another, `df = df.drop(df[df.x>0].index)`. This one seems bulkier, so not sure if it is ever preferred?
-* Use a query (see above). `df = df.query('x>0')`, potentially with a `.copy()` at the end, to immediately cast (copy) a view of a parent dataframe into a separate dataframe.
+* `df = df[df.x>0]` - classic Python, common.
+* `df = df.drop(df[df.x>0].index)` - looks bulky and weird, does anyone do it?
+* drop in-place (not sure if common)
+* `df = df.query('x>0')`- query, good for chaining. You could also add a `.copy()` at the end, to explicitly copy a view of a parent dataframe into a new dataframe, if you plan to keep changing it. In practice it seems to always copy the dataframe anyways, at the first irreversible change downstream from the query, but if you want to be safe, you can also do it explicitly.
 
 Conditional indexing supports functions, as long as they take and return Pandas series, or something compatible, like a Numpy array). For example, conditional forms (both local indexing and queries) support elementwise Boolean operators, like `&` and `|`.
 
-⚠️ There's a strange pitfall associated with conditional data retrieval that I doesn't understand for now. `query` seems to always create a view of a dataframe, which may look like a new dataframe with fewer rows, but that actualy acts as a copy, and not as a deepcopy. As a result, if you save the results in a "new" dataframe `df2 = df.query('x>0')`, and then change values in  `df2` in any way, it may case a warning "A value is trying to be set on a copy of a slice from a DataFrame". In this case df2 gets updated, and df seems still intact (unchanged), but there's this warning, and I'm not sure why. (Is it because they had to replace a view with a copy when you ran a command? So they want us to be more deliberate here?). Replacing a simple `query` with `df.query(...).copy()` turns a view into a legit new dataframe, and thus eliminates a warning.
+☢️ There's a strange pitfall associated with conditional data retrieval that I don't understand for now. `query` seems to always create a view of a dataframe, which may look like a new dataframe with fewer rows, but that actualy acts as a copy, and not as a deepcopy. As a result, if you save the results in a "new" dataframe `df2 = df.query('x>0')`, and then change values in  `df2` in any way, it may case a warning "A value is trying to be set on a copy of a slice from a DataFrame". In this case df2 gets updated, and df seems to remain intact (unchanged), but there's this warning, and I'm not sure why. (Is it because they had to replace a view with a copy when you ran a command? So they want us to be more deliberate here?). Replacing a simple `query` with `df.query(...).copy()` turns a view into a legit new dataframe, and thus eliminates a warning.
 
-### Chained Assignment problem
+## Chained Assignment problem
 
 "Chained assignment" is a name for a problem that you get when writing to a section of a dataframe, when selecting by both column and row. In essence, if you manage to selecte both of them at once, you're good. But if you do first one, then another, then you get a view of a view, and you can read, but not write. The situationis complicated by the fact that in some cases even chained assignment may actually work (with a warning), but for a different dataframe the same code may crash.
 
@@ -93,9 +94,9 @@ Useful methods:
 * `df.col.value_counts()` - outputs value-counts for a categorical variable.
 * `df.describe(include='all')` - outputs a derivative dataframe with min-max-mean-std-count etc. summary. Without this `include='all'` clause doesn't include categorical variables, but only numerical ones.
 
-# Data types
+# Specific Data types
 
-### Numbers and Boolean
+## Numerical
 * Cast to type: `.astype(int)`
 * Vectorized not: `~` operator. For example, `~np.array([True,False])` is "F, T".
 * Replace NaNs: `.fillna(0)` replaces all NaNs with zeroes. Can be run on a dataframe, or a series.
@@ -103,7 +104,7 @@ Useful methods:
 * Basic math with a series returns a series, so one can do `(df.a + 10).values` etc.
 * Rank: `df.groupby('col1')['col2'].rank(method='dense', ascending=False)` produces a rank-transformed series. Lots of cool methods of ranking: `average` (default), but also `min`, `max`, `dense`, `first`. Se [manual](https://pandas.pydata.org/docs/reference/api/pandas.Series.rank.html) for more.
 
-### Strings
+## Strings
 * Operations on existing strings:
     * cut first chars: `df['x'].str[1:]`
     * Methods on strings are collable: `df['x'].str.lower()`, but they only work on a series, not on a dataframe.
@@ -124,11 +125,7 @@ Footnotes:
 * https://stackoverflow.com/questions/766372/python-non-greedy-regexes
 * https://pandas.pydata.org/docs/reference/api/pandas.Series.str.extract.html
 
-### Json-like
-
-* `pd.json_normalize(df['col_name'])` - takes a single column of [[json]]-like recursive dicts; produces a dataframe with all possible columns (with `NaN` for missing values). The names of these new columns are point-joined property names (like in `user.name.suffix`)
-
-### Dates and times
+## Dates and times
 
 Documentation (a bit wordy): https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html
 
@@ -147,15 +144,24 @@ The most useful methods are called on series of Timestamps using a prefix (simil
 * Number of days from the smallest date: `(df.Date - df.Date.min()).dt.days`
 
 **DateOffset** is another curious class that I don't quite understand, but it is necessary in these cases:
-* To create a series of stamps: `pd.date_range(start, end, freq=pd.offsets.MonthBegin(1))`
 * To round to the first day of every month:
     * `df.DATE.dt.floor('d') + pd.offsets.MonthEnd(n=0)-pd.offsets.MonthBegin(n=1)`. This is more complicated than just rounding to a month, as months are not a real unit (they have variable size), which somehow makes this fancy context-sensitive construction necessary.
     * For one date one can do `my_date.replace(day=1)`, but it is not serialized (can only be serialized with `apply` or list comprehension)
     * Another hacky solution : `df.DATE.dt.to_period('M').dt.to_timestamp()`
 
-To generate a range of dates: `pd.date_range(start, end, period, freq)` (for more parameters, see [manual](https://pandas.pydata.org/docs/reference/api/pandas.date_range.html)). Frequency may be either a simple code (like the default of `d`), or a fancy offset, such as `pd.offsets.MonthBegin(1)` for the first day of each month. Despite the name, generates proper full-blooded timestamps, and not just scrawny dates. Note also that `freq` is not the 3d default argument, so better to provide it as a named argument.
+To generate a **range of date-times**: `pd.date_range(start, end, period, freq)` (for more parameters, see [manual](https://pandas.pydata.org/docs/reference/api/pandas.date_range.html)). 
+* Despite the name, generates proper full-blooded timestamps, and not just scrawny dates. Note also that `freq` is not the 3d default argument, so better to provide it as a named argument.
+* Default freq is 'd'
+* For the first day of each month, use offset: `pd.date_range(start, end, freq=pd.offsets.MonthBegin(1))`
+* If the goal is to upsample data, instead of creating a date_range, and then manually doing `.merge_asof`, try using:
+    * `df.asfreq(freq, method='ffill')` (for frontfill, or `bfill` for backfill)
+    * `df.resample()` - ? 🔥
 
-_A note on deprecation announced some time in 2022_: apparently, the only part that will be deprecated is the `pd.datetime` class - one needs to really import `datetime.datetime` (see [[py_dates]]). All other wrappers, like `pd.to_datetime()` for example will remain intact. (Refs: [1](https://gitlab.tudelft.nl/rhenning/ANTS-model/-/issues/28), [2](https://stackoverflow.com/questions/60856866/why-was-datetime-removed-from-pandas-1-0#:~:text=%22FutureWarning%3A%20The%20pandas.,Import%20from%20datetime%20module%20instead.%22))
+A note on deprecation for datetime functions (first announced some time in 2022): apparently, the only part that will be deprecated is the `pd.datetime` class - one needs to really import `datetime.datetime` (see [[py_dates]]). All other wrappers, like `pd.to_datetime()` for example are supposed to remain intact. (Refs: [1](https://gitlab.tudelft.nl/rhenning/ANTS-model/-/issues/28), [2](https://stackoverflow.com/questions/60856866/why-was-datetime-removed-from-pandas-1-0#:~:text=%22FutureWarning%3A%20The%20pandas.,Import%20from%20datetime%20module%20instead.%22))
+
+## Json-like
+
+* `pd.json_normalize(df['col_name'])` - takes a single column of [[json]]-like recursive dicts; produces a dataframe with all possible columns (with `NaN` for missing values). The names of these new columns are point-joined property names (like in `user.name.suffix`)
 
 # Data transformations
 

@@ -27,23 +27,43 @@ LIMIT 10
 
 ##  Bells and whistles
 
-* `DISTINCT` - return unique results only. Can go right after select: `SELECT DISTINCT`, or can be put inside count, like in `COUNT (DISTINCT col2)`.
-* `LIKE` - search for a pattern in text; goes inside the condition: `WHERE col LIKE 'a%'`. Supports wildcards: `%` for any number of characters (including none), `_` for a single character; `[ab]` for either a or b (as in regular expressions), `[^ab]` for any character except a and b (not on all systems). In general, wildcards seem to differ a bit across systems, so double-check.
+Clauses:
 * Depending on the version, SQL may use either `<>` or `!=` for 'not equal'. It seems that `!=` is preferred, but `<>` is older, and so is used as a legacy operator. At least in some versions, `!<` (not less than) and `!>` also exist. They seem to compare strings, in a case-sensitive manner. If a string is compared to a number, it seems there will be an attempt to convert them for comparison. It is also possible to cast a string to a different type, or to transform it (like with `LOWER`), including changing its encoding (see below). 🧿  Annoyingly, SQL uses `=` rather than `==`.
-* Precedence: arithmetic (including bitwise `~&|`) > comparisons > `NOT` > `AND` > `OR` and its friends (`LIKE`, `IN`, `BETWEEN`, `ALL`, `ANY`, `SOME`) > assignment.
+* `LIKE` -  goes inside WHERE conditions, to search for a pattern in text (similar to [[regex]]): 
+    * Use: `WHERE col LIKE 'a%'`. Supports wildcards: 
+    * `%` - any number of characters (including none)
+    * `_` -  single character
+    * `[ab]` -  single character that is either a or b (as in regular expressions)
+    * `[^ab]` - any single character except a and b (not on all systems).
+* `BETWEEN` - a really useful one for date: `where COL between '2023-01-01' and '2023-02-01'`
+* Precedence: arithmetic (including bitwise `~&|`) > comparisons > `NOT` > `AND` > `OR` and its friends (`LIKE`, `IN`, `BETWEEN`, `ALL`, `ANY`, `SOME`) > assignment. (For more info on ALL and ANY, see "Subqueries" below)
 * `IN` can use either a fixed list, or a subquery.
-* `AVG`, `MIN`, `MAX` - other functions for grouped queries, similar to SUM. They can also go in the SELECT block (to be returned, instead of conditioned), and combined with aliasing.
+
+Outputs:
+* `DISTINCT` - return unique results only. Can go right after select: `SELECT DISTINCT`, or can be put inside count, like in `COUNT (DISTINCT col2)`.
+* `AVG`, `MIN`, `MAX` - other functions for grouped queries, similar to SUM. They can also go in both SELECT and WHERE blocks, and are typically combined with aliasing.
 * `COALESCE (col1, col2, "default value")` - returns the first non-null element from this list. Is really useful for setting default values in `SELECT`
-* `CASE` - a whole case switch system for binning values on-the fly, and returning the bin name. Uses `WHEN`, `THEN`, and `ELSE` as keywords inside the CASE structure. Read the manual if needed.
+
+Other:
 * `HAVING` is used for clauses on aggregate functions, as it is performed after WHERE (and after grouping).
 * `ASC` is used with `ORDER BY` by default, and so can be omitted
 * 🧿  Some systems use `TOP 10` immediately after `SELECT` (SQL Server, MS Access) or `ROWNUM <= 10` inside `WHERE` (Oracle) instead of `LIMIT 10` (mySQL). Those that use TOP also support a codeword `TOP 10 PERCENT`.
-* `OFFSET 1` - a rather rare thing that goes in the same  part as `LIMIT`, and makes the query return not the rows that were found, but rows that are offset from this rows by this number.
+* `OFFSET 1` - a rather rare thing that goes in the same  part as `LIMIT`, and makes the query return not the rows that were found, but rows that are offset from this rows by this number. For most systems, see "Window functions" below.
 * `UNION`, `INTERSECT`, `EXCEPT` - Logical operations on selects. Usage: `SELECT * FROM table1 UNION SELECT * FROM table 2;`. The tables should match in terms of their columns, otherwise it'll break (use JOINs if the tables don't match perfectly). The first table that was called defines column names for the entire output. By default `UNION` only returns distinct rows, but use `UNION ALL` if duplicates are needed.
 
 ## Expression-columns
 
 There are lots of built-in functions; too many to list here, including math, trigonometry, string manipulation (like `LEFT`, `LEN`, `LOWER`, and so on), and what not. But in call cases you do something like `SELECT FUN(col1) AS new_col`.
+
+**Case switch** is another way to create new columns on-the-fly. Typically goes inside the `SELECT` section, in which case you write `AS` right after `END` to name the column, and it looks a bit agrammatical:
+```sql
+select COL1, COL2,
+    case
+        when COL3 > 0 then 'Positive'
+        when COL3 = 0 then 'Zero'
+        else 'Haha now this is strange'
+    end as COL3_AS_TEXT
+```
 
 Some non-trivial functions:
 * `LEAST` and `GREATEST` work across different columns within the same row, as opposed to MAX and MIN that compare rows within a column.

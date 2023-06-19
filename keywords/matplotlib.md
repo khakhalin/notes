@@ -21,9 +21,11 @@ Area plot:
   * Manual: `plt.fill_between(x, ylo, yhi, alpha=0.2)` for each band
   * Entire [[pandas]] dataframe in one go: `plt.stackplot(df.DATE, df.iloc[:, 1:].T)`. Note this `.T`; it doesn't work without it.
 
-To quickly visualize NaNs in a numpy array as an image: `plt.imshow(np.isnan(x).T, aspect='auto')`
+**Heatmaps**
+* To quickly visualize NaNs in a numpy array as an image: `plt.imshow(np.isnan(x).T, aspect='auto')`
   * For bw colors, add: `cmap='gray'`. to distinguish "all 1s" from "all 0s", add `vmin=0, vmax=1`
-  * To change x ticks, add this (as another param): `extent=[xmin, xmax, 0, x.shape[1]]`
+  * To change x limits, add this (as another param): `extent=[xmin, xmax, 0, x.shape[1]]`
+  * To change ticks: `plt.xticks(tick_positions, tick_labels)`
 
 # Colors and colormaps
 
