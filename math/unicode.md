@@ -9,9 +9,6 @@ Just a weird collection of Unicode characters and examples.
 
 * https://www.compart.com/en/unicode/ - search unicode by description, search unicode blocks
 * https://shapecatcher.com - draw a character to find similar symbols (includes kana, but not kanji)
-* Visual kanji search:
-    * https://kanji.sljfaq.org/ - a bit clunky, happens as you draw, links to wikipedia
-    * https://www.japandict.com/kanjidraw - more modern, need to commit, gives first 10 guesses with EN translation
 * https://emojipedia.org/nature/ - emojipedia
 * https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode
 * A script that writes your text in non-normal characters (Twitter-style, annoying): http://qaz.wtf/u/convert.cgi?text=Just+change+the+text%2C+then+copy+the+Unicode+and+paste+it

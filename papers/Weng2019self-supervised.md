@@ -5,6 +5,7 @@ https://lilianweng.github.io/lil-log/2019/11/10/self-supervised-learning.html
  
 #blog #self-supervised #bib
 
+
 Awesome informal review of the entire concept of self-supervized learning, with highlights from the field.
 
 **General idea:** Come up with a useless supervised task derived from data (use any part of data as a label, predict the label from the rest). By doing that, the model will have to learn rich representations. Then use intermediate level (representation) as an input to actual your actual model.

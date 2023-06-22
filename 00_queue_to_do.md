@@ -24,15 +24,15 @@ Analyze this set of links:
 * https://github.com/dipanjanS/BerkeleyX-CS190.1x-Scalable-Machine-Learning
 
 Main queue
-* demand forecasting - basics
-* what is pyspark?
-* What is Rust?
 * [[Airflow]] (the very basics for now - like, what is it?)
 * [[dbt]] - how exactly it fits into the system, and how do people actually use it in practice?
+* what is pyspark?
+* What is Rust?
 * how do sql window functions work under the hood, compared to subqueries
 * common table expressions (newer [[sql]])
-* Finish SQL quests: https://sqlzoo.net/wiki/SUM_and_COUNT
-* linear programming and mixed-integer programming - quickly review here
+* demand forecasting - basics
+* linear programming and mixed-integer programming - quickly review here. Like, if you have N factories, M stores, and costs associated - how do you optimize that? What if each store can only be sourced from one factory?
+* Finish SQL quests: https://sqlzoo.net/wiki/SUM_and_COUNT* 
 * move pandas stuff here (from the notes) 
 * how variational autoencoders work? (move to a separate zetterl from [[autoencoder]])
 * Speed up your python code: https://pythonspeed.com/datascience/

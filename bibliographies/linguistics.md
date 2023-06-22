@@ -1,10 +1,11 @@
 # Linguistics
 
-#language #bib #maps
-
 Related: [[10_Text]]
 
-Topics:
+#language #bib #maps
+
+
+Subtopics:
 * [[german]]
 * [[etymology]]
 
@@ -13,6 +14,15 @@ Essentially, everything about language (a bit broader than linguistics), but  mo
 # To-read
 
 * https://en.wikipedia.org/wiki/Winograd_schema_challenge
+
+# Japanese
+
+* https://app.kanjialive.com/ - nice tool to search Kanji, their structure, proper writing
+* https://unckel.de/kanjirepeater/ - simple online flashards to memorize Kanji
+
+Visual kanji search:
+* https://kanji.sljfaq.org/ - a bit clunky, happens as you draw, links to wikipedia
+* https://www.japandict.com/kanjidraw - more modern, need to commit, gives first 10 guesses with EN translation
 
 # Maps
 

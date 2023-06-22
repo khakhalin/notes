@@ -559,6 +559,8 @@ Discrete varioational autoencoders; sorted latent space (from more important to 
 
 # Exploration, curiosity, RL
 
+see also: [[robotics]]
+
 Yujin Tang, Duong Nguyen, David Ha (2020). Neuroevolution of Self-Interpretable Agents
 https://attentionagent.github.io/
 https://arxiv.org/abs/2003.08165
