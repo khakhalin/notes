@@ -120,10 +120,15 @@ There's support of **regular expressions** (see [[regex]]) in `str`, such as:
 * `.str.findall(r'...')` - only leave entries that match the pattern ??? 🔥
 * `extractall` ?? 🔥
 
+To get rid of umlauts and other special letters in a simple (but potentially dirty) way:
+`.str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode('utf-8')`
+To make it a bit more flexible, run `.replace(character_dict, regex=True)` with a custom dictionary first; then normalize the rest.
+
 Footnotes:
 * https://stackoverflow.com/questions/61822799/using-pandas-extract-regex-with-multiple-groups
 * https://stackoverflow.com/questions/766372/python-non-greedy-regexes
 * https://pandas.pydata.org/docs/reference/api/pandas.Series.str.extract.html
+* https://stackoverflow.com/questions/49891778/conversion-utf-to-ascii-in-python-with-pandas-dataframe
 
 ## Dates and times
 

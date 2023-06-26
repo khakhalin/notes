@@ -16,7 +16,7 @@ Tips, notes, and links for individual tools:
 * [[bash]], [[cron]] - Scripting / terminal
 * [[docker]], [[kubernetes]], [[flask]] - Containerization tools
 * [[tableau]], [[kibana]], shiny (?) - Reporting tools
-* [[javascript]], [[julia]] - other programming languages
+* [[javascript]], [[julia]], [[rust]] - other programming languages
 * [[latex]], [[slack]], [[graph_network_tools]], [[ppt]] - misc
 
 Running ML projects:
