@@ -27,3 +27,8 @@ Practical brain-inspired learning algorithms:
 
 Harnessing neuronal variability, and tuning non-synaptic neuronal properties:
 * Yin, B., Corradi, F., & Bohté, S. M. (2020, July). Effective and efficient computation with multiple-timescale spiking recurrent neural networks. In International Conference on Neuromorphic Systems 2020 (pp. 1-8). https://arxiv.org/pdf/2005.11633.pdf
+
+# Refs
+
+Neuromorphic initiative in Dresden:
+https://www.humanbrainproject.eu/en/follow-hbp/news/second-generation-spinnaker-neurorphic-supercomputer-to-be-built-at-tu-dresden/

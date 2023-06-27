@@ -1,6 +1,6 @@
 # RANSAC - Random Sample Consensus
 
-See also: [[02_Regression]]
+See also: [[02_Regression]], [[anomaly]]
 
 #stats #bootstrapping #nonparametric
 
@@ -14,7 +14,7 @@ Basic algorithm: iterate between two steps:
  
 The idea is that reasonable models will be oversampled, and so reasonable inliers will be classified as inliers more often. Or we can add them in a greedy way, one at a time, for each "sampled model". Once we have identified enough inliers (more than a certain threshold), and once a consensus model over all inliers fits these inliers well enough, the process is over: we have found a reasonable model.
 
-Conversely, RANSAC can also be used to detect outliers.
+Conversely, RANSAC can also be used to detect outliers (see [[anomaly]])
 
 The main disadvantage of RANSAC is that it doesn't guarantee a good solution, but is supposed to always improve, so there's no clear way to tell when it is done. There are some mathematical tricks to choose the number of points, based on the [[binomial]] distribution, but one needs an estimate for the ratio of outliers/inliers to use it:
 
@@ -24,7 +24,7 @@ RANSAC was introduced in early 1880s, and seems particularly popular with the im
 
 # Related
 
-It feels similar to Kendall-Theil, aka Theil-Sen estimator (non-parametric approach to linear regression), where you draw all possible lines through all possible pairs of points, and then find a median of them:
+It feels somewhat similar to Kendall-Theil, aka Theil-Sen estimator (non-parametric approach to linear regression), where you draw all possible lines through all possible pairs of points, and then find a median of them:
 https://en.wikipedia.org/wiki/Theil%E2%80%93Sen_estimator
 
 # Refs

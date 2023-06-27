@@ -69,9 +69,12 @@ To thin out a dataset, several options:
 * drop in-place (not sure if common)
 * `df = df.query('x>0')`- query, good for chaining. You could also add a `.copy()` at the end, to explicitly copy a view of a parent dataframe into a new dataframe, if you plan to keep changing it. In practice it seems to always copy the dataframe anyways, at the first irreversible change downstream from the query, but if you want to be safe, you can also do it explicitly.
 
+An alternative way to get the first row in every category, without `groupby('GROUP').agg({'VAL':'first'})`:
+* `df.sort_values(['GROUP', 'VAL']).drop_duplicates(['GROUP'])` (to kill duplicates of one column only). Not sure yet which method is faster (🔥?)
+
 Conditional indexing supports functions, as long as they take and return Pandas series, or something compatible, like a Numpy array). For example, conditional forms (both local indexing and queries) support elementwise Boolean operators, like `&` and `|`.
 
-☢️ There's a strange pitfall associated with conditional data retrieval that I don't understand for now. `query` seems to always create a view of a dataframe, which may look like a new dataframe with fewer rows, but that actualy acts as a copy, and not as a deepcopy. As a result, if you save the results in a "new" dataframe `df2 = df.query('x>0')`, and then change values in  `df2` in any way, it may case a warning "A value is trying to be set on a copy of a slice from a DataFrame". In this case df2 gets updated, and df seems to remain intact (unchanged), but there's this warning, and I'm not sure why. (Is it because they had to replace a view with a copy when you ran a command? So they want us to be more deliberate here?). Replacing a simple `query` with `df.query(...).copy()` turns a view into a legit new dataframe, and thus eliminates a warning.
+☢️ There's a strange pitfall associated with conditional data retrieval that I don't understand for now. `query` seems to always create a view of a dataframe, which may look like a new dataframe with fewer rows, but that actualy acts as a copy, and not as a deepcopy. As a result, if you save the results in a "new" dataframe `df2 = df.query('x>0')`, and then change values in  `df2` in any way, it may cause a warning "A value is trying to be set on a copy of a slice from a DataFrame". In this case df2 gets updated, and df seems to remain intact (unchanged), but there's this warning, and I'm not sure why. (Is it because they had to replace a view with a copy when you ran a command? So they want us to be more deliberate here?). Replacing a simple `query` with `df.query(...).copy()` turns a view into a legit new dataframe, and thus eliminates a warning.
 
 ## Chained Assignment problem
 
@@ -210,7 +213,7 @@ And as this expression produces a series, it can be used inside a chained `assig
 * https://jakevdp.github.io/PythonDataScienceHandbook/03.12-performance-eval-and-query.html
 * https://datatofish.com/integers-to-strings-dataframe/
 
-# Combining and Merging
+# Merging
 
 **Concatenation**: `df.concat(objs)` where objs is a list of dataframes. Parameters:
 * `axis`: default 0 (horizontal stacking), but may be something else
@@ -229,7 +232,6 @@ Appending one row: `df.loc[len(df), :] = [a, b, c]`
         ```
 
 Some comments on joining and merging:
-
 * We can also do `df_left2 = pd.merge(df_left, df_right, ...)`.
 * `how` is one of the following: `inner` (default), `outer`, `left`, `right`.
 * If `on` is left empty (None), merges on all columns that are found in both dataframes (unless joining on indexes is invoked)
@@ -240,6 +242,13 @@ Some comments on joining and merging:
 * Instead of merging on an arbitrary column, we can also merge on index, which is controlled with `left_index=True` argument (and similar for the right). _Is it faster?_
 * To join only some columns, join with an incomplete dataframe (make df_left not a full dataframe, but select the columns you need using standard `df[['x','y']]` notation).
 * To remove duplicates, do `.drop_duplicates()`
+
+An interesting trick to create a "Kronecker-multiplied" backbone of several factors, to get a row for every combination of "indices" (which is helpful for transforming a sparse representation into a dense one): merge on a dummy column.
+```python
+a = [1,2,3]
+b = ['a','b']
+pd.DataFrame({'A':a, '_':1}).merge(pd.DataFrame({'B':b, '_':1})).drop('_', axis=1)
+```
 
 For **merging multiple dataframes** at once, set indices properly, and then do `pd.concat()` with a list of dataframes, and `join=inner` (or something else) argument. See documentation for details. This looks neater, and may be faster than consecutive merges.
 

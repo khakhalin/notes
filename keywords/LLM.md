@@ -8,6 +8,10 @@ See also: [[transformers]]
 
 On the philosophy of LLMs, and their practical use.
 
+Subplotics:
+
+* [[Marcus2019gpt2]] - On the nature of intelligence (old, criticcal)
+
 # Prompt engineering
 
 A good prompt contains an instruction, additional info (context), input data, and an output indicator (to suppress unnecessary output). Labeling these sections as such typically helps the performance. 

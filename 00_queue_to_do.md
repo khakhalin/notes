@@ -27,10 +27,10 @@ Main queue
 * [[Airflow]] (the very basics for now - like, what is it?)
 * [[dbt]] - how exactly it fits into the system, and how do people actually use it in practice?
 * what is pyspark?
-* What is Rust?
 * how do sql window functions work under the hood, compared to subqueries
 * common table expressions (newer [[sql]])
 * demand forecasting - basics
+* heap-allocated memory
 * linear programming and mixed-integer programming - quickly review here. Like, if you have N factories, M stores, and costs associated - how do you optimize that? What if each store can only be sourced from one factory?
 * Finish SQL quests: https://sqlzoo.net/wiki/SUM_and_COUNT* 
 * move pandas stuff here (from the notes) 
