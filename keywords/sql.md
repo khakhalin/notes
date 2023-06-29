@@ -3,7 +3,7 @@
 Parents: [[01_Tools]]
 See also: [[database]]
 
-#tools
+#tools #db
 
 
 Dialect-specific pages:
@@ -81,6 +81,23 @@ Footnotes:
 * https://stackoverflow.com/questions/29549036/sql-select-the-minimum-value-from-multiple-columns-with-null-values
 * https://stackoverflow.com/questions/21313770/least-value-but-not-null-in-oracle-sql
 
+# Subqueries
+
+There are three type of subqueries:
+
+The most common one goes inside `WHERE`, to compare records of this table with some info from some other table:
+`select * from TABLE1 where COL in (select VAL from TABLE2 where ...)`.
+  * Some  useful keywords here include `ALL` and `ANY`, to use as conditions on subqueries. (Some systems use`SOME` instead of `ANY`). For example: `WHERE num > ANY (SELECT ...)`. (Although in this example specifically, you could as well just do `max()` on the subquery, and then compare once with this max value)
+  * `EXISTS`- to check whether a subquery returned anything: `WHERE EXISTS (SELECT ...)`.
+
+Another common use pattern is to do a 2-stages-select, by putting a subquery into `FROM`: 
+`SELECT * FROM (SELECT ...) AS table2`. In some dialects, this `AS` is required, as without it we will have ambiguity, as inner and outer tables have the same column names.
+* In systems without windows and `OFFSET` one can use this trick to find the 2nd largest element with it, for example.
+* It is also a must if you created a custom field (something like `SELECT lower(NAME) as lowly_name`) and now want to reference this new field in your `WHERE` clause. If you do it in the same clause, it won't work (will return an error), so you have to put the custom field calculation inside a sub-query, and then `SELECT *` from it.
+
+Finally, you can place a subquery into `SELECT`, treating it as a type of a very complicated formula: 
+`select COL1, select(...) as COL2 from ...`. Some systems only allow one query of this kind per entire SQL expression however, so maybe it's not the most common one.
+
 # Joins
 
 * `INNER JOIN` - only those records that exist in both tables. A simple `JOIN` without anything else, is an INNER JOIN by default.
@@ -90,27 +107,28 @@ Footnotes:
 * To imitate subtraction, do: `SELECT * FROM t1 LEFT JOIN t2 ON t1.key=t2.key WHERE t2.key is NULL;`. This way it will first try to LEFT JOIN, and maybe finds some matches, but for those rows of t1 that didn't get  a match in t2, it sets t2.key to NULL. And then we immediately filter these rows.
 * Self-joins are also possible, using syntax with aliasing: `SELECT a.name AS name1, b.name AS name2 FROM table1 AS a, table1 AS b WHERE a.manager=b.id;`. In this case we'll have a list of all managerial relations between people in an organization, all from one self-referencing table.
 
-Some logic of joining:
+Misc wisdom:
 * `ON` statement can technically contain any type of logic, including logical functions. So one can do something like `ON (t1.id=t2.id OR t2.name='cat')`
 * For inner and left joins, `ON` and `WHERE` are equivalent, and the order in which they are written is irrelevant. It's better to think of them as being performed after joining (even though optimizer will mostly likely choose to actually perform them before joining if it doesn't change the output)
 
-# Subqueries
+**Lateral Joints** (analogous to `merge_asof` in [[pandas]]):
+* 🔥 for now I couldn't make it work
 
-There are three type of subqueries:
-
-The most common one goes inside `WHERE`: `SELECT * FROM table1 WHERE id IN (SELECT ...);`.
-  * Some  useful keywords here include `ALL` and `ANY`, that are used as conditions on subqueries. (Some systems use`SOME` instead of `ANY`). For example: `WHERE num > ANY (SELECT ...)`. _It seems that it can be replaced with `MAX` or `MIN` under inner `SELECT`, no? If yest, then what's the benefit of using them? Isn't `SELECT MAX(num)` inherently easier to understand?_
-  * `EXISTS`- to check whether a subquery returned anything: `WHERE EXISTS (SELECT ...)`.
-
-`FROM` subquery: for example `SELECT * FROM (SELECT ...) AS table2`. In some dialects, this `AS` is required, as without it we will have ambiguity, as inner and outer tables have the same column names.
-* In systems without windows and `OFFSET` one can use this trick to find the 2nd largest element with it, for example.
-* It is also a must if you created a custom field (something like `SELECT lower(NAME) as lowly_name`) and now want to reference this new field in your `WHERE` clause. If you do it in the same clause, it won't work (will return an error), so you have to put the custom field calculation inside a sub-query, and then `SELECT *` from it.
-
-`SELECT` subquery: one can write `SELECT a, b, SELECT(...) as c FROM ...`. This one seems to be the most esoteric, and at least some systems don't allow more than one query of this kind per entire SQL expression.
-
-# Views
-
-`CREATE VIEW view_name AS SELECT * FROM table1 WHERE coll="whatever";`. Can also be updated by `CREATE OR REPLACE VIEW view_name`. After you are done with this virtual table, it can be dropped using `DROP VIEW view_name`.
+Alternatives to Lateral Joints:
+A common pattern for lateral joints is to take a timestamped tableA, and then for each row in this tableA, find the next row from a timestamped tableB. While also joining on some field or fields. For example, for each person, find consecutive pairs of events A and B. This can be imitated with window functions.
+* One roundabout way is to do two selects (from both tables), cast them into compatible table structures, mark data source for each of them with a constant column, union these two tables, sort by "merge columns" followed by a timestamp, use a `lead` window function to identify rows that go in a correct sequence (have matching "merge columns", and then data sources A and B followint each other), do `where` on this column to only keep matching pairs, use `lead` to manually "pivot" both sources into one row (pulling source B into new columns of rows coming from cource A), and finally ditch rows from source B (using another `where`).
+* A simpler solution is to inner join all later rows from tableB to tableA, then sort them, enumerate them, and only keep the 1st row from every list (this requares a subquery):
+```sql
+select * from (
+    select KEY_A, KEY_B, ta.PERSON as PERSON
+    rownumber() over (partition by KEY_A order by TIMESTAMP) as ROWNUM
+    from TABLE_A as ta
+    inner join TABLE_B as tb
+        on ta.PERSON = tb.PERSON
+        and tb.TIMESTAMP > ta.TIMESTAMP
+    )
+whre ROWNUM=1
+```
 
 # Writing and changing data
 
@@ -176,6 +194,12 @@ order by GROUP, COL -- without this, values will be correct, but not properly or
 
 Footnotes:
 * https://mode.com/sql-tutorial/sql-window-functions/
+
+# Views
+
+`CREATE VIEW view_name AS SELECT * FROM table1 WHERE coll="whatever";`. Can also be updated by `CREATE OR REPLACE VIEW view_name`. After you are done with this virtual table, it can be dropped using `DROP VIEW view_name`.
+
+For security-related views (policy views), see [[snowflake]]
 
 # Misc
 

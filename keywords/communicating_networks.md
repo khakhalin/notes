@@ -14,6 +14,9 @@ Honkela, T., & Winter, J. (2003). Simulating language learning in community of a
 
 Ryan Murdock, "Cooperative Communication Networks", 2020.
 https://rynmurdock.github.io/2020/02/05/CCN.html
+Somehow disappeared from the web, so here's a webarchive copy:
+https://web.archive.org/web/20210625055552/https://rynmurdock.github.io/2020/02/05/CCN.html
+
 
 Noah Trenaman, GlyphNet, 2020
 https://github.com/noahtren/GlyphNet

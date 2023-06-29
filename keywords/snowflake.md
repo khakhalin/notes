@@ -1,20 +1,20 @@
 # Snowflake
 
-Parents: [[01_Tools]], [[database]], [[sql]]
+Parents: [[database]], [[sql]]
 See also: [[postgres]]
-
-#db
-
 
 Some notes on the Snowflake dialect of [[sql]]
 
+#db #tools
+
+
 # Merging
 
-At least in Snowflake version of SQL, instead of explicitly writing `… left join TABLE2 on TABLE1.ID=TABLE2.ID` you can do` … left join TABLE2 using (ID)`. The `using` operator takes a list of columns that are used for a join. Parentheses are required (cannot be omitted, even if joining on one column only).
+At least in Snowflake version of SQL, instead of explicitly writing `… left join TABLE2 on TABLE1.ID=TABLE2.ID` you can write `... left join TABLE2 using (ID)`. The `using` operator takes a list of columns to use for a join. Parentheses are required (cannot be omitted, even if joining on one column only).
 
 # Views
 
-To create a secure view using a policy table:
+To create a secure view using a certain "policy table":
 ```sql
 create or replace secure view SCHEMA_NAME.VIEW_NAME
             row access policy POLICY_TABLE on (SECURITY_ID)

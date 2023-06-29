@@ -86,3 +86,6 @@ The paper describes the BTM algorithm in a bit more detail, provides some genera
 
 Negahban, S., Oh, S., & Shah, D. (2017). Rank centrality: Ranking from pairwise comparisons. Operations Research, 65(1), 266-287.
 https://devavrat.mit.edu/wp-content/uploads/2017/10/Rank-Centrality-Ranking-from-pair-wise-comparisons.pdf
+
+ELO everything: a global fight of all things imaginable:
+https://eloeverything.co

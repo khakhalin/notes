@@ -169,7 +169,7 @@ A note on deprecation for datetime functions (first announced some time in 2022)
 
 ## Json-like
 
-* `pd.json_normalize(df['col_name'])` - takes a single column of [[json]]-like recursive dicts; produces a dataframe with all possible columns (with `NaN` for missing values). The names of these new columns are point-joined property names (like in `user.name.suffix`)
+* `pd.json_normalize(df['col_name'])` - takes a single column of [[json]]-like dicts; produces a dataframe with all possible columns (with `None` for missing values). The names of these new columns are point-joined property names (like in `user.name.suffix`)
 
 # Data transformations
 
