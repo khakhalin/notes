@@ -111,8 +111,8 @@ Misc wisdom:
 * `ON` statement can technically contain any type of logic, including logical functions. So one can do something like `ON (t1.id=t2.id OR t2.name='cat')`
 * For inner and left joins, `ON` and `WHERE` are equivalent, and the order in which they are written is irrelevant. It's better to think of them as being performed after joining (even though optimizer will mostly likely choose to actually perform them before joining if it doesn't change the output)
 
-**Lateral Joints** (analogous to `merge_asof` in [[pandas]]):
-* 🔥 for now I couldn't make it work
+**Lateral Joins** (analogous to `merge_asof` in [[pandas]]):
+🔥 for now I couldn't make it work...
 
 Alternatives to Lateral Joints:
 A common pattern for lateral joints is to take a timestamped tableA, and then for each row in this tableA, find the next row from a timestamped tableB. While also joining on some field or fields. For example, for each person, find consecutive pairs of events A and B. This can be imitated with window functions.

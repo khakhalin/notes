@@ -21,6 +21,12 @@ General ideas for good interviewing:
 
 # Good practices
 
+Aline Lerner (2023) What do the best interviewers have in common? We looked at thousands of real interviews to find out. https://interviewing.io/blog/best-technical-interviews-common
+Analyzed feedbacks to thousands of real interviews (not practice ones) on their platform, and checked whether the candidates were willing to take a 2nd interview with a company after they passed the 1st one (corrected by candidate overall score!) The quality of a question mattered a lot (unlike the company name!).
+* Good questions don't look like puzzles (trivia), but like real-life tasks in miniature that can be explored (edge cases, layers of depth) and complicated as you go. Extra bonus if they have a real-life connection to the company. 
+* On the other extreme, trying to guess what the interviewer is even asking, questions with one narrow solution, and narrow domain-specific questions, all make for bad experiences.
+* Providing helpful hints, and generally simulating (creating) a collaborative collegial experience is even more important. The feelings of being judged or ignored however are bad.
+
 Erik Bernhardsson. How to hire smarter than the market: a toy model. 2020.
 https://erikbern.com/2020/01/13/how-to-hire-smarter-than-the-market-a-toy-model.html
 1. In any competitive pool, any 2 talents will anti-correlate, because of saturation of resources: because people develop either skill 1 or skill 2, and their time / resources are finate. For a given age, it's a zero-sum game.
@@ -28,12 +34,6 @@ https://erikbern.com/2020/01/13/how-to-hire-smarter-than-the-market-a-toy-model.
 3. In the extreme case of going for "most rounded candidates" we actually actively select subpar performance, just by the nature of our selection. 
 4. It means that the best strategy to win over a competitive market is to officially give up on some of the "virtues" in your candidates. It allows to get better candidates on all other dimensions. This approach is especially helpful if you think in terms of balanced teams, rather than individual candidates.  In a balanced "pokemon teams", people with extreme talents will support and enrich each other.
 See also (Wee 2014) below, for a similar argument in a context of ability testing.
-
-Aline Lerner (2023) What do the best interviewers have in common? We looked at thousands of real interviews to find out. https://interviewing.io/blog/best-technical-interviews-common
-Analyzed feedbacks to thousands of real interviews (not practice ones) on their platform, and checked whether the candidates were willing to take a 2nd interview with a company after they passed the 1st one (corrected by candidate overall score!) The quality of a question mattered a lot (unlike the company name!).
-* Good questions don't look like puzzles (trivia), but like real-life tasks in miniature that can be explored (edge cases, layers of depth) and complicated as you go. Extra bonus if they have a real-life connection to the company. 
-* On the other extreme, trying to guess what the interviewer is even asking, questions with one narrow solution, and narrow domain-specific questions, all make for bad experiences.
-* Providing helpful hints, and generally simulating (creating) a collaborative collegial experience is even more important. The feelings of being judged or ignored however are bad.
 
 # Bad practices
 
