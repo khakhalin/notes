@@ -17,3 +17,8 @@ One possible approach: get hold of some similarity or co-occurance measure; use 
 > Where does it come from? Does it really work? Is it like a "noisy student" approach? ([[Xie2020noisy_student]]) Is it a modern technique, an experimental one, or an older one?
 
 > Is it where [[autoencoder]]s can be helpful, for pre-training the embedding? Or is it not a thing now, and everything is trained as one giant network?
+
+# Refs
+
+A [[python]] package (Embetter) that aims to unite several popular (?) text and image embeddings in one interface.
+https://koaning.github.io/embetter/

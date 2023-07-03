@@ -1,12 +1,13 @@
 # Random forest
 
-#ensemble
-
 Parent: [[05_Ensembles]]
 Related: [[bagging]], [[boosting]]
 
+#ensemble
+
+
 The idea: construct many alterantive full trees, by 
-1) **data bagging** - generating partial data with subsetting, aka "sampling with replacement"), and also 
+1) **data bagging** - generating partial data with subsetting, aka "sampling with replacement"), but also 
 2) **feature bagging** - by only considering a random subset of features at every split (aka Random subspace method), to force a creation of many very ddifferent trees. Typically, we use √p features out of p total, or something like max(5, p/3) (according to Wikipedia). 
 
 This mixed approach is an improvement upon pure bagging, as it makes trees less correlated, and way more diverse. Trees are always built to maximal depth, which makes every individual tree quite overfit, but it's OK, as there are a lot of them. All trees have an equal weight in the final classification.

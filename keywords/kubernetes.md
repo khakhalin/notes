@@ -8,10 +8,6 @@ See also: [[docker]], [[flask]], [[microservice]], [[aws]], [[ci]]
 
 Kubertnetes is an open-source system (originally developed by Google) for coordinating [[docker]] containers on the cloud (something that is called **orchestration**). It operates **pods** that each contains several **containers**, that are placed together, within the same localhost. Pods can communicate with each other via pod IP. Kubernetes distributed containers across pods and also **nodes** (physical machines), allocates resources to them, automatically restart them if they fail, make sure that there's more than one instance of those containers that need to run in duplicate, and maintain load balancing across instances (see [[system_design]]).
 
-# Preparing for deployment
-
-.
-
 # Deploying
 
 🔥🔥🔥
@@ -58,8 +54,7 @@ First log in to [[aws]] (or whatever provider than you use).
 
 If a pod fails, you can try to summarize the reasons with `kubectl describe pods my_pod_name`
 
-ssh into pod:
-* `kubectl exec -it pod_name -- bash`
+**SSH into a pod:** `kubectl exec -it pod_name -- bash`
 
 One useful reason to ssh into the pod is to see the values of hidden secret encoded environmental variables if they are mentioned in the code as `os.environ['MY_TABLE']` constants. Which is typical, as you want to keep them as env variables so that you could run the same code in different environments (dev / int / prod), and for security reasons they may be obfuscated (aka "sealed-secrets"). So to learn them you should enter the pod, and then do this:
 ```python
@@ -68,9 +63,9 @@ import os
 for (k,v) in sorted(os.environ.items()): print(k,v);
 ```
 
-Restart pod: `kubectl delete pods pod_name_precise`. It deletes it indeed, but then kubernetes immediately restarts it. The name needs to be a precise one (?🔥 ) as you're killing an instance.
+**Restart pod**: `kubectl delete pods pod_name_precise`. It deletes it indeed, but then kubernetes immediately restarts it. The name needs to be a precise one (?🔥 ) as you're killing an instance.
 
-Turn off a pod: `kubectl scale deploy pod_name_generic --replicas=0`. This is a cool not-quite-destructive operation, as the pod stil remains deployed, it just no longer has any running instances. Which means that doing `kubectl scale depoly pod_name --replicas=2` can bring instances back (2 instances in this case). Scaling down from 2 to 1 or vice versa may also be helpful sometimes (during troubleshooting, de-[[gridlock]]ing etc.). Note also that keys can go in any order (useful when manually rescaling several pods at once). 🔥 _is there an even more automated command for scaling down all pods, or all pods by one, or something like that?_
+**Turn off a pod**: `kubectl scale deploy pod_name_generic --replicas=0`. This is a cool not-quite-destructive operation, as the pod stil remains deployed, it just no longer has any running instances. Which means that doing `kubectl scale depoly pod_name --replicas=2` can bring instances back (2 instances in this case). Scaling down from 2 to 1 or vice versa may also be helpful sometimes (during troubleshooting, de-[[gridlock]]ing etc.). Note also that keys can go in any order (useful when manually rescaling several pods at once). 🔥 _is there an even more automated command for scaling down all pods, or all pods by one, or something like that?_
 
 # Other tools
 
