@@ -10,5 +10,7 @@ Fast, concurrent, type-safe, memory-safe (tracks objects life-time at calculatio
 
 # Refs
 
+https://rust-book.cs.brown.edu/ - interactive introduction
+
 https://en.wikipedia.org/wiki/Rust_(programming_language)
 

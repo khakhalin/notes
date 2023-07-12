@@ -27,6 +27,14 @@ Area plot:
   * To change x limits, add this (as another param): `extent=[xmin, xmax, 0, x.shape[1]]`
   * To change ticks: `plt.xticks(tick_positions, tick_labels)`
 
+**Legend** - how to add it on the side (sadly, no single standard keyword for that):
+`plt.legend(labels=labels, loc='upper left', bbox_to_anchor=(1.04, 1.015), frameon=False)`
+The last one is to kill the border, which makes exact placement a bit easier. Unfortunately the two magic numbers have to more or less be used like that. Not sure also, how stable this solution is to main image rescaling.
+* Even after using a Pandas `df.plot()` one can edit some parts of the legend by running `plt.gca().legend(title='Title', framealpha=1)` etc.
+
+Footnotes:
+* https://stackoverflow.com/questions/4700614/how-to-put-the-legend-outside-the-plot
+
 # Colors and colormaps
 
 Some nice Tableau-like colors can be reached as named colors (strings) of form `tab:blue` etc. Not as aggressive as defaults. The other way to get some nice names is to use xkcd prefix, e.g. `'xkcd:sky blue'`.
@@ -65,7 +73,7 @@ To set extreme colors:
 * and similarly `.set_under()`
 * To set a color for NaN: `cmap.set_bad('red')`
 
-Colorbar bells and whistles: `plt.colorbar(shrink=0.6, extend='max')`. Here `shrink` allows to scale it; `extend` (very optional) adds a color marker to show the color for those points that fall off the scale. I don't find it too intuitive though, unless you know exactly what this extra triangle means.  It's also possible to `extend='min'` and `both`.
+**Colorbar** bells and whistles: `plt.colorbar(shrink=0.6, extend='max')`. Here `shrink` allows to scale it; `extend` (very optional) adds a color marker to show the color for those points that fall off the scale. I don't find it too intuitive though, unless you know exactly what this extra triangle means.  It's also possible to `extend='min'` and `both`.
 
 Footnotes:
 * https://matplotlib.org/stable/tutorials/colors/colorbar_only.html

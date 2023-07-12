@@ -167,6 +167,14 @@ To generate a **range of date-times**: `pd.date_range(start, end, period, freq)`
 
 A note on deprecation for datetime functions (first announced some time in 2022): apparently, the only part that will be deprecated is the `pd.datetime` class - one needs to really import `datetime.datetime` (see [[py_dates]]). All other wrappers, like `pd.to_datetime()` for example are supposed to remain intact. (Refs: [1](https://gitlab.tudelft.nl/rhenning/ANTS-model/-/issues/28), [2](https://stackoverflow.com/questions/60856866/why-was-datetime-removed-from-pandas-1-0#:~:text=%22FutureWarning%3A%20The%20pandas.,Import%20from%20datetime%20module%20instead.%22))
 
+## Categorical
+
+In some 
+* `Series.cat.codes` - 
+
+Footnotes:
+* https://stackoverflow.com/questions/51102205/how-to-know-the-labels-assigned-by-astypecategory-cat-codes
+
 ## Json-like
 
 * `pd.json_normalize(df['col_name'])` - takes a single column of [[json]]-like dicts; produces a dataframe with all possible columns (with `None` for missing values). The names of these new columns are point-joined property names (like in `user.name.suffix`)
@@ -206,6 +214,13 @@ The same `where` method can be used for a vectorized **ternary operation** on co
 `df.COL_ORIGINAL.where(df.CONDITION, df.COL_ALTERNATIVE)`. 
 And as this expression produces a series, it can be used inside a chained `assign` clause:
 `.assign(COL = lambda d: d.COL.where(<condition>, <alternative_values>)`.
+
+**Applying a function to every row**
+This is possible with running `apply` over rows; for example, this line normalizes all values for every row:
+`.apply(lambda d: d/d.sum(), axis=1)`
+The operation is however extremely slow (an explicit loop, not vectorized), so for every practical purpose it's better to stop chaining and perform a numpy operation on values, then chain further. In this example, doing this:
+`d.loc[:,:] = d.values / d.sum(axis=1).values[:, np.newaxis]`
+Alternatively, one can put this function into a function, and `pipe()` this function.
 
 **Refs:**
 * https://www.tutorialspoint.com/python_pandas/python_pandas_working_with_text_data.htm

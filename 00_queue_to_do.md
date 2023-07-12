@@ -24,9 +24,10 @@ Analyze this set of links:
 * https://github.com/dipanjanS/BerkeleyX-CS190.1x-Scalable-Machine-Learning
 
 Main queue
+* categorial values in Pandas, and LightGBM
+* what is pyspark?
 * [[Airflow]] (the very basics for now - like, what is it?)
 * [[dbt]] - how exactly it fits into the system, and how do people actually use it in practice?
-* what is pyspark?
 * how do sql window functions work under the hood, compared to subqueries
 * common table expressions (newer [[sql]])
 * demand forecasting - basics
@@ -50,6 +51,7 @@ Main queue
 * Is there a way to mount volumes on Kubernetes, to avoid rebuilding the container every time? Or work with layers and commit?
 * Security aspects (access to env variables, technical users)
 * How to make sealed secretes for k8s?
+* How do different SQL commands work under the hood? How does one optimize SQL?
 * automated testing on gitlab - read about it, figure about these stagings, continous integration
     * gitlab-ci - find a text
     * `.gitlab-ci.yml` and all the rules 
@@ -63,7 +65,7 @@ Main queue
     * python poetry
 * Manage environments (when developing packages): https://python-poetry.org/docs/managing-environments/
 * MLflow introduction: https://docs.databricks.com/mlflow/end-to-end-example.html
-* shap values for [[LightGBM]]
+* shap values, including an example of [[LightGBM]]
 * sudo - why called that way?
 * [[bash]] shebang lines (#!)
 * Optuna - what is it?
