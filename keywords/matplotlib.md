@@ -31,9 +31,10 @@ Area plot:
 `plt.legend(labels=labels, loc='upper left', bbox_to_anchor=(1.04, 1.015), frameon=False)`
 The last one is to kill the border, which makes exact placement a bit easier. Unfortunately the two magic numbers have to more or less be used like that. Not sure also, how stable this solution is to main image rescaling.
 * Even after using a Pandas `df.plot()` one can edit some parts of the legend by running `plt.gca().legend(title='Title', framealpha=1)` etc.
+* Footnotes:
+    * https://stackoverflow.com/questions/4700614/how-to-put-the-legend-outside-the-plot
 
-Footnotes:
-* https://stackoverflow.com/questions/4700614/how-to-put-the-legend-outside-the-plot
+Placing text on a plot: unfortunately there seems to be no serialized solution (in the core library), so we need to do this in a loop: `plt.annotate(text_string, (x, y))`, where x and y are single values.
 
 # Colors and colormaps
 

@@ -56,7 +56,11 @@ See: [[06_DL]]
 
 > There's this statement that for tabular data tree-based approaches typically outperform DL. Does it mean that in business setting, for relatively low-D tabular data, shallow approaches are preferable?
 
+## To-read
 
+* A Unifying Review of Deep and Shallow Anomaly Detection (Ruff 2021) https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9347460
+* Deep Learning for Anomaly Detection (a review): https://arxiv.org/pdf/2007.02500.pdf
+* Adversarially Learned Anomaly Detection https://arxiv.org/pdf/1812.02288.pdf 
 
 # References
 

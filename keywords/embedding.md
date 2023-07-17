@@ -1,13 +1,14 @@
 # Embedding layers
 
-#embedding #features
-
 Parents: [[08_Unsupervised]], [[04_Features]] (all dim reduction is there)
 
 See also:
 * [[word2vec]] - famous embedding of words from Google
 * [[triplet_loss]] - a type of negative sampling
 * [[graph_embedding]] - random walks, node2vec
+
+#embedding #features
+
 
 # Embedding layer
 

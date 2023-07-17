@@ -1,11 +1,15 @@
 # Variable selection and construction
 
 Parent: [[04_Features]]
-See also:
+See also: [[dim_reduction]]
 
 #features
 
- 
+
+Subtopics:
+* [[Guyon2003variable]] - a review on feature selection (and a bit on construction)
+
+
 Basic checklist for variable selection:
 
 1. Use domain knowledge
@@ -20,4 +24,4 @@ Basic checklist for variable selection:
 
 # Refs
 
-[[Guyon2003variable]] - review on feature selection (and a bit on construction)
+.

@@ -74,8 +74,8 @@ How to iterate properly:
 
 **Gotchas**
 * Objects (including empty lists `[]`) should never be used as **default arguments** for functions, as they are evaluated and instantiated only once per program (during object definition), not when methods are called! Instead use `x=None`, then `if x is None: x=[]`. It sounds cumbersome, but that's just how it is. ([ref](https://docs.python-guide.org/writing/gotchas/))
-* While it is possible to use `not a` instead of `len(a)==0` to check if an array is empty, as `[]` evaluates to False, this `if not a` is not a good idea for checking default parameters, even though `None` also evaluates to false. Because `0` also evaluates to false!! So always use `if a is None`.
 * Similarly `[{}]*3` will actually create 3 references to the SAME dict.  To create an array of empty dicts or arrays or something else, use a list comprehension.
+* Sometimes, to check if the input is empty (either `None` or `[]` ), people use `if not a` (it returns True in these cases). It's not very safe, becasue `not 0` and `not False` also return True, yet these values are certainly not empty. So better to use `if a is not None` explicitly, to compare with None, and `if len(a)==0` to check for `[]`.
 * As strings are immutable, slicing a string creates a copy, and thus is O(N) rather than O(1). [ref](https://www.byte-by-byte.com/strings/)
 * Crazy fact: a built-in `round()` (not the one from math / numpy) rounds both 1.5 and 2.5 to 2 (always **rounds edge cases towards even numbers**). Apparently that's to fight the bias of floating number representation ([ref](https://realpython.com/python-rounding/)).
 * In Python, logic operators (and, or) are **short-circuit**, which means that `(True or None.field)` will return True, even though on its own `None.field` is obviously a mistake (Nones don't have fields.)
