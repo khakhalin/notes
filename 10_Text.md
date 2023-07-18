@@ -2,9 +2,10 @@
 
 #text #bib
 
-## Methods and concepts
 
-Pre-ANN:
+# Methods and concepts
+
+Oldschool:
 * [[ngram]] - N-grams: low-level feature for text analysis, beyond single words. "Bags" of several (2-3) words.
 * [[tfidf]] - **Text Frequency - Inverse Document Frequency**. A basic approach to ranking documents by their relevance for a given keyword.
 * [[stupid_back_off]] - a simplistic Markovian approach to text generation
@@ -14,10 +15,11 @@ Word embeddings ([[embedding]]):
 * [[transE]] - abstract knowledge graphs (not necessarily on words)
 * [[debiasing]] - how to make word embeddings less biased
 
-Modern ANNs:
-* [[beam_search]] - a way to go beyond a level of suggesting one word at a time for text generation, by exploring a decision tree.
-* [[perplexity]] - main measure of language model quality, as well as a good practical objective function during training.
-* [[transformers]] - most popular architecture right now
+Modern DL:
+* [[LLM]] - Large language models
+* [[beam_search]] - beyond suggesting one word at a time, by exploring a decision tree.
+* [[perplexity]] - main measure (objective function) for language model quality
+* [[transformers]] - as of 2023, the most popular architecture for LLM
 
 # To read:
 

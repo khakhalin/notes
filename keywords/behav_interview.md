@@ -1,37 +1,39 @@
 # Behavioral Interview
 
 Parents: [[job_search]]
-See also: [[recruiting]]
+See also: [[recruiting]], [[system_interview]]
 
 #interview
 
 
-They are looking for signals, and mostly it’s  “no” signals (red flags) rather than  “yes” signals. For example, blaming others and being negative about things is a bad sign. Don’t try to fake it, as being fake (not genuine, shifty, fishy) is the worst possible sign there could be.
+General mindset:
+* It is the main event of the day for you, but not for them. It should be, but realistically, they just take a break between "regular meetings", and they have a deadline. So make it easy for them. Don't hope that they will look for a story in your assortment of facts; **give them a story** to relate to. And the story they want to hear is the one about being useful / generating business value (see below). Ultimately: is this person a net positive contributor?
+* From the fit / culture / psychology point of view, they are looking for signals, and mostly it is “no” signals (red flags) rather than “yes” signals. For example, blaming others and being negative about things is a bad sign.
+* When answering, **start with actions** (consulting companies famously like 3 actions), short and concise, and only then provide rationale, comments, and caveats, not the other way around. Try to give the "elevator speech version" in 2 minutes, then the comments in 3 more minutes (so 5 min total) It's hard, but it's a good goal to have (both in terms of giving a story, to show that you can communicate clearly, and to show that you are familiar with consulting schooling)
 
-Ultimately: is this person a net positive contributor?
+For Data and ML specifically, start with driving business impact, then follow with tech knowledge and problem-solving skills, not the other way around. If they end up steoryping you (hopefully not, but if it happens), you want to be stereotyped as a business person, not as a nerd who is obsessed with technical toys (ML, AI, other tools). Even if you like to solve hard puzzles and turn these solutions into business success, still reverse the order: say that you are here to be impactful, to solve business problems, but by the way you are not afraid of technical challenge, and of learning new things. You are unstoppable. Start with the problems you'll solve, not with the internal experience of how would you feel while doing it (they are not you, they can't extrapolate from it).
 
-In tech companies, typically not the HR, but a high-level manager.
+A schema for a good answer:
+* Informal: The world was sad (describe the problem), I stepped in (actions), now it is good (improvements)
+* Formal names for that: 
+    * **STAR: Situation → Task → Action → Result**. Describe the Context / Challenge, then what was done, then what was the result of it. Probably followed with long-term lessons learned.
+    * **CAR: Challenge → Action → Result**
+* Another approach: Goal > Solution > Impact > Lessons. The good side of adding "Lessons" is that it also covers "Failure" cases (e.g. for famous questions about descriving a project that failed)
 
-**Schema:**
-* **STAR: Situation → Task → Action → Result**. A general paradigm for answering behavioral questions. Describe the Context / Challenge, then what was done, then what was the result of it. Probably followed with long-term lessons learned.
-* or **CAR: Challenge → Action → Result**
-* or Goal > Solution > Impact > Lessons
-
-**Typical questions:**
+Typical questions:
 * A conflict (disagreement, sticky situation) you had
-    * either any conflict, or narrowed down: with a colleague, boss, direct report, client
+    * May be either about any conflict, or narrowed down to a conflict with a colleague, boss, direct report, client
 * Stressful situation / work under pressure, and how you handled it
 * A mistake you made, a goal you did not meet
-* A goal you met, a success, going above and beyond 
+* A goal you met, a particular success, going above and beyond 
 
-**General advice**
+Other nuggets of advice:
+* Write down key stories in advance. Practicce. Set up the situation fast. Elevator speech. No tangents. Only essential details. Action and result centered, anchored in decisions and actions. Give them the story in 3 sentences
 * Know your own CV, including the language, as they are likely to refer to your experience using the language you used.
-* Practice / write down key stories in advance. Set up the situation fast. Elevator speech. No tangents. Only essential details. Action and result centered, anchored in decisions and actions.
-* For each project, identify 1-2 key achievements, and very high-level overview of the technical side of it, but be ready to dive down if needed.
-* This also tests your communication skill: ability to be clear, on point, deal with emotions etc.
+* For each project, identify 1-2 key achievements, and very high-level overview of the technical side of it, but be ready to dive down if needed. This also tests your communication skill: ability to be clear, on point, deal with emotions etc.
 * Know why you made each of your career transitions. Why you quit, why you joined.
-* General mindset should be that past failures made you better.
-* Mentioning intercultural fluency and awareness is a plus.
+* Past failures made you better (think about it in advance, and learn to explain that)
+* Intercultural fluency and awareness is a plus.
 * Leave space for follow-up questions; maybe even invite them to some degree.
 
 # Refs

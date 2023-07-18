@@ -1,13 +1,13 @@
 # Systems interviews
 
+Parents: [[job_search]], [[system_design]]
+See also: [[behav_interview]], [[ml_questions]]
+
 #interview #lifehack
 
-See also:
-* [[job_search]] - general info on interviewing
-* [[system_design]] - parental article
 
-**Key principles:**
-* No single good answer, but some answeres are objectively bad.
+Key principles:
+* There's no single good answer, but some answeres are objectively bad.
 * Ability to take a poorly (vaguely) defined problem, make sense of it, define and describe it, and then break it apart into a set of doable, actionable tasks (modules, items). Identify constraints, and satisfy them. And also explain it. Try to be organized and clear.
 * Most information is not available originally, and should be requested, remembered, calculated, or guesstimated (which is fine, as IRL you'll look it up).
 * Numbers are important in this context, as in some cases they define what is a constraint, and what isn't. Back-of-envelope calculations.
@@ -16,7 +16,15 @@ See also:
 
 Some people say that you shouldn't really ask what are the defining features, and how much the system should scale, but sorta make hypotheses about that, state them very clearly, and overall use it as another dimension to the problem, to look around it (if this is important, then we can do this; if that other thing is important, then we can do that). Others say - ask questions, make sure you get from the interviewer what features are important and which ones aren't.
 
-Typicall, with real white boards, they always expect you to draw block diagrams.
+Typically, with real white boards, they always expect you to draw block diagrams.
+
+# For data specifically
+
+As of 2023, "starting small" (building a start-up, or responding to a question about a hypothetical startup) probably includes [[postgres]], [[docker]] on [[kubernetes]], and [[airflow]] to run ETL jobs. Probably [[aws]] as the cloud provider.
+
+As you grow (or "grow" within the fantasy universe of an interview), you can mention [[dbt]]
+
+Always remember that data / systems interviews also have a [[behav_interview]] aspect to them: show that you are thinking practically, from the busines pov, using tools as means to an end, not as a goal in itself.
 
 # Questions to address
 

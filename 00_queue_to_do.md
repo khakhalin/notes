@@ -67,6 +67,7 @@ Main queue
 * shap values, including an example of [[LightGBM]]
 * sudo - why called that way?
 * [[bash]] shebang lines (#!)
+* "Prophet" from Facebook - allegedly the modern replacement for [[arima]] ([[time-series]])
 * Optuna - what is it?
 * brew
 * SQLAlchemy - basic idea of where it stands, in terms of abstraction

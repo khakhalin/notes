@@ -1,26 +1,35 @@
 # ML / Data Science interview
 
+Parent: [[job_search]]
+See also: [[system_interview]], [[behav_interview]]
+
 #lifehack #interview
 
-Other collections of questions:
-* https://www.stratascratch.com/
 
-## List of questions
+# Case study
 
-1. Know what a p-value is and its limitations in decisions.
-2. Linear regression and its assumptions.
-3. When to use different statistical distributions.
-4. How an effect size impacts results/decisions.
-5. Mean, variance for Normal, Uniform, Poisson.
-6. Sampling techniques and common designs (e.g. A/B).
-7. Bayes' theorem (applied calculations).
-8. Common conjugate priors (Bayesian stats).
-9. Logistic regression and ROC curves.
-10. Resampling (Cross validation + bootstrapping).
-11. Dimensionality reduction.
-12. Tree-based models (particularly how to prune)
-13. Ridge and Lasso for regression.
+When describing a possible ML solution for a case study, think of unasked questions: interpretability, ease of troubleshooting, productionalizing. Once done with basic math task, pivot to these (or mention them as you go). At which point what starts as a data/ml question essentially pivots into a [[system_interview]]
 
+# Trivia questions
+
+Note: I'm not saying that these questions are good. In fact, judging from what we know - see [[recruiting]] - going with lists of questions for an interview may not be the best idea. But people use them, and also it's nice to have a starting point if you are developing your own "low-bar" question for data interviews, which is why this collection is here.
+
+Explain this topic:
+1. p-value,  its limitations in decisions
+2. Linear regression and its assumptions
+3. When to use different statistical distributions
+4. How an effect size impacts results/decisions
+5. Mean, variance for Normal, Uniform, Poisson
+6. Sampling techniques and common designs (e.g. A/B)
+7. Bayes' theorem (applied calculations)
+8. Common conjugate priors (Bayesian stats)
+9. Logistic regression and ROC curves
+10. Resampling (Cross validation + bootstrapping)
+11. Dimensionality reduction
+12. Tree-based models (particularly how to prune
+13. Ridge and Lasso for regression
+
+Other questions:
 * What is supervised machine learning? 
 * What is regression? Which models can you use to solve a regression problem? 
 * What is linear regression? When do we use it? 
@@ -91,7 +100,6 @@ Other collections of questions:
 * Is it easy to parallelize training of random forest? How can we do it? 
 * What are the potential problems with many large trees?
 * What if instead of finding the best split, we randomly select a few splits and just select the best from them. Will it work?
-
 * How will you implement dropout during forward and backward pass?
 * What do you do if Neural network training loss/testing loss stays constant?
 * Why do RNNs have a tendency to suffer from exploding/vanishing gradient? How to prevent this? (Talk about LSTM cell which helps the gradient from vanishing, but make sure you know why it does so. Talk about gradient clipping, and discuss whether to clip the gradient element wise, or clip the norm of the gradient.)
@@ -188,8 +196,6 @@ Other collections of questions:
 * What is the disadvantage of unsupervised pretraining compared to other forms of unsupervised learning?
 * How do you control the regularizing effect of unsupervised pretraining?
 * How to select the hyperparameters of each stage of GLUP?
-* What are deterministic algorithms? (nothing random)
-* What are Las vegas algorithms? (exact or no solution, random resources)
 * What are deterministic approximate algorithms? (solution is not exact but the error is known)
 * What are Monte Carlo algorithms? (approximate solution with random error)
 * Discuss state-of-the-art attack and defense techniques for adversarial models.
@@ -256,11 +262,8 @@ Other collections of questions:
 * How does Bayesian methods do automatic feature selection?
 * What do you mean by Bayesian regularization?
 * When will you use Bayesian methods instead of Frequentist methods? (Small dataset, large feature set)
-* Regularization
-* What is L1 regularization?
-* What is L2 regularization?
 * Compare L1 and L2 regularization.
-* Why does L1 regularization result in sparse models? here
+    * Why does L1 regularization result in sparse models?
 * Evaluation of Machine Learning systems
 * What are accuracy, sensitivity, specificity, ROC?
 * What are precision and recall?
@@ -277,7 +280,7 @@ Other collections of questions:
 * What is the difference between logistic regression and PCA?
 * What are the two pre-processing steps that should be applied before doing PCA?
 * What is WORD2VEC?
-* What is t-SNE? Why do we use PCA instead of t-SNE?
+* What is t-SNE? Compare and contrast with PCA. When to use either?
 * What is sampled softmax?
 * Why is it difficult to train a RNN with SGD?
 * How do you tackle the problem of exploding gradients? (By gradient clipping)
@@ -288,7 +291,7 @@ Other collections of questions:
 * How to automatically caption an image?
 * What is the difference between loss function, cost function and objective function?
 
-## Math
+# Math questions
 * What is broadcasting in connection to Linear Algebra?
 * What are scalars, vectors, matrices, and tensors?
 * What is Hadamard product of two matrices?
@@ -417,8 +420,11 @@ Other collections of questions:
 * What are recommender systems?
 * What is the difference between regression and classification of ML techniques?
 
-# Sources
+# Sources and References
 
 * https://twitter.com/Al_Grigor via [this summary](https://www.reddit.com/r/datascience/comments/f7cdwg/data_science_and_machine_learning_interview/)
 * https://github.com/Sroy20/machine-learning-interview-questions
 * https://www.linkedin.com/posts/eric-weber-060397b7_data-datascience-statistics-activity-6690747775702888448-9Pnq/
+
+Another collection (not integrated here):
+* https://www.stratascratch.com/

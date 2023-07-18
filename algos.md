@@ -1,18 +1,20 @@
 # Algorithms - General
+
 #algo #bib
+
 
 Subtopics:
 * [[algos_graph]] - everything graphs
 * [[algos_trees]] - everything trees (more data structures / search, rather than than graphs)
-* [[sorting]] algorithms
+* [[sorting]] - sorting algorithms
 * [[np-complete]] - P, NP, and NP-complete
 * [[generative]] - generative algorithms
 
-Popular data structures:
+Key data structures:
 * [[hash]] - hashmaps, hashtables, and hashing functions
 * [[priority_queue]] - priority queue; heap; heap sort
 
-Misc curious algorithms (also see below for some short ones)
+Misc curious algorithms (also see below for some short ones that didn't get a separate note)
 * [[gcd]] - greatest common denominator, aka "Euclidean algorithm"
 * [[nimbers]] - on effectively solving stone games
 * [[lis]] - longest Increasing Subsequence
@@ -22,6 +24,7 @@ Todo: #todo
 * https://en.wikipedia.org/wiki/Maximum_subarray_problem
 
 # Big O notation
+
 Limiting behavior at ∞. Different meaning in textbooks and in practical questions. In textbooks: upper bound, so if something is O(N), it is also O(N²) by definition (as N²>N). In practice, during interviews just say the truth (the closest approximation, aka lowest possible upper bound). 
 
 * O(log N) appears when you have a tree, and a typical engagement with this tree is processing a branch of it. Then the total number of steps = the depth of the tree = $\log_2 n$ . 
