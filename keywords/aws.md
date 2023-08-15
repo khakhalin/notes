@@ -5,15 +5,22 @@ See also: [[databricks]], [[snowflake]]
 
 #devops
 
+
 Subtopics:
 * [[postgres]] - technically, not uniquely related to AWS, but in practice often used on AWS Redshift RDS
 * [[kubernetes]] - what we usually do on AWS
 
 # AWS session
 
-If you use okta verification, a typical command to start an AWS session from a command line is to run `aws-okta select name-of-your-aws-cluster` (where `aws-okta` is an actual name of an actual tool). After that you can, for example, run [[kubernetes]] commands on this cluster. Note that unlike for [[docker]], you are not "transported" to some virtual environment; you are still you your original machine.
+Logging in:
+* Using okta verification: `aws-okta select master-$DOMAIN-$ENV-$ROLE` 
+* Using Boost: `boost auth --domain $DOMAIN --stage $ENV --role $ROLE`
 
-Not sure how to "officially" close a session (tried to google; failed).
+Here `$ENV` is probably `prod` etc.
+
+Note that unlike for [[docker]], you are not "transported" to a different virtual environment; you are still you your original machine, but running [[kubernetes]] commands for a different machine.
+
+Not sure how to "officially" close a session.
 
 
 # Maintenance of PostgreSQL RDS
