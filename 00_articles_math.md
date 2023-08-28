@@ -5,7 +5,6 @@
 #halfthere - a tag to be used for papers that have their separate entries, but that I haven't actually finished reading, or haven't read well. Papers to revisit!
 
 Other thematic to-read lists:
-* [[00_articles_geo]] - Everything [[gis]]-related
 * [[11_RL]] - Reinforcement Learning
 * [[09_Graphs]] - Graph (aka Graphical) networks
 * [[complexity]] - complexity science
@@ -31,7 +30,7 @@ Fun:
 Rekdal, O. B. (2014). Academic urban legends. Social Studies of Science, 44(4), 638-654.
 https://journals.sagepub.com/doi/full/10.1177/0306312714535679
 
-# Intros and top choices
+# Top choices
 
 Software 2.0
 https://medium.com/@karpathy/software-2-0-a64152b37c35

@@ -15,7 +15,7 @@ Tips, notes, and links for individual tools:
 * [[git]] - Version control
 * [[bash]], [[cron]] - Scripting / terminal
 * [[docker]], [[kubernetes]], [[flask]] - Containerization tools
-* [[tableau]], [[kibana]], shiny (?) - Reporting tools
+* [[tableau]], [[kibana]] - Reporting tools
 * [[javascript]], [[julia]], [[rust]] - other programming languages
 * [[latex]], [[slack]], [[graph_network_tools]], [[ppt]] - misc
 

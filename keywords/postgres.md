@@ -146,3 +146,5 @@ Footnotes:
 
 Postgres mainetnance cheatsheet (useful commands):
 https://gist.github.com/rgreenjr/3637525
+
+A table of all command-command conflicts that cause a lock on postgres: https://pglocks.org

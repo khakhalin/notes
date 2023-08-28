@@ -23,10 +23,11 @@ Analyze this set of links:
 * https://github.com/dipanjanS/BerkeleyX-CS190.1x-Scalable-Machine-Learning
 
 Main queue
-* categorial values in Pandas, and LightGBM
-* what is pyspark?
 * [[Airflow]] (the very basics for now - like, what is it?)
 * [[dbt]] - how exactly it fits into the system, and how do people actually use it in practice?
+* sentry - read basics
+* categorial values in Pandas, and LightGBM
+* what is pyspark?
 * how do sql window functions work under the hood, compared to subqueries
 * common table expressions (newer [[sql]])
 * demand forecasting - basics
@@ -79,6 +80,7 @@ Main queue
 * Tabular functions in Snowflake: https://docs.snowflake.com/en/developer-guide/udf/sql/udf-sql-tabular-functions.html
 * https://medium.com/javarevisited/5-different-git-workflows-50f75d8783a7
 * vector similarity on redis: https://redis.io/docs/stack/search/reference/vectors/
+* popular vector similarity library: pgvector
 * "fact and dimension tables in third normal form" - what does it mean exactly? dim vs fact - define?
 * curl - how to use exactly (document in [[bash]])
 * https://github.com/jlevy/the-art-of-command-line

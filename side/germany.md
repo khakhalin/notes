@@ -2,7 +2,7 @@
 
 #side #maps #geo
 
-See also: [[maps]]
+See also: [[maps]], [[czechia]]
 
 
 A database of all German cities by population - does it work, and can it be downloaded?

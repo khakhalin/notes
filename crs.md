@@ -1,6 +1,7 @@
 # CRS = Coordinate Reference Systems
 
-Home: [[gis]]
+Parent: [[gis]]
+See also: [[shapely]], [[maps]]
 
 #gis
 

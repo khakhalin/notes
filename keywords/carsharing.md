@@ -1,7 +1,7 @@
 # Carsharing
 
 Parents: [[mobility]]
-See also: [[gis]], [[00_articles_geo]]
+See also: [[gis]]
 
 #mobility #bib
 
