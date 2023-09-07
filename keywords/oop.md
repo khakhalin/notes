@@ -1,13 +1,15 @@
 # Object-Oriented Programming
 
-#oop
-
 Parent: [[01_Tools]]
 Related:  [[python]], [[dictionary]]
 
 Subtopics:
 * [[design_pattern]] - best practices
+* [[solid]] - core principles
 * [[unit_test]] - testing-driven development
+
+#oop
+
 
 # General terminology of OOP
 

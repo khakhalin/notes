@@ -96,7 +96,7 @@ Another common use pattern is to do a 2-stages-select, by putting a subquery int
 * It is also a must if you created a custom field (something like `SELECT lower(NAME) as lowly_name`) and now want to reference this new field in your `WHERE` clause. If you do it in the same clause, it won't work (will return an error), so you have to put the custom field calculation inside a sub-query, and then `SELECT *` from it.
 
 Finally, you can place a subquery into `SELECT`, treating it as a type of a very complicated formula: 
-`select COL1, select(...) as COL2 from ...`. Some systems only allow one query of this kind per entire SQL expression however, so maybe it's not the most common one.
+`select COL1, select(...) as COL2 from ...`. Some systems only allow one query of this kind per entire SQL expression however, so maybe it's not the most common one. Also, afaik, this type of a subquery is expected to be extremely slow, as it's literally an optimizable loop.
 
 # Joins
 

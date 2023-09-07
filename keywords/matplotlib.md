@@ -6,18 +6,15 @@ See also: [[numpy]], [[pandas]]
 #tools #python
 
 
-# Misc tricks
+# Tips and tricks
 
-* log scale axis: `plt.xscale('log')`
-* To make subplots look pretty, always run `plt.tight_layout()` in the very end
-
-Hiding stuff:
+**Hiding stuff**
 * Remove top and right border, ggplot-style: `plt.gca().spines[['right', 'top']].set_visible(False)`
 * Remove tick labels: `ax.set_yticklabels([])`
 * Remove ticks: `plt.xticks([])`
 * Remove entire axis instead: `plt.gca().get_xaxis().set_visible(False)`
 
-Area plot: 
+**Area plot** 
   * Manual: `plt.fill_between(x, ylo, yhi, alpha=0.2)` for each band
   * Entire [[pandas]] dataframe in one go: `plt.stackplot(df.DATE, df.iloc[:, 1:].T)`. Note this `.T`; it doesn't work without it.
 
@@ -31,10 +28,19 @@ Area plot:
 `plt.legend(labels=labels, loc='upper left', bbox_to_anchor=(1.04, 1.015), frameon=False)`
 The last one is to kill the border, which makes exact placement a bit easier. Unfortunately the two magic numbers have to more or less be used like that. Not sure also, how stable this solution is to main image rescaling.
 * Even after using a Pandas `df.plot()` one can edit some parts of the legend by running `plt.gca().legend(title='Title', framealpha=1)` etc.
-* Footnotes:
-    * https://stackoverflow.com/questions/4700614/how-to-put-the-legend-outside-the-plot
 
 Placing text on a plot: unfortunately there seems to be no serialized solution (in the core library), so we need to do this in a loop: `plt.annotate(text_string, (x, y))`, where x and y are single values.
+
+**Misc**
+* log scale axis: `plt.xscale('log')`
+* To make subplots look pretty, always run `plt.tight_layout()` in the very end
+* A cheap fast way to make a `.-` plot style look nice is to make `linewidth` ridiculously small (say, 0.3)
+* `plt.grid(alpha=0.1)` tends to look nice (barely visible)
+* Letters as markers: use some [[latex]] `markers = ["$\mathbf{"+s[0]+"}$" for s in view.columns[1:]]`, then plot in a loop, doing `marker=markers[i]` for every series.
+* To save figure without cutting the legend off: `plt.savefig("filename.png", bbox_inches="tight")`
+
+Footnotes:
+* https://stackoverflow.com/questions/4700614/how-to-put-the-legend-outside-the-plot
 
 # Colors and colormaps
 
@@ -84,7 +90,7 @@ Footnotes:
 
 # Dates
 
-A pretty minimalistic formatter for dates that only shows years when they change (basically, the smallest amount of labeling that still unambiguously labels the dates):
+A pretty, minimalistic formatter for dates that only shows years when they change (basically, the smallest amount of labeling that still unambiguously labels the dates):
 
 ```python
 import matplotlib.dates

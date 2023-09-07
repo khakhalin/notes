@@ -30,7 +30,7 @@ Main queue
 * what is pyspark?
 * how do sql window functions work under the hood, compared to subqueries
 * common table expressions (newer [[sql]])
-* demand forecasting - basics
+* prompting course for developers: https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/
 * heap-allocated memory
 * linear programming and mixed-integer programming - quickly review here. Like, if you have N factories, M stores, and costs associated - how do you optimize that? What if each store can only be sourced from one factory?
 * Finish SQL quests: https://sqlzoo.net/wiki/SUM_and_COUNT* 

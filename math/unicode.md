@@ -15,6 +15,7 @@ Just a weird collection of Unicode characters and examples.
 
 See also:
 * [[memes]] - for collections of Slack emojis
+* [[latex]] - subj
 
 # Clipboard
 

@@ -119,9 +119,13 @@ Useful methods:
     * To combine strings, use a normal `+` notation, e.g.: `d['a'] = d['b'] + d['c']`. 
 
 There's support of **regular expressions** (see [[regex]]) in `str`, such as:
-* `.str.extract(r'(expr))` - extract part of a string that matches the pattern
-* `.str.findall(r'...')` - only leave entries that match the pattern ??? 🔥
-* `extractall` ?? 🔥
+* `.str.extract(r'(expr))` - reformats the series into a new dataframe.
+    * The string parameter should contain at least one pair of brackets, or it won't work (in this case the brackets are called "capture groups"). 
+    * Returns a dataframe with a column for each capture group (NaN if there's no match).
+    * To find substrings : `.str.extract('(substring)').notna()`
+    * A simpler alternative to the previous one: `.str.find("substring")>-1`
+* `.str.findall(r'expr')` - returns a series of lists; empty if no match, a list of matches if any.
+* `extractall` ? 🔥
 
 To get rid of umlauts and other special letters in a simple (but potentially dirty) way:
 `.str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode('utf-8')`
@@ -149,7 +153,8 @@ The most useful methods are called on series of Timestamps using a prefix (simil
 * To test if a date is special:`is_month_end`
 
 **Timedelta** is a separate class. It can be produced by subtraction of two stamps, and it can be added to a stamp. It also supports its own set of methods, such as `dt.days` (to express this difference as a number of days)	. Note the plural, and the absence of parentheses.
-* Number of days from the smallest date: `(df.Date - df.Date.min()).dt.days`
+* `(df.Date - df.Date.min()).dt.days` - Number of days from the smallest date
+* `pd.Timedelta('15d')` - Manually generate a timedelta
 
 **DateOffset** is another curious class that I don't quite understand, but it is necessary in these cases:
 * To round to the first day of every month:

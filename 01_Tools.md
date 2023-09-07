@@ -4,9 +4,9 @@
 
 Major subtopics:
 * [[system_design]] - system design, scalability
-* [[devops]] (and mlops)
+* [[devops]] - (including mlops)
 * [[database]] - everything databases
-* [[coding]] - everything on coding
+* [[coding]] - everything coding
 
 Tips, notes, and links for individual tools:
 * [[python]] - with separate notes for [[numpy]], [[pandas]] etc.

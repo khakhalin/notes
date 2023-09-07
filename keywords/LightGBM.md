@@ -1,7 +1,7 @@
 # LightGBM
 
 Parent: [[05_Ensembles]], [[gbm]]
-See also:
+See also: [[attribution]]
 
 #ensemble #trees
 
@@ -47,7 +47,7 @@ Other possible parameters (as pairs in a dict):
 
 # Shap values
 
-?? is it a separate topic ?? Not LightGBM-specific?
+See [[attribution]]
 
 # Refs
 

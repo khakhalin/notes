@@ -60,3 +60,8 @@ Potentially some interesting data for Germany, but need to figure out how it wor
 
 Official (?) statistical data for France: google "insee database france"
 
+# Apps
+
+Organic maps - based on openstreetmaps, but optimized for fully offline work and hiking
+https://organicmaps.app
+

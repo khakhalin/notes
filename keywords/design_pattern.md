@@ -1,9 +1,10 @@
 # Design Patterns
 
-#oop
-
 Parents: [[oop]]
 See also: [[solid]]
+
+#oop
+
 
 A famous programming paradigm, and a name of a famous book (1994), about optimized, standardized ways to design interactions between classes and objects in object-oriented programming. About 23 or so (some sites say, 26) archetypical solutions and interfaces that software engineers learn by heart. Also aids with refactoring (minimizes, structures, and ideally - eliminates it). Also facilitates interactions between developers (a common vocab).
 
