@@ -56,7 +56,9 @@ Links:
 
 Second tier cities with mobility potential in Europe (a consensus of various studies): Brussels, Barcelona, Oslo, Warsaw, Bordeaux, Prague, Rotterdam
 
-# My notes
+# Notes
+
+Fleet war (like a price war but with high fleet): if customers develop a habit, and are more likely to take the car they drove the last time around, then higher-fleet provider will naturally have an advantage, and their share will grow, while a smaller competitor will disappear. The only way to prevent it is for the smaller competitor to reduce prices, but assuming similar fixed expenses it will mean that the smaller provider will have even less money to reinvest. Does it mean that the dynamics favors monopolization? Is there a standard classification of business into those that are prone vs not succeptible to monopolization?
 
 The most popular car in Germany is VW Golf. The cost of owning it is ~300€/mo for the car itself + some 50€/mo for insurance, so ~350€/mo.  On the other hand, a typical rental in cities is probably some 30-60 minutes long (very roughly), which with typical prices on the market, gives us about ~10€ per trip, roughly.
 

@@ -98,6 +98,8 @@ Another common use pattern is to do a 2-stages-select, by putting a subquery int
 Finally, you can place a subquery into `SELECT`, treating it as a type of a very complicated formula: 
 `select COL1, select(...) as COL2 from ...`. Some systems only allow one query of this kind per entire SQL expression however, so maybe it's not the most common one. Also, afaik, this type of a subquery is expected to be extremely slow, as it's literally an optimizable loop.
 
+A better, modern alternative to explicit subqueries are Common Table Expressions (see below)
+
 # Joins
 
 * `INNER JOIN` - only those records that exist in both tables. A simple `JOIN` without anything else, is an INNER JOIN by default.
@@ -192,8 +194,40 @@ window my_window as (partition by GROUP order by COL)
 order by GROUP, COL -- without this, values will be correct, but not properly ordered
 ```
 
+In terms of priority, window functions come after `from, join, where, groupby, having`, but before `select, distinct, union, orderby, offset, limit`. In practice, it seems to imply using lots of subquries and table aliasing, to make sure that `where` before a window function and the one after it are firmly and clearly separated.
+
 Footnotes:
 * https://mode.com/sql-tutorial/sql-window-functions/
+* https://flexiple.com/sql/sql-window-functions-cheat-sheet
+
+# Common Table Expressions
+
+One way to avoid crazy nested subqueries is to use Common Table Expressions (CTEs) to build queries iteratively. You can define a table `a` with data, then define table `b` that loads the entire `a` and groups it, then table `c` that loads `b` and left-joins something interesting to it, and also count rows, then table `d` that only picks smallest rows from this one, etc.  Like chaining in [[pandas]], just with an (non-)creative name for every intermediate table. The SQL optimizer takes care of it, and does not actually run it linearly, but first builds the full mega-query, then optimizers and runs it. This iterative approach also allows one to develop and test the mega-query incrementally.
+
+One defined expression can also be used many times. So every time you notice that the same `where`  statement is repeated twice, it's a candidate for CTE. And they can even be recursive!
+
+As a (potentially, not yet fully optimized) example, the query below returns all orders for one day, but for every order shows which number this order was, for the user that made it. Essentially it's 1-nested subqueries (3-levels of `select`), but because of CTE, it is a bit easier to read.
+
+```sql
+with USER_ORDERS as (
+    select
+        o.ORDER_ID, o.USER_ID, 
+        row_number() over (partition by o.USER_ID order by o.DATETIME) as ORDER_NUMBER 
+    from ORDERS as o 
+    where o.DATETIME <= '2023-09-01' 
+        and o.USER_ID in (
+            select distinct USER_ID 
+            from ORDERS 
+            where DATETIME = '2023-01-09'
+        )
+)
+select uo.ORDER_ID, uo.USER_ID, uo.ORDER_NUMBER 
+from USER_ORDERS as uo 
+where uo.DATETIME = '2023-09-01';
+```
+
+Footnotes:
+* https://dev.mysql.com/doc/refman/8.0/en/with.html
 
 # Views
 

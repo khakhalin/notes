@@ -146,7 +146,9 @@ The main data type for dates is a **Timestamp**, and it directly inherits to the
 The most useful methods are called on series of Timestamps using a prefix (similar to how it works for strings): for example `df.x.dt.dayofyear`. For example:
 * `year`, `hour`, `day`, and other obvious words, that turn a a datastamp into an integer. Also: `dayofyear`, `weekofyear`, `dayofweek` (zero-indexed starting Monday). Note the absence of parentheses; it's really like that; it's a property, but not a method, apparently! (🔥 why?)
 * `date()` and `time()` return a new series of either **Dates** or **Times** that are not quite Timestamps, but kinda related. ☣️ Note that a Date is not just a rounded Datetime, as it does not inherit to a Timestamp, and is not equal to a datastamp encoding 00:00 time on the same date. This may cause problems if one isn't careful.
-* `dt.round('D')` - rounding to a day; similarly `floor` is for rounding down, and `ceil` for rounding up. Aliases for frequencies can be found here: https://pandas.pydata.org/docs/user_guide/timeseries.html#timeseries-offset-aliases
+* `dt.round('D')` - rounding to a day; similarly `floor` is for rounding down, and `ceil` for rounding up.
+    * Aliases for frequencies can be found here: https://pandas.pydata.org/docs/user_guide/timeseries.html#timeseries-offset-aliases
+    * This approach won't work for months, and will return an error, as months have different lengths. See below (offsets) for a proper solution.
 * To produce a nice string: `strftime('%w-%a')`; the format codes are described here: https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior
     * Most common string: `%Y-%m-$d` - ISO date. Alghouth `str(timestamp.date())` gives the same result.
 * To parse strings into stamps (an opposite to formatted output): `df.x = pd.to_datetime(df.x)` - it's surprisingly smart, and in most cases just magically works. But if it cannot get the format, just provide a `format` parameter, designed of same `%Y` etc elements (for example, %d/%m/%Y`)
@@ -158,9 +160,9 @@ The most useful methods are called on series of Timestamps using a prefix (simil
 
 **DateOffset** is another curious class that I don't quite understand, but it is necessary in these cases:
 * To round to the first day of every month:
-    * `df.DATE.dt.floor('d') + pd.offsets.MonthEnd(n=0)-pd.offsets.MonthBegin(n=1)`. This is more complicated than just rounding to a month, as months are not a real unit (they have variable size), which somehow makes this fancy context-sensitive construction necessary.
+    * `df.DATE.dt.floor('d') + pd.offsets.MonthEnd(n=0) - pd.offsets.MonthBegin(n=1)`. This is more complicated than just rounding to a month, as months are not a real unit (they have variable size), which somehow makes this fancy context-sensitive construction necessary.
     * For one date one can do `my_date.replace(day=1)`, but it is not serialized (can only be serialized with `apply` or list comprehension)
-    * Another hacky solution : `df.DATE.dt.to_period('M').dt.to_timestamp()`
+    * There's also a fast hacky solution : `df.DATE.dt.to_period('M').dt.to_timestamp()`
 
 To generate a **range of date-times**: `pd.date_range(start, end, period, freq)` (for more parameters, see [manual](https://pandas.pydata.org/docs/reference/api/pandas.date_range.html)). 
 * Despite the name, generates proper full-blooded timestamps, and not just scrawny dates. Note also that `freq` is not the 3d default argument, so better to provide it as a named argument.
@@ -174,8 +176,10 @@ A note on deprecation for datetime functions (first announced some time in 2022)
 
 ## Categorical
 
-In some 
-* `Series.cat.codes` - 
+In some 🔥
+* `Series.cat.codes` - 🔥 
+
+For some practical examples, see [[LightGBM]], where defining categorical input vectors is a critical step of data preparation (the only way to explain to the model, which dummy variables are catecoricall, and which are not).
 
 Footnotes:
 * https://stackoverflow.com/questions/51102205/how-to-know-the-labels-assigned-by-astypecategory-cat-codes
@@ -243,13 +247,13 @@ Alternatively, one can put this function into a function, and `pipe()` this func
 Appending one row: `df.loc[len(df), :] = [a, b, c]`
 
 **Merging** (full-featured, in-memory join). Archetypeical use:
-        ```python
-        res = df_left.merge(df_right[['key1', 'key2', 'col3']], 
-                            how='left', 
-                            on=['key1', 'key2'],
-                            suffixes=[None, "_y"]
-                           )
-        ```
+```python
+res = df_left.merge(df_right[['key1', 'key2', 'col3']], 
+                    how='left', 
+                    on=['key1', 'key2'],
+                    suffixes=[None, "_y"]
+                   )
+```
 
 Some comments on joining and merging:
 * We can also do `df_left2 = pd.merge(df_left, df_right, ...)`.
@@ -272,10 +276,11 @@ pd.DataFrame({'A':a, '_':1}).merge(pd.DataFrame({'B':b, '_':1})).drop('_', axis=
 
 For **merging multiple dataframes** at once, set indices properly, and then do `pd.concat()` with a list of dataframes, and `join=inner` (or something else) argument. See documentation for details. This looks neater, and may be faster than consecutive merges.
 
-**merge_asof** - sort of a sequential merge with short-circuiting, similar to vlookups in Excel that give up on the last so-so match, instead of searching for a perfect match. For example, if `df_checkpoints` contains only some measures at some time points, and `df_full` contains a full list of time-staps, do this to "infill" (protract step-wise) every point measure across all time-stamps between point-measures:
+**merge_asof** - sort of a sequential merge with short-circuiting, similar to vlookups in Excel that find the latest so-so match, instead of searching for a perfect match. For example, if `df_checkpoints` contains only some measures at some time points, and `df_full` contains a full list of time-staps, do this to "infill" (protract step-wise) every point measure across all time-stamps between point-measures:
 `pd.merge_asof(df_full, df_checkpoints, on='TIMESTAMP')`
-In this case to me it feels that we're going foward, filling data with stuff, but actually the default settings for the direction is `direction=backward`. If you switch it to `forward`, you'll start filling missing points with the next value. Apparently, it's the direction of "looking", not that of movement. It's also possible to use `direction=nearest`.
+In this case to me it feels that we're going foward, filling data with stuff, but actually the default settings for the direction is named `direction=backward`, so I'm guessing it's about "looking backwards" at the last reasonable value. If you switch `direction` to `forward`, you'll be filling missing points with the next value. It's also possible to use `direction=nearest`.
 * Note that without piping, this method is not stackable (it's not a method of a dataframe, but of Pandas). But one can always do `df1.pipe(pd.merge_asof, df2, on='TIME')`.
+- [ ] * Both dataframes need to be sorted (on the key that we're using for merging).
 * https://pandas.pydata.org/pandas-docs/version/0.25.0/reference/api/pandas.merge_asof.html
 
 🚫 **Recently deprecated: Append**
