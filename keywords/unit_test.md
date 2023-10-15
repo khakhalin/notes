@@ -50,18 +50,18 @@ def test_something(preload_data): # This using fixture as an input
     data = preload_data # Note the absence of parantheses here
     test(data)
 ```
-This is the part that I don't quite like, for data science purposes itself, as it doesn't allow sequential tests. Also, the fixture itself isn't tested, so if it loads data, and we want to have a test for data loading, we'll have to load data twice (which is ok, but not ideal). It is allegedly possible to test fixtures itself using a `pytester` plugin (a tester for tests) ([ref](https://stackoverflow.com/questions/56631622/how-to-test-the-pytest-fixture-itself)), but honestly it looks super cumbersome.
+In this simplest form, the fixture doesn't seem to favor sequential tests, as the data will be pre-loaded every time (I think?🔥). Also, the fixture itself isn't tested, so if we want to start our test with a test of data loading, we'll have to load data twice: first in the text, then in the fixture for other tests. It is allegedly possible to test fixtures itself using a `pytester` plugin (a tester for tests) ([ref](https://stackoverflow.com/questions/56631622/how-to-test-the-pytest-fixture-itself)), but honestly it looks rather cumbersome.
 
-It seems to also be popular go use fixtures to setup databases, and then finish them with `yield` instead of `return`, to create samplers from these databases (? 🔥 ) See for example: [1](https://smirnov-am.github.io/pytest-advanced-fixtures/)
+> It is probably possible to create a global instance of a data casher class, and `load_heavy_data()` from it. To make it actually load it the first time, and then just return this pre-loaded data again and again during this session. One could even try to pre-load this data during the data load testing, and then just send it to the global class. 🔥 Or did I misunderstand, and fixture actually cashes the data?
+
+It seems to also be popular go use fixtures to setup databases, and then finish them with `yield` instead of `return`, to create samplers from these databases. See for example: [1](https://smirnov-am.github.io/pytest-advanced-fixtures/)
 
 # Unittest
 
-Another popular alternative to `pytest`. The key difference is that you need to make a special class (name isn't critical) that inherits to `unittest.TestCase` (`unittest` is a package that needs to be imported). This class should contain methods with names starting with `test_`, which call whatever you're testing with some parameters.
+Another popular alternative to `pytest`. Two main differences:
 
-Then instead of using build-tin pythonic `assert`, we use some custom asserts. 
-* Equality: `self.assertEqual(a,b)` These methods will be automatically run when this `.py` file is run.
-
-
+1. You need to make a special class (name isn't critical) that inherits to `unittest.TestCase` (`unittest` is a package that needs to be imported). This class should contain methods with names starting with `test_`. These methods should call whatever you're testing with some parameters.
+2. Instead of using build-tin pythonic `assert`, you need to use some custom asserts, for example: `self.assertEqual(a,b)` These methods will be automatically run when this `.py` file is run.
 
 # Fancy techniques
 

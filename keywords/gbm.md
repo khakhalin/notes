@@ -1,10 +1,12 @@
 # Gradient Boosting and GBMs
 
+Parents: [[05_Ensembles]]
+Related: [[boosting]], [[LightGBM]]
+
 #ensemble #todo #halfthere
 
-Parents: [[05_Ensembles]]
-Related: [[boosting]]
 
+To process:
 * https://explained.ai/gradient-boosting/index.html
 * https://explained.ai/gradient-boosting/L2-loss.html
 * https://explained.ai/gradient-boosting/L1-loss.html

@@ -23,7 +23,7 @@ Of these patters, some are obscure, but some are really important. The short lis
 * Chain of Responsibility
 * Decorator
 * Iterator
-* Command
+* Command processor
 
 # Factory
 
@@ -68,7 +68,7 @@ Some (but a  minority) of descriptions online actually kinda seem to describe th
 
 # Abstract Factory
 
-Same as **Factory**, but this type Factory is for sure abstracted (in the sense that you create a factory object that follows a factory interface, but that can actually be an object of one of several alternative concrete classes, depending on the context). And then instead of creating  just one object, ths factory can create many different objects, of different classes, united by some common property. Or  a collection, or a hierarchy. Say, not just an npc, but a matching house, and a matching outfit, and what not. The interactions between these objects (interfaces) are all standardized (by abstract classes), but the innards may be quite different.
+Same as **Factory**, but this type Factory is for sure abstracted (in the sense that you create a factory object that follows a factory interface, but that can actually be an object of one of several alternative concrete classes, depending on the context). And then instead of creating  just one object, this factory can create many different objects, of different classes, united by some common property. Or  a collection, or a hierarchy. Say, not just an npc, but a matching house, and a matching outfit, and what not. The interactions between these objects (interfaces) are all standardized (by abstract classes), but the innards may be quite different.
 
 Footnotes:
 * https://javacurious.wordpress.com/2013/03/15/factory-method-vs-abstract-factory-again/
@@ -84,14 +84,24 @@ Footnotes: https://refactoring.guru/design-patterns/builder
 
 A class that is used (called?) as a wrapper around the inner class (potentially several inner classes), and that in turn calls them as needed. Often, adds some functionality. Often, has the same outer interface as the inner, wrapped class.
 
-> I'm not actually sure whether it should say "often", "always", "sometimes", or something else. Does a Decorator have to be used in stead of the inner class? Like, is a decorator always a wrapper? Because if yes, then it always has some functionality. But then the example given by the RefactoringGuru, about creating a common point of entry for several types of notification, is not really a Decorator (it changes the interface), but rather an Adapter pattern, no?
+> 🔥 I'm not actually sure whether it should say "often", "always", "sometimes", or something else. Does a Decorator have to be used in stead of the inner class? Like, is a decorator always a wrapper? Because if yes, then it always has some functionality. But then the example given by the RefactoringGuru, about creating a common point of entry for several types of notification, is not really a Decorator (it changes the interface), but rather an Adapter pattern, no?
 
 A related term: **Wrapper**, which also wraps the inner method, but 1) definitely uses same interface as the core inner method (and so can be used in its stead), and 2) performs some additional manipulations on either inputs or outputs.
 
 If you need to decorate not just one class, but an entire environment, it's called a **Facade**. If you're working with one class (_is it true?_), but you change the interface, it's called an **Adapter**.
 
-Footnotes:
+Refs:
 * https://refactoring.guru/design-patterns/decorator
+
+# Command processor
+
+Think of a GUI system. In principle, you can make all GUI elements that lead to the file being saved (button, menu, shortcut) direction call some `project.save()` method. But it feels wrong for several reasons, including that the inner works (project) is exposed at GUI level, and that you'll have to change this hard-link in several places if something changes about the implemention of this action. An alternative is to create a class that will process commands, and send commands to this class. Added benefits include that now you have logging, you have macroses, and you have undo functionality (as you can log commands).
+
+> In Java situation, the command is expected to be a class itself (objects of a "Command" class), but my assumption is that in Python, you probably want commands to be actual strings?
+
+Refs: 
+* https://en.wikipedia.org/wiki/Command_pattern
+* https://www.dre.vanderbilt.edu/~schmidt/cs282/PDFs/CommandProcessor.pdf
 
 # Facade
 

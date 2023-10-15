@@ -33,9 +33,12 @@ y_pred = gbm.predict(X_test, num_iteration=gbm.best_iteration) # Predict
 rmse_test = mean_squared_error(y_test, y_pred) ** 0.5 # Evaluate
 ```
 
-Other possible parameters (as pairs in a dict):
+This boilerplate already mentions some key parameters:
+* `objective` (can also be aliased as `loss`): by default uses `regression`, which is the same as `l2`, but it can also be `l1`, a whole bunch of classification- and ranking-related losses etc. One can also define a custom loss (see below)
+
+Other possible parameters (communicated as key-value pairs in a dict):
 * `categorical_feature` - multi-int (column numbers) or string, to mark which features need to be treated as categorical (even if they look like integers)
-* `metric` - supposedly can take strings 'l1' and 'l2' as values, or both (as a set)
+* `metric` - what metrics to return; can take strings like 'l1' and 'l2', or a set of values.
 * To regulate the size of the tree (these two would typically go together):
     * `num_leaves` - maximal number of leaves in every node. Higher number - more overfitting
     * `max_depth` - branch depth
@@ -69,15 +72,22 @@ def df_to_x(df, categorical_columns, mapping=None):
     return df.values, mapping
 ```
 
-## As a linear model
-
-Is it possible to imitate a linear model in LGBM? Not sure it is worth it, but is it possible? Is a linear model a limit case for some set of parameters? Say, would we essentially get a linear model if we set `feature_fraction` to exactly `1/n_features`? 🔥
-    
-* https://stats.stackexchange.com/questions/517835/do-xbgoost-and-lightgbm-only-use-trees-as-base-learners
-
 # Shap values
 
 See [[attribution]]
+
+# Custom Loss
+
+We can define a custom loss function, taking true and predicted vectors, and returning a gradient and a Hessian. (But if you are lazy and don't want to calcualte a real Hessian, you can always just return `np.ones_like(y)`)
+
+Refs:
+* https://hippocampus-garden.com/lgbm_custom/
+
+# Open questions 🔥
+
+Is it possible to imitate a linear model in LGBM? Not because it is worth it, but is it possible? Is a linear model a limit case for some set of parameters? Reason I'm asking is extrapolation : can we use some sort of base learners that extrapolate outside of the distribution (perhaps linearly?), and are heavily regularized within the distribution, just by virtue of using a very constrained model?
+    
+* https://stats.stackexchange.com/questions/517835/do-xbgoost-and-lightgbm-only-use-trees-as-base-learners
 
 # Refs
 

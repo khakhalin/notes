@@ -4,63 +4,79 @@ Parent: [[01_Tools]]
 Related:  [[python]], [[dictionary]]
 
 Subtopics:
-* [[design_pattern]] - best practices
 * [[solid]] - core principles
+* [[design_pattern]] - best practices
 * [[unit_test]] - testing-driven development
 
 #oop
 
 
-# General terminology of OOP
+# General terminology
 
 Important terms, ordered thematically, not alphabetically:
-* Dog **extends** Animal - Dog is a derived class from Animal, so any dog is a Dog, but also an Animal.
-* Dog **implements** Friend - Dog class is not derived from Friend, but supports all interfaces from Friend.	 Good for interfaces.
-* **Abstract class** - a class that shouldn't (and ideally couldn't) be instantiated. Only inherited. Mixins, interfaces.
-* **Interface** - describes what methods will be, but not how they will be used.
-* **Mixin** - an interface with behavior. To mix-in a bunch of methods from a 2nd class.
-* **Duck typing** - used in Python. Classes with matching method names can be used interchangeably, even if they don't fomally have shared inheritance.
+* Dog **extends** Animal - Dog class is derived from Animal class, so every dog is a Dog, but also an Animal.
+* Dog **implements** Friend - Dog class is not derived from Friend, but supports all interfaces from Friend. In this case Friend is probably an interface
+* **Interface** - describes what methods the class will need to support, but not how they are implemented
+* **Abstract class** - a class that shouldn't (and ideally couldn't) be instantiated, only inherited. Mixins, interfaces. 
+* **Mixin** - A way to mix-in a bunch of methods to your class; class inheritance hierarchy is no longer a tree.
+* **Duck typing** - used in Python. Classes with matching method names can be used interchangeably, even if they don't fomally inherit to the same shared inheritance (if it walks like a duck, and talks like a duck...)
 * **Instance method** - a method that requires a class to be instantiated, like `self.do()`.
-* **Static method** - a method that is just included in the class hierarchy, but doesn't need an instance. Good for utility functions.
+* **Static method** - a method that is supported by a class, but doesn't refer to a specific instance. Good for utility functions.
 
-# Specifics of OOP in Python
+# Basics of OOP in Python
 
-**Non-local variables**: when defining function within a function, we can make local variables of the outer function become sorta "global" for the inner function, which may be handy. If you only plan to read from this variable, just refer to it as if it's global. If you plan to update it, write `nonlocal var_name` inside the inner function, as if declaring it. After that it won't be masked.
-🔥  Is it actually just a naive way to describe some of the "smarter" concepts listed below?
+Methods without special decorators are considered instance methods (that's the default).
 
-Apparently functions can have properties (as if they were in class), but that's weird, and almost always  not recommended: https://sethdandridge.com/blog/assigning-attributes-to-python-functionss
-🔥  Is it actually just a naive way to describe some of the "smarter" concepts listed below?
+To create a **static method**, use `@staticmethod` magic immediately before declaration (before the `def` line). They don't take `self` as the first argument (they are static, so don't refer to an instance). 
 
-To create a **static method**, use `@staticmethod` magic immediately before declaration (before the `def` line). They obviously don't take `self` as the first argument. As "staticness" of methods is implicit in Python (via either using or not using `self` as the first argument), the `@` decorator is entirely about communicating your intent, not about changing the way the method behaves. _Is it true?_
+On top of static and instance methods, there also exist **class methods** that use a magic decorator `@classmethod`. Instead of accepting `self` as a first parameter, these methods take `cls` (a pointer to a class). They cannot modify instance state (as they don't have access to an instance), but they do have access to class methods via `cls.blabla`, and  can modify class variables (if any). One pattern of use: for factories (see [[design_pattern]]): `Npc.demon()` may call `Npc.__init__` with some good set of parameters that creates a demon).
 
-On top of static and instance methods, there also exist **class methods** that use a magic decorator `@classmethod`. Instead of accepting `self` as a first parameter, these methods take `cls` (a pointer to a class). They cannot modify instance state (there's no instance), but have access to all class methods via `cls.blabla`, and  can modify the class (_I've no idea what it means_). One pattern of use: for factories (`Npc.demon()` may call `Npc.__init__` with some good set of parameters that creates a demon).
+If the definition of a method doesn't make sense (if you pass `self` to a static method, or don't pass anything to a default method, or a class method), it won't break at definition, but will break at your calling it, as the number of input parameters won't match (`self` and `cls` automatically increase the number of explicitly given parameters by one)
 
-All other methods (that don't have decorators) are considered instance methods (that's a default).
-Refs: https://realpython.com/instance-class-and-static-methods-demystified/
+**Inheritances** and **mixins** are easy: just make the class inherit to several classes, like `class Child(Parent1, Mixin1)`. Apparently having easily available mix-ins is not a given for an OOP language (original Java didn't have them.
 
-**Inheritances** and **mixins** are easy: just make the class inherit to several classes, like `class Child(Parent1, Mixin1)` etc. Note that it makes Python different from, say, original Java, that didn't have mixins (but it kinda does have now apparently, called "default methods on interfaces") .
-Footnotes: https://stackoverflow.com/questions/918380/abstract-classes-vs-interfaces-vs-mixins
+If both parent classes have the same method (a situation known as the **Deadly Diamond of Death**), the order in which parent classes are listed becomes the order in which they are investigated. This sequence can be seen by looking into a built-in `__mro__` property of the class (not the instance of it, but the class itself).
+Footnote: https://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem
 
-If both parent classes have the same method (aka **Deadly Diamond of Death**), the order in which parent classes are listed becomes the order in which they are investigated. Footenote: https://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem
-
-To **invoke methods of a parent class**, use `super().method` or `super(className, self).method`. These two notations above are technically synonymous, but `super()` is of course preferred, as it's simpler. Note that it's not `self.super()`, but just `super()`, as it's not a method of a class. With this, we have two type of **overloading**: we can replace prototypical method with a new one, or we can execute something on top of it (first call `super()`, then do something else as well).
+To **explicitly invoke methods of a parent class**, use `super().method` or `super(className, self).method`. These two notations above are technically synonymous, but `super()` is preferred, as it's simpler. Note that it's not `self.super()`, but just `super()`, as `super` is not an instance method. With this, Python has two types of **overloading**: we can either replace the prototypical method with a new one by completely rewriting it, or we can execute something on top of it (first call `super().method`, then do something else as well).
 Refs: https://realpython.com/python-super/
 
-**Abstract classes** can be created using magic `@abstractmethod` from `abc` package.
+**Abstract classes** may be created using magic `@abstractmethod` from `abc` package. But you need to import this package, it's not a default functionality.
 
-There's an argument that **composition** (having a larger object contain instances of smaller objects) is easier to maintain in Python than class inheritance. That's because Java-style inheritance may conceptually clash with Pythonic methods that are implicitly inherited by every Pythonic object (inherited from `Object`), and that become even more prominent if you try to use Pythonic patterns of programming, like iterators.
-Footnote:  https://realpython.com/inheritance-composition-python/
+If you create a class, even the most empty class possible, it still inherits to some 26 or more default Pythonic methods (see "List of pythonic methods" below), as every class in Python 
 
-**Closures**: Writing a function that returns another function. One way to use it: to bind data to the function, as if this data was hard-coded inside the function, as an alternative to either global variables, or passing data as an argument every time. Have a function that receives the data, whips out a function that uses this data, and then returns the function itself. Refs: [1](http://www.trytoprogram.com/python-programming/python-closures/), [2](https://www.programiz.com/python-programming/closure)
+Refs:
+*  https://realpython.com/instance-class-and-static-methods-demystified/
+*  https://stackoverflow.com/questions/918380/abstract-classes-vs-interfaces-vs-mixins
 
-## Decorators
+# Inheritance vs composition
 
-Decorators are a type of a function that acts as a meta-function: takes another function as an argument, writes a helper function around it, and returns this outer helper function. Can, for example, be used to wrap a closure around a function, to sorta "automate memoization". According to Google style code, while they may be helpful, they aren't exactly recommended, as they tend to complicate things.
+There's an argument that **composition** (having a larger objects contain instances of smaller-leve objects) is easier to maintain in Python than class inheritance. One reason is that Java-style inheritance may conceptually clash with Pythonic methods that are implicitly inherited by every Pythonic object (inherited from the base clas of `Object`), and that becomes even more prominent if you try to use Pythonic patterns of programming, like iterators.
 
-Footnote:
+_If I undstood it correctly_: In composition paradigm, instead of creating a bunch of devired classes with custom methods, you give your classes a property that is itself an object, from a certain set of objects. Say, if you have humans and elves, and they can also work as either medics or scouts, in the inheritence paradigm you'll have a base "player" class, two derived "human" and "elf" classes, and a "medic" mix-in. In a compositional paradigm, you'll have a "player" class, with properties like "magic" and "profession", and then depending on the character, you'll populate it with different forms of `Magic` and `Profession` classes. In the inheritance paradigm, you'd write `player.do_job()` or `player.cast_magic()` and get different results depending on which abstract classes this particular derived class inherits to. In the compositional paradigm, you'd do `player.job.do()`, and the effect will depend on the type of object that is "loaded" in the "`.job`" slot for this `player`.
+
+Refs:  https://realpython.com/inheritance-composition-python/
+
+# Variable scope
+
+**Non-local variables**: when defining function within a function, we can make local variables of the outer function become sorta "global" for the inner function, which may be handy. If you only plan to read from this variable, just refer to it as if it were global. If you plan to update it, write `nonlocal var_name` inside the inner method, as if "declaring
+ it. After that it won't be masked (if you change it inside the method, these changes will be visible outside).
+
+# Decorators
+
+**Closures** are external "wrapper" functions that bind data to a function, as if this data was hard-coded inside the function, as an alternative to either global variables, or passing this context data as an argument every time. Have a function that receives some parameters, whips out a function that uses these parameters as if they were frosen and constant-like , and then returns this new function.
+Refs:
+* http://www.trytoprogram.com/python-programming/python-closures/
+* https://www.programiz.com/python-programming/closure
+
+**Decorators** are a kind of a function that acts as a meta-function: takes another function as an argument, writes a helper function around it, and returns this outer helper function. Can, for example, be used to automatically wrap a closure around a function to automate memoization. According to Google style code, while they may be helpful, they aren't always recommended, as they tend to complicate things.
+Refs:
 * https://www.python-course.eu/python3_memoization.php
+* https://google.github.io/styleguide/pyguide.html
 
-## Getters and setters
+ As in Python "everything is an object", functions can have properties, as if they were classes, but that's weird, and not recommended: https://sethdandridge.com/blog/assigning-attributes-to-python-functionss
+
+# Getters and setters
 
 The idea is to protect object properties, making them private, and channeling all outer-world interactions with them through special methods: a getter (to get the property), and a setter. The benefit here is that you can add all sorts of safety checks when the property is both assigned and returned.
 
@@ -84,7 +100,7 @@ Note also that it introduces a distinction between terms "property" and "attribu
 Footnotes:
 * https://www.python-course.eu/python3_properties.php
 
-## List of special methods for pythonic objects
+# List of special methods for pythonic objects
 
 **General:**
 * `__new__`:

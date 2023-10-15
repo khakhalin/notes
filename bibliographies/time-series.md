@@ -6,10 +6,10 @@ Parents: [[stats]]
 
 
 Subtopics:
-* prophet - a modern "all-purpose blackbox solution" from Facebook (Meta)
 * [[holt-winters]] - Holt-Winters triple exponential smoothing method
 * [[pacf]] - partial auto-correlation function
 * [[arima]] - autoregressive integrated moving average
+* prophet - a modern "all-purpose blackbox solution" from Facebook (Meta)
 
 See also:
 * [[anomaly]] detection
