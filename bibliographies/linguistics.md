@@ -24,6 +24,10 @@ Visual kanji search:
 * https://kanji.sljfaq.org/ - a bit clunky, happens as you draw, links to wikipedia
 * https://www.japandict.com/kanjidraw - more modern, need to commit, gives first 10 guesses with EN translation
 
+# Chinese
+
+* A super-cool Hanzi dictionary: https://zi.tools/zi/米
+
 # Maps
 
 * The world atlas of language structures: https://wals.info/feature/44A#2/18.6/151.0

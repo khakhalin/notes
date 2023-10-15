@@ -166,7 +166,7 @@ The most useful methods are called on series of Timestamps using a prefix (simil
 
 To generate a **range of date-times**: `pd.date_range(start, end, period, freq)` (for more parameters, see [manual](https://pandas.pydata.org/docs/reference/api/pandas.date_range.html)). 
 * Despite the name, generates proper full-blooded timestamps, and not just scrawny dates. Note also that `freq` is not the 3d default argument, so better to provide it as a named argument.
-* Default freq is 'd'
+    * Default freq is 'd'
 * For the first day of each month, use offset: `pd.date_range(start, end, freq=pd.offsets.MonthBegin(1))`
 * If the goal is to upsample data, instead of creating a date_range, and then manually doing `.merge_asof`, try using:
     * `df.asfreq(freq, method='ffill')` (for frontfill, or `bfill` for backfill)

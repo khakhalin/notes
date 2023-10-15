@@ -151,7 +151,7 @@ Main queue
 * Keras checkpoints
 * Python collections: deque, Counter, defaultdict etc.
 * Python closures, why they are a thing, what's dangerous about them, and how to use them
-* Read something on 1D brownian walks maybe? Or is it too mathy?
+* Latent Dirichlet Allocation ([ref](https://towardsdatascience.com/end-to-end-topic-modeling-in-python-latent-dirichlet-allocation-lda-35ce4ed6b3e0)) - a way to classify texts
 * https://en.wikipedia.org/wiki/Partial_correlation
 * hierarchical best-fit models 
     * [[arima]]
@@ -579,7 +579,6 @@ Go through 2-3 youtube lectures in the queue that describe some of the existing 
 * magic squares algorithm?
 * HyperNEAT - a paradigm for generative network evolution
 * graph cuts in computer vision
-* Latent Dirichlet Allocation ([ref](https://towardsdatascience.com/end-to-end-topic-modeling-in-python-latent-dirichlet-allocation-lda-35ce4ed6b3e0))
 * unit tests, pytests, mocking
 * Bayesian PCA
 * Demixed principal component analysis - some MDS technique on top of PCA; seems to be moderately popular with some neuro people. What's the gist of it?

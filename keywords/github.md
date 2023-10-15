@@ -12,6 +12,7 @@ As github switched from passwords to tokens, go here to generate a token: https:
 
 Then type this for the git repo:
 `git remote set-url origin https://<githubtoken>@github.com/<username>/<repositoryname>`
+(Here `<username>` is not the email, but a shorter username that github uses, for example, to form your url)
 
 For contributions to show on GitHub's main page, make sure your user email is set up correctly. This can be done locally at a repo level using `git config user.email "blabla@gmail.com"`
 

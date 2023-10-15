@@ -11,7 +11,8 @@ Oldschool:
 * [[stupid_back_off]] - a simplistic Markovian approach to text generation
 
 Word embeddings ([[embedding]]):
-* [[word2vec]] - famous word embedding method developed by Google.
+* [[word2vec]] - famous word embedding method developed by Google (2013)
+* [[glove]] - GloVe, pre-trained embedding from Stanford (2014)
 * [[transE]] - abstract knowledge graphs (not necessarily on words)
 * [[debiasing]] - how to make word embeddings less biased
 
