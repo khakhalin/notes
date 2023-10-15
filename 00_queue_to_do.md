@@ -25,12 +25,12 @@ Analyze this set of links:
 Main queue
 * re-read [[boosting]], bagging, and how exactly lightGBM works
 * re-read time series
-* custom loss for time-series
 * what is Python magic, properly explained? (to [[oop]])
 * finish [[gbm]]
-* tree-based for time-series
 * jenkins
+* tree-based for time-series - best practices?
 * Re-read Google code guidelines: https://google.github.io/styleguide/pyguide.html
+* custom loss for time-series
 * best practices oop python - read some book?
 * [[Airflow]] (the very basics for now - like, what is it?)
 * [[dbt]] - how exactly it fits into the system, and how do people actually use it in practice?
