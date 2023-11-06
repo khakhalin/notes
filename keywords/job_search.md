@@ -54,6 +54,8 @@ Refs:
 
 ## Data Science interviews
 
+* [[Huyen2019book]] - a short book on data science / ML job interviewing
+
 How to prep:
 * https://github.com/khangich/machine-learning-interview
 * https://github.com/Feynman687/Interviews/blob/master/StatML.md
@@ -64,13 +66,15 @@ Other refs:
 
 ## Coding and whiteboarding
 
+* Cracking the code interview (book, not available online)
 * https://blog.interviewing.io/ive-conducted-over-600-technical-interviews-on-interviewing-io-here-are-5-common-problem-areas-ive-seen/
 * Famous Stanford course on passing whiteboards interviews: https://web.stanford.edu/class/cs9/
 * https://yangshun.github.io/tech-interview-handbook/introduction
 * https://www.askamanager.org/ - some general advice
-* [How to prepare for Google interview](https://www.linkedin.com/pulse/average-googler-four-weeks-study-plan-milad-naseri/?trk=v-feed), by Milad Naseri. Nice list of books, practical advice. 
+* [How to prepare for Google interview](https://www.linkedin.com/pulse/average-googler-four-weeks-study-plan-milad-naseri/?trk=v-feed) (From average to Googler in 4 weeks), by Milad Naseri. Nice list of books, practical advice. 
 * https://www.reddit.com/r/ProgrammerHumor/comments/i49h96/jobs_requirements/g0ikzmr/ - interesting stories and advice
 * Cool videos with advice for how to think in these interviews: https://www.youtube.com/watch?v=0l2nePjDFuA&list=PLlxjrJ5pd8sqqpWqGZDzNi4F2wXGllX-z&index=7
+* [Coding interviews for dummies](https://www.freecodecamp.org/news/coding-interviews-for-dummies-5e048933b82b/), including curious links to [pramp](https://www.pramp.com/)
 
 ## Resume / CV
 
@@ -84,14 +88,16 @@ How to get a great job (No CV required). Mark Saroufim. Sep 2, 2020
 https://marksaroufim.medium.com/how-to-get-a-great-job-68cb69ddfeb1
 Basically he says, start working on little projects, and do it publicly, in everyone's view. It will help you to get the audience, and this audience will become your path to finding a good job.
 
-## German specifics
+## Where to live
 
-Average salaries:
+Average German salaries:
 https://www.payscale.com/research/DE/Job=Data_Scientist/Salary
 https://www.payscale.com/research/DE/Job=Software_Engineer/Salary
 
 Germany taxes calculator / comparator:
 https://www.brutto-netto-rechner.info/
+
+* [Numbeo "cost of living" indices](https://www.numbeo.com/cost-of-living/rankings.jsp) - to scale salary expectations for the location
 
 ## Job boards
 

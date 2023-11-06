@@ -22,9 +22,14 @@ https://www.youtube.com/watch?v=vqRWMDv0r78
 
 # Dialekte
 
+https://de.wikipedia.org/wiki/Missingsch
+
 * http://www.atlas-alltagssprache.de/runde-5/f16a-b/
 * https://www.dw.com/de/deutsch-lernen/dialektatlas/s-8150
 * Platt vocab: https://www.platt-wb.de/hoch-platt/?term=trinken
+
+Scherr, E., & Ziegler, A. (2023). A question of dominance: Statistically approaching grammatical variation in German standard language across borders. _Journal of Linguistic Geography_, 1-13.
+https://www.cambridge.org/core/journals/journal-of-linguistic-geography/article/question-of-dominance-statistically-approaching-grammatical-variation-in-german-standard-language-across-borders/B26BAA15A8EE802EDAA84E6BCEF62277
 
 # Notes
 

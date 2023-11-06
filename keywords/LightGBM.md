@@ -1,7 +1,7 @@
 # LightGBM
 
 Parent: [[05_Ensembles]], [[gbm]]
-See also: [[attribution]]
+See also: [[attribution]], [[shap]]
 
 #ensemble #trees
 
@@ -71,10 +71,6 @@ def df_to_x(df, categorical_columns, mapping=None):
             df[cat] =dfdfx[cat].map(mapping[cat]).astype('category')
     return df.values, mapping
 ```
-
-# Shap values
-
-See [[attribution]]
 
 # Custom Loss
 

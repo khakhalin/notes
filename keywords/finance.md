@@ -1,6 +1,6 @@
 # Finances
 
-See also: [[management]]
+See also: [[management]], [[pricing]]
 
 #finance #bib
 

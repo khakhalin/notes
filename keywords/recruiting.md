@@ -15,9 +15,10 @@ Related:
 
 General ideas for good interviewing:
 * Don't do unstructured interviews (they just reinforce your biases). Always come with a structure first, a list of questions to ask, ask all candidates these questions, and score them in the same way
-* Questions that don't help (don't correlate with performance): trivia, puzzles, invasive behavioral questions. Eliminate them.
-* Questions that help: anything that resembles real work. So either questions about past work (asking them to explain something they did - tests both what they did, and how well they can explain it), or questions about potential problems they may face in their new job (like, how would you approach this problem, or that situation)
-* Actual mini-projects (2-3 hours) work even better, but may be too expensive in practice
+* Eliminate wuestions that don't help (that don't correlate with performance): trivia, puzzles, invasive behavioral questions.
+* Instead, do questions that help: anything that resembles real work. So either questions about past work (asking them to explain something they did - tests both what they did, and how well they can explain it), or questions about potential problems they may face in their new job (like, how would you approach this problem, or that situation)
+* Actual mini-projects (2-3 hours) work even better, but may be expensive in practice
+* Incrementally making the task harder, by adding constraints, new business cases, or follow-up projects, is great, as it allows to probe deeper, and also models real work (real life) in a short amount of time
 
 # Good practices
 

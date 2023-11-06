@@ -51,6 +51,7 @@ Also:
 * [Notes on dynamical systems](https://people.maths.bris.ac.uk/~macpd/ads/) ([pdf](https://people.maths.bris.ac.uk/~macpd/ads/bnotes.pdf)) from Carl Dettmann. Not a textbook, but close; worth scanning
 
 **ML and Stats**
+* Interpretable Machine Learning, by Christoph Molnar: https://christophm.github.io/interpretable-ml-book/
 * ISLR: Introduction to Statistical Learning with R, by James, Witten, Hastie, Tibshirani. ([pdf](http://faculty.marshall.usc.edu/gareth-james/ISL/)). See also this fan-made translation of all code into Python: [JW](https://github.com/JWarmenhoven/ISLR-python).
 * This Bayes by Allen Downey: https://greenteapress.com/wp/think-bayes/
 * Applied Predictive Modeling by Kuhn Johnson (no free pdf online). Code in R.
@@ -82,18 +83,9 @@ Coding problems
 Data science problems (like leetcode, but for DS):
 * https://www.confetti.ai/curriculum
 
-Fun
+Fun brain-teasers:
 * https://thebookofshaders.com/
     * I technically read it up to: https://thebookofshaders.com/05/
-
-Job-search specific materials:
-* Cracking the code interview (book)
-* [[Huyen2019book]] - a short book on data science / ML job interviewing
-* See also: [[ml_questions]] - an unstructured list of random ML and math questions
-* From average to Googler in 4 weeks: https://www.linkedin.com/pulse/average-googler-four-weeks-study-plan-milad-naseri/?trk=v-feed - a detailed post by Milad Naseri with book recommendations etc.
-* Some interview prepping advice [from Quora](https://www.quora.com/How-should-I-prepare-for-my-Google-interview-if-I-have-1-month-left-and-I%E2%80%99m-applying-for-a-software-engineer-role)
-* [Numbeo "cost of living" indices](https://www.numbeo.com/cost-of-living/rankings.jsp) - to scale salary expectations for the location
-* [Coding interviews for dummies](https://www.freecodecamp.org/news/coding-interviews-for-dummies-5e048933b82b/), including curious links to [pramp](https://www.pramp.com/)
 
 # Online courses
 

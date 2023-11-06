@@ -1,7 +1,7 @@
 # GIT
 
 Path: [[01_Tools]]
-See also: [[bash]], [[ssh]], [[vim]], [[gitlab]]
+See also: [[bash]], [[ssh]], [[vim]]
 
 #tools
 
@@ -118,9 +118,12 @@ Footnotes:
 Footnotes:
 * https://stackoverflow.com/questions/1125968/how-do-i-force-git-pull-to-overwrite-local-files
 
-# Workflows
+# Setting things up
 
-For platforms, see [[github]], [[gitlab]]
+For specific platforms, see [[github]], [[gitlab]]
+
+* `git remote -v` - to see remote connections that are set up currently
+* `git remote set-url origin CONNECTION` - to set it up. The specifics of how the `CONNECTION` string looks like depends on whether you use [[github]], [[gitlab]] or something else, and also on whether you connect via [[ssh]] or https. But it's some combo of tokens, usernames etc.
 
 # Open questions
 

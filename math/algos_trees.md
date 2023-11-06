@@ -1,14 +1,16 @@
-# General tree algorithms
-#algo
+# Tree algorithms
 
-Stem: [[algos]] / [[algos_graph]]
+Parents: [[algos]], [[algos_graph]]
+See also: [[09_Graphs]]
 
-Information-related algorithms:
+
+Data structures:
+* [[priority_queue]] - aka Heap
 * [[bst]] - Binary Search Tree
     * [[avl_tree]], [[red-black_tree]] - two balanced implementations of BST
 * [[trie]] - space-compact and fail-efficient string representation
 
-Space-related:
+Other:
 * [[rrt]] - Rapidly exploring Random Tree (fractal-like growth algo)
 
 # Terminology

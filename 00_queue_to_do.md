@@ -22,28 +22,23 @@ Analyze this set of links:
 * https://learning.edx.org/course/course-v1:ColumbiaX+DS102X+1T2016/home
 * https://github.com/dipanjanS/BerkeleyX-CS190.1x-Scalable-Machine-Learning
 
+Books to read / skim next:
+* https://book.pythontips.com/en/latest/index.html - Python tips (advancedish)
+* https://christophm.github.io/interpretable-ml-book/ - really nice explanations of ML tricks
+
 Main queue
-* re-read [[boosting]], bagging, and how exactly lightGBM works
-* re-read time series
 * what is Python magic, properly explained? (to [[oop]])
-* finish [[gbm]]
 * jenkins
-* tree-based for time-series - best practices?
 * Re-read Google code guidelines: https://google.github.io/styleguide/pyguide.html
-* custom loss for time-series
-* best practices oop python - read some book?
 * [[Airflow]] (the very basics for now - like, what is it?)
 * [[dbt]] - how exactly it fits into the system, and how do people actually use it in practice?
 * sentry - read basics
 * categorial values in Pandas, and LightGBM
 * what is pyspark?
-* how do sql window functions work under the hood, compared to subqueries
-* common table expressions (newer [[sql]])
 * prompting course for developers: https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/
-* heap-allocated memory
 * linear programming and mixed-integer programming - quickly review here. Like, if you have N factories, M stores, and costs associated - how do you optimize that? What if each store can only be sourced from one factory?
-* Finish SQL quests: https://sqlzoo.net/wiki/SUM_and_COUNT* 
-* move pandas stuff here (from the notes) 
+* Finish SQL quests: https://sqlzoo.net/wiki/SUM_and_COUNT
+* tree-based for time-series - best practices?
 * how variational autoencoders work? (move to a separate zetterl from [[autoencoder]])
 * Speed up your python code: https://pythonspeed.com/datascience/
 * What do people mean by Monolith; what's the current practical imlementation of a Monolith, and what are the intermediate steps between 100 microservices and a Monolith?

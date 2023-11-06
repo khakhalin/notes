@@ -1,14 +1,14 @@
 # Boosting and AdaBoost
 
 Parents: [[05_Ensembles]]
-Related: [[bagging]], [[gbm]]
+Related: [[bagging]], [[gbm]], [[LightGBM]]
 
 #ensemble
 
 
 Boosting uses simplest decision trees possible:  for every coordinate we make a single split into 2 categories, aka **decision stumps**. But with every next series of trees, we increase the weights for those elements that weren't classified correctly by the previous generation of classifiers. (At the beginning of the process, for the very first tree, we start with equal weights). These weights may either be explicitly included in the error calculation, or be used as probabilities for each data point to appear in next training subset (mathematically, the results are the same). At the end, predictions are made by **weighted majority rule**: the average across all trees, weighted by the **accuracy of individual trees**, followed by argmax.
 
-The most popular, archetypical approach: **AdaBoost**, aka **Adaptive Boosting**. For a binary discrete case:
+The archetypical approach: **AdaBoost**, aka **Adaptive Boosting**. For a case of binary classification:
 1. **Start with** all points x_i having **identical weights** {W}. As $∑w_i$ = 1, we start with w_i = 1/n.
 2. **For each coordinate, find the best split** (aka **stump**), with smallest total error $E = ∑w_i ϵ_i$, where $ϵ_i = 1\cdot(h(x_i)==y_i)$. Here $h(x)$ is the predictor function for this split.
 3. Now **across all coordinates**, find a split with minimal [[gini]] index (one that achieves best separation of classes). For all loops after the 1st (once the weights are different), either use **weighted gini index**, or randomly resample points with draw probability P ∝ w (draw with repetition, keeping the total number of points at each split constant).

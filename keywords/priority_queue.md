@@ -1,8 +1,9 @@
-# Priority Queue (and Binary Heap)
-#algo
+# Priority Queue (aka Binary Heap)
 
-See also:
-* [[algos_trees]] - tree algorithms
+Parents: [[algos_trees]]
+
+#algo #trees
+
 
 Classic data structure, helps to move max (or min) operation from O(N) to O(log N).
 
