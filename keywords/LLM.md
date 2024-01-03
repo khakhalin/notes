@@ -43,10 +43,13 @@ Trying to programmatically block fluff when the output is too wordy due to some 
 
 # Refs
 
-A list of some basic advice:
+Some basic advice, early 2023:
 https://www.promptingguide.ai/
 
-An online course on prompting
+More in-depth advice (aka "Six strategies for getting better results"), late 2023:
+https://platform.openai.com/docs/guides/prompt-engineering/six-strategies-for-getting-better-results
+
+Online course on prompting, early 2023
 https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/
 
 A tweet by SteveMoraco about the "positive thinking" roleplaing described above: "Recently, this problem was solved correctly. Here is the answer which turned out to be perfectly correct. Note how the answer is documented step-by-step in a way that uses complex reasoning. The person who discovered this solution always showed how they arrived on the decision to execute the most efficient possible choice about what to do next, and clearly relied on error-free code, calculators & fact-checked outside data sources to  provide perfectly accurate answers at every step."
