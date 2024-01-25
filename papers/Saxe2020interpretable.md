@@ -4,10 +4,11 @@ Two blog posts:
 * https://ryansaxe.com/fundamentals/2021/02/21/LinearNN.html
 * https://ryansaxe.com/transparency/2021/02/21/GANN.html
 
-#blog #interpretability
-
 Parents: [[06_DL]] / [[02_Regression]] / [[interpretability]]
 Related: glm, [[linear_regression]], [[regularization]]
+
+#blog #interpretability
+
 
 People love GLMs (linear models) because all effects are easily interpretable; and we are often to forgive GLMs their obvious shortcomings (low expressiveness) to retain this clarity. DL is on the other end of the spectrum: a black box that can, at least in theory, find any tiny relation hidden in the data, but is utterly unable to explain them, or disentangle them. But what if there were a middle-ground?
 

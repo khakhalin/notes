@@ -63,5 +63,45 @@ Who does what (first archetypes, then alphabetically):
 * **Subjunction**: da, dass, weil, wenn, ob, obwohl; als, bevor, bis, damit, ehe, falls, indem, nachdem, seit, seitdem, sodass, solange, sooft, während, wohingegen
 * **Verb first**: dann, trotzdem, also; allerdings, andererseits, anschließend, dabei, dadurch, dafür, dagegen, damit, danach, darauf, darum, davor, dazu, deshalb, deswegen, einerseits, ferner, folglich, genauso, immerhin, inzwischen, jedoch, schließlich, seitdem, später, vorher, weder..noch, zuvor, zwar
 
-Ref:
-https://deutsch.lingolia.com/en/grammar/sentence-structure/dependent-clauses/conjunctions
+Refs
+* https://deutsch.lingolia.com/en/grammar/sentence-structure/dependent-clauses/conjunctions
+
+# Prepping for test
+
+  p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica} p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px} 
+
+Redemittel B1
+* https://www.englishforum.ch/attachments/language-corner/37278d1326453057-tips-zd-telc-b1-page-ranking-fung-german-zdortelcoraltesttips.pdf
+* https://gfarmak.wordpress.com/2014/07/10/redemittel-b1-neu-modul-sprechen/
+* https://gfarmak.wordpress.com/2014/07/08/redemittel-b1-neu-modul-schreiben/
+
+Redemittel B2
+* https://gfarmak.wordpress.com/2019/07/10/redemittel-b2-neu-modul-schreiben/
+* https://gfarmak.wordpress.com/2019/07/12/redemittel-b2-neu-modul-sprechen/
+* https://quizlet.com/de/318364582/telc-b2-redemittel-fur-diskussionenmeinungen-ausern-flash-cards/
+
+B2 Bitte um Information
+* https://grammatikuebungen.com/bitte-um-informationen-redemittel/
+* https://www.youtube.com/watch?v=8ZtSGr4AUbg
+* https://www.youtube.com/watch?v=NLnBxR-qCUE
+* https://www.youtube.com/watch?v=R1zJhUlAxoE
+
+B2 Beschwerdebrief
+* https://dschule.de/redemittel-beschwerdebrief-b2/
+* https://www.youtube.com/watch?v=fJi5dHkeOs8
+* https://www.youtube.com/watch?v=_ywM3MV2m9Q
+* https://www.youtube.com/watch?v=a-nA\_eE\_4wk
+* https://lerntipp2.com/2021/06/redemittel-beschwerdebrief-fuer-den-teil-schreiben-b2-telc/
+* https://tasi-trier.de/wp-content/uploads/WE-2-Beschwerdebrief.pdf
+
+Telc mündliche Prüfung B1
+* https://www.youtube.com/watch?v=Jma7sP1X2NI - an explanation of how the verbal part goes
+* https://www.youtube.com/watch?v=9lkyjt0j3Bs - a sample video of a realistic-ish verbal part (the dialogue)
+* https://www.youtube.com/watch?v=kTXNfwGKrZc- example of a listening test (answers in the end)
+* https://www.youtube.com/watch?v=jC9FejaR8Y8
+* https://www.youtube.com/watch?v=XdgmT087D8Y
+
+Telc Mündliche Prüfung B2
+* https://www.youtube.com/watch?v=a_mBuNNK5JE
+* https://www.youtube.com/watch?v=eDc7EBpYkAc
+* https://www.youtube.com/watch?v=ltj1q6TKBCw
