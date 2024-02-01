@@ -2,7 +2,7 @@
 
 Neftci, E. O., Mostafa, H., & Zenke, F. (2019). Surrogate gradient learning in spiking neural networks: Bringing the power of gradient-based optimization to spiking neural networks. IEEE Signal Processing Magazine, 36(6), 51-63. https://arxiv.org/pdf/1901.09948.pdf
 
-Parents: [[neuromorphic]], [[credit]], [[07_RNNs]]
+Parents: [[neuromorphic]], [[credit]], [[rnn]]
 Related: [[Zenke2021neuromorphic]]
 
 #spiking #credit #neuromorphic

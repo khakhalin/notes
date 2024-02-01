@@ -1,6 +1,6 @@
 # Reservoir computing
 
-Parents: [[07_RNNs]]
+Parents: [[rnn]]
 See also: [[criticality]], [[cellular_automata]], [[graph_symmetry]], [[intrinsic_plasticity]], [[complexity]]
 
 #echo #rnn #graph #bib

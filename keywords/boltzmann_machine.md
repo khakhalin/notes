@@ -1,6 +1,6 @@
 # Boltzmann Machine
 
-Parents: [[08_Unsupervised]], [[07_RNNs]]
+Parents: [[08_Unsupervised]], [[rnn]]
 Sister models: [[hopfield]], [[ising_model]]
 See also: 
 

@@ -5,7 +5,7 @@ https://arxiv.org/pdf/1508.02774.pdf
 
 #rnn #benchmarks
 
-Parents: [[07_RNNs]]
+Parents: [[rnn]]
 See also: [[Schneider2019benchmark]], [[mnist]]
 
 Typically (at least in 2015) RNNs were tested on MNIST and "UW3 text OCR task" (it appears to be a text where a window slides over an image with text, and thee RNN is supposed to read the text).

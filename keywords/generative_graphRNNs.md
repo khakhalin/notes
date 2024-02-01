@@ -1,6 +1,6 @@
 # Deep graph generation with graphRNN
 
-Parents: [[09_Graphs]] ; [[07_RNNs]] ; [[generative]]
+Parents: [[09_Graphs]] ; [[rnn]] ; [[generative]]
 Related:  [[deep_graphs]], [[graphsage]]
 
 #graph #generative

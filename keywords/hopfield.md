@@ -2,7 +2,7 @@
 
 #bib #rnn
 
-Parents: [[07_RNNs]]
+Parents: [[rnn]]
 Sister models: [[boltzmann_machine]], [[ising_model]]
 Related: [[deepneuro]], [[ene_091_hipp]], [[stdp]]
 

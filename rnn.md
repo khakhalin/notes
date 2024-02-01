@@ -1,6 +1,7 @@
 # Recurrent Neural Networks
 
-#rnn #bib
+#rnn #bib #timeseries
+
 
 Subtopics:
 * [[lstm]] - Long Short-Term Memory
@@ -10,11 +11,10 @@ Subtopics:
 * [[hopfield]] - another famous older model
 * [[echo]] - Echo-State Networks (Reservoir computing)
 
-Papers:
-* ?
+Papers
+* [[Bai2018sequence]] - RNN for sequence modeling
 
 Benchmarking of RNNs:
-* [[Bai2018sequence]] - a review of sequence modeling benchmarking
 * [[Breuel2015benchmark]] - on hyperparameters (LSTM RNNs are sensitive to learning rate, but not batch)
 
 # Bibliography

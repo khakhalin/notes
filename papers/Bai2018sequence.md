@@ -7,7 +7,7 @@ Github with all tasks and datasets (or an easy way to download the datasets): ht
 
 #rnn #benchmarks #convnet #review #timeseries
 
-Parent: [[07_RNNs]], [[convnet]]
+Parent: [[rnn]], [[convnet]]
 Related: [[Breuel2015benchmark]], [[mnist]]
 
 

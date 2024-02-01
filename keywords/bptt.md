@@ -1,6 +1,6 @@
 # BPTT = Back-Propagation Through Time
 
-Parents: [[07_RNNs]], [[backprop]]
+Parents: [[rnn]], [[backprop]]
 
 
 #stub

@@ -7,7 +7,7 @@ https://arxiv.org/abs/1912.12693
 
 
 Parents: [[09_Graphs]], [[graph_embedding]], [[deep_graphs]]
-See also: [[07_RNNs]], [[algos_graph]], [[echo]]
+See also: [[rnn]], [[algos_graph]], [[echo]]
 
 This paper pays special attention to **early attempts**, to establish pioneering works, and avoid wheel reinvention.
 

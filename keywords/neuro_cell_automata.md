@@ -2,7 +2,7 @@
 
 #complexity #rnn
 
-Parents: [[cellular_automata]], [[convnet]], [[07_RNNs]]
+Parents: [[cellular_automata]], [[convnet]], [[rnn]]
 Related: [[wf_collapse]]
 
 Massively parallel, which is great for speed.

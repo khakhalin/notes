@@ -7,7 +7,7 @@ https://science.sciencemag.org/content/sci/suppl/2004/04/01/304.5667.78.DC1/Jaeg
 
 #rnn #echo #chaos #complexity
 
-Parents: [[07_RNNs]] / [[echo]]
+Parents: [[rnn]] / [[echo]]
 See also: [[complexity]], [[chaos]], [[mackey-glass]]
 
 # Basics

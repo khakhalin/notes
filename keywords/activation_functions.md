@@ -40,7 +40,7 @@ Classic $σ(x) = 1/(1+e^{-x})$. Nice derivative: $\displaystyle σ'(x) = \frac{-
 
 ## Tanh
 
-> Was very popular in the past, but apparently trains slower than ReLUs due to gradient saturation. But isn't it still popular in [[07_RNNs]]? (With a caveat that RNNs themselves are no longer popular haha)
+> Was very popular in the past, but apparently trains slower than ReLUs due to gradient saturation. But isn't it still popular in [[rnn]]? (With a caveat that RNNs themselves are no longer popular haha)
 
 ## SELU
 

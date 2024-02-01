@@ -14,6 +14,14 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 
 # Queue
 
+* Simplement
+* SAP HVR
+* Kafka
+* SingleStore - horizontal scaling, alternative to databases and WH with a parquet file as a backend (??). Manual sharding? Manual optimization of retrieval; no primary key?
+* Stream Analytics
+* Dremio - something to do with datalake?
+* Azure events hub
+
 Analyze this set of links:
 * https://discord.com/channels/814557108065534033/882748207996760164
 * https://stanford-cs329s.github.io/syllabus.html
