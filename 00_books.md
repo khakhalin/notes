@@ -44,7 +44,7 @@ Also:
 * On Programming Well, by Robert C. Martin (no online version)
 * Competitive Programmer's Handbook by Antti Laaksonen: [pdf](https://cses.fi/book/book.pdf) (C++) - great idea, but the descriptions of algorithms are not always clear, while implementations seem a bit idiosyncratic. Worth reading tho!
 
-**Math**
+**Maths**
 * VLMS (Introduction to Applied Linear Algebra) by Stephen Boyd. [pdf](http://vmls-book.stanford.edu/)
 * MML (Mathematics for Machine Learning), by M.P. Deisenroth: [pdf](https://mml-book.github.io/)
 * Non-linear Dynamics and Chaos, by Steven Strogatz ([pdf](http://www.hds.bme.hu/~fhegedus/Strogatz%20-%20Nonlinear%20Dynamics%20and%20Chaos.pdf)), [youtube lectures](https://www.youtube.com/playlist?list=PLbN57C5Zdl6j_qJA-pARJnKsmROzPnO9V)
@@ -52,10 +52,10 @@ Also:
 
 **ML and Stats**
 * Interpretable Machine Learning, by Christoph Molnar: https://christophm.github.io/interpretable-ml-book/
-* ISLR: Introduction to Statistical Learning with R, by James, Witten, Hastie, Tibshirani. ([pdf](http://faculty.marshall.usc.edu/gareth-james/ISL/)). See also this fan-made translation of all code into Python: [JW](https://github.com/JWarmenhoven/ISLR-python).
-* This Bayes by Allen Downey: https://greenteapress.com/wp/think-bayes/
-* Applied Predictive Modeling by Kuhn Johnson (no free pdf online). Code in R.
-* Hands-On M with Scikit-Learn, Keras, and TensorFlow, by Aurélien Géron. Python obviously. [All labs on github](https://github.com/ageron/handson-ml2), but no full version of the book online.
+* ISLR: Introduction to Statistical Learning with R, by James, Witten, Hastie, Tibshirani. It was originally written in R, but now a Python version is available as well (and it's free); https://www.statlearning.com/
+* Think Bayes by Allen Downey: https://greenteapress.com/wp/think-bayes/
+* Applied Predictive Modeling by Kuhn Johnson (no free pdf online). Code is all in R.
+* Hands-On ML with Scikit-Learn, Keras, and TensorFlow, by Aurélien Géron. Python. [All labs on github](https://github.com/ageron/handson-ml2), but no full version of the book online.
 * "The 100 pages ML book" by Andriy Burkov. [full pdf](http://themlbook.com/wiki/doku.php) 
 * Deep Learning, by Ian Goodfellow et al. [pdf](http://www.deeplearningbook.org/)
 * Pattern recognition and ML by Christopher Bishop ([pdf](https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/)) - Has a more Bayesian perspective. [This set of notebooks](https://github.com/ctgk/PRML) implements this book, chapter by chapter.

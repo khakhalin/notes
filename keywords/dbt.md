@@ -1,13 +1,14 @@
 # DBT = Data Build Tool
 
 Parents: [[devops]]
+See also: [[dwh]], [[airflow]]
 
-#devops #stub
+#devops #etl
 
 
-A tool to transform data. Mostly looks sql-like (with extra stuff), but now also supports python blocks that get a [[pandas]]-like dataframe (but is not actually pandas, but just something vaguely similar, yet [[snowflake]]-native, called a snowpack (🔥?) dataframe), and returns a dataframe. It's also possible to use pandas, but it's way slower.
+A tool to transform data, roughly equivalent to oldschool ETL jobs, but better (at least for simpler transformations that don't include fancy modeling / ML). Loks mostly SQL-like, with extra features and operations, but also supports python blocks with [[pandas]]-like dataframes (but not actually pandas: at least when working on [[snowflake]], it's some snowflake-native thing, called a snowpack dataframe 🔥?). It's also possible to use actual pandas, but it would be way slower.
 
-dbt jobs can be run by Apache Airflow
+dbt jobs can be run by Apache [[airflow]]
 
 # Refs
 

@@ -2,6 +2,7 @@
 
 Parents: [[01_Tools]], [[database]]
 Related: [[nosql]]
+
 #tools #db
 
 
@@ -9,11 +10,14 @@ Related: [[nosql]]
 
 Typically has relational DBs in the core, but potentially other stuff around it (non-relational, files, etc.) Typically relies on several "types" (logical caregories) of tables, and **ETL jobs** (Extract-Transform-Load) to move data across them, for analysis and reporting capabilities. Typically goes away from raw data, and towards certain semi-processed "themes", half-way towards future analyses (raw data → staging area → conversion into a usable structure → storage). 
 
-There's an argument for having a DWH **Non-volatile**, that is, a system wehre old data is not removed, and is not altered once it was added. On the other hand, there is a good argument for having the data amended (say, when an invoice was cancelled or adjusted some weeks after a business event). Would not we, in this case, want the corresponding record in the system contain the amended (new actual) value, and not (only) the original value?
+* There's an argument for having a DWH **Non-volatile**, that is, a system where old data is at minimum never removed, or in the extreme case, not even altered once it was added. For example, a good implementation of [[gdpr]] involves not removing, but "blanking out" personal data, and then partially decoupling deleted customers, but not removing hashed IDs themselves, as doing so would invalidate other tables.
+* On the other hand, there is a good argument for having the data amended (say, when an invoice was cancelled or adjusted some weeks after a business event).
 
-A Data WH typically consists of:
-1. **Database**: usually relational, often cloud-based (Redshift, Azure, or BigQuery)
-2. **ETL**: extracts info from sources, validates and cleans it (see [[data_cleaning]]), combines and integrates data from different sources, potentially pre-processes it (to make it more usable in the future), and loads it somewhere.
+In practice, a good DWH exists somewhere between these two extremes, maintaining a balance between structure consistency and data validity. But unlike [[datalake]]
+
+**A Data WH typically consists of:**
+1. **Databases**: relational, cloud-based (Redshift, Azure, or BigQuery)
+2. **ETL jobs**: extracts info from sources, validates and cleans it (see [[data_cleaning]]), combines and integrates data from different sources, potentially pre-processes it (to make it more usable in the future), and loads it somewhere. A good example would be [[dbt]] jobs maintained by [[airflow]]
 3. **Metadata**, or **Data Dictionary**, describing formats, origins, relationships, and usage of data (see below)
 4. **Access tools**: quering, reporting, data mining, OLAP (Online analytical processing)
 5. **Bus**, aka data mart - a way to partition data (_is it a scaling tool?_)
@@ -27,6 +31,13 @@ A Data WH typically consists of:
     * Formats
 * Default values
 * Cross-references
+
+A typical layered structure for the databases 🔥:
+1. BIZ layer (internal)
+    1. DIM tables - dimensions, tables that will be massively referenced everywhere via secondary keys, such as customer, product, location etc.
+    2. FACT tables - tables with transactions. They also have keys of course, but are typically not referenced, aside from linking and chaining related transactions to each other
+2. PUSR (Power User) layer - summarizes everything, but with full data, very limited access to be [[gdpr]]-compliant
+3. REP - outward-facing layer, typically consists of views (see [[sql]]), and not actual tables, where filtering by access rights would happen. Personal data is typically also stripped out at this point.
 
 ## Inmon model
 

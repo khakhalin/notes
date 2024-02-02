@@ -15,8 +15,8 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 # Queue
 
 * Simplement
-* SAP HVR
 * Kafka
+* What is Athena, again?
 * SingleStore - horizontal scaling, alternative to databases and WH with a parquet file as a backend (??). Manual sharding? Manual optimization of retrieval; no primary key?
 * Stream Analytics
 * Dremio - something to do with datalake?
@@ -38,7 +38,7 @@ Main queue
 * what is Python magic, properly explained? (to [[oop]])
 * jenkins
 * Re-read Google code guidelines: https://google.github.io/styleguide/pyguide.html
-* [[Airflow]] (the very basics for now - like, what is it?)
+* [[airflow]] (the very basics for now - like, what is it?)
 * [[dbt]] - how exactly it fits into the system, and how do people actually use it in practice?
 * sentry - read basics
 * categorial values in Pandas, and LightGBM
@@ -47,7 +47,7 @@ Main queue
 * linear programming and mixed-integer programming - quickly review here. Like, if you have N factories, M stores, and costs associated - how do you optimize that? What if each store can only be sourced from one factory?
 * Finish SQL quests: https://sqlzoo.net/wiki/SUM_and_COUNT
 * tree-based for time-series - best practices?
-* how variational autoencoders work? (move to a separate zetterl from [[autoencoder]])
+* how do variational autoencoders work? (move to a separate zetterl from [[autoencoder]])
 * Speed up your python code: https://pythonspeed.com/datascience/
 * What do people mean by Monolith; what's the current practical imlementation of a Monolith, and what are the intermediate steps between 100 microservices and a Monolith?
 * Deep lerning tuning playbook: https://github.com/google-research/tuning_playbook
