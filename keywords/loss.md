@@ -2,15 +2,17 @@
 
 #loss #dl
 
-Parents: [[06_DL]], [[02_Regression]]
-Related: [[regularization]]
+Parents: [[02_Regression]]
+See also: [[regularization]]
 
 Subtopics
-* [[l2]]
-* [[logreg]] and log-loss, which is in fact [[cross-entropy]]
+* [[l2]] - the main one ever (aka MRSE)
+* [[logreg]] - log-loss, which is in fact [[cross-entropy]]
 * [[01loss]] - indicator loss
 * [[perceptual_loss]]
 * Hinge loss - used in [[svm]]
+
+For [[time-series]], we can use "standard" loss (probably [[l2]]), but we have to modify the way it is interpreted (validated) using [[rolling_cross_validation]]
  
 # Huber Loss
 
