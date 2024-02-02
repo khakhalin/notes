@@ -16,7 +16,7 @@ Typically has relational DBs in the core, but potentially other stuff around it 
 In practice, a good DWH exists somewhere between these two extremes, maintaining a balance between structure consistency and data validity. But unlike [[datalake]]
 
 **A Data WH typically consists of:**
-1. **Databases**: relational, cloud-based (Redshift, Azure, or BigQuery)
+1. Relational **Databases**:
 2. **ETL jobs**: extracts info from sources, validates and cleans it (see [[data_cleaning]]), combines and integrates data from different sources, potentially pre-processes it (to make it more usable in the future), and loads it somewhere. A good example would be [[dbt]] jobs maintained by [[airflow]]
 3. **Metadata**, or **Data Dictionary**, describing formats, origins, relationships, and usage of data (see below)
 4. **Access tools**: quering, reporting, data mining, OLAP (Online analytical processing)
@@ -61,10 +61,6 @@ All fact tables (facts) should use the same system of dimensions (so user id, re
 The benefits of Kimball approach (compared to Inmon) is that it's simpler, cheaper computationally (no SQL joins), more relateable for users (if well aligned with business processes), most commonly used data takes less space (an inventory snapshot is much smaller than a raw inventory movement listing), has most relevant data easily available. However, the spirit of "one source of data" is lost (as we now have several fact tables that could in principle contradict each other); it may not be very flexible (hard to change the structure of fact tables later on); does not easily support data mining; does not easily support integration of legacy data.
 
 Potential solution: [[nosql]]
-
-# Other good practices
-
-* When 
 
 # Refs
 

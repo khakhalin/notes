@@ -133,7 +133,7 @@ Footnotes:
 
 **Scheduling**
 * `at` - run a command at a later time (once)🔥
-* For more complicated scheduling of periodical jobs, see [[crontab]]
+* For more complicated scheduling of periodical jobs, see [[cron]]
 
 **Misc tips**
 * `.bash_profile` (or, on modern Mac, `.zprofile`)  is a hidden file in the root folder that is executed every time the terminal is initialized (on Mac, locally, on remote Linux machine - as you connect it with a terminal). Anything default can be put there (like `alias` commands, for example)

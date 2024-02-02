@@ -12,6 +12,8 @@ See also:
 
 **ASIC** (hard): Application-Specific Integrated Circuit, such as Google-NVideia TPUs for example ([wiki](https://en.wikipedia.org/wiki/Tensor_processing_unit))
 
+**Athena** a simple (not very efficient, but fast and [[sql]]-based) way to query from Amazon S2. ([ref](https://www.techtarget.com/searchaws/definition/Amazon-Athena)). Fully in the cloud, paying for the data scanned (not cheap, if used for anything analytic-like by mistake). No indexing, but partitioning.
+
 **Bagging** (ml): the simplest way to create an ensemble of classifiers using an algorithm: split data into bags (with replacement), train a different model on each of them. Final prediction = mean of all predictions. [ref](https://analyticsindiamag.com/primer-ensemble-learning-bagging-boosting/). See [[05_Ensembles]].
 
 **BASE** (db): basically Available, Soft state, Eventually consistent (a silly backronym of an antonym to ACID). See [[db_consistency]], [[database]]
@@ -49,6 +51,8 @@ See also:
 **Document store** (db): instead of rows, returns XML documents or something similar. [wiki](https://en.wikipedia.org/wiki/Document-oriented_database)
 
 **Drop-in replacement** (prog): Replacing part of the code without rewriting anything else. Aka "bug for bug compatibility" (drop-in will only work if all idiosynctratic bugs match exactly).
+
+**Dremio** (db): Position themselves as "Data Lakehouse" (a wordplay on [[datalake]] and [[dwh]]?) They claim that it's a datalake solution, but unlike typical approaches that allow only limited querying (e.g. Amazon S3 with Athena), this one can directly support analytical work and dashboarding. But aparently quite expensive. [1](https://docs.dremio.com/current/), [2](https://dashboardfox.com/blog/what-is-dremio-and-how-can-it-be-used-in-business-intelligence/)
 
 **DSS** (db): Decision Support System. Executive dashboards, medical diagnosis systems etc.
 
@@ -102,8 +106,6 @@ See also:
 
 # KL
 
-**Kafka** (db): open-source stream-processing platform developed by Linkedin, written in Scala, and donated to Apache. High-throughput low-latency platform to handle realtime data feeds.
-
 **Kimball data warehouse model**: see [[data_wh]]
 
 **LDA** 
@@ -118,7 +120,7 @@ See also:
 
 **MAE** (ml): Mean Average Error, aka L1 loss.
 
-**Map Reduce** (dev): programming model for parallel computing; a type of split-apply-combine strategy. Essentially, seems to define two functions, one function on splittable tasks (something like `for each a in List`) that analyzes its `a` and sends answers out; and another one that catches answers and combines them all into one answer.
+**Map Reduce** (dev): programming model for parallel computing; a type of split-apply-combine strategy. Essentially, seems to define two functions, one function on splittable tasks (something like `for each element in List`) that analyzes its `element` and sends answers out; and another one that catches answers and combines them all into one answer.
 
 **MCMC** (ml) Markov Chain Monte-Carlo. See [[modeling]].
 
@@ -146,9 +148,9 @@ See also:
 
 **Petri net** (math): a way to model discrete dynamic systems via a directed bipartite graph with 2 types of nodes: places and transitions. Tokens (agents?) can accumulate at places (states, circles), until a transition (bar) fires (consumes input tokens, and creates output tokens). Because of that, tokens inherently interact with each other. May be deterministic or not. [wiki](https://en.wikipedia.org/wiki/Petri_net)
 
-**Pickling** (development): dumping binary data into a database, to be loaded later, instead of processing it in some meaningful (human readable) way. In Python, may be used for serializing Python object structure. A better alternative: JSON, which is human-readable, while pickles aren't.
+**Pickling** (development): dumping binary data into a database, to be loaded later, instead of processing it in some meaningful (human readable) way. In Python, may be used for serializing Python object structure. Better alternatives: parquet (for table data), [[json]] (for everything else)
 
-**Plotly Dash** (dev): A dashboard (interactive graphs and such) for Python and R. A bunchof JS, rendered in browser, that interacts with Python script that generated it via certain callbacks. These callbacks are put within the script in a certain way, and you can set (or know?) the functions the JS dashboard will call in Python when events happen in the dashboard, so you can define them, and thus process them.
+**Plotly Dash** (dev): A dashboard (interactive graphs and such) for Python and R. A bunch of JS rendered in browser, interacting with Python scripts that generate it via certain callbacks. These callbacks are put within the script in a certain way, and you can set (or know?) the functions the JS dashboard will call in Python when events happen in the dashboard, so you can define them, and thus process them.
 
 **POC** (dev): Proof of Concept.
 
@@ -180,8 +182,6 @@ See also:
 
 **SMOTE** (stats): Synthetic Minority Oversampling Technique. A simple approach to oversampling (supplementing) under-represented categories by creating fake points (in pD of variables describing each case), that are linearly shifted from under-represented points to one of its closest neighbors. [wiki](https://en.wikipedia.org/wiki/Oversampling_and_undersampling_in_data_analysis) 
 
-**Snowflake** (dev): cloud SQL data warehouse; as of 2022 the main contender for older / larger players (AWS Reshift and Google BigQuery). Supports SQL, Java Script in queries; possibility of in-database ML. Emphasis on virtualization for deep cloning, allowing virtual queries on big data. Refs: [1](https://towardsdatascience.com/why-you-need-to-know-snowflake-as-a-data-scientist-d4e5a87c2f3d), [2](https://towardsdatascience.com/machine-learning-in-snowflake-fdcff3bdc1a7).
-
 **Spark** (dev): cluster computing framework (engine to work with big data). Written in Scala; donated to Apache. Runs on the JVM, nterfaces with programming languages, has its own SQL, graph processing, and what not.
 
 **SPF** (prog): Shortest Path First, better known as Dijkstra's algorithm: [[dijkstra]]
@@ -194,11 +194,13 @@ See also:
 
 # UVW
 
+**upsert** (db) - a stupid term for "update a record if it already exists, and if not, insert a new record"
+
 **VAE** (dl): Variational Auto-Encoder. See [[08_Unsupervised]]
 
 **VPS** (system): Virtual Private Server. Virtual Machine -style half-way between shared service and private server?
 
-**Wide column store** (db): Imagine a table, except that different rows may have different columns (number, names, types). 
+**Wide column store** (db): Imagine a table, except that different rows may have different columns (different number, different names, types). Related to [[nosql]], [[json]]
 
 # XYZ
 

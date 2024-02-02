@@ -2,9 +2,13 @@
 
 Parents: [[01_Tools]]
 
-See also:
-* [[database]] - Everything databases (including basic principles and specific solutions)
+Subtopics:
+* [[streaming]] - Message queues and message brokers
+* [[datalake]] - First level of precipitation (?) from streams to dtabases
+* [[database]] - Everything databases
 * [[microservice]] - Everything microservices
+
+See also:
 * [[hardware]] - Everything hardware
 * [[system_interview]] - collections of tips regarding system interviews
 * [[fairness]] - an ethical aspect of system development
