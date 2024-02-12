@@ -2,11 +2,6 @@
 
 #halfthere #todo
 
-Other lists to look through:
-* https://www.confetti.ai/
-* https://machinelearningmastery.com/start-here/
-* https://e2eml.school/blog.html
-
 **The missing semester of CS education**
 https://missing.csail.mit.edu/ 🔥 
 lots of useful practical bits and pieces: shell, debugging, data wrangling, metaprogramming and what not. Also has [lectures on youtube](https://www.youtube.com/watch?v=Z56Jmr9Z34Q&list=PLyzOVJj3bHQuloKGG59rS43e29ro7I57J&index=2&t=0s).
@@ -22,23 +17,42 @@ Analyze this set of links:
 * https://learning.edx.org/course/course-v1:ColumbiaX+DS102X+1T2016/home
 * https://github.com/dipanjanS/BerkeleyX-CS190.1x-Scalable-Machine-Learning
 
-Books to read / skim next:
+Books to read / skim:
 * https://book.pythontips.com/en/latest/index.html - Python tips (advancedish)
 * https://christophm.github.io/interpretable-ml-book/ - really nice explanations of ML tricks
 
+Find some:
+* Opinions on the current state of DS and system engineering in PS
+* Books on DS in PS
+
 Main queue
-* what is Python magic, properly explained? (to [[oop]])
-* jenkins
+* Add these "laws" that "most dangerous is 2nd" and "adding people doesn't help"
+* what is Python magic, properly explained? (add to [[oop]])
+* Decorators for classes (document)
+* What happens if we do `@magic def bla:` or `@bla.overload def bla:`
+* pyspark dataframes
+* Pydantic - a module (?) for data validation (also Pydantic-kedro - whatever it is?)
+* flake8 (linting)
+* mypy (type-checking), as well as default modules `typing` and `Annotated` (I'm assuming, mypy is probably build on top of them?)
+* pre-commit (a package for Python?)
+* mkdocs and mkdocstrings - for documentation
+* Diataxis - framework for document creation (?)
+* GitHub "Continuous Winning" - is it some sort of a CI plugin?
+* Read more about Databricks. Some short course if possible?
+* Read more on Docker
+* pytest - read some manual on it, document?
 * Re-read Google code guidelines: https://google.github.io/styleguide/pyguide.html
+* Is Python currently considered a decent language for large abstract data projects? What are the alternatives?
+* Hive data store
+* linear programming and mixed-integer programming - quickly review here. Like, if you have N factories, M stores, and costs associated - how do you optimize that? What if each store can only be sourced from one factory?
+* tree-based for time-series - best practices?
 * [[airflow]] (the very basics for now - like, what is it?)
 * [[dbt]] - how exactly it fits into the system, and how do people actually use it in practice?
 * sentry - read basics
 * categorial values in Pandas, and LightGBM
-* what is pyspark?
+* jenkins - only what it is (apparently it's oldschool)
 * prompting course for developers: https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/
-* linear programming and mixed-integer programming - quickly review here. Like, if you have N factories, M stores, and costs associated - how do you optimize that? What if each store can only be sourced from one factory?
 * Finish SQL quests: https://sqlzoo.net/wiki/SUM_and_COUNT
-* tree-based for time-series - best practices?
 * how do variational autoencoders work? (move to a separate zetterl from [[autoencoder]])
 * Speed up your python code: https://pythonspeed.com/datascience/
 * What do people mean by Monolith; what's the current practical imlementation of a Monolith, and what are the intermediate steps between 100 microservices and a Monolith?

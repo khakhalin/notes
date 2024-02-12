@@ -35,7 +35,7 @@ Other questions:
 * What is linear regression? When do we use it? 
 * What’s the normal distribution? Why do we care about it? 
 * Which metrics for evaluating regression models do you know? 
-* What are MSE and RMSE? 
+* What are MSE and RMSE?
 * What is overfitting? 
 * How to do you validate your models? 
 * Why do we need to split our data into three parts: train, validation, and test? 
