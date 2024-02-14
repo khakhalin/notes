@@ -6,16 +6,16 @@ Related: [[pandas]]
 #tools
 
 
-In Python, package `re`, and is also supported by Pandas, as described in [[pandas]].
+In Python, package `re`, but is also supported by Pandas (see [[pandas]]).
 
 * `a` - letter a, once
     * `a?` - same, but either 0 or 1 times
     * `a+` - same, but 1 time or more
     * `a*` - same, but either 0 times, or more
-    * `{2}`- exactly 2 repetitions
-    * `{2,4}` - anything from 2 to 4 repetitions (inclusive)
-    * `{2,}` - 2 or more
-* `(a)` - letter "a" found, and captured (outputted)
+    * `a{2}`- exactly 2 repetitions
+    * `a{2,4}` - anything from 2 to 4 repetitions (inclusive)
+    * `a{2,}` - 2 or more
+* `(a)` - letter "a" found, and captured to the output
 * `(?:a)` - letter "a" detected
 * `(ba)+` - a sequence "ba", repeated any number of times, and captured to the output
 * `.` - any one symbol (except the newline symbol)
