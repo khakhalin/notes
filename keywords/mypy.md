@@ -31,7 +31,16 @@ Fancier stuff is typed via special objects:
 * `Mapping[int, str]` (or any other types in the brackets) - a dict-like object that supports `getitem` and `setitem`, but not necessarily a pure dict.
 * `IO[str]` - for functions that work with objects created via `open()` call (not sure how it works, but ok)
 
+## Interactions with OOP principles
+
 For custom (user-created) classes, just use the name of the class there, so in theory it should be really simple: `f(x: MyClass) -> MyOtherClass`. The problem is both classes should be defined before `f()` is defined, which is fine if they are imported from custom packages, but may be weird within a package. To fight this one should run an extra row (really?) `from __future__ import annotations`, and then apparently everything works. Alternatively, one can put class name in quotation marks, and then apparently it also works.
+
+Obviously (if you think of it in [[oop]] terms) subclasses are accepte din place of a class: every derivative class is supposed to satisfy all conditions of the base class.
+
+There's some complex story about class variables (they have their own declaration `ClassVar[int]`), and about a hack around accessing and changing them dynamically (you have to override the setter and the getter), but I'll assume it's a rather rare case (is it?).
+
+Decorators are weird:
+
 
 # Typing package
 
@@ -47,6 +56,17 @@ x: Union[int, str] # Before Python 10
 ```
 
 If you don't provide a type to a function agrument, it can take a value of any type, and it will remain unchecked. Not sure it is true for variables though (🔥?). But you can also use a fake class `Any` that accepts any type.
+
+[[decorators]] are just weird:
+```python
+from typing import Any, Callable, TypeVar
+F = TypeVar('F', bound=Callable[..., Any])
+def bare_decorator(func: F) -> F:
+def decorator_args(url: str) -> Callable[[F], F]:
+```
+🔥 _What does it mean?.._
+
+Finally, `typing` contains a functionality `Annotated` that allows to extend variable metadata beyond just its having a type. For example, `x: Annotated[str, metadata]` where `metadata` may be a string comment, a particular object that allows to set multiple parameters for this variable, etc. It is not used directly by normies, for the purposes of file-checking, but it is used by various libraries (for example, by FastAPI, strawberry, and most critically, by [[pydantic]], for additional data validation)
 
 # Mypy package
 

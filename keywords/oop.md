@@ -69,10 +69,7 @@ Refs:
 * http://www.trytoprogram.com/python-programming/python-closures/
 * https://www.programiz.com/python-programming/closure
 
-**Decorators** are a kind of a function that acts as a meta-function: takes another function as an argument, writes a helper function around it, and returns this outer helper function. Can, for example, be used to automatically wrap a closure around a function to automate memoization. According to Google style code, while they may be helpful, they aren't always recommended, as they tend to complicate things.
-Refs:
-* https://www.python-course.eu/python3_memoization.php
-* https://google.github.io/styleguide/pyguide.html
+**Decorator** is function acting as a meta-function: it takes another function as an argument, writes a helper function around it, and returns this outer helper. Or it takes a class, adds something to it, and return a modified version of a class. Decorators can, for example, be used to automatically wrap a closure around a function to automate memoization. According to Google style code, while they may be helpful, they aren't always recommended in Python specifically, as they tend to complicate things. See [[decorators]] for more info.
 
  As in Python "everything is an object", functions can have properties, as if they were classes, but that's weird, and not recommended: https://sethdandridge.com/blog/assigning-attributes-to-python-functionss
 
