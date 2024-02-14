@@ -34,10 +34,12 @@ Main queue
 * Pydantic - a module (?) for data validation (also Pydantic-kedro - whatever it is?)
 * flake8 (linting)
 * mypy (type-checking), as well as default modules `typing` and `Annotated` (I'm assuming, mypy is probably build on top of them?)
-* pre-commit (a package for Python?)
+* pre-commit (is it a package for Python?)
 * mkdocs and mkdocstrings - for documentation
 * Diataxis - framework for document creation (?)
 * GitHub "Continuous Winning" - is it some sort of a CI plugin?
+* How to turn a Python repo into a pip package?
+* Poetry (an alternative to pip) - why it's needed, and how it works
 * Read more about Databricks. Some short course if possible?
 * Read more on Docker
 * pytest - read some manual on it, document?

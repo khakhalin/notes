@@ -5,7 +5,7 @@ Parent: [[python]]
 #tools
 
 
-There are two key ways to install packages in Python:
+There are several ways to install packages in Python:
 * **conda** installs packages written in any language. Makes sure there are no conflicts using a "Satisfiability Solver".
 * **pip** installs python packages. Installs in an "overwrite" mode: recursively installs all downstream dependencies, but doesn't look for overall consistency.
 
