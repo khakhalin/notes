@@ -15,7 +15,7 @@ See also: [[git]], [[docker]], [[cron]], [[vim]], [[ssh]]
     * `cd ~` teleports us into the home folder for this user.
     * `cd /` teleports you to the root
     * `cd -` teleports us to where you have been before the last `cd` command. Which means that doing `cd -` repeatedly will teleport you back and forth between two different folders.
-* `pushd` - remember current location (like a clipboard, but for location). After doing that, you can go to the new location, and then teleport back with `popd`. It's literally a stack of locations. (🔥 Not sure I understand how it works, as when I type it on other machine, it says "no other directory" - does it mean that it actually needs a parameter? 🔥 )
+* `pushd` - remember current location (like a clipboard, but for location). After doing that, you can go to the new location, and then teleport back with `popd`. It's literally a stack of locations. (🔥 Not sure I understand how it works, as when I type it on other machine, it says "no other directory" - does it mean that it actually needs a parameter? 🔥)
     * Allegedly it's possible to remember locations by name, but I can't make it work 🔥 
 * `program_name --help`, or `help program_name` - On some systems (e.g. Windows PowerShell), shows help for a command.
 * `man program_name` - shows a manual (nice, long) for a command.

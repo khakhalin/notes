@@ -21,15 +21,11 @@ Books to read / skim:
 * https://book.pythontips.com/en/latest/index.html - Python tips (advancedish)
 * https://christophm.github.io/interpretable-ml-book/ - really nice explanations of ML tricks
 
-Find some:
-* Opinions on the current state of DS and system engineering in PS
-* Books on DS in PS
-
 Main queue
+* What happens if we do `@magic def bla:` or `@bla.overload def bla:`
 * Add these "laws" that "most dangerous is 2nd" and "adding people doesn't help"
 * what is Python magic, properly explained? (add to [[oop]])
 * Decorators for classes (document)
-* What happens if we do `@magic def bla:` or `@bla.overload def bla:`
 * pyspark dataframes
 * Pydantic - a module (?) for data validation (also Pydantic-kedro - whatever it is?)
 * flake8 (linting)
@@ -38,6 +34,10 @@ Main queue
 * mkdocs and mkdocstrings - for documentation
 * Diataxis - framework for document creation (?)
 * GitHub "Continuous Winning" - is it some sort of a CI plugin?
+* Dependabot
+* 📘Find opinions on the current state of DS and system engineering in PS
+* 📘Find books on DS in PS
+* What techstack is o9 running on, internally? Is there any info on that online?
 * How to turn a Python repo into a pip package?
 * Poetry (an alternative to pip) - why it's needed, and how it works
 * Read more about Databricks. Some short course if possible?
@@ -45,6 +45,7 @@ Main queue
 * pytest - read some manual on it, document?
 * Re-read Google code guidelines: https://google.github.io/styleguide/pyguide.html
 * Is Python currently considered a decent language for large abstract data projects? What are the alternatives?
+* Rulex training
 * Hive data store
 * linear programming and mixed-integer programming - quickly review here. Like, if you have N factories, M stores, and costs associated - how do you optimize that? What if each store can only be sourced from one factory?
 * tree-based for time-series - best practices?
