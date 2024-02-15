@@ -22,6 +22,8 @@ Books to read / skim:
 * https://christophm.github.io/interpretable-ml-book/ - really nice explanations of ML tricks
 
 Main queue
+* `@classmethod`
+* `@overload` (then `def`, but then at some point literally `...`)
 * What happens if we do `@magic def bla:` or `@bla.overload def bla:`
 * Add these "laws" that "most dangerous is 2nd" and "adding people doesn't help"
 * what is Python magic, properly explained? (add to [[oop]])

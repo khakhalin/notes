@@ -8,7 +8,7 @@ Random notes on Python.
 
 
 Subtopics and related:
-* [[oop]] - OOP, entirely Python-specific for now. Functions, scope, decorators
+* [[oop]] - OOP, entirely Python-specific for now. Functions, scope, [[decorators]]
 * Common packages:
     * The holy triad: [[numpy]], [[pandas]], [[matplotlib]]
     * [[py_dates]], [[regex]] - core utils

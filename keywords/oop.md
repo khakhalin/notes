@@ -6,6 +6,7 @@ Related:  [[python]], [[dictionary]]
 Subtopics:
 * [[solid]] - core principles
 * [[design_pattern]] - best practices
+* [[decorators]] - in Python specifically
 * [[unit_test]] - testing-driven development
 
 #oop
@@ -61,17 +62,6 @@ Refs:  https://realpython.com/inheritance-composition-python/
 
 **Non-local variables**: when defining function within a function, we can make local variables of the outer function become sorta "global" for the inner function, which may be handy. If you only plan to read from this variable, just refer to it as if it were global. If you plan to update it, write `nonlocal var_name` inside the inner method, as if "declaring
  it. After that it won't be masked (if you change it inside the method, these changes will be visible outside).
-
-# Decorators
-
-**Closures** are external "wrapper" functions that bind data to a function, as if this data was hard-coded inside the function, as an alternative to either global variables, or passing this context data as an argument every time. Have a function that receives some parameters, whips out a function that uses these parameters as if they were frosen and constant-like , and then returns this new function.
-Refs:
-* http://www.trytoprogram.com/python-programming/python-closures/
-* https://www.programiz.com/python-programming/closure
-
-**Decorator** is function acting as a meta-function: it takes another function as an argument, writes a helper function around it, and returns this outer helper. Or it takes a class, adds something to it, and return a modified version of a class. Decorators can, for example, be used to automatically wrap a closure around a function to automate memoization. According to Google style code, while they may be helpful, they aren't always recommended in Python specifically, as they tend to complicate things. See [[decorators]] for more info.
-
- As in Python "everything is an object", functions can have properties, as if they were classes, but that's weird, and not recommended: https://sethdandridge.com/blog/assigning-attributes-to-python-functionss
 
 # Getters and setters
 
@@ -148,3 +138,11 @@ Footnotes:
 * `get`
 * `set`
 * `delete`
+
+# Trivia
+
+As in Python "everything is an object", functions can have properties, as if they were classes, but that's weird, and not recommended: https://sethdandridge.com/blog/assigning-attributes-to-python-functionss
+
+# Refs
+
+.
