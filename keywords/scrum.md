@@ -13,15 +13,16 @@ Highly formalized, open, collaborative product development framework framework f
 # Terms
 
 * **Story** - A single `to-do` item (basic unit of work) that can be done (or not)
-* **Story points** - an integer number, roughly reflecting (non-linearly) the number of hours it would take to finish a task, but also novelty, associated risks, and a need for interaction. A sample schema could look like this:
+* **Story points** - an integer number, roughly reflecting (non-linearly) the number of hours it would take to finish a task, but also novelty, associated risks, and a need for interaction. A sample scale could look like this:
     * 1: simple task, 1-2 hours
     * 2: clear, but some work, half a day (4 hours)
     * 3: involved but straightforward, 1 day
     * 5: need follow-ups, 2 days
     * 8: complex, somewhat novel, major point: 3 days
     * 13: about a limit of what 1 developer can commit to for 2 weeks, as some research, iterations, and follow-ups may be needed; blocking is possible. About 5 days
-    * Anything above is possible (say, 20 points for 10 days worth of pure work) definitely needs to be split into small pieces before it is accepted into a Sprint.
+    * Anything above is possible (say, 21 points for 10 days worth of pure work) definitely needs to be split into small pieces before it is accepted into a Sprint.
     * All of this assumes an about 6-hours working day (which frankly, commenting from myself here, is not generous at all, considering that other scrum activities and development-related meetings probably consume at least 1 hour a day, on average, maybe closer to 2 hours a day!)
+    * The typical valuations form a Fibonacci sequence, to give them this exponential-ish curve, reflecting the actual perception of projects. And then the time grows even faster than the number of story points.
 * **Epic** - A subproject of the main project, or some type of an ongoing reason (linked to a target, kpi) to have the work done. Basically, a larger logical unit to house Stories.
 * **Backlog** - Like a target to-do list of product requirements. Includes features, bug fixes, non-functional requirements (topics like safety, security, usability, scalability etc.). Often described as use cases and "user stories". Visible to everyone, but only modified by the product/process owner. Ranked by by value to the customer and effort to implement (?), classified on a Fibonacci scale (??? 🔥)
 * **Burndown chart** - estimated amount of remaining work, in hours. Usually goes down, but can go up a bit sometimes.

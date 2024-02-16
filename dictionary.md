@@ -146,6 +146,8 @@ See also:
 
 **OLTP** (db): Online Transaction Processing. A kind of an antonym for OLAP, as OLTP (online transactions) implies lots of writing (not only reading), and higher volume. [wiki](https://en.wikipedia.org/wiki/Online_transaction_processing)
 
+**ORM**: Object-Relational Mapping. The design of mapping between objects in a program (in the [[oop]] sense) with their methods and properties, and the external data sources (ultimately, [[database]]s with columns) that these objects represent and give access to. Objects are inherently hierarchical, and tend to encode one partiular way of accessing the data, while databases are at the bottom of it atomic (individual records, "tuples") with [[sql]] and friends only faking  a hierarchical access to them. A reliable mapping here is not always easy to achieve. Example library for [[python]]: SQLAlchemy.
+
 **Petri net** (math): a way to model discrete dynamic systems via a directed bipartite graph with 2 types of nodes: places and transitions. Tokens (agents?) can accumulate at places (states, circles), until a transition (bar) fires (consumes input tokens, and creates output tokens). Because of that, tokens inherently interact with each other. May be deterministic or not. [wiki](https://en.wikipedia.org/wiki/Petri_net)
 
 **Pickling** (development): dumping binary data into a database, to be loaded later, instead of processing it in some meaningful (human readable) way. In Python, may be used for serializing Python object structure. Better alternatives: parquet (for table data), [[json]] (for everything else)

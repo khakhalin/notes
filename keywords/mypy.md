@@ -35,10 +35,12 @@ Fancier stuff is typed via special objects:
 
 For custom (user-created) classes, just use the name of the class there, so in theory it should be really simple: `f(x: MyClass) -> MyOtherClass`.
 
-Subclasses should obviously be accepted in place of a base classn, reflecting the basic principle of [[oop]] that every derivative class is supposed to satisfy all properties of the base class). So if your class is inheriting to some base class (say, `int`), and you use it with some call that expects an `int`, it will be alright. When declaring classes that are based on your custom classes however, you have to explicity declare them as generic. All built-in classes are generic, but by default your custom classes seem to be non-generic. So instead of a normal Pythonic way of doing
-`class NewClass(MyClass): ...`
-you need to do this? (🔥 I'm still confused about this)
+Subclasses should obviously be accepted in place of a base classn, reflecting the basic principle of [[oop]] that every derivative class is supposed to satisfy all properties of the base class). So if your class is inheriting to some base class (say, `int`), and you use it with some call that expects an `int`, it will be alright. When declaring classes that are based on your custom classes however, you have to explicity declare them as generic. All built-in classes are generic, but by default your custom classes seem to be non-generic (🔥 is is true?). So instead of a normal Pythonic way of doing
+`class NewClass(): ...` which I think defaults to `NewClass(object)`
+you need to do this? (🔥 is it true? I'm still confused about this)
 `class NewClass(Generic[MyClass]): ...`
+
+Alternative explanation: `Generic[int]` should be thought of as an extension of `list[int]` or `Iterator[int]`, but to a more general behavior, manipulating values of `int`. 🔥 _Again, is it true? Is it what is implied here? And is this way of thinking helpful, or should we think of it in more specific and practical terms?_
 
 The problem is both classes should be defined before `f()` is defined, which is fine if they are imported from custom packages, but may be weird within a package.
 * To fight this, one can put class name in quotation marks (provide them as strings), and then apparently Mypy is happy (see below).
@@ -69,7 +71,7 @@ If you don't provide a type to a function agrument, it can take a value of any t
 
 ## TypeVar
 
-`T = TypeVar('T')` also defines a new type for type-checking purposes (not at runtime), but in this case in an obviously helpful way: as an alias to be referenced by typing expressons further in the code. After defiing a type like that, one can do `-> T` for functions, or `x: list[T]` for lists. 
+`T = TypeVar('T')` also defines a type for type-checking purposes (not at runtime), but in a different sense: not is case in an obviously helpful way: as an alias to be referenced by typing expressons further in the code. After defiing a type like that, one can do `-> T` for functions, or `x: list[T]` for lists. 
 
 One possible use for that is just aliasing. Say, instead of writing `Union(int, float)` every time you can do `T = TypeVar('T', int, float)`, and then just write this one letter `T`.
 > 🔥 This does not seem to be quite true, as for example one can't just write a function that receives no inputs, but outputs a value of T type; mypy complaints that a function returning T should get at least one argument of T type. Which seems to be some real actual design choice for this use case that I don't understand. For some reason you can write `def f() -> dict[T]`, but you can't write `def f() -> T` as mypy claims it's illegal. Functions that both receive and produce T are legal tho; and so are functions that receive T and produce something else (or nothing).
@@ -78,6 +80,8 @@ Another possible use, to indicate that while two thingies can work with any type
 > 🔥 Doesn't seem to be true either, as if you try to write `x: T = 1`, mypy says that "Type variable is unbound" and claims that it's an error.
 
 It is also possible to restrict the list of values for this new `T`, or put some bounds on it, presumably for some elementary validation (but this part doesn't sound too useful).
+
+To define classes on a generic type variable
 
 ## Decorators
 
@@ -108,3 +112,5 @@ If something isn't perfect, there are several ways to make mypy ignore stuff:
 https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html - basics
 
 https://mypy.readthedocs.io/en/stable/generics.html - about generic types and decorators
+
+https://filipgeppert.com/mypy-advanced-examples.html - some examples on generics (although it avoids mentinioning the extra limitations)
