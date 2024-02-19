@@ -63,6 +63,23 @@ x: int | str # In Python 10+, or:
 x: Union[int, str] # Before Python 10
 ```
 
+If you plan to produce differently typed outputs for differently typed inputs (and not just a permissive set of inputs to one output, or a permissive "everything to everything"), use polymorfism:
+```python
+@overload
+def func(x: int) -> int:
+	...
+
+@overload
+def func(x: list[int]) -> list[int]:
+	...
+
+def func(x: int | list[int]) -> int | list[int]:
+	if ininstance(x, int):
+    	bla bla
+```
+
+Here the first two declarations (literally with these three dots `...` instead of a real declaration!!) are there only for typing purposes. Their existence prohibits `int -> list[int]` transformation.
+
 For a very specific case of a "Function that never returns anything" (not in the sence of returning `None`, but really and trully never returning, like a function that raises an exception) there's a very special thing `typing.NoReturn` that can be used in function definition (`… -> NoReturn`).
 
 If you don't provide a type to a function agrument, it can take a value of any type, and it will remain unchecked. But you can also use a fake class `Any` that accepts any type.

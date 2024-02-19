@@ -22,9 +22,7 @@ Books to read / skim:
 * https://christophm.github.io/interpretable-ml-book/ - really nice explanations of ML tricks
 
 Main queue
-* `@classmethod`
-* `@overload` (then `def`, but then at some point literally `...`)
-* What happens if we do `@magic def bla:` or `@bla.overload def bla:`
+* What happens if we do `@magic def bla:` or `@bla.overload def bla:` - that's not standard Python; needs to be investigated what it means in this project in particular
 * Add these "laws" that "most dangerous is 2nd" and "adding people doesn't help"
 * what is Python magic, properly explained? (add to [[oop]])
 * Decorators for classes (document)
@@ -33,7 +31,7 @@ Main queue
 * greatexpectations
 * pyspark dataframes
 * flake8 (linting)
-* mypy (type-checking), as well as default modules `typing` and `Annotated` (I'm assuming, mypy is probably build on top of them?)
+* read a bit more on ideology of [[scrum]]
 * pre-commit (is it a package for Python?)
 * mkdocs and mkdocstrings - for documentation
 * 🌿Find opinions on the current state of DS and system engineering in PS
@@ -47,7 +45,9 @@ Main queue
 * Re-read Google code guidelines: https://google.github.io/styleguide/pyguide.html
 * Is Python currently considered a decent language for large abstract data projects? What are the alternatives?
 * Rulex training
+* SQLAlchemy - learn some basics
 * Hive data store
+* Describe the actual use of Pydantic in a sample project. What are the typical use cases? Can we guess motivation?
 * linear programming and mixed-integer programming - quickly review here. Like, if you have N factories, M stores, and costs associated - how do you optimize that? What if each store can only be sourced from one factory?
 * tree-based for time-series - best practices?
 * [[airflow]] (the very basics for now - like, what is it?)
