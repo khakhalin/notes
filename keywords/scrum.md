@@ -17,9 +17,9 @@ Highly formalized, open, collaborative product development framework framework f
     * 1: simple task, 1-2 hours
     * 2: clear, but some work, half a day (4 hours)
     * 3: involved but straightforward, 1 day
-    * 5: need follow-ups, 2 days
+    * 5: also needs some follow-ups or some pre-work, 2 days
     * 8: complex, somewhat novel, major point: 3 days
-    * 13: about a limit of what 1 developer can commit to for 2 weeks, as some research, iterations, and follow-ups may be needed; blocking is possible. About 5 days
+    * 13: about a limit of what 1 developer can commit to for 2 weeks, as some research, iterations, and follow-ups may be needed; blocking is possible. About 5 straight full days of work.
     * Anything above is possible (say, 21 points for 10 days worth of pure work) definitely needs to be split into small pieces before it is accepted into a Sprint.
     * All of this assumes an about 6-hours working day (which frankly, commenting from myself here, is not generous at all, considering that other scrum activities and development-related meetings probably consume at least 1 hour a day, on average, maybe closer to 2 hours a day!)
     * The typical valuations form a Fibonacci sequence, to give them this exponential-ish curve, reflecting the actual perception of projects. And then the time grows even faster than the number of story points.

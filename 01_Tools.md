@@ -28,6 +28,7 @@ Running ML projects:
 Project management and knowledge management:
 * [[scrum]] - the methodology
 * [[zettelkasten]] - how to properly create and support this knowledge base
+* [[diataxis]] - on writing technical documentation
 
 Other lifehacks:
 * [[mac]] - how to make mac behave almost like a normal computer

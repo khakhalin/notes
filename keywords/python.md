@@ -55,6 +55,7 @@ Repacking:
     * `d` - decimal, `b`- binary (transforms to binary), `x` and `X` - Hex (with small and capital letters for abcdef respectively), `f`- float (6 digits default), `e` - exponential. `g` - smart number format that tries to guess what you want. `s` - string.
     * Left, right, and center align: `<>^`
     * Examples: `10.3f` - 10 wide with three digits after point. `010d` - 10-wide and filled with zeros. `<+20,d` - left-aligned, 20 chars wide, with comma separating thousands, and a mandatory sign upfront (+ or - depending on the sign of the value). `=>20d` - 20-wide, right-aligned, and with equality signs used instead of spaces.
+    * `var!r` generates a string representatoin of the `var` variable by running a `repr(var)` on it
 
 # Random tips and Gotchas
 

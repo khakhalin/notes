@@ -30,7 +30,11 @@ Fun:
 Rekdal, O. B. (2014). Academic urban legends. Social Studies of Science, 44(4), 638-654.
 https://journals.sagepub.com/doi/full/10.1177/0306312714535679
 
-# Top choices
+# PS-oriented
+
+Zhao, P., Li, X., Xin, D., & Han, J. (2011, June). Graph cube: on warehousing and OLAP multidimensional networks. In Proceedings of the 2011 ACM SIGMOD International Conference on Management of data (pp. 853-864).https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/37657.pdf
+
+# General wisdom
 
 Software 2.0
 https://medium.com/@karpathy/software-2-0-a64152b37c35
@@ -57,9 +61,6 @@ Follow-ups and prequels:
 
 Goyal, A., Didolkar, A., Lamb, A., Badola, K., Ke, N. R., Rahaman, N., ... & Bengio, Y. (2021). Coordination among neural modules through a shared global workspace. arXiv preprint arXiv:2103.01197.
 https://arxiv.org/pdf/2103.01197.pdf
-
-Bahri, Y., Kadmon, J., Pennington, J., Schoenholz, S. S., Sohl-Dickstein, J., & Ganguli, S. (2020). Statistical mechanics of deep learning. Annual Review of Condensed Matter Physics.
-https://www.annualreviews.org/doi/pdf/10.1146/annurev-conmatphys-031119-050745
 
 Peyré, G., & PSL, É. N. S. Mathematics of Neural Networks.
 
@@ -292,6 +293,10 @@ https://www.nature.com/articles/s41467-020-14663-9
 
 Hestness, J., Narang, S., Ardalani, N., Diamos, G., Jun, H., Kianinejad, H., ... & Zhou, Y. (2017). Deep learning scaling is predictable, empirically. arXiv preprint arXiv:1712.00409.
 https://arxiv.org/pdf/1712.00409.pdf
+
+Bahri, Y., Kadmon, J., Pennington, J., Schoenholz, S. S., Sohl-Dickstein, J., & Ganguli, S. (2020). Statistical mechanics of deep learning. Annual Review of Condensed Matter Physics.
+https://www.annualreviews.org/doi/pdf/10.1146/annurev-conmatphys-031119-050745
+
 
 # Interpretability
 

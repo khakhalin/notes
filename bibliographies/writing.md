@@ -6,6 +6,7 @@
 Subtopics:
 * [[zettelkasten]] - Luhmann's system of writing
 * [[JohnMcPhee]] - another cool and idiosyncratic system of writing
+* [[diataxis]] - supposely, an important mindset for writing technical documentation
 
 # Resources
 

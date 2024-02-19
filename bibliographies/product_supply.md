@@ -7,19 +7,19 @@ See also: [[time-series]]
 
 # Automation systems
 
-Main competitors: o9, Kinaxis, Rulex (used to be called Oxygen), some [[sap]] modules (?)
-
-> 🔥 ? I'm actually not sure if o9 tries to also compete with SAP, or whether they prefer to sit on top of it, and only compete with PS-specific modules of SAP. Also, it would be good to figure out how the market is structured by size. What solutions are primarily used by giant corporations, are there any good solutions for small business, and what's in-between.
+Main competitors: [[o9]], Kinaxis, Rulex (used to be called Oxygen), various [[sap]] modules (that are slowly falling out of favor)
 
 # Dictionary
 
-PS people really love abbreviations, so a short dictionary won't hurt:
+PS people really love abbreviations, so a short dictionary won't hurt. (See [[dictionary]] for a broader dictionary)
 
 * ERP - Enterprise Resource Planning (e.g. BlueYonder, [[sap]], Oracle SCM)
 * FTL - Full Truck Load
 * LTL - Less than Truck Load
+* S&OP - (sounds as SNOP) Sales and Operations Planning. Seems to be a generic term for any reasonable planning of operations that takes predicted sales into account :)
 * SCM - Supply Chain Management
 * TMS - Transportation Management System
+* TPM - Trade and Promotion Management software. Whatever system that is used to track promotions (may be SAP, but more often is not)
 * WMS - Warehouse Management System
 
 # Refs

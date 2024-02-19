@@ -28,17 +28,16 @@ Main queue
 * Add these "laws" that "most dangerous is 2nd" and "adding people doesn't help"
 * what is Python magic, properly explained? (add to [[oop]])
 * Decorators for classes (document)
+* GitHub "Continuous Winning" - is it some sort of a CI plugin?
+* Dependabot
+* greatexpectations
 * pyspark dataframes
-* Pydantic - a module (?) for data validation (also Pydantic-kedro - whatever it is?)
 * flake8 (linting)
 * mypy (type-checking), as well as default modules `typing` and `Annotated` (I'm assuming, mypy is probably build on top of them?)
 * pre-commit (is it a package for Python?)
 * mkdocs and mkdocstrings - for documentation
-* Diataxis - framework for document creation (?)
-* GitHub "Continuous Winning" - is it some sort of a CI plugin?
-* Dependabot
-* 📘Find opinions on the current state of DS and system engineering in PS
-* 📘Find books on DS in PS
+* 🌿Find opinions on the current state of DS and system engineering in PS
+* 🌿Find books on DS in PS
 * What techstack is o9 running on, internally? Is there any info on that online?
 * How to turn a Python repo into a pip package?
 * Poetry (an alternative to pip) - why it's needed, and how it works

@@ -1,9 +1,10 @@
 # Dictionary of Terms
 
-Not exhaustive: if a term is explained in one of the thematic chapters, it is not duplicated here. This list is only for "orphan" terms that are yet too short or off-topic to get a personal entry elsewhere.
+Not exhaustive: if a term is explained in one of the thematic chapters, it is not duplicated here. This list is mostly for "orphan" terms that are yet too short or off-topic to get a personal entry elsewhere.
 
-See also:
-* [[oop]] - has its own dictionary
+See also other topical dictionaries:
+* [[oop]] - has its own set of terms
+* [[product_supply]] - a list of idiosynratic terms that PS ppl really like
 
 
 # AB
