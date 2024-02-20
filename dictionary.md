@@ -151,7 +151,7 @@ See also other topical dictionaries:
 
 **Petri net** (math): a way to model discrete dynamic systems via a directed bipartite graph with 2 types of nodes: places and transitions. Tokens (agents?) can accumulate at places (states, circles), until a transition (bar) fires (consumes input tokens, and creates output tokens). Because of that, tokens inherently interact with each other. May be deterministic or not. [wiki](https://en.wikipedia.org/wiki/Petri_net)
 
-**Pickling** (development): dumping binary data into a database, to be loaded later, instead of processing it in some meaningful (human readable) way. In Python, may be used for serializing Python object structure. Better alternatives: parquet (for table data), [[json]] (for everything else)
+**Pickling** (development): dumping binary data into a database, to be loaded later, instead of processing it in some meaningful (human readable) way. In Python, may be used for serializing Python object structure. Better alternatives: [[parquet]] (for table data), [[json]] (for everything else)
 
 **Plotly Dash** (dev): A dashboard (interactive graphs and such) for Python and R. A bunch of JS rendered in browser, interacting with Python scripts that generate it via certain callbacks. These callbacks are put within the script in a certain way, and you can set (or know?) the functions the JS dashboard will call in Python when events happen in the dashboard, so you can define them, and thus process them.
 

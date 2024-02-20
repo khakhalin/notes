@@ -13,6 +13,7 @@ Highly formalized, open, collaborative product development framework framework f
 # Terms
 
 * **Story** - A single `to-do` item (basic unit of work) that can be done (or not)
+    * With a full formal process, story names have weird names of a format "As a <stakeholder type> I want <software feature> So that <business value>". There are some concerns about this format tho [^1] (and personally I find it ugly and ineffective, especially on small screens)
 * **Story points** - an integer number, roughly reflecting (non-linearly) the number of hours it would take to finish a task, but also novelty, associated risks, and a need for interaction. A sample scale could look like this:
     * 1: simple task, 1-2 hours
     * 2: clear, but some work, half a day (4 hours)
@@ -20,9 +21,9 @@ Highly formalized, open, collaborative product development framework framework f
     * 5: also needs some follow-ups or some pre-work, 2 days
     * 8: complex, somewhat novel, major point: 3 days
     * 13: about a limit of what 1 developer can commit to for 2 weeks, as some research, iterations, and follow-ups may be needed; blocking is possible. About 5 straight full days of work.
-    * Anything above is possible (say, 21 points for 10 days worth of pure work) definitely needs to be split into small pieces before it is accepted into a Sprint.
+    * 21: About 10 days of pure work, definitely needs to be split into small pieces before it is accepted into a Sprint.
     * All of this assumes an about 6-hours working day (which frankly, commenting from myself here, is not generous at all, considering that other scrum activities and development-related meetings probably consume at least 1 hour a day, on average, maybe closer to 2 hours a day!)
-    * The typical valuations form a Fibonacci sequence, to give them this exponential-ish curve, reflecting the actual perception of projects. And then the time grows even faster than the number of story points.
+    * The default valuations of story points form a Fibonacci sequence, to give them this exponential-ish curve, reflecting the actual perception of projects. And then the time grows even faster than the number of story points.
 * **Epic** - A subproject of the main project, or some type of an ongoing reason (linked to a target, kpi) to have the work done. Basically, a larger logical unit to house Stories.
 * **Backlog** - Like a target to-do list of product requirements. Includes features, bug fixes, non-functional requirements (topics like safety, security, usability, scalability etc.). Often described as use cases and "user stories". Visible to everyone, but only modified by the product/process owner. Ranked by by value to the customer and effort to implement (?), classified on a Fibonacci scale (??? 🔥)
 * **Burndown chart** - estimated amount of remaining work, in hours. Usually goes down, but can go up a bit sometimes.
@@ -40,8 +41,14 @@ Highly formalized, open, collaborative product development framework framework f
     * For all new `To do` items, the team agrees on effort estimations.
     * Stale and dead-end items are pruned: either moved to backlog and deprioritized, or moved to `Reject` (if this status is supported - not all teams support this status), or maybe even moved to `Done` (if it is no longer needed, as the issue was resolved in some other way?)
     * Individual stories (action points) are assigned to team members. There is a target of a certain number of story points per person (slightly less than 12 per week?), unless there are special circumstances, and this is used for planning. It's ok to leave some buffer for unexpected work.
-* **Sprint review** - discussing the results for the last sprint.
+* **Sprint review** - discussing the results for the last sprint. Is often split into "Achivements review" (sprint review proper) and "Technical review".
 * **Sprint retrospective** - not sure, but I think, discussing the overall scrum methodology, and whether the process needs to be improved?
 
 On top of it, there's the main regular daily meeting:
 * **Daily scrum** aka **Stand-up** - always starts on time, limited to 15 min, open to visitors. Each member shares their contribution from yesterday, their plan for today, and if there are any impediments (risks, blocks etc.) No detailed discussions - these are delegated to separate follow-up meetings.
+
+# Footnotes
+
+[^1]: About how "full-blown scrum" story names are weird:  https://blog.crisp.se/2014/09/25/david-evans/as-a-i-want-so-that-considered-harmful 
+
+# Refs

@@ -1,7 +1,8 @@
 # Data warehouse (aka Kimball vs Inmon)
 
 Parents: [[01_Tools]], [[database]]
-Related: [[nosql]]
+Children: [[medallion]], [[lakehouse]]
+See also: [[nosql]]
 
 #tools #db
 

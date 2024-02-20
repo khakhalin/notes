@@ -14,7 +14,7 @@ Access credentials (aka "secrets": logins and passwords) go to a special file `c
 
 Define your data sources in `conf/base/catalog.yml`, giving names to individual sources (even if these are just `csv` data files).
 
-Define data storage for intermediate results, also in this yaml file (typically, these are Parquet files, stored either locally or in blobs in the cloud). They are also meaningfully named, as these names will be used later in pipeline configuration. If an intermediate file is set as `versioning: true` then instead of being overwritten, the results of intermediate runs will be stored.
+Define data storage for intermediate results, also in this yaml file (typically, these are [[parquet]] files, stored either locally or in blobs in the cloud). They are also meaningfully named, as these names will be used later in pipeline configuration. If an intermediate file is set as `versioning: true` then instead of being overwritten, the results of intermediate runs will be stored.
 
 > There's something in the docs about how if you don't specify these files, these intermediate steps are still created in some shared space, but are then cleaned automatically, but I'm not sure if I got it right.
 

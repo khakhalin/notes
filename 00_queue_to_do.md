@@ -22,10 +22,7 @@ Books to read / skim:
 * https://christophm.github.io/interpretable-ml-book/ - really nice explanations of ML tricks
 
 Main queue
-* What happens if we do `@magic def bla:` or `@bla.overload def bla:` - that's not standard Python; needs to be investigated what it means in this project in particular
 * Add these "laws" that "most dangerous is 2nd" and "adding people doesn't help"
-* what is Python magic, properly explained? (add to [[oop]])
-* Decorators for classes (document)
 * GitHub "Continuous Winning" - is it some sort of a CI plugin?
 * Dependabot
 * greatexpectations
@@ -33,11 +30,14 @@ Main queue
 * flake8 (linting)
 * read a bit more on ideology of [[scrum]]
 * pre-commit (is it a package for Python?)
-* mkdocs and mkdocstrings - for documentation
+* Re-read and re-document all types of decorators (`@fun, @cls, @cls(params)`, and decorating both functions and classes)
+* Watch the rest of Normcore
+* Photon - some type of a vectorizer?
+* Data modeling, 3d-Normal-Form.
 * 🌿Find opinions on the current state of DS and system engineering in PS
 * 🌿Find books on DS in PS
 * What techstack is o9 running on, internally? Is there any info on that online?
-* How to turn a Python repo into a pip package?
+* How to properly turn a Python repo into a pip package?
 * Poetry (an alternative to pip) - why it's needed, and how it works
 * Read more about Databricks. Some short course if possible?
 * Read more on Docker
@@ -48,6 +48,7 @@ Main queue
 * SQLAlchemy - learn some basics
 * Hive data store
 * Describe the actual use of Pydantic in a sample project. What are the typical use cases? Can we guess motivation?
+* Read more from here: https://dataengineering.wiki
 * linear programming and mixed-integer programming - quickly review here. Like, if you have N factories, M stores, and costs associated - how do you optimize that? What if each store can only be sourced from one factory?
 * tree-based for time-series - best practices?
 * [[airflow]] (the very basics for now - like, what is it?)
