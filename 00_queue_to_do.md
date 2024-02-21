@@ -22,18 +22,21 @@ Books to read / skim:
 * https://christophm.github.io/interpretable-ml-book/ - really nice explanations of ML tricks
 
 Main queue
+* spark dataframes and what operations run well on them
+* pyspark dataframes
+* greatexpectations
+* flake8, black, isort (linting)
 * Add these "laws" that "most dangerous is 2nd" and "adding people doesn't help"
 * GitHub "Continuous Winning" - is it some sort of a CI plugin?
 * Dependabot
-* greatexpectations
-* pyspark dataframes
-* flake8 (linting)
 * read a bit more on ideology of [[scrum]]
 * pre-commit (is it a package for Python?)
 * Re-read and re-document all types of decorators (`@fun, @cls, @cls(params)`, and decorating both functions and classes)
 * Watch the rest of Normcore
 * Photon - some type of a vectorizer?
 * Data modeling, 3d-Normal-Form.
+* helm - what is it, how it works, some basics
+* Hadoop - only some very basics
 * 🌿Find opinions on the current state of DS and system engineering in PS
 * 🌿Find books on DS in PS
 * What techstack is o9 running on, internally? Is there any info on that online?

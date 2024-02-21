@@ -10,7 +10,7 @@ An open-source distributed event store and stream-processing platform. High-thro
 
 It was developed by Linkedin, written in Scala, and then donated to Apache.
 
-Kafka is a direct competitor to [[rabbitmq]]
+Kafka is a direct competitor to [[rabbitmq]]: allegedly, RabbitMQ is easier to set up, but Kafka scales better with volume.
 
 # Refs
 
