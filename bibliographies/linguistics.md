@@ -26,6 +26,8 @@ Visual kanji search:
 * https://kanji.sljfaq.org/ - a bit clunky, happens as you draw, links to wikipedia
 * https://www.japandict.com/kanjidraw - more modern, need to commit, gives first 10 guesses with EN translation
 
+* List of kigu-related seasonal greetings: https://blog.shiftasia.com/choose-the-right-email-greetings/
+
 # Chinese
 
 * A super-cool Hanzi dictionary: https://zi.tools/zi/米

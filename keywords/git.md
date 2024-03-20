@@ -79,6 +79,8 @@ Another DIY alternative is just to delete a branch at either local or remote end
 If there's a conflict, one has to cherrypick 🔥 
 A basic manual on cherry-picking  in a terminal:  https://docs.gitlab.com/ee/topics/git/cherry_picking.html
 
+Note also that unlike for `rebase` (below), merging branch1 into branch2 with a simple command doesn't exist! You can technically do it by providing an `--into-name <branch2>` command, but it's not just two branches in a row! And anyways it's advisable to always first switch to the branch you are merging to. if you just run (incorrectly!) "merge branch1 branch2" you will attempt to merge BOTH branches onto the current branch!!
+
 # Rebase (a slightly dangerous practice) 🔥
 `git rebase [target_branch] <source_branch>` - recommits new commits from the source branch (or the current branch, if the source_branch is not specified), to the end of the target branch; then moves HEAD to the end. As if you were taking a fresh set of commit and changed the "base" on which they are grafted. Supposedly the typical workflow for rebase is the following: you're working on feature A; people have developed and merged feature B in master. So now you want to catch up. You do:
 ```git

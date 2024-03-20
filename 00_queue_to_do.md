@@ -22,21 +22,42 @@ Books to read / skim:
 * https://christophm.github.io/interpretable-ml-book/ - really nice explanations of ML tricks
 
 Main queue
-* spark dataframes and what operations run well on them
-* pyspark dataframes
+* Pyspark
+    * ```.withColumn(colname, F.when(F.col("name")=='something', 1).otherwise(0))```
+    * `.where`, `.when`
+    * grouping and aggregation
 * greatexpectations
-* flake8, black, isort (linting)
+* tweedie objective function? More emphasis on big values?
+* aggregated mape and bias - what are they, and why they in particular?
+* Hyperopt library
+* pyarrow - something that is needed to configure spark to run quickly
+* Polars - what is it?
+* Data modeling, 3d-Normal-Form
+* flake8, black, isort (all three are some sort of linters?)
 * Add these "laws" that "most dangerous is 2nd" and "adding people doesn't help"
-* GitHub "Continuous Winning" - is it some sort of a CI plugin?
 * Dependabot
+* Hive
+* A statement that hive had problems with concurrency and granularity, and Hudi and Iceberg are better
+* Delta Lake and Delta Tables (Databricks format?)
+* Trino, Starburst
 * read a bit more on ideology of [[scrum]]
 * pre-commit (is it a package for Python?)
-* Re-read and re-document all types of decorators (`@fun, @cls, @cls(params)`, and decorating both functions and classes)
-* Watch the rest of Normcore
-* Photon - some type of a vectorizer?
-* Data modeling, 3d-Normal-Form.
+* MlFlow - read some more to feel more comfortable
+* What does the word "artifact" mean, in the context of MlFlow and deployment?
 * helm - what is it, how it works, some basics
+* Re-read and re-document all types of decorators (`@fun, @cls, @cls(params)`, and decorating both functions and classes)
+* Read about the Prophet model (what's inside, how does it typically perform?)
+* Watch the rest of Normcore
+* optuna (?) - some Bayesian way to do hyperparameter tuning
+* Photon - some type of a vectorizer?
 * Hadoop - only some very basics
+* Apache ServiceMix - apparently an OS data exchange smth?
+* Open ESB - an alternative for SAP? (ESB = Entreprise Service Bus)
+* Mulesoft Anypoint
+* Boomi Flow
+* Spring Cloud
+* Vert.x
+* CKAN
 * 🌿Find opinions on the current state of DS and system engineering in PS
 * 🌿Find books on DS in PS
 * What techstack is o9 running on, internally? Is there any info on that online?
@@ -46,7 +67,6 @@ Main queue
 * Read more on Docker
 * pytest - read some manual on it, document?
 * Re-read Google code guidelines: https://google.github.io/styleguide/pyguide.html
-* Is Python currently considered a decent language for large abstract data projects? What are the alternatives?
 * Rulex training
 * SQLAlchemy - learn some basics
 * Hive data store

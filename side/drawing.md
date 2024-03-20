@@ -38,6 +38,10 @@ Resources:
 
 * https://drawabox.com - up to organic perspective, 250 boxes, 250 cylinders
 
+# Nature and architectural sketching
+
+* https://www.youtube.com/@stephentraversart/playlists - freehand pen drawing
+
 # Anatomy
 
 ## Head

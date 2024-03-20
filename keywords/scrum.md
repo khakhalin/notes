@@ -12,6 +12,7 @@ Highly formalized, open, collaborative product development framework framework f
 
 # Terms
 
+* **Sprint** - basic unit of develpment; typically 1-2 weeks.
 * **Story** - A single `to-do` item (basic unit of work) that can be done (or not)
     * With a full formal process, story names have weird names of a format "As a <stakeholder type> I want <software feature> So that <business value>". There are some concerns about this format tho [^1] (and personally I find it ugly and ineffective, especially on small screens)
 * **Story points** - an integer number, roughly reflecting (non-linearly) the number of hours it would take to finish a task, but also novelty, associated risks, and a need for interaction. A sample scale could look like this:
@@ -26,8 +27,9 @@ Highly formalized, open, collaborative product development framework framework f
     * The default valuations of story points form a Fibonacci sequence, to give them this exponential-ish curve, reflecting the actual perception of projects. And then the time grows even faster than the number of story points.
 * **Epic** - A subproject of the main project, or some type of an ongoing reason (linked to a target, kpi) to have the work done. Basically, a larger logical unit to house Stories.
 * **Backlog** - Like a target to-do list of product requirements. Includes features, bug fixes, non-functional requirements (topics like safety, security, usability, scalability etc.). Often described as use cases and "user stories". Visible to everyone, but only modified by the product/process owner. Ranked by by value to the customer and effort to implement (?), classified on a Fibonacci scale (??? 🔥)
+* **DoD** - "Definition of Done", the completion criteria (not just the code, but maybe also testing, certain actions on the repo, documentation, scrum actions)
 * **Burndown chart** - estimated amount of remaining work, in hours. Usually goes down, but can go up a bit sometimes.
-* **Sprint** - basic unit of develpment; typically 1-2 weeks.
+
 
 # The process
 

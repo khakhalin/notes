@@ -12,8 +12,10 @@ There are several ways to install packages in Python:
 
 When different python packages (like Tensorflow vs Pytorch) have conflicting requirements on versions of everything, we can isolate them in different environments. Conda can create its environments itself; for pip it's possible to use some weird tools (venv?), but it's better to just do pip within a decidated conda environment.
 
+* List all environments: `conda info --envs`
 * Create an environment for a package: `conda create -n NAME PACKAGE`. For example `conda create -n tf tensorflow-gpu`
-* Switch: `conda activate NAME`.
+* Switch: `conda activate NAME`
+* Rename: `conda rename -n old_name new_name`
 * To go to base: `conda deactivate`
 
 **Jupyter** doesn't seem to be aware of conda environments by default, although apparently it is possible to hack it. Because of that, for now, I'll probably forgo environments. Even though not being able to easily make backup version of a conda state is a pain. _Maybe I can still use environments like that, tho? Like, make a copy of base, them mofidify base, then if it doesn't work, copy from the backup version back to base?_
