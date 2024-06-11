@@ -3,7 +3,7 @@
 A popular Python library for data flow validation.
 
 Parents: [[python]], [[data_cleaning]]
-See also: [[mypy]], [[kedro]]
+See also: [[mypy]], [[kedro]],  [[oop]]
 
 #validation #python
 

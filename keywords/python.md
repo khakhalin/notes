@@ -8,16 +8,18 @@ Random notes on Python.
 
 
 Subtopics and related:
-* [[oop]] - OOP, entirely Python-specific for now. Functions, scope, [[decorators]]
+* [[oop]] - OOP very Python-specific for now. Exclusively Python topics include:
+    * [[decorators]] - how to write them in Python
 * Common packages:
     * The holy triad: [[numpy]], [[pandas]], [[matplotlib]]
     * [[py_dates]], [[regex]] - core utils
-    * [[mypy]] - linting
-    * [[sklearn]], [[tensorflow]] - DL
-    * [[flask]] - http interfaces
-    * [[logging]] - system utils
+    * [[logging]] - subj (logging)
+    * [[mypy]], [[pydantic]] - typing
+    * [[linting]] - common packages for Python linting
+    * [[sklearn]], [[tensorflow]] - DS
+    * [[flask]], [[spark]], [[kedro]] - DE
     * [[environments]] - conda, pip
-    * [[jupyter]]
+    * [[jupyter]] - notebooks
 * [[unit_test]] - how to write unit tests correctly (in Python) 
 
 # Sets
@@ -116,15 +118,16 @@ finally:
 ```
 # With
 
-Sometimes can be seen as an alternative to `try - except - finally`. Relies on the fact that many objects are shipped with methods `__enter__` and `__exit__`: one to create an object, set it up, and return the instance; the other one to gracefully clean up after the sensitive operation is performed. `__exit__` typically (or always?) doesn't delete the object, so the object can be referenced after the "with construction" is over. Even if the "with" part itself is empty, by that time three methods would have been executed: init, enter, and exit, in this order.
-
-In practice, I most often see it used with files, and deep learning objects (TF and Pytorch).
+Is typically used with contexts and sessions. The approach relies on the fact that the corresponding object has methods `__enter__` and `__exit__`: one to set it up and return the instance; the other one to gracefully clean up aftewarderds. `__exit__` doesn't delete the object, so the object can be referenced after the `with` is over. Even an empty `with` part would execute three methods on an object: `init`, `enter`, and `exit`, in this order.
 
 Typical use case:
 ```python
 with Thing() as t:
     t.do_something()
 ```
+A more rare use is one without `as` statement, but it's ok for context objects. In this case `with` still runs `enter` on the context object, so you can make it `active`. Then if you operations inside the `with` block reach out for the context object in some way, they will "find it" in this active state. But it won't happen automatically, by magic: you need to write the `enter` and `exit` methods properly, and then the content of the block should be actively context-dependent, to benefit from this syntax.
+
+Sometimes can also be seen as an alternative to `try - except - finally`.
 
 **Refs:**
 * 2006 intro: https://effbot.org/zone/python-with-statement.htm

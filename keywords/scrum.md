@@ -22,8 +22,8 @@ Highly formalized, open, collaborative product development framework framework f
     * 5: also needs some follow-ups or some pre-work, 2 days
     * 8: complex, somewhat novel, major point: 3 days
     * 13: about a limit of what 1 developer can commit to for 2 weeks, as some research, iterations, and follow-ups may be needed; blocking is possible. About 5 straight full days of work.
-    * 21: About 10 days of pure work, definitely needs to be split into small pieces before it is accepted into a Sprint.
-    * All of this assumes an about 6-hours working day (which frankly, commenting from myself here, is not generous at all, considering that other scrum activities and development-related meetings probably consume at least 1 hour a day, on average, maybe closer to 2 hours a day!)
+    * 21: About 10 days of work, definitely needs to be split into small pieces before it is accepted into a Sprint.
+    * All of this assumes an about 6-hours working day (which frankly, commenting from myself here, is not generous at all, considering that other scrum activities and development-related meetings probably consume at least 1 hour a day, on average, maybe closer to 2 hours a day!) The capacity of one person in story points, for 2 weeks, is assumed to be 26.
     * The default valuations of story points form a Fibonacci sequence, to give them this exponential-ish curve, reflecting the actual perception of projects. And then the time grows even faster than the number of story points.
 * **Epic** - A subproject of the main project, or some type of an ongoing reason (linked to a target, kpi) to have the work done. Basically, a larger logical unit to house Stories.
 * **Backlog** - Like a target to-do list of product requirements. Includes features, bug fixes, non-functional requirements (topics like safety, security, usability, scalability etc.). Often described as use cases and "user stories". Visible to everyone, but only modified by the product/process owner. Ranked by by value to the customer and effort to implement (?), classified on a Fibonacci scale (??? 🔥)

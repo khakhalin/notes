@@ -26,6 +26,9 @@ Main queue
     * ```.withColumn(colname, F.when(F.col("name")=='something', 1).otherwise(0))```
     * `.where`, `.when`
     * grouping and aggregation
+* yaml
+* What are the differences between conda, pip, and miniforge, in practice?
+* watch some jira tutorial at some point
 * greatexpectations
 * tweedie objective function? More emphasis on big values?
 * aggregated mape and bias - what are they, and why they in particular?
@@ -34,6 +37,7 @@ Main queue
 * Polars - what is it?
 * Data modeling, 3d-Normal-Form
 * flake8, black, isort (all three are some sort of linters?)
+* kedro - why, how, and what can it do for me?
 * Add these "laws" that "most dangerous is 2nd" and "adding people doesn't help"
 * Dependabot
 * Hive

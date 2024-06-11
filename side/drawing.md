@@ -27,7 +27,7 @@ Resources:
     * https://www.photo-reference-for-comic-artists.com/
     * https://www.3d.sk/site/models
     * https://www.characterdesigns.com/
-    * https://www.deviantart.com/theposearchives
+    * https://www.deviantart.com/theposearchives - they also have cool insta
     * https://www.deviantart.com/jookpubstock
 * Video references:
     * https://www.bodiesinmotion.photo/
@@ -38,7 +38,7 @@ Resources:
 
 * https://drawabox.com - up to organic perspective, 250 boxes, 250 cylinders
 
-# Nature and architectural sketching
+# Nature and architecture
 
 * https://www.youtube.com/@stephentraversart/playlists - freehand pen drawing
 
@@ -64,6 +64,10 @@ Resources:
 ## General
 
 * Anatomy tips from Sinix Design: https://www.youtube.com/watch?v=IVbqoy_JEV0&list=PLflflDShjUKH4EfZyf0vuKEuqeqvlV0Qd
+
+## Animals
+
+* https://x6ud.github.io/#/ - show a head of any animal at any angle
 
 # Dynamic sketching
 

@@ -33,12 +33,14 @@ Activate a certain environment: `source activate env_name`. "activate" is actual
 
 ## PIP
 
-* Install: `pip install NAME==version`
-* Remoe: `pip uninstall NAME`
+* `pip install NAME==version` - install
+* `pip install NAME --upgrade` - upgrade
+* `pip uninstall NAME` - remove
+* `pip list` - see all versions
 
-For Windows GPU work, do something like `pip install tensorflow-gpu==2.2.0`. (Though it defaults to the highest possible value anyways). Conda usually lags behind PIP by a few releases, and it's harder to satisfy its stricter 
+# GPU-related tuning
 
-# CUDA and technical stuff
+For Windows GPU work, do something like `pip install tensorflow-gpu==2.2.0`. (Though it defaults to the highest possible value anyways). Conda usually lags behind PIP by a few releases, and it's harder to satisfy it. 
 
 To check if CUDA is installed, and if it sees GPU, on conda, do `numba -s`, then scroll to the top (where hardware is described).
 

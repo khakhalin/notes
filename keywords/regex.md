@@ -18,6 +18,7 @@ In Python, package `re`, but is also supported by Pandas (see [[pandas]]).
 * `(a)` - letter "a" found, and captured to the output
 * `(?:a)` - letter "a" detected
 * `(ba)+` - a sequence "ba", repeated any number of times, and captured to the output
+* `(one|two)` - either of these words
 * `.` - any one symbol (except the newline symbol)
 * `[abc]` - any symbol from this set, once. Combine with `?+*` to regulate how many times these symbols need to be matched. For example `[abc]+` would match `cccb`
 * `[^abc]` - any symbol except these
