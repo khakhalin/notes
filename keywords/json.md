@@ -1,5 +1,8 @@
 # JSON
 
+Parents:
+See also: [[yaml]]
+
 #stub
 
 

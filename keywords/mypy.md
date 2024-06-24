@@ -1,12 +1,12 @@
 # Type-hinting and -checking in Python
 
-Parent: [[python]], linting
-See also:
+Parent: [[python]]
+See also: [[pydantic]], [[linting]]
 
 #python
 
 
-As of Python 3.5, one can add type hints when setting variables and defining functions, and then potentially check the consistency of these hints with a special linter (`mypy`, see below) before script execution. Some of this type hinting is now built-in basic Python, some needs to be imported from the `Typing` module. Let's start with some basic functionality. You can do:
+As of Python 3.5, one can add type hints when setting variables and defining functions, and then potentially check the consistency of these hints with a special linter (`mypy`, see below) before script execution. Some of this type hinting is now built-in basic Python, others needs to be imported via `from typing import`. Let's start with some basic functionality. You can do:
 ```python
 age: int = 1 # typing at first assignment 
 height: int  # if declared by not assigned (e.g. class properties)

@@ -15,6 +15,11 @@ Subtopics:
 * [[refactoring]] - how to refactor
 * [[logging]] - (how to log, mostly in [[python]])
 
+Languages:
+* [[python]]
+* [[javascript]]
+* [[julia]]
+
 # Code smell (bad practices)
 
 Types of smells:

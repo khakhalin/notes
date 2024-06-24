@@ -26,7 +26,6 @@ Main queue
     * ```.withColumn(colname, F.when(F.col("name")=='something', 1).otherwise(0))```
     * `.where`, `.when`
     * grouping and aggregation
-* yaml
 * What are the differences between conda, pip, and miniforge, in practice?
 * watch some jira tutorial at some point
 * greatexpectations
@@ -55,6 +54,7 @@ Main queue
 * optuna (?) - some Bayesian way to do hyperparameter tuning
 * Photon - some type of a vectorizer?
 * Hadoop - only some very basics
+* [[sqlalchemy]]
 * Apache ServiceMix - apparently an OS data exchange smth?
 * Open ESB - an alternative for SAP? (ESB = Entreprise Service Bus)
 * Mulesoft Anypoint

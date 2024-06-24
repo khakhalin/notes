@@ -38,7 +38,7 @@ If any extra parameters are needed, add this after `builder`:
 
 Main object: Spark DataFrame, created with `spark.createDataFrame()`, from a list of `(key, value)` tuples (NOT a dict as for [[pandas]]). Keys here correspond to columns. The schema for the data may be both implicit (derived from the data on dataframe creation), or explicit. 
 
-One can also create a Spark df from a Pandas df; that may be a good approach if you absolutely need to create a dataframe it from a dictionary.
+One can also create a Spark df from a Pandas df, which in practice may be the best approach if you need to quickly create a small dataframe.
 
 To open some data into a dataframe:
 * `spark.read.parquet('filename')` (or `.csv`, or some other formats)
@@ -76,7 +76,7 @@ Footnotes:
 * `withColumnRenamed('old_name', 'new_name')` - renames a column
 * `withColumn('name', lit(None))` - adds an empty column. Using `lit(0)` will add you a column of zeros etc. You cannot specify different values here; if you manage to pass an iterable inside `lit()`, you'll just get this iterable as the same value in every row.
 
-`.some_column_name` returns an object of "Column" type, similar to how in [[pandas]] it returned a series. But it's not yet the data itself, as the execution is lazy! It's not even an iterable somehow, and there seems to be no easy way to iterate thrown values of a column; most recommended solutions either collect the entire dataframe first, and iterate by rows, picking the proper column from each row, or even worse, cast the entire thing to Pandas.
+`.some_column_name` returns an object of "Column" type, similar to how in [[pandas]] it returned a series. But it's not yet the data itself, as the execution is lazy! It's not even an iterable, and there seems to be no easy way to iterate thrown values of a column (as values within a dataframe are not ordered!). If you need to iterate, you have to either collect (eagerly calculate) the entire dataframe, and then iterate by rows, picking the proper column from each row, or cast the entire thing to Pandas.
 
 ## Concatenations
 
@@ -143,9 +143,9 @@ Borrowed from Pandas: apparently, the most flexible approach. `@pandas_utf` is a
 * `.histogram(n_bins)` - apparently builds a historgram (🔥 should it be run on a column?)
 * Define a function on a pandas_df that runs aggregation methods on columns (`.mean()`, `.sum()` etc.), then apply this function using `applyInPandas`. Because Spark df is grouped, once it pretends to be pandas-like, these aggregation functons will work.
 
-# SQL interface
+# SQL query interface
  
-Instead of using ORM-style methods, one can also use [[sql]] on Spark DFs!
+Instead of relying on ORM-style methods, one can also use [[sql]] queries on Spark DFs:
 ```python
 df.createOrReplaceTempView('mytable') # This creates a view / interface
 spark.sql("SELECT count(*) from mytable") # You get a df!

@@ -1,6 +1,10 @@
 # Scrum
 
+Parents: management?
+See also: jira, azure do
+
 #tools #lifehack #management
+
 
 Highly formalized, open, collaborative product development framework framework for small or medium-sized teams. Iterative, incremental, team-centered.
 
@@ -48,6 +52,12 @@ Highly formalized, open, collaborative product development framework framework f
 
 On top of it, there's the main regular daily meeting:
 * **Daily scrum** aka **Stand-up** - always starts on time, limited to 15 min, open to visitors. Each member shares their contribution from yesterday, their plan for today, and if there are any impediments (risks, blocks etc.) No detailed discussions - these are delegated to separate follow-up meetings.
+
+# Technical solutions
+
+Common platforms:
+* Jira
+* Azure DevOps, aka ADO
 
 # Footnotes
 

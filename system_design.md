@@ -1,6 +1,7 @@
 # System Design
 
 Parents: [[01_Tools]]
+See also: [[design_docs]]
 
 Subtopics:
 * [[streaming]] - Message queues and message brokers

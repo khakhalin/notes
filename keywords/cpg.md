@@ -1,6 +1,6 @@
 # CPG: Central Pattern Generator
 
-Parents: ?
+Parents: [[neuro]]
 
 stub
 

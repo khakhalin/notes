@@ -10,6 +10,7 @@ Subtopics:
 Technical writing:
 * [[diataxis]] - supposely, an important mindset for writing technical documentation
 * [[mkdocs]] - a tool for creating static documentation sites
+* [[design_docs]] - using writing to design systems
 
 # Resources
 
@@ -17,7 +18,7 @@ Larry McEnerney on writing (potentially two best videos on post-academic writing
 * https://www.youtube.com/watch?v=aFwVf5a3pZM - Larry McEnerney (University of Chicago Writing Program), on writing outside academia
 * https://www.youtube.com/watch?v=vtIzMaLkCaM - seems like either the same talk on a different day, or a somewhat more academic-oriented version of it. This one seems to have a section on reflective writing, inward-oriented writing (writing for thinking, [[zettelkasten]]-style) as well, not only on outward-facing, reader-oriented writing, as is the case for the first talk. A great inspirational video to watch before writing anything.
 
-# Good Examples of academic(ish) writing
+# Good Examples of academic writing
 
 Haldane, J. B. (1926). On being the right size. _Harper’s magazine_, _152_, 424-427.
 http://www.phys.ufl.edu/courses/phy3221/spring10/HaldaneRightSize.pdf
