@@ -3,12 +3,12 @@
 A popular Python library for data flow validation.
 
 Parents: [[python]], [[data_cleaning]]
-See also: [[mypy]], [[kedro]],  [[oop]]
+See also: [[mypy]], [[kedro]],  [[oop]], [[sqlalchemy]]
 
 #validation #python
 
 
-Pydantic is a model for data processing / data flow validation: it does not analyze the data itself, but the validity and consistency of transformations applied to the data. The process is based on importing `BaseModel` from `pydantic`, and then creating a bunch of subclasses for this model, with typed (see [[mypy]]) parameters representing fields (and maybe also describing default values). For example:
+Pydantic is a data flow / data model validation tool: it does not analyze the data itself, but checks the validity and consistency of transformations applied to objects that carry this data. The process is based on importing `BaseModel` from `pydantic`, and then creating a bunch of subclasses inheriting to this model, with typed (see [[mypy]]) parameter fields (maybe also describing allowed values). Once this is done, Pydantic can check whether complex hierarchical [[json]]-like structures that are passed via APIs between different parts of your code are consistent, and match the existing schema. For example:
 
 ```python
 from pydantic import BaseModel
@@ -22,11 +22,15 @@ class Person(BaseModel):
     profession: List[Profession]
     gender: Optional[str] = None
 ```
->  Pydantic consistently uses the word "model" to describe the data schema (say, by having this word in the names of its methods, as in `.model_dump()`), which may be confusing in practice. In a team with more DEs than DSs, the default meaning of the word "model" will inevitably shift from ML models to Pydantic data models.
+>  Pydantic consistently uses the word "model" to describe the data schema (say, by having this word in the names of its methods, as in `.model_dump()`), which may sometimes be confusing. In a team with more DEs than DSs, the default meaning of the word "model" will inevitably shift from ML models to Pydantic data models.
 
-If classes are introduced out of order (that is, we need to reference a data class before it was defined), then we have to reference them as strings, by name (e.g. `'Profession'`, same as it was the case for [[mypy]]). And then once they are finally loaded, we need to call `Person.model_rebuild()` on the model that references them, to turn these strings to real references.
+If classes are introduced out of order (that is, we need to reference a data class before it was defined), we have to reference them as strings, by name (e.g. `'Profession'`, same as it is the case for [[mypy]]). Once they are finally loaded, we need to call `Person.model_rebuild()` on the model that references them, to turn these strings to real references.
 
-Once you actually have classes with fields, you can validate them using this Pydantic model: it will check if all the promised fields are indeed provided: `Person.model_validate(anna)`. If validation fails, Pydantic raises `ValidationError`.
+Once you actually have classes with fields, you can validate them using this Pydantic model to will check if all the promised fields are indeed provided: `Person.model_validate(anna)`. If validation fails, Pydantic raises `ValidationError`.
+
+Finally, Pydantic is a popular tool for serializing [[oop]] structures (see below).
+
+Apparently it's particularly popular with web-interfaces (like FastAPI for example), as it integrates well, and can both validate and fix (somewhat) inputs from forms.
 
 # Model-building
 
@@ -52,7 +56,7 @@ Once you actually have classes with fields, you can validate them using this Pyd
     * `max_digits`, `decimal_places` - for floats only
 * For strings:
     * `min_length=3`, `max_length=10` - subj
-    * `pattern=r'^\d*s'` - regexp
+    * `pattern=r'^\d*s'` - [[regex]]
 * For objects:
     * `init`, `init_var`, `kw_only` - not sure 🔥
 * Other

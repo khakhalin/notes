@@ -43,6 +43,8 @@ Todo:
 
 The concept of a **detached HEAD**: when HEAD points to an old commit. In this situation you cannot commit anything, as there's no branch to commit to (committing can only be done to the end of a branch). You can however create a new branch form this point in the past, and commit to it. Typically, you do: `git checkout HEAD~1` (or whatever number of commits that you want to go back), and then once you travel back in time, create a branch. Alternatively, `git checkout <commit_id>`, where commit ids can be taken from `git log`.
 
+To return to the present after traveling to the past with `git checkout HEAD~1`, type `git switch -`.
+
 To go back, just do `git switch master` (or some other branch) - and it will reset HEAD to the latest commit.
 
 To clone a remote branch that doesn’t yet exist locally, do this:
@@ -85,7 +87,7 @@ Now your feature branch is ahead of master on your commits. And when it's time t
 
 The pluses and minuses of rebase (compared to Merge):
 * Good: it makes history linear, and thus clear, as there's no branching and merging. Say, if a month ago you created a side-project file in a side branch, and nobody touched it since, but kept working on the main thing, there's no need in merging this file in; you can as well just recommit it on top of master (rebase).
-* Good: allows code clean-up (via interactive rebase and commit squishing)
+* Good: allows code clean-up (via interactive rebase and commit squashing)
 * Bad: unlike for merging, commits are not inhereted, but are committed anew, and if branching was conceptually important, the history of it will be lost. Even worse, if b1 is rebased onto b2, and then b2 is merged back to b1, then all commits in b1 will get duplicated (they will be first  recommitted to b2 as new commits during rebasing, but then merged back).
     * "Always merge" may be a messy option, but it's the safest one for unexperienced teams ([ref](https://www.atlassian.com/git/articles/git-team-workflows-merge-or-rebase))
     * For example, it means that new commits in master should never be introduced into a development branch using rebase, as it would duplicate them. Rebase is only tolerable if commits are moved from "more temporary" branches towards "less temporary", or it will result in a horrible mess.
@@ -121,7 +123,7 @@ Footnotes:
 * `git reset --soft HEAD^` - returns git to the stage before last commit. Here `HEAD^` signifies last commit, as is it synonimous to `HEAD~1`. You can also use any other commit as the target. All files that were changed since that commit become staged
 * `git reset` - default mode of reset is `mixed`, which is not destructive (as in `hard`), but unlike `soft`, doesn't automatically stage files that were changed since that commit. Which means that it may be easier to lose them. If commit isn't specified, it just resets the last commit.
 * `git commit --amend` - equivalent to soft reset to `HEAD~` (the parent of current `HEAD`), following by a new commit. Essentially, rewrites last commit with updated content
-    * To squish several commits (before they are pushed to the repo of course), reset by `HEAD~2` (or whatever a good number it), and recommit them all together with a good message. Be careful not go beyond the latest pushed commit though, or you'll get a weird conflict on your hands...
+    * To squash several commits (before they are pushed to the repo of course), reset by `HEAD~2` (or whatever a good number it), and recommit them all together with a good message. Be careful not go beyond the latest pushed commit though, or you'll get a weird conflict on your hands...
 * `git rebase -i HEAD~3` - squash last 3 commits into one, interactively. **Do it only for commits that weren't pushed yet!!** or you'll get a conflict with a remote repo, unless you're morally prepared to fix everything locally and force-push to origin, rewriting it (which is typically forbidden anyway). "Interactively" here means that a list of commits is generated, and you leave `pick` for those you want to leave; replace it with `drop` for those you want to delete, and `squash` for those that needs to be squashed (just make sure there's a 'pick' before it, for somewhere to squash to). This workflow is a reason why we shouldn't push to public repo too often (don't push micro-commits); wait until a reasonable piece of work is done, **clean the commits**, then push. [1](https://git-scm.com/docs/git-rebase#_interactive_mode), [2](https://medium.com/@porteneuve/getting-solid-at-git-rebase-vs-merge-4fa1a48c53aa)
 * `git restore [file]` - restore a file in the current tree from another tree or commit. Doesn't update the branch. In the past was homonymous with branch changing (both used the `checkout` keyword).
 * `git revert HEAD~3` - make a new commit that reverts changes in fourth last (3d with zero indexing) commit.
@@ -133,14 +135,14 @@ If a branch is screwed-up beyond recognition, you have two options:
 Cherry-picking: check the history of commits, either using `git log` or looking at the commits graph online ([[github]] calls it "Network" for some reason). Every commit comes with a hashcode, or commit id that looks something like `1a23bc45`. 
 * `git cherry-pick <commit_id>` copies and applies an individual commit from another branch. If there's a merge conflict, you'll get stopped before the merge, but with all the changes brought over, and staged. The same commit message is applied as in the original commit.
 * `git cherry-pick <commit_id> -e` - same, but asks you to change commit message
-* `git cherry-pick <commit_id> -n` - bring the changes over, but without committing them, so that you could commit them manually later. When fixing stuff, especially when there are several commits to bring over, that's the best option actually, as it allows to accumulate several changes, then commit them all at once. Something like cherry-picking and squishing at the same time!
+* `git cherry-pick <commit_id> -n` - bring the changes over, but without committing them, so that you could commit them manually later. When fixing stuff, especially when there are several commits to bring over, that's the best option actually, as it allows to accumulate several changes, then commit them all at once. Something like cherry-picking and squashing at the same time!
 
 Footnotes:
 * Some recommendations on cherrypicking (but not too detailed tbh) https://docs.gitlab.com/ee/topics/git/cherry_picking.html
 
 # Common work patterns
 
-* https://blog.carbonfive.com/2017/08/28/always-squash-and-rebase-your-git-commits/ - before merging a feature into main, manually squish commits with `git rebase -i HEAD~[NUMBER OF COMMITS]` or `git rebase -i [SHA]`, then pull main, rebase branch on main (with `checkout branch_name; rebase main`), then resolve conflicts, merge into main, and push. The weird thing about this workflow is that after squishing the local branch becomes incompatible with remote branch, so one has to either force push, or duplicate branch locally. Which may get annoying if merging gets delayed by extra work, for whatever reason.
+* https://blog.carbonfive.com/2017/08/28/always-squash-and-rebase-your-git-commits/ - before merging a feature into main, manually squash commits with `git rebase -i HEAD~[NUMBER OF COMMITS]` or `git rebase -i [SHA]`, then pull main, rebase branch on main (with `checkout branch_name; rebase main`), then resolve conflicts, merge into main, and push. The weird thing about this workflow is that after squashing the local branch becomes incompatible with remote branch, so one has to either force push, or duplicate branch locally. Which may get annoying if merging gets delayed by extra work, for whatever reason.
 
 # Setting things up
 

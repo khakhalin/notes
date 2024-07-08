@@ -194,7 +194,7 @@ Footnotes:
 **Applying  arbitrary functions to every element of a column**
 Several options here:
 * **map**: `df.x = df.x.map(@function)`. For one-liners, works well with lambda notation. 
-* `df.apply(@fun, axis=1)`, and it appears that with it one can write a function that is applied to every row of a dataframe (see chaining advice below).
+* `df.apply(@fun, axis=1)`- then write a `fun` function to be applied to every row of a dataframe, taken as a series (see chaining advice below).
 
 **Creating a new column from old columns:**
 There are least 6 different ways to do it, listed here from (arguably) best to worst:

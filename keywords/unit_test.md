@@ -24,7 +24,7 @@ assert isinstance(y, (np.ndarray, np.generic))
 assert expected_value == pytest.approx(x, rel=1e-3)
 assert np.allclose(xhat, x, atol=1e-5)
 ```
-Here `np.allclose()` is a cool [[numpy]] function that tests of all elements in two array-like variables are close to each other, within a certain relative and/or absolute error (given by parameters with default values `rtol=1e-05, atol=1e-08,`)
+Here `np.allclose()` is a cool [[numpy]] function that tests of all elements in two array-like variables are close to each other, within a certain relative and/or absolute error (given by parameters with default values `rtol=1e-05, atol=1e-08,`).
 
 To test that some function raises an exception when it should raise an exception, do this ([ref](https://stackoverflow.com/questions/23337471/how-to-properly-assert-that-an-exception-gets-raised-in-pytest)):
 ```python

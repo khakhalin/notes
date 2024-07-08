@@ -4,7 +4,6 @@ Parent: [[python]]
 
 #tools
 
-
 There are several ways to install packages in Python:
 * **conda** installs packages written in any language. Makes sure there are no conflicts using a "Satisfiability Solver".
 * **pip** installs python packages. Installs in an "overwrite" mode: recursively installs all downstream dependencies, but doesn't look for overall consistency.
@@ -22,6 +21,18 @@ When different python packages (like Tensorflow vs Pytorch) have conflicting req
 
 ## Conda
 
+Conda may come with:
+* `anaconda` - huge set of tools, too much typically. Beginners like it tho.
+* `miniconda` - minimal conda installer from the Anaconda team, which means that some parts of it may conflict with commercial use; there was some weird ToS change at some point.
+* `miniforge` - another minimal conda installer, this one community-driven and free. May have a slightly lower cross-platform support tho.
+
+Environments:
+* `conda activate env_name` - activate an environment
+* `conda env list` - list environments
+* `conda create -y -n env_name python=3.9` - one useful sequence. `-y` means that for this environment all conda-related dialogues will be set to "default yes" mode, when user doesn't have to confirm their commands.
+* `conda env remove -n env_name` - removes environment
+
+Packages:
 * List all packages: `conda list`
 * Find all available versions of a certain package: `conda search NAME` (same for core python)
 * Figure out which one is installed: `conda list NAME`
@@ -29,14 +40,13 @@ When different python packages (like Tensorflow vs Pytorch) have conflicting req
 
 Never do `update all`, or it can ruin your TF installation. Only upgrade point-by-point, and give up easily if any risky conflicts emerge. It's a house of cards.
 
-Activate a certain environment: `source activate env_name`. "activate" is actually a tiny bash script sitting in the same folder as python and conda, that runs `conda.sh` properly.
-
 ## PIP
 
 * `pip install NAME==version` - install
 * `pip install NAME --upgrade` - upgrade
 * `pip uninstall NAME` - remove
 * `pip list` - see all versions
+* `pip install -e ".[devel]"` - when run from a [[git]] repo, installs this repo as a package in developer mode (with code references linked to the repo 🔥 ??)
 
 # GPU-related tuning
 

@@ -7,6 +7,7 @@ Subtopics:
 * [[solid]] - core principles
 * [[design_pattern]] - best practices
 * [[decorators]] - in Python specifically
+* [[pydantic]] - a popular library for enforcing data structures in Python
 * [[unit_test]] - testing-driven development
 
 #oop
@@ -24,7 +25,7 @@ Important terms, ordered thematically, not alphabetically:
 * **Instance method** - a method that requires a class to be instantiated, like `self.do()`.
 * **Static method** - a method that is supported by a class, but doesn't refer to a specific instance. Good for utility functions.
 
-# Basics of OOP in Python
+# OOP in Python: Technical
 
 Methods without special decorators are considered instance methods (that's the default).
 
@@ -46,11 +47,27 @@ Refs: https://realpython.com/python-super/
 
 If you create a class, even the most empty class possible, it still inherits to some 26 or more default Pythonic methods (see "List of pythonic methods" below), as every class in Python 
 
+**Non-local variables**: when defining function within a function, we can make local variables of the outer function become sorta "global" for the inner function, which may be handy. If you only plan to read from this variable, just refer to it as if it were global. If you plan to update it, write `nonlocal var_name` inside the inner method, as if "declaring
+ it. After that it won't be masked (if you change it inside the method, these changes will be visible outside).
+
 Refs:
 *  https://realpython.com/instance-class-and-static-methods-demystified/
 *  https://stackoverflow.com/questions/918380/abstract-classes-vs-interfaces-vs-mixins
 
-# Inheritance vs composition
+# OOP in Python: Ideas
+
+An archetypical situation in Python is a function (method) with lots of parameters (think how [[pandas]] methods are called). An archetypical advice is that once you have more than 3 parameters, you need a data class to be configured, as otherwise it becomes a mess; it's impossible to keep track of parameters, and their interactions with each other etc. A data class may be a NamedTuple, or a dict. But it's even better to have a class with properties, and control them with [[pydantic]] (both structure and static typing, see [[mypy]]).
+
+Basically what we are trying to avoid is any sort of chaining (passing) parameters down the hierarchy, as it's a nightmare:
+```python
+def fun1(a=1, b=2):
+  x = fun2(a=a, b=b)
+```
+What we want to do in cases like that is 🔥🔥🔥 ?????
+
+> So what do we do? Do we create a config, and propagate it down as a whole? Or is there an "officially good" way to make properties of related (composed? interacting?) objects somehow "talk to each other"?
+
+## Inheritance vs composition
 
 There's an argument that **composition** (having a larger objects contain instances of smaller-leve objects) is easier to maintain in Python than class inheritance. One reason is that Java-style inheritance may conceptually clash with Pythonic methods that are implicitly inherited by every Pythonic object (inherited from the base clas of `Object`), and that becomes even more prominent if you try to use Pythonic patterns of programming, like iterators.
 
@@ -58,16 +75,11 @@ _If I undstood it correctly_: In composition paradigm, instead of creating a bun
 
 Refs:  https://realpython.com/inheritance-composition-python/
 
-# Variable scope
-
-**Non-local variables**: when defining function within a function, we can make local variables of the outer function become sorta "global" for the inner function, which may be handy. If you only plan to read from this variable, just refer to it as if it were global. If you plan to update it, write `nonlocal var_name` inside the inner method, as if "declaring
- it. After that it won't be masked (if you change it inside the method, these changes will be visible outside).
-
-# Getters and setters
+## Getters and setters
 
 The idea is to protect object properties, making them private, and channeling all outer-world interactions with them through special methods: a getter (to get the property), and a setter. The benefit here is that you can add all sorts of safety checks when the property is both assigned and returned.
 
-In some languages, like Java, these functions are typically called `get_x`. In Python, it's recommended to either keep properties public (if no checks are needed), or use special magic decorators to make them look public, while actually being accessed through a getter/setter. Note, that with the code below,  it's preferable to use `self.x` and not `self._x` in the class itself: even though the private property exists, it's safer to always keep the check in place instead of bypassing them randomly.
+In some languages, like Java, these functions are typically called `get_x`. In Python, it's recommended to either keep properties public (if no checks are needed), or use special magic decorators to make them seem public, while actually having being accessed through a getter/setter. Note, that with the code below,  it's preferable to use `self.x` and not `self._x` in the class itself: even though the private property exists, it's safer to always keep the checks in place instead of bypassing them randomly.
 
 ```python
 @property

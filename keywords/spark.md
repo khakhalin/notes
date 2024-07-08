@@ -69,10 +69,10 @@ To see the schema:
 Footnotes:
 * https://www.geeksforgeeks.org/how-to-iterate-over-rows-and-columns-in-pyspark-dataframe/
 
-## Column transformations
+- [ ] Column transformations
 
 * `df.select('some_column_name')` - as in [[sql]], returns a sub-table with these columns (also a dataframe). You can provide either a single name, or  alist of names, and unlike for square brackets in Pandas, `select('A')` and `select(['A'])` would give the same result.
-* `df.drop("col_name")` or `df.drop(df.col_name)` - the opposite of select :)
+* `df.drop("col_name")` or `df.drop(df.col_name)` - the opposite of select :) To drop several columns, either list them separated by columns, or unroll a list with `*[col1, col2]`.
 * `withColumnRenamed('old_name', 'new_name')` - renames a column
 * `withColumn('name', lit(None))` - adds an empty column. Using `lit(0)` will add you a column of zeros etc. You cannot specify different values here; if you manage to pass an iterable inside `lit()`, you'll just get this iterable as the same value in every row.
 
@@ -89,7 +89,20 @@ But the `col_name` would be different in both data frames, and then, what if the
 
 ## Joins
 
-* .
+* `df.join(other, on=..., how=...)` - basic join
+    * `on` can be a string (single column name), a list of column names, a column-like expression (a vectorized comparison), or even a list of them.
+    * `how` includes:
+        * `left`, `right`, `inner` - these are clear. `inner` is also the default one.
+        * `outer`, `full`, `fullouter` - these all mean the same, and it's just about trying to match, but then including all columns in the output, both those that matched and those that didn't, from both sources
+        * `cross` - cartesian product of left and right df, without a filter
+        * `left_outer`, `right_outer` - aliases for left and right respectively
+        *  `semi`, `left_semi` - don't bring any columns from the right df, but only include those rows from the left df that had a match on the right. Essentially, use joining for filtering.
+        *  `anti`, `left_anti` - the opposite of `semi`: as if you did a left merge, but then dropped all rows that found a match. And also deleted the columns from the right df.
+* Examples:
+    * `df.join(df2, [df.name == df2.customer, df.age == df2.value])`
+
+Other interesting points:
+* Spark supports anti-joins, like `how="left_anti"`, which includes all rows from the 1st df that did NOT have a match in the 2nd df.
 
 ## Filtering
 
@@ -111,7 +124,7 @@ Native Spark:
 If the formula is simple, it can be added using `withColumn` and column references:
 `.withColumn('NewColumn', df.X + df.Y**2)` - if there's a simple formula
 
-For more complex formulas, we need to shift from a dataframe to a Resilient Distirbuted Dataset (RDD), calculate a new column there, then shift back to a dataframe. And as horizontal concatenation is impossible, it's not enough to only calculate a new column, we also need to carry over the elements of the index, or the calculation will be in vain. Because of that, the syntax is really shaped for vectorized output. Here's an example that copies the entire dataframe, and adds an extra column on the right:
+For more complex formulas, we need to shift from a dataframe to a Resilient Distirbuted Dataset (RDD), calculate a new column there, then shift back to a dataframe. And because horizontal concatenation is impossible, it's not enough to only calculate a new column, but we need to carry over the elements of the index, or the calculation will be in vain. Because of that, the syntax is really shaped for vectorized output. Here's an example that copies the entire dataframe, and adds an extra column on the right:
 ```python
 df = (df.rdd.map(
 	lambda row: [row[i] for i in range(len(row))] +
@@ -124,7 +137,7 @@ Weird options (🔥 I'm not sure why would these would be needed in practice?)
 * `.flatmap(func)` - exactly same thing, with `func` applied to every row, but after the application the result is flattened into a single long list (all rows kinda concatenated)
 * `flatMapValues(func)` - again, first apply `func` to every row, then transform the dataframe into a list of `(key, value)` tuples, where "keys" are column names (🔥 ?? Is it true?)
 
-Borrowed from Pandas: apparently, the most flexible approach. `@pandas_utf` is a magic that turns a function on a pandas series into a functoin on a pyaspark column. For example: 🔥🔥🔥
+**Borrowed from Pandas:** the most flexible approach to calculate new stuff is apparently to use so-called "Pandas UTF". `@pandas_utf` is a magic that turns a function on an imagined pandas series into a functoin on a pyaspark columns. For example: 🔥🔥🔥
 ```python
 
 ```
@@ -137,7 +150,7 @@ Borrowed from Pandas: apparently, the most flexible approach. `@pandas_utf` is a
 * `groupby('col_name')` - groups by column. Then one can apply summarizing functions from above. 
 
 **Summarizing**
-* `.mean()` (also `.avg()`), `min`, `max`, `sum`, `stdev`, `variance` - apply this summary function to every column of a datafrmae
+* `.mean()` (also `.avg()`), `min`, `max`, `count`, `sum`, `stdev`, `variance` - apply this summary function to every column of a datafrmae
 * `.stats()` - most of these statistics above, all calculated at once
 * `distinct()` - when run on a column, returns a column of unique values
 * `.histogram(n_bins)` - apparently builds a historgram (🔥 should it be run on a column?)
