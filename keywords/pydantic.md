@@ -47,7 +47,10 @@ Apparently it's particularly popular with web-interfaces (like FastAPI for examp
 * `pathlib.Path` - tries to convert the value with `Path(v)`, which may be helpful for validation
 * Writing something like `a: str = 'something'` is used to set a default value  🔥 _I'm not sure what it means actually… Including what it means if you do `= None` in this context_
 
-**Built-in constraint validations** are achieved using `a: int = Field(gt=0)` (as if giving a field a default value), with `Field` imported like that: `from pydantic import Field`. The functionality supported by this syntax is kinda all over the place, but some tricks are pretty useful:
+**Built-in constraint validations** are achieved using `a: int = Field(gt=0)` (as if giving a field a default value), with `Field` imported like that: `from pydantic import Field`. 
+> 🔥 Is it Field, or is it `from pydantic import constr`? Because some manuals seem to do exactly same stuff with `constr` instead of Field...
+
+The functionality supported by this syntax is kinda all over the place, but some tricks are pretty useful:
 * For numbers:
     * `gt=0` - positive (greater than; `lt` for the opposite)
     * `ge=0` - non-negative (greater or equal; `le` for the opposite)
@@ -61,7 +64,7 @@ Apparently it's particularly popular with web-interfaces (like FastAPI for examp
     * `init`, `init_var`, `kw_only` - not sure 🔥
 * Other
     * `Field(default='smth', validate_default=True)` - apparently, validates whether the field default value is set in the class!
-    * `repr=True` - whether this field is included in the `repr` behavior for tihs object ( 🔥 as far as I understand, in this case it's not something that can be validated, or that validates something, but just a way to control `repr` behavior for a class without defining repr explicitly. Not quite sure of the use pattern though…)
+    * `repr=True` - whether this field is included in the `repr` behavior for tihs object ( 🔥 as far as I understand, in this case it's not something that can be validated, or that validates something, but just a way to control `repr` behavior for a class without defining repr explicitly)
     * `exclude` - a way to exclude fields when outputing models as json…
     * `deprecated` - ?…
 
@@ -128,3 +131,5 @@ There seems to be a whole set of tools for producing meaningful, helpful errors.
 # Refs
 
 [https://docs.pydantic.dev/latest/](https://docs.pydantic.dev/latest/) - main documentation
+
+Robust Python by Patrick Viafore. Chapter 14. Runtime Checking With pydantic

@@ -22,6 +22,7 @@ Books to read / skim:
 * https://christophm.github.io/interpretable-ml-book/ - really nice explanations of ML tricks
 
 Main queue
+* https://docs.python.org/3/library/typing.html - do another pass, including covariant, contravariant
 * Pyspark
     * ```.withColumn(colname, F.when(F.col("name")=='something', 1).otherwise(0))```
     * `.where`, `.when`

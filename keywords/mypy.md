@@ -16,7 +16,7 @@ def func(x: str) -> int:
 ```
 Built-in types: `int`, `float`, `bool`, `str`, `bytes`
 
-To provide typing to iterables (starting Python 3.9) we do
+To provide typing to iterables and maps (starting Python 3.9) we do
 * `x: list[int] = [1]` for lists
 * `x: set[int] = {1}` for sets
 *  `x: dict[str, int] = {'word': 0}` (key, val) for dictionaries
@@ -24,10 +24,10 @@ To provide typing to iterables (starting Python 3.9) we do
 *  There are also tuples of variable size (that I don't understand for now)
 (Note that from python 3.5 to 3.8, the syntax was different)
 
-Fancier stuff is typed via special objects:
+Fancier stuff is typed via special objects (that need to be imported from `Typing`):
 * `f: Iterator[int]` - an iterator that yields integers
 * `f: Iterable[int]` - a list-like object (duck-typed) that supports `len()` and `__getitem__`, but not necessarily a list.
-* `Mapping[int, str]` (or any other types in the brackets) - a dict-like object that supports `getitem` and `setitem`, but not necessarily a pure dict.
+* `Mapping[int, str]` (or any other types in the brackets) - a duck-typed dict-like object that supports `getitem` and `setitem`, but not necessarily a pure dict.
 * `f: Callable[[int]]` - a function that takes a single `int` argument. (🔥 Not sure if the syntax is right: the manual says it is, but my interpreter seems to expect `[[int]], NoReturn` or something like that?)
 * `IO[str]` - for functions that work with objects created via `open()` call (not sure how it works, but ok)
 
@@ -40,17 +40,19 @@ Subclasses should obviously be accepted in place of a base classn, reflecting th
 you need to do this? (🔥 is it true? I'm still confused about this)
 `class NewClass(Generic[MyClass]): ...`
 
-Alternative explanation: `Generic[int]` should be thought of as an extension of `list[int]` or `Iterator[int]`, but to a more general behavior, manipulating values of `int`. 🔥 _Again, is it true? Is it what is implied here? And is this way of thinking helpful, or should we think of it in more specific and practical terms?_
+Alternative explanation: `Generic[int]` should be thought of as an extension of `list[int]` or `Iterator[int]`, but to a more general behavior, manipulating values of `int` one way or another. It may be a heap, a stack, anything; what matters is that it takes some number of values of the same type (`int` in this case) and does something with them. It is also possible to define a Generic above an arbitrary, and not yet defined class using `TypeVar` (see below)
 
 The problem is both classes should be defined before `f()` is defined, which is fine if they are imported from custom packages, but may be weird within a package.
 * To fight this, one can put class name in quotation marks (provide them as strings), and then apparently Mypy is happy (see below).
 * Another approach is to add this line to the header: `from __future__ import annotations`. Then apparently everything works, but allegedly with potential bad side-effects for other packages. When this line is included, all (?) references to classes are turned into strings (so it's like a massive automated version of the previously described solution, to provides class names as strings). And this can break other libraries ([[pydantic]], if I'm not mistaken?))
 
-There's some complex story about class variables (they have their own declaration `ClassVar[int]`), and about a hack around that is neccessary to access and change class variables dynamically (to do it, you have to override the setter and the getter). But I'll assume it's a rather rare case (I dislike class variables), so let's skip it for now.
+There's some complex story about class variables (they have their own declaration, e.g. `ClassVar[int]`), and about a hack around that is neccessary to access and change class variables dynamically after all (to do it, you have to override the setter and the getter). But I'll assume it's a rather rare case (I dislike class variables), so let's skip it for now.
 
-Handing [[decorators]] is weird; see below, as one needs to import from Typing to make them works.
+> Would it be true to say that from the theory POV class variables should be static, but Python makes them dynamic, so Typing makes them static, while still leaving a hacky workaround to have some of them dynamic after all, to cover for special cases?
 
-# Typing package
+Handing [[decorators]] is weird; see below.
+
+# Fancier types
 
 It seems that originally most of these developments were a part of `typing` package, but then some of them migrated to main Python. You still need to import `typing` (or rather, individual methods and objects from `typing`) for fancier things. For example:
 
@@ -88,15 +90,29 @@ If you don't provide a type to a function agrument, it can take a value of any t
 
 ## TypeVar
 
-`T = TypeVar('T')` also defines a type for type-checking purposes (not at runtime), but in a different sense: not is case in an obviously helpful way: as an alias to be referenced by typing expressons further in the code. After defiing a type like that, one can do `-> T` for functions, or `x: list[T]` for lists. 
+`T = TypeVar('T')` defines a type for type-checking purposes (not at runtime), but in a different sense: it is an alias that can be be referenced in typing expressons further in the code. After defiing a type like that, one can do `-> T` for function outputs, or `x: list[T]` for inputs, lists. 
 
-One possible use for that is just aliasing. Say, instead of writing `Union(int, float)` every time you can do `T = TypeVar('T', int, float)`, and then just write this one letter `T`.
-> 🔥 This does not seem to be quite true, as for example one can't just write a function that receives no inputs, but outputs a value of T type; mypy complaints that a function returning T should get at least one argument of T type. Which seems to be some real actual design choice for this use case that I don't understand. For some reason you can write `def f() -> dict[T]`, but you can't write `def f() -> T` as mypy claims it's illegal. Functions that both receive and produce T are legal tho; and so are functions that receive T and produce something else (or nothing).
+One possible use for that is just aliasing a longer sequence with a shorter sequence. Say, instead of writing `Union(int, float)` every time you can do `T = TypeVar('T', int|float)`, and then just write this one letter `T` everywhere.
 
-Another possible use, to indicate that while two thingies can work with any types of variables, they should be coordinated with each other. So instead of `list[Any]` you would write `list[T]`.
-> 🔥 Doesn't seem to be true either, as if you try to write `x: T = 1`, mypy says that "Type variable is unbound" and claims that it's an error.
+> 🔥 This does not seem to be quite true, as for example one can't just write a function that receives no inputs, but outputs a value of T type; mypy complaints that a function returning T should get at least one argument of T type. Which seems to be some real actual design choice for this use case that I don't understand. For some reason you can write `def f() -> dict[T]`, but you can't write `def f() -> T` as mypy claims it's illegal. At the same time, functions that both receive and produce T are legal; and so are functions that receive T and produce something else (or nothing).
 
-It is also possible to restrict the list of values for this new `T`, or put some bounds on it, presumably for some elementary validation (but this part doesn't sound too useful).
+Another possible use, to indicate that while two thingies can work with any types of variables, they should coordinate this choice with each other. For example, you may be trying to define a class `Heap` that will operate a bunch of objects, so you want to inherit to `Generic`. But `Generic` of what? Just create a placeholder undefined type: and repeat it where needed, idicating that these methods should coordinate, even though the exact value of this typevar isn't yet known:
+```
+T = TypeVar('T')
+class Heap(Generic[T]):
+  items: list[T]
+
+def swap(self, item: T) -> T:  # Not the most realistic example
+  return ...
+```
+The eact value of `T` in this case will be "set" at initialization, either directly: 
+`heap = Heap[int]()`
+or indirectly (by inference from value) if the constructor supports arguments (probably also of class `T`)
+
+It is possible to restrict values for a new typevariable:
+* `T = TypeVar('T', bound=str)` - a subtype of string
+* `T = TypeVar('T', str, int)` - has to be _either_ a subtype of string or of int.
+* `T = TypeVar('T', str|int)` - a shortcut for `Union[str, int]`. It is very similar to "either str or int", but a bit more permissive, and in this case probably better. (A variable that is "either a string or int" is technically not a string, and not an int. Just use this syntax, ok?)
 
 To define classes on a generic type variable
 
