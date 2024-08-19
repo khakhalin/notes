@@ -19,7 +19,8 @@ Important terms, ordered thematically, not alphabetically:
 * Dog **extends** Animal - Dog class is derived from Animal class, so every dog is a Dog, but also an Animal.
 * Dog **implements** Friend - Dog class is not derived from Friend, but supports all interfaces from Friend. In this case Friend is probably an interface
 * **Interface** - describes what methods the class will need to support, but not how they are implemented
-* **Abstract class** - a class that shouldn't (and ideally couldn't) be instantiated, only inherited. Mixins, interfaces. 
+* **Abstract class** - a class that shouldn't (and ideally couldn't) be instantiated, only inherited. Mixins, interfaces.
+* **abstract method** - a method that is "promised" in a prototype class (abstract class), but is not actually impelemented. Yet any object inheriting to this class needs to implement it to pass.
 * **Mixin** - A way to mix-in a bunch of methods to your class; class inheritance hierarchy is no longer a tree.
 * **Duck typing** - used in Python. Classes with matching method names can be used interchangeably, even if they don't fomally inherit to the same shared inheritance (if it walks like a duck, and talks like a duck...)
 * **Instance method** - a method that requires a class to be instantiated, like `self.do()`.
@@ -29,11 +30,15 @@ Important terms, ordered thematically, not alphabetically:
 
 Methods without special decorators are considered instance methods (that's the default).
 
-To create a **static method**, use `@staticmethod` magic immediately before declaration (before the `def` line). Static methods don't take `self` as the first argument (they don't refer to an instance). Essentially, it's a stand-alone utility function that you simply don't want to become a "global variable", but that want to keep bound to a class.
+Magics (to be placed immediately before method declaration; before the `def` line):
+
+`@staticmethod` - To create a **static method**. Static methods don't take `self` as the first argument (they don't refer to an instance). Essentially, it's a stand-alone utility function that you simply don't want to become a "global variable", but that want to keep bound to a class.
 
 This decorator is built-in, and it makes the code clearer + ensures we are never tempted to call it on instnaces with cryptic error messages. Without a decorator, some calls of this method from an instance may fail, but only because of a different number of arguments passed to the method (it would be `self` + other arguments, when called from an instance). The error message will be unpredictable and confusing. What's almost worse, some calls may formally succeed, with `self` just becoming the 1st argument and offsetting all other arguments by one (if some of them are optional, and the number of arguments is variable). This would lead to a nightmare situation, with the same method failing sometimes, but not always. To make it clear and reliable, let's decorate it with `@staticmethod` - then it will honestly break with `AttributeError` at any attempt to call it for an instant, which is infinitely better for debugging. 
 
 On top of static and instance methods, there are also **class methods** (they use a magic decorator `@classmethod`). Instead of accepting `self` as the first parameter, these methods take `cls` (a pointer to a class). They cannot modify instance state (as they don't have access to an instance), but they do have access to static and class methods via `cls.blabla`, and they can modify class variables (if there are any). Why are they useful? One common pattern is for creating Factories (see [[design_pattern]]) by writing custom init methods. (`Npc.demon()` and `Npc.angel()` may both internally call `Npc.__init__()` with some good sets of parameters, to create different NPCs, and that's clearly a method to be called on a class, not on some instance of this class). Same as above, the decorator is even more useful here as it will prevent calling these methods on an instance, _despite_ the same number of arguments.
+
+`@abstractmethod` - to promise a method in the abstract class, and require all child classes to implement it. It needs to be imported from `abc`.
 
 **Inheritances** and **mixins** are easy: just make the class inherit to several classes, like `class Child(Parent1, Mixin1)`. Apparently having easily available mix-ins is not a given for an OOP language (original Java didn't have them.
 

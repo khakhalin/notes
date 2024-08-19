@@ -46,7 +46,12 @@ Never do `update all`, or it can ruin your TF installation. Only upgrade point-b
 * `pip install NAME --upgrade` - upgrade
 * `pip uninstall NAME` - remove
 * `pip list` - see all versions
+* `pip show package_name` - see the version of this package in particular. The name should be exact.
 * `pip install -e ".[devel]"` - when run from a [[git]] repo, installs this repo as a package in developer mode (with code references linked to the repo 🔥 ??)
+
+To investigate:
+* `pip freeze` - 🔥 Not sure how it works, but seems to list all currently installed versions of all packages.
+* `pip freeze | grep package_name_element` - the claim is that it is another way to check the name of all packages that a certain sequence within their name. A combo of freezing environment and searching through it with [[bash]]. In practice it seems to be finding wrong packages (with names not matching `pip list`), and doesn't seem to communicate their versions. I'm confused. 🔥
 
 # GPU-related tuning
 

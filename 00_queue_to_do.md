@@ -22,11 +22,20 @@ Books to read / skim:
 * https://christophm.github.io/interpretable-ml-book/ - really nice explanations of ML tricks
 
 Main queue
+* Process the list of "How a DS can become a DE": https://www.reddit.com/r/datascience/comments/1ehoumf/applying_for_a_de_role_as_a_current_ds_is_3_weeks/
+* Update OLAP / OLTP distinction text
 * https://docs.python.org/3/library/typing.html - do another pass, including covariant, contravariant
+* SynapseML - what is it?
+* JFrog - what is it?
 * Pyspark
+    * Spark salting
+    * Spark repartition - when and how? (`.repartition(col, col ...)`)
     * ```.withColumn(colname, F.when(F.col("name")=='something', 1).otherwise(0))```
     * `.where`, `.when`
     * grouping and aggregation
+* ML flow flavor (adding stuff to make a model ML flow savable)
+* "ML flow client in Python" - what does it mean, in this case?
+* MlFlow - read some more to feel more comfortable
 * What are the differences between conda, pip, and miniforge, in practice?
 * watch some jira tutorial at some point
 * greatexpectations
@@ -34,20 +43,19 @@ Main queue
 * aggregated mape and bias - what are they, and why they in particular?
 * Hyperopt library
 * pyarrow - something that is needed to configure spark to run quickly
-* Polars - what is it?
+* Polars - what is it and how it works? Seems to be on the rise, isn't it?
 * Data modeling, 3d-Normal-Form
 * flake8, black, isort (all three are some sort of linters?)
 * kedro - why, how, and what can it do for me?
 * Add these "laws" that "most dangerous is 2nd" and "adding people doesn't help"
 * Dependabot
 * Hive
+* SAP has some strange terms that DE people know and use: vbeln, likp, fpc, cin, lips, vbak - wtf are they, and why do they even exist?
 * A statement that hive had problems with concurrency and granularity, and Hudi and Iceberg are better
 * Delta Lake and Delta Tables (Databricks format?)
 * Trino, Starburst
 * read a bit more on ideology of [[scrum]]
 * pre-commit (is it a package for Python?)
-* MlFlow - read some more to feel more comfortable
-* What does the word "artifact" mean, in the context of MlFlow and deployment?
 * helm - what is it, how it works, some basics
 * Re-read and re-document all types of decorators (`@fun, @cls, @cls(params)`, and decorating both functions and classes)
 * Read about the Prophet model (what's inside, how does it typically perform?)
