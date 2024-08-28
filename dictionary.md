@@ -123,6 +123,8 @@ See also other topical dictionaries:
 
 **Map Reduce** (dev): programming model for parallel computing; a type of split-apply-combine strategy. Essentially, seems to define two functions, one function on splittable tasks (something like `for each element in List`) that analyzes its `element` and sends answers out; and another one that catches answers and combines them all into one answer.
 
+**Marshaling** (programming): an alternative to pickling, where instead of dumping memory representation and hoping that it can be read, you force some sort of a reversed-engineered structure on it.
+
 **MCMC** (ml) Markov Chain Monte-Carlo. See [[modeling]].
 
 **MLE** (stats): Max-Likelihod Estimation. See [[02_Regression]].

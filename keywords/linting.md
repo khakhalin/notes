@@ -10,7 +10,7 @@ Common packages:
 
 # Flake8
 
-To exclude a row from tests (to make it an exception), write `# noqa: E800` after it. It will remove it from this particular rule. Use a comma-separated list for several rules. In particular, `E800` is about forbidding commented code, which seems to also cover any sort of code within a comment, which is of course not helpful at all.
+To exclude a row from tests (to make it an exception), write `# noqa: E800` after it. It will remove it from this particular rule. Use a comma-separated list for several rules. In particular, `E800` is about forbidding commented code (which from linter's pov somehow includes any formal writing).
 
 Flake does not have "on" and "off" commands to disable linting for a segment of code, unfortunately. Either row by row, or an entire file :( To do an entire file, add `# flake8: noqa` to it.
 

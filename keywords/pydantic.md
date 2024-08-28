@@ -95,7 +95,7 @@ What can go into a config?
 
 # Validators
 
-It is possible to validate fancier propertis of an object hierarchy by using validator magic:
+In `pydantic.v1` it was possible to validate fancier propertis of an object hierarchy by using validator magic:
 ```python
 from pydantic import validator
 
@@ -114,9 +114,13 @@ Common uses for validators:
 * Check if it's not None (technically, also value-checking)
 * Check if at least one key is present
 
+In `V2` the syntax has changed! 🔥🔥🔥 - see the migration guide on Pydantic site
+
 # Saving and loading models
 
 A model can be turned to [[json]] object using `.model_json_schema()` method (and then outputted as a json string, by using `json.dumps(model_as_json)`  on this json object. An opposite process  starts with `my_dict = json.loads(json_text)`, and then by calling `pydantic.tools.parse_obj_as(my_dict)`. 
+
+For custom types (created with `Annotated`) one can create custom serializers, including serializers that are dependent on the target format for serialization. Check Pydantic documentatoin.
 
 # Custom Errors
 

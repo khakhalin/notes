@@ -38,6 +38,7 @@ Main queue
 * MlFlow - read some more to feel more comfortable
 * What are the differences between conda, pip, and miniforge, in practice?
 * watch some jira tutorial at some point
+* `Annotated` in Pydantic (for custom types) - describe both the need, the functionality, and the interface
 * greatexpectations
 * tweedie objective function? More emphasis on big values?
 * aggregated mape and bias - what are they, and why they in particular?
