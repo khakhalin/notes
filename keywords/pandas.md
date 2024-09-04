@@ -159,11 +159,13 @@ The most useful methods are called on series of Timestamps using a prefix (simil
 * `(df.Date - df.Date.min()).dt.days` - Number of days from the smallest date
 * `pd.Timedelta('15d')` - Manually generate a timedelta
 
-**DateOffset** is another curious class that I don't quite understand, but it is necessary in these cases:
-* To round to the first day of every month:
-    * `df.DATE.dt.floor('d') + pd.offsets.MonthEnd(n=0) - pd.offsets.MonthBegin(n=1)`. This is more complicated than just rounding to a month, as months are not a real unit (they have variable size), which somehow makes this fancy context-sensitive construction necessary.
+**DateOffset** is another curious class that may be a bit tricky to use.
+* To shift all dates by one day:
+    * `df.DATE + pd.DateOffset(days=1)`
+* To round to the first day of a month (which is tricky as months have different lengths):
+    * `df.DATE.dt.floor('d') + pd.offsets.MonthEnd(n=0) - pd.offsets.MonthBegin(n=1)` - sometimes touted as an "official way", but seems the bulkier of all
     * For one date one can do `my_date.replace(day=1)`, but it is not serialized (can only be serialized with `apply` or list comprehension)
-    * There's also a fast hacky solution : `df.DATE.dt.to_period('M').dt.to_timestamp()`
+    * There's also a fast hacky solution that is serializable: `df.DATE.dt.to_period('M').dt.to_timestamp()`
 
 To generate a **range of date-times**: `pd.date_range(start, end, period, freq)` (for more parameters, see [manual](https://pandas.pydata.org/docs/reference/api/pandas.date_range.html)). 
 * Despite the name, generates proper full-blooded timestamps, and not just scrawny dates. Note also that `freq` is not the 3d default argument, so better to provide it as a named argument.

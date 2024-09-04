@@ -1,7 +1,7 @@
 # Dropout
 
 Path: [[06_DL]] / [[regularization]]
-See also: [[05_Ensembles]], [[weight_decay]]
+See also: [[05_Ensembles]], [[weight_decay]]; very indirectly: [[sleep]], [[transfer]]
 
 #regularization #dl
 

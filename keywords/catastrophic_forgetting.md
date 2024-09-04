@@ -1,9 +1,10 @@
 # Catastrophic forgetting
 
-#memory #ml #pruning #distillation #bib
-
 Parents: [[06_DL]]
 Related: [[transfer]], memory
+
+#memory #ml #pruning #distillation #bib
+
 
 Aka **catastrophic interference**. A tendency of AN to abruptly and completely "forget" new information upon learning new information. First discovered in about 1990. A dilemma between flexibility and ability to generalize, and sensitivity to perturbation.
 

@@ -42,10 +42,12 @@ Apparently it's particularly popular with web-interfaces (like FastAPI for examp
 * `dict` - same thing: it tries to coerse to dict with `dict(v)`, so everything depends on whether the conversion is successful.
 * `typing.Any` doesn't work unfortunately (doesn't work as one could expect that is would), as it includes `None` as a possible "value" for a key, which essentially makes the field optional. It's NOT how you tell the model that you just want the field to exist. Distinguishing between `None` and unset fields is possible, but not trivial (see below).
 * `typing.Union` allows to combine several types. As a reminder, it is used as `a: Union[this, that]` (with square brackets).
-* `age: None` means that the key `age` has to be set to None. But it's different from non-existing: it needs to exist, just be set to None! Interestingly though, if you do `Union[int, None]`, that's synonimous to `Any`, and just makes the key optional. Not sure why…
+* `age: None` means that the key `age` has to be set to None. But it's different from non-existing: it needs to exist, just be set to None!
+    * Interestingly though, if you do `Union[int, None]`, that's synonimous to `Any`, and just makes the key optional. Not sure why!
+    * If you need a nullable field, apparently you need to set its type as `Optional[int]` which feels odd (check? 🔥)
 * `typing.Dict`, `typing.Set` etc - allow to define more complex objects, such as `Dict[str, float]` for example.
 * `pathlib.Path` - tries to convert the value with `Path(v)`, which may be helpful for validation
-* Writing something like `a: str = 'something'` is used to set a default value  🔥 _I'm not sure what it means actually… Including what it means if you do `= None` in this context_
+* Writing something like `a: str = 'something'` is used to set a default value, as for normal fields.
 
 **Built-in constraint validations** are achieved using `a: int = Field(gt=0)` (as if giving a field a default value), with `Field` imported like that: `from pydantic import Field`. 
 > 🔥 Is it Field, or is it `from pydantic import constr`? Because some manuals seem to do exactly same stuff with `constr` instead of Field...

@@ -1,6 +1,8 @@
 # Xie2020noisy_student
 
-#stub
+Related: [[transfer]]
+
+#transfer #distillation
 
 Xie, Q., Luong, M. T., Hovy, E., & Le, Q. V. (2020). Self-training with noisy student improves imagenet classification. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 10687-10698).
 https://arxiv.org/abs/1911.04252

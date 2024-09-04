@@ -97,6 +97,9 @@ Referring to columns:
 If the formula is simple, it can be added in native pyspark using `withColumn` and column references:
 `.withColumn('NewColumn', df.X + df.Y**2)`. Spark functions has all the main math, string etc. functions implemented, so in most cases that's enough.
 
+Nice syntax for conditional formulas:
+`.withColumn('b', sf.when(sf.col('a')>0, 1).otherwise(0))`
+
 For more complex formulas, we need to shift from a dataframe to a Resilient Distirbuted Dataset (RDD), calculate a new column there, then shift back to a dataframe. And because horizontal concatenation is impossible, it's not enough to only calculate a new column, but we need to carry over the elements of the index, or the calculation will be in vain. Because of that, the syntax is really shaped for vectorized output. Here's an example that copies the entire dataframe, then adds one extra column on the right:
 ```python
 df = (df.rdd.map(
@@ -157,9 +160,12 @@ Footnotes
 * `groupby('col_name')` - groups by column. Then one can apply summarizing functions from above. 
 
 **Summarizing**
-* `.mean()` (also `.avg()`), `min`, `max`, `count`, `sum`, `stdev`, `variance` - apply this summary function to every column of a datafrmae
+* `.mean()` (also `.avg()`), `min`, `max`, `count`, `sum`, `stdev`, `variance` - apply this summary function to every column of a dataframe
 * `.stats()` - most of these statistics above, all calculated at once
-* `distinct()` - when run on a column, returns a column of unique values
+* To run aggregation on a single column, two options:
+    * `.agg({'col_name': "max'})` - universal version. It returns a column with one value, and oddly named, so to get the value itself you need to run `.head()[0]` on it.
+    * `.agg(min("col_name"))` - cozy quaint version
+* `.select('col_name').distinct()` - returns a column of unique values
 * `.histogram(n_bins)` - apparently builds a historgram (🔥 should it be run on a column?)
 * Define a function on a pandas_df that runs aggregation methods on columns (`.mean()`, `.sum()` etc.), then apply this function using `applyInPandas`. Because Spark df is grouped, once it pretends to be pandas-like, these aggregation functons will work.
 

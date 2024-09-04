@@ -33,6 +33,7 @@ Main queue
     * ```.withColumn(colname, F.when(F.col("name")=='something', 1).otherwise(0))```
     * `.where`, `.when`
     * grouping and aggregation
+* Re-read Kedro, find examples, see if it can be used for toy projects
 * ML flow flavor (adding stuff to make a model ML flow savable)
 * "ML flow client in Python" - what does it mean, in this case?
 * MlFlow - read some more to feel more comfortable
