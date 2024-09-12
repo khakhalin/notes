@@ -18,10 +18,8 @@ Linters also obviously come with a config file where one can put some rules on a
 
 # Isort
 
-Isort literally just sorts imports at the beginning of the file.
-
-To exclude a file from isort, add `# isort: skip_file` at the beginning
+Isort literally just sorts imports at the beginning of the file. To exclude a file from isort, add `# isort: skip_file` at the beginning. If you want to keep your imports split by group (say, standard first, custom later) and isort keeps destroying it, use `# isort: split` between groups (then it will sort and reformat only within each group).
 
 # Black
 
-🔥
+`# fmt: off` turns formatting linting off starting from this command. If you only need to exclude a block of the code from formatting interventions (say, a manuall formatted matrix or something like that), add a `# fmt: on` once the tricky segment is over.

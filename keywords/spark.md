@@ -29,7 +29,7 @@ import pyspark.sql.functions as sf
 from pyspark.sql.window import Window
 ```
 
-## Getting connected
+## Session
 
 Many cheatsheets and introductinos online reference things like `spark.createDataFrame`, and here `spark` is not a handle of the package, but a session object. This session needs to be established first, and then you need to either connect to an existing Apache Spark instance running somewhere, or to create a local session.
 
@@ -43,7 +43,7 @@ If any extra parameters are needed, add this after `builder`, but before the `ge
 
 ## Dataframes
 
-Main object: Spark DataFrame, created with `spark.createDataFrame()`, from a list of `(key, value)` tuples (NOT a dict as for [[pandas]]!). Keys here correspond to columns. The schema for the data may be both implicit (derived from the data on dataframe creation), or explicit. 
+Main object: Spark DataFrame, created with `spark.createDataFrame()`, from a list of `(key, value)` tuples (NOT a dict as for [[pandas]]!). Keys correspond to columns. The schema for the data may be both implicit (derived from the data on dataframe creation), or explicit. 
 
 One can also create a Spark df from a Pandas df, which is often the best approach in practice, especially for small dataframes, as the interface is such so much more reasonable.
 
@@ -51,12 +51,25 @@ To load extermal data into a dataframe:
 * `spark.read.parquet('filename')` (or `.csv`, or some other formats)
 * `df.write.parquet('filename')` - subj
 
-Generally, all transformatoins on a dataframe are lazily accumulated as an execution plan (are NOT executed eagerly) until an action, such as `collect()` is called. In particular:
+Generally, all transformatoins on a dataframe are **lazy**: they are accumulated as an execution plan (DAG), and are NOT executed eagerly until an input-output **action** is called (a point when the calculation can no longer be postponed). Examples of actions:
 * `.collect()` - tries to load the dataframe (the result of all transformations, if any) into memory, as a list. If it doesn't fit to memory, you get an overflow.
 * `.toPandas()` - does the same, but also transforms it to Pandas.
 * `.show()` - collects at least some data, and shows the dataframe. By default it only shows 1 line (because of lazy), but it can be made eager with some special magic command (probably not the best idea tho, at least outside of testing notebooks). If the dataframe is already fully in memory (for example, if it's a small dataframe that you just created), the entire df will be shown.
+    * `.display()` - a fancier kind of `show()` that only exists in Databricks notebooks, apparently, so it's probably not a part of standard pyspark
+* `.save.parquet()` - obviously
+* `.dropDuplicates(optional_columns_subset)` 🔥 _do I get it right that this one always triggers a full calculation?_
+* `.toPandas()` - converts it to Pandas, which also obviously means full calculation
 
-This is both a curse and a blessing. A blessing because supposely an execution plan can be optimized by external optimizers (although personally I am yet to see it happen). A curse, because writing in this style means that you cannot refer to things like the number of rows in a dataframe, or unique values in a column, without triggering a calculation, and potentially runining everything. It turns a coding into a much more deliberatelly planned activity, which may feel weird.
+This is both a curse and a blessing. A blessing because supposely an execution plan can be optimized by external optimizers (although personally I am yet to see it happen 🔥). A curse, because writing in this style means that you cannot refer to things like the number of rows in a dataframe, or unique values in a column, without triggering a calculation, and potentially runining everything. It turns a coding into a much more deliberatelly planned activity, which may feel weird.
+
+There are also command that trigger a partial recalculation, or either a partial or full one, depending on the context. Fo example:
+* `.count()` - that's a tricky one, as it's heavily optimized, and tries not to trigger a full calculation where possible.
+    * It seems that on a one-node instance (without parallelization) it triggers it, and always returns a correct result.
+    * If run on a multi-core instance, and combined with a command that explicitly collects information from all cores, for example `.cache().count()` (see "Cashing" below) it also returns a correct result
+    * If run on a multi-core instance without an explicit collection, it may be off by a bit however. This is impostant to remember when checking for duplicates, as the paradygmatic `if df.count() != df.dropDuplicates().count()` test may lie to you in some edge cases (🔥 still not clear when, but NULLs in important columns seem to trigger some odd behaviors)
+
+Footnotes:
+* https://stackoverflow.com/questions/69038671/why-method-count-does-not-get-true-num-of-rows
 
 **Structure info**
 
@@ -64,14 +77,11 @@ To interact the schema (that doesn't cause a recalculation):
 * `df.printSchema()` - in a human-readable almost-graphical way (in a notebook)
 * `.columns` returns the list of column names (strings)
 
-To interact with values (these DO cause an eager recalculation, and so are NOT harmless commands): 
+To interact with values (these cause a partial recalculation, and so are NOT harmless commands, from the DAG optimization POV): 
 * `df.count()` - returns the number of rows.
 * `distinct()` - returns distinct rows.
 
-Footnotes:
-* https://www.geeksforgeeks.org/how-to-iterate-over-rows-and-columns-in-pyspark-dataframe/
-
-## Concatenations
+**Restructuring**
 
 * `df1.union(df2)` - concatenates dataframes vertically, but would only work if columns match exactly
 * `df1.unionByName(df2, allowMissingColumns=True)` - also concatenates dataframes vertically, but if any columns are not matching, forgives it and pads missing values with `null`s.
@@ -80,7 +90,18 @@ Quite tellingly, horizontal (column-wise) concatenation is impossible. Not only 
  `.withColumn('id', row_number().over(Window.orderBy('col_name')))` 
 But the `col_name` would be different in both data frames, and then, what if there are repetitions in these values? Then the result of sorting is unpredictable, as it's parallelized. Can we calculate `row_number()` without sorting? No, it's impossible, as the result would have been non-deterministic, because of parallel calculations! This approach would have only worked if there are enough columns in both dataframes to sort the rows in exactly the same way… But then we could as well just created a real index (over several columns). In other words, two statements are true: 1) the order of rows in a dataframe is not defined, because of parallel processing, 2) indices are critical, as data can only can be combined and processed via joins (see below).
 
-## Columnar Calculations
+Footnotes:
+* https://www.geeksforgeeks.org/how-to-iterate-over-rows-and-columns-in-pyspark-dataframe/
+
+**Sampling**
+
+* `.first()` - returns the 1st row, as a pyspark Row type.
+    * If you iterate through a Row as an iterable, you get all values, but no key names.
+    * If you cast it to a dictionary with `.asDict()`, you can do `.items()` on this dict and iterate through `key, val` pairs.
+* `.take(2)` - returns two first rows as a list of rows
+* `.sample(with_replacement=False, fraction, random_seed)` - weird random sampling. The fraction should be treated as something very approximate, and the length of the result isn't guaranteed. Officially the faction should be `<1`, actually can be `<2`.
+
+## Columnar calculations
 
 Basic adding and deleting:
 * `df.select('some_column_name')` - as in [[sql]], returns a sub-table with these columns (also a dataframe). You can provide either a single name, or  alist of names, and unlike for square brackets in Pandas, `select('A')` and `select(['A'])` would give the same result.
@@ -92,9 +113,7 @@ Referring to columns:
 * `.some_column_name` returns an object of "Column" type, similar to how in [[pandas]] it returned a series. But it's not yet the data itself, as the execution is lazy! It's not even an iterable, and there seems to be no easy way to iterate thrown values of a column (as values within a dataframe are not ordered!). If you need to iterate, you have to either collect (eagerly calculate) the entire dataframe, and then iterate by rows, picking the proper column from each row, or cast the entire thing to Pandas.
 * if the name is a variable, you use `sf.col(col_name)` where `sf` comes from `import pyspark.sql.functions as sf`
 
-**Creating a new column from old columns**
-
-If the formula is simple, it can be added in native pyspark using `withColumn` and column references:
+**Using formulas**: If the formula is simple, it can be added in native pyspark using `withColumn` and column references:
 `.withColumn('NewColumn', df.X + df.Y**2)`. Spark functions has all the main math, string etc. functions implemented, so in most cases that's enough.
 
 Nice syntax for conditional formulas:
@@ -122,15 +141,15 @@ Finally, it is possible to borrow functionality from Pandas using a so-called **
 
 ## Joins
 
-* `df.join(other, on=..., how=...)` - basic join
-    * `on` can be a string (single column name), a list of column names, a column-like expression (a vectorized expression on existing columns that returns a boolean spark series), or even a list of them.
-    * `how` includes:
-        * `left`, `right`, `inner` - these are clear. `inner` is also the default one.
-        * `outer`, `full`, `fullouter` - these all mean the same, and it's just about trying to match, but then including all columns in the output, both those that matched and those that didn't, from both sources
-        * `cross` - cartesian product of left and right df, without a filter
-        * `left_outer`, `right_outer` - aliases for left and right respectively
-        *  `semi`, `left_semi` - don't bring any columns from the right df, but only include those rows from the left df that had a match on the right. Essentially, use joining for filtering.
-        *  `anti`, `left_anti` - the opposite of `semi`: as if you did a left merge, but then dropped all rows that found a match. And also deleted the columns from the right df.
+`df.join(other, on=..., how=...)` - basic join
+* `on` can be a string (single column name), a list of column names, a column-like expression (a vectorized expression on existing columns that returns a boolean spark series), or even a list of them.
+* `how` includes:
+    * `left`, `right`, `inner` - these are clear. `inner` is also the default one.
+    * `outer`, `full`, `fullouter` - these all mean the same, and it's just about trying to match, but then including all columns in the output, both those that matched and those that didn't, from both sources
+    * `cross` - cartesian product of left and right df, without a filter
+    * `left_outer`, `right_outer` - aliases for left and right respectively
+    *  `semi`, `left_semi` - don't bring any columns from the right df, but only include those rows from the left df that had a match on the right. Essentially, use joining for filtering.
+    *  `anti`, `left_anti` - the opposite of `semi`: as if you did a left merge, but then dropped all rows that found a match. And also deleted the columns from the right df.
 * Examples:
     * `df.join(df2, [df.name == df2.customer, df.age == df2.value])`
 
@@ -161,28 +180,25 @@ Footnotes
 
 **Summarizing**
 * `.mean()` (also `.avg()`), `min`, `max`, `count`, `sum`, `stdev`, `variance` - apply this summary function to every column of a dataframe
-* `.stats()` - most of these statistics above, all calculated at once
 * To run aggregation on a single column, two options:
     * `.agg({'col_name': "max'})` - universal version. It returns a column with one value, and oddly named, so to get the value itself you need to run `.head()[0]` on it.
     * `.agg(min("col_name"))` - cozy quaint version
+* `.collect_set` - collects values within a group into one vector. ⚠️ The sequence of rows in a dataframe is famously non-deterministic, so if you care about the exact values of these vectors at all (for example, if you ever plan to group by them, or perform a `drop_duplicates` on them), you _have to_ use `.sf.array_sort(sf.collect_set(col))` instead of a naked `collect_set(col)` to sort the elements in the set post-factum.
+
+Operations transforming a data column into a summary column:
+* `.stats()` - most of the classic "min-max-mean" statistics, all calculated at once, and returned as a summary table
 * `.select('col_name').distinct()` - returns a column of unique values
 * `.histogram(n_bins)` - apparently builds a historgram (🔥 should it be run on a column?)
-* Define a function on a pandas_df that runs aggregation methods on columns (`.mean()`, `.sum()` etc.), then apply this function using `applyInPandas`. Because Spark df is grouped, once it pretends to be pandas-like, these aggregation functons will work.
 
-### Window functions
+Deferring to Pandas: (🔥 does this disrupt the DAG?)
+* Define a function on a `pandas_df` that runs aggregation methods on columns (`.mean()`, `.sum()` etc.), then apply this function using `applyInPandas`. Because Spark df is grouped, once it pretends to be pandas-like, these aggregation functons will work.
+
+## Window functions
 
 Once you 🔥🔥🔥🔥🔥🔥
 
 Footnotes:
 * https://medium.com/@suffyan.asad1/an-introduction-to-window-functions-in-apache-spark-with-examples-66cb06b06e1f
-
-## Sampling
-
-* `.first()` - returns the 1st row, as a pyspark Row type.
-    * If you iterate through a Row as an iterable, you get all values, but no key names.
-    * If you cast it to a dictionary with `.asDict()`, you can do `.items()` on this dict and iterate through `key, val` pairs.
-* `.take(2)` - returns two first rows as a list of rows
-* `.sample(with_replacement=False, fraction, random_seed)` - weird random sampling. The fraction should be treated as something very approximate, and the length of the result isn't guaranteed. Officially the faction should be `<1`, actually can be `<2`.
 
 ## SQL query interface
  
@@ -234,13 +250,16 @@ Footnotes:
 * https://api-docs.databricks.com/python/pyspark/latest/api/pyspark.SparkContext.setJobGroup.html
 * https://stackoverflow.com/questions/41903342/how-to-change-job-stage-description-in-web-ui
 
-## Optimizing joins
+## Partitioning
 
-Unlike some fancier tools, by default Spark won't perform any optimization of merges and joins. For example, if you are merging on a broader category and a date, a smart thing would be to perform a partition on the category, sort on the date, and then merge on the date within each of the partitions independently. But Spark won't do it, unless you tell it to, using these tools:
+Unlike some fancier tools, by default Spark won't perform any optimization of merges and joins (🔥 ?) . For example, if you are merging on a broader category and a date, a smart thing would be to perform a partition on the category, sort on the date, and then merge on the date within each of the partitions independently. But Spark won't do it, unless you tell it to, using these tools:
 * `partitionBy(*cols)` - uses the list of columns to partition the df in memory, based on unique values. As the execution is lazy, it basically just defines the expected partition for the next method that can actually use a partitition, such as a join, or saving on disk (in which case it writes data in a partitioned, split way). For a join to work, both left and right dataframes need to be partitioned, on same columns.
 * `repartition(n_partitions, *cols)` - looks like the same thing (?🔥) but with an ability to manually set the number of shards to use (`n`).
 * `repartitionByRange(n_partitions, col)` - for a non-categorical but sortable column, breaks the df into `n` partitions based on the values of these column, so that each partition has a unique range of values.
 * `.coalesce(n_partitions)` - the opposite of `repartition` that glues smaller partitions into large ones, without reshuffling.
+
+## Other Join optimizations
+
 * **Broadcasting**: instead of doing `.join(other_df ...)` one can do `.join(broadcast(other_df) ...)` in which case a full copy of `other_df` (presumably, a small dataframe) will be provided to every shard of the left data frame (big one, the one we're joining on). When broadcasting is possible, the join becomes very fast.
 * **Salting**: it's not a function per se, but an approach. When partitioning by range, we may run into data skew situations with some values being heavily overrepresented in the data. Because of that, a shard containing these values will be way larger than the others, and will become a bottleneck. One option to fight with it is to _salt_ (somewhat randomize) one of the values. Another option is to manually isolate the most common value and process it separately (e.g. if a column contains lots of `NULL`s, join this part of the data separately, then concatenate)
 * `DataFrame.sort(*cols)` (there's also an alias `.orderBy()` with same inputs and same functionality). Also `RDD.sortBy` exists, apparently… - 🔥 It seems that pre-sorting actually does't help with joining, as joining always starts with shuffling (sorting). But this needs to be confirmed. 🔥 
@@ -253,7 +272,7 @@ spark.conf.set("spark.sql.cbo.joinReorder.enabled", True)
 
 Another cool tool for performance optimization: instead of collecting the output, calling `.explain()`, to force Spark to reveal its caculation strategy.
 
-Automatic repartitioning before a join is called "hashpartitioning()" on the execution plan.
+Automatic repartitioning before a join is called "hashpartitioning()" on the execution plan (in UI)
 
 Footnotes:
 * https://stackoverflow.com/questions/62489559/order-of-table-joining-in-sparksql-for-better-performance
