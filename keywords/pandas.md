@@ -54,7 +54,7 @@ For conditional data retrieval we have a choice between:
 * Another form of logical indexing: `df.x.eq(0)` (or things like `ne`, `le` etc.)
 * **queries**: `df.query('x>0')`, where `x` is a name of a column. Easier for a human to read; works slightly faster, but cannot be written to. To reference a normal variable `a` in a query, use `@a` inside the query string. Also keep in mind that they create a view of the original dataframe, not a new dataframe, which saves time and space, but can lead to slice-assignment issues if you assume that the result is an independent dataframe of its own. It's not.
 * To find the first row index that satisfies a criterion, follow with `.idxmax()` - it returns the location of the maximum (like `np.argmax()`), and in this case truth is the maximum.
-* To find `None`-like objects (or their absence), use `	.notnull()`, and its opposite `.isnull()`. At least for numerical columns, `isna()` and `notna()` also work, but not sure if they are exact synonyms (🔥). Note also that it's `np.isnan()` in Numpy, but `isna()` in Pandas.
+* To find `None`-like objects (or their absence), use `.notnull()`, and its opposite `.isnull()`. At least for numerical columns, `isna()` and `notna()` also work, but not sure if they are exact synonyms (🔥). Note also that it's `np.isnan()` in Numpy, but `isna()` in Pandas.
     * `pd.isnull(x)` also works great if you extracted the value from Pandas. Unlike `np` that only supports numbers and NAs, this one also works with strings and dates.
     * Note that while **queries** support stuff like `'x>0 | x<100'`, they don't support these na-related functions for some reason, unless you call them with a  "fancy call". To filter out nans one has two options:
         * Hacky but recommended solution: `query('x == x')`. This works, coz NAs aren't equal to themselves!!
@@ -62,7 +62,7 @@ For conditional data retrieval we have a choice between:
 * To search a particualr string:
     * `df.col1.str.match('Smth')` if you want strings that start with 'Smth'. 
     * `df.col1.str.contains('sub')` if you want strings that contain a substring. Both only work for queries if you add an `engine='python'` flourish.
-* A vectorized version of `x in a` expression looks like `.isin(a)`
+* A vectorized version of a set expression `x in a` is `.isin(a)`
 
 To thin out a dataset, several options:
 * `df = df[df.x>0]` - classic Python, common.

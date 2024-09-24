@@ -35,7 +35,7 @@ Todo:
 
 # Branching
 
-* `git branch` - show the current branch
+* `git branch` - show the list of branches + indicate the current one
 * `git switch branch_name` - move to a target branch (in the past, used `checkout` command).
 * `git branch branch_name` - creates a new branch.
 * `git switch -c branch_name` - an alias for creating a new branch at current HEAD, and checking it out. May be a good idea after a pull, to do all sorting in a safe branch, without endangering Master.
@@ -48,7 +48,6 @@ To return to the present after traveling to the past with `git checkout HEAD~1`,
 To go back, just do `git switch master` (or some other branch) - and it will reset HEAD to the latest commit.
 
 To clone a remote branch that doesn’t yet exist locally, do this:
-
 ```bash
 git fetch --prune
 git branch -v -a

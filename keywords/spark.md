@@ -45,7 +45,7 @@ If any extra parameters are needed, add this after `builder`, but before the `ge
 
 Main object: Spark DataFrame, created with `spark.createDataFrame()`, from a list of `(key, value)` tuples (NOT a dict as for [[pandas]]!). Keys correspond to columns. The schema for the data may be both implicit (derived from the data on dataframe creation), or explicit. 
 
-One can also create a Spark df from a Pandas df, which is often the best approach in practice, especially for small dataframes, as the interface is such so much more reasonable.
+One can also create a Spark df from a Pandas df using `spark.createDataFrame(pandasDF)`, which is often the best approach in practice, especially for small dataframes, as Pandas creation interface is just so much more reasonable.
 
 To load extermal data into a dataframe:
 * `spark.read.parquet('filename')` (or `.csv`, or some other formats)
@@ -163,7 +163,7 @@ Footnotes
 
 * `df.filter(df.my_column == 1)` - select a subset of rows, based on some condition (in this case, simple comparison). Note that here we use Column object as if it were data and not just a pointer.
     * Alternatively, the clause may be a string, referencing column names: `df.filter("age > 5")`
-    * Or we can use an sql-function: `df.filter(sf.col("age") > 5)`
+    * Or we can use an sql-function: `df.filter(sf.col("age") > 5)`. Note that at least Databricks somehow differentiates between single and double-quotes here, and requires the use of double-quotes.
     * Note that `filter` is casting stuff before comparison, and in some cases it may cause weird effects. For example:
         * `1 == 1` is true (obviously, duh)
         * `1 == '1'` is also true, as string is cast to integer
@@ -176,13 +176,13 @@ Footnotes
 ## Grouping and summarizing
 
 **Grouping**:
-* `groupby('col_name')` - groups by column. Then one can apply summarizing functions from above. 
+* `groupby(*list_of_columns)` - groups by column. Then one can apply summarizing functions from above. 
 
 **Summarizing**
 * `.mean()` (also `.avg()`), `min`, `max`, `count`, `sum`, `stdev`, `variance` - apply this summary function to every column of a dataframe
 * To run aggregation on a single column, two options:
     * `.agg({'col_name': "max'})` - universal version. It returns a column with one value, and oddly named, so to get the value itself you need to run `.head()[0]` on it.
-    * `.agg(min("col_name"))` - cozy quaint version
+    * `.agg(min("col_name"))` - cozy quaint version 🤔 _Doesn't work for me?_
 * `.collect_set` - collects values within a group into one vector. ⚠️ The sequence of rows in a dataframe is famously non-deterministic, so if you care about the exact values of these vectors at all (for example, if you ever plan to group by them, or perform a `drop_duplicates` on them), you _have to_ use `.sf.array_sort(sf.collect_set(col))` instead of a naked `collect_set(col)` to sort the elements in the set post-factum.
 
 Operations transforming a data column into a summary column:

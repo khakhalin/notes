@@ -18,7 +18,9 @@ Linters also obviously come with a config file where one can put some rules on a
 
 # Isort
 
-Isort literally just sorts imports at the beginning of the file. To exclude a file from isort, add `# isort: skip_file` at the beginning. If you want to keep your imports split by group (say, standard first, custom later) and isort keeps destroying it, use `# isort: split` between groups (then it will sort and reformat only within each group).
+Isort literally just sorts imports at the beginning of the file. To exclude a file from isort, add `# isort: skip_file` at the beginning. If you want to keep your imports split by group (say, standard first, custom later) and isort keeps destroying it, use `# isort: split` between groups (then it will sort and reformat only within each group). 
+
+⚠️Unfortunately Flake also tries to check for sorting, and it totally ignores `# isort: split` throwing warnings. For now I don't know how to make flake defer to isort's decisions about optimal import sorting. But allegedly `application-import-names` and `application-package-names` sections in `.flake8` config file may help to at least somewhat rectify this. 🔥
 
 # Black
 

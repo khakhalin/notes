@@ -159,9 +159,11 @@ Updating some rows in one column is possible ([ref](https://stackoverflow.com/qu
 
 ## Delete stuff
 
-* Delete a row: `DELETE FROM table WHERE condition;`. As usual, without WHERE would delete everything.
-* Delete (drop) a whole table: `DROP TABLE table1;`. Simple and brutal.
-Apparently it's possible not to grant users permissions to delete rows and drop tables (something like `REVOKE DELETE ON table TO username;` for this particular user), and it is possible to create server-wide triggers and auto-rollback on dropping; and in some editions. There may also be a way to protect tables using a schema, but I'm not sure about that.
+* `DELETE FROM table WHERE condition;` - delete a row. As usual, without `WHERE` it would delete everything.
+* `DROP TABLE table1;` - delete (aka `drop`) an entire table. Simple and brutal.
+* `drop database NAME cascade;` - drop an entire database with all tables in it
+
+Apparently it's possible and common not to grant users permissions to delete rows and drop tables (something like `REVOKE DELETE ON table TO username;` for this particular user), and it is possible to create server-wide triggers and auto-rollback on dropping. There may also be a way to protect tables using a schema, but I'm not sure about that.
 * `BACKUP DATABASE dbname` also exists.
 
 # Window Functions
@@ -248,10 +250,9 @@ Many dialects of SQL (like **SQLServer**, **Transact-SQL** from Microsoft) have 
 # Refs
 
 Intros
-* Main reference / tutorial: https://www.w3schools.com/sql/default.asp
+* https://sqlbolt.com/ - nice texts, built-in interactive puzzles, pretty!
 * Basic intro tutorial with some nice quizzes: https://sqlzoo.net/
 * Confetti also has a whole section on SQL: https://www.confetti.ai/curriculum
-* https://sqlbolt.com/
 
 Exercises and practice questions
 * https://datalemur.com/ - people seem to like it
@@ -259,3 +260,6 @@ Exercises and practice questions
 * PostgreSQL Exercises: https://pgexercises.com/
 * https://advancedsqlpuzzles.com/
 * https://www.hackerrank.com/
+
+References
+* Main reference / tutorial: https://www.w3schools.com/sql/default.asp
