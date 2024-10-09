@@ -28,10 +28,24 @@ Here `np.allclose()` is a cool [[numpy]] function that tests of all elements in 
 
 To test that some function raises an exception when it should raise an exception, do this ([ref](https://stackoverflow.com/questions/23337471/how-to-properly-assert-that-an-exception-gets-raised-in-pytest)):
 ```python
-pytest.raises(Exception):
+with pytest.raises(Exception):
     test_function()
 ```
-This sequence will succeed if `test_function` failed (and raised an exception), and will fail if it succeeded. It is also possible to specify which exactly exception needs to be raised.
+This sequence will succeed if `test_function` failed (and raised an exception), and will fail if it succeeded. It is also possible to specify which exactly exception needs to be raised. The following code (that also uses a fancy `contextlib` package to create a context) tests errors (or their absence) case by case:
+```python
+from contextlib import nullcontext
+if condition(a):
+	context = pytest.raises(CustomError)
+else:
+	context = nullcontext()
+with context:
+	tricky_operation(a)
+```
+In the example above `CustomError` can be defined quite simply, as a child of one of the common error types, and then if we make our methods raise this error, we'll be 100% sure it's them, and not some other random `RuntimeError` or whatever:
+```python
+class CustomError(RuntimeError):
+	"""No content needed, just a comment for why we have this."""
+```
 
 Pytest gives a really nice run-down of how the assert expression itself is calculated, how exactly the left side is ≠ to the right side, and where all values are coming from. To debug further, and see the content of other local variables in the pytest output on failure, you may also write some like `assert x==1, f"y={f}"`, as this string after the comma will become a part an assert error message, and so will be shown in the output.
 

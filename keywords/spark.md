@@ -43,9 +43,13 @@ If any extra parameters are needed, add this after `builder`, but before the `ge
 
 ## Dataframes
 
-Main object: Spark DataFrame, created with `spark.createDataFrame()`, from a list of `(key, value)` tuples (NOT a dict as for [[pandas]]!). Keys correspond to columns. The schema for the data may be both implicit (derived from the data on dataframe creation), or explicit. 
+Main object: Spark DataFrame, created with `spark.createDataFrame()`, from a list of `(key, value)` tuples (NOT a dict as for [[pandas]]!). Keys correspond to columns. The schema for the data may be both implicit (derived from the data on dataframe creation), or explicit. Unlike for Pandas, creating a generic "empty dataframe" seems plain impossible; the best that we can do is this:
+```python
+from pyspark.sql.types import StructType
+spark.createDataFrame([], StructType([]))
+```
 
-One can also create a Spark df from a Pandas df using `spark.createDataFrame(pandasDF)`, which is often the best approach in practice, especially for small dataframes, as Pandas creation interface is just so much more reasonable.
+One can also create a Spark df from a Pandas df using `spark.createDataFrame(pandasDF)`, which is often the best approach in practice, especially for small dataframes, as Pandas creation interface is just so much more reasonable. In at-scale applications however one needs to be careful, as Spark checks incoming Pandas-origin data for Nulls, which consumes resources.
 
 To load extermal data into a dataframe:
 * `spark.read.parquet('filename')` (or `.csv`, or some other formats)
@@ -54,6 +58,7 @@ To load extermal data into a dataframe:
 Generally, all transformatoins on a dataframe are **lazy**: they are accumulated as an execution plan (DAG), and are NOT executed eagerly until an input-output **action** is called (a point when the calculation can no longer be postponed). Examples of actions:
 * `.collect()` - tries to load the dataframe (the result of all transformations, if any) into memory, as a list. If it doesn't fit to memory, you get an overflow.
 * `.toPandas()` - does the same, but also transforms it to Pandas.
+* `limit(7)` - a DF of (first? random?) 7 rows. Goes well with `toPandas()` to peek inside in notebooks.
 * `.show()` - collects at least some data, and shows the dataframe. By default it only shows 1 line (because of lazy), but it can be made eager with some special magic command (probably not the best idea tho, at least outside of testing notebooks). If the dataframe is already fully in memory (for example, if it's a small dataframe that you just created), the entire df will be shown.
     * `.display()` - a fancier kind of `show()` that only exists in Databricks notebooks, apparently, so it's probably not a part of standard pyspark
 * `.save.parquet()` - obviously
@@ -79,7 +84,7 @@ To interact the schema (that doesn't cause a recalculation):
 
 To interact with values (these cause a partial recalculation, and so are NOT harmless commands, from the DAG optimization POV): 
 * `df.count()` - returns the number of rows.
-* `distinct()` - returns distinct rows.
+* `distinct()` - returns distinct rows. `select(row_name).distinct().collect()` returns a list of distinct values.
 
 **Restructuring**
 
@@ -179,11 +184,11 @@ Footnotes
 * `groupby(*list_of_columns)` - groups by column. Then one can apply summarizing functions from above. 
 
 **Summarizing**
-* `.mean()` (also `.avg()`), `min`, `max`, `count`, `sum`, `stdev`, `variance` - apply this summary function to every column of a dataframe
-* To run aggregation on a single column, two options:
-    * `.agg({'col_name': "max'})` - universal version. It returns a column with one value, and oddly named, so to get the value itself you need to run `.head()[0]` on it.
-    * `.agg(min("col_name"))` - cozy quaint version 🤔 _Doesn't work for me?_
-* `.collect_set` - collects values within a group into one vector. ⚠️ The sequence of rows in a dataframe is famously non-deterministic, so if you care about the exact values of these vectors at all (for example, if you ever plan to group by them, or perform a `drop_duplicates` on them), you _have to_ use `.sf.array_sort(sf.collect_set(col))` instead of a naked `collect_set(col)` to sort the elements in the set post-factum.
+* `.mean()` (without `agg`) - apply this summary function to every column of a dataframe
+* `.agg(sf.mean("col_name").alias("mean_col_name"))` - apply this summary function to a column. (also `.avg()`), `min`, `max`, `count`, `sum`, `stdev`, `variance`
+* To calculate several different things, separate them with `,` inside the `agg`.
+* `.agg({'col_name': "max'})` - another way to run aggregation on a single column. Regardless of how you run it (with a list of operations, or a dictionary), you get a column with one value, and oddly named. If you run `head()` on this column, you get a `Row` of values. You can access elements of a row as if it were a list, but to turn it to a real list, unfortunately, you have to use a list comprehension.
+* `.collect_set` - another type of an aggregation function that collects values within a group into one vector. ⚠️ The sequence of rows in a dataframe is famously non-deterministic, so if you care about the exact values of these vectors at all (for example, if you ever plan to group by them, or perform a `drop_duplicates` on them), you _have to_ use `.sf.array_sort(sf.collect_set(col))` instead of a naked `collect_set(col)` to sort the elements in the set post-factum.
 
 Operations transforming a data column into a summary column:
 * `.stats()` - most of the classic "min-max-mean" statistics, all calculated at once, and returned as a summary table

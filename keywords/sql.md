@@ -20,7 +20,7 @@ WHERE (col1=1 AND col2>2)
   OR NOT (col5 IN ("cat","dog")) 
   OR col8 BETWEEN 3 AND 7
 GROUP BY col3
-HAVING COUNT(*)>1 AND SUM(col7)<100
+HAVING COUNT(*)>1 AND SUM(col7)<100 --comment
 ORDER BY col4 DESC, col5 ASC
 LIMIT 10
 ```

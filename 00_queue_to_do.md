@@ -18,15 +18,21 @@ Analyze this set of links:
 * https://github.com/dipanjanS/BerkeleyX-CS190.1x-Scalable-Machine-Learning
 
 Books to read / skim:
+* Data-intensive applications
+* Managing The Professional Service Firm by David Meister
 * https://book.pythontips.com/en/latest/index.html - Python tips (advancedish)
 * https://christophm.github.io/interpretable-ml-book/ - really nice explanations of ML tricks
 
 Main queue
+* `with cProfile.Profile() as pr:`
+* `@cached_property`
+* Partitioning of [[parquet]] files - everything is not as simple as I thought!
 * Process the list of "How a DS can become a DE": https://www.reddit.com/r/datascience/comments/1ehoumf/applying_for_a_de_role_as_a_current_ds_is_3_weeks/
 * Update OLAP / OLTP distinction text
 * https://docs.python.org/3/library/typing.html - do another pass, including covariant, contravariant
 * SynapseML - what is it?
 * JFrog - what is it?
+* optuna
 * Pyspark
     * Spark salting
     * Spark repartition - when and how? (`.repartition(col, col ...)`)
