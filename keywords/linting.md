@@ -24,4 +24,6 @@ Isort literally just sorts imports at the beginning of the file. To exclude a fi
 
 # Black
 
-`# fmt: off` turns formatting linting off starting from this command. If you only need to exclude a block of the code from formatting interventions (say, a manuall formatted matrix or something like that), add a `# fmt: on` once the tricky segment is over.
+`# fmt: off` turns formatting linting off starting from this command. If you only need to exclude a block of the code from formatting interventions (say, a manuall formatted matrix or something like that), add a `# fmt: on` once the tricky segment is over. 
+
+> In practice it's not always helpful tho, as flake8 doesn't respect these blocks, so unless you turn flake8 off for the entire file, it will still find a million reasons to complain for any ascii-level alignment. If you're using flake8 your code will never be readable, just accept it.

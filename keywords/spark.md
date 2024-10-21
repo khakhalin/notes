@@ -114,12 +114,20 @@ Basic adding and deleting:
 * `withColumnRenamed('old_name', 'new_name')` - renames a column
 * `withColumn('name', lit(None))` - adds an empty column. Using `lit(0)` will add you a column of zeros etc. You cannot specify different values here; if you manage to pass an iterable inside `lit()`, you'll just get this iterable as the same value in every row.
 
-Referring to columns:
+**Referring to columns:**
 * `.some_column_name` returns an object of "Column" type, similar to how in [[pandas]] it returned a series. But it's not yet the data itself, as the execution is lazy! It's not even an iterable, and there seems to be no easy way to iterate thrown values of a column (as values within a dataframe are not ordered!). If you need to iterate, you have to either collect (eagerly calculate) the entire dataframe, and then iterate by rows, picking the proper column from each row, or cast the entire thing to Pandas.
 * if the name is a variable, you use `sf.col(col_name)` where `sf` comes from `import pyspark.sql.functions as sf`
 
-**Using formulas**: If the formula is simple, it can be added in native pyspark using `withColumn` and column references:
+**Using formulas**: If the formula is simple enough, it can be added in native pyspark using `withColumn` and column references:
 `.withColumn('NewColumn', df.X + df.Y**2)`. Spark functions has all the main math, string etc. functions implemented, so in most cases that's enough.
+* **Dates:**
+    * `date_add(x, -1)` - shift by one day in the past
+    * `current_date()` and `current_timestamp()`
+    * `datediff`
+    * `date_trunc('str', d)` where `str` may be `year`, `quarter`, `month`, `week`, `day`, `hour`, `minute`, `second` (and a few smaller ones)
+    * `date_part('str', d)` - to extract a part of a date as a number
+    * `dayofyear()`
+    * `date_format(date, format)` - to string
 
 Nice syntax for conditional formulas:
 `.withColumn('b', sf.when(sf.col('a')>0, 1).otherwise(0))`

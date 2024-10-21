@@ -107,7 +107,7 @@ class MyClass(BaseModel):
     @validator('a')
     def custom_check(cls, v):
     	assert v > 0
-        return v # 🔥 Why is this needed?
+        return v # This is needed because validators also "fix" params
 ```
 ( The example above is not realistic, as there's a better way to check `x>0` using `Field(gt=0)`; see above).
 
@@ -115,6 +115,12 @@ Common uses for validators:
 * Check the value of the field (as shown above)
 * Check if it's not None (technically, also value-checking)
 * Check if at least one key is present
+
+Other interesting uses:
+* `@validator("var1", "var2")` - validates more than one variable. The syntax is quite weird tho: you have to detine the validator method as `def myfun(cls, v, values, field)`. Then somehow `v` takes the value to be validated, but the only way to figure out which one, is to look at `field.name` (which is a `str`). So in practice this "double-validator" would have to have an `if.. elif` semaphore structure inside. And then the only way to reach out for `var1` if you're processing `var2` is to do `values['var1]` apparently. (And it may be read-only, right? Not sure...)
+* `@validator(… , always=True)` - my undersatnding is that by default validators are only called on implicit assignments, but not on `_init_`, and not for default values. While setting `always` to `True` makes sure they are always called.
+* `@validator(… , each_item=True)` - if a field is actually a list (or any iterable), with this parameter set, the method will be called on individual elements, not on a list of it.
+* `… pre=True` - apparently makes this validator be called before other validators.
 
 In `V2` the syntax has changed! 🔥🔥🔥 - see the migration guide on Pydantic site
 

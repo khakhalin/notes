@@ -26,6 +26,7 @@ Books to read / skim:
 Main queue
 * `with cProfile.Profile() as pr:`
 * `@cached_property`
+* What's the difference between dbfs and blob?
 * Partitioning of [[parquet]] files - everything is not as simple as I thought!
 * Process the list of "How a DS can become a DE": https://www.reddit.com/r/datascience/comments/1ehoumf/applying_for_a_de_role_as_a_current_ds_is_3_weeks/
 * Update OLAP / OLTP distinction text
