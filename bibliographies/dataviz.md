@@ -15,6 +15,7 @@ Subtopics:
 
 * Best word cloud maker: https://wordart.com/create
 * Sankey diagram maker: http://sankeymatic.com/build/
+* MermaidJS - apparently a popular tool to create diagrams (graphs of labeled boxes of different shapes) from Json
 
 # Color
 

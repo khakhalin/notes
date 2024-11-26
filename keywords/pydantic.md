@@ -105,11 +105,11 @@ class MyClass(BaseModel):
 	a: int
 
     @validator('a')
-    def custom_check(cls, v):
+    def custom_check(cls, v):  # noqa: N805
     	assert v > 0
         return v # This is needed because validators also "fix" params
 ```
-( The example above is not realistic, as there's a better way to check `x>0` using `Field(gt=0)`; see above).
+( The example above is not realistic, as there's a better way to check `x>0` using `Field(gt=0)`; see above. `noqa` is needed if you use flake8, as it doesn't detect validators as class methods, and tries to complain that there's no `self` argument here)
 
 Common uses for validators:
 * Check the value of the field (as shown above)
@@ -121,6 +121,11 @@ Other interesting uses:
 * `@validator(… , always=True)` - my undersatnding is that by default validators are only called on implicit assignments, but not on `_init_`, and not for default values. While setting `always` to `True` makes sure they are always called.
 * `@validator(… , each_item=True)` - if a field is actually a list (or any iterable), with this parameter set, the method will be called on individual elements, not on a list of it.
 * `… pre=True` - apparently makes this validator be called before other validators.
+
+It's also possible to set validators via Annotated fields:
+`MyVal = Annotated[MObject, AfterValidator(my_validator)]`
+In this context `AfterValidator` is just a safer type of a validator that runs after Pydantic internal parsing. Apparently one can also do `Before`, `Plain` and `Wrap`, but it seems to get tricky:
+* https://docs.pydantic.dev/latest/concepts/validators/#annotated-validators
 
 In `V2` the syntax has changed! 🔥🔥🔥 - see the migration guide on Pydantic site
 

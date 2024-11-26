@@ -24,16 +24,17 @@ Books to read / skim:
 * https://christophm.github.io/interpretable-ml-book/ - really nice explanations of ML tricks
 
 Main queue
+* for spark `spark.sparkContext.parallelize(df)` vs `df.rdd` - what's the difference?
 * `with cProfile.Profile() as pr:`
 * `@cached_property`
 * What's the difference between dbfs and blob?
-* Partitioning of [[parquet]] files - everything is not as simple as I thought!
+* Partitioning of [[parquet]] files - everything is not as simple as I thought! Study (metadata, folders, requests)
 * Process the list of "How a DS can become a DE": https://www.reddit.com/r/datascience/comments/1ehoumf/applying_for_a_de_role_as_a_current_ds_is_3_weeks/
 * Update OLAP / OLTP distinction text
 * https://docs.python.org/3/library/typing.html - do another pass, including covariant, contravariant
-* SynapseML - what is it?
+* SynapseML - what is it? How does it work?
 * JFrog - what is it?
-* optuna
+* optuna vs hyperopt
 * Pyspark
     * Spark salting
     * Spark repartition - when and how? (`.repartition(col, col ...)`)
@@ -100,7 +101,9 @@ Main queue
 * [[dbt]] - how exactly it fits into the system, and how do people actually use it in practice?
 * sentry - read basics
 * categorial values in Pandas, and LightGBM
-* jenkins - only what it is (apparently it's oldschool)
+* merlke tree
+* CBOR
+* how bsky is built: https://atproto.com/guides/applications
 * prompting course for developers: https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/
 * Finish SQL quests: https://sqlzoo.net/wiki/SUM_and_COUNT
 * how do variational autoencoders work? (move to a separate zetterl from [[autoencoder]])
@@ -145,6 +148,7 @@ Main queue
 * Check these books and push them up in the book list:  https://twitter.com/rasbt/status/1617310114922336258
 * Prophet as some handy improvement over ARIMA: https://facebook.github.io/prophet/
 * From this tutorial, save info about reading population density:   https://twitter.com/milos_agathon/status/1617108301283577858
+* jenkins - only what it is (it's something oldschool, so also what it is not)
 * Tabular functions in Snowflake: https://docs.snowflake.com/en/developer-guide/udf/sql/udf-sql-tabular-functions.html
 * https://medium.com/javarevisited/5-different-git-workflows-50f75d8783a7
 * vector similarity on redis: https://redis.io/docs/stack/search/reference/vectors/

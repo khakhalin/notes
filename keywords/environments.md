@@ -29,7 +29,7 @@ Conda may come with:
 Environments:
 * `conda activate env_name` - activate an environment
 * `conda env list` - list environments
-* `conda create -y -n env_name python=3.9` - one useful sequence. `-y` means that for this environment all conda-related dialogues will be set to "default yes" mode, when user doesn't have to confirm their commands.
+* `conda create -y -n env_name python=3.9.*` - one useful sequence. `-y` means that for this environment all conda-related dialogues will be set to "default yes" mode, when user doesn't have to confirm their commands.
 * `conda env remove -n env_name` - removes environment
 
 Packages:

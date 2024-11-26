@@ -1,7 +1,7 @@
 # GIT
 
 Path: [[01_Tools]]
-See also: [[bash]], [[ssh]], [[vim]]
+See also: [[bash]], [[ssh]], [[vim]], [[linting]] (for pre-commit hooks)
 
 #tools
 
@@ -71,7 +71,18 @@ Another DIY alternative is just to delete a branch at either local or remote end
 
 If there's a conflict, one has to … 🔥🔥 _How to resolve conflicts? If you don't have an IDE, especially?.._
 
-Note also that unlike for `rebase` (below), merging branch1 into branch2 with a simple command doesn't exist! You can technically do it by providing an `--into-name <branch2>` command, but it's not just two branches in a row! And anyways it's advisable to always first switch to the branch you are merging to. if you just run (incorrectly!) "merge branch1 branch2" you will attempt to merge BOTH branches onto the current branch!!
+⚠️ Note that unlike for `rebase` (below), merging branch1 into branch2 with one simple command doesn't exist! You can technically do it by providing an `--into-name <branch2>` command, but it's not just two branches in a row! And anyways it's advisable to always first switch to the branch you are merging to. If you type  (_incorrectly!_) "merge branch1 branch2" you will attempt to merge BOTH branches onto the current branch!
+
+If you pulled a branch and commited locally, but someone else had pushed a commit to the origin branch, you can no longer push, and you can no longer pull with a simple `git pull`. Instead you should do `git fetch` followed by `git merge`. If you are lucky and there are no conflicts, that's it basically (just push back immediately); if there are coflicts - resolve them first, then commit and push.
+
+**Triggering conflicts**: If you want to a manual careful merge, you can try to avoid auto-merging using `git merge --no-commit --no-ff source_branch`. 🔥It's unclear however if it's enough to trigger a neat resolution sequence in the IDE.
+
+Apparently these 2 commands mark every file edited in both branches as a conflict.
+```bash
+git merge --no-commit source_branch
+git checkout --conflict merge .  # This . apparently being critical
+```
+This approach doesn't work for "clean merges" when no file is edited in both branches (for clean merges it still does a fast-forward), but that's probably ok.
 
 # Rebase
 
@@ -91,7 +102,7 @@ The pluses and minuses of rebase (compared to Merge):
     * "Always merge" may be a messy option, but it's the safest one for unexperienced teams ([ref](https://www.atlassian.com/git/articles/git-team-workflows-merge-or-rebase))
     * For example, it means that new commits in master should never be introduced into a development branch using rebase, as it would duplicate them. Rebase is only tolerable if commits are moved from "more temporary" branches towards "less temporary", or it will result in a horrible mess.
 * Bad: If you have a conflict, you'll see contradicting commits (one adding something, the other one reverting this something back). Which will be quite hard to clean up. (But you can always do `git regabse --abort` and merge instead)
-* Bad: never use rebase on public branches, as rebasing rewrites history, and if somebody is synchronized with this branch, they'll get a weird conflict of histories. The only way to use it with remote branches is with hard-pushing at the end (rewriting the remote branch), which is of course an extreme measure (and often forbidden anyways). [1](https://www.atlassian.com/git/tutorials/merging-vs-rebasing), [2](https://medium.com/@porteneuve/getting-solid-at-git-rebase-vs-merge-4fa1a48c53aa), [3](http://gitready.com/advanced/2009/02/11/pull-with-rebase.html)
+* Bad: never use rebase on public branches, as rebasing rewrites history, and if somebody is synchronized with this branch, they'll get a weird conflict of histories. The only way to use it with remote branches is with force-pushing at the end (rewriting the remote branch), which is a bit of an extreme measure (and often forbidden anyways). [1](https://www.atlassian.com/git/tutorials/merging-vs-rebasing), [2](https://medium.com/@porteneuve/getting-solid-at-git-rebase-vs-merge-4fa1a48c53aa), [3](http://gitready.com/advanced/2009/02/11/pull-with-rebase.html)
 
 Other interesting uses:
 * `git rebase --onto [target_branch] [list of branches]` - allows advanced tree manipulation that I don't understand for now: [1](https://git-scm.com/docs/git-rebase) 🔥 

@@ -63,7 +63,7 @@ Generally, all transformatoins on a dataframe are **lazy**: they are accumulated
     * `.display()` - a fancier kind of `show()` that only exists in Databricks notebooks, apparently, so it's probably not a part of standard pyspark
 * `.save.parquet()` - obviously
 * `.dropDuplicates(optional_columns_subset)` 🔥 _do I get it right that this one always triggers a full calculation?_
-* `.toPandas()` - converts it to Pandas, which also obviously means full calculation
+* `session.createDataFrame(df.rdd, df.schema)` - re-create a new Spark df with the same data as in the old df, but from scratch, with lineage broken.
 
 This is both a curse and a blessing. A blessing because supposely an execution plan can be optimized by external optimizers (although personally I am yet to see it happen 🔥). A curse, because writing in this style means that you cannot refer to things like the number of rows in a dataframe, or unique values in a column, without triggering a calculation, and potentially runining everything. It turns a coding into a much more deliberatelly planned activity, which may feel weird.
 
@@ -129,8 +129,8 @@ Basic adding and deleting:
     * `dayofyear()`
     * `date_format(date, format)` - to string
 
-Nice syntax for conditional formulas:
-`.withColumn('b', sf.when(sf.col('a')>0, 1).otherwise(0))`
+Conditional formulas:
+* `.withColumn('b', sf.when(sf.col('a')>0, 1).otherwise(0))`
 
 For more complex formulas, we need to shift from a dataframe to a Resilient Distirbuted Dataset (RDD), calculate a new column there, then shift back to a dataframe. And because horizontal concatenation is impossible, it's not enough to only calculate a new column, but we need to carry over the elements of the index, or the calculation will be in vain. Because of that, the syntax is really shaped for vectorized output. Here's an example that copies the entire dataframe, then adds one extra column on the right:
 ```python
