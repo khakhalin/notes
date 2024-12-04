@@ -66,7 +66,7 @@ def test_something(preload_data): # This using fixture as an input
 ```
 In this simplest form, the fixture doesn't seem to favor sequential tests, as the data will be pre-loaded every time (I think?🔥). Also, the fixture itself isn't tested, so if we want to start our test with a test of data loading, we'll have to load data twice: first in the text, then in the fixture for other tests. It is allegedly possible to test fixtures itself using a `pytester` plugin (a tester for tests) ([ref](https://stackoverflow.com/questions/56631622/how-to-test-the-pytest-fixture-itself)), but honestly it looks rather cumbersome.
 
-> It is probably possible to create a global instance of a data casher class, and `load_heavy_data()` from it. To make it actually load it the first time, and then just return this pre-loaded data again and again during this session. One could even try to pre-load this data during the data load testing, and then just send it to the global class. 🔥 Or did I misunderstand, and fixture actually cashes the data?
+> It is probably possible to create a global instance of a data cacher class, and `load_heavy_data()` from it. To make it actually load it the first time, and then just return this pre-loaded data again and again during this session. One could even try to pre-load this data during the data load testing, and then just send it to the global class. 🔥 Or did I misunderstand, and fixture actually caches the data?
 
 It seems to also be popular go use fixtures to setup databases, and then finish them with `yield` instead of `return`, to create samplers from these databases. See for example: [1](https://smirnov-am.github.io/pytest-advanced-fixtures/)
 

@@ -11,6 +11,7 @@ Subtopics
 * [[01loss]] - indicator loss
 * [[perceptual_loss]]
 * Hinge loss - used in [[svm]]
+* [[mape]] - beloved in business
 
 For [[time-series]], we can use "standard" loss (probably [[l2]]), but we have to modify the way it is interpreted (validated) using [[rolling_cross_validation]]
  

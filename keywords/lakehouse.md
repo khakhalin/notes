@@ -6,7 +6,7 @@ See also: [[medallion]], [[databricks]], [[datalake]], [[kafka]]
 #db
 
 
-Apparently, an alternative to [[datalake]] and data warehouses (DWH, [[data_wh]]) ptomoted by [[databricks]]. What the claim is that with cashing-in memory, working with datalake may be cheap and fast enough to eliminate the need in fancy ETLs.
+Apparently, an alternative to [[datalake]] and data warehouses (DWH, [[data_wh]]) ptomoted by [[databricks]]. What the claim is that with caching in-memory, working with datalake may be cheap and fast enough to eliminate the need in fancy ETLs.
 
 From the technical pov, a heavy reliance on [[parquet]] files for some reason.
 

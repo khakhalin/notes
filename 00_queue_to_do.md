@@ -33,8 +33,10 @@ Main queue
 * Update OLAP / OLTP distinction text
 * https://docs.python.org/3/library/typing.html - do another pass, including covariant, contravariant
 * SynapseML - what is it? How does it work?
+* `requirements.txt` in the repo for pip installation purposes
+* GitHub actions - how to set them up? The structure of the yaml?
 * JFrog - what is it?
-* optuna vs hyperopt
+* optuna vs hyperopt - one of these is apparently obsolete now, which one?
 * Pyspark
     * Spark salting
     * Spark repartition - when and how? (`.repartition(col, col ...)`)
@@ -51,10 +53,8 @@ Main queue
 * greatexpectations
 * tweedie objective function? More emphasis on big values?
 * aggregated mape and bias - what are they, and why they in particular?
-* Hyperopt library
 * pyarrow - something that is needed to configure spark to run quickly
 * Polars - what is it and how it works? Seems to be on the rise, isn't it?
-* Data modeling, 3d-Normal-Form
 * flake8, black, isort (all three are some sort of linters?)
 * kedro - why, how, and what can it do for me?
 * Add these "laws" that "most dangerous is 2nd" and "adding people doesn't help"
@@ -63,9 +63,9 @@ Main queue
 * SAP has some strange terms that DE people know and use: vbeln, likp, fpc, cin, lips, vbak - wtf are they, and why do they even exist?
 * A statement that hive had problems with concurrency and granularity, and Hudi and Iceberg are better
 * Delta Lake and Delta Tables (Databricks format?)
-* Trino, Starburst
 * read a bit more on ideology of [[scrum]]
 * pre-commit (is it a package for Python?)
+* Data modeling, 3d-Normal-Form
 * helm - what is it, how it works, some basics
 * Re-read and re-document all types of decorators (`@fun, @cls, @cls(params)`, and decorating both functions and classes)
 * Read about the Prophet model (what's inside, how does it typically perform?)
@@ -74,6 +74,7 @@ Main queue
 * Photon - some type of a vectorizer?
 * Hadoop - only some very basics
 * [[sqlalchemy]]
+* Trino, Starburst
 * Apache ServiceMix - apparently an OS data exchange smth?
 * Open ESB - an alternative for SAP? (ESB = Entreprise Service Bus)
 * Mulesoft Anypoint
@@ -410,7 +411,7 @@ https://end-to-end-machine-learning.teachable.com/courses/advanced-neural-networ
 * radix sort
 * Refresh hash tables (theory and implementation)
 * Refresh (maybe reimplement) red-black trees
-* LRU cash (Leetcode quest)
+* LRU cache (Leetcode quest)
 * Difference in decision boundaries for all algorihtms (Tree vs Logistic vs Linear Reg vs SVMs vs Naive Bayes)
 * Practice SQL on Hackersrank
 * Systems interivew - do a minimal set (at least fill the dictionary with stubs)
@@ -592,7 +593,6 @@ Go through 2-3 youtube lectures in the queue that describe some of the existing 
         * https://www.christophermanning.org/projects/building-cubic-hamiltonian-graphs-from-lcf-notation
 * Bloom filters and count-min sketch
 * Design patterns (OOP)
-* Cashing in DBs
 * TCP/IP
 * IPv4 vs IPv6
 * DNS lookup

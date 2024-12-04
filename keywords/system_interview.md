@@ -32,10 +32,10 @@ Identify:
 * Key features, functionalities, tasks
 * APIs (how different parts will interact)
 * Abstract database structure: what tables, and how they are linked
-* Bottlenecks (compute, storage, data, speed, availability) and targets. What to optimize for? What needs to be fast? What can be cashed? What asynchronies are permitted?
+* Bottlenecks (compute, storage, data, speed, availability) and targets. What to optimize for? What needs to be fast? What can be cached? What asynchronies are permitted?
 * Scalability, security, privacy, complexity, consistency
-* Trade-offs. Can something be pre-computed, cashed? Can we trade memory for speed?
-* Can we further optimize, by sending some requests through cashed, and some through direct pipelines, depending on some of their aspects?
+* Trade-offs. Can something be pre-computed, cached? Can we trade memory for speed?
+* Can we further optimize, by sending some requests through cached, and some through direct pipelines, depending on some of their aspects?
 * What are the APIs for developers; is it flexible enough?
 
 Example: for Twitter, it's easier to keep pre-calculated timelines and update all of them with every update, instead of writing a new tweet only once, and SQL selecting it after. It however creates a computational-graph-like problem, because you may see response-tweets before original tweets, if original tweets weren't yet precomputed.

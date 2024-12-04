@@ -26,7 +26,7 @@ Transformations:
 
 | Name                | Licensing            | Query          | Good                                                                                                  | Bad                           |
 |---------------------|----------------------|----------------|-------------------------------------------------------------------------------------------------------|-------------------------------|
-| Redis               | o.s.                 | keys to values | very fast, fully in-memory cashing                                                                    | large data                    |
+| Redis               | o.s.                 | keys to values | very fast, fully in-memory caching                                                                    | large data                    |
 | MongoDB             | o.s.                 | range-based    | document retrieval                                                                                    | can't have >2 keys            |
 | Postgres            | o.s.                 | sql            | simple relational tables, good community                                                              | can't do any nosql            |
 | MySQL               | o.s.                 | sql            | simple, lightweight, good community                                                                   | scale, speed                  |

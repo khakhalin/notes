@@ -70,7 +70,7 @@ This is both a curse and a blessing. A blessing because supposely an execution p
 There are also command that trigger a partial recalculation, or either a partial or full one, depending on the context. Fo example:
 * `.count()` - that's a tricky one, as it's heavily optimized, and tries not to trigger a full calculation where possible.
     * It seems that on a one-node instance (without parallelization) it triggers it, and always returns a correct result.
-    * If run on a multi-core instance, and combined with a command that explicitly collects information from all cores, for example `.cache().count()` (see "Cashing" below) it also returns a correct result
+    * If run on a multi-core instance, and combined with a command that explicitly collects information from all cores, for example `.cache().count()` (see "Caching" below) it also returns a correct result
     * If run on a multi-core instance without an explicit collection, it may be off by a bit however. This is impostant to remember when checking for duplicates, as the paradygmatic `if df.count() != df.dropDuplicates().count()` test may lie to you in some edge cases (🔥 still not clear when, but NULLs in important columns seem to trigger some odd behaviors)
 
 Footnotes:
@@ -301,7 +301,7 @@ Or, at a different scale, two different sql queries can requst the same df. The 
 * `df.unpersist()` - resets persisting for this dataframe in particular.
 
 **Checkpointing** is a fancier method:
-* `df = df.checkpoint()` - checkpoints a dataframe, in a sequence of "transformations" (that are not really transformations, as we remember, but planning of a computation DG). If a dataframe is contstructed iteratively, with later transformations repeatedly referencing new columns introduced earlier, it's a good idea to checkpoint a dataframe-in-construction, introducing a cashable boundary.
+* `df = df.checkpoint()` - checkpoints a dataframe, in a sequence of "transformations" (that are not really transformations, as we remember, but planning of a computation DG). If a dataframe is contstructed iteratively, with later transformations repeatedly referencing new columns introduced earlier, it's a good idea to checkpoint a dataframe-in-construction, introducing a cachable boundary.
     * Note that this `.checkpoint()` syntax seems to be not the minimal code: there needs to be some setting of options early on.
     * Also, in practice, it creates new columns that are not automatically deleted.
 

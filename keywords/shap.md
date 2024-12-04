@@ -1,7 +1,7 @@
 # SHAP (and Shapley) values
 
 Parents: [[interpretability]] / [[attribution]]
-See also: [[LightGBM]]
+See also: [[lightgbm]]
 
 #interpretability
 
@@ -13,6 +13,8 @@ The values satisfy the following requirements:
 2. The way they are "better" is that they take for account the entire model (unlike a univariable model), are not undercut by codependency (as in the case of marginal effects, when the value is the last one to be included), but also don't make any assumptions about the "meaningful" sequence in which variables should be plugged in (as in the case of sequential sum of squares). They achieve this by considering **all possible subsets of variables**, and calculating marginal contributions in regard to this subset. Then weighted-averaging them. Why weighted-averaging, and not simply averaging? To achieve some more nice qualities:
 4. If the variable is absent (constant), its contribution should be 0
 5. The sum of all contributions should be equal to the actual model output (or rather, the difference between the output and the global average, which is considered a starting point)
+
+[[lightgbm]] can generate shap values itself, without us running hundreds of experiments manually. For synapseml-based lgbm, for it to do it, apparently if you need ot just set `col_shap_output` value (🔥).
 
 # Refs
 
