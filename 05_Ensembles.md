@@ -16,7 +16,7 @@ Subtopics:
 * [[random_forest]] - bagging + features_bagging (random subset of coordinates), then average all
 * Famous implementations:
     * Xboost - the most popular method until 2022
-    * [[LightGBM]] - the most popular method as of 2023
+    * [[lightgbm]] - the most popular method as of 2023
 
 See also:
 * [[dropout]] - a similar idea for DL ([[06_DL]])

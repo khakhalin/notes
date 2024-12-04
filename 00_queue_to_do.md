@@ -137,7 +137,6 @@ Main queue
     * python poetry
 * Manage environments (when developing packages): https://python-poetry.org/docs/managing-environments/
 * MLflow introduction: https://docs.databricks.com/mlflow/end-to-end-example.html
-* shap values, including an example of [[LightGBM]]
 * sudo - why called that way?
 * [[bash]] shebang lines (#!)
 * "Prophet" from Facebook - allegedly the modern replacement for [[arima]] ([[time-series]])

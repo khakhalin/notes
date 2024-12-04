@@ -1,7 +1,7 @@
 # Gradient Boosting and GBMs
 
 Parents: [[05_Ensembles]]
-Related: [[boosting]], [[LightGBM]]
+Related: [[boosting]], [[lightgbm]]
 
 #ensemble #todo #halfthere
 

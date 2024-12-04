@@ -182,7 +182,7 @@ A note on deprecation for datetime functions (first announced some time in 2022)
 In some 🔥
 * `Series.cat.codes` - 🔥 
 
-For some practical examples, see [[LightGBM]], where defining categorical input vectors is a critical step of data preparation (the only way to explain to the model, which dummy variables are catecoricall, and which are not).
+For some practical examples, see [[lightgbm]], where defining categorical input vectors is a critical step of data preparation (the only way to explain to the model, which dummy variables are catecoricall, and which are not).
 
 Footnotes:
 * https://stackoverflow.com/questions/51102205/how-to-know-the-labels-assigned-by-astypecategory-cat-codes

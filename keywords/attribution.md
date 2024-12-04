@@ -1,7 +1,7 @@
 # Attribution and Shapley (SHAP) Values
 
 Parents: [[interpretability]]
-See also: [[LightGBM]], [[glm]]
+See also: [[lightgbm]], [[glm]]
 
 #interpretability
 
