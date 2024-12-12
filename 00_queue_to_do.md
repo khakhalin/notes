@@ -24,13 +24,19 @@ Books to read / skim:
 * https://christophm.github.io/interpretable-ml-book/ - really nice explanations of ML tricks
 
 Main queue
+* document git ignore
+* revisit Kedro and figure out if it can help us
+* [[pandas]] after groupby `.rolling(window)` - what is it?
+* How to turn project into an installable package?
 * for spark `spark.sparkContext.parallelize(df)` vs `df.rdd` - what's the difference?
+* `precommit` and how to arrange it
 * `with cProfile.Profile() as pr:`
 * `@cached_property`
 * What's the difference between dbfs and blob?
 * Partitioning of [[parquet]] files - everything is not as simple as I thought! Study (metadata, folders, requests)
 * Process the list of "How a DS can become a DE": https://www.reddit.com/r/datascience/comments/1ehoumf/applying_for_a_de_role_as_a_current_ds_is_3_weeks/
 * Update OLAP / OLTP distinction text
+* A super-cool book about the intuitions behind [[pca]] (available as several long chapters on a blog): https://peterbloem.nl/blog/
 * https://docs.python.org/3/library/typing.html - do another pass, including covariant, contravariant
 * SynapseML - what is it? How does it work?
 * `requirements.txt` in the repo for pip installation purposes
@@ -50,6 +56,7 @@ Main queue
 * What are the differences between conda, pip, and miniforge, in practice?
 * watch some jira tutorial at some point
 * `Annotated` in Pydantic (for custom types) - describe both the need, the functionality, and the interface
+* `poetry` for managing and publishing packages. That's what uses `pyproject.toml` file and setups pre-commits in a neat fashion.
 * greatexpectations
 * tweedie objective function? More emphasis on big values?
 * aggregated mape and bias - what are they, and why they in particular?
@@ -60,6 +67,7 @@ Main queue
 * Add these "laws" that "most dangerous is 2nd" and "adding people doesn't help"
 * Dependabot
 * Hive
+* Understand after all what [[airflow]] does in terms of "how does it look like"?
 * SAP has some strange terms that DE people know and use: vbeln, likp, fpc, cin, lips, vbak - wtf are they, and why do they even exist?
 * A statement that hive had problems with concurrency and granularity, and Hudi and Iceberg are better
 * Delta Lake and Delta Tables (Databricks format?)
@@ -74,6 +82,7 @@ Main queue
 * Photon - some type of a vectorizer?
 * Hadoop - only some very basics
 * [[sqlalchemy]]
+* k-d tree - seems to be a computationally-efficient high-dim KNN-like algo
 * Trino, Starburst
 * Apache ServiceMix - apparently an OS data exchange smth?
 * Open ESB - an alternative for SAP? (ESB = Entreprise Service Bus)

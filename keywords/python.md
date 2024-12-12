@@ -195,11 +195,48 @@ But third, if later on you realize that you actually want to run this script fro
 Footnotes:
 * https://stackoverflow.com/questions/47524054/calling-main-from-another-file-in-python
 
-## Namespaces
+## Packages
 
 How to **create a namespace** to compartmentalize some functions (in a style of `utils.fun()`)? Two options: a **static class** and a **Python package**.
-* The static class is self-explanatory: just create a `py` file, and define a class with many static functions, then import this class in the main init with `from .name import name`.
-* For a package, create a folder `name`, with `__init__.py` and a bunch of files. Make this package's init contain imports of every function from each of the files (like, `from .fun import fun`), and so on. Then once you need to use package, elsewhere do `from . import name`, or maybe `from . import name as meaningful_name` if you prefer. This import needs to be done in every Python file that uses this functionality, the same way it happens for numpy, for example. This `from .` is relative import, but from the current folder.
+
+The static class is self-explanatory: just create a `py` file, and define a class with many static functions, then import this class in the main init with `from .name import name`. But one can only go so far with this approach.
+
+To create a **package**:
+* Create a folder `package_name`. If you also have a [[git]] repo with the same name, first put a `src` subfolder in it, and then in this subfolder - `package_name` again. You end up with `mypack/src/mypack` which may look superfluous, but apparently fixes some potential issues downstream.
+* In the inner `package_name` folder add a file `__init__.py` inside. That's also where all of your code.
+* Optional (? 🔥) Make the `__init__.py` file contain imports of every function from each of the files (like, `from .fun import fun`), and so on.
+* In the outer (repo root) `package_name` folder create files `setup.py` and `requirements.txt`. See below for format.
+
+A minimal `setup.py` file looks like this:
+```python
+from setuptools import setup
+
+setup(
+   name='my_package',
+   version='1.0',
+   description='A useful module',
+   author='Joe Doe',
+   author_email='joe@foo.example',
+   packages=['my_package'],
+   install_requires=['pandas', 'numpy>=2.1.3'], #external dependencies
+)
+```
+
+The file `requirements.txt` is very similar (🔥 not sure why there's this repetition actually?) and looks kinda like this:
+```
+pandas
+numpy>=2.1.3
+scipy==1.14.1
+```
+
+Once done with all of that, we need to set up a correct environment (see [[environments]]). There are several ways to do it.
+* One, run `pip install -e .` to install this package as an editable package. From now on you'll be able to import this package by its name. And it will also install everything from `setup.py` (🔥 I believe? Not from requirements.txt?)
+* Another option is to create a well-designed `environment.yml` 🔥 and then run `conda env create -f environment.yml` which will _both_ create the environment and install stuff specific from this package, and if you add a `pip` section at the end of this yaml, with `-e .` in it, then you'l also cover the point above.
+
+Footnotes:
+* https://stackoverflow.com/questions/1471994/what-is-setup-py
+
+**Subpackages**
 
 If you need to call one subpackage from another subpackage, it's a bit harder. There are two options here: good, and hacky.
 * The good one: `from ..sub2 import smth` or `from ..sub2.smth import some_method`

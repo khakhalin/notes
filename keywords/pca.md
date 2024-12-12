@@ -46,4 +46,6 @@ loadings = pca.inverse_transform(np.eye(2)) # This command is somehow really not
 
 # Refs
 
+Intuitions behind PCA (a great write-up by Peter Bloem): https://peterbloem.nl/blog/
+
 A very nice practical introduction to PCA in Python: https://jakevdp.github.io/PythonDataScienceHandbook/05.09-principal-component-analysis.html

@@ -1,12 +1,12 @@
 # GIT
 
 Path: [[01_Tools]]
-See also: [[bash]], [[ssh]], [[vim]], [[linting]] (for pre-commit hooks)
+See also: [[bash]], [[ssh]], [[vim]], [[linting]] (for pre-commit hooks), [[github]], [[gitlab]]
 
 #tools
 
 
-Todo:
+Todo: 🔥🔥
 * https://git-scm.com/docs/git-restore
 * https://git-scm.com/docs/git-rebase#_recovering_from_upstream_rebase
 
@@ -118,7 +118,7 @@ Footnotes:
 * `git clean` - from the current dir, removes all files that are not under version control (all untracked files)
 * `git reset --hard [commit_id]` - reset to commit (last one by default), mercilessly discarding and erasing everything that happened since (all changes, committed and uncommited).
 * `git push --force` - hard push to origin, overwriting it: A _super_ dangerous a wrong thing to do; forbidden on all normal repos.
-* `git fetch origin main; git reset --hard origin/main` - **hard-pull from origin** erasing any local changes.
+* `git fetch origin main; git reset --hard origin/main` - **hard pull from origin** erasing any local changes.
 * `git branch -d branch_name` - deletes branch
 * `git reset --hard HEAD~3` - destroy and delete last 3 commits, reset HEAD three positions lower. Note: If you want to save their content just in case, before running this, do `git branch [branch_name]`. Then when you destroy commits in the original branch, they will still be present in this new branch. Note also that rewriting history like that is a very bad idea if those commits were already shared.
 

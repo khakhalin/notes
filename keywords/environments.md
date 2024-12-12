@@ -47,7 +47,9 @@ Never do `update all`, or it can ruin your TF installation. Only upgrade point-b
 * `pip uninstall NAME` - remove
 * `pip list` - see all versions
 * `pip show package_name` - see the version of this package in particular. The name should be exact.
-* `pip install -e ".[devel]"` - when run from a [[git]] repo, installs this repo as a package in developer mode (with code references linked to the repo 🔥 ??)
+
+`pip install -e .` - when run from a [[git]] repo, installs this repo as a package in developer mode (with code references linked to the repo). So you'll be able to do `from this_page import ...` etc. It's also possible to have a separate set of requirements for "normal install" and for developers, and use `pip install -e ".[devel]"` to install these devel-level requirements. 🔥
+🔥🔥🔥 _FIgure out how `setup.py` is supposed to look in this case? And also what's the difference between what's written in `setup.py` and in `requirements.txt`?_
 
 To investigate:
 * `pip freeze` - 🔥 Not sure how it works, but seems to list all currently installed versions of all packages.

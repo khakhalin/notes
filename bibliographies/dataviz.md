@@ -13,9 +13,19 @@ Subtopics:
 
 # External tools
 
-* Best word cloud maker: https://wordart.com/create
-* Sankey diagram maker: http://sankeymatic.com/build/
-* MermaidJS - apparently a popular tool to create diagrams (graphs of labeled boxes of different shapes) from Json
+* [tldraw.com](https://tldraw.com/) - a better version of explaineverything.com
+
+ Diagram makers:
+ * https://app.diagrams.net/ (with an alt-url of draw.io) - seems to be the currens standard
+ * https://excalidraw.com/ - ? runner-up? Promise to be free?
+ * MermaidJS - apparently a popular tool to create diagrams (graphs of labeled boxes of different shapes) from Json
+ * Not vetted (require registration):
+     * https://whimsical.com/
+     * https://miro.com/
+
+Other specific tools
+* Best word cloud maker: [https://wordart.com/create](https://wordart.com/create)
+* Sankey diagram maker: [http://sankeymatic.com/build/](http://sankeymatic.com/build/)
 
 # Color
 

@@ -33,12 +33,14 @@ In practice, a good DWH exists somewhere between these two extremes, maintaining
 * Default values
 * Cross-references
 
-A typical layered structure for the databases 🔥:
+A typical layered structure of databases in a DWH:
 1. BIZ layer (internal)
-    1. DIM tables - dimensions, tables that will be massively referenced everywhere via secondary keys, such as customer, product, location etc.
-    2. FACT tables - tables with transactions. They also have keys of course, but are typically not referenced, aside from linking and chaining related transactions to each other
-2. PUSR (Power User) layer - summarizes everything, but with full data, very limited access to be [[gdpr]]-compliant
-3. REP - outward-facing layer, typically consists of views (see [[sql]]), and not actual tables, where filtering by access rights would happen. Personal data is typically also stripped out at this point.
+    1. DIM tables - dimensions, tables that contan primary keys and that are massively referenced everywhere via secondary keys, such as `cust_sk`, `prod_sk`, `locat_sk` etc. The table has a suffix `_dim`. May not be versioned (🔥 ? is it true)
+    2. FACT tables - tables with transactions. They also have keys of course, but these keys are often not referenced, aside for a case when some sort of transactions need to be linked and chained to each other. The table has a suffix `_fct`.
+3. PUSR (Power User) layer - summarizes everything, but with full data, very limited access to be [[gdpr]]-compliant
+4. REP - outward-facing layer, typically consists of views (see [[sql]]), and not actual tables, where filtering by access rights would happen. Personal data is typically also stripped out at this point.
+
+When working with data science pipelines, the derivative temporary databases that are calculated based on these primary databases, are sometimes called **views** and get a suffix `_v`.
 
 ## Inmon model
 

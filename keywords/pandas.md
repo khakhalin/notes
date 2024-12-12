@@ -270,12 +270,13 @@ Some comments on joining and merging:
 * To join only some columns, join with an incomplete dataframe (make df_left not a full dataframe, but select the columns you need using standard `df[['x','y']]` notation).
 * To remove duplicates, do `.drop_duplicates()`
 
-An interesting trick to create a "Kronecker-multiplied" backbone of several factors, to get a row for every combination of "indices" (which is helpful for transforming a sparse representation into a dense one): merge on a dummy column.
+⚠️_Obsolete?_ An interesting trick to create a "Kronecker-multiplied" backbone of several factors, to get a row for every combination of "indices" (which is helpful for transforming a sparse representation into a dense one): merge on a dummy column.
 ```python
 a = [1,2,3]
 b = ['a','b']
 pd.DataFrame({'A':a, '_':1}).merge(pd.DataFrame({'B':b, '_':1})).drop('_', axis=1)
 ```
+These days you'd just do `df1.join(df2, how='cross')`
 
 For **merging multiple dataframes** at once, set indices properly, and then do `pd.concat()` with a list of dataframes, and `join=inner` (or something else) argument. See documentation for details. This looks neater, and may be faster than consecutive merges.
 
@@ -283,8 +284,7 @@ For **merging multiple dataframes** at once, set indices properly, and then do `
 `pd.merge_asof(df_full, df_checkpoints, on='TIMESTAMP')`
 In this case to me it feels that we're going foward, filling data with stuff, but actually the default settings for the direction is named `direction=backward`, so I'm guessing it's about "looking backwards" at the last reasonable value. If you switch `direction` to `forward`, you'll be filling missing points with the next value. It's also possible to use `direction=nearest`.
 * Note that without piping, this method is not stackable (it's not a method of a dataframe, but of Pandas). But one can always do `df1.pipe(pd.merge_asof, df2, on='TIME')`.
-- [ ] * Both dataframes need to be sorted (on the key that we're using for merging).
-* https://pandas.pydata.org/pandas-docs/version/0.25.0/reference/api/pandas.merge_asof.html
+* Both dataframes need to be sorted (on the key that we're using for merging).
 
 🚫 **Recently deprecated: Append**
 * `df = df.append(df2)` - used to be a way to add homogeneous rows. Takes either a one-row dataframe, or a dictionary. 
@@ -293,6 +293,7 @@ In this case to me it feels that we're going foward, filling data with stuff, bu
 
 Footnotes:
 * Documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/merging.html
+* https://pandas.pydata.org/pandas-docs/version/0.25.0/reference/api/pandas.merge_asof.html
 * https://stackoverflow.com/questions/53645882/pandas-merging-101
 
 # Grouping and Aggregation

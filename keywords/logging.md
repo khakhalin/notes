@@ -57,7 +57,8 @@ And then everywhere elsewhere you get `logger = logging.getLogger`, and supposed
 
 To suppress warnings from some of the most verbose packages you use:
 ```python
-logging.getLogger("package_name").setLevel(logging.INFO)
+logger = logging.getLogger("package_name")
+logger.setLevel(logging.INFO)
 ```
 
 **To filter one specific warning**: You need to create a filter (either a class or a function) and attach it to something. The filter is supposed to return a Boolean, and messages that trigger a `True` will pass, while messages that trigger a `False` will be filtered out.

@@ -62,7 +62,7 @@ Generally, all transformatoins on a dataframe are **lazy**: they are accumulated
 * `.show()` - collects at least some data, and shows the dataframe. By default it only shows 1 line (because of lazy), but it can be made eager with some special magic command (probably not the best idea tho, at least outside of testing notebooks). If the dataframe is already fully in memory (for example, if it's a small dataframe that you just created), the entire df will be shown.
     * `.display()` - a fancier kind of `show()` that only exists in Databricks notebooks, apparently, so it's probably not a part of standard pyspark
 * `.save.parquet()` - obviously
-* `.dropDuplicates(optional_columns_subset)` 🔥 _do I get it right that this one always triggers a full calculation?_
+* `.dropDuplicates(optional_list_of_columns)` - ⚠️ Note that it triggers a full calculation (or at least something very similar to it).
 * `session.createDataFrame(df.rdd, df.schema)` - re-create a new Spark df with the same data as in the old df, but from scratch, with lineage broken.
 
 This is both a curse and a blessing. A blessing because supposely an execution plan can be optimized by external optimizers (although personally I am yet to see it happen 🔥). A curse, because writing in this style means that you cannot refer to things like the number of rows in a dataframe, or unique values in a column, without triggering a calculation, and potentially runining everything. It turns a coding into a much more deliberatelly planned activity, which may feel weird.

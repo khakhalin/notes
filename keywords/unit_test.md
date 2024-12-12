@@ -31,7 +31,7 @@ To test that some function raises an exception when it should raise an exception
 with pytest.raises(Exception):
     test_function()
 ```
-This sequence will succeed if `test_function` failed (and raised an exception), and will fail if it succeeded. It is also possible to specify which exactly exception needs to be raised. The following code (that also uses a fancy `contextlib` package to create a context) tests errors (or their absence) case by case:
+This sequence will succeed if `test_function` failed (and raised an exception), and will fail if it succeeded. You can also specify which exactly exception needs to be raised. The following code (that also uses a fancy `contextlib` package to create a context) tests errors (or their absence) case by case:
 ```python
 from contextlib import nullcontext
 if condition(a):
