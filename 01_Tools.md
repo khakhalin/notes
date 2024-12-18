@@ -9,10 +9,8 @@ Major subtopics:
 * [[coding]] - everything coding
 
 Tips, notes, and links for individual tools:
-* [[python]] - with separate notes for [[numpy]], [[pandas]] etc.
 * [[tensorflow]], [[jax]] - ML frameworks
 * [[sql]], [[postgres]] - Databases
-* [[git]] - Version control
 * [[bash]], [[cron]] - Scripting / terminal
 * [[docker]], [[kubernetes]], [[flask]] - Containerization tools
 * [[tableau]], [[kibana]] - Reporting tools

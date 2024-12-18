@@ -1,6 +1,6 @@
 # Object-Oriented Programming
 
-Parent: [[01_Tools]]
+Parent: [[swe]]
 Related:  [[python]], [[dictionary]]
 
 Subtopics:

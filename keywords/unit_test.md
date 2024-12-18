@@ -47,14 +47,22 @@ class CustomError(RuntimeError):
 	"""No content needed, just a comment for why we have this."""
 ```
 
-Pytest gives a really nice run-down of how the assert expression itself is calculated, how exactly the left side is ≠ to the right side, and where all values are coming from. To debug further, and see the content of other local variables in the pytest output on failure, you may also write some like `assert x==1, f"y={f}"`, as this string after the comma will become a part an assert error message, and so will be shown in the output.
+Pytest standard output gives a really nice run-down of how the assert expression itself is calculated, how exactly the left side is ≠ to the right side, and where all values are coming from. To debug further, and see the content of other local variables in the pytest output on failure, you may also write some like `assert x==1, f"y={f}"`, as this string after the comma will become a part an assert error message, and so will be shown in the output.
 
-Pytest also allows to run only tests with a name matching a pattern: `pytest -k "pattern"`. With a good naming system, this may be useful. Moreover, this "pattern" thing supports logical operations and what not (`pytest -k "ToLine and not test_string"`). 🔥
+You can run only tests with a name matching a pattern: `pytest -k "pattern"`. With a good naming system, this may be useful. Moreover, this "pattern" thing supports logical operations and what not (`pytest -k "ToLine and not test_string"`). 🔥
 
-It's also possible to mark-up code with helpers, mark some tests as "expected to fail" (aka "ignore for now"), skip some tests conditionally, based on the environment variables, such as Python version, or operating system:
-`@pytest.mark.skipif(sys.version_info > (2, 7), reason="requires Python 2.7")`
+Useful helpers / decorators:
+* `@pytest.mark.skip()` - skip some tests
+* `mark.skipif()` - skipconditionally, based on the environment variables, such as Python version, or operating system. For example: `@pytest.mark.skipif(sys.version_info > (2, 7), reason="requires Python 2.7")`
 
-To pre-load some heavy data for the test, one needs to use a **fixture**.
+To parameterize tests:
+```python
+@pytest.mark.parametrize("var_name", ['val1', 'val2', 'val2'])
+def test_whatever(self, var_name):
+	assert do_something_with(var_name)
+```
+
+To pre-load some data for the test, one needs to use a **fixture**.
 ```python
 @pytest.fixture(scope="session") # Without this it will be recalculated every time
 def preload_data():

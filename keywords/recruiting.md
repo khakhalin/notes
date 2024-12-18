@@ -1,5 +1,7 @@
 # Recruiting, hiring, interviewing
 
+#bib #management #interview
+
 See also: 
 * [[job_search]] - kind of the opposite perspective
 * [[system_interview]] - how to prepare for systems interivews
@@ -10,8 +12,21 @@ Related:
 * [[Saroufim2021screening]] - that objective tech interviews are impossible, Mark Saroufim 2021
 * [[Bock2015workrules]] - a book about Google corporate culture
 
-#management #bib #interview
+# Levels in DS
 
+My personal understanding of levels in DS (not verified):
+1. Juniors - entry level position, often a DA, but sometimes a junior DS
+2. Normies  - typically specialized (DS, DE, DA), where DS can mean several options
+    1. DS proper - explicit modeling, problem solving, "advanced common sense", Know one domain.
+    2. DA with pipelining (so with traces of DE, DWH, SWE)
+    3. ML engineering
+    4. BI (acting as an owner of processes, interpreting DA, internal consultant, somewhat akin to the role of PO for SWE)
+3. Seniors - typically are still called DS, but in practice usually know "core DS" plus DA, some DE, DevOps, SWE, ML. The focus shifts to combining these fields and independent work. Know 2-3 domains.
+4. Tech Leads / Staff DS (depending on whether the person goes more management route, or individual contributor route). Typically aquire a second adjacent field, skills in systems engineering and code engineering. Domain-agnostic (4-5 domains behind the belt).
+5. Head of Data in a smaller company / Principal DS / Architects - typically, an even more managerial position, with an exception of Principal DS (Gurus that know everything, but refuse to manage people).
+6. Head of Data in a large company / Partner
+
+# Interviewing
 
 General ideas for good interviewing:
 * Don't do unstructured interviews (they just reinforce your biases). Always come with a structure first, a list of questions to ask, ask all candidates these questions, and score them in the same way
@@ -20,7 +35,7 @@ General ideas for good interviewing:
 * Actual mini-projects (2-3 hours) work even better, but may be expensive in practice
 * Incrementally making the task harder, by adding constraints, new business cases, or follow-up projects, is great, as it allows to probe deeper, and also models real work (real life) in a short amount of time
 
-# Good practices
+## Good practices
 
 Aline Lerner (2023) What do the best interviewers have in common? We looked at thousands of real interviews to find out. https://interviewing.io/blog/best-technical-interviews-common
 Analyzed feedbacks to thousands of real interviews (not practice ones) on their platform, and checked whether the candidates were willing to take a 2nd interview with a company after they passed the 1st one (corrected by candidate overall score!) The quality of a question mattered a lot (unlike the company name!).
@@ -36,7 +51,7 @@ https://erikbern.com/2020/01/13/how-to-hire-smarter-than-the-market-a-toy-model.
 4. It means that the best strategy to win over a competitive market is to officially give up on some of the "virtues" in your candidates. It allows to get better candidates on all other dimensions. This approach is especially helpful if you think in terms of balanced teams, rather than individual candidates.  In a balanced "pokemon teams", people with extreme talents will support and enrich each other.
 See also (Wee 2014) below, for a similar argument in a context of ability testing.
 
-# Bad practices
+## Bad practices
 
 Ammon Bartram. 2015. Who Y Combinator companies want.
 They asked ~30 big software companies to fill a table about what properties of job candidates they value, and which ones actually hurt an application. They found that **there is almost no correlation between companies, in terms of how they define a good candidate!** It is completely unpredictable, from company to company, and seems to often follow the profile of the founder of each company. The only few (weak and obvious) universals that they found: 
@@ -77,7 +92,7 @@ Aline Lerner. (2023) After a lot more data, technical interview performance real
 https://interviewing.io/blog/after-a-lot-more-data-technical-interview-performance-really-is-kind-of-arbitrary
 Their internal data, with nice visualizations (but somewhat confusing math). Results for the same person across different interviews is extremely variable, with standard deviation of about 30% of the average scare, meaning that among 5 interviews, most people would get both the max and the lowest score at least once. So it is really a numbers game.
 
-# Cognitive tests
+## Cognitive tests
 
 Kuncel, N. R., & Hezlett, S. A. (2010). Fact and fiction in cognitive ability testing for admissions and hiring decisions. _Current Directions in Psychological Science_, _19_(6), 339-345.
 https://journals.sagepub.com/doi/pdf/10.1177/0963721410389459?casa_token=apoYkIPvH4IAAAAA:4U6Z4lcceg7zSlKESb0d2cAM5x9n9b8usV4d1yDXq1WsEehY4qwJElJTmNl7J-KAyLkUopnF8SG5
@@ -92,7 +107,7 @@ https://www.researchgate.net/profile/Serena-Wee/publication/287207336_Wee2014b/l
 When hiring based on tests, if you use total scores, you get rigid non-diverse teams with members following a certain "rounded" profile. The only way to get a more interesting team is to pick people with complementing skills by selecting winners of individual sub-scores. 
 Start with a quick summary that cognitive tests work better than interviews and biographies (2 refs), but worse than work samples and assessments of past performance (4 refs).
 
-# Personality tests
+## Personality tests
 
 (as an alternative to [[behav_interview]])
 

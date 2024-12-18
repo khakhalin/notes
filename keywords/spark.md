@@ -67,11 +67,11 @@ Generally, all transformatoins on a dataframe are **lazy**: they are accumulated
 
 This is both a curse and a blessing. A blessing because supposely an execution plan can be optimized by external optimizers (although personally I am yet to see it happen 🔥). A curse, because writing in this style means that you cannot refer to things like the number of rows in a dataframe, or unique values in a column, without triggering a calculation, and potentially runining everything. It turns a coding into a much more deliberatelly planned activity, which may feel weird.
 
-There are also command that trigger a partial recalculation, or either a partial or full one, depending on the context. Fo example:
+There are also command that trigger a partial recalculation, or either a partial or full one, depending on the context. For example:
 * `.count()` - that's a tricky one, as it's heavily optimized, and tries not to trigger a full calculation where possible.
     * It seems that on a one-node instance (without parallelization) it triggers it, and always returns a correct result.
     * If run on a multi-core instance, and combined with a command that explicitly collects information from all cores, for example `.cache().count()` (see "Caching" below) it also returns a correct result
-    * If run on a multi-core instance without an explicit collection, it may be off by a bit however. This is impostant to remember when checking for duplicates, as the paradygmatic `if df.count() != df.dropDuplicates().count()` test may lie to you in some edge cases (🔥 still not clear when, but NULLs in important columns seem to trigger some odd behaviors)
+    * ☢️ If run on a multi-core instance without an explicit collection, it may be off  however. This is impostant to remember when checking for duplicates, as the paradygmatic `if df.count() != df.dropDuplicates().count()` test may lie to you in some edge cases!
 
 Footnotes:
 * https://stackoverflow.com/questions/69038671/why-method-count-does-not-get-true-num-of-rows
@@ -185,6 +185,21 @@ Footnotes
         * `1 != 'X' ` is however also false! Because you can't negotiate with NaNs! Which is different to how Pandas is treating it, for eample.
 * `df.where()` - just a complete alias for `filter`; no new functionality
 * `df.col_name.isNull()` - thats how to find nulls / NAs
+
+An operation that is somewhat akin to filtering: **drop_duplicates**
+* Simple `drop_duplicates` is usually safe, but triggers (almost?) a full calculation of thd df, and so shouldn't be thrown around casually. In most cases, for large dataframes, some kind of merging and/or summarizing provides a better performance.
+* `drop_duplicate(['col1', 'col2'])` allows to drop duplicates only on a selected column, and it is a dangerous operation (☢️) as if the df is broken across partitions, these will be processed separately, and then summarized, which means that it is not guaranteed which rows will end up in the final df. On one partition it would have been the 1st one for every occurance of `col1, col2`, but with many partitions it's unpredictable, and also depends on the number of cores on which the code runs.
+    * One option that seems to work (and is ok for small dataframes): do `.coalesce(1)` and sorting `.orderBy('col1')` before dropping duplicates.
+    * Another otion, to use window functions instead (see below); for example, instead of `.drop_duplicates(['col'])` do:
+    ```python
+   df = (
+       df.withColumn('rank', rank().over(
+           Window.partitionBy('col').orderBy('date')
+           ))
+       .filter(col('rank')==1)
+       .drop('rank')
+    )
+     ```   
 
 ## Grouping and summarizing
 
@@ -316,3 +331,5 @@ Footnotes:
 https://books.japila.pl/apache-spark-internals/
 A strange personal site with Spark documentation and advice that looks both promising and weirdly unfinished.
 
+High-Performance Spark by Karau, Warren
+https://www.oreilly.com/library/view/high-performance-spark/9781491943199/

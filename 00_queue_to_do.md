@@ -28,7 +28,8 @@ Main queue
 * revisit Kedro and figure out if it can help us
 * [[pandas]] after groupby `.rolling(window)` - what is it?
 * How to turn project into an installable package?
-* for spark `spark.sparkContext.parallelize(df)` vs `df.rdd` - what's the difference?
+* for [[spark]] `spark.sparkContext.parallelize(df)` vs `df.rdd` - what's the difference?
+* Read and document window functions on [[spark]]
 * `precommit` and how to arrange it
 * `with cProfile.Profile() as pr:`
 * `@cached_property`

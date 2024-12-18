@@ -1,7 +1,10 @@
 # System Design
 
-Parents: [[01_Tools]]
+Parents: [[swe]]
 See also: [[design_docs]]
+
+#swe #systems
+
 
 Subtopics:
 * [[streaming]] - Message queues and message brokers
@@ -13,8 +16,6 @@ See also:
 * [[hardware]] - Everything hardware
 * [[system_interview]] - collections of tips regarding system interviews
 * [[fairness]] - an ethical aspect of system development
-
-#tools #systems #bib
 
 
 # Scaling
