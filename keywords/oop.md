@@ -10,7 +10,7 @@ Subtopics:
 * [[pydantic]] - a popular library for enforcing data structures in Python
 * [[unit_test]] - testing-driven development
 
-#oop
+#oop #swe #python
 
 
 # General terminology

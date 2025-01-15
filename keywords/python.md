@@ -4,11 +4,11 @@ Path: [[01_Tools]]
 
 Random notes on Python.
 
-#tools #python #coding #oop
+#tools #python #coding #oop #swe`
 
 
 Subtopics and related:
-* [[oop]] - OOP very Python-specific for now. Exclusively Python topics include:
+* [[oop]] - a entry on OOP is very Python-specific for now. Exclusively Python topics include:
     * [[decorators]] - how to write them in Python
 * Common packages:
     * The holy triad: [[numpy]], [[pandas]], [[matplotlib]]
@@ -244,7 +244,7 @@ If you need to call one subpackage from another subpackage, it's a bit harder. T
 
 Now, if you need to import the entire package (parent package) from one of subpackages (as it happens when you do unit testing [[unit_test]]), and you don't want to use the "sys" hack, just make sure the package you are in has an `__init__.py` file (it may even be empty). Then do simple `from package_name import smth`. Apparently, the logic is the following: if you don't do relative import (`from .smth`), it tries the current folder, and the system folders (in some sequence? not sure what gets priority), but also it goes up from the current folder until the first folder without `__init__.py`, and tries this folder as well. Because in normally organized projects it corresponds to the top level `src` folder. And that's where `package_name` (the top level package) sits in this case.
 
-> I am not 100% sure I got it right, and also it's quite possible that one can avoid the hacky hack described above by adding fake `__init__.py` to the subplackage folder as well. But that needs some testing. 🔥 
+> I am not 100% sure I got it right, and also it's quite possible that one can avoid the hacky hack described above by adding fake `__init__.py` to the subplackage folder as well. But that needs some testing. 🔥
 
 Footnotes:
 * https://stackoverflow.com/questions/47561840/python-how-can-i-separate-functions-of-class-into-multiple-files

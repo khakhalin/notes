@@ -59,6 +59,7 @@ Main queue
 * `Annotated` in Pydantic (for custom types) - describe both the need, the functionality, and the interface
 * `poetry` for managing and publishing packages. That's what uses `pyproject.toml` file and setups pre-commits in a neat fashion.
 * greatexpectations
+* marshmallow - a library for serialization, deserialization, and validation. How does it relate and compare to pydantic and pydantic-cerial?
 * tweedie objective function? More emphasis on big values?
 * aggregated mape and bias - what are they, and why they in particular?
 * pyarrow - something that is needed to configure spark to run quickly

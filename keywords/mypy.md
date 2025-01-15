@@ -45,6 +45,13 @@ Alternative explanation: `Generic[int]` should be thought of as an extension of 
 The problem is both classes should be defined before `f()` is defined, which is fine if they are imported from custom packages, but may be weird within a package.
 * To fight this, one can put class name in quotation marks (provide them as strings), and then apparently Mypy is happy (see below).
 * Another approach is to add this line to the header: `from __future__ import annotations`. Then apparently everything works, but allegedly with potential bad side-effects for other packages. When this line is included, all (?) references to classes are turned into strings (so it's like a massive automated version of the previously described solution, to provides class names as strings). And this can break other libraries ([[pydantic]], if I'm not mistaken?))
+* When working with packages / files that describe interacting objects you may also run into a problem of **circular importing**, when you need to import `a` to `b` to define a type of output in `b`, but also the other way around. But circular importing is disallowed in Python. One way to solve it (short of rearranging the code, as one has to do in case of real circular referencing) is to use `if TYPE_CHECKING`:
+```python
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+  from a import atype
+```
+And then proceed defining `btype`. In this case `a.py` can import `btype` normally.
 
 There's some complex story about class variables (they have their own declaration, e.g. `ClassVar[int]`), and about a hack around that is neccessary to access and change class variables dynamically after all (to do it, you have to override the setter and the getter). But I'll assume it's a rather rare case (I dislike class variables), so let's skip it for now.
 
@@ -130,6 +137,8 @@ def decorator_args(url: str) -> Callable[[F], F]:
 Finally, `typing` contains a functionality `Annotated` that allows to extend variable metadata beyond just its having a named type. For example, `x: Annotated[str, metadata]` where `metadata` may be a string comment, a particular object that allows to set multiple parameters for this variable, etc. It is not used directly by normies, for the purposes of type-checking, but it is used by other libraries, for example, by FastAPI (to annotate connection properties?), strawberry (for some graph stuff), and most critically in practice, by [[pydantic]], (for additional data validation)
 
 # Mypy package
+
+#testing
 
 None of these declarations do anything on their own; they don't affect run-time, and they are not checked in any way by Python itself. Where they become useful is if you do some checks, linting-style, before running the script. `mypy` is the package that _actually_ checks the consistency of our variable use, by doing some inference about what they _could be_ (that is, not in run-time)
 

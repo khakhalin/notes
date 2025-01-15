@@ -32,9 +32,9 @@ Finally, Pydantic is a popular tool for serializing [[oop]] structures (see belo
 
 Apparently it's particularly popular with web-interfaces (like FastAPI for example), as it integrates well, and can both validate and fix (somewhat) inputs from forms.
 
-# Model-building
+⚠️NOTE☠️: There was a big non-inremental change in behavior between Pydantic v1 and Pydantic v2 in terms of how required and optional fields are treated. This note was started in V1, and is now slowly moved to V2.
 
-⚠️Importantly, there was a big non-inremental change in behavior between Pydantic v1 and Pydantic v2 in terms of how required and optional fields are treated (tbc 🔥)
+# Model-building
 
 * Most basic types (`int`, `float`) are validated as-is
 * `str` (strings) are apparently coersed (🔥?)
@@ -97,6 +97,8 @@ What can go into a config?
 
 # Validators
 
+## V1
+
 In `pydantic.v1` it was possible to validate fancier propertis of an object hierarchy by using validator magic:
 ```python
 from pydantic import validator
@@ -127,7 +129,13 @@ It's also possible to set validators via Annotated fields:
 In this context `AfterValidator` is just a safer type of a validator that runs after Pydantic internal parsing. Apparently one can also do `Before`, `Plain` and `Wrap`, but it seems to get tricky:
 * https://docs.pydantic.dev/latest/concepts/validators/#annotated-validators
 
-In `V2` the syntax has changed! 🔥🔥🔥 - see the migration guide on Pydantic site
+## V2
+
+In V2 `validator` is deprecated, but `@field_validator` works. It has slightly different properties though:
+* To get access to other values, we are supposed to 
+
+What is not supported:
+* Checking uniqueness of elements of a list with `unique_items` is no longer supported, and one needs to create their own reusable validator for that.
 
 # Saving and loading models
 

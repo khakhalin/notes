@@ -111,6 +111,8 @@ root_log.handlers[0].setFormatter(log_format)
 
 # Warnings
 
+What's better, `warnings` or `logging`? The official policy seems to be that if you talk to the user, `logging` is better, but if you want to communicate with the debugger of some client code, `warnings` may be preferable. For me, in practice, it means defaulting to `logging`. Also apparently it's possible to redirect `warnings` messages into `logging` interface with a few more lines at root logger init, but I haven't looked deeper into it.
+
 To suppress **all warnings** (not recommended):
 `import warnings; warnings.simplefilter('ignore')`
 

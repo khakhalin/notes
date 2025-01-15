@@ -56,7 +56,7 @@ git switch remote_branch_name
 The `remote_branch_name` is just a name, without any `origin.` before it, as if the remote branch already existed locally. Switching to it seems to trigger the pull. The `--prune` key for `fetch` is unrelated to the operation itself, but is a nice feature: it matches our local list of remote branches to the actual list of remote branches, and removes those records that refer to branches that no longer exist. Without `--prune`, the list of “theoretically existing remote branches” can grow indefinitely long. The local branches are not affected; it doesn't remove local branches that actually exist. It only updates our local "understanding" of which branches exist or don't exist remotely.
 
 To change which branch is considered remote-upstream for your local branch (for example, if you renamed them branches in some weird way, and now need to link everything correctly once again):
-`git branch branch_name --set-upstream-to your_new_remote/branch_name`
+`git branch branch_name --set-upstream-to=origin/your_new_remote_branch_name`
 
 Another DIY alternative is just to delete a branch at either local or remote end, and then pull (or push, respectively) to make local and remote repos match again.
 
@@ -71,7 +71,7 @@ Another DIY alternative is just to delete a branch at either local or remote end
 
 If there's a conflict, one has to … 🔥🔥 _How to resolve conflicts? If you don't have an IDE, especially?.._
 
-⚠️ Note that unlike for `rebase` (below), merging branch1 into branch2 with one simple command doesn't exist! You can technically do it by providing an `--into-name <branch2>` command, but it's not just two branches in a row! And anyways it's advisable to always first switch to the branch you are merging to. If you type  (_incorrectly!_) "merge branch1 branch2" you will attempt to merge BOTH branches onto the current branch!
+⚠️ Note that unlike for `rebase` (below), merging branch1 into branch2 with one simple command doesn't exist! You can technically do it by providing an `--into-name <branch2>` command, but it's not just two branch names in a row! And anyways it's advisable to always first switch to the branch you are merging to. If you type  (_incorrectly!_) "merge branch1 branch2" you will attempt to merge BOTH branches onto the current branch!
 
 If you pulled a branch and commited locally, but someone else had pushed a commit to the origin branch, you can no longer push, and you can no longer pull with a simple `git pull`. Instead you should do `git fetch` followed by `git merge`. If you are lucky and there are no conflicts, that's it basically (just push back immediately); if there are coflicts - resolve them first, then commit and push.
 
@@ -83,6 +83,8 @@ git merge --no-commit source_branch
 git checkout --conflict merge .  # This . apparently being critical
 ```
 This approach doesn't work for "clean merges" when no file is edited in both branches (for clean merges it still does a fast-forward), but that's probably ok.
+
+**Squashing** (that I keep calling "squishing" for some reason): just `git merge hotfix --squash`. That's if feature branches are already on `origin`. If not, squash-rebasing (described deep below) may be better (but I haven't tried it).
 
 # Rebase
 
@@ -150,7 +152,7 @@ Cherry-picking: check the history of commits, either using `git log` or looking 
 Footnotes:
 * Some recommendations on cherrypicking (but not too detailed tbh) https://docs.gitlab.com/ee/topics/git/cherry_picking.html
 
-# Common work patterns
+# Other work patterns
 
 * https://blog.carbonfive.com/2017/08/28/always-squash-and-rebase-your-git-commits/ - before merging a feature into main, manually squash commits with `git rebase -i HEAD~[NUMBER OF COMMITS]` or `git rebase -i [SHA]`, then pull main, rebase branch on main (with `checkout branch_name; rebase main`), then resolve conflicts, merge into main, and push. The weird thing about this workflow is that after squashing the local branch becomes incompatible with remote branch, so one has to either force push, or duplicate branch locally. Which may get annoying if merging gets delayed by extra work, for whatever reason.
 

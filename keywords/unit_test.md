@@ -64,7 +64,8 @@ def test_whatever(self, var_name):
 
 To pre-load some data for the test, one needs to use a **fixture**.
 ```python
-@pytest.fixture(scope="session") # Without this it will be recalculated every time
+# Without this it will be recalculated every time
+@pytest.fixture(scope="session")
 def preload_data():
     return load_heavy_data()
 
@@ -72,11 +73,22 @@ def test_something(preload_data): # This using fixture as an input
     data = preload_data # Note the absence of parantheses here
     test(data)
 ```
-In this simplest form, the fixture doesn't seem to favor sequential tests, as the data will be pre-loaded every time (I think?🔥). Also, the fixture itself isn't tested, so if we want to start our test with a test of data loading, we'll have to load data twice: first in the text, then in the fixture for other tests. It is allegedly possible to test fixtures itself using a `pytester` plugin (a tester for tests) ([ref](https://stackoverflow.com/questions/56631622/how-to-test-the-pytest-fixture-itself)), but honestly it looks rather cumbersome.
 
-> It is probably possible to create a global instance of a data cacher class, and `load_heavy_data()` from it. To make it actually load it the first time, and then just return this pre-loaded data again and again during this session. One could even try to pre-load this data during the data load testing, and then just send it to the global class. 🔥 Or did I misunderstand, and fixture actually caches the data?
+Another common pattern for mocking in unit tests is to define some custom classes that crudely duck-type classes that are needed for a test, and use use a fixture to return a copy of this class. Putting a `@fixture` decorator direction on class definition is impossible.
+```python
+class FakeDatabase():
+  def read(self):
+    return 1 # Pretend to be a database one way or another
 
-It seems to also be popular go use fixtures to setup databases, and then finish them with `yield` instead of `return`, to create samplers from these databases. See for example: [1](https://smirnov-am.github.io/pytest-advanced-fixtures/)
+@pytest.fixture(scope="session)
+def database():
+  return FakeDatabase()
+```
+
+Fixtures doesn't favor sequential tests, as the same copy is provided to every test. Also, the fixture itself isn't tested explicitly (unless it fails), so if we want to start our test with a test of data loading, and then also run some tsts on this  data, we'll have to load data twice: first in the text, then in the fixture for other tests. It is allegedly possible to test fixtures itself using a `pytester` plugin (a tester for tests) ([ref](https://stackoverflow.com/questions/56631622/how-to-test-the-pytest-fixture-itself)), but honestly it looks rather cumbersome. Note however that stricly speaking this scenario no longer describes a unit test, but an **integration** or at least **component test**, so no wonder simple fixtures stop working here.
+
+* It is seems possible to create a global instance of a data cacher class, and `load_heavy_data()` from it. To make it actually load it the first time, and then just return this pre-loaded data again and again during this session. One could even try to pre-load this data during the data load testing, and then just send it to the global class. (🔥 ?)
+* It seems to also be popular go use fixtures to setup databases, and then finish them with `yield` instead of `return`, to create samplers from these databases. See for example: [1](https://smirnov-am.github.io/pytest-advanced-fixtures/)
 
 # Unittest
 
