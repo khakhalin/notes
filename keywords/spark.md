@@ -284,19 +284,23 @@ Footnotes:
 Unlike some fancier tools, by default Spark won't perform any optimization of merges and joins (🔥 ?) . For example, if you are merging on a broader category and a date, a smart thing would be to perform a partition on the category, sort on the date, and then merge on the date within each of the partitions independently. But Spark won't do it, unless you tell it to.
 
 Dataframe partitioning:
-* `repartition(n_partitions, *cols)` - looks like the same thing, but with an ability to manually set the number of shards to use (`n`). You want the number to be high enough to make each partition easily processable, but small enough to avoid unnecessary overhead work. Also you want to avoid empty partitions, as it crashes spark, unless appropriate optimization is enabled, see below. The default number of partitions is 200, so relatively high.
+* `repartition(n_partitions, *cols)` - you can manually set the number of shards to use (`n`). You want the number to be high enough to make each partition easily processable, but small enough to avoid unnecessary overhead work. Also you want to avoid empty partitions, as it crashes spark, unless appropriate optimization is enabled, see below. The default number of partitions is 200, so relatively high.
 * `coalesce(n_partitions)` - the opposite of `repartition` that glues smaller partitions into large ones, without reshuffling.
 
-For a `join` to be optimal, both dataframes should be partitioned the same way. (Unless the dataframe is broadcasted of course). Then if another join is coming, you repartition it. By default, Spark optimizes joining within partitions (by auto-sorting data within partitions), but does not introduce partitioning itself, it needs to be add manually! If several joins are following each other, we need to manually repartition before every join. In case of several joins, in principle, one could also pre-partition by all possible keys that are used for downstream joins, and avoid repartitioning between joins. For small data it may be more efficient, but for bigger data it's recomended to code simpler, and repartition immediately before a joint, as it uses less memory overhead. Just simple linear operations that are guaranteed to succeed.
+Partitioning is preserved as you accumulate operations on a dataframe, so if you are not paying attention it can become suboptimal for downstream calculations; you can get empty partitions after filtering, etc. One should be careful here.
 
-There is no need to partition before `groupBy` though: `groupby` performs a shuffle anyways, in its own way, and you don't want to trigger two shuffles.
+**Should we partition to optimize joins?**
+* If at least one of the dataframes is small, the answer is NO: it should be broadcasted.
+* If dataframes are large (more than 100 Mb or 1 GB), but we're doing only one simple join, the answer is also NO, as Spark will perform a merge-sort join, first splitting the dataframes into shuffle-partitions, and then sorting within each partition. The best you can do in this case is magically guess how spark will do it, and artificially move this process forward, but most probably you won't guess it right, so it will reshuffle your partitions into slightly different partitions, worsening performance in the process.
+* So when should we pre-partition?
+    * If you pereform several joins in a row, and at least some keys are shared. In this case it's helpful to set one partition early on, and have it going. Every time you're joining, pre-partition both dataframes using a matching partition. What we said above is still true: you probably won't guess the automatic partitioning during a join exactly, but if you are close enough, it may be fine.
+    * If you are joining on a combination of categorical and key-like values. A low-hanging fruit, as describe above, is to put the categorical variable first, but on top of it, you can pre-partition both dataframes by "categorical_val", and then do `sortWithinPartitions("categorical_val", "key")`. This will make merge-sorting cheaper. As in the previous example, if you have several joins, it's even better, and you can apply these two operations to all relevant dataframes.
+    * The same is true in case of hierarchical joins, or in general joins with very strange distributions.
+    * If the distribution of a variable is very skewed (for example, half of all values are zeroes), as in this case you need to **salt** the data (see below), and perform manual bracketing, bucketing, and partitioning. 🔥 _I'm not sure I see how this would work_
 
-RDD partitioning:
-* `repartitionByRange(n_partitions, col)` - for a non-categorical but sortable column, it breaks the data into `n` partitions based on the values of these column, so that each partition has a unique range of values. Unfortunately it cannot be combined with categorical-value-style partitioning, so if you want to achieve a partitioning on a categorical and range-like varables simultaneiously, you need to do some preprocessing and bucket the range-like variable first (see below).
-* `partitionBy(*cols)` – partitions an RDD. In most cases, apparently, partitioning a dataframe is "better", as it's more flexible, and easier. But if we need some fancy partitioning of data for whatever reason (?), then RDD partitioning is the way, as it can be fine-tuned, with custom partitioners.
+It's never a good idea to partition before `groupBy` though: `groupby` performs a shuffle anyways, in its own way, and you don't want to trigger two shuffles. 🔥 _Is it true, or is it only "usually true", as in case of a join of two dataframes?_
 
-Output partitioning:
-* `partitionBy(*cols)` also exists for dataframes; in this case it defines the expected partition for _saving_ data. Archetypical use: `df.write.partitionBy("column_name").parquet("path")` ; this would create a parquet with `column_name=value_i` for each level). Even though it's the same command as for RDDs, it's not the same operation at all (apparently).
+**What is a good number of partitions?** Typically is recommended to have 2-3 times more partitions, compared to the number of parallel processors that will be working on the data (in parallel). For example, a compute with 4 workers, each using 32 processors, would run the data on 128 processors overall, and so 256-512 partitions feels like a good number (assuming uniform distribution of data between partitions). The default value that Spark uses is 200.
 
 To enable optimization that automatically coalesces empty partitions, do this below. Allegedly, it is not that expensive.
 ```python
@@ -304,7 +308,7 @@ spark.conf.set("spark.sql.adaptive.enabled", "true")
 spark.conf.set("spark.sql.adaptive.coalescePartitions.enabled", "true")
 ```
 
-To turn a range variable into a categorical value for partitioning, it's good to use a special "Bucketizeer" tool:
+To turn a ranged variable into a categorical value for partitioning, one can use a special "Bucketizeer" tool:
 ```python
 from pyspark.ml.feature import Bucketizer
 
@@ -314,6 +318,15 @@ df = bucketizer.transform(df)  # This add a new column, range_bin
 df = df.repartition(n_partitions, "categorical_col", "range_bin")
 ```
 
+RDD partitioning:
+* `repartitionByRange(n_partitions, col)` - for a non-categorical but sortable column, it breaks the data into `n` partitions based on the values of these column, so that each partition has a unique range of values. Unfortunately it cannot be combined with categorical-value-style partitioning, so if you want to achieve a partitioning on a categorical and range-like varables simultaneiously, you need to do some preprocessing and bucket the range-like variable first (see above).
+* `partitionBy(*cols)` – partitions an RDD. In most cases, apparently, partitioning a dataframe is "better", as it's more flexible, and easier. But if we need some fancy partitioning of data for whatever reason (?), then RDD partitioning is the way, as it can be fine-tuned, with custom partitioners.
+
+🔥 How to work with RDD partitioning?
+
+Output partitioning:
+* `partitionBy(*cols)` also exists for dataframes; in this case it defines the expected partition for _saving_ data. Archetypical use: `df.write.partitionBy("column_name").parquet("path")` ; this would create a parquet with `column_name=value_i` for each level). Even though it's the same command as for RDDs, it's not the same operation at all (apparently).
+
 ## Other Join optimizations
 
 **Broadcasting**: instead of doing `.join(other_df ...)` one can do `.join(broadcast(other_df) ...)` in which case a full copy of `other_df` (presumably, a small dataframe) will be provided to every shard of the left data frame (big one, the one we're joining on). When broadcasting is possible, the join becomes very fast.
@@ -321,7 +334,7 @@ df = df.repartition(n_partitions, "categorical_col", "range_bin")
 **Salting**: it's not a function per se, but an approach. When partitioning by range, we may run into data skew situations with some values being heavily overrepresented in the data. Because of that, a shard containing these values will be way larger than the others, and will become a bottleneck. One option to fight with it is to _salt_ (somewhat randomize) one of the values. Another option is to manually isolate the most common value and process it separately (e.g. if a column contains lots of `NULL`s, join this part of the data separately, then concatenate)
 * `DataFrame.sort(*cols)` (there's also an alias `.orderBy()` with same inputs and same functionality). Also `RDD.sortBy` exists, apparently… - 🔥 It seems that pre-sorting actually does't help with joining, as joining always starts with shuffling (sorting). But this needs to be confirmed. 🔥 
 
-The sequence in which joins are performed is (apparently? 🔥) important even without partitions, and it is not optimized by default. Unles you turn optimizers on:
+The sequence in which joins are performed is important even without partitions, and it is not optimized by default. Unles you turn optimizers on:
 ```python
 spark.conf.set("spark.sql.cbo.enabled", True)
 spark.conf.set("spark.sql.cbo.joinReorder.enabled", True)
