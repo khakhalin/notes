@@ -55,19 +55,20 @@ To load extermal data into a dataframe:
 * `spark.read.parquet('filename')` (or `.csv`, or some other formats)
 * `df.write.parquet('filename')` - subj
 
-Generally, all transformatoins on a dataframe are **lazy**: they are accumulated as an execution plan (DAG), and are NOT executed eagerly until an input-output **action** is called (a point when the calculation can no longer be postponed). Examples of actions:
-* `.collect()` - tries to load the dataframe (the result of all transformations, if any) into memory, as a list. If it doesn't fit to memory, you get an overflow.
-* `.toPandas()` - does the same, but also transforms it to Pandas.
-* `limit(7)` - a DF of (first? random?) 7 rows. Goes well with `toPandas()` to peek inside in notebooks.
+Generally, all transformatoins on a dataframe are **lazy**: they are accumulated as an execution plan (DAG), and are NOT executed eagerly until an input-output **action** is called (a point when the calculation can no longer be postponed). It also means that, unlike for [[pandas]], for Spark it does matter which type of an action you trigger, as for some of the checks you don't need to calculate the entire dataframe, and that may help to save on resources. Examples of actions:
+* `.collect()` - tries to load the entire dataframe (the result of all transformations, if any) into memory, as a list. If it doesn't fit to memory, you get an overflow.
+* `.toPandas()` - does the same, but transforms it to Pandas.
+* `.save.parquet()` - the meaning is obvious; calculates the entire dataframe (and in fact is one of the simplest way to force calculation of the entire datafame)
+* `limit(7)` - a DF of (first? random?) 7 rows. Goes well with `toPandas()` to peek inside in notebooks. The important thing here is that it does NOT calculate the entire dataframe, if it is possible to avoid it.
 * `.show()` - collects at least some data, and shows the dataframe. By default it only shows 1 line (because of lazy), but it can be made eager with some special magic command (probably not the best idea tho, at least outside of testing notebooks). If the dataframe is already fully in memory (for example, if it's a small dataframe that you just created), the entire df will be shown.
     * `.display()` - a fancier kind of `show()` that only exists in Databricks notebooks, apparently, so it's probably not a part of standard pyspark
-* `.save.parquet()` - obviously
+* `.isEmpty()` - a better way to check fo emptiness that doesn't involve full df recalculation (so it's way better than doing `count`, or `limit(1)`). Still forces something, but DAG willing, not the entire thing.
 * `.dropDuplicates(optional_list_of_columns)` - ⚠️ Note that it triggers a full calculation (or at least something very similar to it).
 * `session.createDataFrame(df.rdd, df.schema)` - re-create a new Spark df with the same data as in the old df, but from scratch, with lineage broken.
 
 This is both a curse and a blessing. A blessing because supposely an execution plan can be optimized by external optimizers (although personally I am yet to see it happen 🔥). A curse, because writing in this style means that you cannot refer to things like the number of rows in a dataframe, or unique values in a column, without triggering a calculation, and potentially runining everything. It turns a coding into a much more deliberatelly planned activity, which may feel weird.
 
-There are also command that trigger a partial recalculation, or either a partial or full one, depending on the context. For example:
+There are also commands that trigger either a partial or a full recalculation, depending on the context (?). For example:
 * `.count()` - that's a tricky one, as it's heavily optimized, and tries not to trigger a full calculation where possible.
     * It seems that on a one-node instance (without parallelization) it triggers it, and always returns a correct result.
     * If run on a multi-core instance, and combined with a command that explicitly collects information from all cores, for example `.cache().count()` (see "Caching" below) it also returns a correct result
@@ -280,16 +281,44 @@ Footnotes:
 
 ## Partitioning
 
-Unlike some fancier tools, by default Spark won't perform any optimization of merges and joins (🔥 ?) . For example, if you are merging on a broader category and a date, a smart thing would be to perform a partition on the category, sort on the date, and then merge on the date within each of the partitions independently. But Spark won't do it, unless you tell it to, using these tools:
-* `partitionBy(*cols)` - uses the list of columns to partition the df in memory, based on unique values. As the execution is lazy, it basically just defines the expected partition for the next method that can actually use a partitition, such as a join, or saving on disk (in which case it writes data in a partitioned, split way). For a join to work, both left and right dataframes need to be partitioned, on same columns.
-* `repartition(n_partitions, *cols)` - looks like the same thing (?🔥) but with an ability to manually set the number of shards to use (`n`).
-* `repartitionByRange(n_partitions, col)` - for a non-categorical but sortable column, breaks the df into `n` partitions based on the values of these column, so that each partition has a unique range of values.
-* `.coalesce(n_partitions)` - the opposite of `repartition` that glues smaller partitions into large ones, without reshuffling.
+Unlike some fancier tools, by default Spark won't perform any optimization of merges and joins (🔥 ?) . For example, if you are merging on a broader category and a date, a smart thing would be to perform a partition on the category, sort on the date, and then merge on the date within each of the partitions independently. But Spark won't do it, unless you tell it to.
+
+Dataframe partitioning:
+* `repartition(n_partitions, *cols)` - looks like the same thing, but with an ability to manually set the number of shards to use (`n`). You want the number to be high enough to make each partition easily processable, but small enough to avoid unnecessary overhead work. Also you want to avoid empty partitions, as it crashes spark, unless appropriate optimization is enabled, see below. The default number of partitions is 200, so relatively high.
+* `coalesce(n_partitions)` - the opposite of `repartition` that glues smaller partitions into large ones, without reshuffling.
+
+For a `join` to be optimal, both dataframes should be partitioned the same way. (Unless the dataframe is broadcasted of course). Then if another join is coming, you repartition it. By default, Spark optimizes joining within partitions (by auto-sorting data within partitions), but does not introduce partitioning itself, it needs to be add manually! If several joins are following each other, we need to manually repartition before every join. In case of several joins, in principle, one could also pre-partition by all possible keys that are used for downstream joins, and avoid repartitioning between joins. For small data it may be more efficient, but for bigger data it's recomended to code simpler, and repartition immediately before a joint, as it uses less memory overhead. Just simple linear operations that are guaranteed to succeed.
+
+There is no need to partition before `groupBy` though: `groupby` performs a shuffle anyways, in its own way, and you don't want to trigger two shuffles.
+
+RDD partitioning:
+* `repartitionByRange(n_partitions, col)` - for a non-categorical but sortable column, it breaks the data into `n` partitions based on the values of these column, so that each partition has a unique range of values. Unfortunately it cannot be combined with categorical-value-style partitioning, so if you want to achieve a partitioning on a categorical and range-like varables simultaneiously, you need to do some preprocessing and bucket the range-like variable first (see below).
+* `partitionBy(*cols)` – partitions an RDD. In most cases, apparently, partitioning a dataframe is "better", as it's more flexible, and easier. But if we need some fancy partitioning of data for whatever reason (?), then RDD partitioning is the way, as it can be fine-tuned, with custom partitioners.
+
+Output partitioning:
+* `partitionBy(*cols)` also exists for dataframes; in this case it defines the expected partition for _saving_ data. Archetypical use: `df.write.partitionBy("column_name").parquet("path")` ; this would create a parquet with `column_name=value_i` for each level). Even though it's the same command as for RDDs, it's not the same operation at all (apparently).
+
+To enable optimization that automatically coalesces empty partitions, do this below. Allegedly, it is not that expensive.
+```python
+spark.conf.set("spark.sql.adaptive.enabled", "true")
+spark.conf.set("spark.sql.adaptive.coalescePartitions.enabled", "true")
+```
+
+To turn a range variable into a categorical value for partitioning, it's good to use a special "Bucketizeer" tool:
+```python
+from pyspark.ml.feature import Bucketizer
+
+quantiles = df.approxQuantile("range_col", [i/n for i in range(n+1)], 0.01)
+bucketizer = Bucketizer(splits=quantiles, inputCol="range_col", outputCol="range_bin")
+df = bucketizer.transform(df)  # This add a new column, range_bin
+df = df.repartition(n_partitions, "categorical_col", "range_bin")
+```
 
 ## Other Join optimizations
 
-* **Broadcasting**: instead of doing `.join(other_df ...)` one can do `.join(broadcast(other_df) ...)` in which case a full copy of `other_df` (presumably, a small dataframe) will be provided to every shard of the left data frame (big one, the one we're joining on). When broadcasting is possible, the join becomes very fast.
-* **Salting**: it's not a function per se, but an approach. When partitioning by range, we may run into data skew situations with some values being heavily overrepresented in the data. Because of that, a shard containing these values will be way larger than the others, and will become a bottleneck. One option to fight with it is to _salt_ (somewhat randomize) one of the values. Another option is to manually isolate the most common value and process it separately (e.g. if a column contains lots of `NULL`s, join this part of the data separately, then concatenate)
+**Broadcasting**: instead of doing `.join(other_df ...)` one can do `.join(broadcast(other_df) ...)` in which case a full copy of `other_df` (presumably, a small dataframe) will be provided to every shard of the left data frame (big one, the one we're joining on). When broadcasting is possible, the join becomes very fast.
+ 
+**Salting**: it's not a function per se, but an approach. When partitioning by range, we may run into data skew situations with some values being heavily overrepresented in the data. Because of that, a shard containing these values will be way larger than the others, and will become a bottleneck. One option to fight with it is to _salt_ (somewhat randomize) one of the values. Another option is to manually isolate the most common value and process it separately (e.g. if a column contains lots of `NULL`s, join this part of the data separately, then concatenate)
 * `DataFrame.sort(*cols)` (there's also an alias `.orderBy()` with same inputs and same functionality). Also `RDD.sortBy` exists, apparently… - 🔥 It seems that pre-sorting actually does't help with joining, as joining always starts with shuffling (sorting). But this needs to be confirmed. 🔥 
 
 The sequence in which joins are performed is (apparently? 🔥) important even without partitions, and it is not optimized by default. Unles you turn optimizers on:

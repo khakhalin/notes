@@ -2,9 +2,13 @@
 
 See also: [[music]]
 
-#lifehack
+#lifehack #music #sound
 
 http://boilthefrog.playlistmachinery.com/
+
+Fancier semiacoustic edm: Floating Points, Four Tet, Jamie xx
+
+Chinese: second-hand rose
 
 **Neurofunk:**
 Noisia

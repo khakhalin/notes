@@ -1,8 +1,8 @@
 # Music
 
-This is about music as a topic. For music to listen to, see [[listen]]
+Music as a topic. For music to listen to, see [[listen]]
 
-#behav #bib
+#behav #bib #music #sound
 
 
 Subtopics:

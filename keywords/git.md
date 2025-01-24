@@ -57,6 +57,8 @@ The `remote_branch_name` is just a name, without any `origin.` before it, as if 
 
 To change which branch is considered remote-upstream for your local branch (for example, if you renamed them branches in some weird way, and now need to link everything correctly once again):
 `git branch branch_name --set-upstream-to=origin/your_new_remote_branch_name`
+If this sequence produces an error, sometimes you need to instead push and create a remote branch at the same time. For this, you do
+`git push -u origin branch_name`
 
 Another DIY alternative is just to delete a branch at either local or remote end, and then pull (or push, respectively) to make local and remote repos match again.
 
@@ -162,6 +164,12 @@ For specific platforms, see [[github]], [[gitlab]]
 
 * `git remote -v` - to see remote connections that are set up currently
 * `git remote set-url origin CONNECTION` - to set it up. The specifics of how the `CONNECTION` string looks like depends on whether you use [[github]], [[gitlab]] or something else, and also on whether you connect via [[ssh]] or https. But it's some combo of tokens, usernames etc.
+
+To set your identify for commits:
+```bash
+git config --global user.name "Name Name"
+git config --global user.email "a@a.a"
+```
 
 # Open questions
 

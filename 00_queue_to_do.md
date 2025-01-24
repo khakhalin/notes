@@ -24,6 +24,9 @@ Books to read / skim:
 * https://christophm.github.io/interpretable-ml-book/ - really nice explanations of ML tricks
 
 Main queue
+* Conway's law (programs reflecting organizations, check wiki)
+* The innovator's dilemma - that small companies tend to undercut bigger companies as they deliver faster, are not bound with supporting older versions, and can change the description of the product a bit (often cutting corners and trageting smaller customers), while bigger players are bound by big expensive customers
+* Lindy effect - apparently, products that are around for long are more likely to last for long?
 * document git ignore
 * revisit Kedro and figure out if it can help us
 * [[pandas]] after groupby `.rolling(window)` - what is it?
