@@ -6,7 +6,7 @@ See also: [[pydantic]], [[linting]]
 #python
 
 
-As of Python 3.5, one can add type hints when setting variables and defining functions, and then potentially check the consistency of these hints with a special linter (`mypy`, see below) before script execution. Some of this type hinting is now built-in basic Python, others needs to be imported via `from typing import`. Let's start with some basic functionality. You can do:
+As of Python 3.5, one can add type hints when setting variables and defining functions, and then potentially check the consistency of these hints with a special static checker (`mypy`, see below) before script execution. Some of this type hinting is now built-in basic Python, others needs to be imported via `from typing import`. Let's start with some basic functionality. You can do:
 ```python
 age: int = 1 # typing at first assignment 
 height: int  # if declared by not assigned (e.g. class properties)
@@ -142,7 +142,7 @@ Finally, `typing` contains a functionality `Annotated` that allows to extend var
 
 None of these declarations do anything on their own; they don't affect run-time, and they are not checked in any way by Python itself. Where they become useful is if you do some checks, linting-style, before running the script. `mypy` is the package that _actually_ checks the consistency of our variable use, by doing some inference about what they _could be_ (that is, not in run-time)
 
-To run it, you do `mypy project_name` in the terminal (where `project_name` is the name of a folder with your project, I'm assuming)
+To run it, you do `mypy project_name` in the terminal (where `project_name` is the name of a folder with your project). When standing inside the folder, do `mypy .`, or, more likely, `mypy src` as typically tests are not covered by mypy.
 
 If something isn't perfect, there are several ways to make mypy ignore stuff:
 * To inform mypy about some implicit type transformation, use a helper function `b = typing.cast(type1, a)`. It does not actualy do anything!! No actual transformation, just hinting to mypy that the type should have been changed.

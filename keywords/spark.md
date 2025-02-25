@@ -56,7 +56,7 @@ To load extermal data into a dataframe:
 * `df.write.parquet('filename')` - subj
 
 Generally, all transformatoins on a dataframe are **lazy**: they are accumulated as an execution plan (DAG), and are NOT executed eagerly until an input-output **action** is called (a point when the calculation can no longer be postponed). It also means that, unlike for [[pandas]], for Spark it does matter which type of an action you trigger, as for some of the checks you don't need to calculate the entire dataframe, and that may help to save on resources. Examples of actions:
-* `.collect()` - tries to load the entire dataframe (the result of all transformations, if any) into memory, as a list. If it doesn't fit to memory, you get an overflow.
+* `.collect()` - tries to load the entire dataframe (the result of all transformations, if any) into memory, as a list ❗. If it doesn't fit to memory, you get an overflow.
 * `.toPandas()` - does the same, but transforms it to Pandas.
 * `.save.parquet()` - the meaning is obvious; calculates the entire dataframe (and in fact is one of the simplest way to force calculation of the entire datafame)
 * `limit(7)` - a DF of (first? random?) 7 rows. Goes well with `toPandas()` to peek inside in notebooks. The important thing here is that it does NOT calculate the entire dataframe, if it is possible to avoid it.
@@ -72,7 +72,7 @@ There are also commands that trigger either a partial or a full recalculation, d
 * `.count()` - that's a tricky one, as it's heavily optimized, and tries not to trigger a full calculation where possible.
     * It seems that on a one-node instance (without parallelization) it triggers it, and always returns a correct result.
     * If run on a multi-core instance, and combined with a command that explicitly collects information from all cores, for example `.cache().count()` (see "Caching" below) it also returns a correct result
-    * ☢️ If run on a multi-core instance without an explicit collection, it may be off  however. This is impostant to remember when checking for duplicates, as the paradygmatic `if df.count() != df.dropDuplicates().count()` test may lie to you in some edge cases!
+    * ☢️ If run on a multi-core instance without an explicit collection, it may be off  however. This is impostant to remember when checking for duplicates, as the paradygmatic `if df.count() != df.drop_duplicates().count()` test may lie to you in some edge cases!
 
 Footnotes:
 * https://stackoverflow.com/questions/69038671/why-method-count-does-not-get-true-num-of-rows
@@ -85,7 +85,7 @@ To interact the schema (that doesn't cause a recalculation):
 
 To interact with values (these cause a partial recalculation, and so are NOT harmless commands, from the DAG optimization POV): 
 * `df.count()` - returns the number of rows.
-* `distinct()` - returns distinct rows. `select(row_name).distinct().collect()` returns a list of distinct values.
+* `distinct()` - returns distinct rows. `select(row_name).distinct().collect()` returns a list of distinct values. Equivalent to `drop_duplicates()` called without a subselection of columns.
 
 **Restructuring**
 
