@@ -173,7 +173,7 @@ See also other topical dictionaries:
 
 **RCT** (stats): Randomized Controlled Trial(s) - basically, what most scientists mean by an "experiment". Diff treatment groups, assigned randomly. Gold standard (everything else is epistemologically inferior)
 
-**REST** (dev): Representational State Transfer. Predefined set of stateless operations (stateless means that all session info is tracked by the client, not the server). HTTP is the archetypical RESTful system.
+**REST** (dev): see [[restful]]
 
 **RSS** (stats): Residual Sum of Squares. See [[l2]], [[02_Regression]], [[bias-variance]]
 

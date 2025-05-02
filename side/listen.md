@@ -8,7 +8,20 @@ http://boilthefrog.playlistmachinery.com/
 
 Fancier semiacoustic edm: Floating Points, Four Tet, Jamie xx
 
-Chinese: second-hand rose
+China: second-hand rose
+
+India
+* Indian indie: Shreya Devnath, Hari & Sukhmani (Punjab), Bawari Basanti (Delhi), Pakshee (fusion jazz from Delhi), Papon (Assam), Anupam Roy (Bengal), Bombay Bandook (Maharashtra), Maati Baani (Maharashtra), Veena Srivani Yalla (Andrhra Pradesh, but not many recordings); Anhad+Tanner (Delhi)
+* Maybe: komorebi, Anirudh Ravichander (Tamil Nadu)
+* Alternative: Thaikkudam Bridge (Tamil)
+* Pop: Hiphop Tamizha (Tamil Nadu), Mame Khan (Rajasthan), Raghu Dixit (Karnataka), Aditya Gadhvi (Gujarat), Peepal Tree (sing in Kannada and Tamil), Kunal Rawal (Mumbay), Souvik Savvy Gupta (Bengali)
+* Hiphop: Parimal Shais (Tamil Nadu)
+* Hindu gospel of sorts: Kabir Cafe (Madhya Pradesh)
+* Movies style music: Ajay-Atul
+* Indie from India but not necessarily folksy: The F16s (Tamil Nadu), Sunflower Tape Machine (Chennai)
+
+Pakistan: Mughal-E-Funk
+Qawwali: Abi Sampa
 
 **Neurofunk:**
 Noisia

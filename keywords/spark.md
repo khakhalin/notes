@@ -6,13 +6,13 @@ See also: [[parquet]], [[pandas]]
 #db #python
 
 
-**ApacheSpark**: an open-source analytics engine for large-scale data processing. The core idea of sparks is that there are shards of data distributed over physical locations on a cluster (aka Resilient Distributed Dataset, or RDD). These shards are read-only, so we cannot damage them by editing: we can only create a new one, and delete a new one. An individual operation on this multiset is performed as traversal (possibly parallelized) of a Directed Acyclical Graph (DAG), where every node is a piece of data, and each age is a transformation. For iterative processes (e.g. ML) you do it in a loop.
+**ApacheSpark**: an open-source analytics engine for large-scale data processing. The core idea of spark is that there are shards of data distributed over physical locations on a cluster (aka Resilient Distributed Dataset, or RDD). These shards are read-only, so we cannot damage them by editing: we can only create a new one, and delete the old one. An individual operation on this multiset is performed as traversal (possibly parallelized) of a Directed Acyclical Graph (DAG), where every node is a state of data, and each age is a transformation. For iterative processes (e.g. ML) you do it in a loop.
 
-Spark requires a cluster manager and a distributed storage system (e.g. Hadoop). Has programming interfaces (libraries) for [[python]], Java, Scala, net, R, [[julia]]. Operations on RDDs are lazy (first coded, then implemented), and RDDs are immutable, so if the data changes - actually we just write a new RDD. The history of creating this RDD is stored, so if some data is lost, it can be reconstructed from the previous stage (fault-tolerance). The key API abstraction is called "Spark SQL"; then programming interfaces translate it to methods.
+Spark requires a cluster manager and a distributed storage system (e.g. Hadoop). It has programming interfaces (libraries) for [[python]], Java, Scala, net, R, [[julia]]. Operations on RDDs are lazy (first coded, then implemented), and RDDs are immutable, so if the data changes - actually we just write a new RDD. The history of creating this RDD is stored, so if some data is lost, it can be reconstructed from the previous stage (fault-tolerance). The key API abstraction is called "Spark SQL", while programming interfaces translate it to methods.
 
-RDD were the first thing to be developed in Spark, and they are are good for non-structured data, but these days people mostly use DataFrames, which inherit to RDDs, but have a table-like schema imposed on top. Individual rows of a dataframe, in this case, become those pieces of data that are distributed across RDDs. (🔥 is this description true? Or do we still dive from DF to RDD every now and then?)
+RDD were the first thing to be developed in Spark, and they are are good for non-structured data, but these days people mostly use DataFrames, that inherit to RDDs, but have a table-like schema imposed on top. Individual rows of a dataframe, in this case, become those elementary pieces of data that are distributed across an RDDs.
 
-Typically, Spark stores data in [[parquet]] files, but there's no 1:1 match between these two concepts; both Spark can use other formats (say, json, or Avro from Hadoop project), and Parquet files are used for data transfer and storage outside of any Spark context. Still, it appears that they were at least developed somewhat together, and synergize in terms of operatoins on selected columns, and schema evolution (an ability to add data without rewriting everything).
+Typically, Spark stores data in [[parquet]] files, but there's no 1:1 match between these two concepts; both Spark can use other formats (say, json, or Avro from Hadoop project), and Parquet files are used for data transfer and storage outside of Spark context. Still, it appears that they were at least developed somewhat together, and synergize in terms of operatoins on selected columns, and schema evolution (an ability to add data without rewriting everything).
 
 Footnotes:
 * https://blog.purestorage.com/purely-educational/rdd-vs-dataframe-whats-the-difference/
@@ -64,15 +64,15 @@ Generally, all transformatoins on a dataframe are **lazy**: they are accumulated
     * `.display()` - a fancier kind of `show()` that only exists in Databricks notebooks, apparently, so it's probably not a part of standard pyspark
 * `.isEmpty()` - a better way to check fo emptiness that doesn't involve full df recalculation (so it's way better than doing `count`, or `limit(1)`). Still forces something, but DAG willing, not the entire thing.
 * `.dropDuplicates(optional_list_of_columns)` - ⚠️ Note that it triggers a full calculation (or at least something very similar to it).
-* `session.createDataFrame(df.rdd, df.schema)` - re-create a new Spark df with the same data as in the old df, but from scratch, with lineage broken.
+* `session.createDataFrame(df.rdd, df.schema)` - re-create a new Spark df with the same data as in the old df, but from scratch, with lineage broken. 🔥🔥🔥🔥 _This statement doesn't seem to be true unfortunately..._
 
 This is both a curse and a blessing. A blessing because supposely an execution plan can be optimized by external optimizers (although personally I am yet to see it happen 🔥). A curse, because writing in this style means that you cannot refer to things like the number of rows in a dataframe, or unique values in a column, without triggering a calculation, and potentially runining everything. It turns a coding into a much more deliberatelly planned activity, which may feel weird.
 
 There are also commands that trigger either a partial or a full recalculation, depending on the context (?). For example:
-* `.count()` - that's a tricky one, as it's heavily optimized, and tries not to trigger a full calculation where possible.
-    * It seems that on a one-node instance (without parallelization) it triggers it, and always returns a correct result.
+* `.count()` - that's a tricky one, as it's heavily optimized, and tries not to trigger a full calculation where possible. Usually it works, but there are exceptions.
+    * It seems that on a one-node instance (without parallelization) it triggers full calculation, and always returns a correct result.
     * If run on a multi-core instance, and combined with a command that explicitly collects information from all cores, for example `.cache().count()` (see "Caching" below) it also returns a correct result
-    * ☢️ If run on a multi-core instance without an explicit collection, it may be off  however. This is impostant to remember when checking for duplicates, as the paradygmatic `if df.count() != df.drop_duplicates().count()` test may lie to you in some edge cases!
+    * ☢️ If run on a multi-core instance without an explicit collection, it may be off  however. This is impostant to remember when checking for duplicates, as the paradygmatic `if df.count() != df.drop_duplicates().count()` test may lie to you in edge cases!
 
 Footnotes:
 * https://stackoverflow.com/questions/69038671/why-method-count-does-not-get-true-num-of-rows
@@ -194,9 +194,10 @@ An operation that is somewhat akin to filtering: **drop_duplicates**
     * Another otion, to use window functions instead (see below); for example, instead of `.drop_duplicates(['col'])` do:
     ```python
    df = (
-       df.withColumn('rank', rank().over(
-           Window.partitionBy('col').orderBy('date')
-           ))
+       df.withColumn(
+           'rank', 
+            rank().over(Window.partitionBy('col').orderBy('date'))
+        )
        .filter(col('rank')==1)
        .drop('rank')
     )
@@ -300,7 +301,9 @@ Partitioning is preserved as you accumulate operations on a dataframe, so if you
 
 It's never a good idea to partition before `groupBy` though: `groupby` performs a shuffle anyways, in its own way, and you don't want to trigger two shuffles. 🔥 _Is it true, or is it only "usually true", as in case of a join of two dataframes?_
 
-**What is a good number of partitions?** Typically is recommended to have 2-3 times more partitions, compared to the number of parallel processors that will be working on the data (in parallel). For example, a compute with 4 workers, each using 32 processors, would run the data on 128 processors overall, and so 256-512 partitions feels like a good number (assuming uniform distribution of data between partitions). The default value that Spark uses is 200.
+**What is a good number of partitions?** For dedicated compute (with huge memory) is recommended to have 2-3 times more partitions than the number of parallel processors that will be working on the data (in parallel). For example, a compute with 4 workers, each using 32 processors, would run the data on 128 processors overall, and so 256-512 partitions feels like a good number (assuming uniform distribution of data between partitions). The default number of partitions that Spark uses is 200.
+
+For small compute you may have to use a higher number of partitions (above 100), to process data in smaller chunks that fit in memory.
 
 To enable optimization that automatically coalesces empty partitions, do this below. Allegedly, it is not that expensive.
 ```python

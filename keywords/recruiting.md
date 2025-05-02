@@ -14,16 +14,23 @@ Related:
 
 # Levels in DS
 
-My personal understanding of levels in DS (not verified):
+A short version:
+1. Junior DS - needs lots of supervision
+2. DS - knows how to do some tasks, but requires guidance
+3. Senior DS - can implement their projects independently
+4. Staff DS - leads and coordinates projects as necessary, serves as a center of expertise for others
+5. Principal DS - works with stakeholders, initiates and designs large projects
+
+A detailed version of how it usually works in practice:
 1. Juniors - entry level position, often a DA, but sometimes a junior DS
-2. Normies  - typically specialized (DS, DE, DA), where DS can mean several options
-    1. DS proper - explicit modeling, problem solving, "advanced common sense", Know one domain.
-    2. DA with pipelining (so with traces of DE, DWH, SWE)
-    3. ML engineering
-    4. BI (acting as an owner of processes, interpreting DA, internal consultant, somewhat akin to the role of PO for SWE)
-3. Seniors - typically are still called DS, but in practice usually know "core DS" plus DA, some DE, DevOps, SWE, ML. The focus shifts to combining these fields and independent work. Know 2-3 domains.
-4. Tech Leads / Staff DS (depending on whether the person goes more management route, or individual contributor route). Typically aquire a second adjacent field, skills in systems engineering and code engineering. Domain-agnostic (4-5 domains behind the belt).
-5. Head of Data in a smaller company / Principal DS / Architects - typically, an even more managerial position, with an exception of Principal DS (Gurus that know everything, but refuse to manage people).
+2. DS proper  - typically specialized (core DS, DA, DE). A generic DS label can mean several different things:
+    1. DS proper - explicit modeling, problem solving, "advanced common sense", knowledge of one domain.
+    2. DA with pipelining skills (so with traces of DE, DWH, SWE)
+    3. ML engineering specialist (also known as MLE)
+    4. BI (acting as an owner of processes, interpreting DA, internal consultant, somewhat akin to the role of PO for SWE, but for DS)
+3. Seniors - typically are still called DS, but in practice usually know not just "core DS", but also all of DA, some DE, SWE, ML, and elements of DevOps. The focus shifts to combining these fields and independent work. Also by the end of this stage, typically know 2-3 different domains.
+4. Staff DS / Tech Lead (depending on whether the person goes more management route, or individual contributor route). Typically aquire a second adjacent field, skills in systems engineering and code engineering. Domain-agnostic (4-5 domains behind the belt).
+5. Principal DS / Architect / Head of Data in a smaller company - typically, an even more managerial position, although a Principal DS may also be a Guru who knows everything, but refuses to manage people.
 6. Head of Data in a large company / Partner
 
 # Interviewing

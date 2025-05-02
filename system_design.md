@@ -7,14 +7,16 @@ See also: [[design_docs]]
 
 
 Subtopics:
+* [[restful]] - main API for one-way communication. Stateless, scalable 🔥
+* [[websocket]] - main API for two-way communications between a server and a client. Stateful 🔥
 * [[streaming]] - Message queues and message brokers
-* [[datalake]] - First level of precipitation (?) from streams to dtabases
+* [[datalake]] - First level of precipitation of data, as it goes from streams/queues to databases
 * [[database]] - Everything databases
 * [[microservice]] - Everything microservices
 
 See also:
-* [[hardware]] - Everything hardware
 * [[system_interview]] - collections of tips regarding system interviews
+* [[hardware]] - Everything hardware
 * [[fairness]] - an ethical aspect of system development
 
 

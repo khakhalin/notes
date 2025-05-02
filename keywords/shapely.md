@@ -8,7 +8,7 @@ See also: [[crs]], [[pandas]]
 
 # Object creation
 
-* `shapely.Point([x, y])
+* `shapely.Point([x, y])`
 * line 🔥 
 * polygon 🔥 
 
