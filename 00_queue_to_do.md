@@ -28,13 +28,13 @@ Main queue
 * [[websocket]]
 * Figure out how to answer a question about what [[kubernetes]] do.
 * frog artifactory - some sort of package used for continuous integration (?) in SoftEng? At least stub it
-* how bsky is built: https://atproto.com/guides/applications
+* how bsky is built: [https://atproto.com/guides/applications]
 * Look into Flask, but then actually learn SimpleAPI
 * How to design Twitter: https://www.youtube.com/watch?v=KmAyPUv9gOY
 * How bsky was designed (there was a video, or a write-up on it, read it)
 * refresh [[design_pattern]], especially those used in data science
 * FastAPI (another alternative to Flask, seems more trendy, and gaining on Flask?)
-* Scalability lecture: https://www.youtube.com/watch?v=-W9F__D3oY4 (I'm at 24m right now)
+* Scalability lecture: [https://www.youtube.com/watch?v=-W9F__D3oY4] (I'm at 24m right now)
 * Scaling Etsy: https://www.youtube.com/watch?v=eenrfm50mXw
 * What is a difference between process and thread? https://www.youtube.com/watch?v=4rLW7zg21gI
 * How Python works inside:
@@ -42,15 +42,38 @@ Main queue
     * Asyncio
     * Multithreading
     * Subinterpreters
-* Load balancers & Reverse proxies. 
-* Hive
-* Delta Lake and Delta Tables (Databricks format?)
-* ML flow flavor (adding stuff to make a model ML flow savable)
-* "ML flow client in Python" - what does it mean, in this case?
+* Load balancers & Reverse proxies
+* Databricks
+    * Databricks academy (allegedly free courses - check?)
+    * Delta Lake and Delta Tables (Databricks format?)
+    * Hive
+    * How to run scalable Spark jobs?
+    * Build a Lakehouse: Ingest raw data (CSV/JSON) → Clean with PySpark → Store in Delta Lake.
+    * Databricks Workflows (Airflow alternative)
 * MlFlow - read some more to feel more comfortable
-* SynapseML - what is it? How does it work?
+    * MLflow flavor (adding stuff to make a model ML flow savable)
+    * "MLflow client in Python" - what does it mean, in this case?
+    * Deploy scable models with MlFlow
+    * SynapseML - what is it? How does it work?
+* [[airflow]]
 * DuckDB
 * Iceberg
+* AWS: SageMaker, Lambda, S3, Glue, Redshift, EMR, ECS
+    * AWS Cloud Practitioner (free course on AWS Skill Builder)
+    *  [AWS Skill Builder](https://explore.skillbuilder.aws/)
+    *  [AWS Data Engineering Learning Path](https://aws.amazon.com/training/learn-about/data-engineering/)
+    *  AWS Step Functions (orchestration)
+    *  CodePipeline (CI/CD)
+* Terraform
+* [[knowledge_graph]]:
+    * RDF, SPARQL
+    * Abstract Syntax Trees, CDS CSN, OpenAPI, OData EDMX, BPMN
+    * SAP-specific: Joule, 4HANA, ABAP and Data Dictionary, VDM, CDS Views, RAP, OData, BTP
+* Metaflow
+* Kubeflow
+* CloudFormation
+* stored procs (procedures) - quickly document, even tho it's a bad old tech
+* [[dbt]] - explain the following statements: each step is a model, orchestrated, built-in testing with yaml configs, git-friendly (where is it typically stored?)
 * uv - a cool new replacement for pip?
 * Polars - at least start
 * cookie cutter data science - create a page, check the scope
@@ -60,7 +83,6 @@ Main queue
     * Keystone - for verfication
     * Glance - computer image repository
     * Neutron - 
-* Conway's law (programs reflecting organizations, check wiki)
 * The innovator's dilemma - that small companies tend to undercut bigger companies as they deliver faster, are not bound with supporting older versions, and can change the description of the product a bit (often cutting corners and trageting smaller customers), while bigger players are bound by big expensive customers
 * Lindy effect - apparently, products that are around for long are more likely to last for long?
 * MCP protocol - new agentic protocol, read about it
@@ -74,7 +96,6 @@ Main queue
 * What's the difference between dbfs and blob?
 * Partitioning of [[parquet]] files - everything is not as simple as I thought! Study (metadata, folders, requests)
 * `uv` as an alternative to pip
-* Understand after all what [[airflow]] does in terms of "how does it look like"?
 * Terraform - what does it do? Place in the ecosystem, strength, weaknesses?
 * helm - what is it, how it works, some basics
 * Process the list of "How a DS can become a DE": https://www.reddit.com/r/datascience/comments/1ehoumf/applying_for_a_de_role_as_a_current_ds_is_3_weeks/
