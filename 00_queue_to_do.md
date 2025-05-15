@@ -10,8 +10,8 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 # Queue
 
 Analyze this set of links:
-* https://discord.com/channels/814557108065534033/882748207996760164
-* https://stanford-cs329s.github.io/syllabus.html
+* <https://discord.com/channels/814557108065534033/882748207996760164>
+* [https://stanford-cs329s.github.io/syllabus.html]
 * https://mlops.toys/experiment-tracking
 * https://github.com/features/actions
 * https://learning.edx.org/course/course-v1:ColumbiaX+DS102X+1T2016/home
