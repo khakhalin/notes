@@ -10,10 +10,10 @@ A nice overview of common clustering methods (from the [[sklearn]] documentation
 https://scikit-learn.org/stable/modules/clustering.html#overview-of-clustering-methods
 
 Methods (subtopics):
-* K-means - iteratively minimizes within-cluster sum of squares. The result looks like a voronoi diagram. Simple, but fast and parallelizable.
-
+* K-means - iteratively minimizes within-cluster sum of squares. The result looks like a voronoi diagram. Simple, but fast and parallelizable. You have to know the number of clusters upfront though (or use a validation set; or calculate some metrics for the quality of clustering, eg. the silhouette coeff below.)
 * [[spectral_clustering]] - STUB
 * [[mean_shift]] - an iterative proccess related to hierarchical clustering (transient clusters, but a trivial convergence point)
+* Agglomerative clustering - start with every point in its own cluster, and iteratively combine them, according to some rule with a "built-in" punishment.
 * Affinity propagation - make points iteratively convince each other to join their clusters, by picking representatives ("exemplars") that are "most typical" for this cluster, and making points vote for them. Slow and I don't quite understand it yet, but picks the number of clusters automatically based on two other hyperparameters that define the dynamics of this process.
 
 # Theory

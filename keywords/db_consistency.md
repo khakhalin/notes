@@ -1,12 +1,16 @@
 # Consistency
 
+Parents: [[system_design]], [[database]]
+See also: [[dictionary]]
+
 #db
 
-Parents: [[database]], [[dictionary]]
 
-**Strong consistency** - when data is requsted, the system first checks whether any write on it were initiated (or, alternatively, whether different versions of this data all report the same data). If there's no discrepancy, the data is returned to the user. If the data is locked for write, or if data is not synchronized across instances, the system waits until this issue is resolved, and only then returns the data. _Or at least that's how I understood it; some technical points may be missing here_
+**Strong consistency** - when data is requsted, the system first checks whether any writes on it were initiated (or, alternatively, when replicas are used, whether different versions of this data all report the same data). If there's no discrepancy, and here are no locks from writes, the data is returned to the user. If the data is locked for write, or if data is not synchronized across instances, the system first waits until this issue is resolved, and only then returns the data. It increases the latency of course, but guarantees that the data is fully up to date. Follows ACID architecture [[acid_base]].
 
-**Eventual consistency** - good for distributed systems, as it's fast. Aka **optimistic replication** - the system eventually **converges** to a consistent state, but it may take a few ms. BASE (not ACID). There's a constant exchanging of info between servers, to detect differences. In case of a difference, **reconciliation**: usually **last writer wins**, but for some solutions where guarantees are more important, it may be **first writer wins** (both - based on the timestamp). For the user, it guarantees short latency, but you can get stale data.
+**Eventual consistency** - good for distributed systems, as it's fast. Is also called **optimistic replication**: the system eventually **converges** to a consistent state, but it may take more time. BASE (not ACID). For the user, it guarantees short latency, but the received data may be somewhat stale. Eventual consistency assumes that there's a constant exchanging of data between servers, to detect differences. In case of a difference, a **reconciliation** process kicks in, and there are several optinos here:
+* **last writer wins** - the most common one (based on the timestamp)
+* **first writer wins** – if guarantees are more important. 
 
 Also some other terms:
 

@@ -9,7 +9,7 @@ See also other topical dictionaries:
 
 # AB
 
-**ACID** (db): Atomic, Consistent, Isolated, Durable. An opposite of BASE. See: [[database]], [[db_consistency]]
+**ACID** (db): see [[acid_base]]
 
 **ASIC** (hard): Application-Specific Integrated Circuit, such as Google-NVideia TPUs for example ([wiki](https://en.wikipedia.org/wiki/Tensor_processing_unit))
 
@@ -17,7 +17,7 @@ See also other topical dictionaries:
 
 **Bagging** (ml): the simplest way to create an ensemble of classifiers using an algorithm: split data into bags (with replacement), train a different model on each of them. Final prediction = mean of all predictions. [ref](https://analyticsindiamag.com/primer-ensemble-learning-bagging-boosting/). See [[05_Ensembles]].
 
-**BASE** (db): basically Available, Soft state, Eventually consistent (a silly backronym of an antonym to ACID). See [[db_consistency]], [[database]]
+**BASE** (db): see [[acid_base]]
 
 **BIC** (stats): Bayes Information Criterion, an approach to model selection. To be described (for now, [wiki](https://en.wikipedia.org/wiki/Bayesian_information_criterion)).
 

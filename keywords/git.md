@@ -1,7 +1,8 @@
 # GIT
 
 Path: [[01_Tools]]
-See also: [[bash]], [[ssh]], [[vim]], [[linting]] (for pre-commit hooks), [[github]], [[gitlab]]
+See also: [[bash]], [[ssh]], [[vim]], [[linting]] (for pre-commit hooks)
+Platforms: [[github]], [[gitlab]]
 
 #tools
 
@@ -57,8 +58,9 @@ The `remote_branch_name` is just a name, without any `origin.` before it, as if 
 
 To change which branch is considered remote-upstream for your local branch (for example, if you renamed them branches in some weird way, and now need to link everything correctly once again):
 `git branch branch_name --set-upstream-to=origin/your_new_remote_branch_name`
-If this sequence produces an error, sometimes you need to instead push and create a remote branch at the same time. For this, you do
+If this sequence produces an error, sometimes you need to instead push and create a remote branch at the same time. For this, you do:
 `git push -u origin branch_name`
+(which is also shorter, and so in practice, probably, preferable?)
 
 Another DIY alternative is just to delete a branch at either local or remote end, and then pull (or push, respectively) to make local and remote repos match again.
 

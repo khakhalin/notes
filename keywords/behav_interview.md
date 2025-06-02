@@ -25,10 +25,11 @@ Typical questions:
     * May be either about any conflict, or narrowed down to a conflict with a colleague, boss, direct report, client
 * Stressful situation / work under pressure, and how you handled it
 * A mistake you made, a goal you did not meet
-* A goal you met, a particular success, going above and beyond 
+* A goal you met, a particular success, going above and beyond
+* Some companies have their own idiosyncratic lists of what they consider to be a "good" behavior, and use them in interviews, asking stuff like "tell me how you Dove Deep and Earned Trust". Amazon for example has 16 (!) core principles.
 
 Other nuggets of advice:
-* Write down key stories in advance. Practicce. Set up the situation fast. Elevator speech. No tangents. Only essential details. Action and result centered, anchored in decisions and actions. Give them the story in 3 sentences
+* Write down key stories in advance. Practice. Set up the situation fast. Elevator speech. No tangents. Only essential details. Action and result -centered, anchored in decisions and actions. Give the story in 3 sentences
 * Know your own CV, including the language, as they are likely to refer to your experience using the language you used.
 * For each project, identify 1-2 key achievements, and very high-level overview of the technical side of it, but be ready to dive down if needed. This also tests your communication skill: ability to be clear, on point, deal with emotions etc.
 * Know why you made each of your career transitions. Why you quit, why you joined.

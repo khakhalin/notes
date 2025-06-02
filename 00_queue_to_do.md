@@ -11,8 +11,7 @@ lots of useful practical bits and pieces: shell, debugging, data wrangling, meta
 
 Analyze this set of links:
 * <https://discord.com/channels/814557108065534033/882748207996760164>
-* [https://stanford-cs329s.github.io/syllabus.html]
-* https://mlops.toys/experiment-tracking
+* <https://stanford-cs329s.github.io/syllabus.html>
 * https://github.com/features/actions
 * https://learning.edx.org/course/course-v1:ColumbiaX+DS102X+1T2016/home
 * https://github.com/dipanjanS/BerkeleyX-CS190.1x-Scalable-Machine-Learning
@@ -26,7 +25,14 @@ Books to read / skim:
 Main queue
 * [[restful]]
 * [[websocket]]
+* On scalable architectures:
+    * queues to scale writes. What types of queues are there?
+    * [[caching]] for reads. What types / strategies of caching exist?
+    * elastic search - as a way to add advanced filtering and aggregation on top of [[nosql]] - read how it works
+    * Load balancing, sharding - what are the different strategies?
+* from unittest.mock import MagicMock, patch - allows call_count
 * Figure out how to answer a question about what [[kubernetes]] do.
+* github workflows - how are they defined, set up? Is there normally a yaml file?
 * frog artifactory - some sort of package used for continuous integration (?) in SoftEng? At least stub it
 * how bsky is built: [https://atproto.com/guides/applications]
 * Look into Flask, but then actually learn SimpleAPI
@@ -37,6 +43,7 @@ Main queue
 * Scalability lecture: [https://www.youtube.com/watch?v=-W9F__D3oY4] (I'm at 24m right now)
 * Scaling Etsy: https://www.youtube.com/watch?v=eenrfm50mXw
 * What is a difference between process and thread? https://www.youtube.com/watch?v=4rLW7zg21gI
+* vector clocks - a way to detect and resolve inconsistencies in distributed systems: <https://en.wikipedia.org/wiki/Vector_clock>
 * How Python works inside:
     * GIL
     * Asyncio
@@ -65,6 +72,8 @@ Main queue
     *  AWS Step Functions (orchestration)
     *  CodePipeline (CI/CD)
 * Terraform
+* read more about [[dbt]] and this recent debacle with core vs fusion
+* sqlmesh - a competitor to dbt? that is more open source?
 * [[knowledge_graph]]:
     * RDF, SPARQL
     * Abstract Syntax Trees, CDS CSN, OpenAPI, OData EDMX, BPMN

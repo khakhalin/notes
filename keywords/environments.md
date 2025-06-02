@@ -22,9 +22,9 @@ When different python packages (like Tensorflow vs Pytorch) have conflicting req
 ## Conda
 
 Conda may come with:
-* `anaconda` - huge set of tools, too much typically. Beginners like it tho.
-* `miniconda` - minimal conda installer from the Anaconda team, which means that some parts of it may conflict with commercial use; there was some weird ToS change at some point.
-* `miniforge` - another minimal conda installer, this one community-driven and free. May have a slightly lower cross-platform support tho.
+* `anaconda` - huge set of tools, too much typically. Beginners like it.
+* `miniconda` - minimal conda installer from the Anaconda team; some parts of it may conflict with commercial use, as there was some weird ToS change at some point. Corporations hide from it now.
+* `miniforge` - another minimal conda installer, this one community-driven and free. It may have a slightly lower cross-platform support tho.
 
 Environments:
 * `conda activate env_name` - activate an environment

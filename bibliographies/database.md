@@ -9,18 +9,20 @@ See also: [[streaming]], [[datalake]]
 Subtopics
 * [[data_wh]] - Data Warehouse
 * [[nosql]] - a conceptual alternative to tables
-* [[sql]] - about the language in general.    
+* [[sql]] - about the language in general.
+* [[acid_base]]
+* [[db_consistency]]
 
- Solutions and SQL dialects:
-* [[mongo]] - everyone's favorite [[nosql]] nosql
+ Solutions:
+* [[mongo]] - everyone's favorite [[nosql]]
 * [[postgres]]
-* [[databricks]] 
 * [[snowflake]]
-* [[singlestore]]
+* [[databricks]] ?
+* [[singlestore]] ?
 
 Transformations:
+* Transformation engines: [[dbt]], sqlmesh
 * Schedulers: [[airflow]] (see also: [[cron]])
-* Transformations: [[dbt]]
 
 # Comparison of solutions
 
