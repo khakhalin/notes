@@ -23,7 +23,7 @@ Books to read / skim:
 * https://christophm.github.io/interpretable-ml-book/ - really nice explanations of ML tricks
 
 Main queue
-* [[restful]]
+* [[restful]] - how does authentication (loggedness in) work with restful?
 * [[websocket]]
 * On scalable architectures:
     * queues to scale writes. What types of queues are there?
@@ -39,6 +39,7 @@ Main queue
 * How to design Twitter: https://www.youtube.com/watch?v=KmAyPUv9gOY
 * How bsky was designed (there was a video, or a write-up on it, read it)
 * refresh [[design_pattern]], especially those used in data science
+* [[graphql]]
 * FastAPI (another alternative to Flask, seems more trendy, and gaining on Flask?)
 * Scalability lecture: [https://www.youtube.com/watch?v=-W9F__D3oY4] (I'm at 24m right now)
 * Scaling Etsy: https://www.youtube.com/watch?v=eenrfm50mXw
@@ -63,6 +64,7 @@ Main queue
     * Deploy scable models with MlFlow
     * SynapseML - what is it? How does it work?
 * [[airflow]]
+* dagster - a better younger niftier alternative to airflow
 * DuckDB
 * Iceberg
 * AWS: SageMaker, Lambda, S3, Glue, Redshift, EMR, ECS

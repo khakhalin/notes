@@ -1,8 +1,10 @@
 # Redis
 
+Parents: [[systems]]
+
 #db
 
-Parents: [[01_Tools]] / [[database]]
+In-memory storage.
 
 
 

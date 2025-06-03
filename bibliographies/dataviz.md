@@ -7,8 +7,11 @@ See also: [[stats]], [[network_tools]], [[interpretability]]
 
 
 Subtopics:
-* [[tableau]] - Dashboards. Alternatives include "PowerBI" from Microsoft and "Apache Superset" (open-source tool)
-* [[ppt]] - Making presentations
+* [[tableau]] - Dashboards. Alternatives include:
+    *  "PowerBI" from Microsoft
+    *  Apache Superset (open-source)
+    *  Rill MCP - claim to do "last mile ETL" and "BI as code" (yamls, git)
+* [[ppt]] - On making presentations
 * [[matplotlib]] - visuals in python
 
 # External tools

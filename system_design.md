@@ -7,8 +7,7 @@ See also: [[design_docs]]
 
 
 Subtopics:
-* [[restful]] - main API for one-way communication. Stateless, scalable 🔥
-* [[websocket]] - main API for two-way communications between a server and a client. Stateful 🔥
+* [[api]]: [[restful]], [[websocket]] etc.
 * [[streaming]] - Message queues and message brokers
 * [[datalake]] - First level of precipitation of data, as it goes from streams/queues to databases
 * [[database]] - Everything databases

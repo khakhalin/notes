@@ -7,17 +7,16 @@ See also: [[behav_interview]], [[ml_questions]]
 
 
 Overall structure:
-1. Understand the problem, find the scope (5 min; ask many questions, know goals, features, numbers)
-2. Propose high-level design, and get a buy-in on it (longerst part, half of all time)
-    1. Start with defining a list of key features, and key constraints (non-functional requirements to satisfy)
-    2. Start with APIs. Try to make them [[restful]] by default, review them. Don't allow feature creep
-    3. Maintain a list of talking points for later, don't deep dive too early, don't freeze tech assumptions too early
-    4. Data model and schema
-        1. Estimate data access patterns and read/write ratio
+1. Understand the problem, set the scope (5 min; ask many questions, know goals, features, numbers).
+2. Propose high-level design, and get a buy-in on it (longerst part, half of all time. For a 45 min interview, at least 20 min)
+    1. Start with defining a list of key features, and key constraints (non-functional requirements to satisfy: availability, consistency, speed, security, latency)
+    2. Start with APIs (aka endpoints). Try to make them [[restful]] by default. First external, then internal. Review them. Don't allow feature creep at this stage. Maintain a list of talking points for later, don't deep dive or freeze tech assumptions too early
+    3. Data model and schema. Estimate data access patterns and read/write ratio
 3. Design deep dive (remaining time, open-ended, usually explores only 1-2 aspects of the story)
-    1. Identify potential bottlenecks, dangers, constraints
-    2. Request (explicitly or implicitly) feedback, to see what the interviewer is probably expecting
-    3. For any problem, try to come up with at least two solutions
+    1. Identify potential bottlenecks, dangers (edge cases), constraints. Peak usage, hot users etc.
+    2. Scaling up
+    3. Request (explicitly or implicitly) feedback, to check if the interviewer is expecting something in particular
+    4. For any problem, try to come up with at least two solutions
 4. Summary (wrap-up: very short, almost a memorable punchline)
 
 Key principles:
@@ -28,14 +27,24 @@ Key principles:
 * Considering various aspects, bottlenecks, and targets is good (compute, memory, data, privacy, complexity, costs, support, scalability etc.)
 * The problem is never "solved", in a sense that there is never enough time to cover all possible aspects of the problem. The weird rule of the game is that you need to keep approaching the problem from different aspects and challenging it, to demonstrate your ability to plan and lead product development.
 
+Elements to play with: [[caching]], sharding, balancers, rate limiters, [[acid_base]]
+
+For data reading and writing, consider a range of possibilities:
+* relational db (aka [[sql]]) - complex queries, strong (acid) consistency, hard to scale horizontally (aka "more servers")
+* [[nosql]] - simple queries, high throughput, eventual consistency. Very fast, but no more than 1-2 optimized keys.
+* in-memory storage (e.g. [[redis]]) - key-value store, realtime temporary data
+* message queue (e.g. [[rabbitmq]], [[kafka]]) - event-driven asynchronous processing
+* [[datalake]] - relatively fast write, slow read, unstructured data. Archival
+* distributed cache - for caching of frequently accessed computationally expensive data
+* file storage (e.g. blob) - large, simple
+
 Some people say that you shouldn't really ask what are the defining features, and how much the system should scale, but sorta make hypotheses about that, state them very clearly, and use it as another dimension to the problem, to look around it (if this is important, then we can do this; if that other thing is important, then we can do that). Others say - ask questions, make sure you get from the interviewer what features are important and which ones aren't. The truth is probably in-between (and also your chance to demonstrate that you can build rapport with people).
 
 Typically, with IRL white boards, you are always expected to draw block diagrams.
 
-Requirements:
+**Requirements**:
 * Functional: key features to build
-* Non-functional: scale, performance, accuraccy, freshness, consistency, security, safety, transparency, estabiliy, scalabiliy, usability, compliance (data protection, open source etc)
-    * In a context of an interview, scale & performance are usually the key
+* Non-functional: scale, performance, accuraccy, freshness, consistency, security, safety, transparency, testabiliy, scalabiliy, usability, compliance (data protection, open source etc). In the context of an interview, scale & performance are usually the key
 
 # For data specifically
 

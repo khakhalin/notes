@@ -1,6 +1,6 @@
 # SingleStore
 
-Parent: [[database]]
+Parent: [[database]], [[sql]]
 See also:
 
 #db #tools
