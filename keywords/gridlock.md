@@ -1,9 +1,9 @@
 # Gridlock
 
 Parents: [[system_design]], [[database]], [[devops]]
-See also: [[postgres]]
+See also: [[postgres]], [[concurrency]]
 
-#db
+#db #concurrency #realtime
 
 
 Basically, when 2 db processes lock each other, and neither can finish. 🔥

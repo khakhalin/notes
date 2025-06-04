@@ -8,6 +8,7 @@ See also: [[design_docs]]
 
 Subtopics:
 * [[api]]: [[restful]], [[websocket]] etc.
+* [[parallelism]]
 * [[streaming]] - Message queues and message brokers
 * [[datalake]] - First level of precipitation of data, as it goes from streams/queues to databases
 * [[database]] - Everything databases

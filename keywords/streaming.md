@@ -1,7 +1,7 @@
 # Streaming
 
 Parents: [[system_design]]
-See also: [[database]]
+See also: [[database]], [[parallelism]]
 
 #systems
 

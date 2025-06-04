@@ -1,9 +1,13 @@
 # Flask
 
 Path: [[01_Tools]] / [[python]]
-See also: [[microservice]] internet? http?
+See also: [[microservice]], [[restful]]
+
+#python
 
 
 A thing to create simple html APIs.
 
-Allegedly, is expected to be replaced with a new better module `fastAPI` in the future.
+As of 2025, is mostly replaced by `fastAPI`, which works better.
+
+Works well in conjunction with [[asyncio]]

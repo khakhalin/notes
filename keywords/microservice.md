@@ -16,6 +16,11 @@ Because of the abstract API, they can be written in different languages. Can be 
 
 But as a downside, complexity. Harded to support (lots of info to learn or remember); require fancier infrastructure (not just one program running on one server).
 
+# Tooling
+
+* [[flask]] and fastAPI
+* [[asyncio]]
+
 # Refs
 
 Intro by James Quigley: https://www.youtube.com/watch?v=1xo-0gCVhTU

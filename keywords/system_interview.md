@@ -9,14 +9,17 @@ See also: [[behav_interview]], [[ml_questions]]
 Overall structure:
 1. Understand the problem, set the scope (5 min; ask many questions, know goals, features, numbers).
 2. Propose high-level design, and get a buy-in on it (longerst part, half of all time. For a 45 min interview, at least 20 min)
-    1. Start with defining a list of key features, and key constraints (non-functional requirements to satisfy: availability, consistency, speed, security, latency)
-    2. Start with APIs (aka endpoints). Try to make them [[restful]] by default. First external, then internal. Review them. Don't allow feature creep at this stage. Maintain a list of talking points for later, don't deep dive or freeze tech assumptions too early
-    3. Data model and schema. Estimate data access patterns and read/write ratio
+    1. Start with defining a list of key features. Outline key use cases / scenarios we want to cover
+    2. List key non-functional requirements to satisfy: availability, consistency, speed, security, latency
+    3. Describe key actors (in the simplest case, backend & frontend?)
+    4. Describe [[api]]s (aka endpoints) for each actor. Try to make them [[restful]] by default. First external, then internal. Review them. Don't allow feature creep at this stage. Maintain a list of talking points for later, don't deep dive or freeze tech assumptions too early
+    5. Data model and schema. Estimate data access patterns and read/write ratio
+    6. Propose techstack (only main idea)
 3. Design deep dive (remaining time, open-ended, usually explores only 1-2 aspects of the story)
     1. Identify potential bottlenecks, dangers (edge cases), constraints. Peak usage, hot users etc.
-    2. Scaling up
+    2. Addressing bottlenecks and scaling up. How would the techstack change
     3. Request (explicitly or implicitly) feedback, to check if the interviewer is expecting something in particular
-    4. For any problem, try to come up with at least two solutions
+    4. For any important problem, try to come up with at least two solutions
 4. Summary (wrap-up: very short, almost a memorable punchline)
 
 Key principles:
@@ -27,7 +30,7 @@ Key principles:
 * Considering various aspects, bottlenecks, and targets is good (compute, memory, data, privacy, complexity, costs, support, scalability etc.)
 * The problem is never "solved", in a sense that there is never enough time to cover all possible aspects of the problem. The weird rule of the game is that you need to keep approaching the problem from different aspects and challenging it, to demonstrate your ability to plan and lead product development.
 
-Elements to play with: [[caching]], sharding, balancers, rate limiters, [[acid_base]]
+Elements to play with: [[caching]], sharding, balancers, rate limiters, [[acid_base]], [[streaming]]
 
 For data reading and writing, consider a range of possibilities:
 * relational db (aka [[sql]]) - complex queries, strong (acid) consistency, hard to scale horizontally (aka "more servers")
