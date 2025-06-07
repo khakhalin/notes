@@ -18,8 +18,9 @@ But as a downside, complexity. Harded to support (lots of info to learn or remem
 
 # Tooling
 
-* [[flask]] and fastAPI
-* [[asyncio]]
+* [[flask]] and fastAPI for [[restful]] interfaces
+* [[asyncio]] for parallelizing
+* [[streaming]] to smoothen out concurrent requests without losing them
 
 # Refs
 

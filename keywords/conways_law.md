@@ -1,6 +1,6 @@
 # Conways Law
 
-Parent: [[management]]
+Parent: [[management]], [[software_design]]
 See also:
 
 

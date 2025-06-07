@@ -1,6 +1,6 @@
 # Design Patterns
 
-Parents: [[oop]]
+Parents: [[oop]], [[software_design]]
 See also: [[solid]]
 
 #oop
@@ -11,19 +11,19 @@ A famous programming paradigm, and a name of a famous book (1994), about optimiz
 Are split into 3 categories: **Creational** (about how to init classes), **Structural** (about how to organize class composition), and **Behavioral** (about communication between classes).
 
 Of these patters, some are obscure, but some are really important. The short list:
-* Factory - to cleverly create custom objects of different classes, but with the same interface
-* Builder
-* Prototype
-* Singleton - a class that only has one instance
-* Strategy
-* Observer
-* Adapter
-* Model view Controller
-* Inversion of Control
-* Chain of Responsibility
-* Decorator
-* Iterator
-* Command processor
+* Factory - a dedicated class to cleverly create custom objects of different classes, but with the same interface
+* Builder - similar to a factory, but instead of getting all parameters and then making an object, allows you to add them gradually, then call a `build()` method at the end. Nice syntactic sugar (simple, transparent), but also allows half-way validation, and saves you from a necessity to remember all the parameters in some loose ad-hoc config.
+* Prototype - instead of instantiating objects from scratch, deepcopy a template, then modify it
+* Singleton - a class that has only one instance. An attempt to create a second instance should fail.
+* Strategy - a class that implements an algorithm, so that you could swap different algos without breaking the structure
+* Observer - a class with an API that collects info. Objects that are observed remember of it (not vv!) and send events to it
+* Adapter - adjusting one interface to another interface (e.g. for legacy code)
+* Model View Controller - interfaces interact with a view, it talks to a controller, it talks to a model. Model and View don't talk.
+* Inversion of Control - very broad, but an opposite of a script. Say, linking methods to a GUI, or an API.
+* Chain of Responsibility - semaphoring through a list of classes, where every class either handles the request, or passes it further. Example: logging.
+* Decorator - add extra functionality at runtime by wrapping a class in another class, serving as an interface for it
+* Iterator - compartmentalizes complex traversals, insuring that you iterate meaningfully
+* Command processor - literally, an interface that processes requests framed as discrete commands
 
 # Factory
 
@@ -68,7 +68,7 @@ Some (but a  minority) of descriptions online actually kinda seem to describe th
 
 # Abstract Factory
 
-Same as **Factory**, but this type Factory is for sure abstracted (in the sense that you create a factory object that follows a factory interface, but that can actually be an object of one of several alternative concrete classes, depending on the context). And then instead of creating  just one object, this factory can create many different objects, of different classes, united by some common property. Or  a collection, or a hierarchy. Say, not just an npc, but a matching house, and a matching outfit, and what not. The interactions between these objects (interfaces) are all standardized (by abstract classes), but the innards may be quite different.
+Same as **Factory**, but this time around it creates Factories. These Factories can still create different objects (otherwise they wouldn't have been factories), but now the abstract Factory ensures that there's some consistency to these objects the lower-level factories create. For example, not just an npc, but a matching house, and a matching outfit etc. The abstract factory makes sure that the lower-level factory is tuned up properly, and its degrees of freedom are limited in just a right way. 
 
 Footnotes:
 * https://javacurious.wordpress.com/2013/03/15/factory-method-vs-abstract-factory-again/

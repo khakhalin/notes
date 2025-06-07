@@ -1,4 +1,4 @@
-# Decision-based models
+# Decision-based models & Graph Cascades
 
 Parents: [[09_Graphs]]
 Related: percolation, [[sir]]

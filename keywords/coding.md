@@ -8,7 +8,7 @@ See also: [[python]]
 
 Subtopics:
 * [[oop]] - object-oriented programming
-    * [[design_pattern]] - a famous coding framework
+    * [[design_patterns]] - a famous coding framework
     * [[solid]] - one of the most core oop principles
 * [[unit_test]]- on testing in general
 * [[debugging]] - how to debug

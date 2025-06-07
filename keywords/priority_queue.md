@@ -6,16 +6,18 @@ See also: [[dijkstra]], [[a-star]]
 #algo #trees
 
 
-Classic data structure, helps to move max (or min) operation from O(N) to O(log N).
+A classic data structure that helps to move either `max` or `min` operation from O(N) to O(log N).
 
-The idea is to arrange data points in a tree-like structure, with left and right branches being equivalent, and the only logic of value placement is that the parent node is always "better" than both children. It means that finding the "best" value is always trivial (it's always in the root), and all work is shifted towards keeing the structure properly arranged.
+The idea is to arrange data points in a tree-like structure, with left and right branches being equivalent, the only logic of value placement being that the parent node is always "better" than both children. It means that finding the "best" value is always trivial (it's always in the root), and all work is shifted towards keeing the structure properly arranged.
 
-A Heap has two tricky interfaces: **add value** and **remove best** (like popping from a stack).
+A Heap has two tricky interfaces: **add value** and **remove best** (like popping from a stack). And also one trivial interface of "what is the current best value" (it's the root, duh!)
 
-These two interfaces are built on two internal processes: float up (usually called **swim**), and **sink** down. People also seem to refer to them as "sifting": sifting up, or sifting down (or, in linear representations, sifting left and right; see below for details)
+The two tricky interfaces are built on two internal processes: float up (often called **swim**), and **sink** down. People may also refer to them as "**sifting**": sifting up, or sifting down (or, in linear representations, sifting left and right; see below for details)
 
 * **Swim** (or sift up): pick an element, and if it is better than its parent, swap it with the parent. Repeat until it either meets a parent that is not worse than it, or until it reaches the top and becomes a root.
 * **Sink** (or sift down): if both kids are better than the element, pick the better of the kids, and swap them. Repeat this process until either both kids are worse (or rather, not better), or the element become a leaf (has no  kids).
+
+# Binary Heap
 
 In practice, instead of keeping this data as a linked tree, it is usually kept in a linear array, as a **Binary Heap**: a list with a dummy unused value in position 0. That way, for any element at position k, its kids can be found at positions 2k and 2k+1.
 

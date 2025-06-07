@@ -15,6 +15,7 @@ Analyze this set of links:
 * https://github.com/features/actions
 * https://learning.edx.org/course/course-v1:ColumbiaX+DS102X+1T2016/home
 * https://github.com/dipanjanS/BerkeleyX-CS190.1x-Scalable-Machine-Learning
+* https://www.reddit.com/r/datascience/comments/1ehoumf/applying_for_a_de_role_as_a_current_ds_is_3_weeks/
 
 Books to read / skim:
 * Data-intensive applications
@@ -38,7 +39,7 @@ Main queue
 * Look into Flask, but then actually learn SimpleAPI
 * How to design Twitter: https://www.youtube.com/watch?v=KmAyPUv9gOY
 * How bsky was designed (there was a video, or a write-up on it, read it)
-* refresh [[design_pattern]], especially those used in data science
+* refresh [[design_patterns]], especially those used in data science
 * [[graphql]]
 * FastAPI (another alternative to Flask, seems more trendy, and gaining on Flask?)
 * Scalability lecture: [https://www.youtube.com/watch?v=-W9F__D3oY4] (I'm at 24m right now)
@@ -128,10 +129,9 @@ Main queue
 * `Annotated` in Pydantic (for custom types) - describe both the need, the functionality, and the interface
 * `poetry` for managing and publishing packages. That's what uses `pyproject.toml` file and setups pre-commits in a neat fashion.
     * I vaguely remember that there's something that superceded poetry recently.
-* greatexpectations
-* dummit - a better alternative?
+* dummit - data quality tool (a better alternative to greatexpectations)
 * sentry
-* marshmallow - a library for serialization, deserialization, and validation. How does it relate and compare to pydantic and pydantic-cerial?
+* marshmallow - a library for serialization, deserialization, and validation. How does it relate and compare to pydantic models?
 * tweedie objective function? More emphasis on big values?
 * aggregated mape and bias - what are they, and why they in particular?
 * pyarrow - something that is needed to configure spark to run quickly
@@ -304,7 +304,7 @@ Main queue
 * Ha, D., & Schmidhuber, J. (2018). World models. arXiv preprint arXiv:1803.10122.
 https://arxiv.org/abs/1803.10122
 * https://en.wikipedia.org/wiki/Conditional_random_field
-* Apparently Java doesn't have default values for parameters, but people use builder [[design_pattern]] to emulate it. How?? https://stackoverflow.com/questions/997482/does-java-support-default-parameter-values
+* Apparently Java doesn't have default values for parameters, but people use builder [[design_patterns]] to emulate it. How?? https://stackoverflow.com/questions/997482/does-java-support-default-parameter-values
 * Sagemaker and Amazon EMR - what are they?
 * how to extend vocabulary for DL word-embedding?
 * File unfinished article descriptions currently dumped at [[deepneuro]], [[intrinsic_plasticity]], [[dendritic_comp]]
@@ -333,7 +333,7 @@ https://arxiv.org/abs/1803.10122
 * redux
 * CICD (combined practices of continuous integration)
 * With pycharm and Anaconda, do I now have Python installed twice? How does it work?
-* Briefly describe other patterns [[design_pattern]]s
+* Briefly describe other patterns [[design_patterns]]s
 * predictive coding in the brain - definition? - Huang, Y., & Rao, R. P. (2011). Predictive coding. Wiley Interdisciplinary Reviews: Cognitive Science, 2(5), 580-593.
 * Kick-start videos: https://www.youtube.com/playlist?list=PLllx_3tLoo4csmLveWHpjcRTXVMCcvvmc
 * Neural turning machines: https://distill.pub/2016/augmented-rnns/

@@ -6,7 +6,7 @@ See also: devops, ds, mgt
 
 Subtopics
 * [[oop]] - Object-Oriented Programming
-* [[design_pattern]] - repetitive patterns in coding
+* [[design_patterns]] - repetitive patterns in coding
 * [[algos]] - algorithms
 * [[refactoring]]
 * [[unit_test]]

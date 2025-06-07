@@ -1,7 +1,7 @@
 # CI = Continuous Integration
 
 Path: [[devops]], [[coding]]
-Related: [[microservice]], [[kubernetes]], [[design_pattern]], [[unit_test]]
+Related: [[microservice]], [[kubernetes]], [[design_patterns]], [[unit_test]]
 
 #devops #systems
 

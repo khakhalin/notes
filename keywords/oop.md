@@ -5,7 +5,7 @@ Related:  [[python]], [[dictionary]]
 
 Subtopics:
 * [[solid]] - core principles
-* [[design_pattern]] - best practices
+* [[design_patterns]] - best practices
 * [[decorators]] - in Python specifically
 * [[pydantic]] - a popular library for enforcing data structures in Python
 * [[unit_test]] - testing-driven development
@@ -36,7 +36,7 @@ Magics (to be placed immediately before method declaration; before the `def` lin
 
 This decorator is built-in, and it makes the code clearer + ensures we are never tempted to call it on instnaces with cryptic error messages. Without a decorator, some calls of this method from an instance may fail, but only because of a different number of arguments passed to the method (it would be `self` + other arguments, when called from an instance). The error message will be unpredictable and confusing. What's almost worse, some calls may formally succeed, with `self` just becoming the 1st argument and offsetting all other arguments by one (if some of them are optional, and the number of arguments is variable). This would lead to a nightmare situation, with the same method failing sometimes, but not always. To make it clear and reliable, let's decorate it with `@staticmethod` - then it will honestly break with `AttributeError` at any attempt to call it for an instant, which is infinitely better for debugging. 
 
-On top of static and instance methods, there are also **class methods** (they use a magic decorator `@classmethod`). Instead of accepting `self` as the first parameter, these methods take `cls` (a pointer to a class). They cannot modify instance state (as they don't have access to an instance), but they do have access to static and class methods via `cls.blabla`, and they can modify class variables (if there are any). Why are they useful? One common pattern is for creating Factories (see [[design_pattern]]) by writing custom init methods. (`Npc.demon()` and `Npc.angel()` may both internally call `Npc.__init__()` with some good sets of parameters, to create different NPCs, and that's clearly a method to be called on a class, not on some instance of this class). Same as above, the decorator is even more useful here as it will prevent calling these methods on an instance, _despite_ the same number of arguments.
+On top of static and instance methods, there are also **class methods** (they use a magic decorator `@classmethod`). Instead of accepting `self` as the first parameter, these methods take `cls` (a pointer to a class). They cannot modify instance state (as they don't have access to an instance), but they do have access to static and class methods via `cls.blabla`, and they can modify class variables (if there are any). Why are they useful? One common pattern is for creating Factories (see [[design_patterns]]) by writing custom init methods. (`Npc.demon()` and `Npc.angel()` may both internally call `Npc.__init__()` with some good sets of parameters, to create different NPCs, and that's clearly a method to be called on a class, not on some instance of this class). Same as above, the decorator is even more useful here as it will prevent calling these methods on an instance, _despite_ the same number of arguments.
 
 `@abstractmethod` - to promise a method in the abstract class, and require all child classes to implement it. It needs to be imported from `abc`.
 
