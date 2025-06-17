@@ -32,6 +32,14 @@ Key principles:
 
 Elements to play with: [[caching]], sharding, balancers, rate limiters, [[acid_base]], [[streaming]]
 
+Key challenges and their solutions:
+* Read-heavy - [[caching]] (e.g. [[redis]])
+* Write-heavy - [[streaming]] (e.g. [[kafka]], [[rabbitmq]]). Also tree-based DBs (e.g. cassandra)
+* Fail-proofing DB - redundancy, replication (sync, async)
+* Balancers
+* Edge computing 🔥 ???
+* Indexing, Sharding
+
 For data reading and writing, consider a range of possibilities:
 * relational db (aka [[sql]]) - complex queries, strong (acid) consistency, hard to scale horizontally (aka "more servers")
 * [[nosql]] - simple queries, high throughput, eventual consistency. Very fast, but no more than 1-2 optimized keys.

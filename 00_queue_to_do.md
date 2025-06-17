@@ -35,7 +35,7 @@ Main queue
 * Figure out how to answer a question about what [[kubernetes]] do.
 * github workflows - how are they defined, set up? Is there normally a yaml file?
 * frog artifactory - some sort of package used for continuous integration (?) in SoftEng? At least stub it
-* how bsky is built: [https://atproto.com/guides/applications]
+* how bsky is built: <https://atproto.com/guides/applications>
 * Look into Flask, but then actually learn SimpleAPI
 * How to design Twitter: https://www.youtube.com/watch?v=KmAyPUv9gOY
 * How bsky was designed (there was a video, or a write-up on it, read it)
@@ -47,7 +47,7 @@ Main queue
 * What is a difference between process and thread? https://www.youtube.com/watch?v=4rLW7zg21gI
 * vector clocks - a way to detect and resolve inconsistencies in distributed systems: <https://en.wikipedia.org/wiki/Vector_clock>
 * How Python works inside:
-    * GIL
+    * [[gil]]
     * Asyncio
     * Multithreading
     * Subinterpreters
@@ -81,6 +81,7 @@ Main queue
     * RDF, SPARQL
     * Abstract Syntax Trees, CDS CSN, OpenAPI, OData EDMX, BPMN
     * SAP-specific: Joule, 4HANA, ABAP and Data Dictionary, VDM, CDS Views, RAP, OData, BTP
+* Prometheus (goes together with Graphana)
 * Metaflow
 * Kubeflow
 * CloudFormation

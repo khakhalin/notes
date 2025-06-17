@@ -110,10 +110,12 @@ Footnotes:
 ## Columnar calculations
 
 Basic adding and deleting:
-* `df.select('some_column_name')` - as in [[sql]], returns a sub-table with these columns (also a dataframe). You can provide either a single name, or  alist of names, and unlike for square brackets in Pandas, `select('A')` and `select(['A'])` would give the same result.
+* `df.select("column_name", sf.col("another_name"))` - as in [[sql]], returns a sub-table with these columns (also a dataframe). You can provide either a single name, or a list of names, and unlike for square brackets in Pandas, `select('A')` and `select(['A'])` would give the same result.
 * `df.drop("col_name")` or `df.drop(df.col_name)` - the opposite of select :) To drop several columns, either list them separated by columns, or unroll a list with `*[col1, col2]`.
 * `withColumnRenamed('old_name', 'new_name')` - renames a column
 * `withColumn('name', lit(None))` - adds an empty column. Using `lit(0)` will add you a column of zeros etc. You cannot specify different values here; if you manage to pass an iterable inside `lit()`, you'll just get this iterable as the same value in every row.
+* `select(sf.expr(formula).alias(name))` - when you need to select a bunch of columns, but also calculate some, that's a good approach. Apparently it may also be faster than `withColumn`! The `formula` here has its own SQL-like syntax.
+* `select(sf.col("name").alias("new_name"))` - a similar construction for renaming columns within a select.
 
 **Referring to columns:**
 * `.some_column_name` returns an object of "Column" type, similar to how in [[pandas]] it returned a series. But it's not yet the data itself, as the execution is lazy! It's not even an iterable, and there seems to be no easy way to iterate thrown values of a column (as values within a dataframe are not ordered!). If you need to iterate, you have to either collect (eagerly calculate) the entire dataframe, and then iterate by rows, picking the proper column from each row, or cast the entire thing to Pandas.
