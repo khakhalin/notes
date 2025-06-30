@@ -7,7 +7,7 @@ See also: [[time-series]]
 
 # Automation systems
 
-Main competitors: [[o9]], Kinaxis, Rulex (used to be called Oxygen), various [[sap]] modules (that are slowly falling out of favor)
+Main players: [[o9]], Kinaxis, Rapid Response, Rulex (used to be called Oxygen), various [[sap]] modules (these are falling out of favor)
 
 # Dictionary
 
@@ -21,6 +21,13 @@ PS people really love abbreviations, so a short dictionary won't hurt. (See [[di
 * TMS - Transportation Management System
 * TPM - Trade and Promotion Management software. Whatever system that is used to track promotions (may be SAP, but more often is not)
 * WMS - Warehouse Management System
+
+# Queue
+
+A set of youtube tutorials on optimization in PS:
+https://www.youtube.com/playlist?list=PLmRbStNSBmiWDyH3EAZQ655GgucbrT-TH
+
+
 
 # Refs
 

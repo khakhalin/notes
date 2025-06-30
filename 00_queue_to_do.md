@@ -24,6 +24,7 @@ Books to read / skim:
 * https://christophm.github.io/interpretable-ml-book/ - really nice explanations of ML tricks
 
 Main queue
+* Gumbel trick
 * [[restful]] - how does authentication (loggedness in) work with restful?
 * [[websocket]]
 * On scalable architectures:
