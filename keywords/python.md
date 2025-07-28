@@ -10,7 +10,7 @@ Random notes on Python.
 Subtopics and related:
 * [[oop]] - a entry on OOP is very Python-specific for now. Exclusively Python topics include:
     * [[decorators]] - how to write them in Python
-* Common packages:
+* Notable packages:
     * The holy triad: [[numpy]], [[pandas]], [[matplotlib]]
     * [[py_dates]], [[regex]] - core utils
     * [[logging]] - subj (logging)
@@ -20,6 +20,7 @@ Subtopics and related:
     * [[flask]], [[spark]], [[kedro]] - DE
     * [[environments]] - conda, pip
     * [[jupyter]] - notebooks
+    * [[langchain]] - for working with [[llm]]s
 * [[unit_test]] - how to write unit tests correctly (in Python) 
 
 # Sets

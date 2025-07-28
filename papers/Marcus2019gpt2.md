@@ -3,7 +3,7 @@
 The Gradient. 25 Jan 2020. Gary Marcus
 https://thegradient.pub/gpt2-and-the-nature-of-intelligence/
 
-Parent [[LLM]]
+Parent [[llm]]
 Related: [[10_Text]], [[Vaswani2017attention]], [[transformers]]
 
 #language #opinion #meaning #gi

@@ -1,7 +1,7 @@
 # Transformers
 
 Parents: [[10_Text]], [[06_DL]], attention (in a neuro-sense)
-Related: [[convnet]], [[residual]], [[LLM]]
+Related: [[convnet]], [[residual]], [[llm]]
 
 #attention #text #dl
 

@@ -7,12 +7,13 @@ See also: [[streaming]], [[datalake]]
 
 
 Subtopics
+* [[sql]] - the most common DB language
 * [[data_wh]] - Data Warehouse
 * [[nosql]] - a conceptual alternative to tables
-* [[sql]] - about the language in general.
 * [[acid_base]] - strong vs eventual consistency. See also [[db_consistency]]
+* [[graph_db]] - everything graph databases
 
- Solutions:
+ DB Solutions:
 * [[postgres]] - OS, simple solution, good community
 * [[snowflake]] - fancy optimization of everything, cloud-only
 * [[databricks]] - 

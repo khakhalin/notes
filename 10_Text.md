@@ -17,7 +17,7 @@ Word embeddings ([[embedding]]):
 * [[debiasing]] - how to make word embeddings less biased
 
 Modern DL:
-* [[LLM]] - Large language models
+* [[llm]] - Large language models
 * [[beam_search]] - beyond suggesting one word at a time, by exploring a decision tree.
 * [[perplexity]] - main measure (objective function) for language model quality
 * [[transformers]] - as of 2023, the most popular architecture for LLM

@@ -79,12 +79,12 @@ If there's a conflict, one has to … 🔥🔥 _How to resolve conflicts? If you
 
 If you pulled a branch and commited locally, but someone else had pushed a commit to the origin branch, you can no longer push, and you can no longer pull with a simple `git pull`. Instead you should do `git fetch` followed by `git merge`. If you are lucky and there are no conflicts, that's it basically (just push back immediately); if there are coflicts - resolve them first, then commit and push.
 
-**Triggering conflicts**: If you want to a manual careful merge, you can try to avoid auto-merging using `git merge --no-commit --no-ff source_branch`. 🔥It's unclear however if it's enough to trigger a neat resolution sequence in the IDE.
+**Triggering conflicts**: If you want to trigger a careful manual merge, you can try to avoid auto-merging using `git merge --no-commit --no-ff source_branch`. 🔥It's unclear however if it's enough to trigger a neat resolution sequence in the IDE.
 
-Apparently these 2 commands mark every file edited in both branches as a conflict.
+Allegedly these 2 commands mark every file edited in both branches as a conflict.
 ```bash
 git merge --no-commit source_branch
-git checkout --conflict merge .  # This . apparently being critical
+git checkout --conflict merge .  # This . at the end seems critical
 ```
 This approach doesn't work for "clean merges" when no file is edited in both branches (for clean merges it still does a fast-forward), but that's probably ok.
 

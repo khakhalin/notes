@@ -24,7 +24,7 @@ Overall, regularization is more important, and particularly efficient, when data
 
 > Is there any hard empyrical math to back that? How to tell where the threshold lies, in terms of data size vs n parameters?
 
-When training [[transformers]] for [[LLM]], they use modified regularization techiques such as AdamW and Lion (by Google). 
+When training [[transformers]] for [[llm]], they use modified regularization techiques such as AdamW and Lion (by Google). 
 
 Footnote:
 * https://arxiv.org/pdf/2302.01107.pdf - A Survey on Efficient Training of Transformers
