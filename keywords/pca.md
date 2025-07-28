@@ -47,5 +47,7 @@ loadings = pca.inverse_transform(np.eye(2)) # This command is somehow really not
 # Refs
 
 Intuitions behind PCA (a great write-up by Peter Bloem): https://peterbloem.nl/blog/
+* "Unravelling Principal Component Analysis" by Peter Bloem - available on the nets for free
+* Quick summary of the book by another blogger: https://loreley.one/2024-09-pca/
 
 A very nice practical introduction to PCA in Python: https://jakevdp.github.io/PythonDataScienceHandbook/05.09-principal-component-analysis.html

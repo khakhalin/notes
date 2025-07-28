@@ -42,3 +42,23 @@ Soulmagnet - Audio
 Shogun Audio presents Way of the Warrior 2 - Various Artists
 Critical Music: Underground Sonics - Various Artists
 Blackjack - Optiv & BTK
+
+**Early music experiments**
+* Early Music Consort of London
+* Jordi Savall and Hespèrion XX
+* Dufay Collective
+* Amsterdam Loeki Stardust Quartet (recorders)
+* Pro Cantione Antiqua
+* Ensemble Für Fruhe Musik Augsburg
+* Ensemble Organum
+* Unicorn Ensemble
+* Calliope
+* Joculatores Upsalienses
+* Musica Reservat
+* Orlando Consort
+* Rene Clemencic
+* Sonus
+* Sonores Antiqui
+* Huelgas Ensemble
+* Bjorn Schmelzer with Graindelavoix
+* Sequentia 

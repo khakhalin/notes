@@ -8,6 +8,9 @@ See also: [[dataviz]]
 
 Cool interactive visual tool for interactive dashboard creation. Proprietary. Several versions, including public (like googledocs, in a way), personal, professional. Server for local deployment, online for cloud subscription (going cloud seems to be a trend). There's also a "reader" that can be used for sharing data with people who don't have Tableau installed.
 
+🔥 TODO:
+* Describe INCLUDE and FIXED in particular
+
 # Creating a visualization
 
 First, you connect it to data; typically, by creating a DB connection (but can also use static json, excel, etc.) Add tables in long form, join them by id (except that Tableau manuals pretend that it's not a join, but something a bit more flexible, but for now I don't feel the difference). It even tries to guess how to join them. 
@@ -88,10 +91,8 @@ Apparently, one can write their own code in Tableau version of [[javascript]], a
 
 # Competitors
 
-Apache Superset
-https://en.wikipedia.org/wiki/Apache_Superset
-
-PowerBI from Microsoft
+* Apache Superset (OSS?): https://en.wikipedia.org/wiki/Apache_Superset
+* PowerBI from Microsoft
 
 # Refs
 
@@ -101,3 +102,5 @@ Basic intros and tutorials:
 
 LODs
 * https://www.flerlagetwins.com/2020/02/lod-uses.html
+
+Examples: https://vizpainter.com/

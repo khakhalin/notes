@@ -41,7 +41,8 @@ Older
 * Paolo Anesi - another simialr 18 century Italian. How (adorable) kitsch looked like in 18 century!
 * Jaime Heiden - naked trees with skies as a backdrop
 * Karin Larsson - Svedish interior designer from early 20c that basically invented Ikea and 60s, but better
-* Hilma af Klint - inventor of (spiritual) abstract art (before Kandinsky! But Hildegard von Bingen is also cool)
+* Hilma af Klint - inventor of (spiritual) abstract art (before Kandinsky and co. But Hildegard von Bingen is also cool)
+* Gustav Wunderwald - the artist of industrial Berlin (Wedding, Spandau)
 
 Icons
 * Natalya Rusetska
@@ -52,9 +53,11 @@ Icons
 
 * Manuel Panselinos - Macedonia, 13-14c
 
-Sources
-* St Anne from the Faras cathedral in Sudan - Nubians invented Anime (the eyes!)
+Historical sources
+* St Anne from the Faras cathedral in Sudan - Nubians invented Anime (the eyes)
+* Cave of the Painters - the most famous of Kizil caves, with this mixed Buddhist-Helenistic art
 * Mudlarking - lots of pretty sorted objects from the mud
+* Chhath Puja Madhubani paintings - a more southern, Hindu extension of 2D tangka-style paintings
 
 Contemporary
 * Maxim Sukharev - neopagan geometric icon-like thingies: https://www.deviantart.com/sukharev/gallery

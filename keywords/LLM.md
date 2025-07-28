@@ -8,7 +8,8 @@ See also: vector databases
 Subtopics:
 * [[transformers]] - main tech behind
 * [[rag]] - retrieval-augmented generation
-* [[langchain]]
+* [[mcp]] - agentic protocol
+* [[langchain]] - a swiss-knife toolbox
 * [[knowledge_graph]]
 * [[prompting]] - (older) advice on prompting
 

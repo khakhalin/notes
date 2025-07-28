@@ -1,7 +1,7 @@
 # Langchain
 
 Parents: [[llm]]
-See also: [[rag]]
+See also: [[rag]], [[mcp]]
 
 #text #llm
 
@@ -11,6 +11,8 @@ LangChain is a framework foor working with [[llm]]s, written in [[python]] and [
 The package standardizes LLM interfaces (via `.llms` subspace), standardizes `.retrivers` for getting data to feed to LLMs (e.g. [[knowledge_graph]] or vector-based [[rag]] implementation), and other fun tools, but most importantly, it helps to define chains of actions (control flows, orchestration, observability). A ready interface for structured output.
 
 Offshoots: `LangGraph` for stringing possible states as a graph, for "multi-actor interactions".
+
+As of mid-2025 there's a claim that langchain is obsolete, and [[mcp]] is the future.
 
 # Refs
 

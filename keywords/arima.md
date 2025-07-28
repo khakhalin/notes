@@ -48,7 +48,7 @@ Nice lecture slides: http://hedibert.org/wp-content/uploads/2016/04/ar-ma.pdf
 
 Mathy lecture notes on ARMA, from Wharton College: http://www-stat.wharton.upenn.edu/~stine/stat910/lectures/08_intro_arma.pdf
 
-Some attempt to build ARIMA from scratch in Python: https://laptrinhx.com/arima-model-from-scratch-in-python-3262984784/
+Building ARIMA from scratch in Python: https://laptrinhx.com/arima-model-from-scratch-in-python-3262984784/
 
 Wiki
 * https://en.wikipedia.org/wiki/Autoregressive%E2%80%93moving-average_model	
