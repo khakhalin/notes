@@ -14,6 +14,8 @@ Let's assume that we were asked develop a chat-based (LLM-based) automation syst
 
 Let's sketch an "Agentic AI workflows with multi-agent orchestration" to solve this type of problems.
 
+As if Aug 2025, for a reasonable model (not the best, not the worst) we get about 25c per 1M tokens, and about 100k tokens context window, so about 2c per full "saturated" request.
+
 # Techstack
 
 * Backend: Python, FastAPI, Celery+Redis, Postgres, MongoDB.
