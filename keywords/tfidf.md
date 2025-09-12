@@ -1,9 +1,10 @@
 # TFIDF
 
+Parent: [[10_Text]]
+See also: [[ngram]], [[bm25]]
+
 #text
 
-Parent: [[10_Text]]
-See also: [[ngram]]
 
 TF-IDF = **Text Frequency - Inverse Document Frequency**. A measure of how often a word is used in a document, compared to all other documents. tfidf() = tf()∙idf(). Here:
 

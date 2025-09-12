@@ -10,6 +10,10 @@ Subtopics:
 
 # Queue
 
+How people actually move
+https://bsky.app/profile/louisboucherie.com/post/3lxrbdnjhu22j
+🔥 to compare to my assumptions in the model
+
 Santi, P., Resta, G., Szell, M., Sobolevsky, S., Strogatz, S. H., & Ratti, C. (2014). Quantifying the benefits of vehicle pooling with shareability networks. Proceedings of the National Academy of Sciences, 111(37), 13290-13294. 🔥🔥🔥
 Quantifying the benefits of vehicle pooling with shareability networks
 https://www.pnas.org/doi/full/10.1073/pnas.1403657111

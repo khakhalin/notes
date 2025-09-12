@@ -7,6 +7,20 @@ https://missing.csail.mit.edu/ 🔥
 lots of useful practical bits and pieces: shell, debugging, data wrangling, metaprogramming and what not. Also has [lectures on youtube](https://www.youtube.com/watch?v=Z56Jmr9Z34Q&list=PLyzOVJj3bHQuloKGG59rS43e29ro7I57J&index=2&t=0s).
 (the link is also saved in [[01_Tools]], so delete it from here once done)
 
+# Short-term stack
+
+Quality Metrics to Track
+python
+def evaluate_chunking_quality():
+    metrics = {
+        'context_utilization': used_tokens / context_window,
+        'chunk_relevance_score': avg_similarity_score,
+        'answer_accuracy': compare_with_ground_truth(),
+        'retrieval_latency': time_to_retrieve_chunks,
+        'duplicate_info_rate': detect_redundant_chunks()
+    }
+    return metrics
+
 # Queue
 
 Analyze this set of links:
@@ -42,7 +56,7 @@ Books to read / skim:
     * https://en.wikipedia.org/wiki/Job-shop_scheduling
     * https://en.wikipedia.org/wiki/Bellman_equation
 * Write down while I remember it, about [[spark]]
-    * Saving to custom configs
+    * Adding fields to custom configs
     * How to break DAGs in Spark
     * How to properly land in Spark (optimization for downstream filtering)
     * Coalescing and partitioning
@@ -77,6 +91,12 @@ Books to read / skim:
     * [[caching]] for reads. What types / strategies of caching exist?
     * elastic search - as a way to add advanced filtering and aggregation on top of [[nosql]] - read how it works
     * Load balancing, sharding - what are the different strategies?
+* On AB testing and causal inference at scale:
+    * variance reduction as a topic (google)
+    * switchback experiments - https://www.statsig.com/blog/switchback-experiments
+    * cuped - https://www.statsig.com/blog/cuped
+    * cupac - "Control Using Predictions as Covariates in Switchback Experiments" https://www.researchgate.net/profile/Yixin-Tang-5/publication/345698207_Control_Using_Predictions_as_Covariates_in_Switchback_Experiments/links/5fab109b458515078107aa8b/Control-Using-Predictions-as-Covariates-in-Switchback-Experiments.pdf
+    * difference-in-difference: https://mixtape.scunning.com/09-difference_in_differences
 * from unittest.mock import MagicMock, patch - allows call_count
 * Figure out how to answer a question about what [[kubernetes]] do.
 * github workflows - how are they defined, set up? Is there normally a yaml file?
@@ -109,7 +129,7 @@ Books to read / skim:
     *  [AWS Data Engineering Learning Path](https://aws.amazon.com/training/learn-about/data-engineering/)
     *  AWS Step Functions (orchestration)
     *  CodePipeline (CI/CD)
-* Terraform
+* Terraform - what does it do? Place in the ecosystem, strength, weaknesses?
 * read more about [[dbt]] and this recent debacle with core vs fusion
 * sqlmesh - a competitor to dbt? that is more open source?
 * Prometheus (goes together with Graphana)
@@ -137,8 +157,10 @@ Books to read / skim:
 * `@cached_property`
 * What's the difference between dbfs and blob?
 * Partitioning of [[parquet]] files - everything is not as simple as I thought! Study (metadata, folders, requests)
-* `uv` as an alternative to pip
-* Terraform - what does it do? Place in the ecosystem, strength, weaknesses?
+* `uv`
+    * as an alternative to pip
+    * how to correctly build an installable project (package) with uv?
+    * requirements.txt vs pyproject.toml - what's the correct use?
 * helm - what is it, how it works, some basics
 * Process the list of "How a DS can become a DE": https://www.reddit.com/r/datascience/comments/1ehoumf/applying_for_a_de_role_as_a_current_ds_is_3_weeks/
 * Update OLAP / OLTP distinction: https://www.snowflake.com/en/fundamentals/olap-vs-oltp-the-differences/

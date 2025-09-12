@@ -3,7 +3,7 @@
 Parents: [[graph_db]]
 See also: [[knowledge_graph]]
 
-#database #graph
+#db #graph
 
 
 A popular graph database. Both nodes and edges can have properties. Written in Java. Freemium, GPLv3; apparently not-OSS? - there's some strange story about their licensing and their complex tiered system.
