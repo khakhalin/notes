@@ -36,7 +36,7 @@ If we go full async, we'll have about 5-10 microservices:
 
 # Knowledge artifacts
 
-If there are technical docs, annotated logs, cheatsheets, summaries of "bes practices" etc, then our life is simple, we just need to cut them into [[rag]]s. But what if documentation doesn't exist? What is the ideal documentation, for a project like that, if we are creating it for automation purposes to begin with, and not for a human to leaf through?
+If there are technical docs, annotated logs, cheatsheets, summaries of "best practices" etc, then our life is simple, we just need to cut them into [[rag]]s. But what if documentation doesn't exist? What is the ideal documentation, for a project like that, if we are creating it for automation purposes to begin with, and not for a human to leaf through?
 
 We want modular "knowledge atoms". A small encyclopaedia? Entries should be about chunk-long, so (as of 2025), 500-1000 tokens, or (in English) about 400-800 words. It's about a screen of text (3-4 paragraphs). Use [[markdown]], add metadata. We want an entry for:
 
@@ -65,4 +65,4 @@ Socratic dialogues are in vogue again! One great format to use are **conversatio
 > Q: Why are some items shown in red?
 > A: For these elements travel_time is smaller than sleep_period, which may indicate disease.
 
-The best way to extract this information is via long recorded structured interviews. It's about 2-3 people working for about 2-3 months.
+The best way to extract this information is via long recorded structured interviews. It's about 2-3 people working for about 2 months.
