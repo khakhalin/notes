@@ -1,10 +1,12 @@
-# Optimizers
+# Optimizers in DL
 
 Parents: [[hyperparameters]]
 See also: [[regularization]], [[archsearch]]
 
 #optimizers
 
+
+For "optimiziers" in the sense of linear programming, see [[linprog]]
 
 Subtopics:
 * [[adam]] - the most famous optimizer
