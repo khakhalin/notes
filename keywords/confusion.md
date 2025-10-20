@@ -1,6 +1,6 @@
 # Confusion Matrix and model assessment
 
-Parents: [[03_Classification]]
+Parents: [[classification]]
 Related: [[youdens-j]], [[roc]], [[validation]]
 
 #classification #stats

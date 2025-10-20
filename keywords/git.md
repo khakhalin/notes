@@ -1,6 +1,6 @@
 # GIT
 
-Path: [[01_Tools]]
+Path: [[tools]]
 See also: [[bash]], [[ssh]], [[vim]], [[linting]] (for pre-commit hooks)
 Platforms: [[github]], [[gitlab]]
 

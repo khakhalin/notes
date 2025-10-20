@@ -1,6 +1,6 @@
 # Graphical algorithms
 
-Parent: [[algos]], [[09_Graphs]]
+Parent: [[algos]], [[graphs]]
 See also: [[graph_intro]]
 
 #algo #networks #graph

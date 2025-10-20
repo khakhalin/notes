@@ -2,7 +2,7 @@
 
 #graph #clique
 
-Related: [[09_Graphs]], [[graph_intro]]
+Related: [[graphs]], [[graph_intro]]
 
 Subtopics:
 * [[umap]]

@@ -2,7 +2,7 @@
 
 #deepneuro #dl #neuro
 
-Parents: [[neuro]], [[06_DL]]
+Parents: [[neuro]], [[dl]]
 
 Related: 
 * [[vision]] - specifically about comparing neuro and DL models of vision

@@ -1,6 +1,6 @@
 # SVM - Support Vector Machine
 
-Parent: [[03_Classification]]
+Parent: [[classification]]
 Related: [[logreg]], [[kernels]]
 
 #classification
@@ -24,7 +24,7 @@ The value 1/norm(θ) is called **thickness** of the decision boundary. This yiel
 
 > At this point (ESL p133) I give up for now. It seems that math around p134 is not how SVMs are actually implemented anyways, so it can probably wait. I'll rivisit this once I read the actual SVM chapter.
 
-In practice, SVMs are  used in combination with **Kernel tricks** (see [[kernels]]), such as radial basis kernels [[RBF]]. This produces simple yet expressive models, where the classification is encoded by a single vector (and also the set of kernels). Allegedly, as of 2010s they were still SOTA for some niche operations, but appear to have been replaced by ensemble methods ([[05_Ensembles]]) later.
+In practice, SVMs are  used in combination with **Kernel tricks** (see [[kernels]]), such as radial basis kernels [[RBF]]. This produces simple yet expressive models, where the classification is encoded by a single vector (and also the set of kernels). Allegedly, as of 2010s they were still SOTA for some niche operations, but appear to have been replaced by ensemble methods ([[ensembles]]) later.
 
 # History
 

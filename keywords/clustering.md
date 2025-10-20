@@ -1,7 +1,7 @@
 # Clustering
 
-Parents: [[04_Features]]
-See also: [[python]], [[03_Classification]], [[dim_reduction]]
+Parents: [[features]]
+See also: [[python]], [[classification]], [[dim_reduction]]
 
 #bib #clustering #features
 

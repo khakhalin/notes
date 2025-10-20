@@ -3,7 +3,7 @@
 Yu, Z., & Raschka, S. (2020). Looking back to lower-level information in few-shot learning. arXiv preprint arXiv:2005.13638.
 https://www.mdpi.com/2078-2489/11/7/345
 
-Related: [[09_Graphs]], [[transfer]], [[08_Unsupervised]]
+Related: [[graphs]], [[transfer]], [[unsupervised]]
 
 #embedding #self-supervised #transfer #graph
 

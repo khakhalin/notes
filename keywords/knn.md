@@ -1,6 +1,6 @@
 # 1NN and KNN
 
-Parent: [[03_Classification]]
+Parent: [[classification]]
 See also: [[validation]], [[hyperparameters]], Bias-Variance trade-off, kernel methods
 
 #classification

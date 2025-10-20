@@ -8,7 +8,7 @@ Parents: [[deepneuro]] / [[credit]]
 #deepneuro #neuro #credit #review
 
 
-Is there backprop in the brain? Changes of synaptic connections are a given, and there have to be some non-local aspect to these changes (even if the rules themselves are local), for the brain to learn anything useful. But in ANNs people use [[backprop]] that carries info from the end (loss function, error) through the network (even for self-supervised and reinforcement learning [[11_RL]]). As ANNs, The brain has lots of feedback connections, but apparently they are used for different purpose (not for backprop), and most local learning seems unsupervised. How does it work then, and is backprop even a useful metaphor for bio networks?
+Is there backprop in the brain? Changes of synaptic connections are a given, and there have to be some non-local aspect to these changes (even if the rules themselves are local), for the brain to learn anything useful. But in ANNs people use [[backprop]] that carries info from the end (loss function, error) through the network (even for self-supervised and reinforcement learning [[rl]]). As ANNs, The brain has lots of feedback connections, but apparently they are used for different purpose (not for backprop), and most local learning seems unsupervised. How does it work then, and is backprop even a useful metaphor for bio networks?
 
 They claim that perhaps the brain emulates backprop, and that we should pay attention to methods they call **neural gradient representation by activity differences** (NGRAD). It allows separating backprop-y logic from actual implementation of backprop. They also explicitly note that they ignore the question of priors (but see [[Zador2019pure]] for a discussion of meaningful priors)
 
@@ -65,7 +65,7 @@ Footnotes:
 * Knill, D. C. & Richards, W. Perception as Bayesian Inference (Cambridge Univ. Press, 1996).
 * Dayan, P., Hinton, G. E., Neal, R. M. & Zemel, R. S. The Helmholtz machine. Neural Comput. 7, 889–904 (1995)
 
-> So does it imply  that greedy learning, similar to **deep belief networks** [[dbn]] may still have a come-back? Just this time learning continuously, in recurrent ([[rnn]]), self-supervised ([[08_Unsupervised]]) mode?
+> So does it imply  that greedy learning, similar to **deep belief networks** [[dbn]] may still have a come-back? Just this time learning continuously, in recurrent ([[rnn]]), self-supervised ([[unsupervised]]) mode?
 
 **NGRAD hypothesis**: Neural Gradient Representation through Activity Differences. The motivation is to avoid having 2 different information types - activity and errors - and somehow encode errors in the activities themselves. Loosely inspired by [[boltzmann_machine]]s.
 

@@ -2,7 +2,7 @@
 
 #rnn #dl
 
-Parents: [[09_Graphs]]
+Parents: [[graphs]]
 See also: [[gru]], [[activation_functions]]
 
 Introduced in 1997 by Schmidhuber. Solves the issue of vanishing gradients for recurrent networks.

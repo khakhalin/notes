@@ -1,6 +1,6 @@
 # Slack
 
-Parents: [[01_Tools]]
+Parents: [[tools]]
 
 #tools
 

@@ -1,6 +1,6 @@
 # Logging
 
-Parents:[[01_Tools]] / [[python]]
+Parents:[[tools]] / [[python]]
 See also: [[kibana]]
 
 #python #debugging

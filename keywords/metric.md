@@ -1,6 +1,6 @@
 # Metrics
 
-Parents: [[04_Features]], [[clustering]]
+Parents: [[features]], [[clustering]]
 Related: [[typical_sample]], [[curse_dim]]
 
 

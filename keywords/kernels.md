@@ -1,6 +1,6 @@
 # Kernel methods
 
-Parents: [[02_Regression]], [[03_Classification]]
+Parents: [[regression]], [[classification]]
 Examples: [[loess]], [[rbf]], [[smoothing]]
 See also: [[svm]]
 
@@ -23,7 +23,7 @@ If above we assume $f(x_i) = θ_0 + θ(x_i-x)$, with its own $θ_0$ and $θ$ for
 
 See Radial Basis Functions: [[rbf]] as a classic example.
 
-KNNs (see [[03_Classification]]) can also be considered a subtype of a kernal method, just with a weird discontinuous stepwise kernel.
+KNNs (see [[classification]]) can also be considered a subtype of a kernal method, just with a weird discontinuous stepwise kernel.
 
 # See also
 

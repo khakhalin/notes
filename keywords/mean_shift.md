@@ -2,7 +2,7 @@
 
 #clustering #dynamic #kernel
 
-Parent: [[03_Classification]], [[clustering]]
+Parent: [[classification]], [[clustering]]
 
 A type of clustering algorithm in which clusters are not assigned explicitly, but instead points are interatively moved, like in a **dynamic system**, and end up converging to different end-points. These end points can later be used as **centroid** estimations. Officially, can be described as an algorithm to find distribution modes.
 

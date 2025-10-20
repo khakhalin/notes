@@ -1,7 +1,7 @@
 # Markov Decision Process (mdp)
 
 Parents: [[modeling]]
-See also: [[11_RL]], [[q-learning]], [[09_Graphs]]
+See also: [[rl]], [[q-learning]], [[graphs]]
 
 #rl #monte-carlo
 

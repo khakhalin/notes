@@ -2,7 +2,7 @@
 
 #networks #neuro #bib
 
-Parents: [[09_Graphs]], [[neuro]]
+Parents: [[graphs]], [[neuro]]
 Related: [[criticality]], [[algebraic_topology]]
 
 # Annotated Papers

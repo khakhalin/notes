@@ -2,7 +2,7 @@
 
 #features #dsp
 
-Parents: [[02_Regression]], [[04_Features]]
+Parents: [[regression]], [[features]]
 See also: [[kernels]], [[loess]]
 
 There are **3 broad approaches to model smoothing**:

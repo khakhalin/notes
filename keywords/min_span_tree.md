@@ -1,6 +1,6 @@
 # Minimum Spanning Tree, aka Prim and Kruskal
 
-Parents: [[algos]] / [[algos_graph]], but also [[09_Graphs]]
+Parents: [[algos]] / [[algos_graph]], but also [[graphs]]
 Related: [[algos_trees]], [[union-find]]
 
 #algo #graph #trees

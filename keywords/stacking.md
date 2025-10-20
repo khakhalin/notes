@@ -2,7 +2,7 @@
 
 #ensemble
 
-Parent: [[05_Ensembles]]
+Parent: [[ensembles]]
 Related: [[bagging]]
 
 A practical way to create a reasonable linear combination of several non-linear models using cross-validation.

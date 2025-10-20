@@ -2,7 +2,7 @@
 
 #networks #centrality
 
-Parent: [[09_Graphs]]
+Parent: [[graphs]]
 
 * [[pagerank]]
 

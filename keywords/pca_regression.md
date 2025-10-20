@@ -1,6 +1,6 @@
 # Principal Components Regression
 
-Parents: [[02_Regression]]
+Parents: [[regression]]
 See also: [[pca]], [[ridge_regression]]
 
 #stats #regression
@@ -28,7 +28,7 @@ The main idea: to find a linear transformation of X that serves as the best basi
 7. Repeat 3-6 m times (m<p)
 8. Project ξ back to θ
 
-The process lets Y pull signal from X, regardless of how this signal is encoded (mixed?) in columns of X. ESL claims though that "variance aspect tends to dominate", so in practice this method doesn't behave too differently than Ridge regression. Seems to also be similar in spirit to "Canonical Correlation Analysis" (see [[04_Features]] section). Same to PCR above, may inflate weaker dimensions, making it unstable. Which all together is probably why it is not that widely used? 
+The process lets Y pull signal from X, regardless of how this signal is encoded (mixed?) in columns of X. ESL claims though that "variance aspect tends to dominate", so in practice this method doesn't behave too differently than Ridge regression. Seems to also be similar in spirit to "Canonical Correlation Analysis" (see [[features]] section). Same to PCR above, may inflate weaker dimensions, making it unstable. Which all together is probably why it is not that widely used? 
 
 According to wiki, works well when the dimensionality of X is high, while the number of observations is low.
 

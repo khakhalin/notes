@@ -1,6 +1,6 @@
 # Cross-entropy
 
-Parents: [[information]], [[loss]], [[03_Classification]]
+Parents: [[information]], [[loss]], [[classification]]
 Related: [[logreg]], [[gini]], [[kl]]
 
 #entropy

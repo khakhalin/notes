@@ -1,6 +1,6 @@
 # Model validation
 
-Parents: [[03_Classification]], [[02_Regression]]
+Parents: [[classification]], [[regression]]
 See also: [[confusion]], [[roc]]
 
 #validation #loss

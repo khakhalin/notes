@@ -1,6 +1,6 @@
 # Parquet files
 
-Parent: [[01_Tools]]
+Parent: [[tools]]
 See also: [[database]], [[spark]]
 
 #db

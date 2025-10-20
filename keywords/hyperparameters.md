@@ -1,6 +1,6 @@
 # Hyperparameters
 
-Parents: [[06_DL]]
+Parents: [[dl]]
 Related: [[optimizers]], [[regularization]], [[archsearch]]
 
 #dl

@@ -1,6 +1,6 @@
 # Batch normalization
 
-Parents: [[06_DL]]
+Parents: [[dl]]
 Related: [[regularization]], [[dropout]]
 
 #dl

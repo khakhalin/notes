@@ -1,6 +1,6 @@
 # Javascript
 
-Parent: [[01_Tools]] #tools
+Parent: [[tools]] #tools
 
 # D3
 

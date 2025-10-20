@@ -1,6 +1,6 @@
 # Quantile Regression
 
-Parents: [[stats]], [[loss]], [[02_Regression]]
+Parents: [[stats]], [[loss]], [[regression]]
 See also:
 
  #loss #regression

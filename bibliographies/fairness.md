@@ -99,7 +99,7 @@ https://advances.sciencemag.org/content/6/7/eaaz0652
 
 Lakkaraju, H., Kamar, E., Caruana, R., & Horvitz, E. (2017, February). Identifying unknown unknowns in the open world: Representations and policies for guided exploration. In Thirty-First AAAI Conference on Artificial Intelligence.
 https://arxiv.org/abs/1610.09064
-Related: [[04_Features]]
+Related: [[features]]
 
 Ramakrishnan, R., Kamar, E., Dey, D., Shah, J., & Horvitz, E. (2018). Discovering blind spots in reinforcement learning. arXiv preprint arXiv:1805.08966.
 https://arxiv.org/abs/1805.08966

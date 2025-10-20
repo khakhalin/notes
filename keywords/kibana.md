@@ -1,6 +1,6 @@
 # Kibana and Elasticsearch
 
-Path: [[01_Tools]]
+Path: [[tools]]
 See also : [[tableau]], [[logging]]
 
 #tools #debugging

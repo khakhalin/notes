@@ -1,6 +1,6 @@
 # Large Language Models
 
-Parents: [[06_DL]], [[10_Text]]
+Parents: [[dl]], [[text]]
 See also: vector databases
 
 #bib #text #llm

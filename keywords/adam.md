@@ -3,7 +3,7 @@
 #dl #tools #optimizers
 
 Related: 
-* Parent: [[06_DL]]
+* Parent: [[dl]]
 * [[Ruder2016descent]] - an overview of different gradient descent methods
 * [[Sivaprasad2019optimizers]] - claims that ADAM usually outperforms other optimizers.
 

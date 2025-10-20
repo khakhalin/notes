@@ -1,6 +1,6 @@
 # Coding
 
-Parents: [[01_Tools]]
+Parents: [[tools]]
 See also: [[python]]
 
 #bib #coding

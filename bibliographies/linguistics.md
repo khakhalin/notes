@@ -1,6 +1,6 @@
 # Linguistics
 
-Related: [[10_Text]]
+Related: [[text]]
 
 #language #bib #maps
 

@@ -1,7 +1,7 @@
 # Typical Sample
 
 Parents:
-Related: [[curse_dim]], [[04_Features]], [[metric]], [[smote]]
+Related: [[curse_dim]], [[features]], [[metric]], [[smote]]
 
 #dim #stats #interpretability
 

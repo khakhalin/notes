@@ -1,6 +1,6 @@
 # node2vec
 
-Parent: [[09_Graphs]] / [[graph_embedding]]
+Parent: [[graphs]] / [[graph_embedding]]
 Related: [[word2vec]], [[knowledge_graph]], [[deep_graphs]]
 
 #graph #embedding

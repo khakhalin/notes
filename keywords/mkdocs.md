@@ -1,6 +1,6 @@
 # MkDocs
 
-Parents: [[01_Tools]], [[writing]]
+Parents: [[tools]], [[writing]]
 See also: [[diataxis]]
 
 

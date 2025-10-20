@@ -2,7 +2,7 @@
 
 Glorot, X., & Bengio, Y. (2010, March). Understanding the difficulty of training deep feedforward neural networks. In Proceedings of the thirteenth international conference on artificial intelligence and statistics (pp. 249-256).
 
-Parent: [[06_DL]] / [[init_dl]]
+Parent: [[dl]] / [[init_dl]]
 See also:
 * [[He2015init]] - an improment upon this paper
 

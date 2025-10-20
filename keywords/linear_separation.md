@@ -1,6 +1,6 @@
 # Linear separation
 
-Parents: [[03_Classification]], [[04_Features]]
+Parents: [[classification]], [[features]]
 Related: [[lda]], [[svm]], [[logreg]]
 
 #classification
@@ -16,7 +16,7 @@ G = $\text{argmin}_g ∑$ L($G_k$ counted as g) ∙ P(observing a point from $G_
 
 If all errors costs are the same, then G = $\text{argmin}_g (1 - P(g | x))$, known as likelihood optimization, or **Bayes classifier**. In this case we just calculate conditional probabilities of $P(g|x)$, or the probability of the data point being originating from the class g, given its observation x, and then go with the highest probability. The error rate for this scenario is called **Bayes rate**, and it is the lowest possible rate, coming from the uncertainty of data itself, analogous to the irreducible error for [[regression]]. If data is deterministic or points are never overlapping, and $x↔g$, then the Bayes rate=0. If however the same observatoin x can be produced by different classes g, then the Bayes rate is ≠ 0, as the model will never be able to perfectly overfit the data.
 
-**Kernel tricks**: to perform separation in of non-linear data, or data in high D, add feature squares and cross-products to the set, as synthetic features (see [[04_Features]]). Then perform separation. Linear boundaries for this derivative set will correspond to quadratic boundaries for the original set.
+**Kernel tricks**: to perform separation in of non-linear data, or data in high D, add feature squares and cross-products to the set, as synthetic features (see [[features]]). Then perform separation. Linear boundaries for this derivative set will correspond to quadratic boundaries for the original set.
 
 If each class dummy variable is fit with a linear function $f_i = Xθ_i$, then the decision boundary between 2 classes is a line $f_i = f_j$ (that is, a line where score-functions for belonging to both classes i an j will be the same). Simplifying, the solution of $X(θ_i - θ_j)=0$ has to be a line. So we can take an **indicator matrix** $Y$, in which each row is a one-hot encoded class indicator, and try to fit each column of this matrix using linear regression: $H = XΘ = X(XᵀX)⁻¹XᵀY$, where $Θ$ is a matrix composed of many columns of $θ$: one column for every column in $Y$. This $H$ would have a reasonable property of $∑f_k(x) = 1$, when summing across all classes $g_k$, but individual $f_k$ will be groing linearly with points moving away form decision boundaries, and will also totally go outside of $(0,1)$, so they can't be interpreted as probabilities. Which is sad.
 

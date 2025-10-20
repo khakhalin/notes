@@ -1,6 +1,6 @@
 # Boosting and AdaBoost
 
-Parents: [[05_Ensembles]]
+Parents: [[ensembles]]
 Related: [[bagging]], [[gbm]], [[lightgbm]]
 
 #ensemble

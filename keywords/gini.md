@@ -2,7 +2,7 @@
 
 #classification
 
-Parent: [[03_Classification]]
+Parent: [[classification]]
 Related: AdaBoost ([[boosting]]), [[random_forest]]
 
 Has nothing to do with Gini coefficient from economics, except that both were introduced by the same dude Corrado Gini ([ref](https://jamesmccaffrey.wordpress.com/2018/09/06/calculating-gini-impurity-example/)). **Gini impurity** is good for quantifying the quality of classification by a decision tree (not necessarily with 2 categories). Lies between 0 (a limit case for one category overpowering all) and 1 (a limit case for infinitely many equally represented categories).

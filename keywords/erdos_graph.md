@@ -1,6 +1,6 @@
 # Erdős–Rényi model
 
-Parent: [[09_Graphs]]
+Parent: [[graphs]]
 Related [[small_world]], [[randomness]]
 
 #graph #generative

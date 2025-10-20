@@ -2,7 +2,7 @@
 
 #dim #features
 
-Parent: [[04_Features]]
+Parent: [[features]]
 See also: [[mds]]
 
 Local methods (like KNN) break down in high-dimensions to to the **curse of dimensionality** ([[curse_dim]]): it becomes impossible to find a good neighborhood to do local averaging. Instead, let's define a subspace, and assign vectors to classes to minimize the distance between these vectors and this subspace. Usually distance = acos cosine similarity = acos (v∙proj(v))/v² = acos vPv/v², where P is a projection matrix. PCA is one way to achieve it, but not the only one. But in all cases, the idea is that (Signals) = (Basis)∙(Scores), where Scores can be interpreted as representations.

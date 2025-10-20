@@ -1,6 +1,6 @@
 # SQL
 
-Parents: [[01_Tools]]
+Parents: [[tools]]
 See also: [[database]]
 
 #tools #db

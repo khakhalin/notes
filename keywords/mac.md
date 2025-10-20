@@ -1,6 +1,6 @@
 # Mac and everything apple
 
-Parents: [[01_Tools]]
+Parents: [[tools]]
 See also: [[bash]]
 
 #tools #hardware

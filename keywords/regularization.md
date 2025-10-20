@@ -1,6 +1,6 @@
 # Regularization
 
-Parents: [[06_DL]], [[02_Regression]]
+Parents: [[dl]], [[regression]]
 
 Regression and classic ML:
 * [[ridge_regression]] - aka Tikhonov regularization, or L2 regularization

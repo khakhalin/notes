@@ -1,6 +1,6 @@
 # Rust
 
-Parents: [[01_Tools]]
+Parents: [[tools]]
 See also:
 
 #coding

@@ -1,6 +1,6 @@
 # Kosaraju-Sharir algorithm
 
-Parents: [[09_Graphs]] / [[algos_graph]]
+Parents: [[graphs]] / [[algos_graph]]
 
 #graph #algo
 

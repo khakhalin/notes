@@ -2,7 +2,7 @@
 
 #dl
 
-Parents: [[06_DL]]
+Parents: [[dl]]
 Related: [[convnet]], [[transfer]]
 
 STUB #todo

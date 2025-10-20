@@ -2,7 +2,7 @@
 
 #dim #features
 
-Parents: [[04_Features]] (for a list of MDS and alike), [[02_Regression]]
+Parents: [[features]] (for a list of MDS and alike), [[regression]]
 See also: [[regularization]]
 
 **Elastic map** is a way to transform one reasonable distribution of points to another reasonable distributin of points; kinda like MDS, but without changing the number of dimensions necessarily. You do it by modling a physical object: a sort of a grid of connecting points, and making this object elastic, but only to a measure.

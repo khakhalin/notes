@@ -11,7 +11,7 @@ Subtopics:
 
 There are several ways to talk about attribution:
 * In science, attribution is mostly about explaining the variance, so we can directly go to [[glm]] and ANOVA.
-* For predictive models, attribution is about looking what variables have more predictive power (as in tree-based models for example [[05_Ensembles]]). The best approach - [[shap]] values
+* For predictive models, attribution is about looking what variables have more predictive power (as in tree-based models for example [[ensembles]]). The best approach - [[shap]] values
 * In business, we typically see that a certain KPI changed, and we want to understand what were the driving factors. Exactly the same, for portfolio performance (lots of refs on this topic). Here we can do either sequential model reconciliation (equivalent to glm with interactions), or Shapley values.
 
 # Mix Reconciliation

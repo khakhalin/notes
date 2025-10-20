@@ -1,6 +1,6 @@
 # Spectral clustering
 
-Parents: [[04_Features]], [[clustering]]
+Parents: [[features]], [[clustering]]
 Related: [[tsne]]
 
 #stub

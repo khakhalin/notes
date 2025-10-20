@@ -1,6 +1,6 @@
 # Gradient Boosting and GBMs
 
-Parents: [[05_Ensembles]]
+Parents: [[ensembles]]
 Related: [[boosting]], [[lightgbm]]
 
 #ensemble #todo #halfthere

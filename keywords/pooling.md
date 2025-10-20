@@ -2,7 +2,7 @@
 
 #dl
 
-Parents: [[06_DL]],  [[convnet]]
+Parents: [[dl]],  [[convnet]]
 Related: [[softmax]]
 
 **Maxpool**: Only retains the maximal value, and drops all the rest. Mostly used in convolutional networks, in which case it has dimensions, depth, and a stride. Has no learnable parameters. At backpropagation step, it only propagates to those neurons that contributed to the selected value (max value); all other neurons aren't updated. Good for downsampling feature maps, where the presence of a feature (quantified by different components of the depth-vector) is more important than the precise position of this feature.

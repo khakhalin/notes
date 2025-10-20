@@ -1,6 +1,6 @@
 # Datavis inspirations and bibliography
 
-Parents: [[01_Tools]]
+Parents: [[tools]]
 See also: [[stats]], [[network_tools]], [[interpretability]]
 
 #datavis #bib

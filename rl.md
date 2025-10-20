@@ -4,39 +4,36 @@ See also: [[credit]] for RL in the brain, [[modeling]]
 
 #rl #bib
 
-
 Papers
-* [[Baker2019autocurricula]] - RL agents by OpenAI playing hide-and-seek
+* [[Baker2019autocurricula]] - RL agents by OpenAI playing hide-and-seek, with pretty videos
 
-# To Read
+# Top reading
 
-Apparently after 2017 PPO is the commonly accepted SOTA for RL:
+🔥 Barto, A. G. (2021). Reinforcement learning: An introduction. by richard’s sutton. _SIAM Rev_, _6_(2), 423.
+ - simpler book, a good start
+
+🔥 Spinning Up in Deep RL: https://spinningup.openai.com/en/latest/
+A deeper and more practical introduction to the subject
+
+🔥 CleanRL library - practical examples
+
+After 2017 PPO is the commonly accepted SOTA for RL:
 https://en.wikipedia.org/wiki/Proximal_policy_optimization
-It seems that the gist of it is that you clip policy update to make sure that updates after each step are conservative, but beyond that, at this point, I'm not quite sure how to plug it in 🔥
 
-Reinforcement Learning for Language Models. Yoav Goldberg, April 2023.
-https://gist.github.com/yoavg/6bff0fecd65950898eba1bb321cfbd81
+Exploration in RL (a sort of blog-review with math, 2020)
+https://lilianweng.github.io/lil-log/2020/06/07/exploration-strategies-in-deep-reinforcement-learning.html)
 
-A nice collection of advice on reinforcement learning (but non-mathy, and almost applicable to any experimental ML): https://rll.berkeley.edu/deeprlcourse/docs/nuts-and-bolts.pdf
+Nice collection of advice on reinforcement learning (non-mathy, applicable to almost any experimental ML): https://rll.berkeley.edu/deeprlcourse/docs/nuts-and-bolts.pdf
 (by John Schulman, 2016)
 
-Ibarz, J., Tan, J., Finn, C., Kalakrishnan, M., Pastor, P., & Levine, S. (2021). How to train your robot with deep reinforcement learning: lessons we have learned. The International Journal of Robotics Research, 0278364920987859.
-https://arxiv.org/abs/2102.02915
+# Possible reading
 
 Matusch, B., Ba, J., & Hafner, D. (2020). Evaluating Agents without Rewards. arXiv preprint arXiv:2012.11538.
 https://arxiv.org/pdf/2012.11538.pdf
 Exploration, curiosity, self-driven learning (including in Minecraft)
 
-Exploration in RL (a sort of blog-review with math, just published (June 2020), so should be bleeding edge?)
-https://lilianweng.github.io/lil-log/2020/06/07/exploration-strategies-in-deep-reinforcement-learning.html)
-
-Sharma, A., Ahn, M., Levine, S., Kumar, V., Hausman, K., & Gu, S. (2020). Emergent Real-World Robotic Skills via Unsupervised Off-Policy Reinforcement Learning. arXiv preprint arXiv:2004.12974.
-https://arxiv.org/abs/2004.12974
-Sharma, A., Gu, S., Levine, S., Kumar, V., & Hausman, K. (2019). Dynamics-aware unsupervised discovery of skills. arXiv preprint arXiv:1907.01657.
-https://arxiv.org/abs/1907.01657
-A sequence of two papers that explore unsupervised exploration of possible behaviors in a virtual environment. SOTA?
-Also this write-up:
-https://ai.googleblog.com/2020/05/dads-unsupervised-reinforcement.html
+Reinforcement Learning for Language Models. Yoav Goldberg, April 2023.
+https://gist.github.com/yoavg/6bff0fecd65950898eba1bb321cfbd81
 
 Simple Reinforcement Learning with Tensorflow Part 0: Q-Learning with Tables and Neural Networks. Arthur Juliani
 https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0
@@ -58,7 +55,20 @@ https://lilianweng.github.io/lil-log/2020/01/29/curriculum-for-reinforcement-lea
 
 Alexander Tschantz, Beren Millidge, Anil K. Seth, Christopher L. Buckley (2020). Reinforcement Learning through Active Inference
 https://arxiv.org/abs/2002.12636
-Instead of maximising rewards, they maximize evidence for an internal generative model. Also use _free energy of the expected future_. Hmm. [[freeenergy]]? Looks quite mathy.
+Instead of maximizing rewards, they maximize evidence for an internal generative model. Also use _free energy of the expected future_. Hmm. [[freeenergy]]? Looks quite mathy.
+
+# Robots
+
+Ibarz, J., Tan, J., Finn, C., Kalakrishnan, M., Pastor, P., & Levine, S. (2021). How to train your robot with deep reinforcement learning: lessons we have learned. The International Journal of Robotics Research, 0278364920987859.
+https://arxiv.org/abs/2102.02915
+
+Sharma, A., Ahn, M., Levine, S., Kumar, V., Hausman, K., & Gu, S. (2020). Emergent Real-World Robotic Skills via Unsupervised Off-Policy Reinforcement Learning. arXiv preprint arXiv:2004.12974.
+https://arxiv.org/abs/2004.12974
+Sharma, A., Gu, S., Levine, S., Kumar, V., & Hausman, K. (2019). Dynamics-aware unsupervised discovery of skills. arXiv preprint arXiv:1907.01657.
+https://arxiv.org/abs/1907.01657
+A sequence of two papers that explore unsupervised exploration of possible behaviors in a virtual environment. SOTA?
+Also this write-up:
+https://ai.googleblog.com/2020/05/dads-unsupervised-reinforcement.html
 
 # Other links
 

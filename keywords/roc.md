@@ -1,6 +1,6 @@
 # ROC and AUC
 
-Parent: [[03_Classification]]
+Parent: [[classification]]
 Related: [[confusion]], [[youdens-j]]
 
 #classification

@@ -1,6 +1,6 @@
 # Deep Belief Networks
 
-Parents: [[06_DL]], [[embedding]]
+Parents: [[dl]], [[embedding]]
 Related: [[autoencoder]]
 
 #deepneuro #vae #representation #embedding #bayesian

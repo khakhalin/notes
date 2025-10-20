@@ -1,6 +1,6 @@
 # Classification
 
-See also: [[05_Ensembles]]
+See also: [[ensembles]]
 
 #classification #bib
 
@@ -13,7 +13,7 @@ Methods and model types:
 * [[logreg]] - Logistic Regression
 * [[lda]] - Linear Discriminant Analysis
 * [[svm]] - Support Vector Machine
-* [[05_Ensembles]] - all sorts of tree-based models
+* [[ensembles]] - all sorts of tree-based models
 
 Model assessment:
 * [[validation]] - the process of

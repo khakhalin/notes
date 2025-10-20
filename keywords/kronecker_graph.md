@@ -1,6 +1,6 @@
 # Kronecker Graph Model
 
-Parent: [[09_Graphs]]
+Parent: [[graphs]]
 Related: [[small_world]]
 
 #graph #fractal #generative

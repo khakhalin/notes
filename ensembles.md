@@ -1,6 +1,6 @@
 # Ensemble methods
 
-See also [[03_Classification]]
+See also [[classification]]
 
 #ensemble #bib
 
@@ -19,7 +19,7 @@ Subtopics:
     * [[lightgbm]] - the most popular method as of 2023
 
 See also:
-* [[dropout]] - a similar idea for DL ([[06_DL]])
+* [[dropout]] - a similar idea for DL ([[dl]])
 
 
 

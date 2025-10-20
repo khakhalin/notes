@@ -2,7 +2,7 @@
 
 #networks
 
-Path: [[09_Graphs]] / [[sir]] + [[graph_cascades]]
+Path: [[graphs]] / [[sir]] + [[graph_cascades]]
 See also: [[algos_graph]]
 
 The task from **marketing**: we tend to trust (or follow) our friends, so behaviors (brand preferences etc.) tend to propagate through a network. But some people (nodes) are more influential than others (Kate Middleton effect - some member of the British Royal family apparently affects the sales of like clothes and stuff), so it would be useful to be able to identify these influential people and use them as seeds.

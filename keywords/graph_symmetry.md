@@ -2,7 +2,7 @@
 
 #graph
 
-Parent: [[09_Graphs]] / [[graph_properties]]
+Parent: [[graphs]] / [[graph_properties]]
 Related: [[groups]]
 
 

@@ -2,7 +2,7 @@
 
 #stats #tools #marketing
 
-Parents: [[01_Tools]] (actually it's more of a behavioral analysis / practical stats technique?)
+Parents: [[tools]] (actually it's more of a behavioral analysis / practical stats technique?)
 See also: a/b testing, simpson's paradox, survival basis
 
 

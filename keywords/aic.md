@@ -2,7 +2,7 @@
 
 #todo
 
-Parents: [[02_Regression]], [[regularization]], [[information]]
+Parents: [[regression]], [[regularization]], [[information]]
 
 #stats #regularization
 

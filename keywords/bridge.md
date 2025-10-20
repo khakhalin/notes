@@ -1,6 +1,6 @@
 # Bridge
 
-Parents: [[09_Graphs]] / [[algos_graph]]
+Parents: [[graphs]] / [[algos_graph]]
 See also: [[union-find]]
 
 #graph #algo

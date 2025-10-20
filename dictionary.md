@@ -15,19 +15,19 @@ See also other topical dictionaries:
 
 **Athena** a simple (not very efficient, but fast and [[sql]]-based) way to query from Amazon S2. ([ref](https://www.techtarget.com/searchaws/definition/Amazon-Athena)). Fully in the cloud, paying for the data scanned (not cheap, if used for anything analytic-like by mistake). No indexing, but partitioning.
 
-**Bagging** (ml): the simplest way to create an ensemble of classifiers using an algorithm: split data into bags (with replacement), train a different model on each of them. Final prediction = mean of all predictions. [ref](https://analyticsindiamag.com/primer-ensemble-learning-bagging-boosting/). See [[05_Ensembles]].
+**Bagging** (ml): the simplest way to create an ensemble of classifiers using an algorithm: split data into bags (with replacement), train a different model on each of them. Final prediction = mean of all predictions. [ref](https://analyticsindiamag.com/primer-ensemble-learning-bagging-boosting/). See [[ensembles]].
 
 **BASE** (db): see [[acid_base]]
 
 **BIC** (stats): Bayes Information Criterion, an approach to model selection. To be described (for now, [wiki](https://en.wikipedia.org/wiki/Bayesian_information_criterion)).
 
-**Boosting** (ml): an alternative to _bagging_ for ensemble generation: Iteratively select samples that previous learners failed to learn or disagreed upon, and use them to train new learners; majority vote at the end. [ref](https://analyticsindiamag.com/primer-ensemble-learning-bagging-boosting/). See [[05_Ensembles]].
+**Boosting** (ml): an alternative to _bagging_ for ensemble generation: Iteratively select samples that previous learners failed to learn or disagreed upon, and use them to train new learners; majority vote at the end. [ref](https://analyticsindiamag.com/primer-ensemble-learning-bagging-boosting/). See [[ensembles]].
 
 **BST** (prog): Binary Search Tree. See [[bst]].
 
 # C
 
-**CART** (ml): Classification And Regression Tree; often used for gradient boosting. An umbrella term to cover decision trees (classifiers), but also trees that have real numbers assigned to their leaves as outputs. See [[05_Ensembles]].
+**CART** (ml): Classification And Regression Tree; often used for gradient boosting. An umbrella term to cover decision trees (classifiers), but also trees that have real numbers assigned to their leaves as outputs. See [[ensembles]].
 
 **Clique** (math): an all-to-all subgraph within a graph. Two confusing names: **Maximal clique** is just a clique that is not a part of a larger clique (you cannot include one more vertex or ege from a graph, and still have a clique). **Maximum clique** is the largest clique in a graph. Apparently finding cliques, as well as enumerating cliques, is an NP problem with no good solution. [wiki](https://en.wikipedia.org/wiki/Clique_problem), [current best algorithm (hard)](https://www.sciencedirect.com/science/article/abs/pii/S0305054810001504)
 
@@ -79,7 +79,7 @@ See also other topical dictionaries:
 
 **GAM** (stats): Generalized Additive Models: f = sum of smooth functions. Often GLM + some smoothing splines.
 
-**GBM** (ml): Gradient Boosting Machine. See [[05_Ensembles]]
+**GBM** (ml): Gradient Boosting Machine. See [[ensembles]]
 
 **GCD** (math): Greatest Common Divisor (see Euclidean algorithm: [[gcd]])
 
@@ -99,7 +99,7 @@ See also other topical dictionaries:
 
 **Hessian** (math): a matrix of all 2nd-order partial derivatives, for a scalar function, over all of its arguments. H_ij = ∂²f/∂x_j ∂x_i. H is a transposed Jacobian of a gradient (Hᵀ = J∇f). Appears in optimization as a Taylor approximation around the optimum.
 
-**Indicator matrix** (data): A matrix Y, in which each row one-hot encodes the class g of a data point x. See [[03_Classification]].
+**Indicator matrix** (data): A matrix Y, in which each row one-hot encodes the class g of a data point x. See [[classification]].
 
 **Jacobian** (math): a matrix of all 1st order partial derivates of a vector function over its arguments. J_ij = ∂f_i / ∂x_j.
 
@@ -110,8 +110,8 @@ See also other topical dictionaries:
 **Kimball data warehouse model**: see [[data_wh]]
 
 **LDA** 
-1. (text): Latent Dirichlet Allocation (see [[10_Text]])
-2. (ml): Linear Discriminant Analysis (see [[04_Features]])
+1. (text): Latent Dirichlet Allocation (see [[text]])
+2. (ml): Linear Discriminant Analysis (see [[features]])
 
 **loess** (stats): Locally Estimated Scatterplot Smoothing, aka Savitzky-Golay filter. See [[smoothing]]
 
@@ -127,7 +127,7 @@ See also other topical dictionaries:
 
 **MCMC** (ml) Markov Chain Monte-Carlo. See [[modeling]].
 
-**MLE** (stats): Max-Likelihod Estimation. See [[02_Regression]].
+**MLE** (stats): Max-Likelihod Estimation. See [[regression]].
 
 **MPP** (dev): Massively Parallel Processing: a data architecture for big data. Examples: Amazon Redshift, Microsoft Azure, Snowflake, Google BigQuery. "Share nothing" architecture: sets of data don't overlap. Easier to deploy; supports SQL. Alternative to Hadoop ( #todo why?).
 
@@ -175,7 +175,7 @@ See also other topical dictionaries:
 
 **REST** (dev): see [[restful]]
 
-**RSS** (stats): Residual Sum of Squares. See [[l2]], [[02_Regression]], [[bias-variance]]
+**RSS** (stats): Residual Sum of Squares. See [[l2]], [[regression]], [[bias-variance]]
 
 # S
 
@@ -201,7 +201,7 @@ See also other topical dictionaries:
 
 **upsert** (db) - a stupid term for "update a record if it already exists, and if not, insert a new record"
 
-**VAE** (dl): Variational Auto-Encoder. See [[08_Unsupervised]]
+**VAE** (dl): Variational Auto-Encoder. See [[unsupervised]]
 
 **VPS** (system): Virtual Private Server. Virtual Machine -style half-way between shared service and private server?
 

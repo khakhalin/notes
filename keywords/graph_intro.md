@@ -1,6 +1,6 @@
 # Graphs Intro
 
-Parents: [[09_Graphs]]
+Parents: [[graphs]]
 See also: [[graph_properties]], [[algos_graph]], [[la_net]]
 
 #graph

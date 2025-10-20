@@ -1,6 +1,6 @@
 # Backpropagation
 
-Parents: [[06_DL]]
+Parents: [[dl]]
 Related: [[credit]] (credit assignment, including in the brain), [[bptt]] (backprop for RNNs)
 
 #dl

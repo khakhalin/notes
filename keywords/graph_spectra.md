@@ -1,6 +1,6 @@
 # Spectral techniques on graphs
 
-Parents: [[09_Graphs]]
+Parents: [[graphs]]
 Related: [[spectral_clustering]]
 
 #stub #graph

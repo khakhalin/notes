@@ -1,6 +1,6 @@
 # Regular Expressions
 
-Parents: [[01_Tools]] / [[python]]
+Parents: [[tools]] / [[python]]
 Related: [[pandas]]
 
 #tools

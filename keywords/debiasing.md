@@ -1,6 +1,6 @@
 # De-biasing
 
-Parents: [[10_Text]], [[embedding]], [[fairness]]
+Parents: [[text]], [[embedding]], [[fairness]]
 Related: [[word2vec]], [[gender]]
 
 #text #embedding #fairness

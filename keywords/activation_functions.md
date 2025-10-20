@@ -2,7 +2,7 @@
 
 #dl #bib
 
-Parent: [[06_DL]]
+Parent: [[dl]]
 See also: [[regularization]], [[hyperparameters]], [[backprop]]
 
 See also (special types of units):

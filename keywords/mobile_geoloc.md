@@ -1,6 +1,6 @@
 # Geolocalization from mobile data
 
-Parent: [[09_Graphs]], [[gis]]
+Parent: [[graphs]], [[gis]]
 
 #graph #gis
 

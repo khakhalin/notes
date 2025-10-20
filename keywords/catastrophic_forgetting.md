@@ -1,6 +1,6 @@
 # Catastrophic forgetting
 
-Parents: [[06_DL]]
+Parents: [[dl]]
 Related: [[transfer]], memory
 
 #memory #ml #pruning #distillation #bib

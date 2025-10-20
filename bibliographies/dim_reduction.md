@@ -1,6 +1,6 @@
 # Dimensionality Reduction and manifold learning
 
-Parent: [[04_Features]]
+Parent: [[features]]
 See also: [[clustering]]
 
 #bib #dim

@@ -5,8 +5,8 @@
 #halfthere - a tag to be used for papers that have their separate entries, but that I haven't actually finished reading, or haven't read well. Papers to revisit!
 
 Other thematic to-read lists:
-* [[11_RL]] - Reinforcement Learning
-* [[09_Graphs]] - Graph (aka Graphical) networks
+* [[rl]] - Reinforcement Learning
+* [[graphs]] - Graph (aka Graphical) networks
 * [[complexity]] - complexity science
 
 # Tab-dumps
@@ -148,7 +148,7 @@ https://towardsdatascience.com/the-complete-guide-to-decision-trees-28a4e3c7be14
 
 Ioffe, S., & Szegedy, C. (2015). Batch normalization: Accelerating deep network training by reducing internal covariate shift. arXiv preprint arXiv:1502.03167.
 [https://arxiv.org/abs/1502.03167](<https://arxiv.org/abs/1502.03167>)
-Main paper on batch normalization (with like 30k references). Read and summarize in the [[06_DL]] section.
+Main paper on batch normalization (with like 30k references). Read and summarize in the [[dl]] section.
 * Related paper on batch norm: Frankle, J., Schwab, D. J., & Morcos, A. S. (2020). Training BatchNorm and Only BatchNorm: On the Expressive Power of Random Features in CNNs. arXiv preprint arXiv:2003.00152. - about how only training batch norm layers, keeping all other parameters random, is enough to create a functional network
 * [Some blog follow-up](https://app.wandb.ai/sayakpaul/training-bn-only/reports/The-Power-of-Random-Features-of-a-CNN--VmlldzoxMTIxODA) from which I actually learned about this paper.
 

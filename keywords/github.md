@@ -1,6 +1,6 @@
 # Github
 
-Parents: [[01_Tools]], [[git]]
+Parents: [[tools]], [[git]]
 See also: [[gitlab]]
 
 #tools

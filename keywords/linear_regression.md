@@ -1,6 +1,6 @@
 # Linear Regression
 
-Parents: [[02_Regression]], [[linalg]]
+Parents: [[regression]], [[linalg]]
 Related: [[l2]], [[gram-schmidt]], [[loess]]
 
 #regression #linalg

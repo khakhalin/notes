@@ -1,6 +1,6 @@
 # Deep learning on graphs
 
-Parents: [[06_DL]], [[09_Graphs]]
+Parents: [[dl]], [[graphs]]
 Related: [[graph_embedding]] (shallow encoders), [[convnet]], [[transformers]]
 
 #dl #graph
@@ -61,7 +61,7 @@ We can try to train it in unsupervised mode, as we did before ([[graph_embedding
 **Loss function**: if $y_v$ are labels, we would just try to predict tem from node embeddings:
 
 $\displaystyle L = \sum_{v ∈ V} y_v \log \big( σ(z_v^⊤ θ) \big) + (1-y_v) \log\big( 1- σ(z_v^⊤ θ)\big)$ . A classic cross-entropy loss; 
-σ is a sigmoid; see: [[03_Classification]]
+σ is a sigmoid; see: [[classification]]
 
 Now the model should be able to transfer from one graph to another, as long as the logic is similar. More like normal DL (across graphs), and more like convolution (within a graph). We can now recalculate node representations if a graph changed a bit, and we can train on smaller parts of a graph, and then generalize to the entire graph.
 

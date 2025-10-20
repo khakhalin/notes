@@ -8,7 +8,7 @@ https://twitter.com/martin_schrimpf/status/1276832601240731649
 
 #neuro #language
 
-Related: [[transformers]], [[10_Text]]
+Related: [[transformers]], [[text]]
 
 
 **TLDR**: Modern language models (such as transformers) are activated roughtly similarly to human brains, in terms of activation dynamics; and it all comes from the architecture (recurrence, convergence, divergence), not from actual tuning of weights.

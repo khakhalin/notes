@@ -1,6 +1,6 @@
 # Local Linear Regression, or LOESS
 
-Parents: [[02_Regression]], [[smoothing]], dsp (digital signal processing)
+Parents: [[regression]], [[smoothing]], dsp (digital signal processing)
 Related: [[kernels]]
 
 #regression #dsp #smoothing

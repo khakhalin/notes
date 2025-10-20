@@ -22,7 +22,7 @@ Architectures
 * [[convnet]] - Convolutional Neural Networks
 * [[transformers]] - Attention
 * [[rnn]] - Recurrent networks
-* [[09_Graphs]] - Graphical networks
+* [[graphs]] - Graphical networks
 
 Layer types
 * [[pooling]] - Especially important for CNNs

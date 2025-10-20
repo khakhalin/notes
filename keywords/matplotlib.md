@@ -1,6 +1,6 @@
 # Matplotlib
 
-Parents: [[01_Tools]] / [[python]]
+Parents: [[tools]] / [[python]]
 See also: [[numpy]], [[pandas]]
 
 #tools #python

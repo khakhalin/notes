@@ -2,7 +2,7 @@
 
 #regularization
 
-Parents: [[02_Regression]]
+Parents: [[regression]]
 Related: [[regularization]]
 
 Also known as **Shrinkage Methods**, closely related to **Tikhonov regularization**. Modern DL name: **L2 regularization** (see DL chapter).

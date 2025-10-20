@@ -2,7 +2,7 @@
 
 #neuro #credit
 
-Parents: [[11_RL]], [[deepneuro]]
+Parents: [[rl]], [[deepneuro]]
 Related: [[backprop]]
 
 # Relaxed requirements on backprop

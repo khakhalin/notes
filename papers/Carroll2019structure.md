@@ -5,7 +5,7 @@ https://arxiv.org/pdf/1903.12487.pdf
 
 #echo
 
-Parents: [[09_Graphs]], [[rnn]] / [[echo]]
+Parents: [[graphs]], [[rnn]] / [[echo]]
 Related: [[chaos]], [[Carroll2020chaos]] (next paper)
 
 Consider a reservoir of 100 neurons with weights in {0, 1}, then start flipping some of +1 edges to −1, thus altering the network. Networks were random, except that they made sure they were strongly connected (there's a path between any 2 nodes). No loops (diagonal edges).

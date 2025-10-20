@@ -1,6 +1,6 @@
 # Random forest
 
-Parent: [[05_Ensembles]]
+Parent: [[ensembles]]
 Related: [[bagging]], [[boosting]]
 
 #ensemble

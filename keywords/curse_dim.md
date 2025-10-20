@@ -2,7 +2,7 @@
 
 #dim #clustering #features
 
-Parents: [[04_Features]], [[02_Regression]]
+Parents: [[features]], [[regression]]
 Related:
 * [[typical_sample]] - an alternative to average sample for cursed datasets
 * [[metric]] - on distances and metrics
@@ -21,7 +21,7 @@ Gaussian distributions are bubbles with all mass in the narrow shell (see [[typi
 
 Two randomly picked vectors from the same very-high-D distribution are usually perpendicular to each other.
 
-Solution: dimensionality reduction (see [[04_Features]])
+Solution: dimensionality reduction (see [[features]])
 
 **Specifics of working with very high dimensions:**
 (Genomic data in this case)
@@ -31,7 +31,7 @@ Solution: dimensionality reduction (see [[04_Features]])
 
 # Dim curse and Bias-Variance tradeoff
 
-* For Bias-Variance Tradeoff, see: [[02_Regression]]
+* For Bias-Variance Tradeoff, see: [[regression]]
 
 Let's consider a special case of bias-variance trade-off in a case of very high dimensions. Say, we have a linear model with error: y = Xᵀθ + ε (aka **additive error model**), where ε is normal noise with variance σ². Let's try to infer θ from a training set of Y. As θ = (XᵀX)⁻¹Xᵀy, we get it with errors of (XᵀX)⁻¹Xᵀε. Which in turns means that when we try to estimate y as h = Xθ during training, we get errors for these estimations: X(XᵀX)⁻¹Xᵀε . 
 

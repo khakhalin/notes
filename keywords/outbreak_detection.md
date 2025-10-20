@@ -1,6 +1,6 @@
 # Outbreak detection
 
-Parent [[09_Graphs]]
+Parent [[graphs]]
 Related: [[graph_cascades]], [[sir]], [[influence_maximization]] 
 
 **Problem**: a network is given, and every now and then there's a spreading process on this network (outbreak, contamination). Where should you place your sensors to detect contamination as quickly as possible? Or a social network example: posts are spreading through the network (as retweets). Which accounts should one follow to detect news and trends (cascades) as soon as possible? Similarly, can be applied to network security.

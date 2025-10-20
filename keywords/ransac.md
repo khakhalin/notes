@@ -1,6 +1,6 @@
 # RANSAC - Random Sample Consensus
 
-See also: [[02_Regression]], [[anomaly]]
+See also: [[regression]], [[anomaly]]
 
 #stats #bootstrapping #nonparametric
 

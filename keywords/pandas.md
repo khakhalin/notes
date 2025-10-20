@@ -1,6 +1,6 @@
 # Pandas
 
-Parent: [[01_Tools]], [[python]]
+Parent: [[tools]], [[python]]
 See also: [[numpy]], [[py_dates]], [[sklearn]], [[matplotlib]]
 
 #tools #python

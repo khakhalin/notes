@@ -1,6 +1,6 @@
 # Bias-Variance Tradeoff
 
-Parents: [[02_Regression]]
+Parents: [[regression]]
 Related: [[confusion]], [[regularization]]
 
 #variance

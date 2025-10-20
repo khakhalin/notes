@@ -1,6 +1,6 @@
 # Modularity
 
-Parents: [[09_Graphs]]
+Parents: [[graphs]]
 
 #networks #graph #bib
 

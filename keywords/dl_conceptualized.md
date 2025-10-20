@@ -1,13 +1,13 @@
 # Why DL even works; limitations; meanings
 
-Parents: [[06_DL]]
+Parents: [[dl]]
 
 #dl 
 
 
 # Place of DL within ML
 
-> **Parallels with ensemble methods?** It is my impression that while deep DL may be considered a series of [[embedding]]-like transformations, wide DL also resemble ensemble methods ([[05_Ensembles]]), as essentially it's like having lots of subnetworks contributing different opinions over the answer. Which may be related to [[dropout]] and [[ticket]] theories as well. But I need to read more to be sure.
+> **Parallels with ensemble methods?** It is my impression that while deep DL may be considered a series of [[embedding]]-like transformations, wide DL also resemble ensemble methods ([[ensembles]]), as essentially it's like having lots of subnetworks contributing different opinions over the answer. Which may be related to [[dropout]] and [[ticket]] theories as well. But I need to read more to be sure.
 
 # Caveats and limitations of DL
 

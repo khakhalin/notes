@@ -1,6 +1,6 @@
 # Graph tools
 
-Parents: [[09_Graphs]], [[01_Tools]]
+Parents: [[graphs]], [[tools]]
 See also: [[python]], [[dataviz]]
 
 #graph #networks #tools

@@ -1,6 +1,6 @@
 # Unsupervised and Self-Supervised Learning
 
-See also: [[06_DL]]
+See also: [[dl]]
 
 #bib #unsupervised #self-supervised #embedding #representation
 

@@ -2,7 +2,7 @@
 
 #dim
 
-Parents: [[04_Features]], [[subspace_methods]]
+Parents: [[features]], [[subspace_methods]]
 See also: [[embedding]], [[isomap]], [[spectral_clustering]], [[graph_spectra]]
 
 A way to embed high-dim points into a low-dim space by minimizing a certain loss, called **strain**, between pairwise distances in the original space, and point positions in the new space.

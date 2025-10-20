@@ -2,7 +2,7 @@
 
 #text
 
-Parent: [[10_Text]]
+Parent: [[text]]
 See also: [[trie]], [[beam_search]]
 
 https://en.wikipedia.org/wiki/N-gram

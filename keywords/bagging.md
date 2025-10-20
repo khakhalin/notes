@@ -1,6 +1,6 @@
 # Bagging
 
-Parent: [[05_Ensembles]]
+Parent: [[ensembles]]
 Related: [[boosting]]
 
 #ensemble

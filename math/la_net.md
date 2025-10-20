@@ -1,6 +1,6 @@
 # Linear algebra on graphs
 
-Parents: [[linalg]], [[09_Graphs]]
+Parents: [[linalg]], [[graphs]]
 See also: [[graph_intro]], [[algos_graph]]
 
 #networks #linalg #bib #math

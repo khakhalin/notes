@@ -1,6 +1,6 @@
 # Vim
 
-Parents: [[01_Tools]], [[bash]]
+Parents: [[tools]], [[bash]]
 See also: [[git]]
 
 #tools

@@ -5,7 +5,7 @@
 **The missing semester of CS education**
 https://missing.csail.mit.edu/ 🔥 
 lots of useful practical bits and pieces: shell, debugging, data wrangling, metaprogramming and what not. Also has [lectures on youtube](https://www.youtube.com/watch?v=Z56Jmr9Z34Q&list=PLyzOVJj3bHQuloKGG59rS43e29ro7I57J&index=2&t=0s).
-(the link is also saved in [[01_Tools]], so delete it from here once done)
+(the link is also saved in [[tools]], so delete it from here once done)
 
 # Short-term stack
 
@@ -622,9 +622,9 @@ Go through 2-3 youtube lectures in the queue that describe some of the existing 
 * that way to create ranking from asymmetric preferences via graphs [[ranking]]
 * Laplacian operator (create a new page for basic vector calc) [1h youtube](https://www.youtube.com/watch?v=oEq9ROl9Umk), [wiki](https://en.wikipedia.org/wiki/Laplace_operator)
 * dual bases: why is this term a thing? How does it help? Describe here: [[linalg]]
-* How come stochastic gradient descent provides regularization? Why adding bagging to GBM, for example, can be considered a case of regularization? [[05_Ensembles]].
-* Do we have 2 different descriptions from Gram-Smidt: in [[la_01]] and in [[02_Regression]]? Can we isolate and combine?
-* Figure out that connection between ridge regression and and PCA that I've started in the ridge regression chapter! Seems important and reasonably doable, no? [[02_Regression]].
+* How come stochastic gradient descent provides regularization? Why adding bagging to GBM, for example, can be considered a case of regularization? [[ensembles]].
+* Do we have 2 different descriptions from Gram-Smidt: in [[la_01]] and in [[regression]]? Can we isolate and combine?
+* Figure out that connection between ridge regression and and PCA that I've started in the ridge regression chapter! Seems important and reasonably doable, no? [[regression]].
 * finish SVM
 * self-organizing (Kohonen) maps
 * apply svm, boosting

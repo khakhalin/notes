@@ -1,6 +1,6 @@
 # Youden's J-statistics
 
-Parent: [[03_Classification]]
+Parent: [[classification]]
 See also: [[confusion]], [[ROC]]
 
 #stats #classification

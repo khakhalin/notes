@@ -1,6 +1,6 @@
 # GloVe
 
-Parents: [[10_Text]], [[embedding]]
+Parents: [[text]], [[embedding]]
 See also: [[word2vec]]
 
 #text

@@ -2,7 +2,7 @@
 
 #embedding
 
-Parents: [[04_Features]]
+Parents: [[features]]
 
 The idea is to avoid sampling trough all possible pairs of elements, but sample only through all positives, and some random negatives. Critically important for sparse sets, where most elements aren't engaging with each other.
 

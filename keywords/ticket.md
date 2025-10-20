@@ -1,6 +1,6 @@
 # Lottery Ticket Hypothesis
 
-Parents: [[06_DL]]
+Parents: [[dl]]
 Related: [[init_dl]]
 
 #ticket #init 

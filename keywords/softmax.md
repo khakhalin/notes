@@ -2,7 +2,7 @@
 
 #dl #classification
 
-Parents: [[06_DL]], [[03_Classification]]
+Parents: [[dl]], [[classification]]
 See also: [[pooling]], [[loss]], [[hierarchical_softmax]]
 
 Takes in an arbitrary vector, and transforms it so that all values are positive, between 0 and 1, and the sum is = 1 (and so outputs can be interpreted as probabilities). Formula: first exp(each input), then divide by the sum of all of these results. Preferred last layer in classification networks (in which case it's used with cross-entropy loss function). If placed in the middle it is equivalent to an exponential activation layer with batch normalization.

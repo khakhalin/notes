@@ -2,7 +2,7 @@
 
 #clustering #dim #features
 
-Parents: [[04_Features]], [[algebraic_topology]]
+Parents: [[features]], [[algebraic_topology]]
 Related: [[curse_dim]], [[tsne]], [[neg_sampling]]
 
 Open questions ( #todo ):
@@ -68,7 +68,7 @@ The 2nd confusion stems from the terminology used. tSNE looks at values of p and
 
 ### Optimization process
 
-Optimization happens via **Stochastic Gradient Descent**  (see [[06_DL]]).  
+Optimization happens via **Stochastic Gradient Descent**  (see [[dl]]).  
 
 We init to graph laplacian ([[eigenmaps]], aka spectral embedding).
 

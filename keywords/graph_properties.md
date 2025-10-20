@@ -1,6 +1,6 @@
 # Measuring network properties
 
-Parent: [[09_Graphs]]
+Parent: [[graphs]]
 See also: [[graph_intro]], [[algos_graph]]
 
 #graph #networks

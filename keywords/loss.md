@@ -2,7 +2,7 @@
 
 #loss #dl
 
-Parents: [[02_Regression]]
+Parents: [[regression]]
 See also: [[regularization]]
 
 Subtopics

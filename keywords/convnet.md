@@ -2,7 +2,7 @@
 
 #dl #convnet
 
-Parent: [[06_DL]]
+Parent: [[dl]]
 See also: [[pooling]], [[residual]]
 
 Subtopics:

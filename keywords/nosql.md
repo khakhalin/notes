@@ -1,6 +1,6 @@
  # noSQL
 
-Parents: [[database]], [[01_Tools]], [[system_design]]
+Parents: [[database]], [[tools]], [[system_design]]
 Related: [[data_wh]]
 
 #db #bib #systems

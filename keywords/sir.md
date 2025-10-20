@@ -1,6 +1,6 @@
 # SIR, SIS, and pandemics processes on graphs
 
-Parents: [[09_Graphs]], [[chaos]], [[complexity]]
+Parents: [[graphs]], [[chaos]], [[complexity]]
 See also: [[graph_cascades]], [[graph_automata]], percolation
 
 #graph #chaos

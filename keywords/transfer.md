@@ -2,8 +2,8 @@
 
 #transfer
 
-Parents: [[06_DL]]
-See also: [[08_Unsupervised]], [[style_transfer]]
+Parents: [[dl]]
+See also: [[unsupervised]], [[style_transfer]]
 
 Papers:
 * [[Zoph2020pretraining]] - on limited use of pre-training

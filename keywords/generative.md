@@ -1,6 +1,6 @@
 # Generative algorithms and techniques
 
-Parents: [[algo]], [[08_Unsupervised]]
+Parents: [[algo]], [[unsupervised]]
 See also:
 
 #generative #bib

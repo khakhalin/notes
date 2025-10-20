@@ -1,6 +1,6 @@
 # Graph representation learning
 
-Parent: [[09_Graphs]]
+Parent: [[graphs]]
 See also: [[embedding]], [[deep_graphs]]
 Children: [[node2vec]], [[transE]] (knowledge graph)
 

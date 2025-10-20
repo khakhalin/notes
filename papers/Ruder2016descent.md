@@ -9,7 +9,7 @@ https://ruder.io/optimizing-gradient-descent/
 #dl #optimizers
 
 **Related: **
-* [[06_DL]], [[adam]], [[weight_decay]]
+* [[dl]], [[adam]], [[weight_decay]]
 * [[Sivaprasad2019optimizers]] - claims that ADAM is usually the best one to use
 
 # Popular optimizers:

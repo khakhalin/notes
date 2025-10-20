@@ -1,6 +1,6 @@
 # PCA: Principal Component Analysis
 
-Parents: [[04_Features]]
+Parents: [[features]]
 Related: [[svg]], [[pca_regression]], [[pagerank]]
 
 #linalg #stats

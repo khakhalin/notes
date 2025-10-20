@@ -1,6 +1,6 @@
 # Cellular Automata on Graphs
 
-Parents: [[09_Graphs]], [[cellular_automata]]
+Parents: [[graphs]], [[cellular_automata]]
 Related: [[sir]], [[graph_cascades]]
 
 Papers:

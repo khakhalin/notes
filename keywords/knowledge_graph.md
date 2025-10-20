@@ -1,6 +1,6 @@
 # Knowledge Graph
 
-Parents: [[09_Graphs]], [[llm]]
+Parents: [[graphs]], [[llm]]
 See also: [[rag]], [[graph_db]]
 
 #llm #text #graph

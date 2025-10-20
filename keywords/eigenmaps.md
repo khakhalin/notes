@@ -2,7 +2,7 @@
 
 #features #dim
 
-Parent: [[04_Features]]
+Parent: [[features]]
 See also:
 
 

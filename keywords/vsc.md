@@ -1,6 +1,6 @@
 # Visual Studio Code
 
-Parent: [[01_Tools]]
+Parent: [[tools]]
 See also: [[python]]
 
 #tools

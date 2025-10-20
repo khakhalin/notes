@@ -9,7 +9,7 @@ Also this blog summary with illustrations and videos.
 #agents #curriculum #game #self-supervised #rl
 
 
-See also: [[11_RL]], [[08_Unsupervised]], [[curriculum]]
+See also: [[rl]], [[unsupervised]], [[curriculum]]
 
 That OpenAI hide-and-seek study. Agents progressively built 6 distinct strategies and counter-strategies (some of them glitch-based).
 

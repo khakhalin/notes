@@ -1,6 +1,6 @@
 # LightGBM
 
-Parent: [[05_Ensembles]], [[gbm]]
+Parent: [[ensembles]], [[gbm]]
 See also: [[attribution]], [[shap]]
 
 #ensemble #trees

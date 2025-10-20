@@ -1,6 +1,6 @@
 # Perplexity
 
-Parents: [[10_Text]]
+Parents: [[text]]
 See also: [[transformers]], [[information]]
 
 #text #entropy

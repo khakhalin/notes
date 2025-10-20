@@ -1,6 +1,6 @@
 # Stepwise Regression
 
-Parent: [[02_Regression]]
+Parent: [[regression]]
 See also: [[ridge_regression]], [[aic]]
 
 #regularization

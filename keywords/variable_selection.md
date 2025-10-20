@@ -1,6 +1,6 @@
 # Variable selection and construction
 
-Parent: [[04_Features]]
+Parent: [[features]]
 See also: [[dim_reduction]]
 
 #features

@@ -1,6 +1,6 @@
 # Python
 
-Path: [[01_Tools]]
+Path: [[tools]]
 
 Random notes on Python.
 

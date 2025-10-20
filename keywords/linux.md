@@ -1,4 +1,4 @@
 # Linux core principles
 
-Path: [[01_Tools]]
+Path: [[tools]]
 See also: [[bash]], ssh

@@ -1,7 +1,7 @@
 # Union-find, aka Disjoint-Set
 
 Parents: [[algos]] / [[algos_graph]]
-See also: [[09_Graphs]], [[min_span_tree]]
+See also: [[graphs]], [[min_span_tree]]
 
 #graph #algo
 

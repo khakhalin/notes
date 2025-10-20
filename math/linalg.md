@@ -2,7 +2,7 @@
 
 #math #linalg #bib
 
-Related: [[calc4]], [[02_Regression]]
+Related: [[calc4]], [[regression]]
 
 Subsections:
 * [[la_net]] - Linear algebra for graphs

@@ -2,7 +2,7 @@
 
 #dim
 
-Parent: [[04_Features]]
+Parent: [[features]]
 See also: [[mds]], [[umap]], [[dijkstra]]
 
 Non-linear dimentionality reduction. Gets a **neighborhood graph**. Calculates a **geodesic metrics** between points = a sum of point-to-point distances along the closest path connecting two points (Dijskra's algorithm: [[dijkstra]]). Then follows with a linear dim reduction method, such as spectral embedding (top N eigenvectors of the geodesic matrix) as coordinates for the embedding (see [[mds]]).

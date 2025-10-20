@@ -1,6 +1,6 @@
 # TFIDF
 
-Parent: [[10_Text]]
+Parent: [[text]]
 See also: [[ngram]], [[bm25]]
 
 #text

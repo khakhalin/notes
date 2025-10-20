@@ -1,6 +1,6 @@
 # TF and Keras
 
-Related: [[01_Tools]], [[06_DL]]
+Related: [[tools]], [[dl]]
 
 #tools #dl
 

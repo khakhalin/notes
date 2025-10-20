@@ -1,6 +1,6 @@
 # Logistic Regression
 
-Parent: [[03_Classification]], [[02_Regression]]
+Parent: [[classification]], [[regression]]
 See also: [[linear_regression]], [[linear_separation]], [[softmax]], [[lda]], [[svm]], [[loss]], [[ranking]]
 
 #classification #regression

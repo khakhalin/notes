@@ -31,7 +31,7 @@ In the blue box inset: a summary of backprop, and ~10 links to various potential
 How to reverse-engineer **objective functions for the brain**? (Because classic ANN [[loss]]es, like [[cross-entropy]] are unlikely to be used by the brain!) Sometimes from common sense (examples in a box inset):
 * predictive coding optimizes something known as _description length_. 
 * log-probability of action sequences scaled by the reward they have produced; increase of mutual information with the environment. _Is it a theoretically optimal something, on which brains were shown to converge?_
-* empowerment - apparently a term in [[11_RL]]!
+* empowerment - apparently a term in [[rl]]!
 
 Footnotes:
 * For predictive coding: Huang, Y., & Rao, R. P. (2011). Predictive coding. Wiley Interdisciplinary Reviews: Cognitive Science, 2(5), 580-593.

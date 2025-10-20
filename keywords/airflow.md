@@ -1,6 +1,6 @@
 # Airflow
 
-Parent: [[01_Tools]]
+Parent: [[tools]]
 See also: [[dwh]], [[dbt]]
 
 #etl

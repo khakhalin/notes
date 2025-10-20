@@ -1,7 +1,7 @@
 # Tree algorithms
 
 Parents: [[algos]], [[algos_graph]]
-See also: [[09_Graphs]]
+See also: [[graphs]]
 
 
 Data structures:

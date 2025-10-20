@@ -2,7 +2,7 @@
 
 #clustering #dim #features
 
-Parents: [[04_Features]]
+Parents: [[features]]
 Related: [[curse_dim]], [[spectral_clustering]]
 
 See also: [[umap]] has a whole section on differences between tSNE and UMAP.

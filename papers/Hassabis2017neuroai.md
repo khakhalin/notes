@@ -20,7 +20,7 @@ Footnotes:
 * On [[dropout]]: Hinton, G. E., Srivastava, N., Krizhevsky, A., Sutskever, I., & Salakhutdinov, R. R. (2012). Improving neural networks by preventing co-adaptation of feature detectors. arXiv preprint arXiv:1207.0580. https://arxiv.org/pdf/1207.0580.pdf
 Looks like a proto-drop-out paper that already mentions the word, but doesn't yet explain it as well as they did in their main 2014 paper.
 
-Reinforcement learning ([[11_RL]]) was also originally inspired by animal behavior (conditioning) experiments.
+Reinforcement learning ([[rl]]) was also originally inspired by animal behavior (conditioning) experiments.
 
 ## Attention
 

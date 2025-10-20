@@ -1,6 +1,6 @@
 # Word2vec
 
-Parent: [[10_Text]]
+Parent: [[text]]
 See also: [[node2vec]], [[softmax]], [[neg_sampling]], [[glove]]
 
 #text #embedding

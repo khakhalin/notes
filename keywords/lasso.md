@@ -1,6 +1,6 @@
 # Lasso and Elastic Net
 
-Parents: [[02_Regression]], [[regularization]]
+Parents: [[regression]], [[regularization]]
 See also: [[ridge_regression]]
 
 #regularization

@@ -1,6 +1,6 @@
 # Gram-Smidt
 
-Parents: [[linalg]], [[02_Regression]]
+Parents: [[linalg]], [[regression]]
 
 #linalg
 

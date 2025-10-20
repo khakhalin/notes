@@ -46,7 +46,7 @@ The idea is to refine network performance by switching to partial self-generatio
 
 They say however that trying to predict further in didn't consistently improve prediction. Sometimes did, sometimes didn't. 
 
-> The way it's explained in the paper, it's curiously similar to **noisy student** type of self-supervised learning, just for this network in particular. See: [[08_Unsupervised]].
+> The way it's explained in the paper, it's curiously similar to **noisy student** type of self-supervised learning, just for this network in particular. See: [[unsupervised]].
 
 Back then they did it all in Matlab :)
 

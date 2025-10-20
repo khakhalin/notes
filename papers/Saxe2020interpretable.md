@@ -4,7 +4,7 @@ Two blog posts:
 * https://ryansaxe.com/fundamentals/2021/02/21/LinearNN.html
 * https://ryansaxe.com/transparency/2021/02/21/GANN.html
 
-Parents: [[06_DL]] / [[02_Regression]] / [[interpretability]]
+Parents: [[dl]] / [[regression]] / [[interpretability]]
 Related: glm, [[linear_regression]], [[regularization]]
 
 #blog #interpretability

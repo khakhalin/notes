@@ -25,8 +25,9 @@ Similar to annealing and splitting in [[clustering]], there are two main strateg
 
 How to find a solution?
 * **Backtracking** - exploring the tree with depth-first traversal. Propagate constraints forward until you get a contradiction, in which case return to the last fork and try the next solution. Enumerating your option at each fork becomes an intersting sub-problem here (to be able to iterate). See also: [[algos_trees]]
+    * Ways to accelerate: Dynamic programming - if it is computationally hard to check whether x_i=a and x_j=b are in conflict, you can do it once and remember the answer. Or do some other magic to reduce the number of comparisons.
+    * Backmarking - always increment values in the same order (for discrete values), and every time you have an inconsistency in a leaf, remember the smallest element that didn't work, and the smallest element that was recently changed. Like, if we got to a point, tested for a few values, got conflicts, returned back, changed something, and reached this point again, and all of the conflicts happened before the point that we changed, then there's no point to test these values, they will still be wrong. https://en.wikipedia.org/wiki/Backmarking
 * **Local search** - try to wiggle the solution in the vicinity of each unsatisfied constraints. Afaik, no guarantee?
-* Dynamic programming - _not sure I immediately see how to use it here?_
 
 For morphing an existing solution **local consistency** becomes a cool tool. If you can change the solution locally in a way that preserves at least some constraints, it can help with perturbation method and local search. _Would be nice to have some more practical algo sketches here._ Simple cases: node consistency (only making sure that all variables of a single node are agreeable), arc consistency (making sure that nodes that are connected are still coordinated), path consistency (the same, but for a whole path within a graph). 
 
@@ -46,3 +47,5 @@ Relevant wiki pages:
 * https://en.wikipedia.org/wiki/Constraint_satisfaction_problem
 * https://en.wikipedia.org/wiki/Local_consistency
 * https://en.wikipedia.org/wiki/Backtracking
+* https://en.wikipedia.org/wiki/AC-3_algorithm - a way to ensure arc consistency
+* https://en.wikipedia.org/wiki/Constraint_logic_programming - I'm afraid of this one

@@ -3,7 +3,7 @@
 Mason A Porter
 https://arxiv.org/abs/1911.03805 
 
-See also: [[09_Graphs]], [[sir]], [[graph_properties]]
+See also: [[graphs]], [[sir]], [[graph_properties]]
 
 #review #networks #dynamic
 

@@ -1,6 +1,6 @@
 # Motifs
 
-Parent: [[09_Graphs]] / [[graph_properties]]
+Parent: [[graphs]] / [[graph_properties]]
 See also:
 
 #graph

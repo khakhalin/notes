@@ -3,7 +3,7 @@
 #classification #trees
 
 Parents: [[softmax]], [[word2vec]]
-Related: [[node2vec]], [[algos_trees]], [[03_Classification]]
+Related: [[node2vec]], [[algos_trees]], [[classification]]
 
 **The idea**: In a normal softmax to figure out whether the point z is likel to go with the point x, you sum over all possible elements in the denominator: $P(z|x) = \exp(z ^\top x)/Σ_w \exp(w ^\top x)$. But what if the total number of points {w} is ridiculously huge (all words in a language, or all nodes in a social network?). It would be nice to reduce this number by not including those definitely won't make the cut (for which exp(wᵀx)~0 ). How to do it?
 

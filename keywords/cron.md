@@ -1,6 +1,6 @@
 # Cron and Crontab
 
-Parents: [[01_Tools]]
+Parents: [[tools]]
 See also: [[bash]], [[docker]]
 
 #tools

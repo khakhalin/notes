@@ -1,6 +1,6 @@
 # Curriculum learning
 
-Parents: [[06_DL]]
+Parents: [[dl]]
 Related: Kolmogorov compexity
 
 #curriculum

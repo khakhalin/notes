@@ -1,6 +1,6 @@
 # Architecture search for neural networks
 
-Parents: [[06_DL]]
+Parents: [[dl]]
 Related: [[hyperparameters]]
 
 #bib #archsearch

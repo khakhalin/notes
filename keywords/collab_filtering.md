@@ -2,7 +2,7 @@
 
 #distributed #systems
 
-See also: [[music]], [[svd]], [[04_Features]]
+See also: [[music]], [[svd]], [[features]]
 Potential in the future: Federated Learning
 
 **Recommendation systems**; important for digital marketing, but also media recommendation (movies, music); Netflix, Pandora etc. Also social networks.

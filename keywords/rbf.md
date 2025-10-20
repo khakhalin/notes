@@ -1,6 +1,6 @@
 # RBF = Radial Basis Function
 
-Parents: [[kernels]], [[02_Regression]], [[03_Classification]]
+Parents: [[kernels]], [[regression]], [[classification]]
 See also: [[loess]]
 
 #features #classification

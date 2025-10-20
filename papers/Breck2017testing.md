@@ -6,7 +6,7 @@ https://storage.googleapis.com/pub-tools-public-publication-data/pdf/aad9f93b86b
 
 #tools #testing #lifehack #management
 
-Parents: [[01_Tools]]
+Parents: [[tools]]
 See also: [[ml_lore]], [[Huyen2019book]]
 
 Tests for features and data:

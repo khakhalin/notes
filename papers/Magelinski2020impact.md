@@ -3,7 +3,7 @@
 Magelinski, T., Bartulovic, M., & Carley, K. M. (2020). Modularity-Impact: a Signed Group Centrality Measure for Complex Networks. arXiv preprint arXiv:2003.00056.
 https://arxiv.org/abs/2003.00056
 
-See also: [[09_Graphs]] / [[graph_properties]], [[sir]]
+See also: [[graphs]] / [[graph_properties]], [[sir]]
 
 #centrality #networks #graph
 

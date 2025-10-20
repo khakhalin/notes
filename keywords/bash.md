@@ -1,6 +1,6 @@
 # Bash
 
-Parent: [[01_Tools]]
+Parent: [[tools]]
 See also: [[git]], [[docker]], [[cron]], [[vim]], [[ssh]]
 
 #tools

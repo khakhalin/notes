@@ -1,6 +1,6 @@
 # Flask
 
-Path: [[01_Tools]] / [[python]]
+Path: [[tools]] / [[python]]
 See also: [[microservice]], [[restful]]
 
 #python

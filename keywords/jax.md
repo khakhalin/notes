@@ -2,7 +2,7 @@
 
 #tools
 
-Parents: [[01_Tools]]
+Parents: [[tools]]
 
 Main ref: https://jax.readthedocs.io/en/latest/jax-101/index.html
 
