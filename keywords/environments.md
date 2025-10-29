@@ -1,12 +1,15 @@
 # Environments
 
-Parent: [[python]]
+Parent: [[tools]], [[python]]
+See also: [[uv]]
 
 #tools
 
+
 There are several ways to install packages in Python:
-* **conda** installs packages written in any language. Makes sure there are no conflicts using a "Satisfiability Solver".
-* **pip** installs python packages. Installs in an "overwrite" mode: recursively installs all downstream dependencies, but doesn't look for overall consistency.
+* [[conda]] - installs packages written in any language. Makes sure there are no conflicts using a "Satisfiability Solver".
+* **pip** - installs python packages. Installs in an "overwrite" mode: recursively installs all downstream dependencies, but doesn't look for overall consistency.
+* [[uv]] - a faster alternative to pip
 
 
 When different python packages (like Tensorflow vs Pytorch) have conflicting requirements on versions of everything, we can isolate them in different environments. Conda can create its environments itself; for pip it's possible to use some weird tools (venv?), but it's better to just do pip within a decidated conda environment.

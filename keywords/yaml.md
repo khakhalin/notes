@@ -63,7 +63,7 @@ b:
   z: 3
   <<: *anchor
 ```
-Here `&anchor` is given before a dictionary (with 2 keys) is defined, so now it's set to represent this dictionary. If we just had `b: *anchor` that would have beeen a valid yaml as well, and `b` would have just "contained" the same dict as `a`. But if we want to add keys that were earlier defined in `a` and caught by an anchor to `b`, we need to follow the syntax shown here. `<<` is a special key that kinda "disappears" and merges the key-value pairs into a different dictionary.
+Here `&anchor` is given before a dictionary (with 2 keys) is defined, so now it's set to represent this dictionary. If we just had `b: *anchor` that would have been a valid yaml as well, and `b` would have just "contained" the same dict as `a`. But if we want to add keys that were earlier defined in `a` and caught by an anchor to `b`, we need to follow the syntax shown here. `<<` is a special key that kinda "disappears" and merges the key-value pairs into a different dictionary.
 
 Notes to this syntax:
 * Above, `a` is needed, even if the only goal of it is to define an anchor; just because a dictionary cannot just "fly in space"; so you have to put it inside _some_ key, to keep the definition part legal.
