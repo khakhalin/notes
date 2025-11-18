@@ -1,23 +1,35 @@
 # Reinforcement learning
 
-See also: [[credit]] for RL in the brain, [[modeling]]
+Parents: [[dl]]
+See also: [[credit]] (rl-like thing in the brain), [[modeling]]
 
 #rl #bib
 
-Papers
+
+🔥🔥🔥 Short summary goes here.
+
+Subtopics:
+* [[multi_armed_bandit]]
+* [[mdp]] - Markov Decision Process (the main abstraction underlying RL)
+* [[q-learning]] - one of the simplest methods of RL
+* 🔥 PPO!!!
+
+Paper collection
 * [[Baker2019autocurricula]] - RL agents by OpenAI playing hide-and-seek, with pretty videos
+
+Terminology:
+* . 🔥🔥🔥
 
 # Top reading
 
-🔥 Barto, A. G. (2021). Reinforcement learning: An introduction. by richard’s sutton. _SIAM Rev_, _6_(2), 423.
- - simpler book, a good start
+Reinforcement learning: An introduction. Richard Sutton. 2021. SIAM Rev, 6(2), 423. - simpler book, a good start
 
 🔥 Spinning Up in Deep RL: https://spinningup.openai.com/en/latest/
 A deeper and more practical introduction to the subject
 
 🔥 CleanRL library - practical examples
 
-After 2017 PPO is the commonly accepted SOTA for RL:
+Since 2017 PPO is the commonly accepted SOTA for RL:
 https://en.wikipedia.org/wiki/Proximal_policy_optimization
 
 Exploration in RL (a sort of blog-review with math, 2020)
@@ -26,7 +38,14 @@ https://lilianweng.github.io/lil-log/2020/06/07/exploration-strategies-in-deep-r
 Nice collection of advice on reinforcement learning (non-mathy, applicable to almost any experimental ML): https://rll.berkeley.edu/deeprlcourse/docs/nuts-and-bolts.pdf
 (by John Schulman, 2016)
 
+# Tools
+
+* Stable Baselines3 - an almost plug-and-play set of tools for starting to do RL. Uses OpenAI's Gym.
+
 # Possible reading
+
+Curriculum for Reinforcement Learning. Lilian Weng. Jan 29 2020.
+https://lilianweng.github.io/lil-log/2020/01/29/curriculum-for-reinforcement-learning.html
 
 Matusch, B., Ba, J., & Hafner, D. (2020). Evaluating Agents without Rewards. arXiv preprint arXiv:2012.11538.
 https://arxiv.org/pdf/2012.11538.pdf
@@ -48,10 +67,7 @@ A popular RL paper about Atari games. Other papers (PCGRL: Khalifa 2020) referen
 
 Reward-Conditioned Policies. Aviral Kumar, Xue Bin Peng, Sergey Levine. 2019.
 https://arxiv.org/abs/1912.13465
-Some sort of mix between RL, learning by imitation, and trying to infer better policies from observed examples. Kinda like self-supervised, in a sense of introducing an inner supervized loop that feeds from the outer RL loop. The intro sounds as if they were claiming that learning bad policies together with the rewards they yield can be helpful for extrapolating to better policies? Not sure.
-
-Curriculum for Reinforcement Learning. Lilian Weng. Jan 29 2020.
-https://lilianweng.github.io/lil-log/2020/01/29/curriculum-for-reinforcement-learning.html
+Some sort of mix between RL, learning by imitation, and trying to infer better policies from observed examples. Kinda like self-supervised, in a sense of introducing an inner supervised loop that feeds from the outer RL loop. The intro sounds as if they were claiming that learning bad policies together with the rewards they yield can be helpful for extrapolating to better policies? Not sure.
 
 Alexander Tschantz, Beren Millidge, Anil K. Seth, Christopher L. Buckley (2020). Reinforcement Learning through Active Inference
 https://arxiv.org/abs/2002.12636

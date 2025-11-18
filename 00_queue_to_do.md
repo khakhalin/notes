@@ -44,7 +44,14 @@ Books to read / skim:
     * Multithreading
     * Subinterpreters
 * Modern LLMs
-    * MCP
+* MCP (flr LLMs) and are there new alternatives?
+* Do a quick run of causal inference:
+    * Propensity Score Matching (PSM),
+    * Propensity Score Weighting,
+    * Difference-in-Differences (DiD),
+    * Instrumental Variables (IV),
+    * Synthetic Control methods.
+    * Pearlian causal inference (causal graphs, do-calculus), counterfactual reasoning
 * Systems design stuff
     * FastAPI (seems more popular than Flask now?)
     * Scalability lecture: [https://www.youtube.com/watch?v=-W9F__D3oY4] (I'm at 24m right now)
