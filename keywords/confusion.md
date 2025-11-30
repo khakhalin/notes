@@ -1,7 +1,7 @@
 # Confusion Matrix and model assessment
 
 Parents: [[classification]]
-Related: [[youdens-j]], [[roc]], [[validation]]
+Related: [[youdens-j]], [[roc]], [[validation]], [[conformal_prediction]]
 
 #classification #stats
 

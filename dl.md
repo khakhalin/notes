@@ -6,6 +6,7 @@ Core ideas:
 * [[ticket]] (stub for now) - the lottery ticket theory
 
 Opimizers and gradient descent methods:
+* [[sgd]] - the main concept
 * [[Ruder2016descent]] - overview of GD methods
 * [[adam]] - most popular optimizer
 

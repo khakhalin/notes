@@ -8,25 +8,25 @@ See also: [[behav_interview]], [[ml_questions]]
 
 Overall structure:
 1. Understand the problem, set the scope (5 min; ask many questions, know goals, features, numbers).
-2. Propose high-level design, and get a buy-in on it (longerst part, half of all time. For a 45 min interview, at least 20 min)
+2. Propose high-level design, and get a buy-in on it (the longest part, half of all time. For a 45 min interview, at least 20 min)
     1. Start with defining a list of key features. Outline key use cases / scenarios we want to cover
     2. List key non-functional requirements to satisfy: availability, consistency, speed, security, latency
-    3. Describe key actors (in the simplest case, backend & frontend?)
+    3. Describe key actors (in the simplest case, backend & front-end?)
     4. Describe [[api]]s (aka endpoints) for each actor. Try to make them [[restful]] by default. First external, then internal. Review them. Don't allow feature creep at this stage. Maintain a list of talking points for later, don't deep dive or freeze tech assumptions too early
     5. Data model and schema. Estimate data access patterns and read/write ratio
-    6. Propose techstack (only main idea)
+    6. Propose tech-stack (only the main idea)
 3. Design deep dive (remaining time, open-ended, usually explores only 1-2 aspects of the story)
     1. Identify potential bottlenecks, dangers (edge cases), constraints. Peak usage, hot users etc.
-    2. Addressing bottlenecks and scaling up. How would the techstack change
+    2. Addressing bottlenecks and scaling up. How would the tech-stack change
     3. Request (explicitly or implicitly) feedback, to check if the interviewer is expecting something in particular
     4. For any important problem, try to come up with at least two solutions
 4. Summary (wrap-up: very short, almost a memorable punchline)
 
 Key principles:
-* There's no single good answer, but some answeres may be objectively bad.
+* There's no single good answer, but some answers may be objectively bad.
 * We are looking for an ability to take a poorly (vaguely) defined problem, make sense of it, describe and define it, and break it apart into a set of doable, actionable tasks (modules, items). Identify constraints, and satisfy them. Also explain it to stakeholders, to make them buy in the proposed design. We're looking for organization and clarity.
-* Most information needed for the solution is probably not available originally, and should be requested, calculated, or guesstimated (which is fine, as IRL you'll look it up or go through a research phase).
-* Numbers are important, as in some cases they define what is a constraint, and what isn't. Back-of-envelope calculations.
+* Most information needed for the solution is typically not available originally (intentionally not volunteered by the interviewer), and should be requested, calculated, or guesstimated (which is fine, as IRL you'll look it up or go through a research phase).
+* Numbers are important, as they often define what is a constraint, and what isn't. Back-of-envelope calculations.
 * Considering various aspects, bottlenecks, and targets is good (compute, memory, data, privacy, complexity, costs, support, scalability etc.)
 * The problem is never "solved", in a sense that there is never enough time to cover all possible aspects of the problem. The weird rule of the game is that you need to keep approaching the problem from different aspects and challenging it, to demonstrate your ability to plan and lead product development.
 
@@ -55,7 +55,7 @@ Typically, with IRL white boards, you are always expected to draw block diagrams
 
 **Requirements**:
 * Functional: key features to build
-* Non-functional: scale, performance, accuraccy, freshness, consistency, security, safety, transparency, testabiliy, scalabiliy, usability, compliance (data protection, open source etc). In the context of an interview, scale & performance are usually the key
+* Non-functional: scale, performance, accuracy, freshness, consistency, security, safety, transparency, testabiliy, scalabiliy, usability, compliance (data protection, open source etc). In the context of an interview, scale & performance are usually the key
 
 # For data specifically
 

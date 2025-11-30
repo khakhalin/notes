@@ -38,7 +38,7 @@ Rewriting norms as aᵀa, we get: $L = (Y-Xθ)^\top(Y-Xθ) + λθ^\topθ=$
 $=Y^\top Y - (Xθ)^\top Y - Y^\top(Xθ) + (Xθ)^\top(Xθ) + λθ^\topθ=$
 $=Y^\top Y - θ^\top X^\top Y - Y^\top X θ + θ^\top X^\top Xθ + λθ^\top θ$.
 
-To find optimum, take derivative by θ (see [[calc4]]), transpose everything (derivative is a row, but we want to work with columns), and set to 0. Or we can equivalently think of it as calculating a derivative by θᵀ.
+To find optimum, take derivative by θ (see [[vector_calc]]), transpose everything (derivative is a row, but we want to work with columns), and set to 0. Or we can equivalently think of it as calculating a derivative by θᵀ.
 $∂L/∂θ = 0 - X^\top Y - (Y^\top X)^\top + 2X^\top Xθ + 2λθ=0$.
 
 (When calculating a derivative for $θ^\top X^\top Xθ$ we also use the fact that XᵀX is symmetric)

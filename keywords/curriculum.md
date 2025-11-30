@@ -1,9 +1,9 @@
 # Curriculum learning
 
-Parents: [[dl]]
+Parents: [[dl]], [[rl]]
 Related: Kolmogorov compexity
 
-#curriculum
+#curriculum #rl
 
 
 Papers:

@@ -1,6 +1,7 @@
 # RabbitMQ
 
-Parent: [[streaming]]
+Parent: [[streaming]], [[system_design]]
+See also: [[kafka]]
 
 #systems #tools
 

@@ -13,9 +13,9 @@ Related topics:
 
 The rationale for data augmentation:
 * [[Sinz2019lessartificial]] - how augmentation models real bio brains (on page 6)
-* [[Kaushik2019counterfactuals]] - on logical (conterfactual) augmentation (summary not finished)
+* [[Kaushik2019counterfactuals]] - on logical (counterfactual) augmentation (summary not finished)
 
 Augmentation for images:
 * [[Cubik2019randaugment]] - Randaugment (an automated mix of shear, stretch, crop etc.)
-* [[Zoph2020pretraining]] - on interactions between augmentation and pretraining
+* [[Zoph2020pretraining]] - on interactions between augmentation and pre-training
 

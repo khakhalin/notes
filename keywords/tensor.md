@@ -2,7 +2,7 @@
 
 #math
 
-Parents: [[linalg]] / [[calc4]]
+Parents: [[linalg]] / [[vector_calc]]
 See also: [[tensorflow]]
 
 What is a tensor; a visual representation:

@@ -8,29 +8,32 @@ Related: [[credit]] (credit assignment, including in the brain), [[bptt]] (backp
 
 Essentially a chain differentiation rule, to differentiate loss function J by weights w.
 
-Consider a network of several layers (full = dense = all to all), eventually all converging on one output element (just because it's easier to describe it for one output element, but the math is essentially the same if you have many). MSE loss: J=(a0-y)², where a0 = out = h(z) = $h(∑ w^{10}_i a^1_i)$ = dot product of of prev (1st) layer activations with weights from layer 1 to layer 0. (I'll be numbering layers backwards, starting from 0 for the output layer)
+Consider a network of several layers (full = dense = all to all), eventually all converging on one output element (just because it's easier to describe it for one output element, but the math is essentially the same if you have many). MSE loss: J=(a0-y)², where a0 = out = h(z) = $h(∑ w^{10}_i a^1_i)$ = $h$ of a dot product of prev (1st) layer activations with weights from layer 1 to layer 0. (I'll be numbering layers backwards, starting from 0 for the output layer)
 
 $a^0 = h (\sum w^{10}_ i a^1_i )$
 
 To change one of the weights w10_i, we need to know ∂J/∂w10_i .
 For this one weight we have: ∂J/∂w10_i = ∂J/∂a0 ∂a0/∂z ∂z/∂w10_i = 2(a-y) h'(z) a1_i,
-because ∂J/∂a0 = 2(a0-y),
+(here we substitute
+∂J/∂a0 = 2(a0-y),
 ∂a0/∂z = ∂h(z)/∂z = h'(z), and
-∂z/∂w10_i = a1_i. That is, activation a1_i arriving from the layer 1, that gets multiplied by w10_i.
+∂z/∂w10_i = a1_i, were activation a1_i is the one arriving from the layer 1, that gets multiplied by w10_i.
 
 $\displaystyle \frac{∂J}{∂w^{10}_ {i}} = \frac{∂J}{∂a^0} \frac{∂a^0}{∂z^0} \frac{∂z^0}{∂w^{10}_ i} = 2(a^0-y) h'(z^0) a^1_i = ε^0 a^1_i$
 
-(where ε is just a new wrapper variable for 2(a-y)h'(z); something like scaled error)
+(here ε is just a new wrapper variable for 2(a-y)h'(z); something like weirdly scaled error)
 
-The formula above is actually vaguely reminiscent of Hebbian plasticity: if the output needs to be changed (the (a0-y) is large), and the activity of some input unit a1_i is large (it deserves of listening to), and listening to this  input can actually change something (h'(z) is reasonably large), then this weight (w10_i) matters, and needs to be changed. Except that in practice, if we want to reduce J, the weight it needs to be reduced, so we go against the gradient. And that's where it stops following Hebb's idea, as we're comparing unit inputs not with its outputs, but with a new type of signal, named error, that propagates backwards through the network.
+The formula above is vaguely reminiscent of Hebbian plasticity: if the output needs to be changed (the (a0-y) is large), and the activity of some input unit a1_i is large (it deserves of listening to), and listening to this input can actually change something (h'(z) is reasonably large), then this weight (w10_i) matters, and so it needs to be changed. Except that in practice, if we want to reduce J, the weight needs to be reduced, not incrased, so we go against the gradient. And that's where it stops following Hebb's idea, as we're comparing unit inputs not with its outputs, but with a new type of signal, named error, that propagates backwards through the network.
 
-We get a similar formula for bias, as for all layers except the lsat one it's always h(w∙a+b) and not just h(w∙a), except that we just get 1 instead of a1 in the formula, as ∂z/∂b = 1. So if we had bias at this 0th layer, we'd have ∂J/∂b = ε0.
+We get a similar formula for bias, as for all layers except the last one we always have bias, so it's always h(w∙a+b) and not just h(w∙a). And if we take the derivative, we get almost the same formula, except with 1 instead of a1 in the answer, as ∂z/∂b = 1. 
+
+So for bias in the 0th layer, we have ∂J/∂b = $ε^0$.
 
 Now we can go deeper, to the yet-previous layer 2→1, with weights w21_j.
 No need to sum yet, as w21_j only affects one element in the 1st layer: a1_i:
 Again, we have:
 $\displaystyle \frac{∂J}{∂w^{21}_j} = \frac{∂J}{∂a^1_i} \frac{∂a^1_i}{∂w^{21}_j}$.
-$∂J/∂a^1_i$ can be calculated as above $= 2(a^0-y) h'(z^0) w^{10}_i$,
+$∂J/∂a^1_i$ can be calculated similarly to what we had above $= 2(a^0-y) h'(z^0) w^{10}_i$,
 while $∂a^1_i/∂w^{21}_j = ∂a^1_i/∂z^1_i \cdot ∂z^1_i/∂w^{21}_j = h'(z^1_i) a^2_j$ (activation a2_j from yet prev layer).
 So the full expression:
 
@@ -38,7 +41,7 @@ $\displaystyle \frac{∂J}{∂w^{21}_ j} = \frac{∂J}{∂a^1_i} \frac{∂a^1_i}
 
 where $w^{21}_ j$ should actually read $w^{21}_ {j→i}$ , or $w^{21}_ {ij}$, as it is projecting from element j in layer 2 to element i in layer 1.
 
-And similar to what we had before, $\displaystyle \frac{∂J}{∂b^1_i} = ε^1_i$.
+And similarly to what we had before, $\displaystyle \frac{∂J}{∂b^1_i} = ε^1_i$.
 
 This part about $ε^1_i = ε^0 w^{10}_ i h'(z^1_ i)$ is why this process is called **backpropagation**: the error at layer 2→1 is obtained from the error 1→0 via weights $w^{10}$. The error is propagating back through weight matrices.
 
@@ -79,9 +82,9 @@ for L in layers:        # Now update values:
     w += (L.ε∙L.xᵀ)*α   # Hebb-like outer product
 ```
 
-Above, `∙` stands for dot-product, `⨀` for element-wise Hadamard product, h' for dh/dz, and α for learning rate. The problem with ε is that, depending on your notation, it may weights from next layer, but h'(z) from this layer, which puts it off-kilter with layer-by-layer loop. Most tutorials call this thing δ instead of ε. I also have 2 loops for backprop, which is of course not needed if we can get access to this layer's error (for update) and previous layer's error (for further backprop) at the same time. You just cannot do it without remembering the errors, completely "in-memory". Unless you first update w then backprop, which is incorrect.
+Above, `∙` stands for dot-product, `⨀` for element-wise Hadamard product, h' for dh/dz, and α for learning rate. The problem with $e$ is that, depending on your notation, it may represent weights from the next layer, while h'(z) comes from the current layer, which puts it off-kilter with layer-by-layer loop. Most tutorials call this thing δ instead of ε (while I just made it slide from one iteration to another). Also here I show 2 loops for backprop, which is of course not needed if we can get access to this layer's error (for update) and previous layer's error (for further backprop) at the same time. You just cannot do it without remembering past errors, unless you first update w then backprop, which is incorrect.
 
-Some potential problems can be immediately deduced from this story. If a certain w_ji=0, it kills the effect of all weights converging on element j. Same if the value of z_j is such that it drives h'(z_j) to zero, which also kills the gradient (aka **vanishing gradients**). Say, for sigmoids it happens for very high or very small z; for ReLUs it happens for any z<0, and they can't recover (aka **Dead ReLUs**). And the other way around, in a deep network, gradients can grow arbitrarily large (**exploding gradients**) as you keep multiplying errors by wᵀ, allowing errors deep in the network to grow.
+Some potential problems can be immediately deduced from this story. If a certain w_ji=0, it kills the effect of all weights converging on element j. Same if the value of z_j is such that it drives h'(z_j) to zero, which also kills the gradient (aka **vanishing gradients**). Say, for sigmoids it happens for very high or very small z; for ReLUs it happens for any z<0, and they can't recover (aka **Dead ReLUs**). And the other way around, in a deep network, gradients can grow arbitrarily large (**exploding gradients**) as you keep repeatedly multiplying errors by wᵀ, allowing errors deep in the network to grow.
 
 # Refs
 

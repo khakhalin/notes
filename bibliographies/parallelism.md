@@ -6,7 +6,7 @@ See also: [[streaming]]
 #concurrency #realtime
 
 
-Subtopics:
+Subtopics and related topics:
 * [[gridlock]]
 * [[concurrency]]
 * [[db_consistency]]

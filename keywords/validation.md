@@ -1,7 +1,7 @@
 # Model validation
 
 Parents: [[classification]], [[regression]]
-See also: [[confusion]], [[roc]]
+See also: [[confusion]], [[roc]], [[conformal_prediction]]
 
 #validation #loss
 

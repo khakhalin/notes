@@ -1,14 +1,13 @@
 # System Design
 
-Parents: [[swe]]
-See also: [[design_docs]]
+See also: [[design_docs]], [[swe]]
 
-#swe #systems
+#swe #systems #bib
 
 
 Subtopics:
-* [[api]]: [[restful]], [[websocket]] etc.
-* [[parallelism]]
+* [[api]]: [[restful]], websocket etc.
+* [[parallelism]] - general concepts of concurrency
 * [[streaming]] - Message queues and message brokers
 * [[datalake]] - First level of precipitation of data, as it goes from streams/queues to databases
 * [[database]] - Everything databases

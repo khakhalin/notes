@@ -38,13 +38,10 @@ Books to read / skim:
 * https://christophm.github.io/interpretable-ml-book/ - really nice explanations of ML tricks
 
 **Main queue**
-* How Python works inside:
-    * [[gil]]
+* How Python works inside:    
     * Asyncio
     * Multithreading
     * Subinterpreters
-* Modern LLMs
-* MCP (flr LLMs) and are there new alternatives?
 * Do a quick run of causal inference:
     * Propensity Score Matching (PSM),
     * Propensity Score Weighting,

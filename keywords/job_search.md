@@ -6,11 +6,12 @@ See also:
 * [[behav_interview]] - soft skills and business acumen
 * [[system_interview]] - designing technical products
 * [[recruiting]] - the opposite side of the story
-* [[algos]] - actual algorithmic strategies (Leetcoding)
+* [[algos]] - actual algorithmic strategies (essentially, Leetcoding)
 * [[Huyen2019book]] - advice on ML interviews
-* [[ml_questions]] - a long list of sample questions for DS / ML interviews
+* [[ml_questions]] - several long lists of sample questions for DS / ML interviews
+* [[rl_questions]] - notes on [[rl]] interviews
 
-#management #lifehack #interview
+#management #lifehack #interview #bib
 
 
 # Coding interviews
@@ -45,7 +46,7 @@ General links:
 * A good trick is to pretend you’re explaining to a friend why you’re excited about the job and think you’d be great at it. You probably wouldn’t just stiffly recite your work history; you’d probably talk about what you’re particularly good at and how you’d apply it to the work at this new place.
 * If you’re overqualified for the position, make a point of acknowledging it and explaining why you’re interested in the job anyway. If you’re currently living across the country from where the position is located but have plans to move there soon, mention that. If all your experience is in a different industry but you’re actively working to transition into this one, explain that and talk about why.
 
-In the era of ChatGPT, the shorter and to-the point the cover-letter, the better. No need for boilerplate, cut to the chase. Make it short, personal, informative, and decisive. No platitudes.
+In the era of LLMs, the shorter and to-the point the cover-letter, the better. No need for boilerplate, cut to the chase. Threee sentences: very short, personal, informative, decisive. The era of platitude is gone.
 
 Refs:
 * https://www.askamanager.org/2017/06/how-to-write-a-cover-letter-that-will-help-you-get-an-interview.html
