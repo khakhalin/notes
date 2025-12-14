@@ -12,11 +12,22 @@ Common usage: instead of doing `pip something` do `uv pip something`. But if you
 
 To add a particular version, `uv add numpy==1.25.0`
 
-To list installed packages, `uv pip list`
+# New project: pure uv
 
-# Starting a new project: uv with conda
+In this mode you do:
 
-This is a legacy mode that preserves pip syntax: you just use `uv pip` instead of `pip`. Not sure it's a good one.
+* `uv init` - it creates a venv. If running within an existing repo, use `uv init --bare` instead, then placeholder code will not be created. It creates the `pyproject.toml` file.
+* `uv sync` - just a good thing to do, in this case?
+*  You may want to add `.venv` to `.gitignore` if it's not added there automatically. `.toml` and `.lock` files, on the other hand, should be committed to vent.
+* `uv add numpy` etc. to install packages  - it updates `toml` and the venv. If something is only need in development, use `--dev` key, as for example here: `uv add --dev pytest`
+
+To run anything using venv (virtual environments) you just prefase it with `uv run ...`, like for example `uv run python -m` or `uv run pytest`.
+
+To install a project of this kind after cloning it from git, just do `uv sync`.
+
+# Antipattern: combining conda with uv
+
+This is a legacy mode that preserves pip syntax: you just use `uv pip` instead of `pip`. For all purposes, including `uv pip list` to list installed packages. It's much faster than pure `pip`, but of course doesn't use most of `uv` features. It is _not recommended_ in practice, but I retain some notes here, as i've seen it done like that as a "transitional phase" from long-term conda use to uv.
 
 1. `conda create --name env_name python=3.12` - before installing anything, create a conda environment. We will also use conda to install Python and uv itself. `conda activate env_name`
 2. `pip install uv` - this installs uv
@@ -37,12 +48,3 @@ git push -u origin main
 ```
 
 As in this mode we're using pip-style management, to require a requirements file, do `uv pip freeze > requirements.txt` after each install.
-
-# New project: pure uv
-
-In this mode you do
-* `uv init` - it creates a venv
-* `uv add numpy` for all changes - it auto-updates `toml` and the venv
-*  You may want to add `.venv` to `.gitignore` if it's present in the folder (if uv created it)
-
-How to recreate an environment from toml: ????

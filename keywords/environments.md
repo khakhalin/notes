@@ -41,7 +41,9 @@ Packages:
 * Figure out which one is installed: `conda list NAME`
 * Force update to a certain version `conda install NAME=VERSION` (like 2.2.0 or smth)
 
-Never do `update all`, or it can ruin your TF installation. Only upgrade point-by-point, and give up easily if any risky conflicts emerge. It's a house of cards.
+Never do `update all`, or it can ruin your installation. Only upgrade point-by-point, and give up easily if any risky conflicts emerge. It's a house of cards.
+
+To reset your base environment after installing something by accident, run `conda install --rev 1`
 
 ## PIP
 

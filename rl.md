@@ -28,13 +28,13 @@ Open questions: 🔥
 * What is model-based vs model-free RL?
 * Bellman optimality equation
 
-## RL methdos
+## RL methods
 
-* Three most common ones:
+* Most popular approaches:
+    * [[reinforce]] - aka Policy Gradient Methods, a group of simple methods that don't rely on V or Q. Work well when episodes are short enough and are easy to generate, so you don't have to invest too much into mapping "secretly good" and "secretly bad" states (using V); you can just take trajectories as a whole.
     * [[ppo]] - the most common method as of 2025.
     * DQN - discrete actions.
     * SAC (Soft Actor-Critic) - continuous control, robotics
-* [[reinforce]] - aka Policy Gradient Methods, simplified methods that don't rely on V or Q
 * A2C (Advantage Actor-Critic) - simpler than PPO, but less stable and less sample-efficient. 
 * SARSA (State–action–reward–state–action). on-policy.
 * TD (Temporal Difference) - model free.
@@ -104,7 +104,7 @@ See also: [[rl_questions]] 🔥 - remove eventually
 
 * Stable Baselines3 - an almost plug-and-play set of tools for starting to do RL. Uses OpenAI's Gym.
 
-# Random links reading
+# Random reading
 
 Curriculum for Reinforcement Learning. Lilian Weng. Jan 29 2020.
 https://lilianweng.github.io/lil-log/2020/01/29/curriculum-for-reinforcement-learning.html
@@ -115,13 +115,6 @@ Exploration, curiosity, self-driven learning (including in Minecraft)
 
 Reinforcement Learning for Language Models. Yoav Goldberg, April 2023.
 https://gist.github.com/yoavg/6bff0fecd65950898eba1bb321cfbd81
-
-Simple Reinforcement Learning with Tensorflow Part 0: Q-Learning with Tables and Neural Networks. Arthur Juliani
-https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0
-
-The present in terms of the future: Successor representations in Reinforcement learning
-Arthur Juliani
-https://medium.com/@awjuliani/the-present-in-terms-of-the-future-successor-representations-in-reinforcement-learning-316b78c5fa3
 
 Mnih, V., Kavukcuoglu, K., Silver, D., Rusu, A. A., Veness, J., Bellemare, M. G., ... & Petersen, S. (2015). Human-level control through deep reinforcement learning. Nature, 518(7540), 529-533.
 https://daiwk.github.io/assets/dqn.pdf
@@ -134,6 +127,11 @@ Some sort of mix between RL, learning by imitation, and trying to infer better p
 Alexander Tschantz, Beren Millidge, Anil K. Seth, Christopher L. Buckley (2020). Reinforcement Learning through Active Inference
 https://arxiv.org/abs/2002.12636
 Instead of maximizing rewards, they maximize evidence for an internal generative model. Also use _free energy of the expected future_. Hmm. [[freeenergy]]? Looks quite mathy.
+
+## Meta-writing
+
+Ben Recht, the main idea (and math) of RL in a single paragraph:
+https://www.argmin.net/p/reformist-reinforcement-learning
 
 ## Robots
 

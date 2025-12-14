@@ -1,13 +1,13 @@
-# TransE, Knowledge graphs, semantic embedding
+# TransE (translating embeddings)
 
 Parents: [[graphs]] / [[graph_embedding]]
 Siblings: [[node2vec]]
-See also: [[word2vec]], [[embedding]], [[neg_sampling]]
+See also: [[word2vec]], [[embedding]], [[neg_sampling]], [[knowledge_graph]]
 
 #graph #embedding #semantic
 
 
-**TransE**: an alternative approach that doesn't actually rely on random walks. Ref: Borders 2013.
+**TransE**: an alternative approach to encoding graphs that doesn't actually rely on random walks. Ref: Borders 2013.
 
 We have a bunch of objects (for example, books, authors, genres, usually referred to as **entities**), and edge connecting them, that correspond to predicates (like, this book belong to this genre, usually called **relations**), and there are many different types of links. The task we have is **graph completion**, or guessing links that are missing.
 

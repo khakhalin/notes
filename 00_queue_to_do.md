@@ -38,6 +38,8 @@ Books to read / skim:
 * https://christophm.github.io/interpretable-ml-book/ - really nice explanations of ML tricks
 
 **Main queue**
+* Elm and island architectures in SWE (event and data filtering?)
+* Document (while I still remember poetry, uv, makefile)
 * How Python works inside:    
     * Asyncio
     * Multithreading
@@ -50,7 +52,6 @@ Books to read / skim:
     * Synthetic Control methods.
     * Pearlian causal inference (causal graphs, do-calculus), counterfactual reasoning
 * Systems design stuff
-    * FastAPI (seems more popular than Flask now?)
     * Scalability lecture: [https://www.youtube.com/watch?v=-W9F__D3oY4] (I'm at 24m right now)
     * Scaling Etsy: https://www.youtube.com/watch?v=eenrfm50mXw
     * What is a difference between process and thread? https://www.youtube.com/watch?v=4rLW7zg21gI
@@ -142,7 +143,7 @@ Books to read / skim:
 * CloudFormation
 * stored procs (procedures) - quickly document, even tho it's a bad old tech
 * [[dbt]] - explain the following statements: each step is a model, orchestrated, built-in testing with yaml configs, git-friendly (where is it typically stored?)
-* Polars - at least start
+* Polars - at least start an entry
 * cookie cutter data science - create a page, check the scope
 * revisit Kedro and figure out whether it can help me, what it does
 * openstack
@@ -153,7 +154,6 @@ Books to read / skim:
 * The innovator's dilemma - that small companies tend to undercut bigger companies as they deliver faster, are not bound with supporting older versions, and can change the description of the product a bit (often cutting corners and trageting smaller customers), while bigger players are bound by big expensive customers
 * Lindy effect - apparently, products that are around for long are more likely to last for long?
 * [[pandas]] after groupby `.rolling(window)` - what is it?
-* How to turn project into an installable package?
 * for [[spark]] `spark.sparkContext.parallelize(df)` vs `df.rdd` - what's the difference?
 * Read and document window functions in [[spark]]
 * `precommit` and how to arrange it

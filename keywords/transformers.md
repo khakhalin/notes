@@ -92,7 +92,7 @@ Each encoder has the same architecture, but different parameters, and the same i
 
 ### Self-Attention
 The self-attention module (in both encoders and decoders - they are very similar) receives word-embeddings vectors (say, length 512). Self-attention uses 3 trainable matrices to transform this vector into 3 smaller vectors (each length 64) **Query**, **Key**, and **Value**. 
-* For each pair of words ij, we calculate an attention **score**, or the **Query-Key interaction**: s_ij = ⟨q_i , k_j⟩, scale it down roughly (s_ij/8), and [[softmax]] (expontiate and normalize, so now ∑s_ij = 1). These **final scores** S quantify interactions between the words. 
+* For each pair of words ij, we calculate an attention **score**, or the **Query-Key interaction**: s_ij = ⟨q_i , k_j⟩, scale it down roughly (s_ij/8), and [[softmax]] (exponentiate and normalize, so now ∑s_ij = 1). These **final scores** S quantify interactions between the words. 
 * Then for each target word i we use these scores s_ij with other words (j) as weights, to calculate a weighted sum of **Values** v_j for other words (each one – itself a vector): z_i = ∑ s_ij ∙ v_j. This set of values {z_i} for each word becomes an output of the self-attention layer.
 
 The intuitions here (it's easier to explain it listing these three values backwards):
