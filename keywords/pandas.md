@@ -32,7 +32,7 @@ See also: [[numpy]], [[py_dates]], [[sklearn]], [[matplotlib]]
     * You want to assign values to a dataframe (see below)
 * Two common useful patterns  is to use `.unique()` instead of `.values`if you want a list of unique values, and `.tolist()` after either, if you need a standard  list, and not a numpy array.
 
-Overall, dot-notation looks neat, and saves you 3 characters, but over time I decided to phase it out and switch to parenthesis. The main reason is that with color highlighting, strings have a different color, and parenthesis notation typically shows string contansts inside, when you know the names of your columns. So it is much easier to quickly see where the same word is used repeatedly in the code. While with dot-notation, column names and methods llook identical, and this somehow feels wrong.
+Overall, dot-notation looks neat, and saves you 3 characters, but over time I decided to phase it out and switch to parenthesis. The main reason is that with color highlighting, strings have a different color, and parenthesis notation typically shows string contents inside, when you know the names of your columns. So it is much easier to quickly see where the same word is used repeatedly in the code. While with dot-notation, column names and methods look identical, and this somehow feels wrong.
 
 Other useful patterns:
 * Select rows by label: `df.loc[1]`. Works for both df (returns a row-series), and for column-series (returns a single value).

@@ -1,6 +1,9 @@
 # Unpleasant and pleasant sounds
 
+Parents: [[sound]]
+
 #sound #aesthetics #neuro
+
 
 # Horrible sounds
 

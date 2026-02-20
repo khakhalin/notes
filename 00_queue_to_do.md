@@ -38,8 +38,16 @@ Books to read / skim:
 * https://christophm.github.io/interpretable-ml-book/ - really nice explanations of ML tricks
 
 **Main queue**
+* pytorch
+    * analyze heads code
+    * rsample() uses the reparameterization trick: u=μ+σϵu=μ+σϵ with ϵ∼N(0,1)
+ϵ∼N(0,1), which allows gradients to flow through the sampling step.
+* https://en.wikipedia.org/wiki/Hamiltonian_Monte_Carlo
 * Elm and island architectures in SWE (event and data filtering?)
-* Document (while I still remember poetry, uv, makefile)
+* AWS services (e.g. SageMaker, EC2, S3, Lambda, Step Functions
+* from joblib import Parallel, delayed
+* How does one run MMM-style linear programming in practice, in Python?
+* Document (while I still remember) poetry, uv, makefile
 * How Python works inside:    
     * Asyncio
     * Multithreading
@@ -84,6 +92,8 @@ Books to read / skim:
 * Gumbel trick:
     * https://sassafras13.github.io/GumbelSoftmax/
     * https://en.wikipedia.org/wiki/Gumbel_distribution
+* https://github.com/pyro-ppl/numpyro
+* JAX + equinox is a drop-in replacement for numpy
 * [[restful]] - how does authentication (loggedness in) work with restful?
 * [[websocket]]
 * Wisdom

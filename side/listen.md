@@ -1,8 +1,11 @@
 # Music to listen to
 
-See also: [[music]]
+See also: [[sound], [[music]]
 
 #lifehack #music #sound
+
+
+The best way to navigate artists and genre landscapes: https://everynoise.com/
 
 http://boilthefrog.playlistmachinery.com/
 

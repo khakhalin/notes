@@ -74,7 +74,7 @@ Repacking:
 * To check type: either `if isinstance(x, str):` or `if type(x) is str:`
 
 How to iterate properly:
-* Sweetest way to **iterate through a dictionary**: `for key,val in d.items():`.
+* Sweetest way to **iterate through a dictionary**: `for key,val in d.items():`
 * With iterable, but also having a counter: `for i,val in enumerate(vals):`
 * A mix of two is possible: `for i,(key,val) in enumerate(d.items()):`
 
