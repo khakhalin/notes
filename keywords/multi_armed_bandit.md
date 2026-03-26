@@ -3,7 +3,7 @@
 #rl #game
 
 
-Parent: [[game]], [[rl]]
+Parent: [[games]], [[rl]]
 Related: [[levy_walks]], [[Zador2019pure]]
 
 A mathematical abstraction for **exploration / exploitation** problem. Several entities (metaphorized as gaming slot machines), each with a certain distribution of gains. The agent should decide which choices to engage with (how to allocate resources) to maximize gain. 

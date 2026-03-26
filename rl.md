@@ -80,6 +80,19 @@ Summary table. Year when is according to Perplexity, and may be off, but at leas
 
 * [[Baker2019autocurricula]] - RL agents by OpenAI playing hide-and-seek, with pretty videos
 
+The Surprising Effectiveness of PPO in Cooperative, Multi-Agent Games
+Chao Yu, Akash Velu, Eugene Vinitsky, Jiaxuan Gao, Yu Wang, Alexandre Bayen, Yi Wu
+https://arxiv.org/abs/2103.01955
+
+Adaptive Reward Penalty in Safe Reinforcement Learning
+In this blog, we dive into the ICLR 2019 paper Reward Constrained Policy Optimization (RCPO) by Tessler et al. 
+https://iclr-blogposts.github.io/staging/blog/2023/Adaptive-Reward-Penalty-in-Safe-Reinforcement-Learning/
+
+https://www.argmin.net/p/defining-reinforcement-learning-down
+https://www.argmin.net/p/theres-got-to-be-a-better-way
+https://www.argmin.net/p/there-is-no-data-generating-distribution
+https://www.argmin.net/p/benchmark-studies
+
 # Top reading
 
 Reinforcement learning: An introduction. Richard Sutton. 2021. SIAM Rev, 6(2), 423. - simpler book, a good start

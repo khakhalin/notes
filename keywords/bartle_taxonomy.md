@@ -1,6 +1,6 @@
 # Bartle Taxonomy
 
-Parent: [[game]]
+Parent: [[games]]
 Related: [[personality]]
 
 #game #personality

@@ -1,6 +1,6 @@
 # GOAP: Goal Oriented Action Planning 
 
-Parents: [[game]], agent-based
+Parents: [[games]], agent-based
 
 #game #agents
 

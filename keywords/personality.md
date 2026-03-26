@@ -13,12 +13,12 @@ Subtopics:
 See also: 
 * [[cultural_differences]] - on differences across cultures (habits, values, norms)
 * [[neurostochastic]] - on within-individual variability of behaviors
-* [[game]] - game theory
+* [[games]] - game theory
 
 Papers
 * [[Paunonen2013performance]] - GPA correlates with character traits, but super-weakly (r²<5%)
 * [[Braun2016gamerpersonality]] - casual gamers have lower neuroticism than either non-gamers or game addicts
-* [[Zammitto2001gaming]] - another classification (see [[game]])
+* [[Zammitto2001gaming]] - another classification (see [[games]])
 
 # To Read
 

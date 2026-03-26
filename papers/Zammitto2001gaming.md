@@ -2,7 +2,7 @@
 
 Zammitto, V. L. (2010). Gamers' personality and their gaming preferences (Doctoral dissertation, Communication, Art & Technology: School of Interactive Arts and Technology).
 
-Parent: [[game]], [[personality]]
+Parent: [[games]], [[personality]]
 
 #personality #game
 

@@ -13,6 +13,10 @@ Papers:
 * [[Zammitto2001gaming]] - psychological (personality) classification of gamers
 * [[Braun2016gamerpersonality]] - casual gamers have lower neuroticism than either non-gamers or game addicts
 
+# Actually cool games
+
+A database of card games: https://www.pagat.com/invented/20.html
+
 # General Refs
 
 Czarnecki, W. M., Gidel, G., Tracey, B., Tuyls, K., Omidshafiei, S., Balduzzi, D., & Jaderberg, M. (2020). Real World Games Look Like Spinning Tops. arXiv preprint arXiv:2004.09468.

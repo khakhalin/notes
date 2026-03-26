@@ -2,7 +2,7 @@
 
 Braun, B., Stopfer, J. M., Müller, K. W., Beutel, M. E., & Egloff, B. (2016). Personality and video gaming: Comparing regular gamers, non-gamers, and gaming addicts and differentiating between game genres. Computers in Human Behavior, 55, 406-412.
 
-Parent: [[personality]], [[game]]
+Parent: [[personality]], [[games]]
 See also: [[ocean-model]]
 
 #game #personality #psych

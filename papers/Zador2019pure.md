@@ -24,7 +24,7 @@ Cites Lecun's "cake" [[cake]], but then contrasts it with animals that clearly c
 
 In biological world, hardwiredness and ability to learn form a trade-off. A period of helplessness is a payback for higher behavioral flexibility at a level of a species (and thus broader adaptation, and lower vulnerability to environmental changes), but also potentially better performance at the level of an individual (because coding connectivity in the genome is hard).
 
-> A bit of an exploration / exploitation dilemma here. Having to learn more is like forcing a hire amount of exploration on every individual. See [[game]].
+> A bit of an exploration / exploitation dilemma here. Having to learn more is like forcing a hire amount of exploration on every individual. See [[games]].
 
 Moreover, it's not an either/or situation: in many cases biological networks are ready to learn, but either need to also be taught, or have enough flexibility to learn something new. It is the propensity, the scaffolding that is innate. Because it is impossible to code the brain in the DNA explicitly (provides an order-of-magnitude calculation).
 
